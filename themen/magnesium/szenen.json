@@ -1,0 +1,890 @@
+{
+  "tts": "elevenlabs",
+  "voice_id": "NBqeXKdZHweef6y0B67V",
+  "voice_name": "Christian - Warm and Captivating",
+  "model": "eleven_v4",
+  "tempo": 1.0,
+  "titel": "Magnesium: Was stimmt wirklich?",
+  "untertitel": "Ein Faktencheck zu Bluttests, Formen, Einnahme und Wirkung. Jeder Punkt ist gegen Studien geprüft; die Marker zeigen, wie gut er belegt ist.",
+  "fuss": "Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert, Fehler korrigiert. Kein Ersatz für ärztlichen Rat.",
+  "scenes": [
+    {
+      "id": "m0",
+      "layout": "kacheln",
+      "kapitel": "Einleitung",
+      "kicker": "Info-Video · Faktencheck",
+      "headline": "Magnesium: Was stimmt wirklich?",
+      "sentences": [
+        "Magnesium gehört zu den beliebtesten Nahrungsergänzungsmitteln.",
+        "Zwei Infografiken versprechen dazu einiges: über die Rolle im Körper, den richtigen Bluttest, den Mangel, die beste Form, Vitamin B6 und die richtige Einnahme.",
+        "Wir prüfen jede Aussage gegen die Studienlage.",
+        "Grün heißt belegt, gelb teilweise, rot nicht haltbar."
+      ],
+      "hervorheben_at": 1,
+      "legende_at": 3,
+      "kacheln": [
+        {
+          "t": "Rolle im Körper",
+          "a": [
+            1030,
+            660,
+            1470,
+            1070
+          ],
+          "wort": "Rolle im Körper"
+        },
+        {
+          "t": "Der richtige Bluttest",
+          "a": [
+            60,
+            470,
+            610,
+            1090
+          ],
+          "wort": "Bluttest"
+        },
+        {
+          "t": "Wie verbreitet ist Mangel?",
+          "a": [
+            600,
+            800,
+            1020,
+            1080
+          ],
+          "wort": "Mangel"
+        },
+        {
+          "t": "Die beste Form",
+          "a": [
+            90,
+            1540,
+            580,
+            1830
+          ],
+          "wort": "beste Form"
+        },
+        {
+          "t": "Vitamin B6",
+          "a": [
+            620,
+            1620,
+            1090,
+            2120
+          ],
+          "wort": "Vitamin B6"
+        },
+        {
+          "t": "Einnahme und Sicherheit",
+          "a": [
+            1130,
+            1910,
+            1470,
+            2130
+          ],
+          "wort": "richtige Einnahme"
+        }
+      ]
+    },
+    {
+      "id": "m1",
+      "kicker": "Grundlagen",
+      "headline": "Wozu Magnesium?",
+      "sentences": [
+        "Magnesium ist an Hunderten Enzymreaktionen beteiligt.",
+        "Die Energiewährung der Zelle, ATP, arbeitet fast immer als Komplex mit Magnesium.",
+        "Im Nervensystem blockiert Magnesium bestimmte Rezeptoren, die NMDA-Rezeptoren, und dämpft so die Erregung.",
+        "Beides ist Lehrbuchwissen.",
+        "Dass Magnesium-Tabletten die morgendliche Cortisol-Ausschüttung senken, wie eine der Grafiken behauptet, ist dagegen nicht untersucht."
+      ],
+      "bullets": [
+        {
+          "t": "Mg-ATP: Energie der Zelle",
+          "at": 1,
+          "ev": "stark"
+        },
+        {
+          "t": "Bremst NMDA-Rezeptoren",
+          "at": 2,
+          "ev": "stark"
+        },
+        {
+          "t": "Senkt das Morgen-Cortisol",
+          "at": 4,
+          "ev": "keine"
+        }
+      ],
+      "evidence": {
+        "level": "stark",
+        "label": "Kern gut belegt"
+      },
+      "quellen": [
+        "debaaij2015",
+        "mayer1984",
+        "schutten2021"
+      ],
+      "shots": [
+        {
+          "a": [
+            1030,
+            660,
+            1470,
+            1070
+          ]
+        },
+        {
+          "a": [
+            760,
+            290,
+            1080,
+            600
+          ],
+          "at": 2
+        },
+        {
+          "a": [
+            1030,
+            660,
+            1470,
+            1070
+          ],
+          "at": 4,
+          "zoom": "out"
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "kicker": "Diagnostik",
+      "headline": "Der Bluttest-Streit",
+      "sentences": [
+        "Die Grafiken sagen: Weniger als ein Prozent des Magnesiums befindet sich im Blutserum.",
+        {
+          "t": "Das stimmt, es sind sogar nur etwa 0,3 Prozent; der Rest steckt in Knochen, Muskeln und Gewebe.",
+          "say": "Das stimmt, es sind sogar nur etwa null Komma drei Prozent; der Rest steckt in Knochen, Muskeln und Gewebe."
+        },
+        "Deshalb kann ein normaler Serumwert eine knappe Versorgung nicht sicher ausschließen, denn der Knochen puffert lange.",
+        "Die Vollblutanalyse als der wahre Test ist aber ebenfalls nicht validiert.",
+        "Einen verlässlichen Goldstandard gibt es bisher nicht, das sagt auch die Deutsche Gesellschaft für Ernährung."
+      ],
+      "bullets": [
+        {
+          "t": "Unter 1 % im Blutserum",
+          "at": 1,
+          "ev": "stark"
+        },
+        {
+          "t": "Normales Serum heißt nicht volle Speicher",
+          "at": 2,
+          "ev": "stark"
+        },
+        {
+          "t": "Vollblut zeigt den wahren Status",
+          "at": 3,
+          "ev": "keine"
+        }
+      ],
+      "evidence": {
+        "level": "mittel",
+        "label": "teilweise belegt"
+      },
+      "quellen": [
+        "jahnen2012",
+        "costello2016",
+        "dge_faq",
+        "arnaud2008"
+      ],
+      "shots": [
+        {
+          "a": [
+            60,
+            470,
+            610,
+            1090
+          ]
+        },
+        {
+          "a": [
+            370,
+            780,
+            500,
+            1090
+          ],
+          "at": 2
+        },
+        {
+          "a": [
+            60,
+            470,
+            610,
+            1090
+          ],
+          "at": 4,
+          "zoom": "out"
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "kicker": "Versorgung",
+      "headline": "Wie verbreitet ist Mangel?",
+      "sentences": [
+        "Über die Hälfte der Bevölkerung habe einen Mangel, heißt es, wegen Stress und ausgelaugter Böden.",
+        "In Deutschland erreicht laut Nationaler Verzehrsstudie gut ein Viertel der Erwachsenen die Zufuhrempfehlung nicht, bei Mädchen im Teenageralter mehr als die Hälfte.",
+        "Weniger als empfohlen zu essen, ist aber noch kein nachgewiesener Mangel.",
+        "Und die Böden: In einem der ältesten Feldversuche der Welt blieb das Magnesium im Boden stabil, im Weizen sank es, weil Hochertragssorten den Gehalt verdünnen.",
+        "Dass Stress Magnesium aufzehrt, ist eine Hypothese, beim Menschen kaum geprüft."
+      ],
+      "bullets": [
+        {
+          "t": "Über 50 % Mangel",
+          "at": 0,
+          "ev": "keine"
+        },
+        {
+          "t": "Gut jeder Vierte unter der Empfehlung",
+          "at": 1,
+          "ev": "stark"
+        },
+        {
+          "t": "Ausgelaugte Böden",
+          "at": 3,
+          "ev": "keine"
+        },
+        {
+          "t": "Stress zehrt Magnesium auf",
+          "at": 4,
+          "ev": "mittel"
+        }
+      ],
+      "evidence": {
+        "level": "keine",
+        "label": "größtenteils nicht haltbar"
+      },
+      "quellen": [
+        "mri2008",
+        "rosanoff2012",
+        "fan2008",
+        "pickering2020"
+      ],
+      "shots": [
+        {
+          "a": [
+            760,
+            290,
+            1460,
+            600
+          ]
+        },
+        {
+          "a": [
+            600,
+            800,
+            1020,
+            1080
+          ],
+          "at": 3
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "kicker": "Darreichungsformen",
+      "headline": "Oxid oder Citrat?",
+      "sentences": [
+        "Magnesiumoxid werde nur zu vier Prozent aufgenommen, organische Formen wie Citrat seien weit überlegen.",
+        "Die vier Prozent stammen aus einer einzigen Studie, gemessen über den Urin.",
+        "Eine Isotopenstudie an Patienten nach einer Darmoperation fand für Oxid und Glycinat fast gleiche Werte, rund dreiundzwanzig Prozent.",
+        "Citrat schneidet in einigen Vergleichen etwas besser ab und löst sich gut.",
+        "Entscheidend sind Löslichkeit und Verträglichkeit, nicht das Wort organisch auf der Packung."
+      ],
+      "bullets": [
+        {
+          "t": "Oxid nur 4 % Aufnahme",
+          "at": 1,
+          "ev": "mittel"
+        },
+        {
+          "t": "Organisch weit überlegen",
+          "at": 2,
+          "ev": "mittel"
+        },
+        {
+          "t": "Citrat: gut löslich, etwas besser",
+          "at": 3,
+          "ev": "stark"
+        }
+      ],
+      "evidence": {
+        "level": "mittel",
+        "label": "teilweise belegt"
+      },
+      "quellen": [
+        "firoz2001",
+        "schuette1994",
+        "walker2003",
+        "lindberg1990",
+        "pardo2021"
+      ],
+      "shots": [
+        {
+          "a": [
+            90,
+            1540,
+            580,
+            1830
+          ]
+        },
+        {
+          "a": [
+            95,
+            1600,
+            290,
+            1800
+          ],
+          "at": 2
+        },
+        {
+          "a": [
+            330,
+            1560,
+            580,
+            1760
+          ],
+          "at": 3
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "kicker": "Threonat, Bisglycinat, Malat",
+      "headline": "Spezialformen im Test",
+      "sentences": [
+        "Für Spezialformen gibt es besonders große Versprechen.",
+        "L-Threonat soll das Gehirn erreichen: Belegt ist das bei Ratten, die wenigen Studien am Menschen stammen von Herstellern.",
+        "Bisglycinat soll beim Schlafen helfen: Eine neue Studie mit hundertfünfundfünfzig Teilnehmern fand einen kleinen Effekt, knapp an der Grenze der Signifikanz.",
+        "Malat soll die Energiegewinnung fördern: Dafür gibt es nur eine Rattenstudie."
+      ],
+      "bullets": [
+        {
+          "t": "Threonat fürs Gehirn",
+          "at": 1,
+          "ev": "keine"
+        },
+        {
+          "t": "Bisglycinat für den Schlaf",
+          "at": 2,
+          "ev": "mittel"
+        },
+        {
+          "t": "Malat für mehr Energie",
+          "at": 3,
+          "ev": "keine"
+        }
+      ],
+      "evidence": {
+        "level": "keine",
+        "label": "größtenteils nicht haltbar"
+      },
+      "quellen": [
+        "slutsky2010",
+        "liu2016",
+        "schuster2025",
+        "mah2021",
+        "uysal2019"
+      ],
+      "shots": [
+        {
+          "a": [
+            70,
+            1950,
+            320,
+            2630
+          ],
+          "zoom": "none"
+        },
+        {
+          "a": [
+            70,
+            2440,
+            320,
+            2630
+          ],
+          "at": 1
+        },
+        {
+          "a": [
+            70,
+            2200,
+            320,
+            2430
+          ],
+          "at": 2
+        },
+        {
+          "a": [
+            80,
+            1950,
+            320,
+            2190
+          ],
+          "at": 3
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "kicker": "Kombipräparate",
+      "headline": "Vitamin B6 als Türöffner?",
+      "sentences": [
+        "Vitamin B6 schleuse Magnesium in die Zellen, heißt es.",
+        "In der größten Studie dazu, mit zweihundertvierundsechzig Teilnehmern und vom Hersteller finanziert, brachte die Kombination beim Hauptziel keinen Vorteil.",
+        "Auch das Magnesium in den roten Blutkörperchen stieg durch B6 nicht zusätzlich.",
+        "Vorsicht bei hohen Dosen: Die Europäische Behörde für Lebensmittelsicherheit setzt für Vitamin B6 eine Obergrenze von zwölf Milligramm pro Tag."
+      ],
+      "bullets": [
+        {
+          "t": "B6 schleust Mg in die Zelle",
+          "at": 0,
+          "ev": "keine"
+        },
+        {
+          "t": "Kombination wirkt besser",
+          "at": 1,
+          "ev": "keine"
+        },
+        {
+          "t": "Vitamin B6: höchstens 12 mg am Tag",
+          "at": 3,
+          "ev": "stark"
+        }
+      ],
+      "evidence": {
+        "level": "keine",
+        "label": "nicht haltbar"
+      },
+      "quellen": [
+        "pouteau2018",
+        "noah2020",
+        "efsa_b6"
+      ],
+      "shots": [
+        {
+          "a": [
+            690,
+            1620,
+            1090,
+            1800
+          ]
+        },
+        {
+          "a": [
+            620,
+            1800,
+            1090,
+            2120
+          ],
+          "at": 2
+        },
+        {
+          "a": [
+            620,
+            1620,
+            1090,
+            2120
+          ],
+          "at": 3,
+          "zoom": "out"
+        }
+      ]
+    },
+    {
+      "id": "m7",
+      "kicker": "Sicherheit",
+      "headline": "Einnahme: Was wirklich zählt",
+      "sentences": [
+        "Bleiben die Einnahmeregeln.",
+        "Für dreißig bis sechzig Minuten Abstand zum Kaffee gibt es keine Studie, Koffein erhöht die Ausscheidung nur minimal.",
+        "Zink stört erst in sehr hohen Dosen, weit über der Obergrenze, und zu Eisen fehlen Daten.",
+        "Wichtig sind dagegen echte Wechselwirkungen: Zu bestimmten Antibiotika, zu Osteoporose-Mitteln und zu Schilddrüsenhormon sollte man mehrere Stunden Abstand halten.",
+        "Das Bundesinstitut für Risikobewertung empfiehlt höchstens zweihundertfünfzig Milligramm pro Tag aus Präparaten, verteilt auf zwei Portionen.",
+        "Wer eine Nierenschwäche hat oder lange Säureblocker nimmt, sollte das ärztlich klären."
+      ],
+      "bullets": [
+        {
+          "t": "30–60 Minuten Abstand zu Kaffee",
+          "at": 1,
+          "ev": "keine"
+        },
+        {
+          "t": "2 Stunden Abstand zu Zink und Eisen",
+          "at": 2,
+          "ev": "keine"
+        },
+        {
+          "t": "Abstand zu Antibiotika und Co.",
+          "at": 3,
+          "ev": "stark"
+        },
+        {
+          "t": "Höchstens 250 mg am Tag, aufgeteilt",
+          "at": 4,
+          "ev": "stark"
+        }
+      ],
+      "evidence": {
+        "level": "mittel",
+        "label": "teilweise belegt"
+      },
+      "quellen": [
+        "kynast1994",
+        "spencer1994",
+        "nih_ods",
+        "bfr",
+        "fda2011"
+      ],
+      "shots": [
+        {
+          "a": [
+            1160,
+            1640,
+            1490,
+            1910
+          ]
+        },
+        {
+          "a": [
+            1130,
+            1910,
+            1470,
+            2130
+          ],
+          "at": 1
+        },
+        {
+          "a": [
+            1110,
+            2160,
+            1470,
+            2410
+          ],
+          "at": 2
+        },
+        {
+          "a": [
+            1160,
+            1640,
+            1490,
+            1910
+          ],
+          "at": 3,
+          "zoom": "out"
+        },
+        {
+          "a": [
+            330,
+            1560,
+            580,
+            1760
+          ],
+          "at": 4
+        },
+        {
+          "a": [
+            60,
+            450,
+            300,
+            820
+          ],
+          "at": 5
+        }
+      ]
+    },
+    {
+      "id": "m8",
+      "kicker": "Anwendungen",
+      "headline": "Wofür es hilft und wofür nicht",
+      "sentences": [
+        "Und wofür lohnt sich Magnesium?",
+        "Gegen nächtliche Wadenkrämpfe im Alter hilft es laut Cochrane-Übersicht nicht.",
+        {
+          "t": "Den Blutdruck senkt es leicht, um etwa 2 mmHg.",
+          "say": "Den Blutdruck senkt es leicht, um etwa zwei Millimeter Quecksilbersäule."
+        },
+        "Bei Migräne ist es eine schwach belegte Option zur Vorbeugung, die Leitlinie führt es mit geringerer Evidenz."
+      ],
+      "bullets": [
+        {
+          "t": "Wadenkrämpfe im Alter",
+          "at": 1,
+          "ev": "keine"
+        },
+        {
+          "t": "Blutdruck: etwa −2 mmHg",
+          "at": 2,
+          "ev": "stark"
+        },
+        {
+          "t": "Vorbeugung bei Migräne",
+          "at": 3,
+          "ev": "mittel"
+        }
+      ],
+      "evidence": {
+        "level": "mittel",
+        "label": "gemischt"
+      },
+      "quellen": [
+        "garrison2020",
+        "zhang2016",
+        "dgn2025"
+      ],
+      "shots": [
+        {
+          "a": [
+            80,
+            1950,
+            320,
+            2190
+          ]
+        },
+        {
+          "a": [
+            60,
+            450,
+            300,
+            820
+          ],
+          "at": 2
+        },
+        {
+          "a": [
+            760,
+            290,
+            1080,
+            600
+          ],
+          "at": 3
+        }
+      ]
+    },
+    {
+      "id": "m9",
+      "kapitel": "Fazit",
+      "kicker": "Fazit",
+      "headline": "Was wirklich bleibt",
+      "sentences": [
+        "Was bleibt also?",
+        "Magnesium ist lebenswichtig, aber die meisten decken ihren Bedarf über Vollkorn, Hülsenfrüchte, Nüsse und Mineralwasser.",
+        "Wer ergänzt, nimmt höchstens zweihundertfünfzig Milligramm am Tag, gut lösliche Formen wie Citrat reichen aus.",
+        "Teure Spezialformen und Kombipräparate mit Vitamin B6 halten nicht, was sie versprechen.",
+        "Die Quellen stehen in der Beschreibung."
+      ],
+      "bullets": [
+        {
+          "t": "Ernährung zuerst",
+          "at": 1,
+          "ev": "stark"
+        },
+        {
+          "t": "Höchstens 250 mg, z. B. Citrat",
+          "at": 2,
+          "ev": "stark"
+        },
+        {
+          "t": "Spezialformen und B6-Kombis",
+          "at": 3,
+          "ev": "keine"
+        }
+      ],
+      "evidence": {
+        "level": "stark",
+        "label": "Fazit"
+      },
+      "quellen": [
+        "dge_faq",
+        "bfr"
+      ],
+      "shots": [
+        {
+          "a": [
+            90,
+            1540,
+            580,
+            1830
+          ]
+        },
+        {
+          "a": [
+            620,
+            1620,
+            1090,
+            2120
+          ],
+          "at": 3
+        }
+      ]
+    }
+  ],
+  "quellen": {
+    "debaaij2015": {
+      "kurz": "de Baaij et al. 2015",
+      "voll": "de Baaij et al. 2015, Physiological Reviews – Magnesium im Körper, Mg-ATP",
+      "url": "https://doi.org/10.1152/physrev.00012.2014"
+    },
+    "mayer1984": {
+      "kurz": "Mayer et al. 1984",
+      "voll": "Mayer et al. 1984, Nature – spannungsabhängige Blockade der NMDA-Rezeptoren durch Magnesium",
+      "url": "https://doi.org/10.1038/309261a0"
+    },
+    "schutten2021": {
+      "kurz": "Schutten et al. 2021",
+      "voll": "Schutten et al. 2021, Clinical Endocrinology – Magnesium und Cortisol (nachträgliche Auswertung)",
+      "url": "https://doi.org/10.1111/cen.14350"
+    },
+    "jahnen2012": {
+      "kurz": "Jahnen-Dechent & Ketteler 2012",
+      "voll": "Jahnen-Dechent & Ketteler 2012, Clinical Kidney Journal – Verteilung im Körper, Serum kein Maß für den Gesamtbestand",
+      "url": "https://doi.org/10.1093/ndtplus/sfr163"
+    },
+    "costello2016": {
+      "kurz": "Costello et al. 2016",
+      "voll": "Costello et al. 2016, Advances in Nutrition – Referenzbereich für Serum-Magnesium",
+      "url": "https://doi.org/10.3945/an.116.012765"
+    },
+    "dge_faq": {
+      "kurz": "DGE 2022",
+      "voll": "Deutsche Gesellschaft für Ernährung, FAQ Magnesium – Referenzwerte, kein geeigneter Biomarker",
+      "url": "https://www.dge.de/fileadmin/dok/gesunde-ernaehrung/faq/DGE-FAQ-Magnesium-2022.pdf"
+    },
+    "arnaud2008": {
+      "kurz": "Arnaud 2008",
+      "voll": "Arnaud 2008, British Journal of Nutrition – Bestimmung des Magnesiumstatus",
+      "url": "https://doi.org/10.1017/S000711450800682X"
+    },
+    "mri2008": {
+      "kurz": "Max Rubner-Institut 2008",
+      "voll": "Max Rubner-Institut 2008, Nationale Verzehrsstudie II, Teil 2 – Magnesiumzufuhr in Deutschland",
+      "url": "https://www.mri.bund.de/fileadmin/MRI/Institute/EV/NVSII_Abschlussbericht_Teil_2.pdf"
+    },
+    "rosanoff2012": {
+      "kurz": "Rosanoff et al. 2012",
+      "voll": "Rosanoff et al. 2012, Nutrition Reviews – Zufuhr in den USA (48 % unter Bedarf)",
+      "url": "https://doi.org/10.1111/j.1753-4887.2011.00465.x"
+    },
+    "fan2008": {
+      "kurz": "Fan et al. 2008",
+      "voll": "Fan et al. 2008, Journal of Trace Elements in Medicine and Biology – Mineralstoffe im Weizen (Broadbalk-Versuch)",
+      "url": "https://doi.org/10.1016/j.jtemb.2008.07.002"
+    },
+    "pickering2020": {
+      "kurz": "Pickering et al. 2020",
+      "voll": "Pickering et al. 2020, Nutrients – Magnesium und Stress (Hypothese)",
+      "url": "https://doi.org/10.3390/nu12123672"
+    },
+    "firoz2001": {
+      "kurz": "Firoz & Graber 2001",
+      "voll": "Firoz & Graber 2001, Magnesium Research – Aufnahme verschiedener Salze (Oxid 4 %)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11794633/"
+    },
+    "schuette1994": {
+      "kurz": "Schuette et al. 1994",
+      "voll": "Schuette et al. 1994, JPEN – Isotopenstudie Oxid gegen Diglycinat",
+      "url": "https://doi.org/10.1177/0148607194018005430"
+    },
+    "walker2003": {
+      "kurz": "Walker et al. 2003",
+      "voll": "Walker et al. 2003, Magnesium Research – Citrat und Chelat gegen Oxid",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14596323/"
+    },
+    "lindberg1990": {
+      "kurz": "Lindberg et al. 1990",
+      "voll": "Lindberg et al. 1990, Journal of the American College of Nutrition – Löslichkeit Citrat gegen Oxid",
+      "url": "https://doi.org/10.1080/07315724.1990.10720349"
+    },
+    "pardo2021": {
+      "kurz": "Pardo et al. 2021",
+      "voll": "Pardo et al. 2021, Nutrition – systematische Übersicht zur Bioverfügbarkeit",
+      "url": "https://doi.org/10.1016/j.nut.2021.111294"
+    },
+    "slutsky2010": {
+      "kurz": "Slutsky et al. 2010",
+      "voll": "Slutsky et al. 2010, Neuron – L-Threonat bei Ratten",
+      "url": "https://doi.org/10.1016/j.neuron.2009.12.026"
+    },
+    "liu2016": {
+      "kurz": "Liu et al. 2016",
+      "voll": "Liu et al. 2016, Journal of Alzheimer's Disease – L-Threonat beim Menschen (Herstellerstudie, 44 Personen)",
+      "url": "https://doi.org/10.3233/JAD-150538"
+    },
+    "schuster2025": {
+      "kurz": "Schuster et al. 2025",
+      "voll": "Schuster et al. 2025, Nature and Science of Sleep – Bisglycinat und Schlaf (155 Personen, kleiner Effekt)",
+      "url": "https://doi.org/10.2147/NSS.S524348"
+    },
+    "mah2021": {
+      "kurz": "Mah & Pitre 2021",
+      "voll": "Mah & Pitre 2021, BMC Complementary Medicine and Therapies – Meta-Analyse Magnesium und Schlaf",
+      "url": "https://doi.org/10.1186/s12906-021-03297-z"
+    },
+    "uysal2019": {
+      "kurz": "Uysal et al. 2019",
+      "voll": "Uysal et al. 2019, Biological Trace Element Research – Magnesiumformen bei Ratten",
+      "url": "https://doi.org/10.1007/s12011-018-1351-9"
+    },
+    "pouteau2018": {
+      "kurz": "Pouteau et al. 2018",
+      "voll": "Pouteau et al. 2018, PLoS One – Magnesium mit und ohne B6 bei Stress (264 Personen)",
+      "url": "https://doi.org/10.1371/journal.pone.0208454"
+    },
+    "noah2020": {
+      "kurz": "Noah et al. 2020",
+      "voll": "Noah et al. 2020, Magnesium Research – Folgeauswertung, Erythrozyten-Magnesium",
+      "url": "https://doi.org/10.1684/mrh.2020.0468"
+    },
+    "efsa_b6": {
+      "kurz": "EFSA 2023 (Vitamin B6)",
+      "voll": "EFSA 2023, Obergrenze für Vitamin B6 (12 mg pro Tag)",
+      "url": "https://doi.org/10.2903/j.efsa.2023.8006"
+    },
+    "kynast1994": {
+      "kurz": "Kynast-Gales & Massey 1994",
+      "voll": "Kynast-Gales & Massey 1994, Journal of the American College of Nutrition – Koffein und Magnesiumausscheidung",
+      "url": "https://doi.org/10.1080/07315724.1994.10718436"
+    },
+    "spencer1994": {
+      "kurz": "Spencer et al. 1994",
+      "voll": "Spencer et al. 1994, Journal of the American College of Nutrition – Hochdosis-Zink und Magnesiumaufnahme",
+      "url": "https://doi.org/10.1080/07315724.1994.10718438"
+    },
+    "nih_ods": {
+      "kurz": "NIH ODS",
+      "voll": "NIH Office of Dietary Supplements, Magnesium – Wechselwirkungen mit Medikamenten",
+      "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+    },
+    "bfr": {
+      "kurz": "BfR",
+      "voll": "Bundesinstitut für Risikobewertung, Höchstmengenvorschläge für Magnesium (250 mg, aufgeteilt)",
+      "url": "https://www.bfr.bund.de/cm/343/hoechstmengenvorschlaege-fuer-magnesium-in-lebensmitteln-inklusive-nahrungsergaenzungsmitteln.pdf"
+    },
+    "fda2011": {
+      "kurz": "FDA 2011",
+      "voll": "FDA 2011, Sicherheitsmitteilung: Säureblocker und Magnesiummangel",
+      "url": "https://wayback.archive-it.org/7993/20170111165553/http://www.fda.gov/Drugs/DrugSafety/ucm245011.htm"
+    },
+    "garrison2020": {
+      "kurz": "Garrison et al. 2020",
+      "voll": "Garrison et al. 2020, Cochrane – Magnesium gegen Muskelkrämpfe",
+      "url": "https://doi.org/10.1002/14651858.CD009402.pub3"
+    },
+    "zhang2016": {
+      "kurz": "Zhang et al. 2016",
+      "voll": "Zhang et al. 2016, Hypertension – Meta-Analyse Magnesium und Blutdruck",
+      "url": "https://doi.org/10.1161/HYPERTENSIONAHA.116.07664"
+    },
+    "dgn2025": {
+      "kurz": "DGN 2025",
+      "voll": "Deutsche Gesellschaft für Neurologie 2025, Leitlinie Migräne",
+      "url": "https://www.dgn.org/cms-content/030057_LL_Migra%CC%88ne_2025_V7_1757058404145.pdf"
+    }
+  }
+}

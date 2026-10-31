@@ -1,0 +1,46 @@
+Chronischer Stress: Was hilft wirklich?
+Ein Faktencheck populärer Anti-Stress-Tipps. Jeder Punkt ist gegen Studien geprüft; die Marker zeigen, wie gut er belegt ist.
+
+Kapitel
+0:00 Einleitung
+0:31 Ein Eimer, viele Zuflüsse
+1:24 Arbeiten in Wellen
+2:23 Offene Schleifen schließen
+3:13 Training ist auch Stress
+3:48 Einfach essen an harten Tagen
+4:23 Strahlung, Licht, Plastik
+5:27 Fazit
+
+Quellen (Nummern wie im Video)
+[1] McEwen 1998, New England Journal of Medicine – allostatische Last: https://doi.org/10.1056/NEJM199801153380307
+[2] Keating zu D. D. Palmers Krankheitstheorie – Ursprung der Dreiteilung in der Chiropraktik: https://chiro.org/Plus/History/Persons/PalmerDD/PalmerDD-Disease_Theory.pdf
+[3] Kleitman 1982, Sleep – Ruhe-Aktivitäts-Zyklus: https://doi.org/10.1093/sleep/5.4.311
+[4] Albulescu et al. 2022, PLOS ONE – Meta-Analyse Mikropausen (Energie d = 0,36, Müdigkeit d = 0,35, Leistung n. s.): https://doi.org/10.1371/journal.pone.0272460
+[5] Kang & Kurtzberg 2019, Journal of Behavioral Addictions – Pause am Handy: 19 % langsamer, 22 % weniger gelöst (Experiment, 414 Studierende): https://pmc.ncbi.nlm.nih.gov/articles/PMC7044622
+[6] Rhee & Kim 2016, Computers in Human Behavior – Handy-Mittagspause baut Erschöpfung schwächer ab (Tagebuchstudie, 450 Beschäftigte): https://doi.org/10.1016/j.chb.2015.11.056
+[7] Balban et al. 2023, Cell Reports Medicine – zyklisches Seufzen, 108 Personen, 28 Tage: https://doi.org/10.1016/j.xcrm.2022.100895
+[8] Masicampo & Baumeister 2011, Journal of Personality and Social Psychology – ein Plan stoppt ungewollte Gedanken an offene Ziele: https://doi.org/10.1037/a0024192
+[9] Scullin et al. 2018, Journal of Experimental Psychology: General – To-do-Liste vor dem Schlafen: https://doi.org/10.1037/xge0000374
+[10] Ghibellini & Meier 2025, Humanities and Social Sciences Communications – Meta-Analyse Zeigarnik/Ovsiankina: https://doi.org/10.1057/s41599-025-05000-w
+[11] Bartholomew et al. 2008, Journal of Strength and Conditioning Research – weniger Kraftzuwachs bei viel Stress: https://doi.org/10.1519/JSC.0b013e318173d0bf
+[12] Stults-Kolehmainen & Bartholomew 2012, Medicine & Science in Sports & Exercise – langsamere Erholung: https://doi.org/10.1249/MSS.0b013e31825f67a0
+[13] Stults-Kolehmainen et al. 2014, Journal of Strength and Conditioning Research – Erholung über 96 Stunden: https://doi.org/10.1519/JSC.0000000000000335
+[14] Manresa-Rocamora et al. 2021, IJERPH – Training nach Tagesform (HRV) mindestens gleich wirksam wie fester Plan: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8507742/
+[15] Singh et al. 2023, British Journal of Sports Medicine – Bewegung und psychische Gesundheit: https://doi.org/10.1136/bjsports-2022-106195
+[16] Taché & Bonaz 2007, Journal of Clinical Investigation – Stress-Hormon CRF und Darmbewegung: https://doi.org/10.1172/JCI30085
+[17] Gonzalez-Bono et al. 2002, Hormones and Behavior – Glukose verstärkt die Cortisol-Antwort: https://doi.org/10.1006/hbeh.2002.1766
+[18] Zänkert et al. 2020, Psychoneuroendocrinology – Replikation: https://doi.org/10.1016/j.psyneuen.2020.104607
+[19] Christ et al. 2024, Frontiers in Sports and Active Living – Kohlenhydrate im Ausdauersport: https://doi.org/10.3389/fspor.2024.1264814
+[20] WHO, Fragen und Antworten zu elektromagnetischen Feldern: https://www.who.int/news-room/questions-and-answers/item/radiation-electromagnetic-fields
+[21] Karipidis et al. 2024, Environment International – Mobilfunk und Krebs: https://doi.org/10.1016/j.envint.2024.108983
+[22] Bosch-Capblanch et al. 2024, Environment International – Provokationsstudien zu Symptomen: https://doi.org/10.1016/j.envint.2024.108612
+[23] Rubin et al. 2005, Psychosomatic Medicine – Elektrosensibilität im Doppelblindtest: https://doi.org/10.1097/01.psy.0000155664.13300.64
+[24] Chang et al. 2015, PNAS – E-Reader vor dem Schlafen: https://doi.org/10.1073/pnas.1418490112
+[25] Cajochen et al. 2022, Lighting Research & Technology – Bildschirmlicht und Schlaf: https://doi.org/10.1177/14771535221078765
+[26] EFSA 2023, Neubewertung Bisphenol A: https://doi.org/10.2903/j.efsa.2023.6857
+[27] EU-Verordnung 2024/3190 – Bisphenol A in Lebensmittelkontaktmaterialien: https://eur-lex.europa.eu/eli/reg/2024/3190/oj/eng
+[28] Scott et al. 2021, Sleep Medicine Reviews – besserer Schlaf senkt Stress (g = −0,42): https://doi.org/10.1016/j.smrv.2021.101556
+[29] Heinrichs et al. 2003, Biological Psychiatry – soziale Unterstützung senkt die Cortisol-Antwort auf Stress: https://doi.org/10.1016/S0006-3223(03)00465-7
+[30] Holt-Lunstad et al. 2010, PLoS Medicine – soziale Beziehungen und Sterblichkeit (148 Studien): https://doi.org/10.1371/journal.pmed.1000316
+
+Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert, Tippfehler korrigiert. Kein Ersatz für ärztlichen Rat.

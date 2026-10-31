@@ -1,0 +1,191 @@
+{
+  "tts": "elevenlabs",
+  "voice_id": "NBqeXKdZHweef6y0B67V",
+  "voice_name": "Christian - Warm and Captivating",
+  "model": "eleven_v4",
+  "tempo": 1.0,
+  "voice": "de-DE-KatjaNeural",
+  "rate": "+10%",
+  "scenes": [
+    {
+      "id": "k0",
+      "kicker": "Faktencheck",
+      "headline": "3 Anti-Stress-Tipps: Was stimmt?",
+      "sentences": [
+        "Drei beliebte Tipps gegen Stress.",
+        "Welcher hält einem Faktencheck stand?"
+      ],
+      "shots": [
+        {
+          "a": [
+            280,
+            715,
+            600,
+            1010
+          ]
+        },
+        {
+          "at": 1,
+          "a": [
+            250,
+            1000,
+            610,
+            1350
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k1",
+      "kicker": "Tipp 1",
+      "headline": "Alle 60–90 Minuten Pause",
+      "verdict": {
+        "type": "teilweise",
+        "label": "teilweise belegt",
+        "at": 1
+      },
+      "sentences": [
+        {
+          "t": "Tipp eins: Alle 60 bis 90 Minuten eine kurze Pause.",
+          "say": "Tipp eins: Alle sechzig bis neunzig Minuten eine kurze Pause."
+        },
+        "Kurze Pausen geben messbar mehr Energie, der feste Takt selbst ist aber nicht belegt.",
+        "Wichtig: ohne Handy. Mails und Social Media sind keine Erholung."
+      ],
+      "shots": [
+        {
+          "a": [
+            950,
+            715,
+            1270,
+            1000
+          ]
+        },
+        {
+          "at": 1,
+          "a": [
+            830,
+            1360,
+            1130,
+            1580
+          ]
+        },
+        {
+          "at": 2,
+          "a": [
+            1180,
+            1360,
+            1500,
+            1580
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k2",
+      "kicker": "Tipp 2",
+      "headline": "Offene Schleifen schließen",
+      "verdict": {
+        "type": "belegt",
+        "label": "belegt",
+        "at": 2
+      },
+      "sentences": [
+        "Tipp zwei: Offene Schleifen schließen.",
+        "Du musst dafür nicht alles sofort erledigen.",
+        "Schon ein konkreter Plan, wann und wie, bringt Ruhe in den Kopf."
+      ],
+      "shots": [
+        {
+          "a": [
+            850,
+            1805,
+            1470,
+            2035
+          ]
+        },
+        {
+          "at": 1,
+          "a": [
+            1030,
+            1790,
+            1300,
+            2030
+          ]
+        },
+        {
+          "at": 2,
+          "a": [
+            1270,
+            1830,
+            1480,
+            2030
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k3",
+      "kicker": "Tipp 3",
+      "headline": "Kohlenhydrate als Schutzschild",
+      "verdict": {
+        "type": "falsch",
+        "label": "stimmt so nicht",
+        "at": 1
+      },
+      "sentences": [
+        "Tipp drei: Kohlenhydrate als Schutzschild gegen Stress.",
+        "Stimmt so nicht.",
+        "Traubenzucker vor einer Stresssituation verstärkt die Cortisol-Antwort sogar."
+      ],
+      "shots": [
+        {
+          "a": [
+            580,
+            2180,
+            1010,
+            2495
+          ]
+        },
+        {
+          "at": 2,
+          "a": [
+            690,
+            2180,
+            880,
+            2495
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k4",
+      "kicker": "Fazit",
+      "headline": "Was wirklich hilft",
+      "sentences": [
+        "Also: Pausen ohne Handy und ein Plan für alles Offene.",
+        "Das Brot darfst du trotzdem essen.",
+        "Die Quellen stehen in der Beschreibung."
+      ],
+      "shots": [
+        {
+          "a": [
+            600,
+            720,
+            1250,
+            1060
+          ]
+        },
+        {
+          "at": 1,
+          "a": [
+            1170,
+            2180,
+            1500,
+            2465
+          ]
+        }
+      ]
+    }
+  ]
+}
