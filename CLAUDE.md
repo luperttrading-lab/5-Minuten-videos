@@ -16,7 +16,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
    - Empfehlungen, die an eigene Produkte oder Affiliate-Links gebunden sind, kommen gar nicht ins Video (auch nicht
      widerlegt), außer eine unabhängige Quelle oder Studien stützen sie. Mehrere Videos desselben Anbieters zählen nicht
      als Bestätigung.
-   - YouTuber im Video nicht namentlich nennen („In populären Videos heißt es …“).
+   - Herkunft der Behauptungen im Video nicht nennen: weder Ärzte noch Videos, Kanäle oder Aufrufzahlen. Neutral
+     formulieren: „Oft heißt es …“, „Eine verbreitete Empfehlung lautet …“, „Viele raten …“.
 3. **Drehbuch `szenen.json`:** siehe Aufbau unten.
 4. **Bildausschnitte prüfen:** `python3 ../../werkzeug/ausschnitte_pruefen.py szenen.json bogen.png grafik_korrigiert.png`
 5. **Ton und Länge prüfen:** `python3 ../../werkzeug/render.py szenen.json grafik_korrigiert.png video.mp4 --nur-ton`
