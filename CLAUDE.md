@@ -1,6 +1,6 @@
 # 5-Minuten-Videos: Gesundheits-Faktenchecks
 
-Kurze Info-Videos (Ziel 5 Minuten, höchstens 6; länger → in zwei Teile unter 5 Minuten schneiden) zu Gesundheitsthemen,
+Info-Videos für YouTube (Ziel ≈ 6 Minuten, ≈ 720 Wörter; Teile unter 5 Minuten nur für die Prüfung durch Gemini) zu Gesundheitsthemen,
 die viele Menschen interessieren. Format: Faktencheck populärer Aussagen, oft aus NotebookLM-/Gemini-Infografiken.
 Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 
