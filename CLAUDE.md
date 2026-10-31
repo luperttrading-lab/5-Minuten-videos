@@ -51,7 +51,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Modell `gemini-nano-banana-2.1`, `"modalities":["image","text"]`, `"image_config":{"aspect_ratio":"16:9"}`;
   Bild als Base64 in `choices[0].message.images[0].image_url.url`, 1376×768, ≈ 15–20 s.
   Kosten: `usage.compute_points_used` / 100 = Credits (am 31.10. gemessen: 4.175 Punkte = 41,8 Credits), ≈ 40 Credits
-  pro Bild. Credits erneuern sich am 5. des Monats. Stil „Tusche und Aquarell auf warmem Papier, lockere Tuschelinien,
+  pro Bild ≈ 2,7 ct im Abo (laut Nutzer 20 $ = 30.000 Credits), ≈ 4 ct nachgekauft (10 $ = 10.000). Credits erneuern
+  sich am 5. des Monats. Stil „Tusche und Aquarell auf warmem Papier, lockere Tuschelinien,
   Taubenblau, Terrakotta, Ocker, Salbei, kein Text“. Beispiele: `themen/magnesium/bilder/`. Nächster Schritt: ein Skript
   `werkzeug/bilder.py`, das pro Szene ein 16:9-Bild ohne Schrift erzeugt. Jedes Bild vor dem Rendern ansehen (Schrift,
   Motiv, Stil, inhaltlich richtig).
