@@ -1,0 +1,494 @@
+{
+ "tts": "elevenlabs",
+ "voice_id": "NBqeXKdZHweef6y0B67V",
+ "voice_name": "Christian - Warm and Captivating",
+ "model": "eleven_v4",
+ "tempo": 1.0,
+ "titel": "Magnesium: Wie viel, wann, mit Vitamin D?",
+ "untertitel": "Ein Faktencheck zu Dosis, Vitamin D, Einnahmezeit und Stress. Jeder Punkt ist gegen Studien geprüft; die Marker zeigen, wie gut er belegt ist.",
+ "fuss": "Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Kein Ersatz für ärztlichen Rat.",
+ "quellen": {
+  "dge_faq": {
+   "kurz": "DGE 2021/2022",
+   "voll": "Deutsche Gesellschaft für Ernährung: Ausgewählte Fragen und Antworten zu Magnesium. FAQ, Stand 2021 (Datei 2022).",
+   "url": "https://www.dge.de/fileadmin/dok/gesunde-ernaehrung/faq/DGE-FAQ-Magnesium-2022.pdf"
+  },
+  "scf2001": {
+   "kurz": "SCF 2001",
+   "voll": "Scientific Committee on Food: Opinion on the Tolerable Upper Intake Level of Magnesium. SCF/CS/NUT/UPPLEV/54 Final, 11.10.2001.",
+   "url": "https://ec.europa.eu/food/fs/sc/scf/out105_en.pdf"
+  },
+  "bfr": {
+   "kurz": "BfR 2021",
+   "voll": "Bundesinstitut für Risikobewertung: Höchstmengenvorschläge für Magnesium in Lebensmitteln inklusive Nahrungsergänzungsmitteln. 2021.",
+   "url": "https://www.bfr.bund.de/cm/343/hoechstmengenvorschlaege-fuer-magnesium-in-lebensmitteln-inklusive-nahrungsergaenzungsmitteln.pdf"
+  },
+  "costello2023": {
+   "kurz": "Costello et al. 2023",
+   "voll": "Costello R, Rosanoff A, Nielsen F, West C. Perspective: Call for Re-evaluation of the Tolerable Upper Intake Level for Magnesium Supplementation in Adults. Adv Nutr 2023;14(5):973–982. PMID 37487817.",
+   "url": "https://doi.org/10.1016/j.advnut.2023.06.008"
+  },
+  "jou2023": {
+   "kurz": "Jou et al. 2023",
+   "voll": "Jou DH et al. Fatal Hypermagnesemia in Patients Taking Magnesium Hydroxide. Electrolyte Blood Press 2023;21(2):66–71.",
+   "url": "https://doi.org/10.5049/EBP.2023.21.2.66"
+  },
+  "fine1991": {
+   "kurz": "Fine et al. 1991",
+   "voll": "Fine KD, Santa Ana CA, Porter JL, Fordtran JS. Intestinal absorption of magnesium from food and supplements. J Clin Invest 1991;88(2):396–402.",
+   "url": "https://doi.org/10.1172/JCI115317"
+  },
+  "schuchardt2017": {
+   "kurz": "Schuchardt & Hahn 2017",
+   "voll": "Schuchardt JP, Hahn A. Intestinal Absorption and Factors Influencing Bioavailability of Magnesium – An Update. Curr Nutr Food Sci 2017;13(4):260–278.",
+   "url": "https://doi.org/10.2174/1573401313666170427162740"
+  },
+  "sabatier2011": {
+   "kurz": "Sabatier et al. 2011",
+   "voll": "Sabatier M et al. Influence of the consumption pattern of magnesium from magnesium-rich mineral water on magnesium bioavailability. Br J Nutr 2011;106(3):331–334.",
+   "url": "https://doi.org/10.1017/S0007114511001139"
+  },
+  "dai2018": {
+   "kurz": "Dai et al. 2018",
+   "voll": "Dai Q et al. Magnesium status and supplementation influence vitamin D status and metabolism: results from a randomized trial. Am J Clin Nutr 2018;108(6):1249–1258. PMID 30541089.",
+   "url": "https://doi.org/10.1093/ajcn/nqy274"
+  },
+  "uwitonze2018": {
+   "kurz": "Uwitonze & Razzaque 2018",
+   "voll": "Uwitonze AM, Razzaque MS. Role of Magnesium in Vitamin D Activation and Function. J Am Osteopath Assoc 2018;118(3):181–189.",
+   "url": "https://doi.org/10.7556/jaoa.2018.037"
+  },
+  "rude1985": {
+   "kurz": "Rude et al. 1985",
+   "voll": "Rude RK et al. Low serum concentrations of 1,25-dihydroxyvitamin D in human magnesium deficiency. J Clin Endocrinol Metab 1985;61(5):933–940.",
+   "url": "https://doi.org/10.1210/jcem-61-5-933"
+  },
+  "fatemi1991": {
+   "kurz": "Fatemi et al. 1991",
+   "voll": "Fatemi S, Ryzen E, Flores J, Endres DB, Rude RK. Effect of experimental human magnesium depletion on parathyroid hormone secretion and 1,25-dihydroxyvitamin D metabolism. J Clin Endocrinol Metab 1991;73(5):1067–1072.",
+   "url": "https://doi.org/10.1210/jcem-73-5-1067"
+  },
+  "cheung2022": {
+   "kurz": "Cheung et al. 2022",
+   "voll": "Cheung MM et al. The effect of combined magnesium and vitamin D supplementation on vitamin D status, systemic inflammation, and blood pressure: A randomized double-blinded controlled trial. Nutrition 2022;99–100:111674.",
+   "url": "https://doi.org/10.1016/j.nut.2022.111674"
+  },
+  "kynast1994": {
+   "kurz": "Kynast-Gales & Massey 1994",
+   "voll": "Kynast-Gales SA, Massey LK. Effect of caffeine on circadian excretion of urinary calcium and magnesium. J Am Coll Nutr 1994;13(5):467–472.",
+   "url": "https://doi.org/10.1080/07315724.1994.10718436"
+  },
+  "massey2004": {
+   "kurz": "Massey & Sutton 2004",
+   "voll": "Massey LK, Sutton RA. Acute caffeine effects on urine composition and calcium kidney stone risk in calcium stone formers. J Urol 2004;172(2):555–558.",
+   "url": "https://doi.org/10.1097/01.ju.0000129413.87024.5c"
+  },
+  "boyle2017": {
+   "kurz": "Boyle et al. 2017",
+   "voll": "Boyle NB, Lawton C, Dye L. The Effects of Magnesium Supplementation on Subjective Anxiety and Stress – A Systematic Review. Nutrients 2017;9(5):429.",
+   "url": "https://doi.org/10.3390/nu9050429"
+  },
+  "pouteau2018": {
+   "kurz": "Pouteau et al. 2018",
+   "voll": "Pouteau E et al. Superiority of magnesium and vitamin B6 over magnesium alone on severe stress in healthy adults with low magnesemia: A randomized, single-blind clinical trial. PLoS One 2018;13(12):e0208454.",
+   "url": "https://doi.org/10.1371/journal.pone.0208454"
+  },
+  "galan1997": {
+   "kurz": "Galan et al. 1997",
+   "voll": "Galan P et al. Dietary magnesium intake in a French adult population. Magnes Res 1997;10(4):321–328. (keine DOI)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9513928/"
+  },
+  "mri2008": {
+   "kurz": "Max Rubner-Institut 2008",
+   "voll": "Max Rubner-Institut: Nationale Verzehrsstudie II, Ergebnisbericht Teil 2, 2008, Kap. 5.7.4 und Tab. A.49.",
+   "url": "https://www.mri.bund.de/fileadmin/MRI/Institute/EV/NVSII_Abschlussbericht_Teil_2.pdf"
+  }
+ },
+ "scenes": [
+  {
+   "id": "m0",
+   "layout": "kacheln",
+   "kapitel": "Einleitung",
+   "kicker": "Info-Video · Faktencheck",
+   "headline": "Magnesium: Wie viel, wann, mit Vitamin D?",
+   "sentences": [
+    "Zu Magnesium kursieren viele Ratschläge, und sie widersprechen sich oft.",
+    "Wir schauen auf sechs Fragen: wie viel man braucht, wie verbreitet Mangel ist, was Magnesium mit Vitamin D zu tun hat, ob morgens oder abends besser ist, wie man es richtig einnimmt und ob es gegen Stress hilft.",
+    "Jede Aussage haben wir gegen die Studienlage geprüft.",
+    "Grün heißt belegt, gelb teilweise, rot nicht haltbar."
+   ],
+   "hervorheben_at": 1,
+   "legende_at": 3,
+   "kacheln": [
+    {
+     "t": "Wie viel ist genug?",
+     "bild": "bilder/m1.png",
+     "wort": "wie viel"
+    },
+    {
+     "t": "Haben die meisten zu wenig?",
+     "bild": "bilder/m2.png",
+     "wort": "Mangel"
+    },
+    {
+     "t": "Magnesium und Vitamin D",
+     "bild": "bilder/m3.png",
+     "wort": "Vitamin D"
+    },
+    {
+     "t": "Morgens oder abends?",
+     "bild": "bilder/m4.png",
+     "wort": "morgens"
+    },
+    {
+     "t": "Richtig einnehmen",
+     "bild": "bilder/m5.png",
+     "wort": "richtig"
+    },
+    {
+     "t": "Hilft es gegen Stress?",
+     "bild": "bilder/m6.png",
+     "wort": "Stress"
+    }
+   ]
+  },
+  {
+   "id": "m1",
+   "kapitel": "Wie viel ist genug?",
+   "kicker": "Dosis",
+   "headline": "Wie viel ist genug?",
+   "sentences": [
+    {
+     "t": "Die DGE schätzt den Bedarf auf 300 mg am Tag für Frauen und 350 mg für Männer, aus allem, was man isst und trinkt.",
+     "say": "Die Deutsche Gesellschaft für Ernährung schätzt den Bedarf auf dreihundert Milligramm am Tag für Frauen und dreihundertfünfzig für Männer, aus allem, was man isst und trinkt."
+    },
+    {
+     "t": "Oft heißt es, das sei nur der Mindestbedarf, man solle 300 bis 600 mg zusätzlich nehmen.",
+     "say": "Oft heißt es, das sei nur der Mindestbedarf, man solle dreihundert bis sechshundert Milligramm zusätzlich nehmen."
+    },
+    "Dafür gibt es keinen Beleg: Kein Versuch zeigt, dass gesunde Menschen von so viel mehr profitieren.",
+    {
+     "t": "Die Grenze von 250 mg aus Präparaten hat einen harmlosen Grund: Darüber bekommen manche Menschen Durchfall.",
+     "say": "Die Grenze von zweihundertfünfzig Milligramm aus Präparaten hat einen harmlosen Grund: Darüber bekommen manche Menschen Durchfall."
+    },
+    "Gefährlich wird Magnesium vor allem, wenn die Nieren schwach sind, denn sie scheiden den Überschuss aus.",
+    {
+     "t": "400 mg schaden Gesunden also kaum, nützen aber nachweislich nicht mehr.",
+     "say": "Vierhundert Milligramm schaden Gesunden also kaum, nützen aber nachweislich nicht mehr."
+    }
+   ],
+   "bullets": [
+    {
+     "t": "DGE-Werte sind nur Mindestbedarf",
+     "at": 1,
+     "ev": "keine"
+    },
+    {
+     "t": "300–600 mg zusätzlich nützen mehr",
+     "at": 2,
+     "ev": "keine"
+    },
+    {
+     "t": "Grenze 250 mg wegen Durchfall",
+     "at": 3,
+     "ev": "stark"
+    },
+    {
+     "t": "Gefahr vor allem bei schwachen Nieren",
+     "at": 4,
+     "ev": "stark"
+    }
+   ],
+   "evidence": {
+    "level": "mittel",
+    "label": "mehr bringt nicht mehr"
+   },
+   "quellen": [
+    "dge_faq",
+    "scf2001",
+    "bfr",
+    "costello2023",
+    "jou2023"
+   ],
+   "bild_prompt": "two small ceramic dishes on a wooden table, one with a modest little pile of white tablets, the other with a large overflowing pile of tablets, a glass of water beside them",
+   "shots": [
+    {
+     "bild": "bilder/m1.png"
+    }
+   ]
+  },
+  {
+   "id": "m2",
+   "kapitel": "Haben die meisten zu wenig?",
+   "kicker": "Versorgung",
+   "headline": "Haben die meisten zu wenig?",
+   "sentences": [
+    "Drei von vier Menschen hätten einen Mangel, heißt es, gestützt auf eine Studie aus Frankreich.",
+    "Gemessen wurde dort aber nur, was die Menschen gegessen haben, nicht das Magnesium im Körper.",
+    "In Deutschland isst etwa jeder Vierte weniger als empfohlen, bei Mädchen im Teenageralter gut die Hälfte.",
+    "Weniger als empfohlen zu essen, ist aber noch kein nachgewiesener Mangel.",
+    "Wer regelmäßig Vollkorn, Hülsenfrüchte, Nüsse und Gemüse isst, ist meist gut versorgt."
+   ],
+   "bullets": [
+    {
+     "t": "Drei von vier haben Mangel",
+     "at": 0,
+     "ev": "mittel"
+    },
+    {
+     "t": "Jeder Vierte isst zu wenig",
+     "at": 2,
+     "ev": "stark"
+    },
+    {
+     "t": "Zu wenig essen ist noch kein Mangel",
+     "at": 3,
+     "ev": "stark"
+    }
+   ],
+   "evidence": {
+    "level": "mittel",
+    "label": "Zufuhr, kein Blutwert"
+   },
+   "quellen": [
+    "galan1997",
+    "mri2008",
+    "dge_faq"
+   ],
+   "bild_prompt": "a woven market basket filled with wholegrain bread, a jar of lentils, walnuts and almonds, leafy greens, and a bottle of mineral water, seen slightly from above",
+   "shots": [
+    {
+     "bild": "bilder/m2.png"
+    }
+   ]
+  },
+  {
+   "id": "m3",
+   "kapitel": "Magnesium und Vitamin D",
+   "kicker": "Zusammenhang",
+   "headline": "Magnesium aktiviert Vitamin D",
+   "sentences": [
+    "Ein wichtiger Zusammenhang wird oft übersehen: Magnesium hilft, Vitamin D zu aktivieren.",
+    "Vitamin D aus Sonne oder Tabletten ist zunächst eine Vorstufe; Leber und Nieren wandeln es in die wirksame Form um, und die beteiligten Enzyme brauchen Magnesium.",
+    "Am deutlichsten zeigt sich das bei echtem Magnesiummangel: Dann sinkt die aktive Form, und Vitamin D wirkt schlechter.",
+    {
+     "t": "In einer kontrollierten Studie mit 180 Erwachsenen wirkte Magnesium wie ein Regler: Wer wenig Vitamin D hatte, bekam etwas mehr, wer viel hatte, etwas weniger.",
+     "say": "In einer kontrollierten Studie mit hundertachtzig Erwachsenen wirkte Magnesium wie ein Regler: Wer wenig Vitamin D hatte, bekam etwas mehr, wer viel hatte, etwas weniger."
+    },
+    "Dass Vitamin D ohne Magnesium gar nicht wirkt, ist für gesunde Menschen aber übertrieben.",
+    "Wer Vitamin D nimmt, achtet deshalb auf magnesiumreiche Ernährung; ein Kombipräparat ist nicht nötig. Dazu kommt bald ein eigenes Video."
+   ],
+   "bullets": [
+    {
+     "t": "Magnesium hilft, Vitamin D zu aktivieren",
+     "at": 0,
+     "ev": "mittel"
+    },
+    {
+     "t": "Mangel bremst Vitamin D",
+     "at": 2,
+     "ev": "stark"
+    },
+    {
+     "t": "Magnesium gleicht den Spiegel aus",
+     "at": 3,
+     "ev": "mittel"
+    },
+    {
+     "t": "Ohne Magnesium wirkt Vitamin D nicht",
+     "at": 4,
+     "ev": "keine"
+    }
+   ],
+   "evidence": {
+    "level": "mittel",
+    "label": "Zusammenhang belegt, Effekt klein"
+   },
+   "quellen": [
+    "uwitonze2018",
+    "rude1985",
+    "fatemi1991",
+    "dai2018",
+    "cheung2022"
+   ],
+   "bild_prompt": "warm sunlight falling through a window onto a windowsill with a small dish of golden softgel capsules and a small bowl of pumpkin seeds, a few leaves of a plant",
+   "shots": [
+    {
+     "bild": "bilder/m3.png"
+    }
+   ]
+  },
+  {
+   "id": "m4",
+   "kapitel": "Morgens oder abends?",
+   "kicker": "Einnahme",
+   "headline": "Morgens oder abends?",
+   "sentences": [
+    "Die einen sagen: abends, das entspannt und hilft beim Schlafen.",
+    "Die anderen: morgens, das gibt Energie und schützt vor dem Stress des Tages.",
+    "Verglichen hat das noch niemand: Wir haben keine einzige Studie gefunden, die morgens und abends gegenüberstellt.",
+    "Beide Ratschläge sind also Vermutungen.",
+    "Belegt ist nur, dass Magnesium zu einer Mahlzeit etwas besser aufgenommen und besser vertragen wird.",
+    "Nimm es also dann, wenn du es nicht vergisst, am besten zum Essen."
+   ],
+   "bullets": [
+    {
+     "t": "Abends wirkt besser",
+     "at": 0,
+     "ev": "keine"
+    },
+    {
+     "t": "Morgens wirkt besser",
+     "at": 1,
+     "ev": "keine"
+    },
+    {
+     "t": "Zur Mahlzeit nehmen",
+     "at": 4,
+     "ev": "mittel"
+    }
+   ],
+   "evidence": {
+    "level": "keine",
+    "label": "nie verglichen"
+   },
+   "quellen": [
+    "schuchardt2017"
+   ],
+   "bild_prompt": "split composition: left half a soft morning sky with rising sun above a breakfast table with a glass of water, right half a calm evening sky with crescent moon above a bedside table with a glass of water",
+   "shots": [
+    {
+     "bild": "bilder/m4.png"
+    }
+   ]
+  },
+  {
+   "id": "m5",
+   "kapitel": "Richtig einnehmen",
+   "kicker": "Einnahme",
+   "headline": "Aufteilen und Kaffee",
+   "sentences": [
+    "Gut belegt ist dagegen: Große Mengen auf einmal nimmt der Darm schlechter auf.",
+    "In einem klassischen Versuch sank der aufgenommene Anteil von etwa zwei Dritteln auf ein Zehntel, je mehr Magnesium auf einmal kam.",
+    "Wer mehr als eine kleine Menge nimmt, teilt sie deshalb besser auf zwei Portionen auf; das schont auch den Darm.",
+    "Und der Kaffee? Oft heißt es, man solle eine halbe bis eine Stunde Abstand halten.",
+    "Eine Studie dazu gibt es nicht, und der Verlust durch Kaffee ist winzig: etwa so viel Magnesium, wie in ein, zwei Mandeln steckt."
+   ],
+   "bullets": [
+    {
+     "t": "Große Mengen aufteilen",
+     "at": 2,
+     "ev": "stark"
+    },
+    {
+     "t": "Abstand zum Kaffee",
+     "at": 3,
+     "ev": "keine"
+    }
+   ],
+   "evidence": {
+    "level": "mittel",
+    "label": "teilweise belegt"
+   },
+   "quellen": [
+    "fine1991",
+    "sabatier2011",
+    "kynast1994",
+    "massey2004"
+   ],
+   "bild_prompt": "a cup of coffee and a glass of water side by side on a small table, two small white tablets on a saucer between them, a few almonds",
+   "shots": [
+    {
+     "bild": "bilder/m5.png"
+    }
+   ]
+  },
+  {
+   "id": "m6",
+   "kapitel": "Hilft es gegen Stress?",
+   "kicker": "Wirkung",
+   "headline": "Senkt Magnesium Stress?",
+   "sentences": [
+    "Oft wird eine Studie zitiert, nach der Magnesium den Stress in acht Wochen fast halbiert hat.",
+    "Ein genauer Blick zeigt: Es gab keine Vergleichsgruppe ohne Magnesium.",
+    "Beide Gruppen bekamen Magnesium und fühlten sich besser; das kann auch an der Zeit, an der Erwartung oder am Zufall liegen.",
+    "Finanziert hat die Studie ein Hersteller von Magnesiumpräparaten.",
+    "Eine Übersichtsarbeit fand Hinweise, dass Magnesium bei leichter Ängstlichkeit etwas helfen könnte; die Studien dazu sind aber schwach.",
+    "Gegen Stress helfen vor allem Schlaf, Pausen und Bewegung; dazu gibt es ein eigenes Video."
+   ],
+   "bullets": [
+    {
+     "t": "Stress in acht Wochen fast halbiert",
+     "at": 0,
+     "ev": "keine"
+    },
+    {
+     "t": "Bei leichter Ängstlichkeit vielleicht etwas",
+     "at": 4,
+     "ev": "mittel"
+    }
+   ],
+   "evidence": {
+    "level": "keine",
+    "label": "kaum belegt"
+   },
+   "quellen": [
+    "pouteau2018",
+    "boyle2017"
+   ],
+   "bild_prompt": "a calm person sitting by an open window with a cup of tea, looking out at trees, relaxed posture, seen from the side",
+   "shots": [
+    {
+     "bild": "bilder/m6.png"
+    }
+   ]
+  },
+  {
+   "id": "m7",
+   "kapitel": "Fazit",
+   "kicker": "Fazit",
+   "headline": "Was wirklich bleibt",
+   "sentences": [
+    "Was bleibt also?",
+    "Erstens: Ernährung zuerst. Vollkorn, Hülsenfrüchte, Nüsse und Mineralwasser decken den Bedarf meist.",
+    {
+     "t": "Zweitens: Wer ergänzt, kommt mit 250 mg aus, größere Mengen aufgeteilt, die Uhrzeit ist egal.",
+     "say": "Zweitens: Wer ergänzt, kommt mit zweihundertfünfzig Milligramm aus, größere Mengen aufgeteilt, die Uhrzeit ist egal."
+    },
+    "Drittens: Magnesium und Vitamin D hängen zusammen; wer Vitamin D nimmt, behält seine Magnesiumversorgung im Blick.",
+    "Wer schwache Nieren hat oder Medikamente nimmt, spricht vorher mit dem Arzt.",
+    "Die Quellen stehen in der Beschreibung."
+   ],
+   "bullets": [
+    {
+     "t": "Ernährung zuerst",
+     "at": 1,
+     "ev": "stark"
+    },
+    {
+     "t": "Bis 250 mg, aufgeteilt",
+     "at": 2,
+     "ev": "stark"
+    },
+    {
+     "t": "Vitamin D: Magnesium mitdenken",
+     "at": 3,
+     "ev": "mittel"
+    }
+   ],
+   "evidence": {
+    "level": "stark",
+    "label": "überwiegend belegt"
+   },
+   "quellen": [
+    "dge_faq",
+    "bfr"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/m7.png"
+    }
+   ]
+  }
+ ]
+}

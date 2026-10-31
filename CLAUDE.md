@@ -41,6 +41,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Drehbuch, auch in Kacheln); ohne `a` wird das ganze Bild gezeigt.
 
 ## Gestaltungsregeln
+- Zahlen sparsam: kaum Prozentzahlen, höchstens eine Zahl pro Satz. Lieber Brüche und Vergleiche („jeder Vierte“,
+  „von zwei Dritteln auf ein Zehntel“, „so viel wie in ein, zwei Mandeln“). Die Zuschauer sind keine Statistiker.
+- Jede Szene endet mit einem Handlungstipp, Ansprache mit „du“.
 - Marker beziehen sich auf die geprüfte Aussage („Funkstrahlung als Stressor ✕“), nicht auf unseren Satz dazu.
 - Ampel nur Farbe und Text, keine Punkte. Legende: belegt / teilweise / nicht haltbar.
 - Quellen durchnummeriert nach erstem Auftreten, im Video „Quellen: [n] Autor Jahr“. Die YouTube-Beschreibung hat
@@ -73,3 +76,6 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - Am Ende jeder Antwort genau eine Kostenzeile: `python3 tools/kosten.py` ausführen, Ausgabe wörtlich als letzte Zeile.
 - Jede Internetadresse als klickbarer Markdown-Link. Wurde ein Artifact oder eine Datei veröffentlicht: den Link als letzte
   Zeile vor der Kostenzeile wiederholen (`**Link:** [Name](URL)`).
+
+## Themenideen
+- Magnesium und Vitamin D im Detail (Aktivierung, Dai 2018, Cheung 2022), angekündigt in Magnesium 2.
