@@ -1,0 +1,278 @@
+[
+ {
+  "id": "m0",
+  "v0": 0.0,
+  "v1": 29.635260770975055,
+  "st": [
+   [
+    1.0,
+    5.28,
+    "Zu Magnesium kursieren viele Ratschläge, und sie widersprechen sich oft."
+   ],
+   [
+    6.28,
+    14.64,
+    "Wir schauen auf sechs Fragen: wie viel man braucht, wie verbreitet Mangel ist, was Magnesium mit Vitamin D zu tun hat, ob morgens oder abends besser ist, wie man es richtig einnimmt und ob es gegen Stress hilft."
+   ],
+   [
+    20.92,
+    3.6799999999999997,
+    "Jede Aussage haben wir gegen die Studienlage geprüft."
+   ],
+   [
+    24.6,
+    4.885260770975055,
+    "Grün heißt belegt, gelb teilweise, rot nicht haltbar."
+   ]
+  ]
+ },
+ {
+  "id": "m1",
+  "v0": 29.635260770975055,
+  "v1": 75.92258503401361,
+  "st": [
+   [
+    30.235260770975056,
+    10.88,
+    "Die DGE schätzt den Bedarf auf 300 mg am Tag für Frauen und 350 mg für Männer, aus allem, was man isst und trinkt."
+   ],
+   [
+    41.115260770975055,
+    7.119999999999999,
+    "Oft heißt es, das sei nur der Mindestbedarf, man solle 300 bis 600 mg zusätzlich nehmen."
+   ],
+   [
+    48.23526077097506,
+    7.199999999999999,
+    "Dafür gibt es keinen Beleg: Kein Versuch zeigt, dass gesunde Menschen von so viel mehr profitieren."
+   ],
+   [
+    55.435260770975056,
+    8.48,
+    "Die Grenze von 250 mg aus Präparaten hat einen harmlosen Grund: Darüber bekommen manche Menschen Durchfall."
+   ],
+   [
+    63.91526077097505,
+    6.439999999999998,
+    "Gefährlich wird Magnesium vor allem, wenn die Nieren schwach sind, denn sie scheiden den Überschuss aus."
+   ],
+   [
+    70.35526077097505,
+    5.417324263038552,
+    "400 mg schaden Gesunden also kaum, nützen aber nachweislich nicht mehr."
+   ]
+  ]
+ },
+ {
+  "id": "m2",
+  "v0": 75.92258503401361,
+  "v1": 106.23024943310656,
+  "st": [
+   [
+    76.5225850340136,
+    6.16,
+    "Drei von vier Menschen hätten einen Mangel, heißt es, gestützt auf eine Studie aus Frankreich."
+   ],
+   [
+    82.6825850340136,
+    6.0,
+    "Gemessen wurde dort aber nur, was die Menschen gegessen haben, nicht das Magnesium im Körper."
+   ],
+   [
+    88.6825850340136,
+    7.039999999999999,
+    "In Deutschland isst etwa jeder Vierte weniger als empfohlen, bei Mädchen im Teenageralter gut die Hälfte."
+   ],
+   [
+    95.7225850340136,
+    4.400000000000002,
+    "Weniger als empfohlen zu essen, ist aber noch kein nachgewiesener Mangel."
+   ],
+   [
+    100.12258503401361,
+    5.95766439909297,
+    "Wer regelmäßig Vollkorn, Hülsenfrüchte, Nüsse und Gemüse isst, ist meist gut versorgt."
+   ]
+  ]
+ },
+ {
+  "id": "m3",
+  "v0": 106.23024943310656,
+  "v1": 157.38882086167797,
+  "st": [
+   [
+    106.83024943310656,
+    6.56,
+    "Ein wichtiger Zusammenhang wird oft übersehen: Magnesium hilft, Vitamin D zu aktivieren."
+   ],
+   [
+    113.39024943310656,
+    11.200000000000003,
+    "Vitamin D aus Sonne oder Tabletten ist zunächst eine Vorstufe; Leber und Nieren wandeln es in die wirksame Form um, und die beteiligten Enzyme brauchen Magnesium."
+   ],
+   [
+    124.59024943310656,
+    7.52,
+    "Am deutlichsten zeigt sich das bei echtem Magnesiummangel: Dann sinkt die aktive Form, und Vitamin D wirkt schlechter."
+   ],
+   [
+    132.11024943310656,
+    10.799999999999997,
+    "In einer kontrollierten Studie mit 180 Erwachsenen wirkte Magnesium wie ein Regler: Wer wenig Vitamin D hatte, bekam etwas mehr, wer viel hatte, etwas weniger."
+   ],
+   [
+    142.91024943310657,
+    5.520000000000003,
+    "Dass Vitamin D ohne Magnesium gar nicht wirkt, ist für gesunde Menschen aber übertrieben."
+   ],
+   [
+    148.43024943310655,
+    8.808571428571426,
+    "Wer Vitamin D nimmt, achtet deshalb auf magnesiumreiche Ernährung; ein Kombipräparat ist nicht nötig. Dazu kommt bald ein eigenes Video."
+   ]
+  ]
+ },
+ {
+  "id": "m4",
+  "v0": 157.38882086167797,
+  "v1": 189.5813832199546,
+  "st": [
+   [
+    157.98882086167797,
+    4.88,
+    "Die einen sagen: abends, das entspannt und hilft beim Schlafen."
+   ],
+   [
+    162.86882086167796,
+    5.44,
+    "Die anderen: morgens, das gibt Energie und schützt vor dem Stress des Tages."
+   ],
+   [
+    168.30882086167796,
+    7.68,
+    "Verglichen hat das noch niemand: Wir haben keine einzige Studie gefunden, die morgens und abends gegenüberstellt."
+   ],
+   [
+    175.98882086167797,
+    2.6400000000000006,
+    "Beide Ratschläge sind also Vermutungen."
+   ],
+   [
+    178.62882086167798,
+    6.879999999999999,
+    "Belegt ist nur, dass Magnesium zu einer Mahlzeit etwas besser aufgenommen und besser vertragen wird."
+   ],
+   [
+    185.50882086167798,
+    3.922562358276643,
+    "Nimm es also dann, wenn du es nicht vergisst, am besten zum Essen."
+   ]
+  ]
+ },
+ {
+  "id": "m5",
+  "v0": 189.5813832199546,
+  "v1": 226.86859410430833,
+  "st": [
+   [
+    190.1813832199546,
+    5.711451247165533,
+    "Gut belegt ist dagegen: Große Mengen auf einmal nimmt der Darm schlechter auf."
+   ],
+   [
+    195.89283446712014,
+    8.8,
+    "In einem klassischen Versuch sank der aufgenommene Anteil von etwa zwei Dritteln auf ein Zehntel, je mehr Magnesium auf einmal kam."
+   ],
+   [
+    204.69283446712012,
+    7.279999999999999,
+    "Wer mehr als eine kleine Menge nimmt, teilt sie deshalb besser auf zwei Portionen auf; das schont auch den Darm."
+   ],
+   [
+    211.97283446712012,
+    6.080000000000002,
+    "Und der Kaffee? Oft heißt es, man solle eine halbe bis eine Stunde Abstand halten."
+   ],
+   [
+    218.05283446712014,
+    8.665759637188206,
+    "Eine Studie dazu gibt es nicht, und der Verlust durch Kaffee ist winzig: etwa so viel Magnesium, wie in ein, zwei Mandeln steckt."
+   ]
+  ]
+ },
+ {
+  "id": "m6",
+  "v0": 226.86859410430833,
+  "v1": 264.97151927437636,
+  "st": [
+   [
+    227.46859410430832,
+    6.30437641723356,
+    "Oft wird eine Studie zitiert, nach der Magnesium den Stress in acht Wochen fast halbiert hat."
+   ],
+   [
+    233.77297052154188,
+    4.8,
+    "Ein genauer Blick zeigt: Es gab keine Vergleichsgruppe ohne Magnesium."
+   ],
+   [
+    238.5729705215419,
+    7.439999999999998,
+    "Beide Gruppen bekamen Magnesium und fühlten sich besser; das kann auch an der Zeit, an der Erwartung oder am Zufall liegen."
+   ],
+   [
+    246.0129705215419,
+    4.080000000000002,
+    "Finanziert hat die Studie ein Hersteller von Magnesiumpräparaten."
+   ],
+   [
+    250.09297052154187,
+    8.64,
+    "Eine Übersichtsarbeit fand Hinweise, dass Magnesium bei leichter Ängstlichkeit etwas helfen könnte; die Studien dazu sind aber schwach."
+   ],
+   [
+    258.73297052154186,
+    6.088548752834466,
+    "Gegen Stress helfen vor allem Schlaf, Pausen und Bewegung; dazu gibt es ein eigenes Video."
+   ]
+  ]
+ },
+ {
+  "id": "m7",
+  "v0": 264.97151927437636,
+  "v1": 299.9537868480725,
+  "st": [
+   [
+    265.5715192743764,
+    1.6,
+    "Was bleibt also?"
+   ],
+   [
+    267.1715192743764,
+    8.0,
+    "Erstens: Ernährung zuerst. Vollkorn, Hülsenfrüchte, Nüsse und Mineralwasser decken den Bedarf meist."
+   ],
+   [
+    275.1715192743764,
+    8.000000000000002,
+    "Zweitens: Wer ergänzt, kommt mit 250 mg aus, größere Mengen aufgeteilt, die Uhrzeit ist egal."
+   ],
+   [
+    283.1715192743764,
+    7.759999999999998,
+    "Drittens: Magnesium und Vitamin D hängen zusammen; wer Vitamin D nimmt, behält seine Magnesiumversorgung im Blick."
+   ],
+   [
+    290.9315192743764,
+    4.48,
+    "Wer schwache Nieren hat oder Medikamente nimmt, spricht vorher mit dem Arzt."
+   ],
+   [
+    295.41151927437636,
+    1.7922675736961438,
+    "Die Quellen stehen in der Beschreibung."
+   ]
+  ]
+ }
+]
