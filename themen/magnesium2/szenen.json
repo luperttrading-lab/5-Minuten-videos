@@ -142,7 +142,7 @@
     },
     {
      "t": "Richtig einnehmen",
-     "bild": "bilder/m5a_v1.png",
+     "bild": "bilder/m5a_v7.png",
      "wort": "richtig"
     },
     {
@@ -488,7 +488,7 @@
    ],
    "shots": [
     {
-     "bild": "bilder/m5a_v1.png",
+     "bild": "bilder/m5a_v7.png",
      "zoom": 0.18
     },
     {
@@ -499,8 +499,8 @@
    ],
    "bilder": [
     {
-     "datei": "bilder/m5a_v1.png",
-     "prompt": "a small weekly pill organizer box seen slightly from above, with two rows of open compartments, the top row marked only by a tiny painted sun symbol, the bottom row by a tiny painted moon symbol, one small round white pill in each compartment, on a wooden table next to a glass of water"
+     "datei": "bilder/m5a_v7.png",
+     "prompt": "a simple still life on a wooden table: one small plate holding exactly four small round white pills on the left, a soft hand-drawn arrow in the middle, and on the right two small separate dishes holding exactly two pills each. The pills are large and clearly countable, nothing else on the table"
     },
     {
      "datei": "bilder/m5b.png",
