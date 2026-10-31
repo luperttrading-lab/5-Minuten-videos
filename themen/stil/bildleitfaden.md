@@ -1,13 +1,14 @@
 # Bildleitfaden
 
-**Festgelegt am 31.10.2026:** Stil wie `themen/magnesium2/bildbogen.png` (m1–m6): Motiv mit wenig Umgebung frei auf
-warmem Papier, lockere Tusche, zarte Aquarelllasuren. Der Stiltext steht als `STIL` in `werkzeug/bilder.py` und wird nicht
+**Festgelegt am 31.10.2026:** Modell GPT Image 2, Stil wie `themen/magnesium2/bildbogen.png` (14 Bilder): Motiv mittig
+auf warmem Papier, Tusche und Aquarell, warm und kräftig genug fürs Handy. Erklärbilder (Abläufe im Körper) im selben Stil
+wie m3b, ohne Schrift; Zoom von Station zu Station. Nano-Banana-Fassung nur als Archiv (`themen/stil/nanobanana_magnesium2/`). Der Stiltext steht als `STIL` in `werkzeug/bilder.py` und wird nicht
 für einzelne Bilder geändert. Stilvergleich A/B/C nur als Archiv.
 
 ## Menge und Takt
 - Ziel: alle 10–12 s ein neues Bild oder ein neuer Ausschnitt, also ≈ 30 Einstellungen in 6 Minuten.
 - Pro Szene 2 eigene Bilder: **Bild 1 = Situation/Behauptung**, **Bild 2 = Antwort/Tipp**. Jedes Bild trägt 1–2 Einstellungen
-  (Gesamtbild, dann Zoom auf ein Detail). Für 7 Szenen ≈ 14 Bilder ≈ 560 Credits ≈ 0,40 $.
+  (Gesamtbild, dann Zoom auf ein Detail). Für 7 Szenen ≈ 14 Bilder ≈ 100 Credits ≈ 7 ct.
 - Kein Motiv mehr als zweimal im Video. Die Einstiegskacheln nutzen Ausschnitte der Szenenbilder.
 
 ## Stil

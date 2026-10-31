@@ -122,32 +122,32 @@
    "kacheln": [
     {
      "t": "Wie viel ist genug?",
-     "bild": "bilder/m1.png",
+     "bild": "bilder/m1a.png",
      "wort": "wie viel"
     },
     {
      "t": "Haben die meisten zu wenig?",
-     "bild": "bilder/m2.png",
+     "bild": "bilder/m2a.png",
      "wort": "Mangel"
     },
     {
      "t": "Magnesium und Vitamin D",
-     "bild": "bilder/m3.png",
+     "bild": "bilder/m3a.png",
      "wort": "Vitamin D"
     },
     {
      "t": "Morgens oder abends?",
-     "bild": "bilder/m4.png",
+     "bild": "bilder/m4a.png",
      "wort": "morgens"
     },
     {
      "t": "Richtig einnehmen",
-     "bild": "bilder/m5.png",
+     "bild": "bilder/m5a.png",
      "wort": "richtig"
     },
     {
      "t": "Hilft es gegen Stress?",
-     "bild": "bilder/m6.png",
+     "bild": "bilder/m6a.png",
      "wort": "Stress"
     }
    ]
@@ -210,10 +210,23 @@
     "costello2023",
     "jou2023"
    ],
-   "bild_prompt": "two small ceramic dishes on a wooden table, one with a modest little pile of white tablets, the other with a large overflowing pile of tablets, a glass of water beside them",
    "shots": [
     {
-     "bild": "bilder/m1.png"
+     "bild": "bilder/m1a.png"
+    },
+    {
+     "bild": "bilder/m1b.png",
+     "at": 4
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/m1a.png",
+     "prompt": "two small ceramic dishes on a wooden table, one with just a few white pills, the other with a large overflowing pile of tablets, a glass of water beside them"
+    },
+    {
+     "datei": "bilder/m1b.png",
+     "prompt": "a softly drawn pair of healthy human kidneys in warm terracotta watercolor, next to a full glass of clear water, gentle and reassuring, simple anatomical illustration"
     }
    ]
   },
@@ -255,10 +268,23 @@
     "mri2008",
     "dge_faq"
    ],
-   "bild_prompt": "a woven market basket filled with wholegrain bread, a jar of lentils, walnuts and almonds, leafy greens, and a bottle of mineral water, seen slightly from above",
    "shots": [
     {
-     "bild": "bilder/m2.png"
+     "bild": "bilder/m2a.png"
+    },
+    {
+     "bild": "bilder/m2b.png",
+     "at": 4
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/m2a.png",
+     "prompt": "a woven market basket filled with dark wholegrain bread, a jar of lentils, walnuts and almonds, leafy greens, and a bottle of mineral water"
+    },
+    {
+     "datei": "bilder/m2b.png",
+     "prompt": "a family dinner table seen from above with a pot of lentil soup, dark wholegrain bread, a bowl of mixed nuts and a green salad, four plates"
     }
    ]
   },
@@ -311,10 +337,23 @@
     "dai2018",
     "cheung2022"
    ],
-   "bild_prompt": "warm sunlight falling through a window onto a windowsill with a small dish of golden softgel capsules and a small bowl of pumpkin seeds, a few leaves of a plant",
    "shots": [
     {
-     "bild": "bilder/m3.png"
+     "bild": "bilder/m3a.png"
+    },
+    {
+     "bild": "bilder/m3b.png",
+     "at": 1
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/m3a.png",
+     "prompt": "warm sunlight falling through a window onto a windowsill with a small dish of golden softgel capsules and a small bowl of pumpkin seeds, a potted plant"
+    },
+    {
+     "datei": "bilder/m3b.png",
+     "prompt": "simple explanatory diagram: the path of vitamin D in the body: the sun on the left, an arrow to a stylized liver, then to a pair of kidneys where a small golden key turns in a tiny lock, ending in a bright small sun symbol on the right. Clear left-to-right flow with simple hand-drawn arrows. The sun has no face."
     }
    ]
   },
@@ -355,10 +394,23 @@
    "quellen": [
     "schuchardt2017"
    ],
-   "bild_prompt": "split composition: left half a soft morning sky with rising sun above a breakfast table with a glass of water, right half a calm evening sky with crescent moon above a bedside table with a glass of water",
    "shots": [
     {
-     "bild": "bilder/m4.png"
+     "bild": "bilder/m4a.png"
+    },
+    {
+     "bild": "bilder/m4b.png",
+     "at": 4
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/m4a.png",
+     "prompt": "split composition: left half a soft morning sky with rising sun above a breakfast table with a glass of water, right half a calm evening sky with crescent moon above a bedside table with a glass of water"
+    },
+    {
+     "datei": "bilder/m4b.png",
+     "prompt": "a breakfast table with a bowl of oat porridge topped with nuts and berries, a glass of water and one small round white pill (a dietary supplement) on a tiny saucer beside the bowl, no electronic devices"
     }
    ]
   },
@@ -396,10 +448,23 @@
     "kynast1994",
     "massey2004"
    ],
-   "bild_prompt": "a cup of coffee and a glass of water side by side on a small table, two small white tablets on a saucer between them, a few almonds",
    "shots": [
     {
-     "bild": "bilder/m5.png"
+     "bild": "bilder/m5a.png"
+    },
+    {
+     "bild": "bilder/m5b.png",
+     "at": 3
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/m5a.png",
+     "prompt": "two small dishes on a kitchen counter, each with one white pill, one bathed in soft morning light and one in warm evening lamp light"
+    },
+    {
+     "datei": "bilder/m5b.png",
+     "prompt": "a cup of coffee and a glass of water side by side on a small round wooden table, a saucer with two small white pills between them, a few almonds"
     }
    ]
   },
@@ -436,10 +501,23 @@
     "pouteau2018",
     "boyle2017"
    ],
-   "bild_prompt": "a calm person sitting by an open window with a cup of tea, looking out at trees, relaxed posture, seen from the side",
    "shots": [
     {
-     "bild": "bilder/m6.png"
+     "bild": "bilder/m6a.png"
+    },
+    {
+     "bild": "bilder/m6b.png",
+     "at": 5
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/m6a.png",
+     "prompt": "a calm woman sitting by an open window with a cup of tea, looking out at trees, relaxed posture, seen from the side"
+    },
+    {
+     "datei": "bilder/m6b.png",
+     "prompt": "two people of different ages walking side by side on a park path under autumn trees, relaxed, seen from a little distance"
     }
    ]
   },
@@ -486,7 +564,21 @@
    ],
    "shots": [
     {
-     "bild": "bilder/m7.png"
+     "bild": "bilder/m7a.png"
+    },
+    {
+     "bild": "bilder/m7b.png",
+     "at": 4
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/m7a.png",
+     "prompt": "a loose still life of magnesium-rich foods on a wooden table seen from above: a bowl of pumpkin seeds, almonds and cashews, a jar of oat flakes, a slice of dark wholegrain bread, a few squares of dark chocolate, a bowl of white beans, spinach leaves and a glass of mineral water"
+    },
+    {
+     "datei": "bilder/m7b.png",
+     "prompt": "a friendly doctor and an older patient talking calmly at a wooden desk in a bright room, a glass of water on the desk, no papers with writing"
     }
    ]
   }

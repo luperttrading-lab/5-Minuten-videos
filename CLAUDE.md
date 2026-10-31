@@ -58,6 +58,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 
 ## Zugänge (Cloud-Umgebung „Standard“)
 - `ELEVENLABS_API_KEY`: vorhanden. Creator-Plan, 125.526 Zeichen pro Monat; ein 5-Minuten-Video kostet ≈ 2.000.
+- **Bilder: GPT Image 2 (`gpt_image2`, 2048×1152, ≈ 6 Credits) über `werkzeug/bilder.py`, vom Nutzer am 31.10. gewählt.**
+  Im Prompt „pill“ statt „tablet“ (sonst Tablet-Computer).
 - `ABACUS_API_KEY` (ChatLLM/RouteLLM) für eigene Bilder: vorhanden. `POST https://routellm.abacus.ai/v1/chat/completions`,
   Modell `gemini-nano-banana-2.1`, `"modalities":["image","text"]`, `"image_config":{"aspect_ratio":"16:9"}`;
   Bild als Base64 in `choices[0].message.images[0].image_url.url`, 1376×768, ≈ 15–20 s.
