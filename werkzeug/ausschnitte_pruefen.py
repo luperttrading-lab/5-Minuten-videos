@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Kontaktbogen aller Bildausschnitte im engsten Zoom. Aufruf: python3 ausschnitte_pruefen.py szenen.json bogen.png [grafik.png]"""
+"""Kontaktbogen aller Bildausschnitte (weitester Zoom, wie zu Beginn der Einstellung). Aufruf: python3 ausschnitte_pruefen.py szenen.json bogen.png [grafik.png]"""
 import sys, json
 import os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import render as R
@@ -12,14 +12,19 @@ for sc in cfg['scenes']:
     items = []
     if sc.get('layout') == 'kacheln':
         for j, k in enumerate(sc['kacheln']):
-            img, a = R.quelle(k, src)
+            img, a = R.quelle(k, src, 500 / 270)
             items.append((f"{sc['id']} K{j+1}", a, None, None, img))
     for j, sh in enumerate(sc.get('shots', [])):
         img, a0 = R.quelle(sh, src)
-        size, a, b = R.fit_box(a0, a0 if sh.get('zoom') == 'none' else sh.get('b'), img.size)
+        b0 = sh.get('b')
+        if isinstance(sh.get('zoom'), (int, float)):
+            z = 1 - sh['zoom']; cx, cy = (a0[0] + a0[2]) / 2, (a0[1] + a0[3]) / 2
+            hw, hh = (a0[2] - a0[0]) * z / 2, (a0[3] - a0[1]) * z / 2
+            b0 = [cx - hw, cy - hh, cx + hw, cy + hh]
+        size, a, b = R.fit_box(a0, a0 if sh.get('zoom') == 'none' else b0, img.size)
         if sh.get('zoom') == 'out':
             a, b = b, a
-        tight = min((a, b), key=lambda x: (x[2]-x[0]) * (x[3]-x[1]))
+        tight = max((a, b), key=lambda x: (x[2]-x[0]) * (x[3]-x[1]))
         items.append((f"{sc['id']} E{j+1}", tight, size, sh, img))
     for name, box, size, sh, img in items:
         bw, bh = box[2]-box[0], box[3]-box[1]

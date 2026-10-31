@@ -399,15 +399,39 @@ BILD_DIR = '.'
 _bilder = {}
 
 
-def quelle(obj, src):
+def motiv_box(img, aspect):
+    """Motiv ohne Papierrand finden und auf das Seitenverhaeltnis des Zielfelds erweitern (so gross wie moeglich)."""
+    g = np.asarray(img.convert('L').resize((img.size[0] // 8, img.size[1] // 8)), dtype=np.float32)
+    papier = np.median(np.concatenate([g[:4].ravel(), g[-4:].ravel(), g[:, :4].ravel(), g[:, -4:].ravel()]))
+    ys, xs = np.nonzero(np.abs(g - papier) > 18)
+    if len(xs) < 50:
+        return [0, 0, img.size[0], img.size[1]]
+    x0, x1 = np.percentile(xs, [0.5, 99.5]) * 8
+    y0, y1 = np.percentile(ys, [0.5, 99.5]) * 8
+    pad = 0.04 * max(x1 - x0, y1 - y0)
+    x0, y0, x1, y1 = x0 - pad, y0 - pad, x1 + pad, y1 + pad
+    w, h = x1 - x0, y1 - y0
+    if w / h < aspect:
+        w = min(h * aspect, img.size[0])
+    else:
+        h = min(w / aspect, img.size[1])
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    cx = min(max(cx, w / 2), img.size[0] - w / 2)
+    cy = min(max(cy, h / 2), img.size[1] - h / 2)
+    return [cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2]
+
+
+def quelle(obj, src, aspect=None):
     """Bildquelle eines Ausschnitts/einer Kachel: eigenes Bild (`bild`, relativ zum Drehbuch) oder die Grafik.
-    Ohne `a` gilt das ganze Bild."""
+    Ohne `a` bei eigenen Bildern: Motiv automatisch freigestellt, passend zum Zielfeld."""
     img = src
     if obj.get('bild'):
         pfad = os.path.join(BILD_DIR, obj['bild'])
         if pfad not in _bilder:
             _bilder[pfad] = Image.open(pfad).convert('RGB')
         img = _bilder[pfad]
+        if not obj.get('a'):
+            return img, motiv_box(img, aspect or (PIC[2] - PIC[0]) / (PIC[3] - PIC[1]))
     a = obj.get('a') or [0, 0, img.size[0], img.size[1]]
     return img, a
 
@@ -432,7 +456,13 @@ class Scene:
         for j, sh in enumerate(sc['shots']):
             t0 = sc['v0'] if j == 0 else st[sh['at']][0] - 0.35
             img, a0 = quelle(sh, src)
-            size, a, b = fit_box(a0, a0 if sh.get('zoom') == 'none' else sh.get('b'), img.size)
+            b0 = sh.get('b')
+            if isinstance(sh.get('zoom'), (int, float)):      # z. B. 0.2 = langsam 20 % hinein
+                z = 1 - sh['zoom']
+                cx, cy = (a0[0] + a0[2]) / 2, (a0[1] + a0[3]) / 2
+                hw, hh = (a0[2] - a0[0]) * z / 2, (a0[3] - a0[1]) * z / 2
+                b0 = [cx - hw, cy - hh, cx + hw, cy + hh]
+            size, a, b = fit_box(a0, a0 if sh.get('zoom') == 'none' else b0, img.size)
             if sh.get('zoom') == 'out':
                 a, b = b, a
             self.shots.append({'t0': t0, 'size': size, 'a': a, 'b': b, 'img': img})
@@ -505,7 +535,7 @@ class AgendaScene:
             d.ellipse([cx + 18, cy + self.TH + 8, cx + 58, cy + self.TH + 48], fill=ACCENT)
             d.text((cx + 38, cy + self.TH + 28), str(i + 1), font=font(INTER.format('Bold'), 24), fill='white', anchor='mm')
             d.text((cx + 72, cy + self.TH + 28), k['t'], font=font(INTER.format('SemiBold'), 30), fill=INK, anchor='lm')
-            kimg, box = quelle(k, src)
+            kimg, box = quelle(k, src, (self.TW - 40) / (self.TH - 30))
             bw, bh = box[2] - box[0], box[3] - box[1]
             sc_ = min((self.TW - 40) / bw, (self.TH - 30) / bh)
             size = (int(bw * sc_), int(bh * sc_))

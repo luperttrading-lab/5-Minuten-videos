@@ -142,7 +142,7 @@
     },
     {
      "t": "Richtig einnehmen",
-     "bild": "bilder/m5a.png",
+     "bild": "bilder/m5a_v1.png",
      "wort": "richtig"
     },
     {
@@ -212,36 +212,18 @@
    ],
    "shots": [
     {
-     "bild": "bilder/m1a.png"
+     "bild": "bilder/m1a.png",
+     "zoom": 0.18
     },
     {
-     "bild": "bilder/m1a.png",
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ],
-     "at": 1
-    },
-    {
-     "bild": "bilder/m1a.png",
-     "at": 3,
-     "zoom": "out"
+     "bild": "bilder/m1c.png",
+     "zoom": 0.18,
+     "at": 2
     },
     {
      "bild": "bilder/m1b.png",
+     "zoom": 0.18,
      "at": 4
-    },
-    {
-     "bild": "bilder/m1b.png",
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ],
-     "at": 5
     }
    ],
    "bilder": [
@@ -252,6 +234,10 @@
     {
      "datei": "bilder/m1b.png",
      "prompt": "a softly drawn pair of healthy human kidneys in warm terracotta watercolor, next to a full glass of clear water, gentle and reassuring, simple anatomical illustration"
+    },
+    {
+     "datei": "bilder/m1c.png",
+     "prompt": "a single small ceramic dish with just two small round white pills next to a glass of water on a wooden table, modest and calm, soft morning light"
     }
    ]
   },
@@ -295,21 +281,13 @@
    ],
    "shots": [
     {
-     "bild": "bilder/m2a.png"
-    },
-    {
      "bild": "bilder/m2a.png",
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ],
-     "at": 2
+     "zoom": 0.18
     },
     {
      "bild": "bilder/m2b.png",
-     "at": 4
+     "zoom": 0.18,
+     "at": 3
     }
    ],
    "bilder": [
@@ -374,43 +352,34 @@
    ],
    "shots": [
     {
-     "bild": "bilder/m3a.png"
+     "bild": "bilder/m3a.png",
+     "zoom": 0.18
     },
     {
      "bild": "bilder/m3b.png",
+     "zoom": 0.08,
      "at": 1
     },
     {
      "bild": "bilder/m3b.png",
-     "at": 2,
+     "zoom": "none",
      "a": [
       1120,
       380,
       1580,
       800
      ],
-     "zoom": "none"
+     "at": 2
     },
     {
      "bild": "bilder/m3b.png",
-     "at": 3,
-     "a": [
-      0,
-      250,
-      2048,
-      850
-     ],
-     "zoom": "none"
+     "zoom": "out",
+     "at": 3
     },
     {
      "bild": "bilder/m3a.png",
-     "at": 5,
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ]
+     "zoom": 0.18,
+     "at": 5
     }
    ],
    "bilder": [
@@ -463,31 +432,13 @@
    ],
    "shots": [
     {
-     "bild": "bilder/m4a.png"
-    },
-    {
      "bild": "bilder/m4a.png",
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ],
-     "at": 2
+     "zoom": 0.18
     },
     {
      "bild": "bilder/m4b.png",
+     "zoom": 0.18,
      "at": 4
-    },
-    {
-     "bild": "bilder/m4b.png",
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ],
-     "at": 5
     }
    ],
    "bilder": [
@@ -537,37 +488,19 @@
    ],
    "shots": [
     {
-     "bild": "bilder/m5a.png"
-    },
-    {
-     "bild": "bilder/m5a.png",
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ],
-     "at": 2
+     "bild": "bilder/m5a_v1.png",
+     "zoom": 0.18
     },
     {
      "bild": "bilder/m5b.png",
+     "zoom": 0.18,
      "at": 3
-    },
-    {
-     "bild": "bilder/m5b.png",
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ],
-     "at": 4
     }
    ],
    "bilder": [
     {
-     "datei": "bilder/m5a.png",
-     "prompt": "two small dishes on a kitchen counter, each with one white pill, one bathed in soft morning light and one in warm evening lamp light"
+     "datei": "bilder/m5a_v1.png",
+     "prompt": "a small weekly pill organizer box seen slightly from above, with two rows of open compartments, the top row marked only by a tiny painted sun symbol, the bottom row by a tiny painted moon symbol, one small round white pill in each compartment, on a wooden table next to a glass of water"
     },
     {
      "datei": "bilder/m5b.png",
@@ -610,25 +543,17 @@
    ],
    "shots": [
     {
-     "bild": "bilder/m6a.png"
+     "bild": "bilder/m6a.png",
+     "zoom": 0.18
     },
     {
-     "bild": "bilder/m6a.png",
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ],
-     "at": 1
-    },
-    {
-     "bild": "bilder/m6a.png",
-     "at": 3,
-     "zoom": "out"
+     "bild": "bilder/m6c.png",
+     "zoom": 0.18,
+     "at": 3
     },
     {
      "bild": "bilder/m6b.png",
+     "zoom": 0.18,
      "at": 5
     }
    ],
@@ -640,6 +565,10 @@
     {
      "datei": "bilder/m6b.png",
      "prompt": "two people of different ages walking side by side on a park path under autumn trees, relaxed, seen from a little distance"
+    },
+    {
+     "datei": "bilder/m6c.png",
+     "prompt": "a row of plain amber supplement bottles with completely blank labels standing on a wooden shelf, a small potted plant beside them, no writing anywhere"
     }
    ]
   },
@@ -686,25 +615,17 @@
    ],
    "shots": [
     {
-     "bild": "bilder/m7a.png"
-    },
-    {
      "bild": "bilder/m7a.png",
-     "a": [
-      409,
-      195,
-      1638,
-      956
-     ],
-     "at": 2
+     "zoom": 0.18
     },
     {
      "bild": "bilder/m3b.png",
-     "at": 3,
-     "zoom": "none"
+     "zoom": 0.08,
+     "at": 3
     },
     {
      "bild": "bilder/m7b.png",
+     "zoom": 0.18,
      "at": 4
     }
    ],
