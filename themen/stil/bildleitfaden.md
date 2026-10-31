@@ -1,4 +1,8 @@
-# Bildleitfaden (Entwurf, Stil noch offen: A, B oder C)
+# Bildleitfaden
+
+**Festgelegt am 31.10.2026:** Stil wie `themen/magnesium2/bildbogen.png` (m1–m6): Motiv mit wenig Umgebung frei auf
+warmem Papier, lockere Tusche, zarte Aquarelllasuren. Der Stiltext steht als `STIL` in `werkzeug/bilder.py` und wird nicht
+für einzelne Bilder geändert. Stilvergleich A/B/C nur als Archiv.
 
 ## Menge und Takt
 - Ziel: alle 10–12 s ein neues Bild oder ein neuer Ausschnitt, also ≈ 30 Einstellungen in 6 Minuten.
@@ -6,7 +10,7 @@
   (Gesamtbild, dann Zoom auf ein Detail). Für 7 Szenen ≈ 14 Bilder ≈ 560 Credits ≈ 0,40 $.
 - Kein Motiv mehr als zweimal im Video. Die Einstiegskacheln nutzen Ausschnitte der Szenenbilder.
 
-## Stil (wird nach der Wahl festgeschrieben)
+## Stil
 - Technik: Tusche und Aquarell auf warmem, leicht strukturiertem Papier (A/B) bzw. Gouache (C).
 - Palette: Taubenblau, Terrakotta, Ocker, Salbei; Papier warmes Off-White. Keine Neonfarben, kein Schwarz als Fläche.
 - Licht: weich, warm, freundlich. Stimmung ruhig, nicht dramatisch.
