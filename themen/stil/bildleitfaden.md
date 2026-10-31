@@ -11,7 +11,7 @@ für einzelne Bilder geändert. Stilvergleich A/B/C nur als Archiv.
 - Kein Motiv mehr als zweimal im Video. Die Einstiegskacheln nutzen Ausschnitte der Szenenbilder.
 
 ## Stil
-- Technik: Tusche und Aquarell auf warmem, leicht strukturiertem Papier (A/B) bzw. Gouache (C).
+- Technik: Tusche und Aquarell auf warmem, leicht strukturiertem Papier.
 - Palette: Taubenblau, Terrakotta, Ocker, Salbei; Papier warmes Off-White. Keine Neonfarben, kein Schwarz als Fläche.
 - Licht: weich, warm, freundlich. Stimmung ruhig, nicht dramatisch.
 
