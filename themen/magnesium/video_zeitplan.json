@@ -1,0 +1,307 @@
+[
+ {
+  "id": "m0",
+  "v0": 0.0,
+  "v1": 25.209795918367345,
+  "st": [
+   [
+    1.0,
+    4.066984126984127,
+    "Magnesium gehört zu den beliebtesten Nahrungsergänzungsmitteln."
+   ],
+   [
+    5.066984126984127,
+    11.84,
+    "Zwei Infografiken versprechen dazu einiges: über die Rolle im Körper, den richtigen Bluttest, den Mangel, die beste Form, Vitamin B6 und die richtige Einnahme."
+   ],
+   [
+    16.906984126984128,
+    3.3599999999999994,
+    "Wir prüfen jede Aussage gegen die Studienlage."
+   ],
+   [
+    20.266984126984127,
+    4.792811791383219,
+    "Grün heißt belegt, gelb teilweise, rot nicht haltbar."
+   ]
+  ]
+ },
+ {
+  "id": "m1",
+  "v0": 25.209795918367345,
+  "v1": 54.888775510204084,
+  "st": [
+   [
+    25.809795918367346,
+    3.9864172335600907,
+    "Magnesium ist an Hunderten Enzymreaktionen beteiligt."
+   ],
+   [
+    29.796213151927436,
+    6.320000000000001,
+    "Die Energiewährung der Zelle, ATP, arbeitet fast immer als Komplex mit Magnesium."
+   ],
+   [
+    36.11621315192744,
+    8.479999999999999,
+    "Im Nervensystem blockiert Magnesium bestimmte Rezeptoren, die NMDA-Rezeptoren, und dämpft so die Erregung."
+   ],
+   [
+    44.59621315192744,
+    2.0,
+    "Beides ist Lehrbuchwissen."
+   ],
+   [
+    46.59621315192744,
+    8.142562358276646,
+    "Dass Magnesium-Tabletten die morgendliche Cortisol-Ausschüttung senken, wie eine der Grafiken behauptet, ist dagegen nicht untersucht."
+   ]
+  ]
+ },
+ {
+  "id": "m2",
+  "v0": 54.888775510204084,
+  "v1": 87.71045351473923,
+  "st": [
+   [
+    55.488775510204086,
+    6.232834467120181,
+    "Die Grafiken sagen: Weniger als ein Prozent des Magnesiums befindet sich im Blutserum."
+   ],
+   [
+    61.72160997732426,
+    7.6,
+    "Das stimmt, es sind sogar nur etwa 0,3 Prozent; der Rest steckt in Knochen, Muskeln und Gewebe."
+   ],
+   [
+    69.32160997732427,
+    7.360000000000001,
+    "Deshalb kann ein normaler Serumwert eine knappe Versorgung nicht sicher ausschließen, denn der Knochen puffert lange."
+   ],
+   [
+    76.68160997732427,
+    5.16,
+    "Die Vollblutanalyse als der wahre Test ist aber ebenfalls nicht validiert."
+   ],
+   [
+    81.84160997732427,
+    5.718843537414962,
+    "Einen verlässlichen Goldstandard gibt es bisher nicht, das sagt auch die Deutsche Gesellschaft für Ernährung."
+   ]
+  ]
+ },
+ {
+  "id": "m3",
+  "v0": 87.71045351473923,
+  "v1": 126.62045351473921,
+  "st": [
+   [
+    88.31045351473922,
+    6.64,
+    "Über die Hälfte der Bevölkerung habe einen Mangel, heißt es, wegen Stress und ausgelaugter Böden."
+   ],
+   [
+    94.95045351473922,
+    10.399999999999999,
+    "In Deutschland erreicht laut Nationaler Verzehrsstudie gut ein Viertel der Erwachsenen die Zufuhrempfehlung nicht, bei Mädchen im Teenageralter mehr als die Hälfte."
+   ],
+   [
+    105.35045351473923,
+    4.560000000000002,
+    "Weniger als empfohlen zu essen, ist aber noch kein nachgewiesener Mangel."
+   ],
+   [
+    109.91045351473923,
+    11.04,
+    "Und die Böden: In einem der ältesten Feldversuche der Welt blieb das Magnesium im Boden stabil, im Weizen sank es, weil Hochertragssorten den Gehalt verdünnen."
+   ],
+   [
+    120.95045351473922,
+    5.519999999999996,
+    "Dass Stress Magnesium aufzehrt, ist eine Hypothese, beim Menschen kaum geprüft."
+   ]
+  ]
+ },
+ {
+  "id": "m4",
+  "v0": 126.62045351473921,
+  "v1": 159.45378684807253,
+  "st": [
+   [
+    127.2204535147392,
+    7.585714285714285,
+    "Magnesiumoxid werde nur zu vier Prozent aufgenommen, organische Formen wie Citrat seien weit überlegen."
+   ],
+   [
+    134.8061678004535,
+    4.960000000000001,
+    "Die vier Prozent stammen aus einer einzigen Studie, gemessen über den Urin."
+   ],
+   [
+    139.7661678004535,
+    9.2,
+    "Eine Isotopenstudie an Patienten nach einer Darmoperation fand für Oxid und Glycinat fast gleiche Werte, rund dreiundzwanzig Prozent."
+   ],
+   [
+    148.9661678004535,
+    4.719999999999999,
+    "Citrat schneidet in einigen Vergleichen etwas besser ab und löst sich gut."
+   ],
+   [
+    153.6861678004535,
+    5.617619047619051,
+    "Entscheidend sind Löslichkeit und Verträglichkeit, nicht das Wort organisch auf der Packung."
+   ]
+  ]
+ },
+ {
+  "id": "m5",
+  "v0": 159.45378684807253,
+  "v1": 188.20623582766436,
+  "st": [
+   [
+    160.05378684807252,
+    4.0,
+    "Für Spezialformen gibt es besonders große Versprechen."
+   ],
+   [
+    164.05378684807252,
+    8.32,
+    "L-Threonat soll das Gehirn erreichen: Belegt ist das bei Ratten, die wenigen Studien am Menschen stammen von Herstellern."
+   ],
+   [
+    172.3737868480725,
+    10.48,
+    "Bisglycinat soll beim Schlafen helfen: Eine neue Studie mit hundertfünfundfünfzig Teilnehmern fand einen kleinen Effekt, knapp an der Grenze der Signifikanz."
+   ],
+   [
+    182.85378684807253,
+    5.202448979591836,
+    "Malat soll die Energiegewinnung fördern: Dafür gibt es nur eine Rattenstudie."
+   ]
+  ]
+ },
+ {
+  "id": "m6",
+  "v0": 188.20623582766436,
+  "v1": 218.52956916099768,
+  "st": [
+   [
+    188.80623582766435,
+    4.4,
+    "Vitamin B6 schleuse Magnesium in die Zellen, heißt es."
+   ],
+   [
+    193.20623582766436,
+    9.92,
+    "In der größten Studie dazu, mit zweihundertvierundsechzig Teilnehmern und vom Hersteller finanziert, brachte die Kombination beim Hauptziel keinen Vorteil."
+   ],
+   [
+    203.12623582766435,
+    5.68,
+    "Auch das Magnesium in den roten Blutkörperchen stieg durch B6 nicht zusätzlich."
+   ],
+   [
+    208.80623582766435,
+    9.573333333333334,
+    "Vorsicht bei hohen Dosen: Die Europäische Behörde für Lebensmittelsicherheit setzt für Vitamin B6 eine Obergrenze von zwölf Milligramm pro Tag."
+   ]
+  ]
+ },
+ {
+  "id": "m7",
+  "v0": 218.52956916099768,
+  "v1": 261.0591836734693,
+  "st": [
+   [
+    219.12956916099768,
+    2.16,
+    "Bleiben die Einnahmeregeln."
+   ],
+   [
+    221.28956916099767,
+    7.68,
+    "Für dreißig bis sechzig Minuten Abstand zum Kaffee gibt es keine Studie, Koffein erhöht die Ausscheidung nur minimal."
+   ],
+   [
+    228.96956916099768,
+    6.719999999999999,
+    "Zink stört erst in sehr hohen Dosen, weit über der Obergrenze, und zu Eisen fehlen Daten."
+   ],
+   [
+    235.68956916099768,
+    10.96,
+    "Wichtig sind dagegen echte Wechselwirkungen: Zu bestimmten Antibiotika, zu Osteoporose-Mitteln und zu Schilddrüsenhormon sollte man mehrere Stunden Abstand halten."
+   ],
+   [
+    246.6495691609977,
+    9.120000000000001,
+    "Das Bundesinstitut für Risikobewertung empfiehlt höchstens zweihundertfünfzig Milligramm pro Tag aus Präparaten, verteilt auf zwei Portionen."
+   ],
+   [
+    255.76956916099766,
+    5.139614512471653,
+    "Wer eine Nierenschwäche hat oder lange Säureblocker nimmt, sollte das ärztlich klären."
+   ]
+  ]
+ },
+ {
+  "id": "m8",
+  "v0": 261.0591836734693,
+  "v1": 281.39115646258495,
+  "st": [
+   [
+    261.65918367346933,
+    2.64,
+    "Und wofür lohnt sich Magnesium?"
+   ],
+   [
+    264.2991836734693,
+    5.039999999999999,
+    "Gegen nächtliche Wadenkrämpfe im Alter hilft es laut Cochrane-Übersicht nicht."
+   ],
+   [
+    269.33918367346934,
+    4.880000000000001,
+    "Den Blutdruck senkt es leicht, um etwa 2 mmHg."
+   ],
+   [
+    274.21918367346933,
+    7.021972789115646,
+    "Bei Migräne ist es eine schwach belegte Option zur Vorbeugung, die Leitlinie führt es mit geringerer Evidenz."
+   ]
+  ]
+ },
+ {
+  "id": "m9",
+  "v0": 281.39115646258495,
+  "v1": 310.2296598639455,
+  "st": [
+   [
+    281.99115646258497,
+    1.6670748299319726,
+    "Was bleibt also?"
+   ],
+   [
+    283.6582312925169,
+    8.56,
+    "Magnesium ist lebenswichtig, aber die meisten decken ihren Bedarf über Vollkorn, Hülsenfrüchte, Nüsse und Mineralwasser."
+   ],
+   [
+    292.2182312925169,
+    7.4399999999999995,
+    "Wer ergänzt, nimmt höchstens zweihundertfünfzig Milligramm am Tag, gut lösliche Formen wie Citrat reichen aus."
+   ],
+   [
+    299.6582312925169,
+    6.0,
+    "Teure Spezialformen und Kombipräparate mit Vitamin B6 halten nicht, was sie versprechen."
+   ],
+   [
+    305.6582312925169,
+    1.8214285714285694,
+    "Die Quellen stehen in der Beschreibung."
+   ]
+  ]
+ }
+]

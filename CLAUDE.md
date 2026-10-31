@@ -1,0 +1,62 @@
+# 5-Minuten-Videos: Gesundheits-Faktenchecks
+
+Kurze Info-Videos (Ziel 5 Minuten, höchstens 6; länger → in zwei Teile unter 5 Minuten schneiden) zu Gesundheitsthemen,
+die viele Menschen interessieren. Format: Faktencheck populärer Aussagen, oft aus NotebookLM-/Gemini-Infografiken.
+Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
+
+## Ablauf je Thema (`themen/<thema>/`)
+1. **Vorlage sichten:** Grafiken nach `vorlage/`, alle Behauptungen aus Grafiken und Begleittext auflisten.
+2. **Faktencheck vor dem Drehbuch:** jede Behauptung gegen Primärquellen, Meta-Analysen, Leitlinien und Behörden
+   (DGE, BfR, EFSA, WHO, Cochrane) prüfen, DOIs auf Auflösbarkeit testen. Gut geeignet: ein Subagent mit WebSearch.
+   - Kein Punkt geht ungeprüft ins Video. „Ungeprüft“ gibt es nicht als Kategorie.
+   - Was gesucht und nicht untersucht gefunden wurde, sagt der Sprechtext ehrlich, es bekommt aber keinen Stichpunkt.
+   - Interessenkonflikte (Herstellerstudien), Tierstudien und Studiengröße nennen.
+3. **Drehbuch `szenen.json`:** siehe Aufbau unten.
+4. **Bildausschnitte prüfen:** `python3 ../../werkzeug/ausschnitte_pruefen.py szenen.json bogen.png grafik_korrigiert.png`
+5. **Ton und Länge prüfen:** `python3 ../../werkzeug/render.py szenen.json grafik_korrigiert.png video.mp4 --nur-ton`
+6. **Rendern:** dasselbe ohne `--nur-ton` (≈ 4–5 min Rechenzeit), danach Kontrollbilder mit `--bild <Sekunde>`.
+7. **Beschreibung und Teilen-Seite:** `python3 ../../werkzeug/beschreibung.py szenen.json video_zeitplan.json`
+8. **Ausliefern:** 1080p (Master, nicht einchecken), 720p für die Teilen-Seite (Artifact), 480p zum Verschicken:
+   `ffmpeg -i video.mp4 -vf "crop=1920:1072:0:0,fps=15,scale=854:480:flags=lanczos" -c:v libx264 -preset slow -crf 30
+   -tune stillimage -profile:v main -pix_fmt yuv420p -c:a aac -b:a 64k -ac 1 -movflags +faststart video_480p.mp4`
+   Dateien dem Nutzer im Chat schicken. MP4s nie committen: Sie lassen sich aus Drehbuch, Grafik und Ton-Cache jederzeit neu rendern.
+
+## Aufbau `szenen.json`
+- Kopf: `tts` (`elevenlabs`), `voice_id`, `model`, `tempo`, `titel`, `untertitel`, `fuss`, `quellen` (Verzeichnis
+  `id → kurz, voll, url`).
+- Erste Szene `layout: "kacheln"`: sechs Kapitel-Kacheln (`kacheln: [{t, a, wort}]`). Jede Kachel leuchtet auf, wenn ihr
+  `wort` gesprochen wird (ElevenLabs-Zeitmarken). `hervorheben_at`/`legende_at` = Satznummer. Am Ende des Einstiegs
+  wird die Legende gesprochen: „Grün heißt belegt, gelb teilweise, rot nicht haltbar.“
+- Weitere Szenen: `kicker`, `headline`, `sentences` (Text oder `{t: Anzeige, say: Sprechtext}`; Zahlen im
+  Sprechtext ausschreiben), `bullets` (`{t, at, ev}` mit `ev` = `stark` | `mittel` | `keine`), `evidence`
+  (`level`, `label`), `quellen` (IDs aus dem Verzeichnis), `shots` (`{a: [x0,y0,x1,y1], at, zoom}`, `zoom` =
+  `out` | `none`, Standard: 5 % hinein).
+
+## Gestaltungsregeln
+- Marker beziehen sich auf die geprüfte Aussage („Funkstrahlung als Stressor ✕“), nicht auf unseren Satz dazu.
+- Ampel nur Farbe und Text, keine Punkte. Legende: belegt / teilweise / nicht haltbar.
+- Quellen durchnummeriert nach erstem Auftreten, im Video „Quellen: [n] Autor Jahr“. Die YouTube-Beschreibung hat
+  nackte URLs (YouTube macht nur die klickbar), höchstens 5000 Zeichen, mit Kapitelzeiten.
+- Bildausschnitte: Schrift ganz oder gar nicht, keine halben Nachbarmotive, kein Rahmenstrich der Grafik. Bei
+  Schrift am Rand `zoom: "none"`. Tippfehler und Fantasieschrift der KI-Grafiken vorher korrigieren (`fix_grafik.py`).
+  Falsche Aussagen im Bild nur zeigen, wenn das Video sie richtigstellt.
+- Keine durchlaufende Gesamtgrafik als Einstieg.
+- Stimme: ElevenLabs „Christian – Warm and Captivating“ (`NBqeXKdZHweef6y0B67V`), Modell `eleven_v4`, Tempo 1,0;
+  spricht ≈ 2,1 Wörter/s, also 5 Minuten ≈ 600 Wörter. Die Antworten (JSON mit Audio und Zeitmarken) in
+  `tts_cache/` einchecken, dann kosten Neu-Renders nichts.
+
+## Zugänge (Cloud-Umgebung „Standard“)
+- `ELEVENLABS_API_KEY`: vorhanden. Creator-Plan, 125.526 Zeichen pro Monat; ein 5-Minuten-Video kostet ≈ 2.000.
+- `ROUTELLM_API_KEY` (ChatLLM/Abacus) für eigene Bilder: muss der Nutzer in den Umgebungseinstellungen eintragen.
+  Nächster Schritt: `GET https://routellm.abacus.ai/v1/models` nach Bildmodellen durchsuchen, Testbild im Stil
+  „Tusche und Aquarell auf warmem Papier, ohne Text“, dann ein Skript `werkzeug/bilder.py`, das pro Szene ein 16:9-Bild
+  ohne Schrift erzeugt. Jedes Bild vor dem Rendern ansehen (Schrift, Motiv, Stil).
+- Gamma-Bilder: Gratis-Plan reicht nicht (Fehler 402).
+- Schlüssel nie ausgeben, nie in Dateien oder den Chat. Das Repo ist öffentlich: keine Schlüssel, keine Stimmproben des
+  Nutzers (geklonte Stimme „Lupert“) einchecken.
+
+## Antworten an den Nutzer
+- Kurz halten und Bilder zeigen statt viel Text (Kontaktbogen, Stichbilder, Vorher/nachher).
+- Am Ende jeder Antwort genau eine Kostenzeile: `python3 tools/kosten.py` ausführen, Ausgabe wörtlich als letzte Zeile.
+- Jede Internetadresse als klickbarer Markdown-Link. Wurde ein Artifact oder eine Datei veröffentlicht: den Link als letzte
+  Zeile vor der Kostenzeile wiederholen (`**Link:** [Name](URL)`).

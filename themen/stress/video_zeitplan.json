@@ -1,0 +1,333 @@
+[
+ {
+  "id": "s0",
+  "v0": 0.0,
+  "v1": 31.63770975056689,
+  "st": [
+   [
+    1.0,
+    4.88,
+    "Chronischer Stress entsteht selten durch eine einzige große Belastung."
+   ],
+   [
+    5.88,
+    3.2,
+    "Meist ist es die Summe vieler kleiner Dinge."
+   ],
+   [
+    9.08,
+    10.959999999999999,
+    "Eine beliebte Infografik verspricht dagegen sechs Hebel: vom Drei-Eimer-Modell über Pausen und offene Aufgaben bis zu Training, Ernährung und Umwelt."
+   ],
+   [
+    20.04,
+    3.5199999999999996,
+    "Wir prüfen Punkt für Punkt, was die Forschung dazu sagt."
+   ],
+   [
+    23.56,
+    7.927709750566894,
+    "Die Farben zeigen jeweils, wie gut eine Aussage belegt ist: grün belegt, gelb teilweise, rot nicht haltbar."
+   ]
+  ]
+ },
+ {
+  "id": "s1",
+  "v0": 31.63770975056689,
+  "v1": 84.50052154195012,
+  "st": [
+   [
+    32.23770975056689,
+    3.28,
+    "Der große Eimer steht für deine Belastbarkeit."
+   ],
+   [
+    35.517709750566894,
+    4.720000000000001,
+    "Hinein fließen mentale Stressoren wie Termindruck und Sorgen."
+   ],
+   [
+    40.23770975056689,
+    5.76,
+    "Dazu kommen körperliche Belastungen: hartes Training, Schlafmangel, Krankheit."
+   ],
+   [
+    45.99770975056689,
+    6.4,
+    "Und das, was die Grafik chemische Stressoren nennt, etwa Alkohol oder sehr viel Koffein."
+   ],
+   [
+    52.39770975056689,
+    8.8,
+    "Der Kern stimmt: Der Körper antwortet auf alle diese Belastungen über dieselbe Stressachse, mit Cortisol und Adrenalin."
+   ],
+   [
+    61.197709750566894,
+    8.799999999999997,
+    "Die Forschung nennt die aufsummierte Abnutzung allostatische Last, allerdings über Monate und Jahre, nicht als Tagesbudget."
+   ],
+   [
+    69.99770975056688,
+    8.399999999999999,
+    "Die Einteilung in genau drei Eimer stammt ursprünglich aus der Chiropraktik und ist eine Vereinfachung, kein wissenschaftliches Modell."
+   ],
+   [
+    78.39770975056689,
+    5.952811791383226,
+    "Wenn der Eimer überläuft, liegt es selten am letzten Tropfen, sondern an allem, was schon drin war."
+   ]
+  ]
+ },
+ {
+  "id": "s2",
+  "v0": 84.50052154195012,
+  "v1": 143.811768707483,
+  "st": [
+   [
+    85.10052154195012,
+    3.36,
+    "Die zweite Säule ist der Rhythmus des Tages."
+   ],
+   [
+    88.46052154195011,
+    8.72,
+    "Die Grafik empfiehlt: 60 bis 90 Minuten konzentriert arbeiten, dann 3 bis 5 Minuten echte Erholung."
+   ],
+   [
+    97.18052154195011,
+    5.279999999999999,
+    "Ein fester 90-Minuten-Takt im Wachzustand ist allerdings kaum belegt."
+   ],
+   [
+    102.46052154195011,
+    14.0,
+    "Gut belegt ist etwas Einfacheres: Laut einer Meta-Analyse von 2022 steigern kurze Pausen von bis zu zehn Minuten die Energie und senken die Müdigkeit, wenn auch nur in kleinem Maß."
+   ],
+   [
+    116.46052154195011,
+    6.880000000000003,
+    "Entscheidend ist, was du in der Pause tust: aufstehen, aus dem Fenster schauen, ein paar Schritte gehen."
+   ],
+   [
+    123.34052154195012,
+    4.32,
+    "Das Handy zählt nicht, denn es füllt den mentalen Eimer weiter."
+   ],
+   [
+    127.66052154195012,
+    6.479999999999997,
+    "Ein schneller Hebel ist die Atmung: zweimal kurz einatmen, dann lange ausatmen."
+   ],
+   [
+    134.1405215419501,
+    9.521247165532884,
+    "In einer Studie mit gut hundert Teilnehmern hob diese Übung, fünf Minuten täglich über vier Wochen, die Stimmung stärker als eine Achtsamkeitsmeditation."
+   ]
+  ]
+ },
+ {
+  "id": "s3",
+  "v0": 143.811768707483,
+  "v1": 193.1540589569161,
+  "st": [
+   [
+    144.411768707483,
+    6.64,
+    "Die dritte Idee: Unerledigtes läuft im Kopf weiter, wie offene Tabs im Browser."
+   ],
+   [
+    151.05176870748298,
+    6.4799999999999995,
+    "Das geht auf den Zeigarnik-Effekt zurück: Unterbrochene Aufgaben sollen besser im Gedächtnis bleiben."
+   ],
+   [
+    157.531768707483,
+    5.840000000000002,
+    "Dieser Gedächtnisvorteil hat sich in neueren Untersuchungen allerdings nicht verlässlich bestätigt."
+   ],
+   [
+    163.371768707483,
+    6.16,
+    "Gut belegt ist dagegen, dass offene Ziele sich aufdrängen und die Konzentration stören."
+   ],
+   [
+    169.531768707483,
+    8.16,
+    "Die gute Nachricht: Du musst die Aufgabe nicht sofort erledigen, schon ein konkreter Plan, wann und wie, beruhigt den Kopf."
+   ],
+   [
+    177.691768707483,
+    9.119999999999997,
+    "In einer Schlafstudie schliefen Menschen schneller ein, wenn sie vorher fünf Minuten lang die Aufgaben für morgen aufschrieben, statt Erledigtes zu notieren."
+   ],
+   [
+    186.811768707483,
+    6.192290249433107,
+    "Praktisch heißt das: abends eine Liste, für jeden offenen Punkt ein nächster Schritt, Tab zu."
+   ]
+  ]
+ },
+ {
+  "id": "s4",
+  "v0": 193.1540589569161,
+  "v1": 228.32537414965984,
+  "st": [
+   [
+    193.75405895691608,
+    1.92,
+    "Jetzt zum Körper."
+   ],
+   [
+    195.67405895691607,
+    6.5600000000000005,
+    "Training ist gewollter Stress: Der Körper wird belastet und passt sich in der Erholung an."
+   ],
+   [
+    202.23405895691607,
+    4.24,
+    "Ist der mentale Eimer schon voll, fehlt genau diese Erholung."
+   ],
+   [
+    206.47405895691608,
+    9.44,
+    "Kleine Studien mit Studierenden zeigen: Wer stark gestresst ist, erholt sich langsamer von hartem Krafttraining und baut weniger Kraft auf."
+   ],
+   [
+    215.91405895691608,
+    6.960000000000001,
+    "An solchen Tagen ist ein Spaziergang oder ein reduziertes Training die bessere Wahl als die schwere Einheit."
+   ],
+   [
+    222.8740589569161,
+    5.301315192743761,
+    "Ganz streichen solltest du Bewegung aber nicht, denn moderate Bewegung senkt Stress."
+   ]
+  ]
+ },
+ {
+  "id": "s5",
+  "v0": 228.32537414965984,
+  "v1": 263.3028117913832,
+  "st": [
+   [
+    228.92537414965983,
+    3.76,
+    "Unter Stress schaltet der Körper auf Kampf oder Flucht."
+   ],
+   [
+    232.68537414965982,
+    4.5600000000000005,
+    "Stresshormone bremsen dann den Magen, der Darm reagiert unruhig."
+   ],
+   [
+    237.24537414965982,
+    4.879999999999999,
+    "Viele spüren das als Magendruck, Blähungen oder fehlenden Appetit."
+   ],
+   [
+    242.12537414965982,
+    7.760000000000002,
+    "An harten Tagen einfach und leicht verdaulich zu essen, ist deshalb plausibel, auch wenn es dazu keine eigenen Studien gibt."
+   ],
+   [
+    249.88537414965984,
+    8.16,
+    "Dass Kohlenhydrate den Körper schützen, stimmt so nicht: Nur bei langer Ausdauerbelastung dämpfen sie den Cortisol-Anstieg."
+   ],
+   [
+    258.04537414965984,
+    5.1074376417233545,
+    "Traubenzucker vor einer psychischen Stresssituation verstärkt die Cortisol-Antwort sogar."
+   ]
+  ]
+ },
+ {
+  "id": "s6",
+  "v0": 263.3028117913832,
+  "v1": 327.64467120181405,
+  "st": [
+   [
+    263.9028117913832,
+    5.68,
+    "Zum Schluss die Umwelt: Funkstrahlung, Blaulicht am Abend und Plastik."
+   ],
+   [
+    269.5828117913832,
+    2.960000000000001,
+    "Hier muss man die Grafik deutlich korrigieren."
+   ],
+   [
+    272.5428117913832,
+    6.479999999999999,
+    "Für Funkstrahlung von Router und Handy im Alltag gibt es keinen Nachweis gesundheitlicher Schäden."
+   ],
+   [
+    279.0228117913832,
+    10.480000000000002,
+    "Eine von der Weltgesundheitsorganisation beauftragte Übersichtsarbeit fand 2024 keinen Zusammenhang zwischen Handynutzung und Hirntumoren."
+   ],
+   [
+    289.50281179138324,
+    8.479999999999997,
+    "Und in Doppelblindtests erkennen auch Menschen, die sich als elektrosensibel bezeichnen, echte Strahlung nicht besser als Zufall."
+   ],
+   [
+    297.9828117913832,
+    9.920000000000002,
+    "Beim Blaulicht ist die Lage gemischt: Helle Bildschirme am späten Abend können das Einschlafen verzögern, der Effekt ist aber kleiner als oft behauptet."
+   ],
+   [
+    307.9028117913832,
+    6.399999999999999,
+    "Wichtiger als die Lichtfarbe ist meist, was du anschaust: Nachrichten und Mails halten wach."
+   ],
+   [
+    314.3028117913832,
+    7.200000000000003,
+    "Bei Plastik geht es um hormonaktive Stoffe wie Bisphenol A, die Europa inzwischen stark reguliert."
+   ],
+   [
+    321.50281179138324,
+    5.991859410430834,
+    "Mit Stress im körperlichen Sinn hat das aber wenig zu tun, es ist ein eigenes Gesundheitsthema."
+   ]
+  ]
+ },
+ {
+  "id": "s7",
+  "v0": 327.64467120181405,
+  "v1": 361.5573015873016,
+  "st": [
+   [
+    328.24467120181407,
+    1.6799773242630385,
+    "Was bleibt also?"
+   ],
+   [
+    329.92464852607714,
+    6.720000000000001,
+    "Stress summiert sich, deshalb lohnt es sich, an mehreren kleinen Stellen gleichzeitig zu entlasten."
+   ],
+   [
+    336.6446485260771,
+    8.08,
+    "Gut belegt sind kurze Pausen ohne Handy, ein Plan für offene Aufgaben und ein Training, das zur Tagesform passt."
+   ],
+   [
+    344.7246485260771,
+    8.8,
+    "Dazu kommen die großen Hebel, die in der Grafik fehlen: genug Schlaf, regelmäßige Bewegung und gute soziale Kontakte."
+   ],
+   [
+    353.5246485260771,
+    3.3599999999999994,
+    "Die Angst vor dem WLAN-Router kannst du dir dagegen sparen."
+   ],
+   [
+    356.8846485260771,
+    1.9226530612244872,
+    "Die Quellen stehen in der Beschreibung."
+   ]
+  ]
+ }
+]

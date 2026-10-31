@@ -1,0 +1,284 @@
+1
+00:00:01,000 --> 00:00:05,217
+Magnesium gehört zu den beliebtesten Nahrungsergänzungsmitteln.
+
+2
+00:00:05,067 --> 00:00:10,388
+Zwei Infografiken versprechen dazu einiges: über die Rolle im Körper,
+
+3
+00:00:10,238 --> 00:00:17,057
+den richtigen Bluttest, den Mangel, die beste Form, Vitamin B6 und die richtige Einnahme.
+
+4
+00:00:16,907 --> 00:00:20,417
+Wir prüfen jede Aussage gegen die Studienlage.
+
+5
+00:00:20,267 --> 00:00:25,210
+Grün heißt belegt, gelb teilweise, rot nicht haltbar.
+
+6
+00:00:25,810 --> 00:00:29,946
+Magnesium ist an Hunderten Enzymreaktionen beteiligt.
+
+7
+00:00:29,796 --> 00:00:36,266
+Die Energiewährung der Zelle, ATP, arbeitet fast immer als Komplex mit Magnesium.
+
+8
+00:00:36,116 --> 00:00:40,870
+Im Nervensystem blockiert Magnesium bestimmte Rezeptoren,
+
+9
+00:00:40,720 --> 00:00:44,746
+die NMDA-Rezeptoren, und dämpft so die Erregung.
+
+10
+00:00:44,596 --> 00:00:46,746
+Beides ist Lehrbuchwissen.
+
+11
+00:00:46,596 --> 00:00:51,093
+Dass Magnesium-Tabletten die morgendliche Cortisol-Ausschüttung senken,
+
+12
+00:00:50,943 --> 00:00:54,889
+wie eine der Grafiken behauptet, ist dagegen nicht untersucht.
+
+13
+00:00:55,489 --> 00:01:01,872
+Die Grafiken sagen: Weniger als ein Prozent des Magnesiums befindet sich im Blutserum.
+
+14
+00:01:01,722 --> 00:01:07,935
+Das stimmt, es sind sogar nur etwa 0,3 Prozent; der Rest steckt in Knochen,
+
+15
+00:01:07,785 --> 00:01:09,472
+Muskeln und Gewebe.
+
+16
+00:01:09,322 --> 00:01:14,865
+Deshalb kann ein normaler Serumwert eine knappe Versorgung nicht sicher ausschließen,
+
+17
+00:01:14,715 --> 00:01:16,832
+denn der Knochen puffert lange.
+
+18
+00:01:16,682 --> 00:01:21,992
+Die Vollblutanalyse als der wahre Test ist aber ebenfalls nicht validiert.
+
+19
+00:01:21,842 --> 00:01:24,851
+Einen verlässlichen Goldstandard gibt es bisher nicht,
+
+20
+00:01:24,701 --> 00:01:27,710
+das sagt auch die Deutsche Gesellschaft für Ernährung.
+
+21
+00:01:28,310 --> 00:01:31,919
+Über die Hälfte der Bevölkerung habe einen Mangel,
+
+22
+00:01:31,769 --> 00:01:35,100
+heißt es, wegen Stress und ausgelaugter Böden.
+
+23
+00:01:34,950 --> 00:01:42,374
+In Deutschland erreicht laut Nationaler Verzehrsstudie gut ein Viertel der Erwachsenen die Zufuhrempfehlung nicht,
+
+24
+00:01:42,224 --> 00:01:45,500
+bei Mädchen im Teenageralter mehr als die Hälfte.
+
+25
+00:01:45,350 --> 00:01:50,060
+Weniger als empfohlen zu essen, ist aber noch kein nachgewiesener Mangel.
+
+26
+00:01:49,910 --> 00:01:56,698
+Und die Böden: In einem der ältesten Feldversuche der Welt blieb das Magnesium im Boden stabil,
+
+27
+00:01:56,548 --> 00:02:01,100
+im Weizen sank es, weil Hochertragssorten den Gehalt verdünnen.
+
+28
+00:02:00,950 --> 00:02:06,620
+Dass Stress Magnesium aufzehrt, ist eine Hypothese, beim Menschen kaum geprüft.
+
+29
+00:02:07,220 --> 00:02:11,238
+Magnesiumoxid werde nur zu vier Prozent aufgenommen,
+
+30
+00:02:11,088 --> 00:02:14,956
+organische Formen wie Citrat seien weit überlegen.
+
+31
+00:02:14,806 --> 00:02:19,916
+Die vier Prozent stammen aus einer einzigen Studie, gemessen über den Urin.
+
+32
+00:02:19,766 --> 00:02:27,165
+Eine Isotopenstudie an Patienten nach einer Darmoperation fand für Oxid und Glycinat fast gleiche Werte,
+
+33
+00:02:27,015 --> 00:02:29,116
+rund dreiundzwanzig Prozent.
+
+34
+00:02:28,966 --> 00:02:33,836
+Citrat schneidet in einigen Vergleichen etwas besser ab und löst sich gut.
+
+35
+00:02:33,686 --> 00:02:36,923
+Entscheidend sind Löslichkeit und Verträglichkeit,
+
+36
+00:02:36,773 --> 00:02:39,454
+nicht das Wort organisch auf der Packung.
+
+37
+00:02:40,054 --> 00:02:44,204
+Für Spezialformen gibt es besonders große Versprechen.
+
+38
+00:02:44,054 --> 00:02:48,641
+L-Threonat soll das Gehirn erreichen: Belegt ist das bei Ratten,
+
+39
+00:02:48,491 --> 00:02:52,524
+die wenigen Studien am Menschen stammen von Herstellern.
+
+40
+00:02:52,374 --> 00:03:00,585
+Bisglycinat soll beim Schlafen helfen: Eine neue Studie mit hundertfünfundfünfzig Teilnehmern fand einen kleinen Effekt,
+
+41
+00:03:00,435 --> 00:03:03,004
+knapp an der Grenze der Signifikanz.
+
+42
+00:03:02,854 --> 00:03:08,206
+Malat soll die Energiegewinnung fördern: Dafür gibt es nur eine Rattenstudie.
+
+43
+00:03:08,806 --> 00:03:13,356
+Vitamin B6 schleuse Magnesium in die Zellen, heißt es.
+
+44
+00:03:13,206 --> 00:03:19,798
+In der größten Studie dazu, mit zweihundertvierundsechzig Teilnehmern und vom Hersteller finanziert,
+
+45
+00:03:19,648 --> 00:03:23,276
+brachte die Kombination beim Hauptziel keinen Vorteil.
+
+46
+00:03:23,126 --> 00:03:28,956
+Auch das Magnesium in den roten Blutkörperchen stieg durch B6 nicht zusätzlich.
+
+47
+00:03:28,806 --> 00:03:38,530
+Vorsicht bei hohen Dosen: Die Europäische Behörde für Lebensmittelsicherheit setzt für Vitamin B6 eine Obergrenze von zwölf Milligramm pro Tag.
+
+48
+00:03:39,130 --> 00:03:41,440
+Bleiben die Einnahmeregeln.
+
+49
+00:03:41,290 --> 00:03:46,206
+Für dreißig bis sechzig Minuten Abstand zum Kaffee gibt es keine Studie,
+
+50
+00:03:46,056 --> 00:03:49,120
+Koffein erhöht die Ausscheidung nur minimal.
+
+51
+00:03:48,970 --> 00:03:51,869
+Zink stört erst in sehr hohen Dosen,
+
+52
+00:03:51,719 --> 00:03:55,840
+weit über der Obergrenze, und zu Eisen fehlen Daten.
+
+53
+00:03:55,690 --> 00:04:00,643
+Wichtig sind dagegen echte Wechselwirkungen: Zu bestimmten Antibiotika,
+
+54
+00:04:00,493 --> 00:04:06,800
+zu Osteoporose-Mitteln und zu Schilddrüsenhormon sollte man mehrere Stunden Abstand halten.
+
+55
+00:04:06,650 --> 00:04:14,096
+Das Bundesinstitut für Risikobewertung empfiehlt höchstens zweihundertfünfzig Milligramm pro Tag aus Präparaten,
+
+56
+00:04:13,946 --> 00:04:15,920
+verteilt auf zwei Portionen.
+
+57
+00:04:15,770 --> 00:04:19,427
+Wer eine Nierenschwäche hat oder lange Säureblocker nimmt,
+
+58
+00:04:19,277 --> 00:04:21,059
+sollte das ärztlich klären.
+
+59
+00:04:21,659 --> 00:04:24,449
+Und wofür lohnt sich Magnesium?
+
+60
+00:04:24,299 --> 00:04:29,489
+Gegen nächtliche Wadenkrämpfe im Alter hilft es laut Cochrane-Übersicht nicht.
+
+61
+00:04:29,339 --> 00:04:34,369
+Den Blutdruck senkt es leicht, um etwa 2 mmHg.
+
+62
+00:04:34,219 --> 00:04:38,400
+Bei Migräne ist es eine schwach belegte Option zur Vorbeugung,
+
+63
+00:04:38,250 --> 00:04:41,391
+die Leitlinie führt es mit geringerer Evidenz.
+
+64
+00:04:41,991 --> 00:04:43,808
+Was bleibt also?
+
+65
+00:04:43,658 --> 00:04:49,563
+Magnesium ist lebenswichtig, aber die meisten decken ihren Bedarf über Vollkorn,
+
+66
+00:04:49,413 --> 00:04:52,368
+Hülsenfrüchte, Nüsse und Mineralwasser.
+
+67
+00:04:52,218 --> 00:04:56,873
+Wer ergänzt, nimmt höchstens zweihundertfünfzig Milligramm am Tag,
+
+68
+00:04:56,723 --> 00:04:59,808
+gut lösliche Formen wie Citrat reichen aus.
+
+69
+00:04:59,658 --> 00:05:04,429
+Teure Spezialformen und Kombipräparate mit Vitamin B6 halten nicht,
+
+70
+00:05:04,279 --> 00:05:05,808
+was sie versprechen.
+
+71
+00:05:05,658 --> 00:05:07,630
+Die Quellen stehen in der Beschreibung.
+

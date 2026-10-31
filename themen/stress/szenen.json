@@ -1,0 +1,829 @@
+{
+  "tts": "elevenlabs",
+  "voice_id": "NBqeXKdZHweef6y0B67V",
+  "voice_name": "Christian - Warm and Captivating",
+  "model": "eleven_v4",
+  "tempo": 1.0,
+  "voice": "de-DE-KatjaNeural",
+  "rate": "+5%",
+  "scenes": [
+    {
+      "id": "s0",
+      "kicker": "Info-Video · Faktencheck",
+      "headline": "Chronischer Stress: Was hilft wirklich?",
+      "sentences": [
+        "Chronischer Stress entsteht selten durch eine einzige große Belastung.",
+        "Meist ist es die Summe vieler kleiner Dinge.",
+        "Eine beliebte Infografik verspricht dagegen sechs Hebel: vom Drei-Eimer-Modell über Pausen und offene Aufgaben bis zu Training, Ernährung und Umwelt.",
+        "Wir prüfen Punkt für Punkt, was die Forschung dazu sagt.",
+        "Die Farben zeigen jeweils, wie gut eine Aussage belegt ist: grün belegt, gelb teilweise, rot nicht haltbar."
+      ],
+      "kapitel": "Einleitung",
+      "layout": "kacheln",
+      "hervorheben_at": 2,
+      "legende_at": 4,
+      "kacheln": [
+        {
+          "t": "Ein Eimer, viele Zuflüsse",
+          "a": [
+            290,
+            700,
+            700,
+            1170
+          ],
+          "wort": "Drei-Eimer"
+        },
+        {
+          "t": "Arbeiten in Wellen",
+          "a": [
+            1100,
+            640,
+            1420,
+            1040
+          ],
+          "wort": "Pausen"
+        },
+        {
+          "t": "Offene Schleifen",
+          "a": [
+            90,
+            1340,
+            670,
+            1860
+          ],
+          "wort": "offene Aufgaben"
+        },
+        {
+          "t": "Training ist auch Stress",
+          "a": [
+            60,
+            2090,
+            540,
+            2460
+          ],
+          "wort": "Training"
+        },
+        {
+          "t": "Einfach essen",
+          "a": [
+            550,
+            2080,
+            1020,
+            2460
+          ],
+          "wort": "Ernährung"
+        },
+        {
+          "t": "Strahlung, Licht, Plastik",
+          "a": [
+            1035,
+            2045,
+            1480,
+            2482
+          ],
+          "wort": "Umwelt"
+        }
+      ]
+    },
+    {
+      "id": "s1",
+      "kicker": "Säule 1 · Belastung verstehen",
+      "headline": "Ein Eimer, viele Zuflüsse",
+      "bullets": [
+        {
+          "t": "Stressoren addieren sich",
+          "at": 1,
+          "ev": "stark"
+        },
+        {
+          "t": "Eine Stressachse für alles: Cortisol, Adrenalin",
+          "at": 4,
+          "ev": "stark"
+        },
+        {
+          "t": "Fachbegriff: allostatische Last",
+          "at": 5
+        },
+        {
+          "t": "Drei Eimer als festes Tagesbudget",
+          "at": 6,
+          "ev": "keine"
+        }
+      ],
+      "evidence": {
+        "level": "stark",
+        "label": "Kern gut belegt",
+        "note": "Allostatische Last: gut belegt · drei Eimer als Tagesbudget: Vereinfachung"
+      },
+      "sentences": [
+        "Der große Eimer steht für deine Belastbarkeit.",
+        "Hinein fließen mentale Stressoren wie Termindruck und Sorgen.",
+        "Dazu kommen körperliche Belastungen: hartes Training, Schlafmangel, Krankheit.",
+        "Und das, was die Grafik chemische Stressoren nennt, etwa Alkohol oder sehr viel Koffein.",
+        "Der Kern stimmt: Der Körper antwortet auf alle diese Belastungen über dieselbe Stressachse, mit Cortisol und Adrenalin.",
+        "Die Forschung nennt die aufsummierte Abnutzung allostatische Last, allerdings über Monate und Jahre, nicht als Tagesbudget.",
+        "Die Einteilung in genau drei Eimer stammt ursprünglich aus der Chiropraktik und ist eine Vereinfachung, kein wissenschaftliches Modell.",
+        "Wenn der Eimer überläuft, liegt es selten am letzten Tropfen, sondern an allem, was schon drin war."
+      ],
+      "shots": [
+        {
+          "a": [
+            290,
+            700,
+            700,
+            1170
+          ]
+        },
+        {
+          "at": 1,
+          "a": [
+            90,
+            315,
+            600,
+            565
+          ]
+        },
+        {
+          "at": 2,
+          "a": [
+            20,
+            560,
+            440,
+            900
+          ]
+        },
+        {
+          "at": 3,
+          "a": [
+            470,
+            320,
+            890,
+            680
+          ]
+        },
+        {
+          "at": 4,
+          "a": [
+            30,
+            310,
+            890,
+            1170
+          ],
+          "zoom": "out"
+        },
+        {
+          "at": 7,
+          "a": [
+            230,
+            690,
+            790,
+            1345
+          ],
+          "zoom": "none"
+        }
+      ],
+      "quellen": [
+        "mcewen1998",
+        "keating"
+      ]
+    },
+    {
+      "id": "s2",
+      "kicker": "Säule 2 · Rhythmus",
+      "headline": "Arbeiten in Wellen",
+      "bullets": [
+        {
+          "t": "60–90 Minuten Fokus, dann 3–5 Minuten Pause",
+          "at": 1,
+          "ev": "mittel"
+        },
+        {
+          "t": "Fester 90-Minuten-Takt",
+          "at": 2,
+          "ev": "keine"
+        },
+        {
+          "t": "Kurze Pausen: mehr Energie, weniger Müdigkeit",
+          "at": 3,
+          "ev": "stark"
+        },
+        {
+          "t": "Pause ohne Handy",
+          "at": 4,
+          "ev": "mittel"
+        },
+        {
+          "t": "Lange ausatmen",
+          "at": 6,
+          "ev": "mittel"
+        }
+      ],
+      "evidence": {
+        "level": "mittel",
+        "note": "Kurze Pausen: kleiner, belegter Effekt · fester 90-Minuten-Takt im Wachzustand: nicht belegt"
+      },
+      "sentences": [
+        "Die zweite Säule ist der Rhythmus des Tages.",
+        {
+          "t": "Die Grafik empfiehlt: 60 bis 90 Minuten konzentriert arbeiten, dann 3 bis 5 Minuten echte Erholung.",
+          "say": "Die Grafik empfiehlt: sechzig bis neunzig Minuten konzentriert arbeiten, dann drei bis fünf Minuten echte Erholung."
+        },
+        {
+          "t": "Ein fester 90-Minuten-Takt im Wachzustand ist allerdings kaum belegt.",
+          "say": "Ein fester Neunzig-Minuten-Takt im Wachzustand ist allerdings kaum belegt."
+        },
+        "Gut belegt ist etwas Einfacheres: Laut einer Meta-Analyse von 2022 steigern kurze Pausen von bis zu zehn Minuten die Energie und senken die Müdigkeit, wenn auch nur in kleinem Maß.",
+        "Entscheidend ist, was du in der Pause tust: aufstehen, aus dem Fenster schauen, ein paar Schritte gehen.",
+        "Das Handy zählt nicht, denn es füllt den mentalen Eimer weiter.",
+        "Ein schneller Hebel ist die Atmung: zweimal kurz einatmen, dann lange ausatmen.",
+        "In einer Studie mit gut hundert Teilnehmern hob diese Übung, fünf Minuten täglich über vier Wochen, die Stimmung stärker als eine Achtsamkeitsmeditation."
+      ],
+      "shots": [
+        {
+          "a": [
+            815,
+            475,
+            1482,
+            1060
+          ],
+          "zoom": "none"
+        },
+        {
+          "at": 1,
+          "a": [
+            810,
+            470,
+            1130,
+            1060
+          ],
+          "zoom": "none"
+        },
+        {
+          "at": 3,
+          "a": [
+            1100,
+            640,
+            1420,
+            1040
+          ]
+        },
+        {
+          "at": 4,
+          "a": [
+            1100,
+            1075,
+            1430,
+            1330
+          ],
+          "zoom": "none"
+        },
+        {
+          "at": 6,
+          "a": [
+            1120,
+            848,
+            1400,
+            1040
+          ],
+          "zoom": "out"
+        }
+      ],
+      "quellen": [
+        "kleitman1982",
+        "albulescu2022",
+        "kang2019",
+        "rhee2016",
+        "balban2023"
+      ]
+    },
+    {
+      "id": "s3",
+      "kicker": "Säule 3 · Kopf frei",
+      "headline": "Offene Schleifen schließen",
+      "bullets": [
+        {
+          "t": "Unerledigtes drängt sich auf",
+          "at": 0,
+          "ev": "stark"
+        },
+        {
+          "t": "Gedächtnisvorteil für Unerledigtes",
+          "at": 2,
+          "ev": "keine"
+        },
+        {
+          "t": "Ein konkreter Plan beruhigt",
+          "at": 4,
+          "ev": "stark"
+        },
+        {
+          "t": "Abends fünf Minuten To-do-Liste",
+          "at": 5,
+          "ev": "mittel"
+        }
+      ],
+      "evidence": {
+        "level": "mittel",
+        "note": "Plan beruhigt: belegt · Zeigarnik-Gedächtniseffekt: nicht verlässlich repliziert"
+      },
+      "sentences": [
+        "Die dritte Idee: Unerledigtes läuft im Kopf weiter, wie offene Tabs im Browser.",
+        "Das geht auf den Zeigarnik-Effekt zurück: Unterbrochene Aufgaben sollen besser im Gedächtnis bleiben.",
+        "Dieser Gedächtnisvorteil hat sich in neueren Untersuchungen allerdings nicht verlässlich bestätigt.",
+        "Gut belegt ist dagegen, dass offene Ziele sich aufdrängen und die Konzentration stören.",
+        "Die gute Nachricht: Du musst die Aufgabe nicht sofort erledigen, schon ein konkreter Plan, wann und wie, beruhigt den Kopf.",
+        "In einer Schlafstudie schliefen Menschen schneller ein, wenn sie vorher fünf Minuten lang die Aufgaben für morgen aufschrieben, statt Erledigtes zu notieren.",
+        "Praktisch heißt das: abends eine Liste, für jeden offenen Punkt ein nächster Schritt, Tab zu."
+      ],
+      "shots": [
+        {
+          "a": [
+            90,
+            1340,
+            670,
+            1860
+          ]
+        },
+        {
+          "at": 1,
+          "a": [
+            90,
+            1335,
+            670,
+            1700
+          ],
+          "zoom": "none"
+        },
+        {
+          "at": 3,
+          "a": [
+            470,
+            1650,
+            700,
+            1860
+          ]
+        },
+        {
+          "at": 4,
+          "a": [
+            90,
+            1340,
+            670,
+            1860
+          ],
+          "zoom": "out"
+        }
+      ],
+      "quellen": [
+        "masicampo2011",
+        "scullin2018",
+        "ghibellini2025"
+      ]
+    },
+    {
+      "id": "s4",
+      "kicker": "Körper · Training",
+      "headline": "Training ist auch Stress",
+      "bullets": [
+        {
+          "t": "Training ist gewollter Stress",
+          "at": 1
+        },
+        {
+          "t": "Psychischer Stress bremst die Erholung",
+          "at": 3,
+          "ev": "mittel"
+        },
+        {
+          "t": "An vollen Tagen locker statt maximal",
+          "at": 4,
+          "ev": "mittel"
+        }
+      ],
+      "evidence": {
+        "level": "mittel",
+        "note": "Kleine Beobachtungsstudien, Richtung einheitlich · dass weniger Volumen reicht, ist ungeprüft"
+      },
+      "sentences": [
+        "Jetzt zum Körper.",
+        "Training ist gewollter Stress: Der Körper wird belastet und passt sich in der Erholung an.",
+        "Ist der mentale Eimer schon voll, fehlt genau diese Erholung.",
+        "Kleine Studien mit Studierenden zeigen: Wer stark gestresst ist, erholt sich langsamer von hartem Krafttraining und baut weniger Kraft auf.",
+        "An solchen Tagen ist ein Spaziergang oder ein reduziertes Training die bessere Wahl als die schwere Einheit.",
+        "Ganz streichen solltest du Bewegung aber nicht, denn moderate Bewegung senkt Stress."
+      ],
+      "shots": [
+        {
+          "a": [
+            60,
+            2090,
+            540,
+            2460
+          ]
+        },
+        {
+          "at": 2,
+          "a": [
+            50,
+            2085,
+            350,
+            2465
+          ],
+          "zoom": "none"
+        },
+        {
+          "at": 4,
+          "a": [
+            345,
+            2090,
+            560,
+            2460
+          ]
+        }
+      ],
+      "quellen": [
+        "bartholomew2008",
+        "stults2012",
+        "stults2014",
+        "manresa2021",
+        "singh2023"
+      ]
+    },
+    {
+      "id": "s5",
+      "kicker": "Körper · Ernährung",
+      "headline": "Einfach essen an harten Tagen",
+      "bullets": [
+        {
+          "t": "Stress bremst die Verdauung",
+          "at": 1,
+          "ev": "stark"
+        },
+        {
+          "t": "„Kohlenhydrate schützen“",
+          "at": 4,
+          "ev": "keine"
+        }
+      ],
+      "evidence": {
+        "level": "mittel",
+        "label": "teilweise belegt",
+        "note": "Stress bremst die Verdauung: belegt · „Kohlenhydrate schützen“: im Alltag eher umgekehrt"
+      },
+      "sentences": [
+        "Unter Stress schaltet der Körper auf Kampf oder Flucht.",
+        "Stresshormone bremsen dann den Magen, der Darm reagiert unruhig.",
+        "Viele spüren das als Magendruck, Blähungen oder fehlenden Appetit.",
+        "An harten Tagen einfach und leicht verdaulich zu essen, ist deshalb plausibel, auch wenn es dazu keine eigenen Studien gibt.",
+        "Dass Kohlenhydrate den Körper schützen, stimmt so nicht: Nur bei langer Ausdauerbelastung dämpfen sie den Cortisol-Anstieg.",
+        "Traubenzucker vor einer psychischen Stresssituation verstärkt die Cortisol-Antwort sogar."
+      ],
+      "shots": [
+        {
+          "a": [
+            550,
+            2080,
+            1020,
+            2460
+          ]
+        },
+        {
+          "at": 1,
+          "a": [
+            670,
+            2090,
+            910,
+            2440
+          ]
+        },
+        {
+          "at": 3,
+          "a": [
+            550,
+            2090,
+            695,
+            2450
+          ]
+        },
+        {
+          "at": 4,
+          "a": [
+            870,
+            2170,
+            1020,
+            2460
+          ]
+        }
+      ],
+      "quellen": [
+        "tache2007",
+        "gonzalez2002",
+        "zaenkert2020",
+        "christ2024"
+      ]
+    },
+    {
+      "id": "s6",
+      "kicker": "Umwelt",
+      "headline": "Strahlung, Licht, Plastik",
+      "bullets": [
+        {
+          "t": "Funkstrahlung als Stressor",
+          "at": 2,
+          "ev": "keine"
+        },
+        {
+          "t": "Bildschirm am Abend stört den Schlaf",
+          "at": 5,
+          "ev": "mittel"
+        },
+        {
+          "t": "Plastik als Stressor",
+          "at": 7,
+          "ev": "keine"
+        }
+      ],
+      "evidence": {
+        "level": "keine",
+        "label": "größtenteils nicht belegt",
+        "note": "Funk: kein Nachweis · Blaulicht: kleiner Effekt · Plastik: anderes Gesundheitsthema"
+      },
+      "sentences": [
+        "Zum Schluss die Umwelt: Funkstrahlung, Blaulicht am Abend und Plastik.",
+        "Hier muss man die Grafik deutlich korrigieren.",
+        "Für Funkstrahlung von Router und Handy im Alltag gibt es keinen Nachweis gesundheitlicher Schäden.",
+        "Eine von der Weltgesundheitsorganisation beauftragte Übersichtsarbeit fand 2024 keinen Zusammenhang zwischen Handynutzung und Hirntumoren.",
+        "Und in Doppelblindtests erkennen auch Menschen, die sich als elektrosensibel bezeichnen, echte Strahlung nicht besser als Zufall.",
+        "Beim Blaulicht ist die Lage gemischt: Helle Bildschirme am späten Abend können das Einschlafen verzögern, der Effekt ist aber kleiner als oft behauptet.",
+        "Wichtiger als die Lichtfarbe ist meist, was du anschaust: Nachrichten und Mails halten wach.",
+        "Bei Plastik geht es um hormonaktive Stoffe wie Bisphenol A, die Europa inzwischen stark reguliert.",
+        "Mit Stress im körperlichen Sinn hat das aber wenig zu tun, es ist ein eigenes Gesundheitsthema."
+      ],
+      "shots": [
+        {
+          "a": [
+            1035,
+            2045,
+            1480,
+            2482
+          ],
+          "zoom": "none"
+        },
+        {
+          "at": 2,
+          "a": [
+            1050,
+            2060,
+            1250,
+            2280
+          ]
+        },
+        {
+          "at": 5,
+          "a": [
+            1240,
+            2060,
+            1490,
+            2280
+          ]
+        },
+        {
+          "at": 7,
+          "a": [
+            1100,
+            2260,
+            1400,
+            2480
+          ]
+        }
+      ],
+      "quellen": [
+        "who",
+        "karipidis2024",
+        "bosch2024",
+        "rubin2005",
+        "chang2015",
+        "cajochen2022",
+        "efsa2023",
+        "eu2024"
+      ]
+    },
+    {
+      "id": "s7",
+      "kicker": "Fazit",
+      "headline": "Was wirklich bleibt",
+      "bullets": [
+        {
+          "t": "Kurze Pausen ohne Handy",
+          "at": 2,
+          "ev": "stark"
+        },
+        {
+          "t": "Plan für Offenes",
+          "at": 2,
+          "ev": "stark"
+        },
+        {
+          "t": "Training an den Stress anpassen",
+          "at": 2,
+          "ev": "mittel"
+        },
+        {
+          "t": "Schlaf, Bewegung, Kontakte",
+          "at": 3,
+          "ev": "stark"
+        }
+      ],
+      "sentences": [
+        "Was bleibt also?",
+        "Stress summiert sich, deshalb lohnt es sich, an mehreren kleinen Stellen gleichzeitig zu entlasten.",
+        "Gut belegt sind kurze Pausen ohne Handy, ein Plan für offene Aufgaben und ein Training, das zur Tagesform passt.",
+        "Dazu kommen die großen Hebel, die in der Grafik fehlen: genug Schlaf, regelmäßige Bewegung und gute soziale Kontakte.",
+        "Die Angst vor dem WLAN-Router kannst du dir dagegen sparen.",
+        "Die Quellen stehen in der Beschreibung."
+      ],
+      "shots": [
+        {
+          "a": [
+            30,
+            310,
+            890,
+            1170
+          ]
+        },
+        {
+          "at": 3,
+          "a": [
+            1000,
+            1690,
+            1510,
+            2070
+          ]
+        }
+      ],
+      "evidence": {
+        "level": "stark",
+        "label": "überwiegend gut belegt"
+      },
+      "quellen": [
+        "scott2021",
+        "singh2023",
+        "heinrichs2003",
+        "holtlunstad2010"
+      ],
+      "kapitel": "Fazit"
+    }
+  ],
+  "quellen": {
+    "mcewen1998": {
+      "kurz": "McEwen 1998",
+      "voll": "McEwen 1998, New England Journal of Medicine – allostatische Last",
+      "url": "https://doi.org/10.1056/NEJM199801153380307"
+    },
+    "keating": {
+      "kurz": "Keating (zu D. D. Palmer)",
+      "voll": "Keating zu D. D. Palmers Krankheitstheorie – Ursprung der Dreiteilung in der Chiropraktik",
+      "url": "https://chiro.org/Plus/History/Persons/PalmerDD/PalmerDD-Disease_Theory.pdf"
+    },
+    "kleitman1982": {
+      "kurz": "Kleitman 1982",
+      "voll": "Kleitman 1982, Sleep – Ruhe-Aktivitäts-Zyklus",
+      "url": "https://doi.org/10.1093/sleep/5.4.311"
+    },
+    "albulescu2022": {
+      "kurz": "Albulescu et al. 2022",
+      "voll": "Albulescu et al. 2022, PLOS ONE – Meta-Analyse Mikropausen (Energie d = 0,36, Müdigkeit d = 0,35, Leistung n. s.)",
+      "url": "https://doi.org/10.1371/journal.pone.0272460"
+    },
+    "kang2019": {
+      "kurz": "Kang & Kurtzberg 2019",
+      "voll": "Kang & Kurtzberg 2019, Journal of Behavioral Addictions – Pause am Handy: 19 % langsamer, 22 % weniger gelöst (Experiment, 414 Studierende)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7044622"
+    },
+    "rhee2016": {
+      "kurz": "Rhee & Kim 2016",
+      "voll": "Rhee & Kim 2016, Computers in Human Behavior – Handy-Mittagspause baut Erschöpfung schwächer ab (Tagebuchstudie, 450 Beschäftigte)",
+      "url": "https://doi.org/10.1016/j.chb.2015.11.056"
+    },
+    "balban2023": {
+      "kurz": "Balban et al. 2023",
+      "voll": "Balban et al. 2023, Cell Reports Medicine – zyklisches Seufzen, 108 Personen, 28 Tage",
+      "url": "https://doi.org/10.1016/j.xcrm.2022.100895"
+    },
+    "masicampo2011": {
+      "kurz": "Masicampo & Baumeister 2011",
+      "voll": "Masicampo & Baumeister 2011, Journal of Personality and Social Psychology – ein Plan stoppt ungewollte Gedanken an offene Ziele",
+      "url": "https://doi.org/10.1037/a0024192"
+    },
+    "scullin2018": {
+      "kurz": "Scullin et al. 2018",
+      "voll": "Scullin et al. 2018, Journal of Experimental Psychology: General – To-do-Liste vor dem Schlafen",
+      "url": "https://doi.org/10.1037/xge0000374"
+    },
+    "ghibellini2025": {
+      "kurz": "Ghibellini & Meier 2025",
+      "voll": "Ghibellini & Meier 2025, Humanities and Social Sciences Communications – Meta-Analyse Zeigarnik/Ovsiankina",
+      "url": "https://doi.org/10.1057/s41599-025-05000-w"
+    },
+    "bartholomew2008": {
+      "kurz": "Bartholomew et al. 2008",
+      "voll": "Bartholomew et al. 2008, Journal of Strength and Conditioning Research – weniger Kraftzuwachs bei viel Stress",
+      "url": "https://doi.org/10.1519/JSC.0b013e318173d0bf"
+    },
+    "stults2012": {
+      "kurz": "Stults-Kolehmainen & Bartholomew 2012",
+      "voll": "Stults-Kolehmainen & Bartholomew 2012, Medicine & Science in Sports & Exercise – langsamere Erholung",
+      "url": "https://doi.org/10.1249/MSS.0b013e31825f67a0"
+    },
+    "stults2014": {
+      "kurz": "Stults-Kolehmainen et al. 2014",
+      "voll": "Stults-Kolehmainen et al. 2014, Journal of Strength and Conditioning Research – Erholung über 96 Stunden",
+      "url": "https://doi.org/10.1519/JSC.0000000000000335"
+    },
+    "manresa2021": {
+      "kurz": "Manresa-Rocamora et al. 2021",
+      "voll": "Manresa-Rocamora et al. 2021, IJERPH – Training nach Tagesform (HRV) mindestens gleich wirksam wie fester Plan",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8507742/"
+    },
+    "singh2023": {
+      "kurz": "Singh et al. 2023",
+      "voll": "Singh et al. 2023, British Journal of Sports Medicine – Bewegung und psychische Gesundheit",
+      "url": "https://doi.org/10.1136/bjsports-2022-106195"
+    },
+    "tache2007": {
+      "kurz": "Taché & Bonaz 2007",
+      "voll": "Taché & Bonaz 2007, Journal of Clinical Investigation – Stress-Hormon CRF und Darmbewegung",
+      "url": "https://doi.org/10.1172/JCI30085"
+    },
+    "gonzalez2002": {
+      "kurz": "Gonzalez-Bono et al. 2002",
+      "voll": "Gonzalez-Bono et al. 2002, Hormones and Behavior – Glukose verstärkt die Cortisol-Antwort",
+      "url": "https://doi.org/10.1006/hbeh.2002.1766"
+    },
+    "zaenkert2020": {
+      "kurz": "Zänkert et al. 2020",
+      "voll": "Zänkert et al. 2020, Psychoneuroendocrinology – Replikation",
+      "url": "https://doi.org/10.1016/j.psyneuen.2020.104607"
+    },
+    "christ2024": {
+      "kurz": "Christ et al. 2024",
+      "voll": "Christ et al. 2024, Frontiers in Sports and Active Living – Kohlenhydrate im Ausdauersport",
+      "url": "https://doi.org/10.3389/fspor.2024.1264814"
+    },
+    "who": {
+      "kurz": "WHO",
+      "voll": "WHO, Fragen und Antworten zu elektromagnetischen Feldern",
+      "url": "https://www.who.int/news-room/questions-and-answers/item/radiation-electromagnetic-fields"
+    },
+    "karipidis2024": {
+      "kurz": "Karipidis et al. 2024",
+      "voll": "Karipidis et al. 2024, Environment International – Mobilfunk und Krebs",
+      "url": "https://doi.org/10.1016/j.envint.2024.108983"
+    },
+    "bosch2024": {
+      "kurz": "Bosch-Capblanch et al. 2024",
+      "voll": "Bosch-Capblanch et al. 2024, Environment International – Provokationsstudien zu Symptomen",
+      "url": "https://doi.org/10.1016/j.envint.2024.108612"
+    },
+    "rubin2005": {
+      "kurz": "Rubin et al. 2005",
+      "voll": "Rubin et al. 2005, Psychosomatic Medicine – Elektrosensibilität im Doppelblindtest",
+      "url": "https://doi.org/10.1097/01.psy.0000155664.13300.64"
+    },
+    "chang2015": {
+      "kurz": "Chang et al. 2015",
+      "voll": "Chang et al. 2015, PNAS – E-Reader vor dem Schlafen",
+      "url": "https://doi.org/10.1073/pnas.1418490112"
+    },
+    "cajochen2022": {
+      "kurz": "Cajochen et al. 2022",
+      "voll": "Cajochen et al. 2022, Lighting Research & Technology – Bildschirmlicht und Schlaf",
+      "url": "https://doi.org/10.1177/14771535221078765"
+    },
+    "efsa2023": {
+      "kurz": "EFSA 2023",
+      "voll": "EFSA 2023, Neubewertung Bisphenol A",
+      "url": "https://doi.org/10.2903/j.efsa.2023.6857"
+    },
+    "eu2024": {
+      "kurz": "EU-Verordnung 2024/3190",
+      "voll": "EU-Verordnung 2024/3190 – Bisphenol A in Lebensmittelkontaktmaterialien",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/3190/oj/eng"
+    },
+    "scott2021": {
+      "kurz": "Scott et al. 2021",
+      "voll": "Scott et al. 2021, Sleep Medicine Reviews – besserer Schlaf senkt Stress (g = −0,42)",
+      "url": "https://doi.org/10.1016/j.smrv.2021.101556"
+    },
+    "heinrichs2003": {
+      "kurz": "Heinrichs et al. 2003",
+      "voll": "Heinrichs et al. 2003, Biological Psychiatry – soziale Unterstützung senkt die Cortisol-Antwort auf Stress",
+      "url": "https://doi.org/10.1016/S0006-3223(03)00465-7"
+    },
+    "holtlunstad2010": {
+      "kurz": "Holt-Lunstad et al. 2010",
+      "voll": "Holt-Lunstad et al. 2010, PLoS Medicine – soziale Beziehungen und Sterblichkeit (148 Studien)",
+      "url": "https://doi.org/10.1371/journal.pmed.1000316"
+    }
+  }
+}
