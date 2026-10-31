@@ -11,6 +11,12 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
    - Kein Punkt geht ungeprüft ins Video. „Ungeprüft“ gibt es nicht als Kategorie.
    - Was gesucht und nicht untersucht gefunden wurde, sagt der Sprechtext ehrlich, es bekommt aber keinen Stichpunkt.
    - Interessenkonflikte (Herstellerstudien), Tierstudien und Studiengröße nennen.
+   - Behauptungen sammeln, wo die Zuschauer sind: Transkripte populärer YouTube-Videos (Skill youtube-transkript),
+     Videobeschreibungen auf Affiliate-Links, Rabattcodes und eigene Produkte prüfen. Transkripte nie einchecken.
+   - Empfehlungen, die an eigene Produkte oder Affiliate-Links gebunden sind, kommen gar nicht ins Video (auch nicht
+     widerlegt), außer eine unabhängige Quelle oder Studien stützen sie. Mehrere Videos desselben Anbieters zählen nicht
+     als Bestätigung.
+   - YouTuber im Video nicht namentlich nennen („In populären Videos heißt es …“).
 3. **Drehbuch `szenen.json`:** siehe Aufbau unten.
 4. **Bildausschnitte prüfen:** `python3 ../../werkzeug/ausschnitte_pruefen.py szenen.json bogen.png grafik_korrigiert.png`
 5. **Ton und Länge prüfen:** `python3 ../../werkzeug/render.py szenen.json grafik_korrigiert.png video.mp4 --nur-ton`
