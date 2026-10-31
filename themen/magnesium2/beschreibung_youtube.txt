@@ -1,0 +1,35 @@
+Magnesium: Wie viel, wann, mit Vitamin D?
+Ein Faktencheck zu Dosis, Vitamin D, Einnahmezeit und Stress. Jeder Punkt ist gegen Studien geprüft; die Marker zeigen, wie gut er belegt ist.
+
+Kapitel
+0:00 Einleitung
+0:29 Wie viel ist genug?
+1:15 Haben die meisten zu wenig?
+1:46 Magnesium und Vitamin D
+2:37 Morgens oder abends?
+3:09 Richtig einnehmen
+3:46 Hilft es gegen Stress?
+4:24 Fazit
+
+Quellen (Nummern wie im Video)
+[1] Deutsche Gesellschaft für Ernährung: Ausgewählte Fragen und Antworten zu Magnesium. FAQ, Stand 2021 (Datei 2022).: https://www.dge.de/fileadmin/dok/gesunde-ernaehrung/faq/DGE-FAQ-Magnesium-2022.pdf
+[2] Scientific Committee on Food: Opinion on the Tolerable Upper Intake Level of Magnesium. SCF/CS/NUT/UPPLEV/54 Final, 11.10.2001.: https://ec.europa.eu/food/fs/sc/scf/out105_en.pdf
+[3] Bundesinstitut für Risikobewertung: Höchstmengenvorschläge für Magnesium in Lebensmitteln inklusive Nahrungsergänzungsmitteln. 2021.: https://www.bfr.bund.de/cm/343/hoechstmengenvorschlaege-fuer-magnesium-in-lebensmitteln-inklusive-nahrungsergaenzungsmitteln.pdf
+[4] Costello R, Rosanoff A, Nielsen F, West C. Perspective: Call for Re-evaluation of the Tolerable Upper Intake Level for Magnesium Supplementation in Adults. Adv Nutr 2023;14(5):973–982. PMID 37487817.: https://doi.org/10.1016/j.advnut.2023.06.008
+[5] Jou DH et al. Fatal Hypermagnesemia in Patients Taking Magnesium Hydroxide. Electrolyte Blood Press 2023;21(2):66–71.: https://doi.org/10.5049/EBP.2023.21.2.66
+[6] Galan P et al. Dietary magnesium intake in a French adult population. Magnes Res 1997;10(4):321–328. (keine DOI): https://pubmed.ncbi.nlm.nih.gov/9513928/
+[7] Max Rubner-Institut: Nationale Verzehrsstudie II, Ergebnisbericht Teil 2, 2008, Kap. 5.7.4 und Tab. A.49.: https://www.mri.bund.de/fileadmin/MRI/Institute/EV/NVSII_Abschlussbericht_Teil_2.pdf
+[8] Uwitonze AM, Razzaque MS. Role of Magnesium in Vitamin D Activation and Function. J Am Osteopath Assoc 2018;118(3):181–189.: https://doi.org/10.7556/jaoa.2018.037
+[9] Rude RK et al. Low serum concentrations of 1,25-dihydroxyvitamin D in human magnesium deficiency. J Clin Endocrinol Metab 1985;61(5):933–940.: https://doi.org/10.1210/jcem-61-5-933
+[10] Fatemi S, Ryzen E, Flores J, Endres DB, Rude RK. Effect of experimental human magnesium depletion on parathyroid hormone secretion and 1,25-dihydroxyvitamin D metabolism. J Clin Endocrinol Metab 1991;73(5):1067–1072.: https://doi.org/10.1210/jcem-73-5-1067
+[11] Dai Q et al. Magnesium status and supplementation influence vitamin D status and metabolism: results from a randomized trial. Am J Clin Nutr 2018;108(6):1249–1258. PMID 30541089.: https://doi.org/10.1093/ajcn/nqy274
+[12] Cheung MM et al. The effect of combined magnesium and vitamin D supplementation on vitamin D status, systemic inflammation, and blood pressure: A randomized double-blinded controlled trial. Nutrition 2022;99–100:111674.: https://doi.org/10.1016/j.nut.2022.111674
+[13] Schuchardt JP, Hahn A. Intestinal Absorption and Factors Influencing Bioavailability of Magnesium – An Update. Curr Nutr Food Sci 2017;13(4):260–278.: https://doi.org/10.2174/1573401313666170427162740
+[14] Fine KD, Santa Ana CA, Porter JL, Fordtran JS. Intestinal absorption of magnesium from food and supplements. J Clin Invest 1991;88(2):396–402.: https://doi.org/10.1172/JCI115317
+[15] Sabatier M et al. Influence of the consumption pattern of magnesium from magnesium-rich mineral water on magnesium bioavailability. Br J Nutr 2011;106(3):331–334.: https://doi.org/10.1017/S0007114511001139
+[16] Kynast-Gales SA, Massey LK. Effect of caffeine on circadian excretion of urinary calcium and magnesium. J Am Coll Nutr 1994;13(5):467–472.: https://doi.org/10.1080/07315724.1994.10718436
+[17] Massey LK, Sutton RA. Acute caffeine effects on urine composition and calcium kidney stone risk in calcium stone formers. J Urol 2004;172(2):555–558.: https://doi.org/10.1097/01.ju.0000129413.87024.5c
+[18] Pouteau E et al. Superiority of magnesium and vitamin B6 over magnesium alone on severe stress in healthy adults with low magnesemia: A randomized, single-blind clinical trial. PLoS One 2018;13(12):e0208454.: https://doi.org/10.1371/journal.pone.0208454
+[19] Boyle NB, Lawton C, Dye L. The Effects of Magnesium Supplementation on Subjective Anxiety and Stress – A Systematic Review. Nutrients 2017;9(5):429.: https://doi.org/10.3390/nu9050429
+
+Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Kein Ersatz für ärztlichen Rat.
