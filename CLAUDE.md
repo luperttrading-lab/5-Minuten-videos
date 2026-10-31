@@ -30,7 +30,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - Weitere Szenen: `kicker`, `headline`, `sentences` (Text oder `{t: Anzeige, say: Sprechtext}`; Zahlen im
   Sprechtext ausschreiben), `bullets` (`{t, at, ev}` mit `ev` = `stark` | `mittel` | `keine`), `evidence`
   (`level`, `label`), `quellen` (IDs aus dem Verzeichnis), `shots` (`{a: [x0,y0,x1,y1], at, zoom}`, `zoom` =
-  `out` | `none`, Standard: 5 % hinein).
+  `out` | `none`, Standard: 5 % hinein). Eigenes Bild statt Grafik: `bild: "bilder/x.png"` (relativ zum
+  Drehbuch, auch in Kacheln); ohne `a` wird das ganze Bild gezeigt.
 
 ## Gestaltungsregeln
 - Marker beziehen sich auf die geprüfte Aussage („Funkstrahlung als Stressor ✕“), nicht auf unseren Satz dazu.

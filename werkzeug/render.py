@@ -395,6 +395,23 @@ def fit_box(a, b, img_size):
     return (pw, ph), out[0], out[1]
 
 
+BILD_DIR = '.'
+_bilder = {}
+
+
+def quelle(obj, src):
+    """Bildquelle eines Ausschnitts/einer Kachel: eigenes Bild (`bild`, relativ zum Drehbuch) oder die Grafik.
+    Ohne `a` gilt das ganze Bild."""
+    img = src
+    if obj.get('bild'):
+        pfad = os.path.join(BILD_DIR, obj['bild'])
+        if pfad not in _bilder:
+            _bilder[pfad] = Image.open(pfad).convert('RGB')
+        img = _bilder[pfad]
+    a = obj.get('a') or [0, 0, img.size[0], img.size[1]]
+    return img, a
+
+
 def ease(u):
     u = min(max(u, 0.0), 1.0)
     return 0.5 * u + 0.5 * (0.5 - 0.5 * math.cos(math.pi * u))
@@ -414,10 +431,11 @@ class Scene:
         self.shots = []
         for j, sh in enumerate(sc['shots']):
             t0 = sc['v0'] if j == 0 else st[sh['at']][0] - 0.35
-            size, a, b = fit_box(sh['a'], sh['a'] if sh.get('zoom') == 'none' else sh.get('b'), src.size)
+            img, a0 = quelle(sh, src)
+            size, a, b = fit_box(a0, a0 if sh.get('zoom') == 'none' else sh.get('b'), img.size)
             if sh.get('zoom') == 'out':
                 a, b = b, a
-            self.shots.append({'t0': t0, 'size': size, 'a': a, 'b': b})
+            self.shots.append({'t0': t0, 'size': size, 'a': a, 'b': b, 'img': img})
         for j, sh in enumerate(self.shots):
             sh['t1'] = self.shots[j + 1]['t0'] if j + 1 < len(self.shots) else sc['v1']
 
@@ -432,7 +450,7 @@ class Scene:
         sh = self.shots[j]
         u = ease((t - sh['t0']) / (sh['t1'] - sh['t0'] + XF_SHOT))
         box = tuple(a + (b - a) * u for a, b in zip(sh['a'], sh['b']))
-        pic = self.src.resize(sh['size'], Image.BICUBIC, box=box)
+        pic = sh['img'].resize(sh['size'], Image.BICUBIC, box=box)
         if sh['size'][0] / (box[2] - box[0]) > 1.8:
             pic = pic.filter(ImageFilter.UnsharpMask(radius=2, percent=55, threshold=2))
         img = panel.copy()
@@ -487,11 +505,11 @@ class AgendaScene:
             d.ellipse([cx + 18, cy + self.TH + 8, cx + 58, cy + self.TH + 48], fill=ACCENT)
             d.text((cx + 38, cy + self.TH + 28), str(i + 1), font=font(INTER.format('Bold'), 24), fill='white', anchor='mm')
             d.text((cx + 72, cy + self.TH + 28), k['t'], font=font(INTER.format('SemiBold'), 30), fill=INK, anchor='lm')
-            box = k['a']
+            kimg, box = quelle(k, src)
             bw, bh = box[2] - box[0], box[3] - box[1]
             sc_ = min((self.TW - 40) / bw, (self.TH - 30) / bh)
             size = (int(bw * sc_), int(bh * sc_))
-            self.cards.append({'x': cx, 'y': cy, 'box': box, 'size': size})
+            self.cards.append({'x': cx, 'y': cy, 'box': box, 'size': size, 'img': kimg})
         self.legend = Image.new('RGBA', (W, 60), (0, 0, 0, 0))
         dl = ImageDraw.Draw(self.legend)
         fl = font(INTER.format('Medium'), 28)
@@ -518,7 +536,7 @@ class AgendaScene:
             x0, y0, x1, y1 = c['box']
             z = 0.06 * u                                     # langsames Hineinzoomen
             dx, dy = (x1 - x0) * z / 2, (y1 - y0) * z / 2
-            pic = self.src.resize(c['size'], Image.BICUBIC, box=(x0 + dx, y0 + dy, x1 - dx, y1 - dy))
+            pic = c['img'].resize(c['size'], Image.BICUBIC, box=(x0 + dx, y0 + dy, x1 - dx, y1 - dy))
             if active is not None and i != active:
                 pic = Image.blend(pic, Image.new('RGB', pic.size, (255, 250, 243)), 0.55)
             px = c['x'] + (self.TW - c['size'][0]) // 2
@@ -614,6 +632,8 @@ def main():
     args = ap.parse_args()
     args.cache = args.cache or os.path.join(os.path.dirname(os.path.abspath(args.szenen)), 'tts_cache')
     cfg = json.load(open(args.szenen, encoding='utf-8'))
+    global BILD_DIR
+    BILD_DIR = os.path.dirname(os.path.abspath(args.szenen))
     number_sources(cfg)
     total, pcm = build_audio(cfg, args)
     stem = os.path.splitext(args.ausgabe)[0]
