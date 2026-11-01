@@ -19,266 +19,270 @@ Jede Aussage haben wir gegen die Studienlage geprüft.
 Grün heißt belegt, gelb teilweise, rot nicht haltbar.
 
 6
-00:00:30,235 --> 00:00:37,895
+00:00:30,235 --> 00:00:37,785
 Die DGE schätzt den Bedarf auf 300 mg am Tag für Frauen und 350 mg für Männer,
 
 7
-00:00:37,745 --> 00:00:41,265
+00:00:37,635 --> 00:00:41,105
 aus allem, was man isst und trinkt.
 
 8
-00:00:41,115 --> 00:00:44,866
+00:00:40,955 --> 00:00:44,585
 Oft heißt es, das sei nur der Mindestbedarf,
 
 9
-00:00:44,716 --> 00:00:48,385
+00:00:44,435 --> 00:00:47,985
 man solle 300 bis 600 mg zusätzlich nehmen.
 
 10
-00:00:48,235 --> 00:00:51,838
+00:00:47,835 --> 00:00:51,198
 Dafür gibt es keinen Beleg: Kein Versuch zeigt,
 
 11
-00:00:51,688 --> 00:00:55,585
-dass gesunde Menschen von so viel mehr profitieren.
+00:00:51,048 --> 00:00:55,025
+dass gesunde Menschen von der höheren Menge profitieren.
 
 12
-00:00:55,435 --> 00:01:04,065
+00:00:54,875 --> 00:01:03,425
 Die Grenze von 250 mg aus Präparaten hat einen harmlosen Grund: Darüber bekommen manche Menschen Durchfall.
 
 13
-00:01:03,915 --> 00:01:08,192
+00:01:03,275 --> 00:01:07,424
 Gefährlich wird Magnesium vor allem, wenn die Nieren schwach sind,
 
 14
-00:01:08,042 --> 00:01:10,505
+00:01:07,274 --> 00:01:09,665
 denn sie scheiden den Überschuss aus.
 
 15
-00:01:10,355 --> 00:01:15,923
+00:01:09,515 --> 00:01:15,101
 400 mg schaden Gesunden also kaum, nützen aber nachweislich nicht mehr.
 
 16
-00:01:16,523 --> 00:01:19,521
+00:01:15,701 --> 00:01:18,699
 Drei von vier Menschen hätten einen Mangel,
 
 17
-00:01:19,371 --> 00:01:22,833
+00:01:18,549 --> 00:01:22,011
 heißt es, gestützt auf eine Studie aus Frankreich.
 
 18
-00:01:22,683 --> 00:01:26,876
+00:01:21,861 --> 00:01:26,054
 Gemessen wurde dort aber nur, was die Menschen gegessen haben,
 
 19
-00:01:26,726 --> 00:01:28,833
+00:01:25,904 --> 00:01:28,011
 nicht das Magnesium im Körper.
 
 20
-00:01:28,683 --> 00:01:32,894
+00:01:27,861 --> 00:01:32,072
 In Deutschland isst etwa jeder Vierte weniger als empfohlen,
 
 21
-00:01:32,744 --> 00:01:35,873
+00:01:31,922 --> 00:01:35,051
 bei Mädchen im Teenageralter gut die Hälfte.
 
 22
-00:01:35,723 --> 00:01:40,273
+00:01:34,901 --> 00:01:39,451
 Weniger als empfohlen zu essen, ist aber noch kein nachgewiesener Mangel.
 
 23
-00:01:40,123 --> 00:01:43,006
+00:01:39,301 --> 00:01:42,184
 Wer regelmäßig Vollkorn, Hülsenfrüchte,
 
 24
-00:01:42,856 --> 00:01:46,230
+00:01:42,034 --> 00:01:45,409
 Nüsse und Gemüse isst, ist meist gut versorgt.
 
 25
-00:01:46,830 --> 00:01:51,731
+00:01:46,009 --> 00:01:50,967
 Ein wichtiger Zusammenhang wird oft übersehen: Magnesium hilft,
 
 26
-00:01:51,581 --> 00:01:53,540
+00:01:50,817 --> 00:01:52,799
 Vitamin D zu aktivieren.
 
 27
-00:01:53,390 --> 00:02:01,540
+00:01:52,649 --> 00:02:00,684
 Vitamin D aus Sonne oder Tabletten ist zunächst eine Vorstufe; Leber und Nieren wandeln es in die wirksame Form um,
 
 28
-00:02:01,390 --> 00:02:04,740
+00:02:00,534 --> 00:02:03,839
 und die beteiligten Enzyme brauchen Magnesium.
 
 29
-00:02:04,590 --> 00:02:10,268
-Am deutlichsten zeigt sich das bei echtem Magnesiummangel: Dann sinkt die aktive Form,
+00:02:03,689 --> 00:02:11,046
+Am deutlichsten zeigt sich das bei echtem Magnesiummangel: Dann bildet der Körper weniger von der wirksamen Form,
 
 30
-00:02:10,118 --> 00:02:12,260
-und Vitamin D wirkt schlechter.
+00:02:10,896 --> 00:02:13,279
+selbst wenn genug Vitamin D da ist.
 
 31
-00:02:12,110 --> 00:02:19,779
-In einer kontrollierten Studie mit 180 Erwachsenen wirkte Magnesium wie ein Regler: Wer wenig Vitamin D hatte,
+00:02:13,129 --> 00:02:25,389
+In einer Studie bekamen 180 Erwachsene Magnesium oder ein Scheinmittel, aber kein zusätzliches Vitamin D. Trotzdem änderte sich ihr Vitamin-D-Spiegel: Wer wenig hatte,
 
 32
-00:02:19,629 --> 00:02:23,060
-bekam etwas mehr, wer viel hatte, etwas weniger.
+00:02:25,239 --> 00:02:31,119
+kam etwas höher, wer viel hatte, etwas tiefer. Magnesium wirkte wie ein Regler.
 
 33
-00:02:22,910 --> 00:02:25,946
+00:02:30,969 --> 00:02:34,004
 Dass Vitamin D ohne Magnesium gar nicht wirkt,
 
 34
-00:02:25,796 --> 00:02:28,580
+00:02:33,854 --> 00:02:36,639
 ist für gesunde Menschen aber übertrieben.
 
 35
-00:02:28,430 --> 00:02:29,885
+00:02:36,489 --> 00:02:37,991
 Wer Vitamin D nimmt,
 
 36
-00:02:29,735 --> 00:02:37,389
+00:02:37,841 --> 00:02:45,768
 achtet deshalb auf magnesiumreiche Ernährung; ein Kombipräparat ist nicht nötig. Dazu kommt bald ein eigenes Video.
 
 37
-00:02:37,989 --> 00:02:43,019
+00:02:46,368 --> 00:02:51,238
 Die einen sagen: abends, das entspannt und hilft beim Schlafen.
 
 38
-00:02:42,869 --> 00:02:48,459
+00:02:51,088 --> 00:02:56,598
 Die anderen: morgens, das gibt Energie und schützt vor dem Stress des Tages.
 
 39
-00:02:48,309 --> 00:02:53,465
+00:02:56,448 --> 00:03:01,500
 Verglichen hat das noch niemand: Wir haben keine einzige Studie gefunden,
 
 40
-00:02:53,315 --> 00:02:56,139
+00:03:01,350 --> 00:03:04,118
 die morgens und abends gegenüberstellt.
 
 41
-00:02:55,989 --> 00:02:58,779
+00:03:03,968 --> 00:03:06,678
 Beide Ratschläge sind also Vermutungen.
 
 42
-00:02:58,629 --> 00:02:59,821
-Belegt ist nur,
+00:03:06,528 --> 00:03:13,318
+Belegt ist nur: Zusammen mit dem Essen wird Magnesium etwas besser aufgenommen und besser vertragen.
 
 43
-00:02:59,671 --> 00:03:05,659
-dass Magnesium zu einer Mahlzeit etwas besser aufgenommen und besser vertragen wird.
-
-44
-00:03:05,509 --> 00:03:09,581
+00:03:13,168 --> 00:03:17,257
 Nimm es also dann, wenn du es nicht vergisst, am besten zum Essen.
 
-45
-00:03:10,181 --> 00:03:16,043
+44
+00:03:17,857 --> 00:03:23,719
 Gut belegt ist dagegen: Große Mengen auf einmal nimmt der Darm schlechter auf.
 
-46
-00:03:15,893 --> 00:03:22,609
+45
+00:03:23,569 --> 00:03:30,285
 In einem klassischen Versuch sank der aufgenommene Anteil von etwa zwei Dritteln auf ein Zehntel,
 
-47
-00:03:22,459 --> 00:03:24,843
+46
+00:03:30,135 --> 00:03:32,519
 je mehr Magnesium auf einmal kam.
 
-48
-00:03:24,693 --> 00:03:27,270
+47
+00:03:32,369 --> 00:03:34,945
 Wer mehr als eine kleine Menge nimmt,
 
-49
-00:03:27,120 --> 00:03:32,123
+48
+00:03:34,795 --> 00:03:39,799
 teilt sie deshalb besser auf zwei Portionen auf; das schont auch den Darm.
 
-50
-00:03:31,973 --> 00:03:38,203
+49
+00:03:39,649 --> 00:03:45,879
 Und der Kaffee? Oft heißt es, man solle eine halbe bis eine Stunde Abstand halten.
 
-51
-00:03:38,053 --> 00:03:44,702
+50
+00:03:45,729 --> 00:03:52,378
 Eine Studie dazu gibt es nicht, und der Verlust durch Kaffee ist winzig: etwa so viel Magnesium,
 
-52
-00:03:44,552 --> 00:03:46,869
+51
+00:03:52,228 --> 00:03:54,544
 wie in ein, zwei Mandeln steckt.
 
+52
+00:03:55,144 --> 00:03:59,598
+Oft heißt es, Magnesium mache gelassener: Eine Studie zeige,
+
 53
-00:03:47,469 --> 00:03:49,606
-Oft wird eine Studie zitiert,
+00:03:59,448 --> 00:04:03,614
+dass sich das Stressgefühl in acht Wochen fast halbiert.
 
 54
-00:03:49,456 --> 00:03:53,923
-nach der Magnesium den Stress in acht Wochen fast halbiert hat.
-
-55
-00:03:53,773 --> 00:03:58,723
+00:04:03,464 --> 00:04:08,334
 Ein genauer Blick zeigt: Es gab keine Vergleichsgruppe ohne Magnesium.
 
-56
-00:03:58,573 --> 00:04:03,785
+55
+00:04:08,184 --> 00:04:13,451
 Beide Gruppen bekamen Magnesium und fühlten sich besser; das kann auch an der Zeit,
 
-57
-00:04:03,635 --> 00:04:06,163
+56
+00:04:13,301 --> 00:04:15,854
 an der Erwartung oder am Zufall liegen.
 
-58
-00:04:06,013 --> 00:04:10,243
+57
+00:04:15,704 --> 00:04:19,854
 Finanziert hat die Studie ein Hersteller von Magnesiumpräparaten.
 
-59
-00:04:10,093 --> 00:04:12,564
+58
+00:04:19,704 --> 00:04:22,047
 Eine Übersichtsarbeit fand Hinweise,
 
-60
-00:04:12,414 --> 00:04:18,883
+59
+00:04:21,897 --> 00:04:28,014
 dass Magnesium bei leichter Ängstlichkeit etwas helfen könnte; die Studien dazu sind aber schwach.
 
+60
+00:04:27,864 --> 00:04:32,837
+Umgekehrt heißt es oft, Stress verbrauche Magnesium. Das ist plausibel,
+
 61
-00:04:18,733 --> 00:04:21,414
-Gegen Stress helfen vor allem Schlaf,
+00:04:32,687 --> 00:04:35,214
+beim Menschen aber kaum untersucht.
 
 62
-00:04:21,264 --> 00:04:24,972
-Pausen und Bewegung; dazu gibt es ein eigenes Video.
+00:04:35,064 --> 00:04:37,704
+Gegen Stress helfen vor allem Schlaf,
 
 63
-00:04:25,572 --> 00:04:27,322
-Was bleibt also?
+00:04:37,554 --> 00:04:41,203
+Pausen und Bewegung; dazu gibt es ein eigenes Video.
 
 64
-00:04:27,172 --> 00:04:31,443
-Erstens: Ernährung zuerst. Vollkorn, Hülsenfrüchte,
+00:04:41,803 --> 00:04:43,553
+Was bleibt also?
 
 65
-00:04:31,293 --> 00:04:35,322
-Nüsse und Mineralwasser decken den Bedarf meist.
+00:04:43,403 --> 00:04:47,674
+Erstens: Ernährung zuerst. Vollkorn, Hülsenfrüchte,
 
 66
-00:04:35,172 --> 00:04:39,148
-Zweitens: Wer ergänzt, kommt mit 250 mg aus,
+00:04:47,524 --> 00:04:51,553
+Nüsse und Mineralwasser decken den Bedarf meist.
 
 67
-00:04:38,998 --> 00:04:43,322
-größere Mengen aufgeteilt, die Uhrzeit ist egal.
+00:04:51,403 --> 00:04:55,379
+Zweitens: Wer ergänzt, kommt mit 250 mg aus,
 
 68
-00:04:43,172 --> 00:04:48,197
-Drittens: Magnesium und Vitamin D hängen zusammen; wer Vitamin D nimmt,
+00:04:55,229 --> 00:04:59,553
+größere Mengen aufgeteilt, die Uhrzeit ist egal.
 
 69
-00:04:48,047 --> 00:04:51,082
-behält seine Magnesiumversorgung im Blick.
+00:04:59,403 --> 00:05:04,429
+Drittens: Magnesium und Vitamin D hängen zusammen; wer Vitamin D nimmt,
 
 70
-00:04:50,932 --> 00:04:55,562
-Wer schwache Nieren hat oder Medikamente nimmt, spricht vorher mit dem Arzt.
+00:05:04,279 --> 00:05:07,313
+behält seine Magnesiumversorgung im Blick.
 
 71
-00:04:55,412 --> 00:04:57,354
+00:05:07,163 --> 00:05:11,793
+Wer schwache Nieren hat oder Medikamente nimmt, spricht vorher mit dem Arzt.
+
+72
+00:05:11,643 --> 00:05:13,585
 Die Quellen stehen in der Beschreibung.
 

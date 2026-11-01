@@ -102,6 +102,11 @@
    "kurz": "Max Rubner-Institut 2008",
    "voll": "Max Rubner-Institut: Nationale Verzehrsstudie II, Ergebnisbericht Teil 2, 2008, Kap. 5.7.4 und Tab. A.49.",
    "url": "https://www.mri.bund.de/fileadmin/MRI/Institute/EV/NVSII_Abschlussbericht_Teil_2.pdf"
+  },
+  "pickering2020": {
+   "kurz": "Pickering et al. 2020",
+   "voll": "Pickering et al. 2020, Nutrients – Magnesium und Stress (Hypothese)",
+   "url": "https://doi.org/10.3390/nu12123672"
   }
  },
  "scenes": [
@@ -166,7 +171,7 @@
      "t": "Oft heißt es, das sei nur der Mindestbedarf, man solle 300 bis 600 mg zusätzlich nehmen.",
      "say": "Oft heißt es, das sei nur der Mindestbedarf, man solle dreihundert bis sechshundert Milligramm zusätzlich nehmen."
     },
-    "Dafür gibt es keinen Beleg: Kein Versuch zeigt, dass gesunde Menschen von so viel mehr profitieren.",
+    "Dafür gibt es keinen Beleg: Kein Versuch zeigt, dass gesunde Menschen von der höheren Menge profitieren.",
     {
      "t": "Die Grenze von 250 mg aus Präparaten hat einen harmlosen Grund: Darüber bekommen manche Menschen Durchfall.",
      "say": "Die Grenze von zweihundertfünfzig Milligramm aus Präparaten hat einen harmlosen Grund: Darüber bekommen manche Menschen Durchfall."
@@ -309,10 +314,10 @@
    "sentences": [
     "Ein wichtiger Zusammenhang wird oft übersehen: Magnesium hilft, Vitamin D zu aktivieren.",
     "Vitamin D aus Sonne oder Tabletten ist zunächst eine Vorstufe; Leber und Nieren wandeln es in die wirksame Form um, und die beteiligten Enzyme brauchen Magnesium.",
-    "Am deutlichsten zeigt sich das bei echtem Magnesiummangel: Dann sinkt die aktive Form, und Vitamin D wirkt schlechter.",
+    "Am deutlichsten zeigt sich das bei echtem Magnesiummangel: Dann bildet der Körper weniger von der wirksamen Form, selbst wenn genug Vitamin D da ist.",
     {
-     "t": "In einer kontrollierten Studie mit 180 Erwachsenen wirkte Magnesium wie ein Regler: Wer wenig Vitamin D hatte, bekam etwas mehr, wer viel hatte, etwas weniger.",
-     "say": "In einer kontrollierten Studie mit hundertachtzig Erwachsenen wirkte Magnesium wie ein Regler: Wer wenig Vitamin D hatte, bekam etwas mehr, wer viel hatte, etwas weniger."
+     "t": "In einer Studie bekamen 180 Erwachsene Magnesium oder ein Scheinmittel, aber kein zusätzliches Vitamin D. Trotzdem änderte sich ihr Vitamin-D-Spiegel: Wer wenig hatte, kam etwas höher, wer viel hatte, etwas tiefer. Magnesium wirkte wie ein Regler.",
+     "say": "In einer Studie bekamen hundertachtzig Erwachsene Magnesium oder ein Scheinmittel, aber kein zusätzliches Vitamin D. Trotzdem änderte sich ihr Vitamin-D-Spiegel: Wer wenig hatte, kam etwas höher, wer viel hatte, etwas tiefer. Magnesium wirkte wie ein Regler."
     },
     "Dass Vitamin D ohne Magnesium gar nicht wirkt, ist für gesunde Menschen aber übertrieben.",
     "Wer Vitamin D nimmt, achtet deshalb auf magnesiumreiche Ernährung; ein Kombipräparat ist nicht nötig. Dazu kommt bald ein eigenes Video."
@@ -403,7 +408,7 @@
     "Die anderen: morgens, das gibt Energie und schützt vor dem Stress des Tages.",
     "Verglichen hat das noch niemand: Wir haben keine einzige Studie gefunden, die morgens und abends gegenüberstellt.",
     "Beide Ratschläge sind also Vermutungen.",
-    "Belegt ist nur, dass Magnesium zu einer Mahlzeit etwas besser aufgenommen und besser vertragen wird.",
+    "Belegt ist nur: Zusammen mit dem Essen wird Magnesium etwas besser aufgenommen und besser vertragen.",
     "Nimm es also dann, wenn du es nicht vergisst, am besten zum Essen."
    ],
    "bullets": [
@@ -512,24 +517,30 @@
    "id": "m6",
    "kapitel": "Hilft es gegen Stress?",
    "kicker": "Wirkung",
-   "headline": "Senkt Magnesium Stress?",
+   "headline": "Hilft Magnesium gegen Stress?",
    "sentences": [
-    "Oft wird eine Studie zitiert, nach der Magnesium den Stress in acht Wochen fast halbiert hat.",
+    "Oft heißt es, Magnesium mache gelassener: Eine Studie zeige, dass sich das Stressgefühl in acht Wochen fast halbiert.",
     "Ein genauer Blick zeigt: Es gab keine Vergleichsgruppe ohne Magnesium.",
     "Beide Gruppen bekamen Magnesium und fühlten sich besser; das kann auch an der Zeit, an der Erwartung oder am Zufall liegen.",
     "Finanziert hat die Studie ein Hersteller von Magnesiumpräparaten.",
     "Eine Übersichtsarbeit fand Hinweise, dass Magnesium bei leichter Ängstlichkeit etwas helfen könnte; die Studien dazu sind aber schwach.",
+    "Umgekehrt heißt es oft, Stress verbrauche Magnesium. Das ist plausibel, beim Menschen aber kaum untersucht.",
     "Gegen Stress helfen vor allem Schlaf, Pausen und Bewegung; dazu gibt es ein eigenes Video."
    ],
    "bullets": [
     {
-     "t": "Stress in acht Wochen fast halbiert",
+     "t": "Stressgefühl in acht Wochen halbiert",
      "at": 0,
      "ev": "keine"
     },
     {
      "t": "Bei leichter Ängstlichkeit vielleicht etwas",
      "at": 4,
+     "ev": "mittel"
+    },
+    {
+     "t": "Stress verbraucht Magnesium",
+     "at": 5,
      "ev": "mittel"
     }
    ],
@@ -539,7 +550,8 @@
    },
    "quellen": [
     "pouteau2018",
-    "boyle2017"
+    "boyle2017",
+    "pickering2020"
    ],
    "shots": [
     {
@@ -554,7 +566,7 @@
     {
      "bild": "bilder/m6b.png",
      "zoom": 0.18,
-     "at": 5
+     "at": 6
     }
    ],
    "bilder": [

@@ -5,11 +5,11 @@ Kapitel
 0:00 Einleitung
 0:29 Wie viel ist genug?
 1:15 Haben die meisten zu wenig?
-1:46 Magnesium und Vitamin D
-2:37 Morgens oder abends?
-3:09 Richtig einnehmen
-3:46 Hilft es gegen Stress?
-4:24 Fazit
+1:45 Magnesium und Vitamin D
+2:45 Morgens oder abends?
+3:17 Richtig einnehmen
+3:54 Hilft es gegen Stress?
+4:41 Fazit
 
 Quellen (Nummern wie im Video)
 [1] Deutsche Gesellschaft für Ernährung: Ausgewählte Fragen und Antworten zu Magnesium. FAQ, Stand 2021 (Datei 2022).: https://www.dge.de/fileadmin/dok/gesunde-ernaehrung/faq/DGE-FAQ-Magnesium-2022.pdf
@@ -31,5 +31,6 @@ Quellen (Nummern wie im Video)
 [17] Massey LK, Sutton RA. Acute caffeine effects on urine composition and calcium kidney stone risk in calcium stone formers. J Urol 2004;172(2):555–558.: https://doi.org/10.1097/01.ju.0000129413.87024.5c
 [18] Pouteau E et al. Superiority of magnesium and vitamin B6 over magnesium alone on severe stress in healthy adults with low magnesemia: A randomized, single-blind clinical trial. PLoS One 2018;13(12):e0208454.: https://doi.org/10.1371/journal.pone.0208454
 [19] Boyle NB, Lawton C, Dye L. The Effects of Magnesium Supplementation on Subjective Anxiety and Stress – A Systematic Review. Nutrients 2017;9(5):429.: https://doi.org/10.3390/nu9050429
+[20] Pickering et al. 2020, Nutrients – Magnesium und Stress (Hypothese): https://doi.org/10.3390/nu12123672
 
 Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Kein Ersatz für ärztlichen Rat.

@@ -87,16 +87,18 @@
   .schwebe { position: absolute; left: 0; right: 0; bottom: 100%; display: grid; gap: 6px; pointer-events: none;
     padding: 0 max(16px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px)); }
   .schwebe > * { max-width: 560px; width: 100%; margin: 0 auto; pointer-events: auto; }
-  .notiz { display: grid; gap: 6px; min-width: 0; padding: 10px 12px; border: 1px solid var(--linie); border-radius: 12px; background: var(--tafel-hoch); box-shadow: 0 -6px 18px rgba(0, 0, 0, .45); }
+  .notiz { display: grid; gap: 8px; min-width: 0; padding: 12px 14px; border: 2px solid var(--bronze); border-radius: 14px; background: #f6efe3; color: #1d2321; box-shadow: 0 -6px 24px rgba(0, 0, 0, .55); }
   .notiz[hidden] { display: none; }
-  .notiz-kopf { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 13px; color: var(--grau); min-width: 0; }
+  .notiz-kopf { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 13px; color: #5d6662; min-width: 0; }
   .notiz-kopf span { flex: 0 0 auto; }
-  .notiz-kopf b { flex: 1 1 auto; color: var(--tinte); font: 400 15px/1.3 var(--text); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .notiz-kopf b { flex: 1 1 auto; color: #1d2321; font: 400 15px/1.3 var(--text); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .notiz-zeile { display: flex; gap: 8px; align-items: center; min-width: 0; }
-  .notiz input { flex: 1 1 auto; min-width: 0; font: 16px/1.3 var(--ui); color: var(--tinte); background: var(--stein); border: 1px solid var(--linie); border-radius: 8px; padding: 8px 10px; }
+  .notiz input { flex: 1 1 auto; min-width: 0; font: 17px/1.3 var(--ui); color: #1d2321; background: #fff; border: 2px solid #b9a789; border-radius: 10px; padding: 11px 12px; }
+  .notiz input::placeholder { color: #8a8f8c; }
+  .notiz input:focus { outline: none; border-color: var(--bronze); }
   .leiste .notiz .senden { flex: 0 0 auto; background: var(--bronze); color: var(--stein); border-radius: 8px; padding: 9px 12px; }
-  .leiste .notiz .senden:disabled { background: var(--linie); color: var(--grau); cursor: default; }
-  .leiste .notiz .zu { flex: 0 0 auto; padding: 4px 6px; color: var(--grau); font-size: 16px; border-radius: 8px; }
+  .leiste .notiz .senden:disabled { background: #d9d2c5; color: #8a8f8c; cursor: default; }
+  .leiste .notiz .zu { flex: 0 0 auto; padding: 4px 6px; color: #5d6662; font-size: 16px; border-radius: 8px; }
   .leiste .notiz .zu.sicher { background: var(--rot-voll); color: #fff; font-size: 14px; padding: 6px 10px; }
   .antwort { margin: 0; font-size: 14px; color: var(--gruen-voll); }
   .meldung { font-size: 13px; padding: 6px 10px; border-radius: 8px; background: #23332a; color: #bfe8cb; box-shadow: 0 -4px 12px rgba(0, 0, 0, .4); }
@@ -133,7 +135,7 @@
       <div class="notiz-kopf"><b id="notiz-wo"></b><span id="notiz-stand"></span><button type="button" class="zu" id="notiz-weg" aria-label="Markierung löschen">✕</button></div>
       <p class="antwort" id="notiz-antwort" hidden></p>
       <div class="notiz-zeile">
-        <input type="text" id="notiz-text" placeholder="Was ist dir aufgefallen?" aria-label="Notiz zur markierten Stelle" enterkeyhint="send">
+        <input type="text" id="notiz-text" placeholder="Was ist dir aufgefallen? (z. B. Betonung auf …)" aria-label="Notiz zur markierten Stelle" enterkeyhint="send">
         <button type="button" class="senden" id="notiz-ok" disabled>Abschicken</button>
       </div>
     </div>
@@ -205,12 +207,20 @@
   });
   // Tippen auf ein Wort: ab diesem Wort abspielen; im Markier-Modus markieren bzw. die Stelle öffnen (nie still löschen)
   Object.keys(spans).forEach(function (k) {
-    spans[k].forEach(function (s, i) { s.addEventListener("click", function () {
+    spans[k].forEach(function (s, i) {
+      var halt = null, lang = false;
+      s.addEventListener("pointerdown", function () { lang = false; clearTimeout(halt);
+        halt = setTimeout(function () { if (!db || gewischt) return; lang = true; if (!markieren) stift.click(); sperre = Date.now() + 350; anker = s; tippe(k, i); }, 550); });
+      ["pointerup", "pointerleave", "pointercancel"].forEach(function (ev) { s.addEventListener(ev, function () { clearTimeout(halt); }); });
+      s.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+      s.addEventListener("click", function () {
+      if (lang) { lang = false; return; }   // langer Druck hat schon markiert
       if (!markieren) { starte(k, Math.max(0, S[k].w[i].t - 0.05)); return; }
       if (gewischt || Date.now() < sperre) return;   // nach Wischen oder direkt nach einem Tipp nicht markieren
       sperre = Date.now() + 350; anker = s; tippe(k, i);
     }); });
   });
+  document.head.insertAdjacentHTML("beforeend", "<style>.w { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }</style>");
   // Ein Tipp zählt nur, wenn der Finger nicht gewischt hat (Bewegung oder Scrollen zwischen Berühren und Loslassen)
   var sperre = 0, gewischt = false, anker = null, beruehrt = null;
   document.addEventListener("touchstart", function (e) { var t = e.touches[0]; beruehrt = { x: t.clientX, y: t.clientY, s: scrollY }; gewischt = false; }, { passive: true });
@@ -338,7 +348,7 @@
       notizText.value = entwurf[st.key] != null ? entwurf[st.key] : vor; notizText.dataset.vorlage = vor;
       notizText.placeholder = st.stand === "korrigiert" ? "Noch etwas?" : "Was ist dir aufgefallen?";
     }
-    notizOk.textContent = st.stand === "abgeschickt" ? "Ändern" : "Abschicken";
+    notizOk.textContent = st.stand === "abgeschickt" ? "Ändern" : (anClaude ? "An Claude" : "Abschicken");
     wegSicher = false; notizWeg.textContent = "✕"; notizWeg.classList.remove("sicher");
     pruefeOk(); notiz.hidden = false;
   }
@@ -376,15 +386,29 @@
   function nachher(id, f) { var p = (kette[id] || Promise.resolve()).catch(function () {}).then(f); kette[id] = p; return p; }
   function schreibe(ops, gut, schlecht) { return Promise.all(ops.map(function (o) { return nachher(o[0], o[1]); })).then(gut, schlecht); }
   notizText.addEventListener("input", pruefeOk);
+  var kom = null, anClaude = false;
+  if (window.claude && claude.use) claude.use("comments").then(function (c) {
+    if (!c || !c.canSendToClaude) return; kom = c;
+    c.canSendToClaude().then(function (v) { anClaude = v === "available"; if (anClaude) notizOk.textContent = "An Claude"; }, function () {});
+  }).catch(function () {});
+  function sendeClaude(st, text) {
+    if (!kom || !anClaude) return;
+    var el = (st.docs[0] && document.querySelector('[data-text="' + (marken[st.docs[0].id] || {}).tafel + '"]')) || document.querySelector("main");
+    var d0 = marken[st.docs[0].id] || {}, woerter = st.docs.map(function (x) { return (marken[x.id] || {}).wort; }).join(" ");
+    var t = "Hörprobe " + KAP + ", Szene " + (d0.tafel || "?") + " bei " + (d0.zeit || 0) + " s\nSatz: " + (d0.satz || "") + "\nMarkiert: " + woerter + "\nNotiz: " + text;
+    kom.anchorFor(el).then(function (a) { return kom.sendToClaude({ anchor: a, text: t.slice(0, 3900) }); })
+      .then(function () { melde("An Claude geschickt ✓"); }, function (e) { if (e && e.code === "consent_required") melde("Gespeichert. Zum Senden an Claude bitte die Freigabe erlauben.", true); });
+  }
   notizOk.addEventListener("click", function () {
     var st = offen && stelleZu(offen), text = notizText.value.trim();
     if (!st || !text || !db) return;
+    sendeClaude(st, text);
     var alt = {}, jetzt = new Date().toISOString();
     st.docs.forEach(function (x) { alt[x.id] = marken[x.id]; marken[x.id] = Object.assign({}, marken[x.id], { notiz: text, status: "abgeschickt", stand: jetzt }); });
     delete entwurf[st.key]; notizText.dataset.vorlage = text; notizOk.disabled = true; notizOk.textContent = "…"; malen();
     // ganzer Datensatz mit set (nicht update): klappt auch, wenn das Markieren gerade erst unterwegs ist
     schreibe(st.docs.map(function (x) { var neu = marken[x.id]; return [x.id, function () { return db.collection("markierungen").doc(x.id).set(neu); }]; }),
-      function () { melde("Abgeschickt ✓"); schliesse(); notizText.blur(); },
+      function () { notizOk.textContent = anClaude ? "An Claude" : "Abschicken"; if (!anClaude) melde("Abgeschickt ✓"); schliesse(); notizText.blur(); },
       function () { Object.keys(alt).forEach(function (id) { if (alt[id]) marken[id] = alt[id]; }); entwurf[st.key] = text; malen(); notizText.value = text; pruefeOk();
         melde("Nicht abgeschickt – bitte nochmal.", true); });
   });

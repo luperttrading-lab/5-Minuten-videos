@@ -23,7 +23,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 5. **Ton und Länge prüfen:** `python3 ../../werkzeug/render.py szenen.json grafik_korrigiert.png video.mp4 --nur-ton`
 5b. **Betonung prüfen:** `python3 ../../werkzeug/betonung.py szenen.json` (Vorfilter, Verfahren aus dem Seneca-Hörspiel),
    dann Hörprobe zum Mitlesen und Markieren: `python3 ../../werkzeug/hoerprobe.py szenen.json hoerprobe` (nach dem Rendern,
-   braucht video.wav), als Artifact mit `publish_files` veröffentlichen, danach `declare_capabilities` mit `{"db": {}}`.
+   braucht video.wav), als Artifact mit `publish_files` veröffentlichen, danach `declare_capabilities` mit
+   `{"db": {}, "comments": {}}`. „An Claude“ auf der Seite schickt die Notiz als Kommentar und weckt die Sitzung.
+   Langer Druck auf ein Wort markiert direkt.
    Markierungen des Nutzers mit `db_list` (Sammlung `markierungen`) lesen, betroffene Sätze einzeln in 2–3 Fassungen neu.
 6. **Rendern:** dasselbe ohne `--nur-ton` (≈ 4–5 min Rechenzeit), danach Kontrollbilder mit `--bild <Sekunde>`.
 7. **Beschreibung und Teilen-Seite:** `python3 ../../werkzeug/beschreibung.py szenen.json video_zeitplan.json`
