@@ -254,7 +254,7 @@
    "sentences": [
     "Drei von vier Menschen hätten einen Mangel, heißt es, gestützt auf eine Studie aus Frankreich.",
     "Gemessen wurde dort aber nur, was die Menschen gegessen haben, nicht das Magnesium im Körper.",
-    "In Deutschland isst etwa jeder Vierte weniger als empfohlen, bei Mädchen im Teenageralter gut die Hälfte.",
+    "In Deutschland bekommt etwa jeder Vierte über das Essen weniger Magnesium als empfohlen, bei Mädchen im Teenageralter gut die Hälfte.",
     "Weniger als empfohlen zu essen, ist aber noch kein nachgewiesener Mangel.",
     "Wer regelmäßig Vollkorn, Hülsenfrüchte, Nüsse und Gemüse isst, ist meist gut versorgt."
    ],
@@ -265,7 +265,7 @@
      "ev": "mittel"
     },
     {
-     "t": "Jeder Vierte isst zu wenig",
+     "t": "Jeder Vierte bekommt zu wenig Magnesium",
      "at": 2,
      "ev": "stark"
     },
