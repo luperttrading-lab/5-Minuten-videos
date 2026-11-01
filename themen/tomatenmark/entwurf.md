@@ -1,5 +1,9 @@
 # Tomatenmark: Was steckt wirklich im Löffel? – Szenenentwurf
 
+Vorlage: Die Gemini-Grafiken fassen ein einziges Video zusammen (https://youtu.be/LdSv-Url2pg). Gemini hat dabei dessen
+Einschränkungen weggelassen: Gen-Analyse ohne Schlaganfallschutz (14:02), „nur Beobachtungsstudien“ (10:42), Mäuse (08:42),
+„nicht jede Studie findet das“ (16:35). Genau diese Lücke ist der Kern unseres Faktenchecks.
+
 Ziel ≈ 6:00, ≈ 720 Wörter. Urteile aus `faktencheck.md` (IDs in Klammern). Herkunft neutral („Oft heißt es …“).
 Nicht im Video: Abnehmen/Leptin (nur ein Video mit Affiliate-Bindung, keine Studie), Olivenöl-Zusatznutzen aus demselben
 Video, Markenwarnungen ohne Quelle (Schwermetalle, einzelne Marken), Spermien (Herstellerstudie, Endpunkt verfehlt).
