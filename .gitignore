@@ -5,3 +5,4 @@ __pycache__/
 **/web/
 render.log
 *_bild_*.png
+**/hoerprobe/

@@ -63,7 +63,7 @@ def pruefe(mp3, W, abstand):
         top = max(g, key=lambda x: x[1])[0]
         inhalt = [x for i, x in g if norm(W[i]['w']) not in FUNKTION]
         dd = G[top] - max(inhalt) if inhalt else float('inf')
-        erg.append({'von': W[a[0]]['s'], 'woerter': [W[i]['w'] for i in a], 'pos': a.index(top), 'abstand': dd,
+        erg.append({'i': top, 'von': W[a[0]]['s'], 'woerter': [W[i]['w'] for i in a], 'pos': a.index(top), 'abstand': dd,
                     'funktion': norm(W[top]['w']) in FUNKTION and top != a[0]})
     return erg
 

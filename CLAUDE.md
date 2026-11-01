@@ -21,6 +21,10 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 3. **Drehbuch `szenen.json`:** siehe Aufbau unten.
 4. **Bildausschnitte prüfen:** `python3 ../../werkzeug/ausschnitte_pruefen.py szenen.json bogen.png grafik_korrigiert.png`
 5. **Ton und Länge prüfen:** `python3 ../../werkzeug/render.py szenen.json grafik_korrigiert.png video.mp4 --nur-ton`
+5b. **Betonung prüfen:** `python3 ../../werkzeug/betonung.py szenen.json` (Vorfilter, Verfahren aus dem Seneca-Hörspiel),
+   dann Hörprobe zum Mitlesen und Markieren: `python3 ../../werkzeug/hoerprobe.py szenen.json hoerprobe` (nach dem Rendern,
+   braucht video.wav), als Artifact mit `publish_files` veröffentlichen, danach `declare_capabilities` mit `{"db": {}}`.
+   Markierungen des Nutzers mit `db_list` (Sammlung `markierungen`) lesen, betroffene Sätze einzeln in 2–3 Fassungen neu.
 6. **Rendern:** dasselbe ohne `--nur-ton` (≈ 4–5 min Rechenzeit), danach Kontrollbilder mit `--bild <Sekunde>`.
 7. **Beschreibung und Teilen-Seite:** `python3 ../../werkzeug/beschreibung.py szenen.json video_zeitplan.json`
 8. **Ausliefern:** 1080p (Master, nicht einchecken), 720p für die Teilen-Seite (Artifact), 480p zum Verschicken:
