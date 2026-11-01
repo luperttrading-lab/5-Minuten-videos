@@ -14,8 +14,8 @@ for sc in c['scenes'][1:]:
     for i, s in enumerate(sc['sentences']):
         t = s['t'] if isinstance(s, dict) else s
         if i == b_at: zeilen.append(('marke', '▼ ab hier Bild b'))
-        for j, z in enumerate(textwrap.wrap(t, 62 if t.startswith('Dein Tipp') else 70)):
-            zeilen.append(('tipp' if t.startswith('Dein Tipp') else 'text', ('• ' if j == 0 else '  ') + z))
+        for j, z in enumerate(textwrap.wrap(t, 62 if t.startswith('Tipp für dich') else 70)):
+            zeilen.append(('tipp' if t.startswith('Tipp für dich') else 'text', ('• ' if j == 0 else '  ') + z))
         if i in bl: zeilen.append((bl[i]['ev'], '    ▶ ' + bl[i]['t']))
     h = max(2 * IH + 70, 60 + 30 * len(zeilen)) + 30
     im = Image.new('RGB', (W, h), '#f8f4ec'); d = ImageDraw.Draw(im)
