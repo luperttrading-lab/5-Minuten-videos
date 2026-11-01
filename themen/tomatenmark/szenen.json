@@ -241,8 +241,13 @@
    ],
    "shots": [
     {
-     "bild": "bilder/t1a.png",
+     "bild": "bilder/t1b.png",
      "zoom": 0.18
+    },
+    {
+     "bild": "bilder/t1a.png",
+     "zoom": 0.18,
+     "at": 3
     },
     {
      "bild": "bilder/t1b.png",
@@ -505,6 +510,11 @@
      "bild": "bilder/t5b.png",
      "zoom": 0.18,
      "at": 3
+    },
+    {
+     "bild": "bilder/t5a.png",
+     "zoom": 0.18,
+     "at": 4
     }
    ],
    "bilder": [
@@ -567,7 +577,7 @@
     {
      "bild": "bilder/t6b.png",
      "zoom": 0.18,
-     "at": 6
+     "at": 3
     }
    ],
    "bilder": [
@@ -636,7 +646,7 @@
     },
     {
      "datei": "bilder/t7b.png",
-     "prompt": "a family of three at a kitchen table sharing a big bowl of pasta with red tomato sauce, warm and cheerful, the scene fills the whole frame edge to edge, no empty paper border"
+     "prompt": "a family of three at a kitchen table sharing a big bowl of pasta with red tomato sauce, warm and cheerful, drawn with clear confident ink outlines and well-defined faces and hands, strong readable contrast, only a few large elements, the scene fills the whole frame edge to edge, no empty paper border"
     }
    ]
   }

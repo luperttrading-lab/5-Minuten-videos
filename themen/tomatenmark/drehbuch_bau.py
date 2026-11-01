@@ -9,7 +9,12 @@ for z in fc.splitlines():
 def S(t, say=None):
     return {'t': t, 'say': say} if say else t
 def B(t, at, ev): return {'t': t, 'at': at, 'ev': ev}
-def shots(sid, at): return [{'bild': f'bilder/{sid}a.png', 'zoom': 0.18}, {'bild': f'bilder/{sid}b.png', 'zoom': 0.18, 'at': at}]
+# Bildfolge je Szene (Nutzerwahl 01.11.: t1b, t2a, t3a, t5a, t6b, t7a bekommen den größeren Anteil, Inhalt geht vor)
+FOLGE = {'t1': [('b', 0), ('a', 3), ('b', 6)], 't5': [('a', 0), ('b', 3), ('a', 4)], 't6': [('a', 0), ('b', 3)],
+         't7': [('a', 0), ('b', 4)]}
+def shots(sid, at):
+    f = FOLGE.get(sid, [('a', 0), ('b', at)])
+    return [dict({'bild': f'bilder/{sid}{x}.png', 'zoom': 0.18}, **({'at': n} if n else {})) for x, n in f]
 
 scenes = [
  {'id': 't0', 'layout': 'kacheln', 'kapitel': 'Einleitung', 'kicker': 'Info-Video · Faktencheck',
@@ -146,7 +151,7 @@ scenes = [
   'shots': shots('t7', 4),
   'bilder': [
    {'datei': 'bilder/t7a.png', 'prompt': 'close-up of a frying pan where a spoonful of deep red tomato paste sizzles in golden olive oil with a wooden spoon, warm kitchen light'},
-   {'datei': 'bilder/t7b.png', 'prompt': 'a family of three at a kitchen table sharing a big bowl of pasta with red tomato sauce, warm and cheerful, the scene fills the whole frame edge to edge, no empty paper border'}]},
+   {'datei': 'bilder/t7b.png', 'prompt': 'a family of three at a kitchen table sharing a big bowl of pasta with red tomato sauce, warm and cheerful, drawn with clear confident ink outlines and well-defined faces and hands, strong readable contrast, only a few large elements, the scene fills the whole frame edge to edge, no empty paper border'}]},
 ]
 genutzt = []
 for sc in scenes:
