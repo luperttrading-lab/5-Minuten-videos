@@ -151,7 +151,7 @@ scenes = [
   'shots': shots('t7', 4),
   'bilder': [
    {'datei': 'bilder/t7a.png', 'prompt': 'close-up of a frying pan where a spoonful of deep red tomato paste sizzles in golden olive oil with a wooden spoon, warm kitchen light'},
-   {'datei': 'bilder/t7b.png', 'prompt': 'a family of three at a kitchen table sharing a big bowl of pasta with red tomato sauce, warm and cheerful, drawn with clear confident ink outlines and well-defined faces and hands, strong readable contrast, only a few large elements, the scene fills the whole frame edge to edge, no empty paper border'}]},
+   {'datei': 'bilder/t7b.png', 'prompt': 'a family at a kitchen table, a young father and a mother with their two children, a boy and a girl, sharing a big bowl of pasta with red tomato sauce, the father serving, every person has a fully drawn friendly human face with eyes, nose and a smiling mouth, close-up so the faces are large, warm and cheerful, drawn with clear confident ink outlines and well-defined faces and hands, strong readable contrast, only a few large elements, the scene fills the whole frame edge to edge, no empty paper border'}]},
 ]
 genutzt = []
 for sc in scenes:
