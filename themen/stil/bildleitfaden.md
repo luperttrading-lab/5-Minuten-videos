@@ -17,7 +17,9 @@ für einzelne Bilder geändert. Stilvergleich A/B/C nur als Archiv.
 - Licht: weich, warm, freundlich. Stimmung ruhig, nicht dramatisch.
 
 ## Komposition
-- Ein klares Hauptmotiv, darum 30–40 % freies Papier: Das Video legt eine weiche Maske über den Rand, und Zooms brauchen Luft.
+- **Fürs Handy gebaut:** Hauptmotiv groß, füllt das Bild fast ganz aus, nur ein schmaler Papierrand (der Renderer stellt
+  das Motiv ohnehin frei). Wenige, große Elemente; Beschriftungen groß genug, dass man sie auf dem Handy liest
+  (Beispiel: `themen/magnesium2/bilder/m3b_Q7b.png`).
 - Nichts Wichtiges am Bildrand. Hauptmotiv leicht links oder mittig.
 - 2–3 erkennbare Details, auf die man zoomen kann (z. B. Kapseln, Kerne, Glas).
 - Gut lesbar auch klein (Handy): klare Silhouetten, wenig Kleinkram.

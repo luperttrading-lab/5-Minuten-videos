@@ -10,7 +10,7 @@ import argparse, base64, json, os, sys, urllib.request
 
 STIL = ('Ink and watercolor illustration on warm textured paper, loose expressive ink lines, soft washes, '
         'limited palette of dove blue, terracotta, ochre and sage, calm and friendly. '
-        'Composition: the main motif is centered with an even margin of plain paper all around, nothing cut off at the edges. '
+        'Composition for a phone screen: the main motif is large and fills most of the frame, with only a slim margin of plain paper, nothing cut off at the edges; few, big, clearly readable elements, any label large and legible. '
         'Absolutely no text, no letters, no numbers, no labels, no logos, no faces on suns or objects anywhere in the image.')
 MODELLE = {'gpt_image2': {'size': '2048x1152'}, 'gpt_image25': {'size': '2048x1152'},
            'gemini-nano-banana-2.1': {'aspect_ratio': '16:9'}}
