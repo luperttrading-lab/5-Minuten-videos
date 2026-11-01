@@ -10,7 +10,7 @@ SP = [("Weigl", "711 T"), ("Timo G.", "245 T"), ("Selz", "83 T"), ("Selz", "34 T
 ZEILEN = [
     ("Erhitzen + Öl macht Lykopin verfügbarer",      "x x x x . x .", 1, "offen"),
     ("Mark hat viel mehr Lykopin als Tomaten (20×)", "x . x x . x .", 1, "offen"),
-    ("1 EL täglich reicht",                          "x x x x . x .", 0, "offen"),
+    ("1 EL täglich wirkt messbar",                          "x x x x . x .", 0, "offen"),
     ("Kapseln/synthetisch wirken nicht",             "x . x x . . .", 1, "offen"),
     ("Besseres Gedächtnis (35 g, 40–55 J.)",         ". . e . . . .", 1, "offen"),
     ("Schützt vor Demenz, steigert BDNF",            ". x e e . . .", 1, "offen"),
@@ -26,6 +26,7 @@ ZEILEN = [
     ("Hilft beim Abnehmen (Leptin)",                 ". x . . . . .", 0, "offen"),
     ("Viel Histamin, Zucker, Salz",                  "x . . x x x .", 0, "offen"),
     ("Schimmelpilzgifte in vielen Marken",           "x x . . x . .", 0, "offen"),
+    ("Bio schützt vor Schimmelpilzgiften",           "x x . . x . .", 0, "offen"),
 ]
 FARBE = {"stark": "#2e7d4f", "mittel": "#c9971c", "keine": "#b5382e", "offen": "#888888"}
 TEXT = {"stark": "belegt", "mittel": "teilweise", "keine": "nicht haltbar", "offen": "?"}
@@ -73,5 +74,7 @@ def zeichne(urteile, ziel):
 
 if __name__ == "__main__":
     import json, sys
-    urteile = {int(k): v for k, v in json.loads(sys.argv[1]).items()} if len(sys.argv) > 1 else {}
+    import os
+    roh = json.load(open("urteile.json")) if os.path.exists("urteile.json") else {}  # Zeilennummer -> Urteil
+    urteile = {int(k): v for k, v in roh.items()}
     zeichne(urteile, "behauptungen_youtube.png")
