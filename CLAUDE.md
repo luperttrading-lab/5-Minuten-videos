@@ -29,6 +29,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
    Markierungen des Nutzers mit `db_list` (Sammlung `markierungen`) lesen, betroffene Sätze einzeln in 2–3 Fassungen neu.
    **Reihenfolge:** Korrekturen nur in die Hörprobe (vorher/nachher). Erst rendern, wenn der Nutzer die Hörprobe
    abgenommen hat.
+   Abnahme auf der Seite: je Stelle „✓ Übernehmen“ / „Nochmal“ (Feld `abnahme` = ok | nochmal), dann „Hörprobe abnehmen“
+   (Kommentar an Claude). Neue Fassungen: Satz aus dem tts_cache schneiden, `vorher`/`nachher` per db_write setzen.
 6. **Rendern:** dasselbe ohne `--nur-ton` (≈ 4–5 min Rechenzeit), danach Kontrollbilder mit `--bild <Sekunde>`.
 7. **Beschreibung und Teilen-Seite:** `python3 ../../werkzeug/beschreibung.py szenen.json video_zeitplan.json`
 8. **Ausliefern:** 1080p (Master, nicht einchecken), 720p für die Teilen-Seite (Artifact), 480p zum Verschicken:

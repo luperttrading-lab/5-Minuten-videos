@@ -120,6 +120,13 @@
   .vergleich .ab { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--linie); border-radius: 999px; background: var(--tafel-hoch); color: var(--tinte); font: 600 14px/1 var(--ui); padding: 7px 12px 7px 9px; cursor: pointer; }
   .vergleich .ab svg { width: 16px; height: 16px; color: var(--bronze); }
   .vergleich .ab.an { border-color: var(--bronze); }
+  .urteil { display: flex; gap: 8px; align-items: center; margin-top: 6px; flex-wrap: wrap; }
+  .urteil button { border-radius: 999px; font: 600 14px/1 var(--ui); padding: 8px 14px; cursor: pointer; border: 1px solid var(--linie); }
+  .urteil .u-ok { background: var(--gruen-voll); color: #0d2214; border-color: var(--gruen-voll); }
+  .urteil .u-no { background: none; color: var(--tinte); }
+  .urteil .ok-text { color: var(--gruen-voll); font-weight: 600; font-size: 14px; }
+  .abnahme { margin-top: 6px; width: 100%; border: 0; border-radius: 12px; padding: 14px; font: 600 16px/1 var(--ui); background: var(--bronze); color: var(--stein); cursor: pointer; }
+  .abnahme:disabled { background: var(--linie); color: var(--grau); cursor: default; }
   .stand { display: inline-block; font: 600 11px/1.4 var(--ui); letter-spacing: .06em; text-transform: uppercase; padding: 1px 7px; border-radius: 999px; }
   .stand.markiert { background: var(--rot-voll); color: #fff; }
   .stand.abgeschickt { background: var(--blau-voll); color: #0f1a2e; }
@@ -291,7 +298,7 @@
       st.notiz = einmal(st.docs.map(function (x) { return (x.d.notiz || "").trim(); })).join(" · ");
       st.antwort = einmal(st.docs.map(function (x) { return (x.d.antwort || "").trim(); })).join(" · ");
       st.fassung = einmal(st.docs.map(function (x) { return x.d.fassung != null ? String(x.d.fassung) : ""; })).join(", ");
-      st.vorher = st.docs[0].d.vorher; st.nachher = st.docs[0].d.nachher;
+      st.vorher = st.docs[0].d.vorher; st.nachher = st.docs[0].d.nachher; st.abnahme = st.docs[0].d.abnahme || "";
       st.zeit = st.r === "K" ? W[a].t : (S[st.r].a || 0) + W[a].t;
       for (var j = a; j <= e; j++) ortVon[st.r + ":" + j] = st;
     });
@@ -304,7 +311,7 @@
         stand: alleNeu ? "korrigiert" : "verwaist", key: docs[0].id, satz: d0.satz, zeit: d0.zeit,
         notiz: einmal(docs.map(function (x) { return (x.d.notiz || "").trim(); })).join(" · "),
         antwort: einmal(docs.map(function (x) { return (x.d.antwort || "").trim(); })).join(" · "),
-        vorher: d0.vorher, nachher: d0.nachher, fassung: "" });
+        vorher: d0.vorher, nachher: d0.nachher, abnahme: d0.abnahme || "", fassung: "" });
     });
   }
   function ortDerSpan(k, i) { return S[k].i0 !== undefined && G ? "K:" + (S[k].i0 + i) : k + ":" + i; }
@@ -335,9 +342,10 @@
   }
   // Übersicht oben: Zusammenfassung und je Stelle Wortlaut, Stand, Notiz, Claudes Antwort
   var marken_ = document.createElement("section"); marken_.className = "marken"; marken_.hidden = true; marken_.setAttribute("aria-labelledby", "marken-titel");
-  marken_.innerHTML = '<h2 id="marken-titel">Deine Stellen</h2><ol id="marken-liste"></ol>';
+  marken_.innerHTML = '<h2 id="marken-titel">Deine Stellen</h2><ol id="marken-liste"></ol><button type="button" id="abnahme" class="abnahme" hidden disabled></button>';
   var kopfEl = document.querySelector(".kopf"); if (kopfEl) kopfEl.after(marken_); else document.querySelector("main").prepend(marken_);
   function liste() {
+    setTimeout(abnahmeKnopf, 0);
     marken_.hidden = !stellen.length;
     var ol = document.getElementById("marken-liste"); ol.textContent = "";
     stellen.slice().sort(function (a, b) { return (a.zeit || 0) - (b.zeit || 0); }).forEach(function (st) {
@@ -359,6 +367,15 @@
         });
         inh.appendChild(ab);
       }
+      if (st.stand === "korrigiert") {
+        var urt = document.createElement("div"); urt.className = "urteil";
+        if (st.abnahme === "ok") { urt.innerHTML = '<span class="ok-text">✓ übernommen</span>'; }
+        var uok = document.createElement("button"); uok.type = "button"; uok.className = st.abnahme === "ok" ? "u-no" : "u-ok"; uok.textContent = st.abnahme === "ok" ? "Rückgängig" : "✓ Übernehmen";
+        uok.addEventListener("click", function (e) { e.stopPropagation(); setzeAbnahme(st, st.abnahme === "ok" ? "" : "ok"); });
+        var uno = document.createElement("button"); uno.type = "button"; uno.className = "u-no"; uno.textContent = "Nochmal";
+        uno.addEventListener("click", function (e) { e.stopPropagation(); setzeAbnahme(st, "nochmal"); oeffne(st); notizText.focus(); });
+        urt.appendChild(uok); if (st.abnahme !== "ok") urt.appendChild(uno); inh.appendChild(urt);
+      }
       if (st.r) {
         var b = document.createElement("button"); b.type = "button"; b.className = "abspielen"; b.innerHTML = PLAY; b.setAttribute("aria-label", "„" + st.text + "“ anhören");
         b.addEventListener("click", function (e) { e.stopPropagation();
@@ -370,6 +387,19 @@
       li.addEventListener("click", function () { oeffne(st); });
       ol.appendChild(li);
     });
+  }
+  function setzeAbnahme(st, wert) {
+    if (!db) return;
+    var ops = st.docs.map(function (x) { var neu = Object.assign({}, marken[x.id], { abnahme: wert });
+      if (wert === "nochmal") neu.status = "abgeschickt";
+      marken[x.id] = neu; return [x.id, function () { return db.collection("markierungen").doc(x.id).set(neu); }]; });
+    malen(); schreibe(ops, function () { if (wert === "ok") melde("Übernommen ✓"); }, function () { melde("Nicht gespeichert – bitte nochmal.", true); });
+  }
+  function abnahmeKnopf() {
+    var k = document.getElementById("abnahme"); if (!k) return;
+    var offen = stellen.filter(function (st) { return st.stand !== "korrigiert" || st.abnahme !== "ok"; }).length;
+    k.hidden = !stellen.length; k.disabled = offen > 0;
+    k.textContent = offen ? "Hörprobe abnehmen (noch " + offen + " offen)" : "Hörprobe abnehmen → rendern";
   }
   function melde(text, fehler) {
     meldung.textContent = text; meldung.classList.toggle("fehler", !!fehler); meldung.hidden = false;
@@ -457,6 +487,14 @@
     schreibe(st.docs.map(function (x) { return [x.id, function () { return db.collection("markierungen").doc(x.id).delete(); }]; }),
       function () { melde("Gelöscht"); },
       function () { Object.keys(alt).forEach(function (id) { marken[id] = alt[id]; }); malen(); melde("Nicht gelöscht – bitte nochmal.", true); });
+  });
+  marken_.addEventListener("click", function (e) {
+    if (e.target.id !== "abnahme" || e.target.disabled) return;
+    var t = "Hörprobe " + KAP + " abgenommen: alle " + stellen.length + " Stellen übernommen. Bitte rendern.";
+    if (kom && anClaude) kom.anchorFor(marken_).then(function (a) { return kom.sendToClaude({ anchor: a, text: t }); })
+      .then(function () { melde("Abgenommen ✓ – Claude rendert jetzt."); e.target.disabled = true; e.target.textContent = "Abgenommen ✓"; },
+            function () { melde("Senden nicht möglich – schreib Claude „abgenommen“ in den Chat.", true); });
+    else melde("Senden nicht möglich – schreib Claude „abgenommen“ in den Chat.", true);
   });
   zaehler.addEventListener("click", function () { marken_.scrollIntoView({ behavior: "smooth", block: "start" }); });
   stift.addEventListener("click", function () {
