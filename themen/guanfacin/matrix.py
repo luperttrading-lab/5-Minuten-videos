@@ -24,8 +24,8 @@ ZEILEN = [
     ("Hilft bei PTBS, Schlafproblemen, Wut",           ". . x x . . e .", 0, "offen"),
     ("Löst Aufschieben, macht redefreudiger",          ". . . . . . . x", 0, "offen"),
 ]
-FARBE = {"stark": "#2e7d4f", "mittel": "#c9971c", "keine": "#b5382e", "offen": "#888888"}
-TEXT = {"stark": "belegt", "mittel": "teilweise", "keine": "nicht haltbar", "offen": "?"}
+FARBE = {"nu": "#b5382e", "stark": "#2e7d4f", "mittel": "#c9971c", "keine": "#b5382e", "offen": "#888888"}
+TEXT = {"nu": "nicht untersucht", "stark": "belegt", "mittel": "teilweise", "keine": "nicht haltbar", "offen": "?"}
 
 
 def zeichne(urteile, ziel):
