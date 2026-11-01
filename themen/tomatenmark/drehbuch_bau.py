@@ -88,7 +88,7 @@ scenes = [
    'Pro Gruppe waren es nur etwa ein Dutzend Teilnehmer, der Unterschied war knapp.',
    'Ins Blut gelangt künstliches Lykopin genauso gut, auch das hat allerdings ein Hersteller gemessen.',
    'Klar ist also nur: Eine Kapsel bringt dir nichts, was ein Löffel Mark nicht auch bringt.',
-   'Tipp für dich: Spar dir das Geld für die Kapsel und nimm den Löffel.'],
+   'Tipp für dich: Spar dir das Geld für die Kapsel. Ein Löffel Tomatenmark oder frische Tomaten liefern dasselbe Lykopin, dazu Ballaststoffe und Kalium.'],
   'bullets': [B('Synthetisches Lykopin ist wirkungslos', 1, 'keine')],
   'evidence': {'level': 'keine', 'label': 'Herstellerstudie, nicht haltbar'},
   'quellen': ['wolak2019', 'hoppe2003'],
