@@ -1,0 +1,603 @@
+{
+ "tts": "elevenlabs",
+ "voice_id": "NBqeXKdZHweef6y0B67V",
+ "voice_name": "Christian - Warm and Captivating",
+ "model": "eleven_v4",
+ "tempo": 1.0,
+ "titel": "Guanfacin: Was stimmt?",
+ "untertitel": "Ein Faktencheck zu Wirkung, Zulassung, Nebenwirkungen und Off-Label-Gebrauch des ADHS-Medikaments. Jeder Punkt ist gegen Fachinformation, Leitlinie und Studien geprüft.",
+ "fuss": "Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Kein Ersatz für ärztlichen Rat.",
+ "quellen": {
+  "ema_epar": {
+   "kurz": "EMA 2015",
+   "voll": "European Medicines Agency: Intuniv (guanfacine), EPAR – Medicine overview. Zulassung 17.09.2015.",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/intuniv"
+  },
+  "fi_intuniv": {
+   "kurz": "Fachinformation Intuniv",
+   "voll": "Takeda: Intuniv Retardtabletten, Zusammenfassung der Merkmale des Arzneimittels (EPAR-Produktinformation, deutsch), Stand 2026.",
+   "url": "https://www.ema.europa.eu/de/documents/product-information/intuniv-epar-product-information_de.pdf"
+  },
+  "fda_tenex": {
+   "kurz": "FDA 1986",
+   "voll": "U.S. Food and Drug Administration: Drugs@FDA NDA 019032, Tenex (guanfacine), Zulassung 27.10.1986.",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019032"
+  },
+  "fda_label": {
+   "kurz": "FDA-Label 2025",
+   "voll": "Takeda: INTUNIV (guanfacine) extended-release tablets, Prescribing Information, 06/2025.",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b972af81-3a37-40be-9fe1-3ddf59852528"
+  },
+  "wang2007": {
+   "kurz": "Wang 2007",
+   "voll": "Wang M, Ramos BP, Paspalas CD et al., Arnsten AF. Alpha2A-adrenoceptors strengthen working memory networks by inhibiting cAMP-HCN channel signaling in prefrontal cortex. Cell 2007;129(2):397–410.",
+   "url": "https://doi.org/10.1016/j.cell.2007.03.015"
+  },
+  "mckee2015": {
+   "kurz": "McKee 2015",
+   "voll": "McKee SA, Potenza MN, Kober H et al. A translational investigation targeting stress-reactivity and prefrontal cognitive control with guanfacine for smoking cessation. J Psychopharmacol 2015;29(3):300–311 (Interessenerklärung: Lizenzgebühren an Arnsten und Yale).",
+   "url": "https://doi.org/10.1177/0269881114562091"
+  },
+  "s3_2026": {
+   "kurz": "S3-Leitlinie ADHS 2026",
+   "voll": "DGKJP, DGPPN, DGSPJ: Interdisziplinäre S3-Leitlinie „ADHS im Kindes-, Jugend- und Erwachsenenalter“, Version 2.0, AWMF-Reg.-Nr. 028-045, 2026.",
+   "url": "https://www.dgppn.de/_Resources/Persistent/352a63526561b8e26f497ee2ad5ef392dcaa69c7/028-045l_S3_KF_Aufmerksamkeitsdefizit-Hyperaktivit%C3%A4tsstoerung-ADHS-Kinder-Jugendliche-Erwachsene_205-05.pdf"
+  },
+  "pmda2019": {
+   "kurz": "PMDA 2019",
+   "voll": "Pharmaceuticals and Medical Devices Agency: Review Report Intuniv Tablets (Shionogi), Erweiterung auf Erwachsene, 2019.",
+   "url": "https://www.pmda.go.jp/files/000235724.pdf"
+  },
+  "fi_generikum": {
+   "kurz": "Fachinformation Generikum 2025",
+   "voll": "Neuraxpharm: Fachinformation Guanfacin Neuraxpharm Retardtabletten, Zulassung 24.09.2025.",
+   "url": "https://www.fachinfo.de/fi/pdf/025580/guanfacin-neuraxpharm-r"
+  },
+  "cortese2018": {
+   "kurz": "Cortese 2018",
+   "voll": "Cortese S, Adamo N, Del Giovane C et al. Comparative efficacy and tolerability of medications for ADHD in children, adolescents, and adults: a systematic review and network meta-analysis. Lancet Psychiatry 2018;5(9):727–738.",
+   "url": "https://doi.org/10.1016/S2215-0366(18)30269-4"
+  },
+  "ruggiero2014": {
+   "kurz": "Ruggiero 2014",
+   "voll": "Ruggiero S, Clavenna A, Reale L et al. Guanfacine for attention deficit and hyperactivity disorder in pediatrics: a systematic review and meta-analysis. Eur Neuropsychopharmacol 2014;24(10):1578–1590.",
+   "url": "https://doi.org/10.1016/j.euroneuro.2014.08.001"
+  },
+  "biederman2008": {
+   "kurz": "Biederman 2008",
+   "voll": "Biederman J, Melmed RD, Patel A et al. A randomized, double-blind, placebo-controlled study of guanfacine extended release in children and adolescents with ADHD. Pediatrics 2008;121(1):e73–84 (Sponsor Shire).",
+   "url": "https://doi.org/10.1542/peds.2006-3695"
+  },
+  "wilens2012": {
+   "kurz": "Wilens 2012",
+   "voll": "Wilens TE, Bukstein O, Brams M et al. A controlled trial of extended-release guanfacine and psychostimulants for ADHD. J Am Acad Child Adolesc Psychiatry 2012;51(1):74–85 (Sponsor Shire).",
+   "url": "https://doi.org/10.1016/j.jaac.2011.10.012"
+  },
+  "newcorn2013": {
+   "kurz": "Newcorn 2013",
+   "voll": "Newcorn JH, Stein MA, Childress AC et al. Randomized, double-blind trial of guanfacine extended release in children with ADHD: morning or evening administration. J Am Acad Child Adolesc Psychiatry 2013;52(9):921–930 (Sponsor Shire).",
+   "url": "https://doi.org/10.1016/j.jaac.2013.06.006"
+  },
+  "jain1985": {
+   "kurz": "Jain 1985",
+   "voll": "Jain AK, Hiremath A, Michael R et al. Clonidine and guanfacine in hypertension. Clin Pharmacol Ther 1985;37(3):271–276.",
+   "url": "https://doi.org/10.1038/clpt.1985.39"
+  },
+  "iwanami2020": {
+   "kurz": "Iwanami 2020",
+   "voll": "Iwanami A, Saito K, Fujiwara M et al. Efficacy and safety of guanfacine extended-release in the treatment of ADHD in adults: a randomized, double-blind, placebo-controlled study. J Clin Psychiatry 2020;81(3):19m12979 (Shionogi).",
+   "url": "https://doi.org/10.4088/JCP.19m12979"
+  },
+  "strawn2017": {
+   "kurz": "Strawn 2017",
+   "voll": "Strawn JR, Compton SN, Robertson B et al. Extended release guanfacine in pediatric anxiety disorders: a pilot, randomized, placebo-controlled trial. J Child Adolesc Psychopharmacol 2017;27(1):29–37.",
+   "url": "https://doi.org/10.1089/cap.2016.0132"
+  },
+  "neylan2006": {
+   "kurz": "Neylan 2006",
+   "voll": "Neylan TC, Lenoci M, Samuelson KW et al. No improvement of posttraumatic stress disorder symptoms with guanfacine treatment. Am J Psychiatry 2006;163(12):2186–2188.",
+   "url": "https://doi.org/10.1176/appi.ajp.163.12.2186"
+  },
+  "davis2008": {
+   "kurz": "Davis 2008",
+   "voll": "Davis LL, Ward C, Rasmusson A et al. A placebo-controlled trial of guanfacine for the treatment of posttraumatic stress disorder in veterans. Psychopharmacol Bull 2008;41(1):8–18.",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18362867/"
+  },
+  "scahill2001": {
+   "kurz": "Scahill 2001",
+   "voll": "Scahill L, Chappell PB, Kim YS et al. A placebo-controlled study of guanfacine in the treatment of children with tic disorders and ADHD. Am J Psychiatry 2001;158(7):1067–1074.",
+   "url": "https://doi.org/10.1176/appi.ajp.158.7.1067"
+  },
+  "murphy2017": {
+   "kurz": "Murphy 2017",
+   "voll": "Murphy TK, Fernandez TV, Coffey BJ et al. Extended-release guanfacine does not show a large effect on tic severity in children with chronic tic disorders. J Child Adolesc Psychopharmacol 2017;27(9):762–770.",
+   "url": "https://doi.org/10.1089/cap.2017.0024"
+  },
+  "muller2005": {
+   "kurz": "Müller 2005",
+   "voll": "Müller U, Clark L, Lam ML et al. Lack of effects of guanfacine on executive and memory functions in healthy male volunteers. Psychopharmacology 2005;182(2):205–213.",
+   "url": "https://doi.org/10.1007/s00213-005-0078-4"
+  },
+  "barcelos2018": {
+   "kurz": "Barcelos 2018",
+   "voll": "Barcelos NM, Van Ness PH, Wagner AF et al. Guanfacine treatment for prefrontal cognitive dysfunction in older participants: a randomized clinical trial. Neurobiol Aging 2018;70:117–124.",
+   "url": "https://doi.org/10.1016/j.neurobiolaging.2018.05.033"
+  }
+ },
+ "scenes": [
+  {
+   "id": "g0",
+   "layout": "kacheln",
+   "kapitel": "Einleitung",
+   "kicker": "Info-Video · Faktencheck",
+   "headline": "Guanfacin: Was stimmt?",
+   "sentences": [
+    "Guanfacin ist ein ADHS-Medikament, über das im Netz viel erzählt wird: Es sei sanfter als Ritalin, wirke nach wenigen Tagen und helfe sogar gegen Angst.",
+    "Wir prüfen sechs Fragen: Was ist Guanfacin? Für wen ist es zugelassen? Wie gut wirkt es? Welche Nebenwirkungen hat es? Was gilt beim Absetzen? Und was ist mit Erwachsenen?",
+    "Grün heißt belegt, gelb teilweise, rot nicht haltbar."
+   ],
+   "hervorheben_at": 1,
+   "legende_at": 2,
+   "kacheln": [
+    {
+     "t": "Was ist Guanfacin?",
+     "bild": "bilder/g1a.png",
+     "wort": "Was ist"
+    },
+    {
+     "t": "Für wen zugelassen?",
+     "bild": "bilder/g2a.png",
+     "wort": "zugelassen"
+    },
+    {
+     "t": "Wie gut wirkt es?",
+     "bild": "bilder/g3a.png",
+     "wort": "Wie gut"
+    },
+    {
+     "t": "Nebenwirkungen",
+     "bild": "bilder/g4a.png",
+     "wort": "Nebenwirkungen"
+    },
+    {
+     "t": "Absetzen",
+     "bild": "bilder/g5a.png",
+     "wort": "Absetzen"
+    },
+    {
+     "t": "Erwachsene und mehr",
+     "bild": "bilder/g6a.png",
+     "wort": "Erwachsenen"
+    }
+   ]
+  },
+  {
+   "id": "g1",
+   "kapitel": "Was ist Guanfacin?",
+   "kicker": "Wirkstoff",
+   "headline": "Was ist Guanfacin?",
+   "sentences": [
+    "Guanfacin kam in den Achtzigerjahren als Blutdruckmittel auf den Markt; heute gibt es es als Retardtablette gegen ADHS.",
+    "Oft heißt es: Guanfacin ist kein Stimulans und macht nicht süchtig.",
+    "Das stimmt; es fällt nicht unter das Betäubungsmittelgesetz, und Hinweise auf Missbrauch gibt es nicht.",
+    {
+     "t": "Es wirkt an einer Art Bremse für Stresssignale, dem Alpha-2A-Rezeptor.",
+     "say": "Es wirkt an einer Art Bremse für Stresssignale, dem Alpha-zwei-A-Rezeptor."
+    },
+    "Viele sagen, es stärke so die Netzwerke im Stirnhirn. Gezeigt wurde das vor allem an Affen und Ratten; beim Menschen ist der Mechanismus laut Fachinformation nicht vollständig geklärt.",
+    "Die Forscherin hinter dieser Erklärung und ihre Universität erhalten übrigens Lizenzgebühren aus dem Verkauf.",
+    "Wenn dir jemand Guanfacin als Gehirn-Booster verkauft: Das ist Tierforschung, keine Zusage für dich."
+   ],
+   "bullets": [
+    {
+     "t": "Kein Stimulans, kein Suchtpotenzial",
+     "at": 1,
+     "ev": "stark"
+    },
+    {
+     "t": "Stärkt das Stirnhirn",
+     "at": 4,
+     "ev": "mittel"
+    }
+   ],
+   "evidence": {
+    "level": "mittel",
+    "label": "Mechanismus vor allem im Tierversuch"
+   },
+   "quellen": [
+    "fda_tenex",
+    "fi_intuniv",
+    "fda_label",
+    "wang2007",
+    "mckee2015"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/g1a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/g1b.png",
+     "zoom": 0.18,
+     "at": 3
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/g1a.png",
+     "prompt": "a wide horizontal close-up filling the whole frame edge to edge: an open hand holding one large white pill on the left, an old-fashioned blood pressure cuff with a round gauge on a wooden table on the right, warm light, no empty margins"
+    },
+    {
+     "datei": "bilder/g1b.png",
+     "prompt": "an explanatory drawing: a human head in side view with the front part of the brain softly highlighted in warm ochre, inside it a few large nerve cells connected by glowing lines, one connection shown with a small gentle brake symbol like a soft hand slowing a stream, very simple and clear"
+    }
+   ]
+  },
+  {
+   "id": "g2",
+   "kapitel": "Für wen zugelassen?",
+   "kicker": "Zulassung",
+   "headline": "Für wen ist es zugelassen?",
+   "sentences": [
+    {
+     "t": "In Europa ist Guanfacin seit 2015 zugelassen: für Kinder und Jugendliche mit ADHS von sechs bis siebzehn Jahren.",
+     "say": "In Europa ist Guanfacin seit zweitausendfünfzehn zugelassen: für Kinder und Jugendliche mit ADHS von sechs bis siebzehn Jahren."
+    },
+    "Und nur, wenn Stimulanzien nicht passen, nicht vertragen werden oder nicht wirken.",
+    "Zugelassen ist es bei uns als alleiniges Medikament. Als Zusatz zum Stimulans erlauben es die USA; die neue deutsche Leitlinie hält diese Kombination bei Kindern für möglich.",
+    "Für Erwachsene ist es in Europa nicht zugelassen. Eine Zulassung für Erwachsene haben wir nur in Japan gefunden.",
+    "Seit dem letzten Jahr gibt es auch ein günstigeres Nachahmerpräparat.",
+    "Wenn Stimulanzien bei deinem Kind nicht passen, frag deine Ärztin gezielt nach den Alternativen; Guanfacin ist eine davon."
+   ],
+   "bullets": [
+    {
+     "t": "Nur für Kinder und Jugendliche zugelassen",
+     "at": 0,
+     "ev": "stark"
+    },
+    {
+     "t": "Wenn andere ADHS-Mittel nicht passen",
+     "at": 1,
+     "ev": "stark"
+    }
+   ],
+   "evidence": {
+    "level": "stark",
+    "label": "belegt"
+   },
+   "quellen": [
+    "ema_epar",
+    "fi_intuniv",
+    "s3_2026",
+    "pmda2019",
+    "fi_generikum"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/g2a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/g2b.png",
+     "zoom": 0.18,
+     "at": 3
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/g2a.png",
+     "prompt": "a mother and her about ten-year-old son sitting in a friendly paediatrician's office, the doctor listening attentively, warm colours, seen from a little distance, no papers with writing"
+    },
+    {
+     "datei": "bilder/g2b.png",
+     "prompt": "a large simple map of the world drawn in ink and watercolor, Europe softly tinted in dove blue, Japan highlighted in warm terracotta, no country names, no text"
+    }
+   ]
+  },
+  {
+   "id": "g3",
+   "kapitel": "Wie gut wirkt es?",
+   "kicker": "Wirksamkeit",
+   "headline": "Wie gut wirkt es?",
+   "sentences": [
+    "Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als eine Scheintablette, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine.",
+    "Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Scheintablette drei von zehn.",
+    "Fast alle Zulassungsstudien hat der Hersteller bezahlt.",
+    "Oft heißt es, man merke die Wirkung nach wenigen Tagen.",
+    "In den Studien baut sie sich über etwa vier Wochen auf, auch weil die Dosis langsam gesteigert wird. Früh spürt man vor allem eins: Müdigkeit.",
+    "Als Zusatz zum Stimulans bringt es Kindern einen kleinen Gewinn.",
+    "Plane mit deiner Ärztin einige Wochen ein, bevor ihr die Wirkung beurteilt."
+   ],
+   "bullets": [
+    {
+     "t": "Wirkt schon nach wenigen Tagen",
+     "at": 3,
+     "ev": "keine"
+    },
+    {
+     "t": "Verstärkt Stimulanzien als Zusatz",
+     "at": 5,
+     "ev": "mittel"
+    }
+   ],
+   "evidence": {
+    "level": "mittel",
+    "label": "wirkt, aber schwächer und langsamer"
+   },
+   "quellen": [
+    "cortese2018",
+    "ruggiero2014",
+    "biederman2008",
+    "wilens2012"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/g3a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/g3b.png",
+     "zoom": 0.18,
+     "at": 3
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/g3a.png",
+     "prompt": "exactly ten simple round-headed child figures standing in one row filling the width of the frame, each with a friendly simple face with eyes and a smile; the first six on the left wear bright warm terracotta clothes and look cheerful, the last four on the right are drawn only in pale grey pencil and look neutral; strong colour contrast, clearly countable"
+    },
+    {
+     "datei": "bilder/g3b.png",
+     "prompt": "a small seedling growing in four stages from left to right in four clay pots, getting a little taller each time, like weeks passing, simple and large"
+    }
+   ]
+  },
+  {
+   "id": "g4",
+   "kapitel": "Nebenwirkungen",
+   "kicker": "Nebenwirkungen",
+   "headline": "Müde, schwindlig, langsamer Puls",
+   "sentences": [
+    "Die häufigste Nebenwirkung ist Schläfrigkeit: In den Studien betraf sie etwa vier von zehn Kindern, vor allem in den ersten Wochen.",
+    "Auch Kopf- und Bauchschmerzen sind sehr häufig.",
+    "Manchmal heißt es, Guanfacin senke den Blutdruck kaum. Das stimmt nicht; es war ja ein Blutdruckmittel.",
+    "Blutdruck und Puls sinken etwas, manchen wird schwindlig, selten kommt es zur Ohnmacht.",
+    "Deshalb werden Blutdruck und Puls vor dem Start und danach regelmäßig kontrolliert.",
+    "Viele raten, es abends zu nehmen. In einer Studie wirkte es morgens und abends gleich gut; die Fachinformation lässt beides zu.",
+    "Wenn dir oder deinem Kind schwindlig wird, sag es sofort deiner Ärztin oder deinem Arzt."
+   ],
+   "bullets": [
+    {
+     "t": "Macht müde – besser abends nehmen",
+     "at": 0,
+     "ev": "mittel"
+    },
+    {
+     "t": "Senkt Blutdruck und Puls",
+     "at": 2,
+     "ev": "stark"
+    }
+   ],
+   "evidence": {
+    "level": "stark",
+    "label": "Nebenwirkungen gut belegt"
+   },
+   "quellen": [
+    "fi_intuniv",
+    "jain1985",
+    "newcorn2013"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/g4a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/g4b.png",
+     "zoom": 0.18,
+     "at": 3
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/g4a.png",
+     "prompt": "a sleepy schoolboy yawning at his desk with his head propped on one hand, an open notebook without writing, afternoon light"
+    },
+    {
+     "datei": "bilder/g4b.png",
+     "prompt": "a friendly nurse measuring the blood pressure of a teenage girl with an arm cuff, both relaxed, the device display blank, bright room"
+    }
+   ]
+  },
+  {
+   "id": "g5",
+   "kapitel": "Absetzen",
+   "kicker": "Absetzen",
+   "headline": "Täglich nehmen, nie plötzlich absetzen",
+   "sentences": [
+    "Eine verbreitete Empfehlung lautet, man müsse Guanfacin nicht jeden Tag nehmen.",
+    "Das ist falsch und kann gefährlich werden.",
+    "Wer es plötzlich weglässt, riskiert, dass der Blutdruck wieder steigt, in sehr seltenen Fällen bis zu einer gefährlichen Krise.",
+    "Nach mehreren vergessenen Tabletten muss die Dosis laut Fachinformation neu eingestellt werden.",
+    "Beendet wird die Behandlung schrittweise, mit Kontrollen von Blutdruck und Puls.",
+    "Setz Guanfacin nie eigenmächtig ab und mach keine Pausen, ohne mit deiner Ärztin oder deinem Arzt zu sprechen."
+   ],
+   "bullets": [
+    {
+     "t": "Muss nicht täglich genommen werden",
+     "at": 0,
+     "ev": "keine"
+    },
+    {
+     "t": "Abrupt absetzen: Blutdruck steigt",
+     "at": 2,
+     "ev": "stark"
+    }
+   ],
+   "evidence": {
+    "level": "stark",
+    "label": "Warnung belegt"
+   },
+   "quellen": [
+    "fi_intuniv",
+    "fda_label"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/g5a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/g5b.png",
+     "zoom": 0.18,
+     "at": 4
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/g5a.png",
+     "prompt": "a large weekly pill organizer with seven compartments, each holding one small white pill, next to a glass of water on a kitchen table, morning light"
+    },
+    {
+     "datei": "bilder/g5b.png",
+     "prompt": "a wide horizontal scene filling the whole frame edge to edge: a broad gentle staircase of five wide stone steps leading softly downward from left to right into a calm garden, a person walking down slowly holding the railing, no empty margins"
+    }
+   ]
+  },
+  {
+   "id": "g6",
+   "kapitel": "Erwachsene und mehr",
+   "kicker": "Off-Label",
+   "headline": "Erwachsene, Angst, Tics",
+   "sentences": [
+    "Und Erwachsene? Die einzige größere Studie stammt aus Japan, bezahlt vom dortigen Hersteller.",
+    "Guanfacin wirkte, aber jeder Fünfte brach wegen Nebenwirkungen ab, mit Scheintablette kaum jemand.",
+    "Die deutsche Leitlinie gibt für Erwachsene keine eigene Empfehlung.",
+    "Oft heißt es auch, Guanfacin helfe gegen Angst. Die einzige kontrollierte Studie, mit Kindern, fand keinen Unterschied.",
+    "Bei posttraumatischer Belastungsstörung waren zwei Studien negativ.",
+    "Bei Tics hilft es vielleicht, aber nur, wenn zugleich ADHS besteht; die Studien widersprechen sich.",
+    "Dass es das Aufschieben beendet, beruht auf Erfahrungsberichten; untersucht wurde es nicht. Und als Denkhilfe für Gesunde oder Ältere zeigte es in Studien keine Wirkung.",
+    "Alles außer ADHS bei Kindern ist ein Einsatz außerhalb der Zulassung. Sprich das offen mit deiner Ärztin an und frag nach Nutzen und Risiken."
+   ],
+   "bullets": [
+    {
+     "t": "Gute Option für Erwachsene",
+     "at": 0,
+     "ev": "mittel"
+    },
+    {
+     "t": "Hilft bei Angst",
+     "at": 3,
+     "ev": "keine"
+    },
+    {
+     "t": "Hilft bei PTBS",
+     "at": 4,
+     "ev": "keine"
+    },
+    {
+     "t": "Hilft bei Tics",
+     "at": 5,
+     "ev": "mittel"
+    }
+   ],
+   "evidence": {
+    "level": "keine",
+    "label": "kaum belegt"
+   },
+   "quellen": [
+    "iwanami2020",
+    "s3_2026",
+    "strawn2017",
+    "neylan2006",
+    "davis2008",
+    "scahill2001",
+    "murphy2017",
+    "muller2005",
+    "barcelos2018"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/g6a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/g6b.png",
+     "zoom": 0.18,
+     "at": 3
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/g6a.png",
+     "prompt": "a man in his thirties talking with a female doctor at a wooden desk in a calm room, both seated, both with clearly drawn friendly human faces with eyes, nose and mouth, seen from the side, attentive conversation, a glass of water on the desk, no papers with writing"
+    },
+    {
+     "datei": "bilder/g6b.png",
+     "prompt": "a young woman sitting on a window seat hugging her knees, looking thoughtfully outside at rain, soft and calm mood"
+    }
+   ]
+  },
+  {
+   "id": "g7",
+   "kapitel": "Fazit",
+   "kicker": "Fazit",
+   "headline": "Was wirklich bleibt",
+   "sentences": [
+    "Was bleibt?",
+    "Erstens: Guanfacin ist kein Stimulans und eine echte Möglichkeit für Kinder und Jugendliche, wenn Stimulanzien nicht passen.",
+    "Zweitens: Es wirkt langsamer und schwächer als Stimulanzien und macht anfangs oft müde.",
+    "Drittens: täglich nehmen, nie plötzlich absetzen, Blutdruck und Puls im Blick behalten.",
+    "Für Erwachsene, gegen Angst und als Gehirn-Booster fehlt der Beleg.",
+    "Dieses Video ersetzt keinen ärztlichen Rat. Die Quellen stehen in der Beschreibung."
+   ],
+   "bullets": [
+    {
+     "t": "Option für Kinder, wenn Stimulanzien nicht passen",
+     "at": 1,
+     "ev": "stark"
+    },
+    {
+     "t": "Täglich, nie plötzlich absetzen",
+     "at": 3,
+     "ev": "stark"
+    },
+    {
+     "t": "Erwachsene, Angst, Booster",
+     "at": 4,
+     "ev": "keine"
+    }
+   ],
+   "evidence": {
+    "level": "mittel",
+    "label": "nützlich, mit Grenzen"
+   },
+   "quellen": [
+    "fi_intuniv",
+    "s3_2026",
+    "cortese2018"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/g7a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/g7b.png",
+     "zoom": 0.18,
+     "at": 3
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/g7a.png",
+     "prompt": "a family of father, mother and two children doing homework and reading together at a large kitchen table, all with clearly drawn friendly human faces with eyes, nose and mouth, relaxed and focused, warm evening lamp light"
+    },
+    {
+     "datei": "bilder/g7b.png",
+     "prompt": "a calendar page drawn as a simple grid with a small green check mark in every box, next to a glass of water and a stethoscope, no numbers, no letters"
+    }
+   ]
+  }
+ ]
+}

@@ -67,7 +67,7 @@ Wenn dir oder deinem Kind schwindlig wird, sag es sofort deiner Ärztin oder dei
 Eine verbreitete Empfehlung lautet, man müsse Guanfacin nicht jeden Tag nehmen. Das ist falsch und kann gefährlich werden.
 Wer es plötzlich weglässt, riskiert, dass der Blutdruck wieder steigt, in sehr seltenen Fällen bis zu einer gefährlichen
 Krise.
-Wer mehrere Tabletten vergessen hat, muss laut Fachinformation neu eingestellt werden.
+Nach mehreren vergessenen Tabletten muss die Dosis laut Fachinformation neu eingestellt werden.
 Beendet wird die Behandlung schrittweise, mit Kontrollen von Blutdruck und Puls.
 Setz Guanfacin nie eigenmächtig ab und mach keine Pausen, ohne mit deiner Ärztin oder deinem Arzt zu sprechen.
 
