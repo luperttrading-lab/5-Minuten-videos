@@ -116,6 +116,10 @@
   .marken li .n { font-size: 14px; color: var(--tinte); }
   .marken li .abspielen { flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%; border: 0; background: var(--tafel-hoch); color: var(--bronze); display: grid; place-items: center; cursor: pointer; }
   .marken li .abspielen svg { width: 18px; height: 18px; }
+  .vergleich { display: flex; gap: 8px; margin-top: 4px; }
+  .vergleich .ab { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--linie); border-radius: 999px; background: var(--tafel-hoch); color: var(--tinte); font: 600 14px/1 var(--ui); padding: 7px 12px 7px 9px; cursor: pointer; }
+  .vergleich .ab svg { width: 16px; height: 16px; color: var(--bronze); }
+  .vergleich .ab.an { border-color: var(--bronze); }
   .stand { display: inline-block; font: 600 11px/1.4 var(--ui); letter-spacing: .06em; text-transform: uppercase; padding: 1px 7px; border-radius: 999px; }
   .stand.markiert { background: var(--rot-voll); color: #fff; }
   .stand.abgeschickt { background: var(--blau-voll); color: #0f1a2e; }
@@ -166,7 +170,15 @@
       p.appendChild(s); spans[k].push(s);
     });
   });
+  var listenKnopf = null, clip = new Audio(), clipKnopf = null;
+  function spieleClip(vb) {
+    if (clipKnopf === vb && !clip.paused) { clip.pause(); return; }
+    ton.pause(); clip.src = vb.dataset.datei; clipKnopf = vb; clip.currentTime = 0; clip.play().catch(function () {}); zeichne();
+  }
+  clip.addEventListener("play", function () { zeichne(); }); clip.addEventListener("pause", function () { zeichne(); }); clip.addEventListener("ended", function () { zeichne(); });
   function zeichne() {
+    document.querySelectorAll(".marken .abspielen").forEach(function (b) { b.innerHTML = (b === listenKnopf && !ton.paused) ? PAUSE : PLAY; });
+    document.querySelectorAll(".marken .ab").forEach(function (b) { var an = b === clipKnopf && !clip.paused; b.firstChild.outerHTML = an ? PAUSE : PLAY; b.classList.toggle("an", an); });
     document.querySelectorAll(".knopf").forEach(function (b) {
       var k = b.dataset.k, spielt = k === aktiv && !ton.paused;
       b.innerHTML = spielt ? PAUSE : PLAY; b.setAttribute("aria-label", (b.dataset.name || "Stelle " + k.slice(1)) + (spielt ? " anhalten" : " abspielen"));
@@ -189,6 +201,7 @@
   function name(k) { var b = document.querySelector('.knopf[data-k="' + k + '"]'); return b ? b.dataset.name : ""; }
   // Tafel k ab Sekunde t abspielen; eine neue Quelle erst nach dem Laden der Metadaten auf t setzen
   function starte(k, t) {
+    listenKnopf = null; if (!clip.paused) clip.pause();
     if (k !== aktiv) {
       if (aktiv) zuruecksetzen(aktiv);
       aktiv = k; ton.src = S[k].datei || ("audio/stelle" + k.slice(1) + ".mp3");
@@ -278,11 +291,21 @@
       st.notiz = einmal(st.docs.map(function (x) { return (x.d.notiz || "").trim(); })).join(" · ");
       st.antwort = einmal(st.docs.map(function (x) { return (x.d.antwort || "").trim(); })).join(" · ");
       st.fassung = einmal(st.docs.map(function (x) { return x.d.fassung != null ? String(x.d.fassung) : ""; })).join(", ");
+      st.vorher = st.docs[0].d.vorher; st.nachher = st.docs[0].d.nachher;
       st.zeit = st.r === "K" ? W[a].t : (S[st.r].a || 0) + W[a].t;
       for (var j = a; j <= e; j++) ortVon[st.r + ":" + j] = st;
     });
-    verwaist.forEach(function (x) { stellen.push({ r: null, docs: [x], text: (x.d.wort || "").replace(/[,.;:?!“”„]/g, ""), stand: "verwaist", key: x.id,
-      notiz: (x.d.notiz || "").trim(), antwort: (x.d.antwort || "").trim(), fassung: "", zeit: x.d.zeit, satz: x.d.satz }); });
+    var nachSatz = {};
+    verwaist.forEach(function (x) { var k = x.d.satz || x.id; (nachSatz[k] = nachSatz[k] || []).push(x); });
+    Object.keys(nachSatz).forEach(function (k) {
+      var docs = nachSatz[k].sort(function (a, b) { return (a.d.wortnr || 0) - (b.d.wortnr || 0); }), d0 = docs[0].d;
+      var alleNeu = docs.every(function (x) { return x.d.status === "korrigiert"; });
+      stellen.push({ r: null, docs: docs, text: docs.map(function (x) { return x.d.wort || ""; }).join(" ").replace(/[,.;:?!“”„]+$/g, ""),
+        stand: alleNeu ? "korrigiert" : "verwaist", key: docs[0].id, satz: d0.satz, zeit: d0.zeit,
+        notiz: einmal(docs.map(function (x) { return (x.d.notiz || "").trim(); })).join(" · "),
+        antwort: einmal(docs.map(function (x) { return (x.d.antwort || "").trim(); })).join(" · "),
+        vorher: d0.vorher, nachher: d0.nachher, fassung: "" });
+    });
   }
   function ortDerSpan(k, i) { return S[k].i0 !== undefined && G ? "K:" + (S[k].i0 + i) : k + ":" + i; }
   function stelleZu(key) { for (var j = 0; j < stellen.length; j++) if (stellen[j].docs.some(function (x) { return x.id === key; })) return stellen[j]; return null; }
@@ -325,9 +348,23 @@
       if (st.notiz) { var nz = document.createElement("span"); nz.className = "n"; nz.textContent = st.notiz; inh.appendChild(nz); }
       if (st.antwort) { var an = document.createElement("span"); an.className = "n antwort"; an.textContent = "Claude: " + st.antwort; inh.appendChild(an); }
       li.appendChild(inh);
+      if (st.vorher || st.nachher) {
+        var ab = document.createElement("div"); ab.className = "vergleich";
+        [["vorher", st.vorher], ["nachher", st.nachher]].forEach(function (p) {
+          if (!p[1]) return;
+          var vb = document.createElement("button"); vb.type = "button"; vb.className = "ab"; vb.dataset.datei = p[1];
+          vb.innerHTML = PLAY + "<span>" + p[0] + "</span>"; vb.setAttribute("aria-label", p[0] + " anhören");
+          vb.addEventListener("click", function (e) { e.stopPropagation(); spieleClip(vb); });
+          ab.appendChild(vb);
+        });
+        inh.appendChild(ab);
+      }
       if (st.r) {
         var b = document.createElement("button"); b.type = "button"; b.className = "abspielen"; b.innerHTML = PLAY; b.setAttribute("aria-label", "„" + st.text + "“ anhören");
-        b.addEventListener("click", function (e) { e.stopPropagation(); if (st.r === "K") starte("ganz", Math.max(0, st.zeit - 1.5)); else starte(st.r, Math.max(0, S[st.r].w[st.a].t - 1.5)); });
+        b.addEventListener("click", function (e) { e.stopPropagation();
+          if (listenKnopf === b && !ton.paused) { ton.pause(); return; }
+          clip.pause(); var k = st.r === "K" ? "ganz" : st.r, t = st.r === "K" ? Math.max(0, st.zeit - 1.5) : Math.max(0, S[st.r].w[st.a].t - 1.5);
+          starte(k, t); listenKnopf = b; zeichne(); });
         li.appendChild(b);
       }
       li.addEventListener("click", function () { oeffne(st); });
