@@ -1,7 +1,22 @@
-{"seit": "deiner Abnahme um 10:24 (8 von 10 passten)",
+{
+ "seit": "deiner Abnahme um 10:24 (8 von 10 passten)",
  "stellen": [
-  {"suche": "Eine große unabhängige Auswertung", "was": "„besser als ein Placebo“"},
-  {"suche": "Dass man mit Guanfacin leichter ins Handeln", "was": "„ins Handeln“ statt „ins Tun“"},
-  {"szene": "g3", "was": "Szene 3 dadurch ganz neu gesprochen (nur falls du gegenhören willst)"},
-  {"szene": "g6", "was": "Szene 6 dadurch ganz neu gesprochen (nur falls du gegenhören willst)"}
- ]}
+  {
+   "suche": "Eine große unabhängige Auswertung",
+   "was": "„besser als ein Placebo“"
+  },
+  {
+   "suche": "Dass man mit Guanfacin leichter ins Handeln",
+   "was": "„ins Handeln“ statt „ins Tun“"
+  },
+  {
+   "szene": "g3",
+   "was": "Szene 3 dadurch ganz neu gesprochen (nur falls du gegenhören willst)"
+  },
+  {
+   "szene": "g6",
+   "was": "Szene 6 dadurch ganz neu gesprochen (nur falls du gegenhören willst)"
+  }
+ ],
+ "erledigt": "Abgenommen am 02.11. um 10:29 und gerendert (6:04). Video, Beschreibung und Teilen-Seite liegen im Chat. Die alten Markierungen aus den Kommentar-Runden sind archiviert."
+}

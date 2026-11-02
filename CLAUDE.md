@@ -31,6 +31,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
    **Abnahme ohne Suchen** (Nutzerwunsch 02.11.): Vor jeder Bitte um Abnahme `python3 ../../werkzeug/abnahme.py
    szenen.json hoerprobe abnahme.json` – Kasten ganz oben mit allen geänderten Stellen seit dem letzten Durchgang (je ▶,
    „passt“/„nochmal“) und EINEM Knopf „Abnehmen und rendern“ (Kommentar an Claude, Sammlung `abnahme`).
+   **Nach jeder Runde aufräumen:** bearbeitete Markierungen per ArtifactData-Batch von `markierungen` nach
+   `markierungen_erledigt` verschieben (nicht löschen), sonst stehen sie oben als „offen“. Nach dem Rendern in
+   `abnahme.json` den Schlüssel `erledigt` setzen: Der Kasten zeigt dann nur „✓ Alles abgenommen, nichts offen“.
    Markierungen des Nutzers mit `db_list` (Sammlung `markierungen`) lesen, betroffene Sätze einzeln in 2–3 Fassungen neu.
    **Reihenfolge:** Korrekturen nur in die Hörprobe (vorher/nachher). Erst rendern, wenn der Nutzer die Hörprobe
    abgenommen hat.

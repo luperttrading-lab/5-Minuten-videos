@@ -45,7 +45,12 @@ items = ''.join(
     f'<div class="ab-urteil"><button type="button" data-u="ok">passt</button><button type="button" data-u="nochmal">nochmal</button></div>'
     f'<input type="text" class="ab-anm" id="anm-{s["id"]}" placeholder="Anmerkung zu dieser Stelle" aria-label="Anmerkung zu Stelle {i + 1}">'
     f'</div></li>' for i, s in enumerate(stellen))
-box = f'''<section class="ab-box" id="abnahme" aria-labelledby="ab-titel">
+if ab.get('erledigt'):
+    box = (f'<section class="ab-box ab-fertig" id="abnahme-kasten" aria-labelledby="ab-titel">'
+           f'<h2 id="ab-titel">✓ Alles abgenommen, nichts offen</h2>'
+           f'<p class="ab-lead">{html.escape(ab["erledigt"])}</p></section>\n')
+else:
+  box = f'''<section class="ab-box" id="abnahme-kasten" aria-labelledby="ab-titel">
     <h2 id="ab-titel">Deine Abnahme: {len(stellen)} Stellen sind neu</h2>
     <p class="ab-lead">Seit {html.escape(ab.get("seit", "deinem letzten Durchgang"))}. Tippe ▶ bei jeder Stelle, dann „passt“ oder „nochmal“, bei Bedarf eine Anmerkung direkt darunter. Unten ein Knopf für alles.</p>
     <ol class="ab-liste">{items}</ol>
@@ -57,7 +62,10 @@ box = f'''<section class="ab-box" id="abnahme" aria-labelledby="ab-titel">
   </section>
 '''
 css = '''
-  .ab-box { display: grid; gap: 12px; padding: 16px; border: 2px solid var(--bronze); border-radius: 16px; background: var(--tafel-hoch); }
+  .ab-box { order: -1; display: grid; gap: 12px; padding: 16px; border: 2px solid var(--bronze); border-radius: 16px; background: var(--tafel-hoch); }
+  main > .kopf { order: -2; }
+  .ab-fertig { border-color: var(--gruen-voll); }
+  .ab-fertig h2 { color: var(--gruen-voll) !important; }
   .ab-box h2 { margin: 0; font: 600 20px/1.25 var(--ui); color: var(--bronze); }
   .ab-lead { margin: 0; font-size: 15px; color: var(--tinte); }
   .ab-liste { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
@@ -83,6 +91,7 @@ css = '''
 js = '''
 <script>
 (function () {
+  if (!document.getElementById("ab-ok")) return;          // Status „erledigt“: nichts zu bedienen
   var STELLEN = %s, KAP = %s, db = null, kom = null, anClaude = false, urteil = {}, ende = null, aktiv = null;
   var ton = document.getElementById("ab-ton"), stand = document.getElementById("ab-stand");
   function knopf(b, an) { b.classList.toggle("an", an); b.textContent = an ? "❚❚" : "▶"; }
@@ -121,7 +130,7 @@ js = '''
     if (db) db.collection("abnahme").doc("gesamt").set({ status: status, notiz: notiz, stellen: urteil, zeit: new Date().toISOString() }).catch(function () {});
     if (!kom || !anClaude) { stand.textContent = db ? "Gespeichert. Claude liest es beim nächsten Mal." : "Speicher nicht erreichbar – bitte Claude im Chat Bescheid geben."; return; }
     document.getElementById("ab-ok").disabled = document.getElementById("ab-nein").disabled = true;
-    kom.anchorFor(document.getElementById("abnahme")).then(function (a) { return kom.sendToClaude({ anchor: a, text: text.slice(0, 3900) }); })
+    kom.anchorFor(document.getElementById("abnahme-kasten")).then(function (a) { return kom.sendToClaude({ anchor: a, text: text.slice(0, 3900) }); })
       .then(function () { stand.textContent = status === "ok" ? "Abgenommen ✓ – Claude rendert jetzt." : "An Claude geschickt ✓"; },
         function (e) { stand.textContent = e && e.code === "consent_required" ? "Gespeichert. Zum Senden bitte die Freigabe erlauben." : "Gespeichert, Senden fehlgeschlagen."; })
       .then(function () { document.getElementById("ab-ok").disabled = document.getElementById("ab-nein").disabled = false; });
