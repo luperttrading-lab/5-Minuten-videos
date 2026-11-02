@@ -238,9 +238,19 @@
      "zoom": 0.18
     },
     {
+     "bild": "bilder/g1c.png",
+     "zoom": 0.18,
+     "at": 2
+    },
+    {
      "bild": "bilder/g1b.png",
      "zoom": 0.18,
      "at": 4
+    },
+    {
+     "bild": "bilder/g1d.png",
+     "zoom": 0.18,
+     "at": 5
     }
    ],
    "bilder": [
@@ -251,6 +261,14 @@
     {
      "datei": "bilder/g1b.png",
      "prompt": "an explanatory drawing: a human head in side view with the front part of the brain softly highlighted in warm ochre, inside it a few large nerve cells connected by glowing lines, one connection shown with a small gentle brake symbol like a soft hand slowing a stream, very simple and clear"
+    },
+    {
+     "datei": "bilder/g1c.png",
+     "prompt": "a sturdy small metal medicine cabinet with a key in its lock, standing on a pharmacy shelf, door slightly open showing a few plain white pill boxes inside, warm light, no labels, no text"
+    },
+    {
+     "datei": "bilder/g1d.png",
+     "prompt": "a small white laboratory mouse sitting calmly next to a stack of plain notebooks and a magnifying glass on a wooden lab bench, soft light"
     }
    ]
   },
@@ -295,8 +313,13 @@
    ],
    "shots": [
     {
-     "bild": "bilder/g2a.png",
+     "bild": "bilder/g2c.png",
      "zoom": 0.18
+    },
+    {
+     "bild": "bilder/g2a.png",
+     "zoom": 0.18,
+     "at": 1
     },
     {
      "bild": "bilder/g2b.png",
@@ -304,7 +327,7 @@
      "at": 3
     },
     {
-     "bild": "bilder/g2a.png",
+     "bild": "bilder/g2d.png",
      "zoom": 0.18,
      "at": 4
     }
@@ -317,6 +340,14 @@
     {
      "datei": "bilder/g2b.png",
      "prompt": "a large simple map of the world drawn in ink and watercolor, Europe softly tinted in dove blue, Japan highlighted in warm terracotta, no country names, no text"
+    },
+    {
+     "datei": "bilder/g2c.png",
+     "prompt": "a group of four children and teenagers of different ages from about six to seventeen walking towards the viewer along a tree-lined path to school, all facing us with clearly drawn friendly smiling faces, autumn light"
+    },
+    {
+     "datei": "bilder/g2d.png",
+     "prompt": "two plain white medicine boxes standing side by side on a table, one slightly larger, both completely blank without any writing or logos, a few white pills in front of them"
     }
    ]
   },
@@ -358,14 +389,29 @@
    ],
    "shots": [
     {
+     "bild": "bilder/g3c.png",
+     "zoom": 0.18
+    },
+    {
      "bild": "bilder/g3a.png",
+     "zoom": "none",
+     "at": 1,
      "a": [
       0,
       0,
       2048,
       1152
-     ],
-     "zoom": "none"
+     ]
+    },
+    {
+     "bild": "bilder/g3d.png",
+     "zoom": 0.18,
+     "at": 2
+    },
+    {
+     "bild": "bilder/g3b.png",
+     "zoom": 0.18,
+     "at": 3
     }
    ],
    "bilder": [
@@ -376,6 +422,14 @@
     {
      "datei": "bilder/g3b.png",
      "prompt": "a small seedling growing in four stages from left to right in four clay pots, getting a little taller each time, like weeks passing, simple and large"
+    },
+    {
+     "datei": "bilder/g3c.png",
+     "prompt": "a tall stack of scientific papers and journals on a desk with a large magnifying glass lying on top, a desk lamp, warm light, no readable text"
+    },
+    {
+     "datei": "bilder/g3d.png",
+     "prompt": "a neat stack of gold coins next to a rack of test tubes on a laboratory bench, symbol for research paid by a company, warm light, no text"
     }
    ]
   },
@@ -420,12 +474,17 @@
      "zoom": 0.18
     },
     {
-     "bild": "bilder/g4b.png",
+     "bild": "bilder/g4c.png",
      "zoom": 0.18,
-     "at": 2
+     "at": 3
     },
     {
-     "bild": "bilder/g4a.png",
+     "bild": "bilder/g4b.png",
+     "zoom": 0.18,
+     "at": 4
+    },
+    {
+     "bild": "bilder/g4d.png",
      "zoom": 0.18,
      "at": 5
     }
@@ -438,6 +497,14 @@
     {
      "datei": "bilder/g4b.png",
      "prompt": "a friendly nurse measuring the blood pressure of a teenage girl with an arm cuff, both relaxed, the device display blank, bright room"
+    },
+    {
+     "datei": "bilder/g4c.png",
+     "prompt": "a teenage girl sitting on the edge of her bed holding one hand to her forehead, slightly dizzy, eyes half closed, soft morning light, calm mood"
+    },
+    {
+     "datei": "bilder/g4d.png",
+     "prompt": "a kitchen table by a window split into two halves: on the left a sunny morning with a cup of coffee, on the right an evening with a lamp and the moon outside, a glass of water in the middle"
     }
    ]
   },
@@ -458,7 +525,8 @@
     {
      "t": "Muss nicht täglich genommen werden",
      "at": 0,
-     "ev": "keine"
+     "ev": "keine",
+     "gefahr": true
     },
     {
      "t": "Abrupt absetzen: Blutdruck steigt",
@@ -480,9 +548,14 @@
      "zoom": 0.18
     },
     {
-     "bild": "bilder/g5a.png",
-     "zoom": 0.08,
-     "at": 3
+     "bild": "bilder/g5c.png",
+     "zoom": 0.18,
+     "at": 2
+    },
+    {
+     "bild": "bilder/g5b.png",
+     "zoom": 0.18,
+     "at": 4
     }
    ],
    "bilder": [
@@ -493,6 +566,10 @@
     {
      "datei": "bilder/g5b.png",
      "prompt": "a wide horizontal scene filling the whole frame edge to edge: a broad gentle staircase of five wide stone steps leading softly downward from left to right into a calm garden, a person walking down slowly holding the railing, no empty margins"
+    },
+    {
+     "datei": "bilder/g5c.png",
+     "prompt": "a wide landscape scene: an old-fashioned analog blood pressure gauge lying on a long wooden table next to its folded cuff and black rubber bulb, the needle swinging far to the right into a red zone, the table and warm wall fill the whole frame from edge to edge, no white margins, no numbers or letters on the dial, only colored zones"
     }
    ]
   },
@@ -559,9 +636,14 @@
      "at": 3
     },
     {
-     "bild": "bilder/g6a.png",
+     "bild": "bilder/g6c.png",
      "zoom": 0.18,
-     "at": 7
+     "at": 4
+    },
+    {
+     "bild": "bilder/g6d.png",
+     "zoom": 0.18,
+     "at": 6
     }
    ],
    "bilder": [
@@ -572,6 +654,14 @@
     {
      "datei": "bilder/g6b.png",
      "prompt": "a young woman sitting on a window seat hugging her knees, looking thoughtfully outside at rain, soft and calm mood"
+    },
+    {
+     "datei": "bilder/g6c.png",
+     "prompt": "an older man with short grey hair sitting alone on a park bench, looking thoughtfully into the distance, autumn leaves, calm melancholic mood, friendly face"
+    },
+    {
+     "datei": "bilder/g6d.png",
+     "prompt": "a young man at a desk leaning back and looking at his phone instead of the pile of unfinished papers and folders in front of him, symbol for procrastination, no readable text"
     }
    ]
   },
@@ -587,7 +677,7 @@
     "Drittens: täglich nehmen, nie plötzlich absetzen, Blutdruck und Puls im Blick behalten.",
     "Für Erwachsene, gegen Angst und als Gehirn-Booster fehlt der Beleg.",
     "Die Quellen stehen in der Beschreibung.",
-    "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen."
+    "Gut, dass du dich informierst. Nimm deine Fragen gern mit zu deinem Arzt oder deiner Ärztin. Bis zum nächsten Video!"
    ],
    "bullets": [
     {
@@ -624,6 +714,11 @@
      "bild": "bilder/g7b.png",
      "zoom": 0.18,
      "at": 2
+    },
+    {
+     "bild": "bilder/g7c.png",
+     "zoom": 0.18,
+     "at": 6
     }
    ],
    "bilder": [
@@ -634,6 +729,10 @@
     {
      "datei": "bilder/g7b.png",
      "prompt": "a calendar page drawn as a simple grid with a small green check mark in every box, next to a glass of water and a stethoscope, no numbers, no letters"
+    },
+    {
+     "datei": "bilder/g7c.png",
+     "prompt": "a person seen from behind opening a front door and stepping out into a sunny garden path, bright and friendly mood, symbol for a good farewell"
     }
    ]
   }

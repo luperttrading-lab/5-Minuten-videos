@@ -37,6 +37,7 @@ LEVELS = {
 # Marker je Stichpunkt: Farbe und Zeichen
 MARKS = {
     'stark': ((52, 128, 86), 'check', 'belegt'),
+    'frueh': ((43, 104, 168), 'pfeil', 'frühe Hinweise'),   # vierte Stufe (Strategiepapier 02.11.): neu, vielversprechend, jung
     'mittel': ((190, 136, 30), 'tilde', 'teilweise'),
     'offen': ((138, 132, 126), 'frage', 'keine Studien'),
     'keine': ((178, 52, 48), 'cross', 'nicht haltbar'),
@@ -57,8 +58,18 @@ def draw_mark(d, cx, cy, r, kind):
     elif sym == 'tilde':
         d.arc([cx - k * 1.3, cy - k * 0.5, cx, cy + k * 0.5], 200, 340, fill='white', width=w)
         d.arc([cx, cy - k * 0.5, cx + k * 1.3, cy + k * 0.5], 20, 160, fill='white', width=w)
+    elif sym == 'pfeil':                                   # Pfeil schräg nach oben: „kommt vielleicht“
+        d.line([(cx - k * 0.75, cy + k * 0.75), (cx + k * 0.6, cy - k * 0.6)], fill='white', width=w)
+        d.polygon([(cx + k * 0.95, cy - k * 0.95), (cx + k * 0.05, cy - k * 0.85), (cx + k * 0.85, cy - k * 0.05)], fill='white')
     else:
         d.text((cx, cy + 1), '?', font=font(INTER.format('Bold'), int(r * 1.45)), fill='white', anchor='mm')
+
+
+def draw_gefahr(d, x, cy, h):
+    """Warndreieck neben einem roten Marker: Die Behauptung ist nicht nur falsch, sondern gefährlich."""
+    col = MARKS['keine'][0]
+    d.polygon([(x, cy + h * 0.5), (x + h * 0.58, cy - h * 0.5), (x + h * 1.16, cy + h * 0.5)], fill=col)
+    d.text((x + h * 0.58, cy + h * 0.14), '!', font=font(INTER.format('Bold'), int(h * 0.72)), fill='white', anchor='mm')
 INTER = '/usr/share/fonts/opentype/inter/Inter-{}.otf'
 SERIF_B = '/usr/share/fonts/truetype/crosextra/Caladea-Bold.ttf'
 TX0, TX1 = 100, 760            # Textspalte links
@@ -345,7 +356,7 @@ def panel_states(sc):
         if used - {None}:                              # Legende statt Fliesstext
             fl = font(INTER.format('Regular'), 21)
             xx, yy = TX0, by + 84
-            kinds = ['stark', 'mittel'] + (['offen'] if 'offen' in used else []) + ['keine']
+            kinds = ['stark'] + (['frueh'] if 'frueh' in used else []) + ['mittel'] + (['offen'] if 'offen' in used else []) + ['keine']
             for kind in kinds:
                 draw_mark(d, xx + 11, yy, 11, kind)
                 d.text((xx + 28, yy), MARKS[kind][2], font=fl, fill=MUTED, anchor='lm')
@@ -376,6 +387,8 @@ def panel_states(sc):
         for line in lines:
             d.text((TX0 + 46, y), line, font=fb, fill=INK)
             y += 45
+        if b.get('gefahr'):                             # ⚠ hinter der letzten Zeile
+            draw_gefahr(d, TX0 + 46 + d.textlength(lines[-1], font=fb) + 14, y - 45 + 22, 30)
         y += 20
         states.append(img)
     if y > 830:
@@ -591,7 +604,7 @@ class AgendaScene:
         self.legend = Image.new('RGBA', (W, 60), (0, 0, 0, 0))
         dl = ImageDraw.Draw(self.legend)
         fl = font(INTER.format('Medium'), 28)
-        items = [('stark', 'belegt'), ('mittel', 'teilweise'), ('keine', 'nicht haltbar')]
+        items = [('stark', 'belegt')] + ([('frueh', 'frühe Hinweise')] if sc.get('_frueh') else []) + [('mittel', 'teilweise'), ('keine', 'nicht haltbar')]
         widths = [44 + int(dl.textlength(t, font=fl)) for _, t in items]
         xx = (W - sum(widths) - 60 * (len(items) - 1)) // 2
         for (kind, t), w in zip(items, widths):
@@ -760,6 +773,9 @@ def main():
     args = ap.parse_args()
     args.cache = args.cache or os.path.join(os.path.dirname(os.path.abspath(args.szenen)), 'tts_cache')
     cfg = json.load(open(args.szenen, encoding='utf-8'))
+    frueh = any(b.get('ev') == 'frueh' for sc in cfg['scenes'] for b in sc.get('bullets', []))
+    for sc in cfg['scenes']:
+        sc['_frueh'] = frueh                            # Legende der Kacheln zeigt Blau nur, wenn es vorkommt
     global BILD_DIR
     BILD_DIR = os.path.dirname(os.path.abspath(args.szenen))
     number_sources(cfg)
