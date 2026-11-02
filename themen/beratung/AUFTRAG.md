@@ -39,8 +39,8 @@ besser als Chat-Text). Er möchte vorab sehen, wie du vorgehst.
   Kreatin fürs Gehirn, Vitamin D (Telomere vs. Megadosen), Kollagen/Mg-Threonat (Herstellerstudien), zeitlich begrenztes Essen.
 - `recherche_A.md`: YouTube-Richtlinien und Health-Features, KI-Kennzeichnung, beste evidenzbasierte Kanäle (Disclaimer,
   Hooks, Abschlussformeln), Zuschauerbindung, Recht in Deutschland (HWG, MStV § 19, Impressum, Haftung), Hinweistexte von
-  Quarks/IQWiG. **Stand beim Übergeben noch unvollständig** (Quellenverzeichnis fehlte); die vollständige Fassung kommt
-  per Nachricht aus der Guanfacin-Sitzung bzw. als neuer Commit.
+  Quarks/IQWiG. Vollständig seit Commit 4252a9b (76 Quellen). Ungeprüft und vor dem Zitieren
+  zu verifizieren: die Urteile „BGH 26.03.2026, I ZR 74/25“ und „OLG Köln 11.09.2025“ sowie Kang 2026 und Wegmann 2026.
 - Alle Zahlen und Zitate in den Recherchen vor dem Übernehmen stichprobenartig gegenprüfen (Agenten können sich irren),
   insbesondere Rechtliches.
 
