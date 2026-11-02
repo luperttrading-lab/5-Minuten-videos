@@ -380,13 +380,32 @@ def panel_states(sc):
     for b in sc.get('bullets', []):
         img = states[-1].copy()
         d = ImageDraw.Draw(img)
-        lines = wrap(d, b['t'], fb, TX1 - TX0 - 50)
+        rot = b.get('ev') == 'keine'
+        stil = os.environ.get('ROT_STIL', 'A') if rot else ''
+        txt = b['t']
+        if stil == 'A':
+            txt = 'Falsch: „' + txt + '“'
+        elif stil == 'B':
+            txt = '„' + txt + '“ – falsch'
+        lines = wrap(d, txt, fb, TX1 - TX0 - 50)
         if b.get('ev'):
             draw_mark(d, TX0 + 15, y + 22, 16, b['ev'])
         else:
             d.ellipse([TX0 + 9, y + 16, TX0 + 21, y + 28], fill=ACCENT)
-        for line in lines:
-            d.text((TX0 + 46, y), line, font=fb, fill=INK)
+        ROT = MARKS['keine'][0]
+        for k, line in enumerate(lines):
+            x = TX0 + 46
+            if stil == 'A' and k == 0 and line.startswith('Falsch:'):
+                d.text((x, y), 'Falsch:', font=fb, fill=ROT)
+                x += d.textlength('Falsch: ', font=fb)
+                line = line[len('Falsch: '):]
+            if stil == 'B' and k == len(lines) - 1 and line.endswith('falsch'):
+                d.text((x, y), line[:-6], font=fb, fill=INK)
+                d.text((x + d.textlength(line[:-6], font=fb), y), 'falsch', font=fb, fill=ROT)
+            else:
+                d.text((x, y), line, font=fb, fill=INK)
+            if stil == 'C':
+                d.line([(x, y + 24), (x + d.textlength(line, font=fb), y + 24)], fill=ROT, width=3)
             y += 45
         if b.get('gefahr'):                             # ⚠ hinter der letzten Zeile
             draw_gefahr(d, TX0 + 46 + d.textlength(lines[-1], font=fb) + 14, y - 45 + 22, 30)
