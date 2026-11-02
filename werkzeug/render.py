@@ -351,9 +351,14 @@ def panel_states(sc):
     if ev:
         col, dots, label = LEVELS[ev['level']]
         by = 850
-        fb = font(INTER.format('SemiBold'), 30)          # größer fürs Handy (Nutzerwunsch 02.11., vorher 25)
         txt = 'Beweislage: ' + ev.get('label', label)
-        tw = d.textlength(txt, font=fb)
+        for gr in range(30, 22, -1):                     # größer fürs Handy (02.11.), lange Etiketten schrumpfen bis
+            fb = font(INTER.format('SemiBold'), gr)      # sie vor dem Bildfeld enden statt hineinzuragen
+            tw = d.textlength(txt, font=fb)
+            if TX0 + tw + 56 <= PIC[0] - 24:
+                break
+        else:
+            print(f"WARNUNG {sc['id']}: Beweislage-Etikett zu lang, ragt ins Bild: „{txt}“")
         bw = int(tw + 56)                              # nur Farbe und Text, keine Punkte (waeren doppelt)
         tint = tuple(int(c * 0.14 + p * 0.86) for c, p in zip(col, PAPER))
         d.rounded_rectangle([TX0, by, TX0 + bw, by + 62], radius=31, fill=tint, outline=col, width=2)

@@ -14,7 +14,7 @@ FOLGE = {'t1': [('b', 0), ('a', 3), ('b', 6)], 't5': [('a', 0), ('b', 3), ('a', 
          't7': [('a', 0), ('b', 2)]}
 def shots(sid, at):
     f = FOLGE.get(sid, [('a', 0), ('b', at)])
-    GANZ = {'t1a'}                                     # Erklärbilder mit Ablauf: ganz zeigen, nicht freistellen
+    GANZ = {'t1a', 't7b'}                                   # Erklärbilder mit Ablauf: ganz zeigen, nicht freistellen
     return [dict({'bild': f'bilder/{sid}{x}.png', 'zoom': 0.18}, **({'at': n} if n else {}),
                  **({'a': [0, 0, 2048, 1152], 'zoom': 'none'} if sid + x in GANZ else {})) for x, n in f]
 
@@ -46,7 +46,7 @@ scenes = [
    'Tipp für dich: Brate das Mark kurz in etwas Öl an, bevor die anderen Zutaten in den Topf kommen.'],
   'bullets': [B('Mark: 20-mal mehr Lykopin', 1, 'mittel'), B('Hitze und Öl verbessern die Aufnahme', 3, 'stark'),
               B('Mit Olivenöl über 80 % mehr', 5, 'mittel')],
-  'evidence': {'level': 'mittel', 'label': 'Richtung stimmt, Zahlen übertrieben'},
+  'evidence': {'level': 'mittel', 'label': 'Richtung ja, Zahlen zu hoch'},
   'quellen': ['usda_fdc', 'gaertner1997', 'stahl1992', 'unlu2007', 'fielding2005'],
   'shots': shots('t1', 6),
   'bilder': [
@@ -82,7 +82,7 @@ scenes = [
    'Tipp für dich: Tomaten gehören in eine Mittelmeerküche. Tabletten gegen Blutdruck oder Cholesterin ersetzen sie nicht.'],
   'bullets': [B('55 % weniger Schlaganfälle', 0, 'mittel'), B('Senkt LDL um etwa 10 %', 5, 'mittel'),
               B('Senkt den Blutdruck', 6, 'mittel')],
-  'evidence': {'level': 'mittel', 'label': 'Zusammenhang ja, Ursache unklar'},
+  'evidence': {'level': 'mittel', 'label': 'nur ein Zusammenhang'},
   'quellen': ['karppi2012', 'martens2021', 'ried2011', 'tierney2020', 'li2013'],
   'shots': shots('t3', 7),
   'bilder': [
@@ -150,7 +150,7 @@ scenes = [
    'Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!'],
   'bullets': [B('Gekocht mit Öl besser aufgenommen', 1, 'stark'), B('Schützt Gehirn, Herz, vor Krebs', 2, 'mittel'),
               dict(B('Nur natürliches Lykopin wirkt', 3, 'keine'), unbelegt=True)],
-  'evidence': {'level': 'mittel', 'label': 'gutes Lebensmittel, kein Wundermittel'},
+  'evidence': {'level': 'mittel', 'label': 'gut, aber kein Wundermittel'},
   'quellen': ['usda_fdc'],
   'shots': shots('t7', 4),
   'bilder': [

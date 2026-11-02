@@ -256,7 +256,7 @@
    ],
    "evidence": {
     "level": "mittel",
-    "label": "Richtung stimmt, Zahlen übertrieben"
+    "label": "Richtung ja, Zahlen zu hoch"
    },
    "quellen": [
     "usda_fdc",
@@ -402,7 +402,7 @@
    ],
    "evidence": {
     "level": "mittel",
-    "label": "Zusammenhang ja, Ursache unklar"
+    "label": "nur ein Zusammenhang"
    },
    "quellen": [
     "karppi2012",
@@ -660,7 +660,7 @@
    ],
    "evidence": {
     "level": "mittel",
-    "label": "gutes Lebensmittel, kein Wundermittel"
+    "label": "gut, aber kein Wundermittel"
    },
    "quellen": [
     "usda_fdc"
@@ -672,8 +672,14 @@
     },
     {
      "bild": "bilder/t7b.png",
-     "zoom": 0.18,
-     "at": 2
+     "zoom": "none",
+     "at": 2,
+     "a": [
+      0,
+      0,
+      2048,
+      1152
+     ]
     }
    ],
    "bilder": [
