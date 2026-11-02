@@ -87,4 +87,4 @@ nach Nutzen und Risiken.
 Was bleibt? Erstens: Guanfacin ist kein Stimulans wie Ritalin, sondern eine ruhigere Alternative für Kinder und Jugendliche,
 wenn die Stimulanzien nicht passen oder nicht vertragen werden. Zweitens: Es wirkt langsamer und schwächer als Stimulanzien und macht anfangs oft müde.
 Drittens: täglich nehmen, nie plötzlich absetzen, Blutdruck und Puls im Blick behalten. Für Erwachsene, gegen Angst und
-als Gehirn-Booster fehlt der Beleg. Dieses Video ersetzt keinen ärztlichen Rat. Die Quellen stehen in der Beschreibung.
+als Gehirn-Booster fehlt der Beleg. Die Quellen stehen in der Beschreibung. Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.
