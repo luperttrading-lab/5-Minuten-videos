@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guanfacin: Was stimmt?</title>
+<style>
+  :root { color-scheme: light dark; --ink:#222632; --muted:#6f6a66; --bg:#faf3ea; --card:#fffaf3; --accent:#324e7a; --line:#e6dccf; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#ece7e0; --muted:#a8a29b; --bg:#1c1b1a; --card:#262422; --accent:#8fb0e3; --line:#3a3633; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width:780px; margin:0 auto; padding:22px 16px 56px; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size:1.7rem; line-height:1.2; margin:.1em 0 .35em; }
+  .lead { color:var(--muted); margin:0 0 18px; }
+  video { width:100%; border-radius:12px; display:block; background:#000; }
+  .kap { display:flex; flex-wrap:wrap; gap:6px; margin:12px 0 26px; }
+  .kap button { font:inherit; font-size:.85rem; padding:6px 10px; border-radius:999px; border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; }
+  h2 { font-size:1.15rem; margin:28px 0 10px; }
+  .short video { max-width:340px; margin:0 auto; }
+  details { background:var(--card); border-radius:12px; padding:12px 14px; border:1px solid var(--line); }
+  summary { cursor:pointer; font-weight:600; }
+  ol { margin:10px 0 0; padding-left:30px; } li { margin:4px 0; font-size:.92rem; }
+  a { color:var(--accent); }
+  .fuss { color:var(--muted); font-size:.85rem; margin-top:26px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Guanfacin: Was stimmt?</h1>
+  <p class="lead">Ein Faktencheck zu Wirkung, Zulassung, Nebenwirkungen und Off-Label-Gebrauch des ADHS-Medikaments. Jeder Punkt ist gegen Fachinformation, Leitlinie und Studien geprüft.</p>
+  <video id="v" controls playsinline preload="metadata" src="video.mp4"></video>
+  <div class="kap">
+    <button data-t="0.0">0:00 · Einleitung</button>
+    <button data-t="21.1">0:21 · Was ist Guanfacin?</button>
+    <button data-t="79.0">1:19 · Für wen zugelassen?</button>
+    <button data-t="129.1">2:09 · Wie gut wirkt es?</button>
+    <button data-t="176.8">2:56 · Nebenwirkungen</button>
+    <button data-t="223.0">3:43 · Absetzen</button>
+    <button data-t="258.6">4:18 · Erwachsene und mehr</button>
+    <button data-t="320.6">5:20 · Fazit</button>
+  </div>
+  <h2>Quellen</h2>
+  <details><summary>Alle 22 Quellen (Nummern wie im Video)</summary>
+    <ol>
+      <li><a href="https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=019032">U.S. Food and Drug Administration: Drugs@FDA NDA 019032, Tenex (guanfacine), Zulassung 27.10.1986.</a></li>
+      <li><a href="https://www.ema.europa.eu/de/documents/product-information/intuniv-epar-product-information_de.pdf">Takeda: Intuniv Retardtabletten, Zusammenfassung der Merkmale des Arzneimittels (EPAR-Produktinformation, deutsch), Stand 2026.</a></li>
+      <li><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b972af81-3a37-40be-9fe1-3ddf59852528">Takeda: INTUNIV (guanfacine) extended-release tablets, Prescribing Information, 06/2025.</a></li>
+      <li><a href="https://doi.org/10.1016/j.cell.2007.03.015">Wang M, Ramos BP, Paspalas CD et al., Arnsten AF. Alpha2A-adrenoceptors strengthen working memory networks by inhibiting cAMP-HCN channel signaling in prefrontal cortex. Cell 2007;129(2):397–410.</a></li>
+      <li><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/intuniv">European Medicines Agency: Intuniv (guanfacine), EPAR – Medicine overview. Zulassung 17.09.2015.</a></li>
+      <li><a href="https://www.dgppn.de/_Resources/Persistent/352a63526561b8e26f497ee2ad5ef392dcaa69c7/028-045l_S3_KF_Aufmerksamkeitsdefizit-Hyperaktivit%C3%A4tsstoerung-ADHS-Kinder-Jugendliche-Erwachsene_205-05.pdf">DGKJP, DGPPN, DGSPJ: Interdisziplinäre S3-Leitlinie „ADHS im Kindes-, Jugend- und Erwachsenenalter“, Version 2.0, AWMF-Reg.-Nr. 028-045, 2026.</a></li>
+      <li><a href="https://www.pmda.go.jp/files/000235724.pdf">Pharmaceuticals and Medical Devices Agency: Review Report Intuniv Tablets (Shionogi), Erweiterung auf Erwachsene, 2019.</a></li>
+      <li><a href="https://www.fachinfo.de/fi/pdf/025580/guanfacin-neuraxpharm-r">Neuraxpharm: Fachinformation Guanfacin Neuraxpharm Retardtabletten, Zulassung 24.09.2025.</a></li>
+      <li><a href="https://doi.org/10.1016/S2215-0366(18)30269-4">Cortese S, Adamo N, Del Giovane C et al. Comparative efficacy and tolerability of medications for ADHD in children, adolescents, and adults: a systematic review and network meta-analysis. Lancet Psychiatry 2018;5(9):727–738.</a></li>
+      <li><a href="https://doi.org/10.1016/j.euroneuro.2014.08.001">Ruggiero S, Clavenna A, Reale L et al. Guanfacine for attention deficit and hyperactivity disorder in pediatrics: a systematic review and meta-analysis. Eur Neuropsychopharmacol 2014;24(10):1578–1590.</a></li>
+      <li><a href="https://doi.org/10.1542/peds.2006-3695">Biederman J, Melmed RD, Patel A et al. A randomized, double-blind, placebo-controlled study of guanfacine extended release in children and adolescents with ADHD. Pediatrics 2008;121(1):e73–84 (Sponsor Shire).</a></li>
+      <li><a href="https://doi.org/10.1016/j.jaac.2011.10.012">Wilens TE, Bukstein O, Brams M et al. A controlled trial of extended-release guanfacine and psychostimulants for ADHD. J Am Acad Child Adolesc Psychiatry 2012;51(1):74–85 (Sponsor Shire).</a></li>
+      <li><a href="https://doi.org/10.1038/clpt.1985.39">Jain AK, Hiremath A, Michael R et al. Clonidine and guanfacine in hypertension. Clin Pharmacol Ther 1985;37(3):271–276.</a></li>
+      <li><a href="https://doi.org/10.1016/j.jaac.2013.06.006">Newcorn JH, Stein MA, Childress AC et al. Randomized, double-blind trial of guanfacine extended release in children with ADHD: morning or evening administration. J Am Acad Child Adolesc Psychiatry 2013;52(9):921–930 (Sponsor Shire).</a></li>
+      <li><a href="https://doi.org/10.4088/JCP.19m12979">Iwanami A, Saito K, Fujiwara M et al. Efficacy and safety of guanfacine extended-release in the treatment of ADHD in adults: a randomized, double-blind, placebo-controlled study. J Clin Psychiatry 2020;81(3):19m12979 (Shionogi).</a></li>
+      <li><a href="https://doi.org/10.1089/cap.2016.0132">Strawn JR, Compton SN, Robertson B et al. Extended release guanfacine in pediatric anxiety disorders: a pilot, randomized, placebo-controlled trial. J Child Adolesc Psychopharmacol 2017;27(1):29–37.</a></li>
+      <li><a href="https://doi.org/10.1176/appi.ajp.163.12.2186">Neylan TC, Lenoci M, Samuelson KW et al. No improvement of posttraumatic stress disorder symptoms with guanfacine treatment. Am J Psychiatry 2006;163(12):2186–2188.</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/18362867/">Davis LL, Ward C, Rasmusson A et al. A placebo-controlled trial of guanfacine for the treatment of posttraumatic stress disorder in veterans. Psychopharmacol Bull 2008;41(1):8–18.</a></li>
+      <li><a href="https://doi.org/10.1176/appi.ajp.158.7.1067">Scahill L, Chappell PB, Kim YS et al. A placebo-controlled study of guanfacine in the treatment of children with tic disorders and ADHD. Am J Psychiatry 2001;158(7):1067–1074.</a></li>
+      <li><a href="https://doi.org/10.1089/cap.2017.0024">Murphy TK, Fernandez TV, Coffey BJ et al. Extended-release guanfacine does not show a large effect on tic severity in children with chronic tic disorders. J Child Adolesc Psychopharmacol 2017;27(9):762–770.</a></li>
+      <li><a href="https://doi.org/10.1007/s00213-005-0078-4">Müller U, Clark L, Lam ML et al. Lack of effects of guanfacine on executive and memory functions in healthy male volunteers. Psychopharmacology 2005;182(2):205–213.</a></li>
+      <li><a href="https://doi.org/10.1016/j.neurobiolaging.2018.05.033">Barcelos NM, Van Ness PH, Wagner AF et al. Guanfacine treatment for prefrontal cognitive dysfunction in older participants: a randomized clinical trial. Neurobiol Aging 2018;70:117–124.</a></li>
+    </ol>
+  </details>
+  <p class="fuss">Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.</p>
+</main>
+<script>
+  const v = document.getElementById('v');
+  document.querySelectorAll('.kap button').forEach(b => b.addEventListener('click', () => {
+    v.currentTime = parseFloat(b.dataset.t); v.play().catch(() => {});
+  }));
+</script>
+</body>
+</html>

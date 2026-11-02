@@ -91,7 +91,7 @@ scenes = [
               {"t": "Verstärkt Stimulanzien als Zusatz", "at": 5, "ev": "mittel"}],
   "evidence": {"level": "mittel", "label": "wirkt, aber schwächer und langsamer"},
   "quellen": ["cortese2018", "ruggiero2014", "biederman2008", "wilens2012"],
-  "shots": [{"bild": "bilder/g3a.png", "zoom": 0.18}, {"bild": "bilder/g3a.png", "zoom": 0.08, "at": 3}],
+  "shots": [{"bild": "bilder/g3a.png", "a": [0, 0, 2048, 1152], "zoom": "none"}],
   "bilder": [
    {"datei": "bilder/g3a.png", "prompt": "exactly ten simple round-headed child figures standing in one row filling the width of the frame, each with a friendly simple face with eyes and a smile; the first six on the left wear bright warm terracotta clothes and look cheerful, the last four on the right are drawn only in pale grey pencil and look neutral; strong colour contrast, clearly countable"},
    {"datei": "bilder/g3b.png", "prompt": "a small seedling growing in four stages from left to right in four clay pots, getting a little taller each time, like weeks passing, simple and large"}]},
@@ -171,7 +171,7 @@ scenes = [
 cfg = {"tts": "elevenlabs", "voice_id": "NBqeXKdZHweef6y0B67V", "voice_name": "Christian - Warm and Captivating",
        "model": "eleven_v4", "tempo": 1.0, "titel": "Guanfacin: Was stimmt?",
        "untertitel": "Ein Faktencheck zu Wirkung, Zulassung, Nebenwirkungen und Off-Label-Gebrauch des ADHS-Medikaments. Jeder Punkt ist gegen Fachinformation, Leitlinie und Studien geprüft.",
-       "fuss": "Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Kein Ersatz für ärztlichen Rat.",
+       "fuss": "Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.",
        "quellen": quellen, "scenes": scenes}
 json.dump(cfg, open("szenen.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 w = sum(len((s if isinstance(s, str) else s["say"]).split()) for sc in scenes for s in sc["sentences"])
