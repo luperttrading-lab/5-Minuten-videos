@@ -144,7 +144,7 @@
    "id": "t0",
    "layout": "kacheln",
    "kapitel": "Einleitung",
-   "kicker": "Info-Video · Faktencheck",
+   "kicker": "Faktencheck",
    "headline": "Tomatenmark: Was steckt wirklich im Löffel?",
    "sentences": [
     "Ein Löffel Tomatenmark am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren: Nicht alles davon hält.",
@@ -153,11 +153,31 @@
    "hervorheben_at": 1,
    "legende_at": 1,
    "kacheln_ab": 1,
-   "hook_bild": "bilder/t0_hook.png",
+   "hook_bild": "bilder/t0_hook_b.png",
+   "hook_titel": "Tomatenmark",
+   "hook_zeilen": [
+    {
+     "t": "Ein Löffel am Tag?",
+     "wort": "Löffel"
+    },
+    {
+     "t": "Stärkt das Gedächtnis?",
+     "wort": "Gedächtnis"
+    },
+    {
+     "t": "Halbiert Schlaganfälle?",
+     "wort": "Schlaganfälle"
+    },
+    {
+     "t": "Nicht alles davon hält.",
+     "wort": "Nicht",
+     "art": "urteil"
+    }
+   ],
    "bilder": [
     {
-     "datei": "bilder/t0_hook.png",
-     "prompt": "a single large silver tablespoon heaped with deep red tomato paste, held in front of the softly drawn profile of a human head in which the brain glows in warm terracotta and ochre; the spoon and the head fill most of the wide frame, calm and slightly mysterious mood"
+     "datei": "bilder/t0_hook_b.png",
+     "prompt": "a wide view of a warm wooden kitchen table; on the RIGHT half of the frame a large silver tablespoon heaped with deep red tomato paste in front of the softly drawn profile of a human head whose brain glows in warm terracotta and ochre; the LEFT half of the frame is calm, empty, softly lit plain wall and table with nothing on it, leaving room for a title; calm and slightly mysterious mood"
     }
    ],
    "kacheln": [

@@ -17,13 +17,15 @@ def shots(sid, at):
     return [dict({'bild': f'bilder/{sid}{x}.png', 'zoom': 0.18}, **({'at': n} if n else {})) for x, n in f]
 
 scenes = [
- {'id': 't0', 'layout': 'kacheln', 'kapitel': 'Einleitung', 'kicker': 'Info-Video · Faktencheck',
+ {'id': 't0', 'layout': 'kacheln', 'kapitel': 'Einleitung', 'kicker': 'Faktencheck',
   'headline': 'Tomatenmark: Was steckt wirklich im Löffel?',
   'sentences': [
    'Ein Löffel Tomatenmark am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren: Nicht alles davon hält.',
    'Wir prüfen sechs Fragen: Mark oder frische Tomate, was es dem Gehirn bringt und dem Herzen, ob eine Kapsel reicht, welche Versprechen halten und worauf du beim Kauf achtest.'],
-  'hervorheben_at': 1, 'legende_at': 1, 'kacheln_ab': 1, 'hook_bild': 'bilder/t0_hook.png',
-  'bilder': [{'datei': 'bilder/t0_hook.png', 'prompt': 'a single large silver tablespoon heaped with deep red tomato paste, held in front of the softly drawn profile of a human head in which the brain glows in warm terracotta and ochre; the spoon and the head fill most of the wide frame, calm and slightly mysterious mood'}],
+  'hervorheben_at': 1, 'legende_at': 1, 'kacheln_ab': 1, 'hook_bild': 'bilder/t0_hook_b.png', 'hook_titel': 'Tomatenmark',
+  'hook_zeilen': [{'t': 'Ein Löffel am Tag?', 'wort': 'Löffel'}, {'t': 'Stärkt das Gedächtnis?', 'wort': 'Gedächtnis'},
+                  {'t': 'Halbiert Schlaganfälle?', 'wort': 'Schlaganfälle'}, {'t': 'Nicht alles davon hält.', 'wort': 'Nicht', 'art': 'urteil'}],
+  'bilder': [{'datei': 'bilder/t0_hook_b.png', 'prompt': 'a wide view of a warm wooden kitchen table; on the RIGHT half of the frame a large silver tablespoon heaped with deep red tomato paste in front of the softly drawn profile of a human head whose brain glows in warm terracotta and ochre; the LEFT half of the frame is calm, empty, softly lit plain wall and table with nothing on it, leaving room for a title; calm and slightly mysterious mood'}],
   'kacheln': [{'t': 'Mark oder Tomate?', 'bild': 'bilder/t1b.png', 'wort': 'frische Tomate'},
               {'t': 'Hilft es dem Gehirn?', 'bild': 'bilder/t2a.png', 'wort': 'Gehirn bringt'},
               {'t': 'Herz und Schlaganfall', 'bild': 'bilder/t3a.png', 'wort': 'Herzen'},
