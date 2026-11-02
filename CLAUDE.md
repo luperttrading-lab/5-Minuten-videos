@@ -138,6 +138,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   wenn der Nutzer sie ausdrücklich will, z. B. 1080p für den Upload. Einstieg testen: `render.py … --bis 17`.
 - Braucht es eine Entscheidung oder Abnahme des Nutzers: erste Zeile **„Deine Aufgabe: …“** mit Link, Ort auf der
   Seite und Zahl der Stellen („oben im Kasten, 10 Stellen, dann grüner Knopf“). Nie nur „bitte abnehmen“ (Suchzeit).
+  **Jeder offene Punkt mit eigenem Link** (Nutzerwunsch 02.11.), auch Entscheidungen, die im Chat beantwortet werden:
+  Vergleichsbilder dafür als Eintrag auf die Vorschau-Seite (Standbild als kurzes Video, „passt“ = übernehmen), damit
+  alles Offene an einem Ort mit Link liegt. Nie ein Kürzel („Variante D“) ohne Bild und Link wiederholen.
 - Am Ende jeder Antwort genau eine Kostenzeile: `python3 tools/kosten.py` ausführen, Ausgabe wörtlich als letzte Zeile.
 - Jede Internetadresse als klickbarer Markdown-Link. Wurde ein Artifact oder eine Datei veröffentlicht: den Link als letzte
   Zeile vor der Kostenzeile wiederholen (`**Link:** [Name](URL)`).

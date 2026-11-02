@@ -1,7 +1,15 @@
 {
  "titel": "Tomatenmark",
- "aufgabe": "Das ganze Video ansehen (5:42, Ton an), dann „passt“ oder „ändern“ mit Notiz. Danach stelle ich Beschreibung und Teilen-Seite fertig.",
+ "aufgabe": "Zwei Punkte, beide hier auf der Seite: (1) Startbild-Frage: „passt“ = Variante D übernehmen, „ändern“ = so lassen. (2) Das ganze Video ansehen (5:42, Ton an), dann „passt“ oder „ändern“ mit Notiz.",
  "videos": [
+  {
+   "datei": "startbild_d.mp4",
+   "titel": "Startbild: „Beweislage:“ vor die Ampel? (Standbild)",
+   "stand": "02.11., 20:55",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Oben das Startbild wie jetzt im Video, unten Variante D mit „Beweislage:“ vor der Ampel – dasselbe Wort wie im Kasten jeder Szene. „passt“ = D übernehmen (gilt dann für alle Videos), „ändern“ = so lassen."
+  },
   {
    "datei": "video_720p.mp4",
    "titel": "Ganzes Video, erste Fassung",
