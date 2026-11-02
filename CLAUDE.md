@@ -65,6 +65,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Schrift am Rand `zoom: "none"`. Tippfehler und Fantasieschrift der KI-Grafiken vorher korrigieren (`fix_grafik.py`).
   Falsche Aussagen im Bild nur zeigen, wenn das Video sie richtigstellt.
 - Keine durchlaufende Gesamtgrafik als Einstieg.
+- **Hook in den ersten 8 Sekunden** (Nutzerentscheidung 02.11., Strategiepapier `themen/beratung/strategiepapier.pdf`):
+  ein Satz mit der stärksten Behauptung und einem offenen Versprechen, ohne Begrüßung, erst danach die Kacheln.
+  Zuspitzen ja, täuschen nein; der Hook wird im Video eingelöst.
 - Stimme: ElevenLabs „Christian – Warm and Captivating“ (`NBqeXKdZHweef6y0B67V`), Modell `eleven_v4`, Tempo 1,0;
   spricht ≈ 2,1 Wörter/s, also 5 Minuten ≈ 600 Wörter.
   Stimme am 02.11. bestätigt (Sprecherprobe gegen Alexander, Marko, Marcus, Leo: `themen/stil/stimmprobe/`).
@@ -102,4 +105,7 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Zeile vor der Kostenzeile wiederholen (`**Link:** [Name](URL)`).
 
 ## Themenideen
+- Fahrplan aus dem Strategiepapier (vom Nutzer am 02.11. gutgeheißen, erst angehen, wenn die fünf vorhandenen Videos
+  nach Vorlage v2 überarbeitet sind): Vitamin D (Telomere, Testen, Megadosen), Mikroplastik im Gehirn, Kollagen,
+  Berberin („natürliches Ozempic“), Magnesium-L-Threonat. Reserve: Kreatin fürs Gehirn, 16:8-Essen, Ashwagandha.
 - Magnesium und Vitamin D im Detail (Aktivierung, Dai 2018, Cheung 2022), angekündigt in Magnesium 2.
