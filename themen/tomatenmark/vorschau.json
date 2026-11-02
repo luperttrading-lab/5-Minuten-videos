@@ -1,22 +1,22 @@
 {
  "titel": "Tomatenmark",
- "aufgabe": "Zwei Punkte, beide hier auf der Seite: (1) Startbild-Frage: „passt“ = Variante D übernehmen, „ändern“ = so lassen. (2) Das ganze Video ansehen (5:42, Ton an), dann „passt“ oder „ändern“ mit Notiz.",
+ "aufgabe": "Das ganze Video ansehen (5:42, Ton an), dann „passt“ oder „ändern“ mit Notiz. Danach veröffentliche ich Beschreibung und Teilen-Seite.",
  "videos": [
+  {
+   "datei": "video_720p.mp4",
+   "titel": "Ganzes Video, zweite Fassung: „Beweislage:“ und größere Schrift",
+   "stand": "02.11., 21:15",
+   "pruefen": true,
+   "poster_bei": 20,
+   "notiz": "5:42, 720p. Neu gegenüber der ersten Fassung: Startbild mit „Beweislage:“ vor der Ampel (deine Wahl), Legende und Beweislage-Kasten in allen Szenen größer, damit sie auf dem Handy lesbar sind. Sonst unverändert."
+  },
   {
    "datei": "startbild_d.mp4",
    "titel": "Startbild: „Beweislage:“ vor die Ampel? (Standbild)",
-   "stand": "02.11., 20:55",
-   "pruefen": true,
+   "stand": "02.11., 20:55 (entschieden: D)",
+   "pruefen": false,
    "poster_bei": 1,
    "notiz": "Oben das Startbild wie jetzt im Video, unten Variante D mit „Beweislage:“ vor der Ampel – dasselbe Wort wie im Kasten jeder Szene. „passt“ = D übernehmen (gilt dann für alle Videos), „ändern“ = so lassen."
-  },
-  {
-   "datei": "video_720p.mp4",
-   "titel": "Ganzes Video, erste Fassung",
-   "stand": "02.11., 20:15",
-   "pruefen": true,
-   "poster_bei": 20,
-   "notiz": "5:42, 720p. Enthält alle abgenommenen Änderungen: Hook „Was steckt wirklich im Löffel?“, Ampel dreistufig mit Zusatz „erst eine kleine Studie“ (Szene 2), Rot unterscheidet „ist falsch“ und „ist nicht belegt“, Schlusssatz „Bis zum nächsten Video!“. Neu: Das Erklärbild in Szene 1 (Tomate → Pfanne → Darm → Blut) wird jetzt ganz gezeigt statt abgeschnitten. Startbild noch ohne „Beweislage:“ vor der Ampel (deine Entscheidung D steht aus)."
   },
   {
    "datei": "hook_vorschau.mp4",
