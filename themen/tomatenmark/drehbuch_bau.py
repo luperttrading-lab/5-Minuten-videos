@@ -20,7 +20,7 @@ scenes = [
  {'id': 't0', 'layout': 'kacheln', 'kapitel': 'Einleitung', 'kicker': 'Faktencheck',
   'headline': 'Tomatenmark: Was steckt wirklich im Löffel?',
   'sentences': [
-   'Ein Löffel Tomatenmark am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren: Nicht alles davon hält.',
+   'Tomatenmark: ein Löffel am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren. Nicht alles davon hält.',
    'Wir prüfen sechs Fragen: Mark oder frische Tomate, was es dem Gehirn bringt und dem Herzen, ob eine Kapsel reicht, welche Versprechen halten und worauf du beim Kauf achtest.'],
   'hervorheben_at': 1, 'legende_at': 1, 'kacheln_ab': 1, 'hook_bild': 'bilder/t0_hook_b.png', 'hook_titel': 'Tomatenmark',
   'hook_zeilen': [{'t': 'Ein Löffel am Tag?', 'wort': 'Löffel'}, {'t': 'Stärkt das Gedächtnis?', 'wort': 'Gedächtnis'},

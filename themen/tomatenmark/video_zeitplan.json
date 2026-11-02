@@ -2,62 +2,62 @@
  {
   "id": "t0",
   "v0": 0.0,
-  "v1": 20.9456462585034,
+  "v1": 20.851201814058957,
   "st": [
    [
     1.0,
-    7.6,
-    "Ein Löffel Tomatenmark am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren: Nicht alles davon hält."
+    7.74907029478458,
+    "Tomatenmark: ein Löffel am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren. Nicht alles davon hält."
    ],
    [
-    8.6,
-    12.1956462585034,
+    8.74907029478458,
+    11.952131519274378,
     "Wir prüfen sechs Fragen: Mark oder frische Tomate, was es dem Gehirn bringt und dem Herzen, ob eine Kapsel reicht, welche Versprechen halten und worauf du beim Kauf achtest."
    ]
   ]
  },
  {
   "id": "t1",
-  "v0": 20.9456462585034,
-  "v1": 73.46120181405895,
+  "v0": 20.851201814058957,
+  "v1": 73.36675736961452,
   "st": [
    [
-    21.5456462585034,
+    21.451201814058958,
     5.12,
     "Der Stoff, um den es geht, heißt Lykopin. Er macht Tomaten rot."
    ],
    [
-    26.6656462585034,
+    26.57120181405896,
     5.919999999999999,
     "Oft heißt es, Tomatenmark liefere 20-mal so viel davon wie frische Tomaten."
    ],
    [
-    32.5856462585034,
+    32.491201814058954,
     7.120000000000001,
     "Gemessen ist etwas anderes: Pro Gramm enthält Mark etwa 11-mal so viel, weil das Wasser fehlt."
    ],
    [
-    39.7056462585034,
+    39.61120181405896,
     8.239999999999998,
     "Dazu kommt: Aus gekochtem Mark mit etwas Fett nimmt der Körper Lykopin deutlich besser auf als aus roher Tomate."
    ],
    [
-    47.9456462585034,
+    47.85120181405895,
     3.6799999999999997,
     "Denn Lykopin löst sich in Fett, nicht in Wasser."
    ],
    [
-    51.625646258503394,
+    51.53120181405896,
     9.840000000000003,
     "Oft heißt es auch, mit Olivenöl steige das Lykopin im Blut um über 80 %, doch diese Zahl stammt aus einem einzigen kleinen Versuch."
    ],
    [
-    61.4656462585034,
+    61.37120181405896,
     5.600000000000001,
     "Ein Esslöffel Mark enthält etwa so viel Lykopin wie anderthalb frische Tomaten."
    ],
    [
-    67.0656462585034,
+    66.97120181405896,
     6.245555555555555,
     "Tipp für dich: Brate das Mark kurz in etwas Öl an, bevor die anderen Zutaten in den Topf kommen."
    ]
@@ -65,46 +65,46 @@
  },
  {
   "id": "t2",
-  "v0": 73.46120181405895,
-  "v1": 123.39385487528344,
+  "v0": 73.36675736961452,
+  "v1": 123.299410430839,
   "st": [
    [
-    74.06120181405895,
+    73.96675736961451,
     5.439795918367348,
     "Das größte Versprechen: Tomatenmark stärke Gehirn und Gedächtnis."
    ],
    [
-    79.5009977324263,
+    79.40655328798186,
     3.839999999999999,
     "Dazu gibt es tatsächlich eine neue Studie aus Spanien."
    ],
    [
-    83.34099773242629,
+    83.24655328798185,
     5.040000000000001,
     "Gut 40 Erwachsene aßen dafür täglich zwei Esslöffel Tomatenmark."
    ],
    [
-    88.3809977324263,
+    88.28655328798186,
     6.640000000000001,
     "Nach drei Monaten konzentrierten sie sich etwas besser und ordneten Namen etwas leichter Gesichtern zu."
    ],
    [
-    95.0209977324263,
+    94.92655328798186,
     4.800000000000001,
     "Aber: Alle wussten, was sie aßen, und die Unterschiede waren klein."
    ],
    [
-    99.82099773242629,
+    99.72655328798186,
     5.759999999999998,
     "Der Wachstumsstoff für Nervenzellen stieg nur knapp, schwächer als die Forscher erwartet hatten."
    ],
    [
-    105.5809977324263,
+    105.48655328798186,
     9.360000000000003,
     "Der Schutz vor Demenz ist bisher nur beobachtet: Menschen mit Demenz haben weniger Lykopin im Blut, vielleicht aber, weil sie anders essen."
    ],
    [
-    114.9409977324263,
+    114.84655328798186,
     8.302857142857142,
     "Tipp für dich: Sieh Tomatenmark als Teil guter Ernährung. Für Bewegung und Schlaf ist die Wirkung aufs Gehirn viel besser belegt."
    ]
@@ -112,46 +112,46 @@
  },
  {
   "id": "t3",
-  "v0": 123.39385487528344,
-  "v1": 174.3931065759637,
+  "v0": 123.299410430839,
+  "v1": 174.29866213151928,
   "st": [
    [
-    123.99385487528343,
+    123.899410430839,
     6.96,
     "Fürs Herz heißt es: Lykopin senke das Risiko für einen Schlaganfall um mehr als die Hälfte."
    ],
    [
-    130.95385487528344,
+    130.859410430839,
     4.88,
     "Die Zahl stammt aus Finnland, aus einer Beobachtung von gut tausend Männern."
    ],
    [
-    135.83385487528344,
+    135.739410430839,
     7.84,
     "Wer viel Lykopin im Blut hatte, bekam seltener einen Schlaganfall, insgesamt waren es aber nur 67 Fälle."
    ],
    [
-    143.67385487528344,
+    143.579410430839,
     5.84,
     "Eine Gen-Analyse an über einer Million Menschen fand dagegen keinen ursächlichen Schutz."
    ],
    [
-    149.51385487528344,
+    149.419410430839,
     3.9200000000000017,
     "Viel Lykopin zeigt also eher eine gesunde Ernährung an."
    ],
    [
-    153.43385487528343,
+    153.339410430839,
     7.760000000000002,
     "Auch das schlechte LDL-Cholesterin sank nur bei großen Mengen, umgerechnet fünf, sechs Esslöffeln Mark am Tag."
    ],
    [
-    161.19385487528342,
+    161.099410430839,
     5.439999999999998,
     "Der Blutdruck sank in manchen Studien leicht, meist mit Extrakten statt mit Mark."
    ],
    [
-    166.63385487528342,
+    166.53941043083898,
     7.609251700680268,
     "Tipp für dich: Tomaten gehören in eine Mittelmeerküche. Tabletten gegen Blutdruck oder Cholesterin ersetzen sie nicht."
    ]
@@ -159,41 +159,41 @@
  },
  {
   "id": "t4",
-  "v0": 174.3931065759637,
-  "v1": 219.08580498866212,
+  "v0": 174.29866213151928,
+  "v1": 218.99136054421768,
   "st": [
    [
-    174.9931065759637,
+    174.89866213151927,
     3.84,
     "Und wenn du keine Tomaten magst, reicht dann eine Kapsel?"
    ],
    [
-    178.8331065759637,
+    178.73866213151928,
     7.279999999999999,
     "Oft heißt es: Künstliches Lykopin sei wirkungslos, nur der natürliche Komplex aus der Tomate zähle."
    ],
    [
-    186.1131065759637,
+    186.01866213151928,
     6.720000000000001,
     "Dahinter steht vor allem eine Studie, bezahlt von einer Firma, die genau diesen Tomatenextrakt verkauft."
    ],
    [
-    192.8331065759637,
+    192.73866213151928,
     4.879999999999999,
     "Pro Gruppe waren es nur etwa ein Dutzend Teilnehmer, der Unterschied war knapp."
    ],
    [
-    197.7131065759637,
+    197.61866213151927,
     6.080000000000002,
     "Ins Blut gelangt künstliches Lykopin genauso gut, auch das hat allerdings ein Hersteller gemessen."
    ],
    [
-    203.79310657596372,
+    203.69866213151928,
     5.760000000000002,
     "Klar ist also nur: Eine Kapsel bringt dir nichts, was ein Löffel Mark nicht auch bringt."
    ],
    [
-    209.5531065759637,
+    209.45866213151928,
     9.38269841269841,
     "Tipp für dich: Spar dir das Geld für die Kapsel. Ein Löffel Tomatenmark oder frische Tomaten liefern Lykopin und dazu Ballaststoffe und Kalium."
    ]
@@ -201,46 +201,46 @@
  },
  {
   "id": "t5",
-  "v0": 219.08580498866212,
-  "v1": 270.6610430839002,
+  "v0": 218.99136054421768,
+  "v1": 270.5665986394558,
   "st": [
    [
-    219.6858049886621,
+    219.59136054421768,
     2.3967120181405894,
     "Dazu kommen weitere Versprechen."
    ],
    [
-    222.0825170068027,
+    221.98807256235827,
     10.16,
     "Prostatakrebs: Männer, die oft gekochte Tomatenprodukte essen, erkranken in Beobachtungsstudien etwas seltener, bei rohen Tomaten zeigt sich das nicht."
    ],
    [
-    232.2425170068027,
+    232.14807256235827,
     3.2799999999999994,
     "Für einen Beweis reichen die wenigen Versuche nicht."
    ],
    [
-    235.5225170068027,
+    235.42807256235827,
     8.319999999999999,
     "Haut: Nach zehn Wochen mit Tomatenmark wurde die Haut in der Sonne etwas weniger rot, eine Sonnencreme ersetzt das nicht."
    ],
    [
-    243.8425170068027,
+    243.74807256235826,
     6.559999999999999,
     "Leber: Wer viel Lykopin isst, hat seltener eine Fettleber, auch das ist vor allem beobachtet."
    ],
    [
-    250.4025170068027,
+    250.30807256235826,
     5.760000000000002,
     "Zu den Knochen nach den Wechseljahren gibt es nur einen kleinen Versuch, ohne Messung der Knochendichte."
    ],
    [
-    256.1625170068027,
+    256.0680725623583,
     8.880000000000003,
     "Und mehr gute Darmbakterien? Das stammt aus einer winzigen Studie mit Lykopin-Präparaten, mit Tomatenmark wurde es nie untersucht."
    ],
    [
-    265.0425170068027,
+    264.9480725623583,
     5.468526077097501,
     "Tipp für dich: Vorsorge und Sonnencreme bleiben, Tomatenmark kommt obendrauf."
    ]
@@ -248,41 +248,41 @@
  },
  {
   "id": "t6",
-  "v0": 270.6610430839002,
-  "v1": 310.83498866213154,
+  "v0": 270.5665986394558,
+  "v1": 310.7405442176871,
   "st": [
    [
-    271.26104308390023,
+    271.1665986394558,
     1.8279591836734694,
     "Bleibt der Einkauf."
    ],
    [
-    273.0890022675737,
+    272.99455782312924,
     5.04,
     "In Tests fanden sich in etwa jedem zweiten Tomatenmark Schimmelpilzgifte."
    ],
    [
-    278.1290022675737,
+    278.03455782312926,
     5.28,
     "Für diese Gifte gibt es in der EU bisher nur Richtwerte, keine Grenzwerte."
    ],
    [
-    283.4090022675737,
+    283.3145578231293,
     7.760000000000003,
     "Oft heißt es, Bio schütze davor, doch unter den am stärksten belasteten Produkten waren mehrere Bio-Marken."
    ],
    [
-    291.1690022675737,
+    291.0745578231293,
     5.279999999999998,
     "Der Zucker auf dem Etikett stammt meist aus der Tomate selbst, nicht aus der Zuckerdose."
    ],
    [
-    296.4490022675737,
+    296.35455782312926,
     5.199999999999999,
     "Und wer Histamin schlecht verträgt, probiert vorsichtig aus, wie viel er verträgt."
    ],
    [
-    301.6490022675737,
+    301.55455782312924,
     9.03598639455782,
     "Tipp für dich: Schau in aktuelle Testergebnisse, wechsle ab und zu die Marke und lies die Zutatenliste: Tomaten, höchstens Salz."
    ]
@@ -290,41 +290,41 @@
  },
  {
   "id": "t7",
-  "v0": 310.83498866213154,
-  "v1": 352.32653061224494,
+  "v0": 310.7405442176871,
+  "v1": 352.2320861678005,
   "st": [
    [
-    311.43498866213156,
+    311.3405442176871,
     1.599501133786848,
     "Was bleibt also?"
    ],
    [
-    313.03448979591843,
+    312.940045351474,
     7.68,
     "Erstens: Tomatenmark ist ein günstiger, guter Lykopin-Lieferant, am besten gekocht und mit etwas Öl."
    ],
    [
-    320.7144897959184,
+    320.62004535147395,
     6.24,
     "Zweitens: Die großen Versprechen beruhen vor allem auf Beobachtungen und kleinen Studien."
    ],
    [
-    326.9544897959184,
+    326.86004535147396,
     5.76,
     "Drittens: Kapseln bringen nichts extra, ab und zu die Marke zu wechseln schon eher."
    ],
    [
-    332.7144897959184,
+    332.62004535147395,
     7.84,
     "Ob es jeden Tag ein Esslöffel sein muss, hat übrigens niemand untersucht. Ein paar Mal pro Woche in der Soße ist ein guter Anfang."
    ],
    [
-    340.5544897959184,
+    340.460045351474,
     2.16,
     "Die Quellen stehen in der Beschreibung."
    ],
    [
-    342.7144897959184,
+    342.62004535147395,
     6.86204081632653,
     "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen."
    ]
