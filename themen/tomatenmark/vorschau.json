@@ -4,10 +4,10 @@
  "videos": [
   {
    "datei": "hook_vorschau.mp4",
-   "titel": "Einstieg: endet mit „Was steckt wirklich im Löffel?“",
-   "stand": "02.11., 15:55",
+   "titel": "Einstieg ohne Blau: Ampel dreistufig",
+   "stand": "02.11., 19:55",
    "pruefen": true,
-   "notiz": "Neuer Schluss des Hooks, damit er sich von Guanfacin unterscheidet und den Titel aufgreift. Hook 8,7 Sekunden, Tempo 1,05."
+   "notiz": "Neu gerendert nach deiner Notiz: Die Legende unter den Kacheln hat kein Blau mehr (belegt / teilweise / nicht haltbar). Hook unverändert („Was steckt wirklich im Löffel?“, 8,7 Sekunden)."
   }
  ]
 }
