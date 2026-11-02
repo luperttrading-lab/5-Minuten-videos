@@ -133,11 +133,10 @@
    "headline": "Guanfacin: Was stimmt?",
    "sentences": [
     "Guanfacin ist ein ADHS-Medikament, über das im Netz viel erzählt wird: Es sei sanfter als Ritalin, wirke nach wenigen Tagen und helfe sogar gegen Angst.",
-    "Wir prüfen sechs Fragen: Was ist Guanfacin? Für wen ist es zugelassen? Wie gut wirkt es? Welche Nebenwirkungen hat es? Was gilt beim Absetzen? Und was ist mit Erwachsenen?",
-    "Grün heißt belegt, gelb teilweise, rot nicht haltbar."
+    "Wir prüfen sechs Fragen: Was ist Guanfacin? Für wen ist es zugelassen? Wie gut wirkt es? Welche Nebenwirkungen hat es? Was gilt beim Absetzen? Und was ist mit Erwachsenen?"
    ],
    "hervorheben_at": 1,
-   "legende_at": 2,
+   "legende_at": 1,
    "kacheln": [
     {
      "t": "Was ist Guanfacin?",
@@ -219,7 +218,7 @@
     {
      "bild": "bilder/g1b.png",
      "zoom": 0.18,
-     "at": 3
+     "at": 1
     }
    ],
    "bilder": [
@@ -281,6 +280,11 @@
      "bild": "bilder/g2b.png",
      "zoom": 0.18,
      "at": 3
+    },
+    {
+     "bild": "bilder/g2a.png",
+     "zoom": 0.18,
+     "at": 4
     }
    ],
    "bilder": [
@@ -339,6 +343,11 @@
      "bild": "bilder/g3b.png",
      "zoom": 0.18,
      "at": 3
+    },
+    {
+     "bild": "bilder/g3a.png",
+     "zoom": 0.18,
+     "at": 5
     }
    ],
    "bilder": [
@@ -395,7 +404,12 @@
     {
      "bild": "bilder/g4b.png",
      "zoom": 0.18,
-     "at": 3
+     "at": 2
+    },
+    {
+     "bild": "bilder/g4a.png",
+     "zoom": 0.18,
+     "at": 5
     }
    ],
    "bilder": [
@@ -451,6 +465,11 @@
      "bild": "bilder/g5b.png",
      "zoom": 0.18,
      "at": 4
+    },
+    {
+     "bild": "bilder/g5a.png",
+     "zoom": 0.18,
+     "at": 5
     }
    ],
    "bilder": [
@@ -525,6 +544,11 @@
      "bild": "bilder/g6b.png",
      "zoom": 0.18,
      "at": 3
+    },
+    {
+     "bild": "bilder/g6a.png",
+     "zoom": 0.18,
+     "at": 7
     }
    ],
    "bilder": [
@@ -585,7 +609,7 @@
     {
      "bild": "bilder/g7b.png",
      "zoom": 0.18,
-     "at": 3
+     "at": 2
     }
    ],
    "bilder": [

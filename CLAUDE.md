@@ -42,8 +42,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - Kopf: `tts` (`elevenlabs`), `voice_id`, `model`, `tempo`, `titel`, `untertitel`, `fuss`, `quellen` (Verzeichnis
   `id → kurz, voll, url`).
 - Erste Szene `layout: "kacheln"`: sechs Kapitel-Kacheln (`kacheln: [{t, a, wort}]`). Jede Kachel leuchtet auf, wenn ihr
-  `wort` gesprochen wird (ElevenLabs-Zeitmarken). `hervorheben_at`/`legende_at` = Satznummer. Am Ende des Einstiegs
-  wird die Legende gesprochen: „Grün heißt belegt, gelb teilweise, rot nicht haltbar.“
+  `wort` gesprochen wird (ElevenLabs-Zeitmarken). `hervorheben_at`/`legende_at` = Satznummer. Die Legende wird nur
+  eingeblendet, **nicht gesprochen** (kein Satz „Grün heißt belegt …“, Nutzerwunsch 02.11.: stört den Einstieg).
 - Weitere Szenen: `kicker`, `headline`, `sentences` (Text oder `{t: Anzeige, say: Sprechtext}`; Zahlen im
   Sprechtext ausschreiben), `bullets` (`{t, at, ev}` mit `ev` = `stark` | `mittel` | `keine`), `evidence`
   (`level`, `label`), `quellen` (IDs aus dem Verzeichnis), `shots` (`{a: [x0,y0,x1,y1], at, zoom}`, `zoom` =

@@ -36,9 +36,8 @@ scenes = [
   "headline": "Guanfacin: Was stimmt?",
   "sentences": [
    "Guanfacin ist ein ADHS-Medikament, über das im Netz viel erzählt wird: Es sei sanfter als Ritalin, wirke nach wenigen Tagen und helfe sogar gegen Angst.",
-   "Wir prüfen sechs Fragen: Was ist Guanfacin? Für wen ist es zugelassen? Wie gut wirkt es? Welche Nebenwirkungen hat es? Was gilt beim Absetzen? Und was ist mit Erwachsenen?",
-   "Grün heißt belegt, gelb teilweise, rot nicht haltbar."],
-  "hervorheben_at": 1, "legende_at": 2,
+   "Wir prüfen sechs Fragen: Was ist Guanfacin? Für wen ist es zugelassen? Wie gut wirkt es? Welche Nebenwirkungen hat es? Was gilt beim Absetzen? Und was ist mit Erwachsenen?"],
+  "hervorheben_at": 1, "legende_at": 1,
   "kacheln": [
    {"t": "Was ist Guanfacin?", "bild": "bilder/g1a.png", "wort": "Was ist"},
    {"t": "Für wen zugelassen?", "bild": "bilder/g2a.png", "wort": "zugelassen"},
@@ -59,7 +58,7 @@ scenes = [
               {"t": "Stärkt das Stirnhirn", "at": 4, "ev": "mittel"}],
   "evidence": {"level": "mittel", "label": "Mechanismus vor allem im Tierversuch"},
   "quellen": ["fda_tenex", "fi_intuniv", "fda_label", "wang2007", "mckee2015"],
-  "shots": [{"bild": "bilder/g1a.png", "zoom": 0.18}, {"bild": "bilder/g1b.png", "zoom": 0.18, "at": 3}],
+  "shots": [{"bild": "bilder/g1a.png", "zoom": 0.18}, {"bild": "bilder/g1b.png", "zoom": 0.18, "at": 1}],
   "bilder": [
    {"datei": "bilder/g1a.png", "prompt": "a wide horizontal close-up filling the whole frame edge to edge: an open hand holding one large white pill on the left, an old-fashioned blood pressure cuff with a round gauge on a wooden table on the right, warm light, no empty margins"},
    {"datei": "bilder/g1b.png", "prompt": "an explanatory drawing: a human head in side view with the front part of the brain softly highlighted in warm ochre, inside it a few large nerve cells connected by glowing lines, one connection shown with a small gentle brake symbol like a soft hand slowing a stream, very simple and clear"}]},
@@ -75,7 +74,7 @@ scenes = [
               {"t": "Wenn andere ADHS-Mittel nicht passen", "at": 1, "ev": "stark"}],
   "evidence": {"level": "stark", "label": "belegt"},
   "quellen": ["ema_epar", "fi_intuniv", "s3_2026", "pmda2019", "fi_generikum"],
-  "shots": [{"bild": "bilder/g2a.png", "zoom": 0.18}, {"bild": "bilder/g2b.png", "zoom": 0.18, "at": 3}],
+  "shots": [{"bild": "bilder/g2a.png", "zoom": 0.18}, {"bild": "bilder/g2b.png", "zoom": 0.18, "at": 3}, {"bild": "bilder/g2a.png", "zoom": 0.18, "at": 4}],
   "bilder": [
    {"datei": "bilder/g2a.png", "prompt": "a mother and her about ten-year-old son sitting in a friendly paediatrician's office, the doctor listening attentively, warm colours, seen from a little distance, no papers with writing"},
    {"datei": "bilder/g2b.png", "prompt": "a large simple map of the world drawn in ink and watercolor, Europe softly tinted in dove blue, Japan highlighted in warm terracotta, no country names, no text"}]},
@@ -92,7 +91,7 @@ scenes = [
               {"t": "Verstärkt Stimulanzien als Zusatz", "at": 5, "ev": "mittel"}],
   "evidence": {"level": "mittel", "label": "wirkt, aber schwächer und langsamer"},
   "quellen": ["cortese2018", "ruggiero2014", "biederman2008", "wilens2012"],
-  "shots": [{"bild": "bilder/g3a.png", "zoom": 0.18}, {"bild": "bilder/g3b.png", "zoom": 0.18, "at": 3}],
+  "shots": [{"bild": "bilder/g3a.png", "zoom": 0.18}, {"bild": "bilder/g3b.png", "zoom": 0.18, "at": 3}, {"bild": "bilder/g3a.png", "zoom": 0.18, "at": 5}],
   "bilder": [
    {"datei": "bilder/g3a.png", "prompt": "exactly ten simple round-headed child figures standing in one row filling the width of the frame, each with a friendly simple face with eyes and a smile; the first six on the left wear bright warm terracotta clothes and look cheerful, the last four on the right are drawn only in pale grey pencil and look neutral; strong colour contrast, clearly countable"},
    {"datei": "bilder/g3b.png", "prompt": "a small seedling growing in four stages from left to right in four clay pots, getting a little taller each time, like weeks passing, simple and large"}]},
@@ -109,7 +108,7 @@ scenes = [
               {"t": "Senkt Blutdruck und Puls", "at": 2, "ev": "stark"}],
   "evidence": {"level": "stark", "label": "Nebenwirkungen gut belegt"},
   "quellen": ["fi_intuniv", "jain1985", "newcorn2013"],
-  "shots": [{"bild": "bilder/g4a.png", "zoom": 0.18}, {"bild": "bilder/g4b.png", "zoom": 0.18, "at": 3}],
+  "shots": [{"bild": "bilder/g4a.png", "zoom": 0.18}, {"bild": "bilder/g4b.png", "zoom": 0.18, "at": 2}, {"bild": "bilder/g4a.png", "zoom": 0.18, "at": 5}],
   "bilder": [
    {"datei": "bilder/g4a.png", "prompt": "a sleepy schoolboy yawning at his desk with his head propped on one hand, an open notebook without writing, afternoon light"},
    {"datei": "bilder/g4b.png", "prompt": "a friendly nurse measuring the blood pressure of a teenage girl with an arm cuff, both relaxed, the device display blank, bright room"}]},
@@ -125,7 +124,7 @@ scenes = [
               {"t": "Abrupt absetzen: Blutdruck steigt", "at": 2, "ev": "stark"}],
   "evidence": {"level": "stark", "label": "Warnung belegt"},
   "quellen": ["fi_intuniv", "fda_label"],
-  "shots": [{"bild": "bilder/g5a.png", "zoom": 0.18}, {"bild": "bilder/g5b.png", "zoom": 0.18, "at": 4}],
+  "shots": [{"bild": "bilder/g5a.png", "zoom": 0.18}, {"bild": "bilder/g5b.png", "zoom": 0.18, "at": 4}, {"bild": "bilder/g5a.png", "zoom": 0.18, "at": 5}],
   "bilder": [
    {"datei": "bilder/g5a.png", "prompt": "a large weekly pill organizer with seven compartments, each holding one small white pill, next to a glass of water on a kitchen table, morning light"},
    {"datei": "bilder/g5b.png", "prompt": "a wide horizontal scene filling the whole frame edge to edge: a broad gentle staircase of five wide stone steps leading softly downward from left to right into a calm garden, a person walking down slowly holding the railing, no empty margins"}]},
@@ -145,7 +144,7 @@ scenes = [
               {"t": "Hilft bei Tics", "at": 5, "ev": "mittel"}],
   "evidence": {"level": "keine", "label": "kaum belegt"},
   "quellen": ["iwanami2020", "s3_2026", "strawn2017", "neylan2006", "davis2008", "scahill2001", "murphy2017", "muller2005", "barcelos2018"],
-  "shots": [{"bild": "bilder/g6a.png", "zoom": 0.18}, {"bild": "bilder/g6b.png", "zoom": 0.18, "at": 3}],
+  "shots": [{"bild": "bilder/g6a.png", "zoom": 0.18}, {"bild": "bilder/g6b.png", "zoom": 0.18, "at": 3}, {"bild": "bilder/g6a.png", "zoom": 0.18, "at": 7}],
   "bilder": [
    {"datei": "bilder/g6a.png", "prompt": "a man in his thirties talking with a female doctor at a wooden desk in a calm room, both seated, both with clearly drawn friendly human faces with eyes, nose and mouth, seen from the side, attentive conversation, a glass of water on the desk, no papers with writing"},
    {"datei": "bilder/g6b.png", "prompt": "a young woman sitting on a window seat hugging her knees, looking thoughtfully outside at rain, soft and calm mood"}]},
@@ -162,7 +161,7 @@ scenes = [
               {"t": "Erwachsene, Angst, Booster", "at": 4, "ev": "keine"}],
   "evidence": {"level": "mittel", "label": "nützlich, mit Grenzen"},
   "quellen": ["fi_intuniv", "s3_2026", "cortese2018"],
-  "shots": [{"bild": "bilder/g7a.png", "zoom": 0.18}, {"bild": "bilder/g7b.png", "zoom": 0.18, "at": 3}],
+  "shots": [{"bild": "bilder/g7a.png", "zoom": 0.18}, {"bild": "bilder/g7b.png", "zoom": 0.18, "at": 2}],
   "bilder": [
    {"datei": "bilder/g7a.png", "prompt": "a family of father, mother and two children doing homework and reading together at a large kitchen table, all with clearly drawn friendly human faces with eyes, nose and mouth, relaxed and focused, warm evening lamp light"},
    {"datei": "bilder/g7b.png", "prompt": "a calendar page drawn as a simple grid with a small green check mark in every box, next to a glass of water and a stethoscope, no numbers, no letters"}]},
