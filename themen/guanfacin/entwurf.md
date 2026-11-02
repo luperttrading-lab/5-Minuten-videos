@@ -78,7 +78,7 @@ keine eigene Empfehlung.
 Oft heißt es auch, Guanfacin helfe gegen Angst. Die einzige kontrollierte Studie, mit Kindern, fand keinen Unterschied.
 Bei posttraumatischer Belastungsstörung waren zwei Studien negativ.
 Bei Tics hilft es vielleicht, aber nur, wenn zugleich ADHS besteht; die Studien widersprechen sich.
-Dass es das Aufschieben beendet, beruht auf Erfahrungsberichten; untersucht wurde es nicht. Und als Denkhilfe für Gesunde
+Dass man mit Guanfacin leichter ins Tun kommt und Aufgaben weniger vor sich herschiebt, berichten einzelne Nutzer; untersucht wurde es nicht. Und als Denkhilfe für Gesunde
 oder Ältere zeigte es in Studien keine Wirkung.
 Alles außer ADHS bei Kindern ist ein Einsatz außerhalb der Zulassung. Sprich das offen mit deiner Ärztin an und frag
 nach Nutzen und Risiken.

@@ -91,7 +91,7 @@ scenes = [
               {"t": "Verstärkt Stimulanzien als Zusatz", "at": 5, "ev": "mittel"}],
   "evidence": {"level": "mittel", "label": "wirkt, aber schwächer und langsamer"},
   "quellen": ["cortese2018", "ruggiero2014", "biederman2008", "wilens2012"],
-  "shots": [{"bild": "bilder/g3a.png", "zoom": 0.18}, {"bild": "bilder/g3b.png", "zoom": 0.18, "at": 3}, {"bild": "bilder/g3a.png", "zoom": 0.18, "at": 5}],
+  "shots": [{"bild": "bilder/g3a.png", "zoom": 0.18}, {"bild": "bilder/g3a.png", "zoom": 0.08, "at": 3}],
   "bilder": [
    {"datei": "bilder/g3a.png", "prompt": "exactly ten simple round-headed child figures standing in one row filling the width of the frame, each with a friendly simple face with eyes and a smile; the first six on the left wear bright warm terracotta clothes and look cheerful, the last four on the right are drawn only in pale grey pencil and look neutral; strong colour contrast, clearly countable"},
    {"datei": "bilder/g3b.png", "prompt": "a small seedling growing in four stages from left to right in four clay pots, getting a little taller each time, like weeks passing, simple and large"}]},
@@ -124,7 +124,7 @@ scenes = [
               {"t": "Abrupt absetzen: Blutdruck steigt", "at": 2, "ev": "stark"}],
   "evidence": {"level": "stark", "label": "Warnung belegt"},
   "quellen": ["fi_intuniv", "fda_label"],
-  "shots": [{"bild": "bilder/g5a.png", "zoom": 0.18}, {"bild": "bilder/g5b.png", "zoom": 0.18, "at": 4}, {"bild": "bilder/g5a.png", "zoom": 0.18, "at": 5}],
+  "shots": [{"bild": "bilder/g5a.png", "zoom": 0.18}, {"bild": "bilder/g5a.png", "zoom": 0.08, "at": 3}],
   "bilder": [
    {"datei": "bilder/g5a.png", "prompt": "a large weekly pill organizer with seven compartments, each holding one small white pill, next to a glass of water on a kitchen table, morning light"},
    {"datei": "bilder/g5b.png", "prompt": "a wide horizontal scene filling the whole frame edge to edge: a broad gentle staircase of five wide stone steps leading softly downward from left to right into a calm garden, a person walking down slowly holding the railing, no empty margins"}]},
@@ -136,7 +136,7 @@ scenes = [
    "Oft heißt es auch, Guanfacin helfe gegen Angst. Die einzige kontrollierte Studie, mit Kindern, fand keinen Unterschied.",
    "Bei posttraumatischer Belastungsstörung waren zwei Studien negativ.",
    "Bei Tics hilft es vielleicht, aber nur, wenn zugleich ADHS besteht; die Studien widersprechen sich.",
-   "Dass es das Aufschieben beendet, beruht auf Erfahrungsberichten; untersucht wurde es nicht. Und als Denkhilfe für Gesunde oder Ältere zeigte es in Studien keine Wirkung.",
+   "Dass man mit Guanfacin leichter ins Tun kommt und Aufgaben weniger vor sich herschiebt, berichten einzelne Nutzer; untersucht wurde es nicht. Und als Denkhilfe für Gesunde oder Ältere zeigte es in Studien keine Wirkung.",
    "Alles außer ADHS bei Kindern ist ein Einsatz außerhalb der Zulassung. Sprich das offen mit Arzt oder Ärztin an und frag nach Nutzen und Risiken."],
   "bullets": [{"t": "Gute Option für Erwachsene", "at": 0, "ev": "mittel"},
               {"t": "Hilft bei Angst", "at": 3, "ev": "keine"},
