@@ -81,6 +81,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Unterscheidung (Nutzerentscheidung 02.11.): „ist falsch“ nur bei Gegenbeleg (Studien zeigen das Gegenteil);
   fehlen Belege ganz (nicht untersucht, nur Hersteller-Kleinststudie), `"unbelegt": true` → rot „ist nicht belegt“.
   Beide bleiben Rot („nicht haltbar“): Eine unbelegte Behauptung ist nicht richtig, aber auch nicht widerlegt.
+  Startbild (Kacheln): vor der Ampel steht „Beweislage:“, oben bleibt „Faktencheck“ (Nutzerwahl 02.11.: dasselbe Wort
+  wie im Kasten jeder Szene; die Ampel misst die Belege, nicht unsere Meinung). Schrift fürs Handy vergrößert: Legende
+  auf dem Startbild 36 px, in den Szenen 28 px, Kasten „Beweislage: …“ 30 px.
 - Quellen durchnummeriert nach erstem Auftreten, im Video „Quellen: [n] Autor Jahr“. Die YouTube-Beschreibung hat
   nackte URLs (YouTube macht nur die klickbar), höchstens 5000 Zeichen, mit Kapitelzeiten.
 - Bildausschnitte: Schrift ganz oder gar nicht, keine halben Nachbarmotive, kein Rahmenstrich der Grafik. Bei

@@ -351,23 +351,23 @@ def panel_states(sc):
     if ev:
         col, dots, label = LEVELS[ev['level']]
         by = 850
-        fb = font(INTER.format('SemiBold'), 25)
+        fb = font(INTER.format('SemiBold'), 30)          # größer fürs Handy (Nutzerwunsch 02.11., vorher 25)
         txt = 'Beweislage: ' + ev.get('label', label)
         tw = d.textlength(txt, font=fb)
-        bw = int(tw + 52)                              # nur Farbe und Text, keine Punkte (waeren doppelt)
+        bw = int(tw + 56)                              # nur Farbe und Text, keine Punkte (waeren doppelt)
         tint = tuple(int(c * 0.14 + p * 0.86) for c, p in zip(col, PAPER))
-        d.rounded_rectangle([TX0, by, TX0 + bw, by + 54], radius=27, fill=tint, outline=col, width=2)
-        d.text((TX0 + 26, by + 12), txt, font=fb, fill=col)
+        d.rounded_rectangle([TX0, by, TX0 + bw, by + 62], radius=31, fill=tint, outline=col, width=2)
+        d.text((TX0 + 28, by + 31), txt, font=fb, fill=col, anchor='lm')
         used = {b.get('ev') for b in sc.get('bullets', [])}
         if used - {None}:                              # Legende statt Fliesstext
-            fl = font(INTER.format('Regular'), 21)
-            xx, yy = TX0, by + 84
+            fl = font(INTER.format('Regular'), 28)       # vorher 21: auf dem Handy kaum lesbar
+            xx, yy = TX0, by + 100
             kinds = ['stark', 'mittel']   # dreistufige Ampel; junge Belege als Zusatz „neu“ (Nutzerentscheidung 02.11.)
             kinds = kinds + (['offen'] if 'offen' in used else []) + ['keine']
             for kind in kinds:
-                draw_mark(d, xx + 11, yy, 11, kind)
-                d.text((xx + 28, yy), MARKS[kind][2], font=fl, fill=MUTED, anchor='lm')
-                xx += 28 + int(d.textlength(MARKS[kind][2], font=fl)) + 26
+                draw_mark(d, xx + 14, yy, 14, kind)
+                d.text((xx + 36, yy), MARKS[kind][2], font=fl, fill=MUTED, anchor='lm')
+                xx += 36 + int(d.textlength(MARKS[kind][2], font=fl)) + 32
         elif ev.get('note'):
             fn = font(INTER.format('Regular'), 22)
             yy = by + 70
@@ -642,16 +642,21 @@ class AgendaScene:
             sc_ = min((self.TW - 40) / bw, (self.TH - 30) / bh)
             size = (int(bw * sc_), int(bh * sc_))
             self.cards.append({'x': cx, 'y': cy, 'box': box, 'size': size, 'img': kimg})
-        self.legend = Image.new('RGBA', (W, 60), (0, 0, 0, 0))
+        self.legend = Image.new('RGBA', (W, 76), (0, 0, 0, 0))
         dl = ImageDraw.Draw(self.legend)
-        fl = font(INTER.format('Medium'), 28)
+        fl = font(INTER.format('Medium'), 36)              # vorher 28 (Nutzerwunsch 02.11.: zu klein)
+        fp = font(INTER.format('SemiBold'), 36)
         items = [('stark', 'belegt'), ('mittel', 'teilweise'), ('keine', 'nicht haltbar')]
-        widths = [44 + int(dl.textlength(t, font=fl)) for _, t in items]
-        xx = (W - sum(widths) - 60 * (len(items) - 1)) // 2
+        widths = [56 + int(dl.textlength(t, font=fl)) for _, t in items]
+        pre = 'Beweislage:'                                # dasselbe Wort wie im Kasten jeder Szene (Nutzerwahl 02.11.)
+        pw = int(dl.textlength(pre, font=fp)) + 36
+        xx = (W - sum(widths) - 64 * (len(items) - 1) - pw) // 2
+        dl.text((xx, 38), pre, font=fp, fill=ACCENT, anchor='lm')
+        xx += pw
         for (kind, t), w in zip(items, widths):
-            draw_mark(dl, xx + 15, 30, 15, kind)
-            dl.text((xx + 40, 30), t, font=fl, fill=INK, anchor='lm')
-            xx += w + 60
+            draw_mark(dl, xx + 19, 38, 19, kind)
+            dl.text((xx + 50, 38), t, font=fl, fill=INK, anchor='lm')
+            xx += w + 64
 
     def hook_frame(self, t):
         img = self.hook_bild_frame(t)
@@ -730,7 +735,7 @@ class AgendaScene:
             lay = self.legend.copy()
             if a < 1:
                 lay.putalpha(lay.getchannel('A').point(lambda p: int(p * a)))
-            img.paste(lay, (0, 990), lay)
+            img.paste(lay, (0, 982), lay)
         return img
 
 
