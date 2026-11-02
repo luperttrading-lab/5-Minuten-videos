@@ -1,8 +1,8 @@
 {"titel": "Guanfacin",
- "aufgabe": "Oben den neuen Einstieg ansehen (17 Sekunden), dann „passt“ oder „ändern“ und „An Claude“. Erst danach rendere ich das ganze Video neu.",
+ "aufgabe": "Oben das fertige Video (6:05) ansehen. Wenn es passt, „passt“ und „An Claude“; dann ist es fertig für YouTube.",
  "videos": [
-  {"datei": "hook_vorschau.mp4", "titel": "Neuer Einstieg: Name zuerst, Schrift fährt deutlicher ein", "stand": "02.11., 11:13", "pruefen": true,
-   "notiz": "„Guanfacin“ wird jetzt zuerst gesprochen. Titel gleitet hoch, Behauptungen fahren weiter von unten ein und blenden auf, beim roten Urteil werden sie blasser. Hook dadurch 9,6 statt 8,3 Sekunden."},
-  {"datei": "video_720p.mp4", "titel": "Ganzes Video, Stand vor dem neuen Einstieg", "stand": "02.11., 11:06", "pruefen": false,
-   "notiz": "6:04, 720p. Einstieg noch in der vorigen Fassung (Name nicht gesprochen, Schrift fährt nur leicht ein). Rest unverändert."}
+  {"datei": "video_720p.mp4", "titel": "Fertiges Video mit neuem Einstieg", "stand": "02.11., 11:34", "pruefen": true, "poster_bei": 6,
+   "notiz": "6:05, 720p (Vorschau). Einstieg wie abgenommen, Rest unverändert. Die 1080p-Fassung für YouTube schicke ich, wenn du sie willst."},
+  {"datei": "hook_vorschau.mp4", "titel": "Neuer Einstieg (abgenommen 11:26)", "stand": "02.11., 11:13", "pruefen": false,
+   "notiz": "Name zuerst, Schrift fährt deutlicher ein. Von dir mit „passt“ abgenommen."}
  ]}

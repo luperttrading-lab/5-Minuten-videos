@@ -76,8 +76,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Schrift am Rand `zoom: "none"`. Tippfehler und Fantasieschrift der KI-Grafiken vorher korrigieren (`fix_grafik.py`).
   Falsche Aussagen im Bild nur zeigen, wenn das Video sie richtigstellt.
 - Keine durchlaufende Gesamtgrafik als Einstieg.
-- **Hook in den ersten 8 Sekunden** (Nutzerentscheidung 02.11., Strategiepapier `themen/beratung/strategiepapier.pdf`):
-  ein Satz mit der stärksten Behauptung und einem offenen Versprechen, ohne Begrüßung, erst danach die Kacheln.
+- **Hook in den ersten 8–10 Sekunden** (Nutzerentscheidung 02.11., Strategiepapier `themen/beratung/strategiepapier.pdf`):
+  **zuerst das Thema nennen** („Guanfacin: …“, Nutzerwunsch 02.11., Hook dadurch ≈ 9,6 s abgenommen), dann ein Satz mit
+  der stärksten Behauptung und einem offenen Versprechen, ohne Begrüßung, erst danach die Kacheln.
   Zuspitzen ja, täuschen nein; der Hook wird im Video eingelöst.
 - **Abschlusssatz** jedes Videos, gesprochen nach dem Fazit (Nutzerentscheidung 02.11.): „Gut, dass du dich informierst.
   Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.“ Ersetzt „Dieses Video ersetzt
