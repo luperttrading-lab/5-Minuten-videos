@@ -58,7 +58,7 @@ scenes = [
               {"t": "Stärkt das Stirnhirn", "at": 4, "ev": "mittel"}],
   "evidence": {"level": "mittel", "label": "Mechanismus vor allem im Tierversuch"},
   "quellen": ["fda_tenex", "fi_intuniv", "fda_label", "wang2007", "mckee2015"],
-  "shots": [{"bild": "bilder/g1a.png", "zoom": 0.18}, {"bild": "bilder/g1b.png", "zoom": 0.18, "at": 1}],
+  "shots": [{"bild": "bilder/g1a.png", "zoom": 0.18}, {"bild": "bilder/g1b.png", "zoom": 0.18, "at": 3}],
   "bilder": [
    {"datei": "bilder/g1a.png", "prompt": "a wide horizontal close-up filling the whole frame edge to edge: an open hand holding one large white pill on the left, an old-fashioned blood pressure cuff with a round gauge on a wooden table on the right, warm light, no empty margins"},
    {"datei": "bilder/g1b.png", "prompt": "an explanatory drawing: a human head in side view with the front part of the brain softly highlighted in warm ochre, inside it a few large nerve cells connected by glowing lines, one connection shown with a small gentle brake symbol like a soft hand slowing a stream, very simple and clear"}]},

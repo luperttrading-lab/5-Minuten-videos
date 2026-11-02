@@ -25,7 +25,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
    dann Hörprobe zum Mitlesen und Markieren: `python3 ../../werkzeug/hoerprobe.py szenen.json hoerprobe` (nach dem Rendern,
    braucht video.wav), als Artifact mit `publish_files` veröffentlichen, danach `declare_capabilities` mit
    `{"db": {}, "comments": {}}`. „An Claude“ auf der Seite schickt die Notiz als Kommentar und weckt die Sitzung.
-   Langer Druck auf ein Wort markiert direkt.
+   Langer Druck auf ein Wort markiert direkt. Danach `python3 ../../werkzeug/bildwahl.py szenen.json hoerprobe`: je Szene
+   alle Bilder antippbar (mehrere = beide, in Reihenfolge; Sammlung `bildwahl`, Feld `bilder`) und „Notiz zum ganzen
+   Kapitel“ (Sammlung `kapitelnotizen`, geht auch als Kommentar an Claude).
    Markierungen des Nutzers mit `db_list` (Sammlung `markierungen`) lesen, betroffene Sätze einzeln in 2–3 Fassungen neu.
    **Reihenfolge:** Korrekturen nur in die Hörprobe (vorher/nachher). Erst rendern, wenn der Nutzer die Hörprobe
    abgenommen hat.
