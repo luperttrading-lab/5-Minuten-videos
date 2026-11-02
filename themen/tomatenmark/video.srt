@@ -1,312 +1,316 @@
 1
-00:00:01,000 --> 00:00:08,530
-Tomatenmark: ein Löffel am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren. Nicht alles davon hält.
+00:00:01,000 --> 00:00:08,845
+Tomatenmark: ein Löffel am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren. Was steckt wirklich im Löffel?
 
 2
-00:00:08,380 --> 00:00:14,563
+00:00:08,695 --> 00:00:14,893
 Wir prüfen sechs Fragen: Mark oder frische Tomate, was es dem Gehirn bringt und dem Herzen,
 
 3
-00:00:14,413 --> 00:00:19,934
+00:00:14,743 --> 00:00:20,275
 ob eine Kapsel reicht, welche Versprechen halten und worauf du beim Kauf achtest.
 
 4
-00:00:20,534 --> 00:00:25,560
+00:00:20,875 --> 00:00:25,902
 Der Stoff, um den es geht, heißt Lykopin. Er macht Tomaten rot.
 
 5
-00:00:25,410 --> 00:00:31,198
+00:00:25,752 --> 00:00:31,540
 Oft heißt es, Tomatenmark liefere 20-mal so viel davon wie frische Tomaten.
 
 6
-00:00:31,048 --> 00:00:36,375
+00:00:31,390 --> 00:00:36,716
 Gemessen ist etwas anderes: Pro Gramm enthält Mark etwa 11-mal so viel,
 
 7
-00:00:36,225 --> 00:00:37,979
+00:00:36,566 --> 00:00:38,321
 weil das Wasser fehlt.
 
 8
-00:00:37,829 --> 00:00:45,827
+00:00:38,171 --> 00:00:46,168
 Dazu kommt: Aus gekochtem Mark mit etwas Fett nimmt der Körper Lykopin deutlich besser auf als aus roher Tomate.
 
 9
-00:00:45,677 --> 00:00:49,332
+00:00:46,018 --> 00:00:49,673
 Denn Lykopin löst sich in Fett, nicht in Wasser.
 
 10
-00:00:49,182 --> 00:00:54,522
+00:00:49,523 --> 00:00:54,863
 Oft heißt es auch, mit Olivenöl steige das Lykopin im Blut um über 80 %,
 
 11
-00:00:54,372 --> 00:00:58,703
+00:00:54,713 --> 00:00:59,044
 doch diese Zahl stammt aus einem einzigen kleinen Versuch.
 
 12
-00:00:58,553 --> 00:01:04,036
+00:00:58,894 --> 00:01:04,378
 Ein Esslöffel Mark enthält etwa so viel Lykopin wie anderthalb frische Tomaten.
 
 13
-00:01:03,886 --> 00:01:07,173
+00:01:04,228 --> 00:01:07,514
 Tipp für dich: Brate das Mark kurz in etwas Öl an,
 
 14
-00:01:07,023 --> 00:01:09,995
+00:01:07,364 --> 00:01:10,337
 bevor die anderen Zutaten in den Topf kommen.
 
 15
-00:01:10,595 --> 00:01:15,926
+00:01:10,937 --> 00:01:16,268
 Das größte Versprechen: Tomatenmark stärke Gehirn und Gedächtnis.
 
 16
-00:01:15,776 --> 00:01:19,583
+00:01:16,118 --> 00:01:19,925
 Dazu gibt es tatsächlich eine neue Studie aus Spanien.
 
 17
-00:01:19,433 --> 00:01:24,383
+00:01:19,775 --> 00:01:24,725
 Gut 40 Erwachsene aßen dafür täglich zwei Esslöffel Tomatenmark.
 
 18
-00:01:24,233 --> 00:01:30,707
+00:01:24,575 --> 00:01:31,049
 Nach drei Monaten konzentrierten sie sich etwas besser und ordneten Namen etwas leichter Gesichtern zu.
 
 19
-00:01:30,557 --> 00:01:35,279
+00:01:30,899 --> 00:01:35,620
 Aber: Alle wussten, was sie aßen, und die Unterschiede waren klein.
 
 20
-00:01:35,129 --> 00:01:38,281
+00:01:35,470 --> 00:01:38,623
 Der Wachstumsstoff für Nervenzellen stieg nur knapp,
 
 21
-00:01:38,131 --> 00:01:40,764
+00:01:38,473 --> 00:01:41,106
 schwächer als die Forscher erwartet hatten.
 
 22
-00:01:40,614 --> 00:01:47,159
+00:01:40,956 --> 00:01:47,501
 Der Schutz vor Demenz ist bisher nur beobachtet: Menschen mit Demenz haben weniger Lykopin im Blut,
 
 23
-00:01:47,009 --> 00:01:49,679
+00:01:47,351 --> 00:01:50,020
 vielleicht aber, weil sie anders essen.
 
 24
-00:01:49,529 --> 00:01:57,605
+00:01:49,870 --> 00:01:57,946
 Tipp für dich: Sieh Tomatenmark als Teil guter Ernährung. Für Bewegung und Schlaf ist die Wirkung aufs Gehirn viel besser belegt.
 
 25
-00:01:58,205 --> 00:02:04,983
+00:01:58,546 --> 00:02:05,324
 Fürs Herz heißt es: Lykopin senke das Risiko für einen Schlaganfall um mehr als die Hälfte.
 
 26
-00:02:04,833 --> 00:02:09,631
+00:02:05,174 --> 00:02:09,972
 Die Zahl stammt aus Finnland, aus einer Beobachtung von gut tausend Männern.
 
 27
-00:02:09,481 --> 00:02:14,415
+00:02:09,822 --> 00:02:14,757
 Wer viel Lykopin im Blut hatte, bekam seltener einen Schlaganfall,
 
 28
-00:02:14,265 --> 00:02:17,097
+00:02:14,607 --> 00:02:17,439
 insgesamt waren es aber nur 67 Fälle.
 
 29
-00:02:16,947 --> 00:02:22,659
+00:02:17,289 --> 00:02:23,001
 Eine Gen-Analyse an über einer Million Menschen fand dagegen keinen ursächlichen Schutz.
 
 30
-00:02:22,509 --> 00:02:26,393
+00:02:22,851 --> 00:02:26,734
 Viel Lykopin zeigt also eher eine gesunde Ernährung an.
 
 31
-00:02:26,243 --> 00:02:30,596
+00:02:26,584 --> 00:02:30,938
 Auch das schlechte LDL-Cholesterin sank nur bei großen Mengen,
 
 32
-00:02:30,446 --> 00:02:33,783
+00:02:30,788 --> 00:02:34,124
 umgerechnet fünf, sechs Esslöffeln Mark am Tag.
 
 33
-00:02:33,633 --> 00:02:38,964
+00:02:33,974 --> 00:02:39,305
 Der Blutdruck sank in manchen Studien leicht, meist mit Extrakten statt mit Mark.
 
 34
-00:02:38,814 --> 00:02:46,224
+00:02:39,155 --> 00:02:46,566
 Tipp für dich: Tomaten gehören in eine Mittelmeerküche. Tabletten gegen Blutdruck oder Cholesterin ersetzen sie nicht.
 
 35
-00:02:46,824 --> 00:02:50,631
+00:02:47,166 --> 00:02:50,973
 Und wenn du keine Tomaten magst, reicht dann eine Kapsel?
 
 36
-00:02:50,481 --> 00:02:54,169
+00:02:50,823 --> 00:02:54,510
 Oft heißt es: Künstliches Lykopin sei wirkungslos,
 
 37
-00:02:54,019 --> 00:02:57,565
+00:02:54,360 --> 00:02:57,906
 nur der natürliche Komplex aus der Tomate zähle.
 
 38
-00:02:57,415 --> 00:03:01,417
+00:02:57,756 --> 00:03:01,758
 Dahinter steht vor allem eine Studie, bezahlt von einer Firma,
 
 39
-00:03:01,267 --> 00:03:03,965
+00:03:01,608 --> 00:03:04,306
 die genau diesen Tomatenextrakt verkauft.
 
 40
-00:03:03,815 --> 00:03:08,612
+00:03:04,156 --> 00:03:08,954
 Pro Gruppe waren es nur etwa ein Dutzend Teilnehmer, der Unterschied war knapp.
 
 41
-00:03:08,462 --> 00:03:11,537
+00:03:08,804 --> 00:03:11,879
 Ins Blut gelangt künstliches Lykopin genauso gut,
 
 42
-00:03:11,387 --> 00:03:14,403
+00:03:11,729 --> 00:03:14,744
 auch das hat allerdings ein Hersteller gemessen.
 
 43
-00:03:14,253 --> 00:03:17,492
+00:03:14,594 --> 00:03:17,834
 Klar ist also nur: Eine Kapsel bringt dir nichts,
 
 44
-00:03:17,342 --> 00:03:19,889
+00:03:17,684 --> 00:03:20,230
 was ein Löffel Mark nicht auch bringt.
 
 45
-00:03:19,739 --> 00:03:28,844
+00:03:20,080 --> 00:03:29,185
 Tipp für dich: Spar dir das Geld für die Kapsel. Ein Löffel Tomatenmark oder frische Tomaten liefern Lykopin und dazu Ballaststoffe und Kalium.
 
 46
-00:03:29,444 --> 00:03:31,880
+00:03:29,785 --> 00:03:32,221
 Dazu kommen weitere Versprechen.
 
 47
-00:03:31,730 --> 00:03:35,879
+00:03:32,071 --> 00:03:36,220
 Prostatakrebs: Männer, die oft gekochte Tomatenprodukte essen,
 
 48
-00:03:35,729 --> 00:03:41,556
+00:03:36,070 --> 00:03:41,897
 erkranken in Beobachtungsstudien etwas seltener, bei rohen Tomaten zeigt sich das nicht.
 
 49
-00:03:41,406 --> 00:03:44,680
+00:03:41,747 --> 00:03:45,021
 Für einen Beweis reichen die wenigen Versuche nicht.
 
 50
-00:03:44,530 --> 00:03:50,292
+00:03:44,871 --> 00:03:50,634
 Haut: Nach zehn Wochen mit Tomatenmark wurde die Haut in der Sonne etwas weniger rot,
 
 51
-00:03:50,142 --> 00:03:52,603
+00:03:50,484 --> 00:03:52,945
 eine Sonnencreme ersetzt das nicht.
 
 52
-00:03:52,453 --> 00:03:56,542
+00:03:52,795 --> 00:03:56,883
 Leber: Wer viel Lykopin isst, hat seltener eine Fettleber,
 
 53
-00:03:56,392 --> 00:03:58,851
+00:03:56,733 --> 00:03:59,192
 auch das ist vor allem beobachtet.
 
 54
-00:03:58,701 --> 00:04:02,686
+00:03:59,042 --> 00:04:03,027
 Zu den Knochen nach den Wechseljahren gibt es nur einen kleinen Versuch,
 
 55
-00:04:02,536 --> 00:04:04,337
+00:04:02,877 --> 00:04:04,678
 ohne Messung der Knochendichte.
 
 56
-00:04:04,187 --> 00:04:10,171
+00:04:04,528 --> 00:04:10,513
 Und mehr gute Darmbakterien? Das stammt aus einer winzigen Studie mit Lykopin-Präparaten,
 
 57
-00:04:10,021 --> 00:04:12,794
+00:04:10,363 --> 00:04:13,135
 mit Tomatenmark wurde es nie untersucht.
 
 58
-00:04:12,644 --> 00:04:18,023
+00:04:12,985 --> 00:04:18,365
 Tipp für dich: Vorsorge und Sonnencreme bleiben, Tomatenmark kommt obendrauf.
 
 59
-00:04:18,623 --> 00:04:20,526
+00:04:18,965 --> 00:04:20,791
 Bleibt der Einkauf.
 
 60
-00:04:20,376 --> 00:04:25,326
+00:04:20,641 --> 00:04:25,591
 In Tests fanden sich in etwa jedem zweiten Tomatenmark Schimmelpilzgifte.
 
 61
-00:04:25,176 --> 00:04:30,354
+00:04:25,441 --> 00:04:30,467
 Für diese Gifte gibt es in der EU bisher nur Richtwerte, keine Grenzwerte.
 
 62
-00:04:30,204 --> 00:04:32,585
+00:04:30,317 --> 00:04:32,698
 Oft heißt es, Bio schütze davor,
 
 63
-00:04:32,435 --> 00:04:37,745
+00:04:32,548 --> 00:04:37,858
 doch unter den am stärksten belasteten Produkten waren mehrere Bio-Marken.
 
 64
-00:04:37,595 --> 00:04:41,328
+00:04:37,708 --> 00:04:41,550
 Der Zucker auf dem Etikett stammt meist aus der Tomate selbst,
 
 65
-00:04:41,178 --> 00:04:42,773
+00:04:41,400 --> 00:04:43,039
 nicht aus der Zuckerdose.
 
 66
-00:04:42,623 --> 00:04:47,726
+00:04:42,889 --> 00:04:48,296
 Und wer Histamin schlecht verträgt, probiert vorsichtig aus, wie viel er verträgt.
 
 67
-00:04:47,576 --> 00:04:50,981
+00:04:48,146 --> 00:04:51,494
 Tipp für dich: Schau in aktuelle Testergebnisse,
 
 68
-00:04:50,831 --> 00:04:56,338
-wechsle ab und zu die Marke und lies die Zutatenliste: Tomaten, höchstens Salz.
+00:04:51,344 --> 00:04:58,825
+wechsle ab und zu die Marke und lies die Zutatenliste: Drin sein sollten nur Tomaten und höchstens etwas Salz.
 
 69
-00:04:56,938 --> 00:04:58,535
+00:04:59,425 --> 00:05:01,098
 Was bleibt also?
 
 70
-00:04:58,385 --> 00:05:01,387
+00:05:00,948 --> 00:05:04,010
 Erstens: Tomatenmark ist ein günstiger,
 
 71
-00:05:01,237 --> 00:05:05,773
+00:05:03,860 --> 00:05:08,489
 guter Lykopin-Lieferant, am besten gekocht und mit etwas Öl.
 
 72
-00:05:05,623 --> 00:05:11,716
+00:05:08,339 --> 00:05:14,660
 Zweitens: Die großen Versprechen beruhen vor allem auf Beobachtungen und kleinen Studien.
 
 73
-00:05:11,566 --> 00:05:17,278
-Drittens: Kapseln bringen nichts extra, ab und zu die Marke zu wechseln schon eher.
+00:05:14,510 --> 00:05:18,584
+Drittens: Kapseln bringen nichts extra. Sinnvoller ist es,
 
 74
-00:05:17,128 --> 00:05:19,664
-Ob es jeden Tag ein Esslöffel sein muss,
+00:05:18,434 --> 00:05:21,898
+beim Tomatenmark ab und zu die Marke zu wechseln.
 
 75
-00:05:19,514 --> 00:05:24,973
-hat übrigens niemand untersucht. Ein paar Mal pro Woche in der Soße ist ein guter Anfang.
+00:05:21,748 --> 00:05:24,989
+Ob es jeden Tag ein Esslöffel Tomatenmark sein muss,
 
 76
-00:05:24,823 --> 00:05:27,031
-Die Quellen stehen in der Beschreibung.
+00:05:24,839 --> 00:05:30,279
+hat übrigens niemand untersucht. Ein paar Mal pro Woche in der Soße ist ein guter Anfang.
 
 77
-00:05:26,881 --> 00:05:32,427
-Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
+00:05:30,129 --> 00:05:32,337
+Die Quellen stehen in der Beschreibung.
 
 78
-00:05:32,277 --> 00:05:34,981
+00:05:32,187 --> 00:05:37,761
+Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
+
+79
+00:05:37,611 --> 00:05:40,328
 aber nicht ersetzen. Bis zum nächsten Video!
 

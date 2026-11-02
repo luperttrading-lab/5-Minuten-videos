@@ -147,7 +147,7 @@
    "kicker": "Faktencheck",
    "headline": "Tomatenmark: Was steckt wirklich im Löffel?",
    "sentences": [
-    "Tomatenmark: ein Löffel am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren. Nicht alles davon hält.",
+    "Tomatenmark: ein Löffel am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren. Was steckt wirklich im Löffel?",
     "Wir prüfen sechs Fragen: Mark oder frische Tomate, was es dem Gehirn bringt und dem Herzen, ob eine Kapsel reicht, welche Versprechen halten und worauf du beim Kauf achtest."
    ],
    "hervorheben_at": 1,
@@ -169,8 +169,8 @@
      "wort": "Schlaganfälle"
     },
     {
-     "t": "Nicht alles davon hält.",
-     "wort": "Nicht",
+     "t": "Was steckt wirklich im Löffel?",
+     "wort": "Was",
      "art": "urteil"
     }
    ],
@@ -566,7 +566,7 @@
     "Oft heißt es, Bio schütze davor, doch unter den am stärksten belasteten Produkten waren mehrere Bio-Marken.",
     "Der Zucker auf dem Etikett stammt meist aus der Tomate selbst, nicht aus der Zuckerdose.",
     "Und wer Histamin schlecht verträgt, probiert vorsichtig aus, wie viel er verträgt.",
-    "Tipp für dich: Schau in aktuelle Testergebnisse, wechsle ab und zu die Marke und lies die Zutatenliste: Tomaten, höchstens Salz."
+    "Tipp für dich: Schau in aktuelle Testergebnisse, wechsle ab und zu die Marke und lies die Zutatenliste: Drin sein sollten nur Tomaten und höchstens etwas Salz."
    ],
    "bullets": [
     {
@@ -626,8 +626,8 @@
     "Was bleibt also?",
     "Erstens: Tomatenmark ist ein günstiger, guter Lykopin-Lieferant, am besten gekocht und mit etwas Öl.",
     "Zweitens: Die großen Versprechen beruhen vor allem auf Beobachtungen und kleinen Studien.",
-    "Drittens: Kapseln bringen nichts extra, ab und zu die Marke zu wechseln schon eher.",
-    "Ob es jeden Tag ein Esslöffel sein muss, hat übrigens niemand untersucht. Ein paar Mal pro Woche in der Soße ist ein guter Anfang.",
+    "Drittens: Kapseln bringen nichts extra. Sinnvoller ist es, beim Tomatenmark ab und zu die Marke zu wechseln.",
+    "Ob es jeden Tag ein Esslöffel Tomatenmark sein muss, hat übrigens niemand untersucht. Ein paar Mal pro Woche in der Soße ist ein guter Anfang.",
     "Die Quellen stehen in der Beschreibung.",
     "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
    ],

@@ -1,13 +1,13 @@
 {
  "titel": "Tomatenmark",
- "aufgabe": "Den neuen Einstieg ansehen (17 Sekunden, Ton an), dann „passt“ oder „ändern“. Die Hörprobe mit dem Abnahme-Kasten bleibt die zweite Aufgabe.",
+ "aufgabe": "Den Einstieg ansehen (17 Sekunden, Ton an), dann „passt“ oder „ändern“.",
  "videos": [
   {
    "datei": "hook_vorschau.mp4",
-   "titel": "Neuer Einstieg, Tempo 1,05",
-   "stand": "02.11., 13:10",
+   "titel": "Einstieg: endet mit „Was steckt wirklich im Löffel?“",
+   "stand": "02.11., 15:55",
    "pruefen": true,
-   "notiz": "„Tomatenmark“ zuerst gesprochen, vier Zeilen erscheinen beim gesprochenen Wort, die letzte in Rot. Sprechtempo jetzt 1,05 wie bei Guanfacin; Hook 8,3 Sekunden, ganzes Video 5:36."
+   "notiz": "Neuer Schluss des Hooks, damit er sich von Guanfacin unterscheidet und den Titel aufgreift. Hook 8,7 Sekunden, Tempo 1,05."
   }
  ]
 }
