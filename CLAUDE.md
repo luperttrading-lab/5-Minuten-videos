@@ -44,7 +44,7 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 8. **Ausliefern:** 1080p (Master, nicht einchecken), 720p für die Teilen-Seite (Artifact), 480p zum Verschicken:
    `ffmpeg -i video.mp4 -vf "crop=1920:1072:0:0,fps=15,scale=854:480:flags=lanczos" -c:v libx264 -preset slow -crf 30
    -tune stillimage -profile:v main -pix_fmt yuv420p -c:a aac -b:a 64k -ac 1 -movflags +faststart video_480p.mp4`
-   Dateien dem Nutzer im Chat schicken. MP4s nie committen: Sie lassen sich aus Drehbuch, Grafik und Ton-Cache jederzeit neu rendern.
+   Videos über die Vorschau-Seite zeigen (siehe „Antworten an den Nutzer“), nicht als Datei. MP4s nie committen: Sie lassen sich aus Drehbuch, Grafik und Ton-Cache jederzeit neu rendern.
 
 ## Aufbau `szenen.json`
 - Kopf: `tts` (`elevenlabs`), `voice_id`, `model`, `tempo`, `titel`, `untertitel`, `fuss`, `quellen` (Verzeichnis
@@ -115,6 +115,11 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 
 ## Antworten an den Nutzer
 - Kurz halten und Bilder zeigen statt viel Text (Kontaktbogen, Stichbilder, Vorher/nachher).
+- **Videos nie als Datei in den Chat** (Nutzerwunsch 02.11.: landen auf dem Handy, belegen Speicher, spielen dort
+  stumm). Stattdessen je Thema eine feste Vorschau-Seite: `python3 ../../werkzeug/vorschau.py vorschau.json vorschau`,
+  als Artifact mit `{"db": {}, "comments": {}}` veröffentlichen und immer dieselbe URL aktualisieren; neueste Fassung
+  oben, „zu prüfen“ / „zur Info“, je Video höchstens 16 MB (ganzes Video 720p/12 fps). Dateien (480p, 1080p) nur,
+  wenn der Nutzer sie ausdrücklich will, z. B. 1080p für den Upload. Einstieg testen: `render.py … --bis 17`.
 - Braucht es eine Entscheidung oder Abnahme des Nutzers: erste Zeile **„Deine Aufgabe: …“** mit Link, Ort auf der
   Seite und Zahl der Stellen („oben im Kasten, 10 Stellen, dann grüner Knopf“). Nie nur „bitte abnehmen“ (Suchzeit).
 - Am Ende jeder Antwort genau eine Kostenzeile: `python3 tools/kosten.py` ausführen, Ausgabe wörtlich als letzte Zeile.
