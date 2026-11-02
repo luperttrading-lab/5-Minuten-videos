@@ -185,7 +185,7 @@ scenes = [
 ]
 
 cfg = {"tts": "elevenlabs", "voice_id": "NBqeXKdZHweef6y0B67V", "voice_name": "Christian - Warm and Captivating",
-       "model": "eleven_v4", "tempo": 1.05, "titel": "Guanfacin: Was stimmt?",
+       "model": "eleven_v4", "tempo": 1.05, "aussprache": {"Guanfacin": "Guanfazihn"}, "titel": "Guanfacin: Was stimmt?",
        "untertitel": "Ein Faktencheck zu Wirkung, Zulassung, Nebenwirkungen und Off-Label-Gebrauch des ADHS-Medikaments. Jeder Punkt ist gegen Fachinformation, Leitlinie und Studien geprüft.",
        "fuss": "Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.",
        "quellen": quellen, "scenes": scenes}

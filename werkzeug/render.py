@@ -219,9 +219,15 @@ def number_sources(cfg):
     return order
 
 
+AUSSPRACHE = {}   # aus dem Drehbuch-Kopf "aussprache": {"Guanfacin": "Guanfazihn"}; nur Sprechtext, Anzeige bleibt
+
+
 def sentence(s):
     """Satz als (Anzeigetext, Sprechtext)."""
-    return (s, s) if isinstance(s, str) else (s['t'], s.get('say', s['t']))
+    t, say = (s, s) if isinstance(s, str) else (s['t'], s.get('say', s['t']))
+    for alt, neu in AUSSPRACHE.items():
+        say = say.replace(alt, neu)
+    return t, say
 
 
 def build_audio(cfg, args):
@@ -808,6 +814,7 @@ def main():
     args = ap.parse_args()
     args.cache = args.cache or os.path.join(os.path.dirname(os.path.abspath(args.szenen)), 'tts_cache')
     cfg = json.load(open(args.szenen, encoding='utf-8'))
+    AUSSPRACHE.update(cfg.get('aussprache', {}))
     for sc in cfg['scenes']:                            # alte Drehbücher: blaue Stufe „frueh“ -> gelb mit Zusatz
         for b in sc.get('bullets', []):
             if b.get('ev') == 'frueh':

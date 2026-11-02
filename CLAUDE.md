@@ -47,7 +47,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
    Videos über die Vorschau-Seite zeigen (siehe „Antworten an den Nutzer“), nicht als Datei. MP4s nie committen: Sie lassen sich aus Drehbuch, Grafik und Ton-Cache jederzeit neu rendern.
 
 ## Aufbau `szenen.json`
-- Kopf: `tts` (`elevenlabs`), `voice_id`, `model`, `tempo`, `titel`, `untertitel`, `fuss`, `quellen` (Verzeichnis
+- Kopf: `tts` (`elevenlabs`), `voice_id`, `model`, `tempo`, `aussprache` (nur Sprechtext, z. B. `{"Guanfacin": "Guanfazihn"}`,
+  Nutzerwahl 02.11.: Fachwörter vorher mit Proben anhören lassen), `titel`, `untertitel`, `fuss`, `quellen` (Verzeichnis
   `id → kurz, voll, url`).
 - Erste Szene `layout: "kacheln"`: sechs Kapitel-Kacheln (`kacheln: [{t, a, wort}]`). Jede Kachel leuchtet auf, wenn ihr
   `wort` gesprochen wird (ElevenLabs-Zeitmarken). `hervorheben_at`/`legende_at` = Satznummer. Die Legende wird nur
