@@ -32,7 +32,6 @@ Betäubungsmittel, und Hinweise auf Missbrauch gibt es nicht.
 Es wirkt an einer Art Bremse für Stresssignale, dem Alpha-2A-Rezeptor.
 Viele sagen, es stärke so die Netzwerke im Stirnhirn. Gezeigt wurde das vor allem an Affen und Ratten; beim Menschen ist
 der Mechanismus laut Fachinformation nicht vollständig geklärt.
-Die Forscherin hinter dieser Erklärung und ihre Universität erhalten übrigens Lizenzgebühren aus dem Verkauf.
 Wenn dir jemand Guanfacin als Gehirn-Booster verkauft: Das ist Tierforschung, keine Zusage für dich.
 
 **2 Für wen zugelassen?**
