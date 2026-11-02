@@ -356,7 +356,8 @@ def panel_states(sc):
         if used - {None}:                              # Legende statt Fliesstext
             fl = font(INTER.format('Regular'), 21)
             xx, yy = TX0, by + 84
-            kinds = ['stark'] + (['frueh'] if 'frueh' in used else []) + ['mittel'] + (['offen'] if 'offen' in used else []) + ['keine']
+            kinds = ['stark', 'frueh', 'mittel']   # Blau immer in der Legende (Nutzerwunsch 02.11.: feste Skala für die Reihe)
+            kinds = kinds + (['offen'] if 'offen' in used else []) + ['keine']
             for kind in kinds:
                 draw_mark(d, xx + 11, yy, 11, kind)
                 d.text((xx + 28, yy), MARKS[kind][2], font=fl, fill=MUTED, anchor='lm')
@@ -604,7 +605,7 @@ class AgendaScene:
         self.legend = Image.new('RGBA', (W, 60), (0, 0, 0, 0))
         dl = ImageDraw.Draw(self.legend)
         fl = font(INTER.format('Medium'), 28)
-        items = [('stark', 'belegt')] + ([('frueh', 'frühe Hinweise')] if sc.get('_frueh') else []) + [('mittel', 'teilweise'), ('keine', 'nicht haltbar')]
+        items = [('stark', 'belegt'), ('frueh', 'frühe Hinweise'), ('mittel', 'teilweise'), ('keine', 'nicht haltbar')]
         widths = [44 + int(dl.textlength(t, font=fl)) for _, t in items]
         xx = (W - sum(widths) - 60 * (len(items) - 1)) // 2
         for (kind, t), w in zip(items, widths):
