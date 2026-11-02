@@ -37,7 +37,7 @@ LEVELS = {
 # Marker je Stichpunkt: Farbe und Zeichen
 MARKS = {
     'stark': ((52, 128, 86), 'check', 'belegt'),
-    'frueh': ((43, 104, 168), 'pfeil', 'frühe Hinweise'),   # vierte Stufe (Strategiepapier 02.11.): neu, vielversprechend, jung
+    'frueh': ((43, 104, 168), 'pfeil', 'frühe Hinweise'),   # nicht mehr verwendet (02.11.): wird beim Laden zu mittel + neu
     'mittel': ((190, 136, 30), 'tilde', 'teilweise'),
     'offen': ((138, 132, 126), 'frage', 'keine Studien'),
     'keine': ((178, 52, 48), 'cross', 'nicht haltbar'),
@@ -356,7 +356,7 @@ def panel_states(sc):
         if used - {None}:                              # Legende statt Fliesstext
             fl = font(INTER.format('Regular'), 21)
             xx, yy = TX0, by + 84
-            kinds = ['stark', 'frueh', 'mittel']   # Blau immer in der Legende (Nutzerwunsch 02.11.: feste Skala für die Reihe)
+            kinds = ['stark', 'mittel']   # dreistufige Ampel; junge Belege als Zusatz „neu“ (Nutzerentscheidung 02.11.)
             kinds = kinds + (['offen'] if 'offen' in used else []) + ['keine']
             for kind in kinds:
                 draw_mark(d, xx + 11, yy, 11, kind)
@@ -407,6 +407,16 @@ def panel_states(sc):
             if stil == 'C':
                 d.line([(x, y + 24), (x + d.textlength(line, font=fb), y + 24)], fill=ROT, width=3)
             y += 45
+        if b.get('neu'):                                # Zusatz unter dem Stichpunkt: junge, dünne Belege (nur bei Gelb)
+            if b.get('ev') != 'mittel':
+                print(f"WARNUNG {sc['id']}: Zusatz „neu“ nur bei ev mittel, ignoriert bei „{b['t']}“")
+            else:
+                fz = font(INTER.format('SemiBold'), 22)
+                tx = b['neu'] if isinstance(b['neu'], str) else 'erst wenige, kleine Studien'
+                x0, y0 = TX0 + 46, y - 2
+                d.rounded_rectangle([x0, y0, x0 + d.textlength(tx, font=fz) + 24, y0 + 32], radius=16, outline=ACCENT, width=2)
+                d.text((x0 + 12, y0 + 16), tx, font=fz, fill=ACCENT, anchor='lm')
+                y += 40
         if b.get('gefahr'):                             # ⚠ hinter der letzten Zeile
             draw_gefahr(d, TX0 + 46 + d.textlength(lines[-1], font=fb) + 14, y - 45 + 22, 30)
         y += 20
@@ -624,7 +634,7 @@ class AgendaScene:
         self.legend = Image.new('RGBA', (W, 60), (0, 0, 0, 0))
         dl = ImageDraw.Draw(self.legend)
         fl = font(INTER.format('Medium'), 28)
-        items = [('stark', 'belegt'), ('frueh', 'frühe Hinweise'), ('mittel', 'teilweise'), ('keine', 'nicht haltbar')]
+        items = [('stark', 'belegt'), ('mittel', 'teilweise'), ('keine', 'nicht haltbar')]
         widths = [44 + int(dl.textlength(t, font=fl)) for _, t in items]
         xx = (W - sum(widths) - 60 * (len(items) - 1)) // 2
         for (kind, t), w in zip(items, widths):
@@ -793,9 +803,10 @@ def main():
     args = ap.parse_args()
     args.cache = args.cache or os.path.join(os.path.dirname(os.path.abspath(args.szenen)), 'tts_cache')
     cfg = json.load(open(args.szenen, encoding='utf-8'))
-    frueh = any(b.get('ev') == 'frueh' for sc in cfg['scenes'] for b in sc.get('bullets', []))
-    for sc in cfg['scenes']:
-        sc['_frueh'] = frueh                            # Legende der Kacheln zeigt Blau nur, wenn es vorkommt
+    for sc in cfg['scenes']:                            # alte Drehbücher: blaue Stufe „frueh“ -> gelb mit Zusatz
+        for b in sc.get('bullets', []):
+            if b.get('ev') == 'frueh':
+                b['ev'], b['neu'] = 'mittel', b.get('neu') or True
     global BILD_DIR
     BILD_DIR = os.path.dirname(os.path.abspath(args.szenen))
     number_sources(cfg)

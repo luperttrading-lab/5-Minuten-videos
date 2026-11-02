@@ -69,9 +69,13 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - Jede Szene endet mit einem Handlungstipp, Ansprache mit „du“. Beide Formen nennen, nicht gendern: „Arzt oder
   Ärztin“ (nicht nur „Ärztin“, kein Stern, kein Doppelpunkt; Nutzerwunsch 02.11.).
 - Marker beziehen sich auf die geprüfte Aussage („Funkstrahlung als Stressor ✕“), nicht auf unseren Satz dazu.
-- Ampel nur Farbe und Text, keine Punkte. Legende immer vollständig: belegt / frühe Hinweise (blau, `ev: "frueh"`) /
-  teilweise / nicht haltbar, auch wenn eine Stufe im Video nicht vorkommt (Nutzerwunsch 02.11.: feste Skala für die Reihe).
-  Gefährliche Behauptungen zusätzlich `"gefahr": true` (⚠).
+- Ampel nur Farbe und Text, keine Punkte. Legende immer dreistufig: belegt / teilweise / nicht haltbar. Keine blaue
+  vierte Stufe mehr (Nutzerentscheidung 02.11. abends, ersetzt die Regel vom Nachmittag): Sie sortierte junge, dünne
+  Belege vor Gelb ein, obwohl sie oft schwächer sind, und kam in der ganzen Reihe nur einmal vor. Stattdessen bei Gelb
+  der Zusatz `"neu": true` oder `"neu": "erst eine kleine Studie"` (Kästchen unter dem Stichpunkt, Standardtext „erst
+  wenige, kleine Studien“); nur bei `ev: "mittel"`, nie bei Rot (liest sich sonst wie „eine Studie zeigt, dass es falsch
+  ist“). Alte Drehbücher mit `ev: "frueh"` rendert `render.py` automatisch als Gelb mit Zusatz.
+  Gefährliche Behauptungen zusätzlich `"gefahr": true` (⚠). Farbe = Stärke der Belege, Zeichen = Eigenschaft.
   Rote Stichpunkte: Behauptung in Anführungszeichen, dahinter rot „ist falsch“ (Nutzerwahl 02.11., `ROT_STIL` B im Renderer).
 - Quellen durchnummeriert nach erstem Auftreten, im Video „Quellen: [n] Autor Jahr“. Die YouTube-Beschreibung hat
   nackte URLs (YouTube macht nur die klickbar), höchstens 5000 Zeichen, mit Kapitelzeiten.

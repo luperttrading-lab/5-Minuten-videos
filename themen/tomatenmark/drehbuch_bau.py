@@ -60,7 +60,7 @@ scenes = [
    'Der Wachstumsstoff für Nervenzellen stieg nur knapp, schwächer als die Forscher erwartet hatten.',
    'Der Schutz vor Demenz ist bisher nur beobachtet: Menschen mit Demenz haben weniger Lykopin im Blut, vielleicht aber, weil sie anders essen.',
    'Tipp für dich: Sieh Tomatenmark als Teil guter Ernährung. Für Bewegung und Schlaf ist die Wirkung aufs Gehirn viel besser belegt.'],
-  'bullets': [B('35 g täglich: bessere Konzentration', 3, 'frueh'), B('Steigert den Nervenwachstumsfaktor BDNF', 5, 'mittel'),
+  'bullets': [dict(B('35 g täglich: bessere Konzentration', 3, 'mittel'), neu='erst eine kleine Studie'), B('Steigert den Nervenwachstumsfaktor BDNF', 5, 'mittel'),
               B('Schützt vor Demenz', 6, 'mittel')],
   'evidence': {'level': 'mittel', 'label': 'erste Hinweise, kein Beweis'},
   'quellen': ['lopezsolis2026', 'wang2023', 'crowewhite2019'],
