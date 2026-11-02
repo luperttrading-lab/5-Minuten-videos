@@ -271,42 +271,42 @@ Tipp für dich: Schau in aktuelle Testergebnisse,
 wechsle ab und zu die Marke und lies die Zutatenliste: Tomaten, höchstens Salz.
 
 69
-00:04:56,938 --> 00:04:58,612
+00:04:56,938 --> 00:04:58,535
 Was bleibt also?
 
 70
-00:04:58,462 --> 00:05:01,493
+00:04:58,385 --> 00:05:01,387
 Erstens: Tomatenmark ist ein günstiger,
 
 71
-00:05:01,343 --> 00:05:05,926
+00:05:01,237 --> 00:05:05,773
 guter Lykopin-Lieferant, am besten gekocht und mit etwas Öl.
 
 72
-00:05:05,776 --> 00:05:11,869
+00:05:05,623 --> 00:05:11,716
 Zweitens: Die großen Versprechen beruhen vor allem auf Beobachtungen und kleinen Studien.
 
 73
-00:05:11,719 --> 00:05:17,354
+00:05:11,566 --> 00:05:17,278
 Drittens: Kapseln bringen nichts extra, ab und zu die Marke zu wechseln schon eher.
 
 74
-00:05:17,204 --> 00:05:19,670
+00:05:17,128 --> 00:05:19,664
 Ob es jeden Tag ein Esslöffel sein muss,
 
 75
-00:05:19,520 --> 00:05:24,821
+00:05:19,514 --> 00:05:24,973
 hat übrigens niemand untersucht. Ein paar Mal pro Woche in der Soße ist ein guter Anfang.
 
 76
-00:05:24,671 --> 00:05:26,878
+00:05:24,823 --> 00:05:27,031
 Die Quellen stehen in der Beschreibung.
 
 77
-00:05:26,728 --> 00:05:32,267
+00:05:26,881 --> 00:05:32,427
 Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
 
 78
-00:05:32,117 --> 00:05:33,426
-aber nicht ersetzen.
+00:05:32,277 --> 00:05:34,981
+aber nicht ersetzen. Bis zum nächsten Video!
 
