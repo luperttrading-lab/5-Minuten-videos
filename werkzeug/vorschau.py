@@ -5,10 +5,11 @@ belegen Speicher). Aufruf: python3 vorschau.py vorschau.json <ausordner>
 vorschau.json: {"titel": "Guanfacin", "aufgabe": "…", "videos": [{"datei": "hook_vorschau.mp4", "titel": "Neuer Einstieg",
 "notiz": "…", "stand": "02.11., 11:13", "pruefen": true}, …]} – neueste zuerst. Videos je höchstens 16 MB (Artifact-Grenze),
 also 720p/12 fps fürs ganze Video, Einstiegsproben 720p. Kein Autoplay (Browser spielen dann stumm); Ton kommt mit dem
-ersten Antippen. Je Video „passt“ / „ändern“ mit Notiz: Kommentar an Claude und Sammlung `vorschau_urteile`.
+ersten Antippen. Je Video „passt“ / „ändern“ mit Notiz: Kommentar an Claude und Sammlung `vorschau_urteile` (Dokument-ID = Hash aus
+Datei, Titel und Stand, damit alte Urteile nicht auf neu eingefügte Videos rutschen).
 Als Artifact mit Fähigkeiten {"db": {}, "comments": {}} veröffentlichen, Dateien unter `videos/`.
 """
-import html, json, os, shutil, subprocess, sys
+import hashlib, html, json, os, shutil, subprocess, sys
 
 cfg_pfad, aus = sys.argv[1], sys.argv[2]
 basis = os.path.dirname(os.path.abspath(cfg_pfad))
@@ -27,7 +28,8 @@ for i, v in enumerate(cfg['videos']):
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', str(v.get('poster_bei', 4)), '-i', quelle, '-frames:v', '1',
                     '-vf', 'scale=960:-2', '-q:v', '4', os.path.join(aus, poster)], check=True)
     marke = '<span class="marke pruefen">zu prüfen</span>' if v.get('pruefen') else '<span class="marke info">zur Info</span>'
-    karten.append(f'''<article class="video" id="v{i + 1}" data-id="v{i + 1}" data-titel="{esc(v["titel"])}">
+    vid = 'v_' + hashlib.sha1((v['datei'] + '|' + v['titel'] + '|' + v.get('stand', '')).encode()).hexdigest()[:10]
+    karten.append(f'''<article class="video" id="v{i + 1}" data-id="{vid}" data-titel="{esc(v["titel"])}">
       <div class="kopfzeile"><h2>{esc(v["titel"])}</h2>{marke}</div>
       <p class="stand">Stand {esc(v.get("stand", ""))} · {groesse / 1e6:.1f} MB</p>
       <video controls playsinline preload="metadata" poster="{poster}" src="{ziel}"></video>
