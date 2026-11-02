@@ -34,11 +34,11 @@ scenes = [
  {"id": "g0", "layout": "kacheln", "kapitel": "Einleitung", "kicker": "Faktencheck",
   "headline": "Guanfacin: Was stimmt?",
   "sentences": [
-   "Guanfacin: sanfter als Ritalin, wirkt nach ein paar Tagen, hilft sogar gegen Angst. Nicht alles davon hält.",
+   "Guanfacin: sanfter als Ritalin, wirkt nach ein paar Tagen, hilft sogar gegen Angst. Was davon stimmt wirklich?",
    "Wir prüfen sechs Fragen: Was ist Guanfacin? Für wen ist es zugelassen? Wie gut wirkt es? Welche Nebenwirkungen hat es? Was gilt beim Absetzen? Und was ist mit Erwachsenen?"],
   "hervorheben_at": 1, "legende_at": 1, "kacheln_ab": 1, "hook_bild": "bilder/g0_hook_b.png", "hook_titel": "Guanfacin",
   "hook_zeilen": [{"t": "Sanfter als Ritalin?", "wort": "sanfter"}, {"t": "Wirkt nach ein paar Tagen?", "wort": "wirkt"},
-                  {"t": "Hilft sogar gegen Angst?", "wort": "hilft"}, {"t": "Nicht alles davon hält.", "wort": "Nicht", "art": "urteil"}],
+                  {"t": "Hilft sogar gegen Angst?", "wort": "hilft"}, {"t": "Was davon stimmt wirklich?", "wort": "Was davon", "art": "urteil"}],
   "bilder": [{"datei": "bilder/g0_hook_b.png", "prompt": "a wide view of a warm wooden table; on the RIGHT half of the frame one large white pill lies on the table, lit from the side so that it casts one long soft shadow that clearly takes the shape of a question mark; the LEFT half of the frame is calm, empty, softly lit wood with nothing on it, leaving room for a title; calm and slightly mysterious mood"}],
   "kacheln": [
    {"t": "Was ist Guanfacin?", "bild": "bilder/g1a.png", "wort": "Was ist"},

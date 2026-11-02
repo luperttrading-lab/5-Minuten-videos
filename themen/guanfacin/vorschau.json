@@ -1,8 +1,10 @@
 {"titel": "Guanfacin",
- "aufgabe": "Oben das fertige Video (6:05) ansehen. Wenn es passt, „passt“ und „An Claude“; dann ist es fertig für YouTube.",
+ "aufgabe": "Oben zwei Fassungen des Schlusssatzes im Einstieg (je 17 Sekunden). Bei der besseren „passt“ und „An Claude“, dann rendere ich das ganze Video damit.",
  "videos": [
-  {"datei": "video_720p.mp4", "titel": "Fertiges Video mit neuem Einstieg", "stand": "02.11., 11:34", "pruefen": true, "poster_bei": 6,
-   "notiz": "6:05, 720p (Vorschau). Einstieg wie abgenommen, Rest unverändert. Die 1080p-Fassung für YouTube schicke ich, wenn du sie willst."},
-  {"datei": "hook_vorschau.mp4", "titel": "Neuer Einstieg (abgenommen 11:26)", "stand": "02.11., 11:13", "pruefen": false,
-   "notiz": "Name zuerst, Schrift fährt deutlicher ein. Von dir mit „passt“ abgenommen."}
+  {"datei": "hook_A.mp4", "titel": "A: „Nicht alles davon stimmt.“", "stand": "02.11., 12:08", "pruefen": true, "poster_bei": 9.3,
+   "notiz": "Feststellung, wie vorher, nur „stimmt“ statt „hält“."},
+  {"datei": "hook_B.mp4", "titel": "B: „Was davon stimmt wirklich?“", "stand": "02.11., 12:08", "pruefen": true, "poster_bei": 9.3,
+   "notiz": "Offene Frage, greift den Titel „Was stimmt?“ auf und macht neugierig auf die Antwort."},
+  {"datei": "video_720p.mp4", "titel": "Ganzes Video, noch mit „Nicht alles davon hält.“", "stand": "02.11., 11:34", "pruefen": false, "poster_bei": 6,
+   "notiz": "6:05. Alles andere ist fertig; nur der Schlusssatz des Einstiegs wird noch getauscht."}
  ]}
