@@ -178,7 +178,8 @@
    "sentences": [
     "Guanfacin kam in den Achtzigerjahren als Blutdruckmittel auf den Markt; heute gibt es es als Retardtablette gegen ADHS.",
     "Oft heißt es: Guanfacin ist kein Stimulans und macht nicht süchtig.",
-    "Das stimmt; es fällt nicht unter das Betäubungsmittelgesetz, und Hinweise auf Missbrauch gibt es nicht.",
+    "Das stimmt. Die üblichen ADHS-Mittel wie Methylphenidat, bekannt als Ritalin, sind Stimulanzien: Sie wirken anregend, schon nach einer Stunde, und fallen unter das Betäubungsmittelgesetz.",
+    "Guanfacin arbeitet anders, ist kein Betäubungsmittel, und Hinweise auf Missbrauch gibt es nicht.",
     {
      "t": "Es wirkt an einer Art Bremse für Stresssignale, dem Alpha-2A-Rezeptor.",
      "say": "Es wirkt an einer Art Bremse für Stresssignale, dem Alpha-zwei-A-Rezeptor."
@@ -195,7 +196,7 @@
     },
     {
      "t": "Stärkt das Stirnhirn",
-     "at": 4,
+     "at": 5,
      "ev": "mittel"
     }
    ],
@@ -218,7 +219,7 @@
     {
      "bild": "bilder/g1b.png",
      "zoom": 0.18,
-     "at": 3
+     "at": 4
     }
    ],
    "bilder": [
@@ -559,7 +560,7 @@
    "headline": "Was wirklich bleibt",
    "sentences": [
     "Was bleibt?",
-    "Erstens: Guanfacin ist kein Stimulans und eine echte Möglichkeit für Kinder und Jugendliche, wenn Stimulanzien nicht passen.",
+    "Erstens: Guanfacin ist kein Stimulans wie Ritalin, sondern eine ruhigere Alternative für Kinder und Jugendliche, wenn die Stimulanzien nicht passen oder nicht vertragen werden.",
     "Zweitens: Es wirkt langsamer und schwächer als Stimulanzien und macht anfangs oft müde.",
     "Drittens: täglich nehmen, nie plötzlich absetzen, Blutdruck und Puls im Blick behalten.",
     "Für Erwachsene, gegen Angst und als Gehirn-Booster fehlt der Beleg.",

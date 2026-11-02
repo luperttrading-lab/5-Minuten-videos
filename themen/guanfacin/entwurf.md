@@ -26,8 +26,9 @@ rot nicht haltbar.
 
 **1 Was ist Guanfacin?**
 Guanfacin kam in den Achtzigerjahren als Blutdruckmittel auf den Markt. Heute gibt es es als Retardtablette gegen ADHS.
-Oft heißt es: Guanfacin ist kein Stimulans und macht nicht süchtig. Das stimmt; es fällt nicht unter das
-Betäubungsmittelgesetz, und Hinweise auf Missbrauch gibt es nicht.
+Oft heißt es: Guanfacin ist kein Stimulans und macht nicht süchtig. Das stimmt. Die üblichen ADHS-Mittel wie Methylphenidat, bekannt als Ritalin, sind Stimulanzien: Sie wirken anregend,
+schon nach einer Stunde, und fallen unter das Betäubungsmittelgesetz. Guanfacin arbeitet anders, ist kein
+Betäubungsmittel, und Hinweise auf Missbrauch gibt es nicht.
 Es wirkt an einer Art Bremse für Stresssignale, dem Alpha-2A-Rezeptor.
 Viele sagen, es stärke so die Netzwerke im Stirnhirn. Gezeigt wurde das vor allem an Affen und Ratten; beim Menschen ist
 der Mechanismus laut Fachinformation nicht vollständig geklärt.
@@ -84,7 +85,7 @@ Alles außer ADHS bei Kindern ist ein Einsatz außerhalb der Zulassung. Sprich d
 nach Nutzen und Risiken.
 
 **7 Fazit**
-Was bleibt? Erstens: Guanfacin ist kein Stimulans und eine echte Möglichkeit für Kinder und Jugendliche, wenn
-Stimulanzien nicht passen. Zweitens: Es wirkt langsamer und schwächer als Stimulanzien und macht anfangs oft müde.
+Was bleibt? Erstens: Guanfacin ist kein Stimulans wie Ritalin, sondern eine ruhigere Alternative für Kinder und Jugendliche,
+wenn die Stimulanzien nicht passen oder nicht vertragen werden. Zweitens: Es wirkt langsamer und schwächer als Stimulanzien und macht anfangs oft müde.
 Drittens: täglich nehmen, nie plötzlich absetzen, Blutdruck und Puls im Blick behalten. Für Erwachsene, gegen Angst und
 als Gehirn-Booster fehlt der Beleg. Dieses Video ersetzt keinen ärztlichen Rat. Die Quellen stehen in der Beschreibung.
