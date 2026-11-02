@@ -72,6 +72,7 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - Ampel nur Farbe und Text, keine Punkte. Legende immer vollständig: belegt / frühe Hinweise (blau, `ev: "frueh"`) /
   teilweise / nicht haltbar, auch wenn eine Stufe im Video nicht vorkommt (Nutzerwunsch 02.11.: feste Skala für die Reihe).
   Gefährliche Behauptungen zusätzlich `"gefahr": true` (⚠).
+  Rote Stichpunkte: Behauptung in Anführungszeichen, dahinter rot „ist falsch“ (Nutzerwahl 02.11., `ROT_STIL` B im Renderer).
 - Quellen durchnummeriert nach erstem Auftreten, im Video „Quellen: [n] Autor Jahr“. Die YouTube-Beschreibung hat
   nackte URLs (YouTube macht nur die klickbar), höchstens 5000 Zeichen, mit Kapitelzeiten.
 - Bildausschnitte: Schrift ganz oder gar nicht, keine halben Nachbarmotive, kein Rahmenstrich der Grafik. Bei

@@ -381,12 +381,12 @@ def panel_states(sc):
         img = states[-1].copy()
         d = ImageDraw.Draw(img)
         rot = b.get('ev') == 'keine'
-        stil = os.environ.get('ROT_STIL', 'A') if rot else ''
+        stil = os.environ.get('ROT_STIL', 'B') if rot else ''   # B: „Behauptung“ ist falsch (Nutzerwahl 02.11.)
         txt = b['t']
         if stil == 'A':
             txt = 'Falsch: „' + txt + '“'
         elif stil == 'B':
-            txt = '„' + txt + '“ – falsch'
+            txt = '„' + txt + '“ ist falsch'
         lines = wrap(d, txt, fb, TX1 - TX0 - 50)
         if b.get('ev'):
             draw_mark(d, TX0 + 15, y + 22, 16, b['ev'])
@@ -399,9 +399,9 @@ def panel_states(sc):
                 d.text((x, y), 'Falsch:', font=fb, fill=ROT)
                 x += d.textlength('Falsch: ', font=fb)
                 line = line[len('Falsch: '):]
-            if stil == 'B' and k == len(lines) - 1 and line.endswith('falsch'):
-                d.text((x, y), line[:-6], font=fb, fill=INK)
-                d.text((x + d.textlength(line[:-6], font=fb), y), 'falsch', font=fb, fill=ROT)
+            if stil == 'B' and k == len(lines) - 1 and line.endswith('ist falsch'):
+                d.text((x, y), line[:-10], font=fb, fill=INK)
+                d.text((x + d.textlength(line[:-10], font=fb), y), 'ist falsch', font=fb, fill=ROT)
             else:
                 d.text((x, y), line, font=fb, fill=INK)
             if stil == 'C':
