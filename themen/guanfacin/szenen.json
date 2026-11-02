@@ -127,7 +127,7 @@
    "kicker": "Faktencheck",
    "headline": "Guanfacin: Was stimmt?",
    "sentences": [
-    "Sanfter als Ritalin, wirkt nach ein paar Tagen, hilft sogar gegen Angst: Nicht alles davon hält.",
+    "Guanfacin: sanfter als Ritalin, wirkt nach ein paar Tagen, hilft sogar gegen Angst. Nicht alles davon hält.",
     "Wir prüfen sechs Fragen: Was ist Guanfacin? Für wen ist es zugelassen? Wie gut wirkt es? Welche Nebenwirkungen hat es? Was gilt beim Absetzen? Und was ist mit Erwachsenen?"
    ],
    "hervorheben_at": 1,
@@ -138,7 +138,7 @@
    "hook_zeilen": [
     {
      "t": "Sanfter als Ritalin?",
-     "wort": "Sanfter"
+     "wort": "sanfter"
     },
     {
      "t": "Wirkt nach ein paar Tagen?",

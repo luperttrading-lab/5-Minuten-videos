@@ -606,18 +606,25 @@ class AgendaScene:
         img.paste(Image.new('RGB', (W, H), PAPER), (0, 0), self.schleier)
         d = ImageDraw.Draw(img, 'RGBA')
         v0 = self.sc['v0']
+        aus = lambda u: 1 - (1 - min(max(u, 0.0), 1.0)) ** 3        # ease-out: schnell an, weich ins Ziel
         if self.hook_titel:
-            a = min(max((t - v0) / 0.5, 0.0), 1.0)
-            d.text((110, 150), self.hook_titel, font=font(SERIF_B, 150), fill=INK + (int(255 * a),), anchor='ls')
-            d.rectangle([112, 190, 112 + 150, 198], fill=ACCENT + (int(255 * a),))
-        y = 360
+            u = (t - v0 - 0.05) / 0.8
+            a, e = min(max(u * 1.4, 0.0), 1.0), aus(u)
+            d.text((110, 160 + int(70 * (1 - e))), self.hook_titel, font=font(SERIF_B, 150), fill=INK + (int(255 * a),), anchor='ls')
+            d.rectangle([112, 200, 112 + int(150 * e), 208], fill=ACCENT + (int(255 * a),))   # Strich wächst mit
+        urteil_ab = next((z['ab'] for z in self.hook_zeilen if z['rot']), None)
+        zurueck = 0.0 if urteil_ab is None else min(max((t - urteil_ab) / 0.5, 0.0), 1.0)
+        y = 370
         for z in self.hook_zeilen:
-            u = min(max((t - z['ab']) / 0.35, 0.0), 1.0)
+            u = (t - z['ab']) / 0.7
             if u > 0:
-                f = font(INTER.format('Bold' if z['rot'] else 'SemiBold'), 64 if z['rot'] else 56)
+                a, e = min(u * 1.6, 1.0), aus(u)
+                if not z['rot']:
+                    a *= 1 - 0.45 * zurueck                       # Behauptungen treten zurück, wenn das Urteil kommt
+                f = font(INTER.format('Bold' if z['rot'] else 'SemiBold'), 66 if z['rot'] else 56)
                 farbe = MARKS['keine'][0] if z['rot'] else INK
-                yy = y + (z['rot'] and 40) + int(24 * (1 - ease(u)))
-                d.text((112, yy), z['t'], font=f, fill=farbe + (int(255 * u),), anchor='ls')
+                yy = y + (40 if z['rot'] else 0) + int(110 * (1 - e))
+                d.text((112, yy), z['t'], font=f, fill=farbe + (int(255 * a),), anchor='ls')
             y += 92
         return img
 
@@ -689,15 +696,16 @@ def make_scene(sc, src):
     return AgendaScene(sc, src) if sc.get('layout') == 'kacheln' else Scene(sc, src)
 
 
-def render(cfg, src, total, out_mp4, wav, srt):
+def render(cfg, src, total, out_mp4, wav, srt, bis=None):
     scenes = [make_scene(sc, src) for sc in cfg['scenes']]
     first = {}
-    n = int(math.ceil(total * FPS))
+    dauer = min(total, bis) if bis else total             # --bis: nur die ersten Sekunden (Probe des Einstiegs)
+    n = int(math.ceil(dauer * FPS))
     cmd = ['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS),
            '-i', '-', '-i', wav, '-map', '0:v', '-map', '1:a',
            '-c:v', 'libx264', '-preset', 'medium', '-crf', '24', '-pix_fmt', 'yuv420p',
            *([] if cfg.get('aufbereitung', True) else ['-af', 'loudnorm=I=-16:TP=-1.5:LRA=11']), '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-ac', '2',
-           '-movflags', '+faststart', '-t', f'{total:.2f}', out_mp4]
+           '-movflags', '+faststart', '-t', f'{dauer:.2f}', out_mp4]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     k = 0
     t_start = time.time()
@@ -745,6 +753,7 @@ def main():
     ap.add_argument('ausgabe')
     ap.add_argument('--nur-ton', action='store_true')
     ap.add_argument('--vorschau', action='store_true')
+    ap.add_argument('--bis', type=float, help='nur die ersten Sekunden rendern (z. B. 16 für den Hook)')
     ap.add_argument('--ton-dir')
     ap.add_argument('--bild', type=float, action='append', help='Einzelbild bei Sekunde T als PNG')
     ap.add_argument('--cache', default=None, help='Standard: tts_cache neben dem Drehbuch')
@@ -781,7 +790,7 @@ def main():
     if args.vorschau:
         preview(cfg, src, stem + '_vorschau.png')
         return
-    render(cfg, src, total, args.ausgabe, stem + '.wav', stem + '.srt')
+    render(cfg, src, total, args.ausgabe, stem + '.wav', stem + '.srt', bis=args.bis)
     print('fertig:', args.ausgabe)
 
 
