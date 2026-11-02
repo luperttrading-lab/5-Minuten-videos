@@ -41,7 +41,7 @@ Zugelassen ist es bei uns als alleiniges Medikament. Als Zusatz zum Stimulans er
 Leitlinie hält diese Kombination bei Kindern für möglich.
 Für Erwachsene ist es in Europa nicht zugelassen. Eine Zulassung für Erwachsene haben wir nur in Japan gefunden.
 Seit dem letzten Jahr gibt es auch ein günstigeres Nachahmerpräparat.
-Wenn Stimulanzien bei deinem Kind nicht passen, frag den Arzt oder die Ärztin gezielt nach den Alternativen; Guanfacin ist eine davon.
+Wenn Stimulanzien bei deinem Kind nicht passen, frag den Arzt oder die Ärztin gezielt nach den Alternativen.
 
 **3 Wie gut wirkt es?**
 Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als eine
