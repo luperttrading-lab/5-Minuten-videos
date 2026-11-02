@@ -1,9 +1,7 @@
 {
- "seit": "deiner Wahl im Chat",
+ "seit": "deiner Notiz zum fertigen Video",
  "stellen": [
-  {
-   "suche": "Gut, dass du dich informierst.",
-   "was": "Alter Schluss plus „Bis zum nächsten Video!“"
-  }
+  {"suche": "Guanfacin ist verschreibungspflichtig", "was": "Neu in Szene 2: nur auf Rezept"},
+  {"suche": "Wichtig laut Fachinformation", "was": "Neu in Szene 4: wie man es einnimmt"}
  ]
 }

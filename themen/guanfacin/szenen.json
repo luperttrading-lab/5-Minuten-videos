@@ -163,7 +163,7 @@
    "kacheln": [
     {
      "t": "Was ist Guanfacin?",
-     "bild": "bilder/g1a.png",
+     "bild": "bilder/g1b.png",
      "wort": "Was ist"
     },
     {
@@ -268,7 +268,7 @@
     },
     {
      "datei": "bilder/g1d.png",
-     "prompt": "a small white laboratory mouse sitting calmly next to a stack of plain notebooks and a magnifying glass on a wooden lab bench, soft light"
+     "prompt": "a large anatomical model of a human brain standing on a wooden desk, a hand holds a big magnifying glass over its front part, an open notebook with simple sketches without readable text beside it, warm light, symbol for research that is not yet settled"
     }
    ]
   },
@@ -283,6 +283,7 @@
      "say": "In Europa ist Guanfacin seit zweitausendfünfzehn zugelassen: für Kinder und Jugendliche mit ADHS von sechs bis siebzehn Jahren."
     },
     "Und nur, wenn Stimulanzien wie Methylphenidat oder Lisdexamfetamin nicht passen, nicht vertragen werden oder nicht wirken.",
+    "Guanfacin ist verschreibungspflichtig, du bekommst es also nur auf Rezept.",
     "Zugelassen ist es bei uns als alleiniges Medikament. Als Zusatz zum Stimulans erlauben es die USA; die neue deutsche Leitlinie hält diese Kombination bei Kindern für möglich.",
     "Für Erwachsene ist es in Europa nicht zugelassen. Eine Zulassung für Erwachsene haben wir nur in Japan gefunden.",
     "Seit dem letzten Jahr gibt es auch ein günstigeres Nachahmerpräparat.",
@@ -324,12 +325,12 @@
     {
      "bild": "bilder/g2b.png",
      "zoom": 0.18,
-     "at": 3
+     "at": 4
     },
     {
      "bild": "bilder/g2d.png",
      "zoom": 0.18,
-     "at": 4
+     "at": 5
     }
    ],
    "bilder": [
@@ -445,6 +446,7 @@
     "Blutdruck und Puls sinken etwas, manchen wird schwindlig, selten kommt es zur Ohnmacht.",
     "Deshalb werden Blutdruck und Puls vor dem Start und danach regelmäßig kontrolliert.",
     "Viele raten, es abends zu nehmen. In einer Studie wirkte es morgens und abends gleich gut; die Fachinformation lässt beides zu.",
+    "Wichtig laut Fachinformation: die Tablette im Ganzen schlucken, nicht zu einer fettreichen Mahlzeit und nicht mit Grapefruitsaft.",
     "Wenn dir oder deinem Kind schwindlig wird, sag es sofort deiner Ärztin oder deinem Arzt."
    ],
    "bullets": [
@@ -565,7 +567,7 @@
     },
     {
      "datei": "bilder/g5b.png",
-     "prompt": "a wide horizontal scene filling the whole frame edge to edge: a broad gentle staircase of five wide stone steps leading softly downward from left to right into a calm garden, a person walking down slowly holding the railing, no empty margins"
+     "prompt": "a friendly doctor sitting next to a teenage boy in a bright practice room, the doctor gently checking the pulse at the boy's wrist while looking at a wristwatch, the boy's mother sits beside them, calm and reassuring, clearly drawn friendly faces"
     },
     {
      "datei": "bilder/g5c.png",

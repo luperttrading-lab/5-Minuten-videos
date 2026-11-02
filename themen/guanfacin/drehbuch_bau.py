@@ -41,7 +41,7 @@ scenes = [
                   {"t": "Hilft sogar gegen Angst?", "wort": "hilft"}, {"t": "Was davon stimmt wirklich?", "wort": "Was davon", "art": "urteil"}],
   "bilder": [{"datei": "bilder/g0_hook_b.png", "prompt": "a wide view of a warm wooden table; on the RIGHT half of the frame one large white pill lies on the table, lit from the side so that it casts one long soft shadow that clearly takes the shape of a question mark; the LEFT half of the frame is calm, empty, softly lit wood with nothing on it, leaving room for a title; calm and slightly mysterious mood"}],
   "kacheln": [
-   {"t": "Was ist Guanfacin?", "bild": "bilder/g1a.png", "wort": "Was ist"},
+   {"t": "Was ist Guanfacin?", "bild": "bilder/g1b.png", "wort": "Was ist"},
    {"t": "Für wen zugelassen?", "bild": "bilder/g2a.png", "wort": "zugelassen"},
    {"t": "Wie gut wirkt es?", "bild": "bilder/g3a.png", "wort": "Wie gut"},
    {"t": "Nebenwirkungen", "bild": "bilder/g4a.png", "wort": "Nebenwirkungen"},
@@ -65,11 +65,12 @@ scenes = [
    {"datei": "bilder/g1a.png", "prompt": "a wide horizontal close-up filling the whole frame edge to edge: an open hand holding one large white pill on the left, an old-fashioned blood pressure cuff with a round gauge on a wooden table on the right, warm light, no empty margins"},
    {"datei": "bilder/g1b.png", "prompt": "an explanatory drawing: a human head in side view with the front part of the brain softly highlighted in warm ochre, inside it a few large nerve cells connected by glowing lines, one connection shown with a small gentle brake symbol like a soft hand slowing a stream, very simple and clear"},
    {"datei": "bilder/g1c.png", "prompt": "a sturdy small metal medicine cabinet with a key in its lock, standing on a pharmacy shelf, door slightly open showing a few plain white pill boxes inside, warm light, no labels, no text"},
-   {"datei": "bilder/g1d.png", "prompt": "a small white laboratory mouse sitting calmly next to a stack of plain notebooks and a magnifying glass on a wooden lab bench, soft light"}]},
+   {"datei": "bilder/g1d.png", "prompt": "a large anatomical model of a human brain standing on a wooden desk, a hand holds a big magnifying glass over its front part, an open notebook with simple sketches without readable text beside it, warm light, symbol for research that is not yet settled"}]},
  {"id": "g2", "kapitel": "Für wen zugelassen?", "kicker": "Zulassung", "headline": "Für wen ist es zugelassen?",
   "sentences": [
    S("In Europa ist Guanfacin seit 2015 zugelassen: für Kinder und Jugendliche mit ADHS von sechs bis siebzehn Jahren.", "In Europa ist Guanfacin seit zweitausendfünfzehn zugelassen: für Kinder und Jugendliche mit ADHS von sechs bis siebzehn Jahren."),
    "Und nur, wenn Stimulanzien wie Methylphenidat oder Lisdexamfetamin nicht passen, nicht vertragen werden oder nicht wirken.",
+   "Guanfacin ist verschreibungspflichtig, du bekommst es also nur auf Rezept.",
    "Zugelassen ist es bei uns als alleiniges Medikament. Als Zusatz zum Stimulans erlauben es die USA; die neue deutsche Leitlinie hält diese Kombination bei Kindern für möglich.",
    "Für Erwachsene ist es in Europa nicht zugelassen. Eine Zulassung für Erwachsene haben wir nur in Japan gefunden.",
    "Seit dem letzten Jahr gibt es auch ein günstigeres Nachahmerpräparat.",
@@ -78,7 +79,7 @@ scenes = [
               {"t": "Wenn andere ADHS-Mittel nicht passen", "at": 1, "ev": "stark"}],
   "evidence": {"level": "stark", "label": "belegt"},
   "quellen": ["ema_epar", "fi_intuniv", "s3_2026", "pmda2019", "fi_generikum"],
-  "shots": [{"bild": "bilder/g2c.png", "zoom": 0.18}, {"bild": "bilder/g2a.png", "zoom": 0.18, "at": 1}, {"bild": "bilder/g2b.png", "zoom": 0.18, "at": 3}, {"bild": "bilder/g2d.png", "zoom": 0.18, "at": 4}],
+  "shots": [{"bild": "bilder/g2c.png", "zoom": 0.18}, {"bild": "bilder/g2a.png", "zoom": 0.18, "at": 1}, {"bild": "bilder/g2b.png", "zoom": 0.18, "at": 4}, {"bild": "bilder/g2d.png", "zoom": 0.18, "at": 5}],
   "bilder": [
    {"datei": "bilder/g2a.png", "prompt": "a mother and her about ten-year-old son sitting in a friendly paediatrician's office, the doctor listening attentively, warm colours, seen from a little distance, no papers with writing"},
    {"datei": "bilder/g2b.png", "prompt": "a large simple map of the world drawn in ink and watercolor, Europe softly tinted in dove blue, Japan highlighted in warm terracotta, no country names, no text"},
@@ -111,6 +112,7 @@ scenes = [
    "Blutdruck und Puls sinken etwas, manchen wird schwindlig, selten kommt es zur Ohnmacht.",
    "Deshalb werden Blutdruck und Puls vor dem Start und danach regelmäßig kontrolliert.",
    "Viele raten, es abends zu nehmen. In einer Studie wirkte es morgens und abends gleich gut; die Fachinformation lässt beides zu.",
+   "Wichtig laut Fachinformation: die Tablette im Ganzen schlucken, nicht zu einer fettreichen Mahlzeit und nicht mit Grapefruitsaft.",
    "Wenn dir oder deinem Kind schwindlig wird, sag es sofort deiner Ärztin oder deinem Arzt."],
   "bullets": [{"t": "Macht müde – besser abends nehmen", "at": 0, "ev": "mittel"},
               {"t": "Senkt Blutdruck und Puls", "at": 2, "ev": "stark"}],
@@ -137,7 +139,7 @@ scenes = [
   "shots": [{"bild": "bilder/g5a.png", "zoom": 0.18}, {"bild": "bilder/g5c.png", "zoom": 0.18, "at": 2}, {"bild": "bilder/g5b.png", "zoom": 0.18, "at": 4}],
   "bilder": [
    {"datei": "bilder/g5a.png", "prompt": "a large weekly pill organizer with seven compartments, each holding one small white pill, next to a glass of water on a kitchen table, morning light"},
-   {"datei": "bilder/g5b.png", "prompt": "a wide horizontal scene filling the whole frame edge to edge: a broad gentle staircase of five wide stone steps leading softly downward from left to right into a calm garden, a person walking down slowly holding the railing, no empty margins"},
+   {"datei": "bilder/g5b.png", "prompt": "a friendly doctor sitting next to a teenage boy in a bright practice room, the doctor gently checking the pulse at the boy's wrist while looking at a wristwatch, the boy's mother sits beside them, calm and reassuring, clearly drawn friendly faces"},
    {"datei": "bilder/g5c.png", "prompt": "a wide landscape scene: an old-fashioned analog blood pressure gauge lying on a long wooden table next to its folded cuff and black rubber bulb, the needle swinging far to the right into a red zone, the table and warm wall fill the whole frame from edge to edge, no white margins, no numbers or letters on the dial, only colored zones"}]},
  {"id": "g6", "kapitel": "Erwachsene und mehr", "kicker": "Off-Label", "headline": "Erwachsene, Angst, Tics",
   "sentences": [
