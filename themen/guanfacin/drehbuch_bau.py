@@ -174,7 +174,7 @@ scenes = [
    "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"],
   "bullets": [{"t": "Option für Kinder, wenn Stimulanzien nicht passen", "at": 1, "ev": "stark"},
               {"t": "Täglich, nie plötzlich absetzen", "at": 3, "ev": "stark"},
-              {"t": "Erwachsene, Angst, Booster", "at": 4, "ev": "keine", "unbelegt": True}],
+              {"t": "Angst, PTBS, Gehirn-Booster", "at": 4, "ev": "keine", "unbelegt": True}],
   "evidence": {"level": "mittel", "label": "nützlich, mit Grenzen"},
   "quellen": ["fi_intuniv", "s3_2026", "cortese2018"],
   "shots": [{"bild": "bilder/g7a.png", "zoom": 0.18}, {"bild": "bilder/g7b.png", "zoom": 0.18, "at": 2}, {"bild": "bilder/g7c.png", "zoom": 0.18, "at": 6}],
