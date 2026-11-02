@@ -91,7 +91,7 @@ scenes = [
    "Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Placebo drei von zehn.",
    "Fast alle Zulassungsstudien hat der Hersteller bezahlt.",
    "Oft heißt es, man merke die Wirkung nach wenigen Tagen.",
-   "In den Studien baut sie sich über etwa vier Wochen auf, auch weil die Dosis langsam gesteigert wird. Früh spürt man vor allem eins: Müdigkeit.",
+   "In den Studien baut sie sich über etwa vier Wochen auf, auch weil die Dosis langsam gesteigert wird.",
    "Als Zusatz zum Stimulans bringt es Kindern einen kleinen Gewinn.",
    "Plane mit Arzt oder Ärztin einige Wochen ein, bevor ihr die Wirkung beurteilt."],
   "bullets": [{"t": "Wirkt schon nach wenigen Tagen", "at": 3, "ev": "keine"},
