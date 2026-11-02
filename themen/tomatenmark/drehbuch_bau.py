@@ -161,7 +161,7 @@ for sc in scenes:
         assert q in Q, q
         if q not in genutzt: genutzt.append(q)
 cfg = {'tts': 'elevenlabs', 'voice_id': 'NBqeXKdZHweef6y0B67V', 'voice_name': 'Christian - Warm and Captivating',
-       'model': 'eleven_v4', 'tempo': 1.0, 'titel': 'Tomatenmark: Was steckt wirklich im Löffel?',
+       'model': 'eleven_v4', 'tempo': 1.05, 'titel': 'Tomatenmark: Was steckt wirklich im Löffel?',
        'untertitel': 'Ein Faktencheck zu Lykopin, Gehirn, Herz, Kapseln und Einkauf. Jeder Punkt ist gegen Studien geprüft; die Marker zeigen, wie gut er belegt ist.',
        'fuss': 'Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.',
        'quellen': {q: Q[q] for q in genutzt}, 'scenes': scenes}
