@@ -1,7 +1,14 @@
 {
  "seit": "deiner Notiz zum fertigen Video",
  "stellen": [
-  {"suche": "Guanfacin ist verschreibungspflichtig", "was": "Neu in Szene 2: nur auf Rezept"},
-  {"suche": "Wichtig laut Fachinformation", "was": "Neu in Szene 4: wie man es einnimmt"}
- ]
+  {
+   "suche": "Guanfacin ist verschreibungspflichtig",
+   "was": "Neu in Szene 2: nur auf Rezept"
+  },
+  {
+   "suche": "Wichtig laut Fachinformation",
+   "was": "Neu in Szene 4: wie man es einnimmt"
+  }
+ ],
+ "erledigt": "Abgenommen am 02.11. und gerendert (6:01). Das Video liegt auf der Vorschau-Seite."
 }
