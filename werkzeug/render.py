@@ -555,11 +555,24 @@ class AgendaScene:
         if self.k0 is not None:
             himg, _ = quelle({'bild': sc['hook_bild']}, src, W / H)
             self.hook = (himg, (0, 0, himg.size[0], himg.size[1]))   # ganzes Bild, kein Freistellen
+            # Text im Hook (Nutzerwunsch 02.11.): Titel groß, Behauptungen erscheinen zum gesprochenen Wort
+            self.hook_titel = sc.get('hook_titel')
+            self.hook_zeilen = []
+            for z in sc.get('hook_zeilen', []):
+                wt = word_time(sc, z['wort']) if z.get('wort') else None
+                self.hook_zeilen.append({'t': z['t'], 'ab': (wt - 0.1) if wt is not None else sc['v0'],
+                                         'rot': z.get('art') == 'urteil'})
+            schleier = Image.new('L', (W, H), 0)          # Papierschleier links, nach rechts auslaufend
+            sd = ImageDraw.Draw(schleier)
+            for x in range(0, 1150, 4):
+                a_ = 215 if x < 760 else int(215 * max(0.0, 1 - (x - 760) / 390))
+                sd.rectangle([x, 0, x + 3, H], fill=a_)
+            self.schleier = schleier
         self.x0 = (W - 3 * self.TW - 2 * self.GAP) // 2
         self.base = Image.new('RGB', (W, H), PAPER)
         d = ImageDraw.Draw(self.base)
         if sc.get('kicker'):
-            d.text((W // 2, 70), sc['kicker'].upper(), font=font(INTER.format('SemiBold'), 26), fill=ACCENT, anchor='mt')
+            d.text((W // 2, 58), sc['kicker'].upper(), font=font(INTER.format('SemiBold'), 36), fill=ACCENT, anchor='mt')
         d.text((W // 2, 112), sc['headline'], font=font(SERIF_B, 70), fill=INK, anchor='mt')
         self.cards = []
         for i, k in enumerate(sc['kacheln']):
@@ -587,8 +600,30 @@ class AgendaScene:
             xx += w + 60
 
     def hook_frame(self, t):
+        img = self.hook_bild_frame(t)
+        if not (self.hook_titel or self.hook_zeilen):
+            return img
+        img.paste(Image.new('RGB', (W, H), PAPER), (0, 0), self.schleier)
+        d = ImageDraw.Draw(img, 'RGBA')
+        v0 = self.sc['v0']
+        if self.hook_titel:
+            a = min(max((t - v0) / 0.5, 0.0), 1.0)
+            d.text((110, 150), self.hook_titel, font=font(SERIF_B, 150), fill=INK + (int(255 * a),), anchor='ls')
+            d.rectangle([112, 190, 112 + 150, 198], fill=ACCENT + (int(255 * a),))
+        y = 360
+        for z in self.hook_zeilen:
+            u = min(max((t - z['ab']) / 0.35, 0.0), 1.0)
+            if u > 0:
+                f = font(INTER.format('Bold' if z['rot'] else 'SemiBold'), 64 if z['rot'] else 56)
+                farbe = MARKS['keine'][0] if z['rot'] else INK
+                yy = y + (z['rot'] and 40) + int(24 * (1 - ease(u)))
+                d.text((112, yy), z['t'], font=f, fill=farbe + (int(255 * u),), anchor='ls')
+            y += 92
+        return img
+
+    def hook_bild_frame(self, t):
         himg, (x0, y0, x1, y1) = self.hook
-        z = 0.05 * ease((t - self.sc['v0']) / max(self.k0 - self.sc['v0'], 0.1))   # langsam hinein
+        z = 0.12 * ease((t - self.sc['v0']) / max(self.k0 - self.sc['v0'], 0.1))   # deutlich hinein (Bewegung im Hook)
         dx, dy = (x1 - x0) * z / 2, (y1 - y0) * z / 2
         bw, bh = x1 - x0 - 2 * dx, y1 - y0 - 2 * dy
         s_ = max(W / bw, H / bh)                                # Vollbild, Ränder beschnitten

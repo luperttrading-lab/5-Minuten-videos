@@ -52,8 +52,11 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - Erste Szene `layout: "kacheln"`: sechs Kapitel-Kacheln (`kacheln: [{t, a, wort}]`). Jede Kachel leuchtet auf, wenn ihr
   `wort` gesprochen wird (ElevenLabs-Zeitmarken). `hervorheben_at`/`legende_at` = Satznummer. Die Legende wird nur
   eingeblendet, **nicht gesprochen** (kein Satz „Grün heißt belegt …“, Nutzerwunsch 02.11.: stört den Einstieg).
-  Hook vor den Kacheln: `hook_bild` (Vollbild, langsam hinein) bis Satz `kacheln_ab`, dann Überblendung zu den Kacheln
-  (Beispiel `themen/guanfacin/`).
+  Hook vor den Kacheln: `hook_bild` (Vollbild, Zoom 12 %) bis Satz `kacheln_ab`, dann Überblendung zu den Kacheln.
+  Im Hook immer Text (Nutzerwunsch 02.11.): `hook_titel` (Thema groß, z. B. „Guanfacin“) und `hook_zeilen`
+  (`[{t, wort, art}]`, jede Zeile erscheint beim gesprochenen `wort`; `art: "urteil"` = rot, z. B. „Nicht alles davon
+  hält.“). Hook-Bild mit leerer linker Hälfte bestellen (Platz für den Text). Kicker der Kachel-Szene nur
+  „Faktencheck“ (kein „Info-Video“). Beispiel `themen/guanfacin/`.
 - Weitere Szenen: `kicker`, `headline`, `sentences` (Text oder `{t: Anzeige, say: Sprechtext}`; Zahlen im
   Sprechtext ausschreiben), `bullets` (`{t, at, ev}` mit `ev` = `stark` | `mittel` | `keine`), `evidence`
   (`level`, `label`), `quellen` (IDs aus dem Verzeichnis), `shots` (`{a: [x0,y0,x1,y1], at, zoom}`, `zoom` =
