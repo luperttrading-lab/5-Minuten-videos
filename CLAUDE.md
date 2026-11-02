@@ -70,6 +70,10 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Hook in den ersten 8 Sekunden** (Nutzerentscheidung 02.11., Strategiepapier `themen/beratung/strategiepapier.pdf`):
   ein Satz mit der stärksten Behauptung und einem offenen Versprechen, ohne Begrüßung, erst danach die Kacheln.
   Zuspitzen ja, täuschen nein; der Hook wird im Video eingelöst.
+- **Abschlusssatz** jedes Videos, gesprochen nach dem Fazit (Nutzerentscheidung 02.11.): „Gut, dass du dich informierst.
+  Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.“ Ersetzt „Dieses Video ersetzt
+  keinen ärztlichen Rat“. Nicht den HWG-Pflichttext („… fragen Sie Ihre Ärztin, Ihren Arzt oder in Ihrer Apotheke“)
+  nachahmen, er klingt nach Arzneimittelwerbung. Konkrete Sicherheitssätze („nie plötzlich absetzen“) bleiben in der Szene.
 - Stimme: ElevenLabs „Christian – Warm and Captivating“ (`NBqeXKdZHweef6y0B67V`), Modell `eleven_v4`, Tempo 1,0;
   spricht ≈ 2,1 Wörter/s, also 5 Minuten ≈ 600 Wörter.
   Stimme am 02.11. bestätigt (Sprecherprobe gegen Alexander, Marko, Marcus, Leo: `themen/stil/stimmprobe/`).
