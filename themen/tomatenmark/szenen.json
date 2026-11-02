@@ -6,7 +6,7 @@
  "tempo": 1.0,
  "titel": "Tomatenmark: Was steckt wirklich im Löffel?",
  "untertitel": "Ein Faktencheck zu Lykopin, Gehirn, Herz, Kapseln und Einkauf. Jeder Punkt ist gegen Studien geprüft; die Marker zeigen, wie gut er belegt ist.",
- "fuss": "Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Kein Ersatz für ärztlichen Rat.",
+ "fuss": "Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.",
  "quellen": {
   "usda_fdc": {
    "kurz": "USDA 2019",
@@ -147,13 +147,19 @@
    "kicker": "Info-Video · Faktencheck",
    "headline": "Tomatenmark: Was steckt wirklich im Löffel?",
    "sentences": [
-    "Tomatenmark gilt als Superfood aus der Tube: gut fürs Gehirn, fürs Herz und gegen Krebs.",
-    "Wir prüfen sechs Fragen: Mark oder frische Tomate, was es dem Gehirn bringt und dem Herzen, ob eine Kapsel reicht, welche Versprechen halten und worauf du beim Kauf achtest.",
-    "Jede Aussage haben wir gegen die Studienlage geprüft.",
-    "Grün heißt belegt, gelb teilweise, rot nicht haltbar."
+    "Ein Löffel Tomatenmark am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren: Nicht alles davon hält.",
+    "Wir prüfen sechs Fragen: Mark oder frische Tomate, was es dem Gehirn bringt und dem Herzen, ob eine Kapsel reicht, welche Versprechen halten und worauf du beim Kauf achtest."
    ],
    "hervorheben_at": 1,
-   "legende_at": 3,
+   "legende_at": 1,
+   "kacheln_ab": 1,
+   "hook_bild": "bilder/t0_hook.png",
+   "bilder": [
+    {
+     "datei": "bilder/t0_hook.png",
+     "prompt": "a single large silver tablespoon heaped with deep red tomato paste, held in front of the softly drawn profile of a human head in which the brain glows in warm terracotta and ochre; the spoon and the head fill most of the wide frame, calm and slightly mysterious mood"
+    }
+   ],
    "kacheln": [
     {
      "t": "Mark oder Tomate?",
@@ -602,7 +608,8 @@
     "Zweitens: Die großen Versprechen beruhen vor allem auf Beobachtungen und kleinen Studien.",
     "Drittens: Kapseln bringen nichts extra, ab und zu die Marke zu wechseln schon eher.",
     "Ob es jeden Tag ein Esslöffel sein muss, hat übrigens niemand untersucht. Ein paar Mal pro Woche in der Soße ist ein guter Anfang.",
-    "Die Quellen stehen in der Beschreibung."
+    "Die Quellen stehen in der Beschreibung.",
+    "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen."
    ],
    "bullets": [
     {
@@ -636,7 +643,7 @@
     {
      "bild": "bilder/t7b.png",
      "zoom": 0.18,
-     "at": 4
+     "at": 2
     }
    ],
    "bilder": [

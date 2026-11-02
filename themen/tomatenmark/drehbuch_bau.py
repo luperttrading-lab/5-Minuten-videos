@@ -11,7 +11,7 @@ def S(t, say=None):
 def B(t, at, ev): return {'t': t, 'at': at, 'ev': ev}
 # Bildfolge je Szene (Nutzerwahl 01.11.: t1b, t2a, t3a, t5a, t6b, t7a bekommen den größeren Anteil, Inhalt geht vor)
 FOLGE = {'t1': [('b', 0), ('a', 3), ('b', 6)], 't5': [('a', 0), ('b', 3), ('a', 4)], 't6': [('a', 0), ('b', 3)],
-         't7': [('a', 0), ('b', 4)]}
+         't7': [('a', 0), ('b', 2)]}
 def shots(sid, at):
     f = FOLGE.get(sid, [('a', 0), ('b', at)])
     return [dict({'bild': f'bilder/{sid}{x}.png', 'zoom': 0.18}, **({'at': n} if n else {})) for x, n in f]
@@ -20,11 +20,10 @@ scenes = [
  {'id': 't0', 'layout': 'kacheln', 'kapitel': 'Einleitung', 'kicker': 'Info-Video · Faktencheck',
   'headline': 'Tomatenmark: Was steckt wirklich im Löffel?',
   'sentences': [
-   'Tomatenmark gilt als Superfood aus der Tube: gut fürs Gehirn, fürs Herz und gegen Krebs.',
-   'Wir prüfen sechs Fragen: Mark oder frische Tomate, was es dem Gehirn bringt und dem Herzen, ob eine Kapsel reicht, welche Versprechen halten und worauf du beim Kauf achtest.',
-   'Jede Aussage haben wir gegen die Studienlage geprüft.',
-   'Grün heißt belegt, gelb teilweise, rot nicht haltbar.'],
-  'hervorheben_at': 1, 'legende_at': 3,
+   'Ein Löffel Tomatenmark am Tag soll das Gedächtnis stärken und Schlaganfälle halbieren: Nicht alles davon hält.',
+   'Wir prüfen sechs Fragen: Mark oder frische Tomate, was es dem Gehirn bringt und dem Herzen, ob eine Kapsel reicht, welche Versprechen halten und worauf du beim Kauf achtest.'],
+  'hervorheben_at': 1, 'legende_at': 1, 'kacheln_ab': 1, 'hook_bild': 'bilder/t0_hook.png',
+  'bilder': [{'datei': 'bilder/t0_hook.png', 'prompt': 'a single large silver tablespoon heaped with deep red tomato paste, held in front of the softly drawn profile of a human head in which the brain glows in warm terracotta and ochre; the spoon and the head fill most of the wide frame, calm and slightly mysterious mood'}],
   'kacheln': [{'t': 'Mark oder Tomate?', 'bild': 'bilder/t1b.png', 'wort': 'frische Tomate'},
               {'t': 'Hilft es dem Gehirn?', 'bild': 'bilder/t2a.png', 'wort': 'Gehirn bringt'},
               {'t': 'Herz und Schlaganfall', 'bild': 'bilder/t3a.png', 'wort': 'Herzen'},
@@ -143,7 +142,8 @@ scenes = [
    'Zweitens: Die großen Versprechen beruhen vor allem auf Beobachtungen und kleinen Studien.',
    'Drittens: Kapseln bringen nichts extra, ab und zu die Marke zu wechseln schon eher.',
    'Ob es jeden Tag ein Esslöffel sein muss, hat übrigens niemand untersucht. Ein paar Mal pro Woche in der Soße ist ein guter Anfang.',
-   'Die Quellen stehen in der Beschreibung.'],
+   'Die Quellen stehen in der Beschreibung.',
+   'Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.'],
   'bullets': [B('Gekocht mit Öl besser aufgenommen', 1, 'stark'), B('Schützt Gehirn, Herz, vor Krebs', 2, 'mittel'),
               B('Nur natürliches Lykopin wirkt', 3, 'keine')],
   'evidence': {'level': 'mittel', 'label': 'gutes Lebensmittel, kein Wundermittel'},
@@ -161,7 +161,7 @@ for sc in scenes:
 cfg = {'tts': 'elevenlabs', 'voice_id': 'NBqeXKdZHweef6y0B67V', 'voice_name': 'Christian - Warm and Captivating',
        'model': 'eleven_v4', 'tempo': 1.0, 'titel': 'Tomatenmark: Was steckt wirklich im Löffel?',
        'untertitel': 'Ein Faktencheck zu Lykopin, Gehirn, Herz, Kapseln und Einkauf. Jeder Punkt ist gegen Studien geprüft; die Marker zeigen, wie gut er belegt ist.',
-       'fuss': 'Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Kein Ersatz für ärztlichen Rat.',
+       'fuss': 'Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.',
        'quellen': {q: Q[q] for q in genutzt}, 'scenes': scenes}
 json.dump(cfg, open('szenen.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 tot = 0
