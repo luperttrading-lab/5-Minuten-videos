@@ -14,7 +14,9 @@ FOLGE = {'t1': [('b', 0), ('a', 3), ('b', 6)], 't5': [('a', 0), ('b', 3), ('a', 
          't7': [('a', 0), ('b', 2)]}
 def shots(sid, at):
     f = FOLGE.get(sid, [('a', 0), ('b', at)])
-    return [dict({'bild': f'bilder/{sid}{x}.png', 'zoom': 0.18}, **({'at': n} if n else {})) for x, n in f]
+    GANZ = {'t1a'}                                     # Erklärbilder mit Ablauf: ganz zeigen, nicht freistellen
+    return [dict({'bild': f'bilder/{sid}{x}.png', 'zoom': 0.18}, **({'at': n} if n else {}),
+                 **({'a': [0, 0, 2048, 1152], 'zoom': 'none'} if sid + x in GANZ else {})) for x, n in f]
 
 scenes = [
  {'id': 't0', 'layout': 'kacheln', 'kapitel': 'Einleitung', 'kicker': 'Faktencheck',

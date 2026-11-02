@@ -1,12 +1,20 @@
 {
  "titel": "Tomatenmark",
- "aufgabe": "Den Einstieg ansehen (17 Sekunden, Ton an), dann „passt“ oder „ändern“.",
+ "aufgabe": "Das ganze Video ansehen (5:42, Ton an), dann „passt“ oder „ändern“ mit Notiz. Danach stelle ich Beschreibung und Teilen-Seite fertig.",
  "videos": [
+  {
+   "datei": "video_720p.mp4",
+   "titel": "Ganzes Video, erste Fassung",
+   "stand": "02.11., 20:15",
+   "pruefen": true,
+   "poster_bei": 20,
+   "notiz": "5:42, 720p. Enthält alle abgenommenen Änderungen: Hook „Was steckt wirklich im Löffel?“, Ampel dreistufig mit Zusatz „erst eine kleine Studie“ (Szene 2), Rot unterscheidet „ist falsch“ und „ist nicht belegt“, Schlusssatz „Bis zum nächsten Video!“. Neu: Das Erklärbild in Szene 1 (Tomate → Pfanne → Darm → Blut) wird jetzt ganz gezeigt statt abgeschnitten. Startbild noch ohne „Beweislage:“ vor der Ampel (deine Entscheidung D steht aus)."
+  },
   {
    "datei": "hook_vorschau.mp4",
    "titel": "Einstieg ohne Blau: Ampel dreistufig",
-   "stand": "02.11., 19:55",
-   "pruefen": true,
+   "stand": "02.11., 19:55 (abgenommen)",
+   "pruefen": false,
    "notiz": "Neu gerendert nach deiner Notiz: Die Legende unter den Kacheln hat kein Blau mehr (belegt / teilweise / nicht haltbar). Hook unverändert („Was steckt wirklich im Löffel?“, 8,7 Sekunden)."
   }
  ]

@@ -272,8 +272,14 @@
     },
     {
      "bild": "bilder/t1a.png",
-     "zoom": 0.18,
-     "at": 3
+     "zoom": "none",
+     "at": 3,
+     "a": [
+      0,
+      0,
+      2048,
+      1152
+     ]
     },
     {
      "bild": "bilder/t1b.png",
