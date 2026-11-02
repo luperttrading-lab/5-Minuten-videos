@@ -1,0 +1,60 @@
+{
+ "text": "Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als Placebo, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine. Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Placebo drei von zehn. Fast alle Zulassungsstudien hat der Hersteller bezahlt. Oft heißt es, man merke die Wirkung nach wenigen Tagen. In den Studien baut sie sich über etwa vier Wochen auf, auch weil die Dosis langsam gesteigert wird. Früh spürt man vor allem eins: Müdigkeit.",
+ "stimmen": [
+  {
+   "key": "christian",
+   "id": "NBqeXKdZHweef6y0B67V",
+   "name": "Christian – Warm and Captivating",
+   "notiz": "aktuelle Stimme der Reihe; Seneca-Duell Runde 1: 59 %, Platz 9 von 25",
+   "datei": "audio/christian.mp3",
+   "dauer": 37.52,
+   "wps": 2.16,
+   "f0": 101.1,
+   "video_min": 6.24
+  },
+  {
+   "key": "alexander",
+   "id": "kkJxCnlRCckmfFvzDW5Q",
+   "name": "Alexander – Deep TV Narrator",
+   "notiz": "Seneca-Duell Runde 1: 81 % (Platz 1), Runde 2b: 71 % (Platz 2), Endrunde",
+   "datei": "audio/alexander.mp3",
+   "dauer": 35.68,
+   "wps": 2.27,
+   "f0": 113.8,
+   "video_min": 5.96
+  },
+  {
+   "key": "marko",
+   "id": "PTDRoXRJnOXDLIs03WqF",
+   "name": "Marko – Gentle and Quiet",
+   "notiz": "Runde 1: 68 %, Runde 2b: 69 % (Platz 3), Endrunde",
+   "datei": "audio/marko.mp3",
+   "dauer": 35.52,
+   "wps": 2.28,
+   "f0": 108.6,
+   "video_min": 5.93
+  },
+  {
+   "key": "marcus",
+   "id": "mN2MS5qHVRhNpqcfTpaV",
+   "name": "Marcus – Emphatic and Reflective",
+   "notiz": "Runde 1: 69 %, Runde 2b: 56 % (Platz 4), Endrunde",
+   "datei": "audio/marcus.mp3",
+   "dauer": 34.8,
+   "wps": 2.33,
+   "f0": 107.8,
+   "video_min": 5.82
+  },
+  {
+   "key": "leo",
+   "id": "9T2VzpdyzVPMLIjcYVqp",
+   "name": "Leo Liest – Deep and calm",
+   "notiz": "Runde 1: 81 % (Platz 2), Runde 2b: 42 %",
+   "datei": "audio/leo.mp3",
+   "dauer": 37.68,
+   "wps": 2.15,
+   "f0": 105.5,
+   "video_min": 6.26
+  }
+ ]
+}

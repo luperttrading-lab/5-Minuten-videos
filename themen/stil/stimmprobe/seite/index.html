@@ -1,0 +1,194 @@
+<title>Sprecherprobe Faktencheck-Reihe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: eine Spalte wie ein Casting-Bogen; je Stimme ein Streifen mit Abspielknopf, Messwerten und Urteil. */
+  :root {
+    --grund: #f3f5f7; --blatt: #ffffff; --tinte: #17212b; --grau: #5d6b78; --linie: #d6dde4;
+    --signal: #0f6e8c; --signal-text: #ffffff; --aktuell: #8a5a00; --aktuell-grund: #fff3d6;
+    --gut: #1d7a46; --mittel: #9a6b00; --nein: #b23a2e;
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --text: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+    --daten: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --grund: #10161c; --blatt: #18212a; --tinte: #e6edf3; --grau: #97a6b4; --linie: #2b3743;
+    --signal: #4fb3d4; --signal-text: #0b1419; --aktuell: #f0c060; --aktuell-grund: #33280f;
+    --gut: #5fc98d; --mittel: #e0b450; --nein: #ef8075; color-scheme: dark } }
+  :root[data-theme="dark"] {
+    --grund: #10161c; --blatt: #18212a; --tinte: #e6edf3; --grau: #97a6b4; --linie: #2b3743;
+    --signal: #4fb3d4; --signal-text: #0b1419; --aktuell: #f0c060; --aktuell-grund: #33280f;
+    --gut: #5fc98d; --mittel: #e0b450; --nein: #ef8075; color-scheme: dark }
+  * { box-sizing: border-box; }
+  body { background: var(--grund); color: var(--tinte); font: 16px/1.55 var(--text); }
+  main { max-width: 680px; margin: 0 auto; display: grid; gap: 22px; padding-block: 28px 56px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  header { display: grid; gap: 8px; }
+  .eyebrow { font: 500 12px/1.3 var(--daten); letter-spacing: .1em; text-transform: uppercase; color: var(--signal); }
+  h1 { margin: 0; font: 700 clamp(28px, 7vw, 40px)/1.08 var(--display); letter-spacing: -.01em; text-wrap: balance; }
+  .lead { margin: 0; color: var(--grau); max-width: 62ch; }
+  .probe { margin: 0; padding: 14px 16px; border-left: 3px solid var(--signal); background: var(--blatt); font-size: 15px; color: var(--tinte); }
+  .probe b { display: block; font: 500 12px/1.4 var(--daten); letter-spacing: .08em; text-transform: uppercase; color: var(--grau); margin-bottom: 4px; }
+  .leiste { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+  .schalter { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 700; }
+  .schalter input { width: 20px; height: 20px; accent-color: var(--signal); }
+  .knopf-text { border: 1px solid var(--linie); background: var(--blatt); color: var(--tinte); border-radius: 8px; padding: 8px 12px; font: 700 14px/1 var(--text); cursor: pointer; }
+  .knopf-text:focus-visible, .play:focus-visible, .urteil button:focus-visible, .senden:focus-visible { outline: 3px solid var(--signal); outline-offset: 2px; }
+  .liste { display: grid; gap: 12px; }
+  .stimme { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 4px 14px; padding: 14px; background: var(--blatt); border: 1px solid var(--linie); border-radius: 12px; }
+  .stimme.laeuft { border-color: var(--signal); }
+  .play { grid-row: span 2; width: 56px; height: 56px; border-radius: 50%; border: 0; background: var(--signal); color: var(--signal-text); display: grid; place-items: center; cursor: pointer; }
+  .play svg { width: 24px; height: 24px; }
+  .kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; min-width: 0; }
+  .kopf h2 { margin: 0; font: 600 19px/1.25 var(--display); }
+  .marke { font: 500 12px/1 var(--daten); letter-spacing: .06em; text-transform: uppercase; padding: 4px 7px; border-radius: 6px; background: var(--aktuell-grund); color: var(--aktuell); }
+  .notiz { margin: 0; font-size: 14px; color: var(--grau); }
+  .werte { grid-column: 2; display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 4px 0 0; font: 400 13px/1.4 var(--daten); color: var(--grau); font-variant-numeric: tabular-nums; }
+  .werte dt { display: inline; } .werte dd { display: inline; margin: 0 0 0 4px; color: var(--tinte); }
+  .balken { grid-column: 2; height: 4px; border-radius: 2px; background: var(--linie); overflow: hidden; margin-top: 6px; }
+  .balken i { display: block; height: 100%; width: 0; background: var(--signal); }
+  .urteil { grid-column: 2; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .urteil button { border: 1px solid var(--linie); background: none; color: var(--tinte); border-radius: 999px; padding: 7px 13px; font: 700 14px/1 var(--text); cursor: pointer; }
+  .urteil button[aria-pressed="true"][data-u="gut"] { background: var(--gut); border-color: var(--gut); color: var(--blatt); }
+  .urteil button[aria-pressed="true"][data-u="mittel"] { background: var(--mittel); border-color: var(--mittel); color: var(--blatt); }
+  .urteil button[aria-pressed="true"][data-u="nein"] { background: var(--nein); border-color: var(--nein); color: var(--blatt); }
+  .abschluss { display: grid; gap: 10px; padding: 16px; background: var(--blatt); border: 1px solid var(--linie); border-radius: 12px; }
+  .abschluss h2 { margin: 0; font: 600 18px/1.3 var(--display); }
+  .abschluss textarea { width: 100%; min-height: 84px; font: 16px/1.45 var(--text); color: var(--tinte); background: var(--grund); border: 1px solid var(--linie); border-radius: 8px; padding: 10px; resize: vertical; }
+  .zeile { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .senden { border: 0; border-radius: 8px; background: var(--signal); color: var(--signal-text); padding: 11px 16px; font: 700 15px/1 var(--text); cursor: pointer; }
+  .senden:disabled { opacity: .5; cursor: default; }
+  .stand { font-size: 14px; color: var(--grau); }
+  .fuss { margin: 0; font-size: 13px; color: var(--grau); }
+  @media (prefers-reduced-motion: reduce) { .balken i { transition: none; } }
+</style>
+
+<main>
+  <header>
+    <span class="eyebrow">Stimme für die Faktencheck-Reihe</span>
+    <h1>Sprecherprobe: fünf Stimmen, ein Absatz</h1>
+    <p class="lead">Derselbe Absatz aus dem Guanfacin-Video, gleiche Einstellungen (ElevenLabs v4, Stimm-Standard), alle auf dieselbe Lautstärke gebracht wie im Video. Vier Kandidaten stammen aus der Endrunde des Seneca-Duells; Helmut bleibt Seneca. Christian ist die Stimme, mit der die Reihe bisher läuft.</p>
+  </header>
+
+  <p class="probe"><b>Gesprochener Text · 81 Wörter</b><span id="probetext"></span></p>
+
+  <div class="leiste">
+    <label class="schalter" for="blind"><input type="checkbox" id="blind"> Blind hören (Namen verdeckt, Reihenfolge gemischt)</label>
+    <button type="button" class="knopf-text" id="aufloesen" hidden>Auflösen</button>
+  </div>
+
+  <section class="liste" id="liste" aria-label="Stimmen"></section>
+
+  <section class="abschluss" id="abschluss">
+    <h2>Dein Urteil an Claude</h2>
+    <p class="notiz" id="zusammenfassung">Noch keine Urteile. Tippe bei jeder Stimme auf „Passt“, „Vielleicht“ oder „Nein“.</p>
+    <label class="notiz" for="notiztext">Was gefällt dir, was stört (Klang, Tempo, Betonung)?</label>
+    <textarea id="notiztext" placeholder="z. B. Alexander klingt nach Doku, aber zu ernst für Gesundheitstipps"></textarea>
+    <div class="zeile"><button type="button" class="senden" id="senden">An Claude schicken</button><span class="stand" id="stand"></span></div>
+  </section>
+
+  <p class="fuss">Messwerte: Tempo in Wörtern pro Sekunde reiner Sprechzeit; Videolänge hochgerechnet vom fertigen Guanfacin-Video (751 Wörter, 5:54 mit Christian); Tonhöhe als Median der Grundfrequenz. Seneca-Duell: Gewinnchance gegen den Durchschnitt im Blindvergleich vom 28./29.10. (Hörbuch-Text, also ein anderer Einsatz).</p>
+  <audio id="ton" preload="auto"></audio>
+</main>
+
+<script>
+(function () {
+  var TEXT = "Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als Placebo, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine. Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Placebo drei von zehn. Fast alle Zulassungsstudien hat der Hersteller bezahlt. Oft heißt es, man merke die Wirkung nach wenigen Tagen. In den Studien baut sie sich über etwa vier Wochen auf, auch weil die Dosis langsam gesteigert wird. Früh spürt man vor allem eins: Müdigkeit.";
+  var STIMMEN = [
+    { key: "christian", name: "Christian – Warm and Captivating", aktuell: true, wps: 2.16, f0: 101, video: "5:54", duell: "Seneca-Duell: 59 %, Platz 9 von 25", datei: "audio/christian.mp3" },
+    { key: "alexander", name: "Alexander – Deep TV Narrator", wps: 2.27, f0: 114, video: "5:37", duell: "Seneca-Duell: 81 % (Platz 1), Endrunde 71 % (Platz 2)", datei: "audio/alexander.mp3" },
+    { key: "marko", name: "Marko – Gentle and Quiet", wps: 2.28, f0: 109, video: "5:35", duell: "Seneca-Duell: 68 %, Endrunde 69 % (Platz 3)", datei: "audio/marko.mp3" },
+    { key: "marcus", name: "Marcus – Emphatic and Reflective", wps: 2.33, f0: 108, video: "5:28", duell: "Seneca-Duell: 69 %, Endrunde 56 % (Platz 4)", datei: "audio/marcus.mp3" },
+    { key: "leo", name: "Leo Liest – Deep and calm", wps: 2.15, f0: 106, video: "5:56", duell: "Seneca-Duell: 81 % (Platz 2), Endrunde 42 %", datei: "audio/leo.mp3" }
+  ];
+  var URTEILE = [["gut", "Passt"], ["mittel", "Vielleicht"], ["nein", "Nein"]];
+  var ICON_PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>';
+  var ICON_PAUSE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 5h4v14H7zm6 0h4v14h-4z"/></svg>';
+  var ton = document.getElementById("ton"), liste = document.getElementById("liste"), blind = document.getElementById("blind");
+  var aufloesen = document.getElementById("aufloesen"), stand = document.getElementById("stand"), senden = document.getElementById("senden");
+  var urteil = {}, db = null, kom = null, anClaude = false, aktiv = null, reihe = STIMMEN.slice(), verdeckt = false;
+  document.getElementById("probetext").textContent = TEXT;
+
+  function bezeichnung(s, i) { return verdeckt ? "Stimme " + "ABCDE"[i] : s.name; }
+  function zeichne() {
+    liste.innerHTML = "";
+    reihe.forEach(function (s, i) {
+      var el = document.createElement("article"); el.className = "stimme"; el.id = "st-" + s.key; el.dataset.key = s.key;
+      var marke = (!verdeckt && s.aktuell) ? '<span class="marke">aktuell</span>' : "";
+      var werte = verdeckt ? "" : '<dl class="werte"><div><dt>Tempo</dt><dd>' + s.wps.toFixed(2).replace(".", ",") + ' W/s</dd></div><div><dt>Video</dt><dd>≈ ' + s.video + '</dd></div><div><dt>Tonhöhe</dt><dd>' + s.f0 + ' Hz</dd></div></dl>';
+      el.innerHTML = '<button type="button" class="play" aria-label="' + bezeichnung(s, i) + ' abspielen">' + ICON_PLAY + '</button>' +
+        '<div class="kopf"><h2>' + bezeichnung(s, i) + '</h2>' + marke + '</div>' +
+        (verdeckt ? '<p class="notiz">Name und Messwerte nach „Auflösen“</p>' : '<p class="notiz">' + s.duell + '</p>') + werte +
+        '<div class="balken"><i></i></div><div class="urteil" role="group" aria-label="Urteil">' +
+        URTEILE.map(function (u) { return '<button type="button" data-u="' + u[0] + '" aria-pressed="' + (urteil[s.key] === u[0]) + '">' + u[1] + '</button>'; }).join("") + '</div>';
+      el.querySelector(".play").addEventListener("click", function () { spiele(s); });
+      el.querySelectorAll(".urteil button").forEach(function (b) { b.addEventListener("click", function () { setze(s.key, b.dataset.u); }); });
+      liste.appendChild(el);
+    });
+    fasse();
+  }
+  function spiele(s) {
+    var el = document.getElementById("st-" + s.key);
+    if (aktiv === s.key && !ton.paused) { ton.pause(); return; }
+    if (aktiv !== s.key) { ton.src = s.datei; aktiv = s.key; }
+    ton.play().catch(function () {});
+    document.querySelectorAll(".stimme").forEach(function (x) { x.classList.toggle("laeuft", x === el); });
+  }
+  function knoepfe() {
+    document.querySelectorAll(".stimme").forEach(function (x) {
+      var an = x.dataset.key === aktiv && !ton.paused; x.querySelector(".play").innerHTML = an ? ICON_PAUSE : ICON_PLAY;
+    });
+  }
+  ton.addEventListener("play", knoepfe); ton.addEventListener("pause", knoepfe);
+  ton.addEventListener("ended", function () { knoepfe(); });
+  ton.addEventListener("timeupdate", function () {
+    var el = aktiv && document.getElementById("st-" + aktiv); if (!el || !ton.duration) return;
+    el.querySelector(".balken i").style.width = (100 * ton.currentTime / ton.duration) + "%";
+  });
+  function setze(key, u) {
+    urteil[key] = urteil[key] === u ? null : u;
+    document.querySelectorAll("#st-" + key + " .urteil button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.u === urteil[key])); });
+    fasse();
+    if (db) db.collection("stimmwahl").doc(key).set({ stimme: key, urteil: urteil[key] || null, blind: verdeckt, zeit: new Date().toISOString() }).catch(function () { stand.textContent = "Urteil nicht gespeichert."; });
+  }
+  function fasse() {
+    var teile = STIMMEN.filter(function (s) { return urteil[s.key]; }).map(function (s) {
+      var u = URTEILE.filter(function (x) { return x[0] === urteil[s.key]; })[0][1];
+      return (verdeckt ? "Stimme " + "ABCDE"[reihe.indexOf(s)] : s.name.split(" – ")[0]) + ": " + u;
+    });
+    document.getElementById("zusammenfassung").textContent = teile.length ? teile.join(" · ") : "Noch keine Urteile. Tippe bei jeder Stimme auf „Passt“, „Vielleicht“ oder „Nein“.";
+  }
+  blind.addEventListener("change", function () {
+    verdeckt = blind.checked; aufloesen.hidden = !verdeckt; ton.pause(); aktiv = null;
+    reihe = STIMMEN.slice(); if (verdeckt) for (var i = reihe.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = reihe[i]; reihe[i] = reihe[j]; reihe[j] = t; }
+    zeichne();
+  });
+  aufloesen.addEventListener("click", function () { verdeckt = false; aufloesen.hidden = true; blind.checked = false; zeichne(); });
+  senden.addEventListener("click", function () {
+    var notiz = document.getElementById("notiztext").value.trim();
+    var teile = STIMMEN.map(function (s) { return s.name.split(" – ")[0] + ": " + ({ gut: "Passt", mittel: "Vielleicht", nein: "Nein" }[urteil[s.key]] || "–"); });
+    var text = "Sprecherprobe Faktencheck-Reihe\nUrteile: " + teile.join(" · ") + (notiz ? "\nNotiz: " + notiz : "");
+    if (db) db.collection("stimmnotizen").doc("n" + Date.now().toString(36)).set({ urteile: urteil, notiz: notiz, zeit: new Date().toISOString() }).catch(function () {});
+    if (!kom || !anClaude) { stand.textContent = db ? "Gespeichert. Claude liest es beim nächsten Mal." : "Speicher nicht erreichbar."; return; }
+    senden.disabled = true;
+    kom.anchorFor(document.getElementById("abschluss")).then(function (a) { return kom.sendToClaude({ anchor: a, text: text.slice(0, 3900) }); })
+      .then(function () { stand.textContent = "An Claude geschickt ✓"; senden.disabled = false; },
+        function (e) { stand.textContent = e && e.code === "consent_required" ? "Gespeichert. Zum Senden bitte die Freigabe erlauben." : "Gespeichert, Senden fehlgeschlagen."; senden.disabled = false; });
+  });
+  zeichne();
+  if (window.claude && claude.use) {
+    claude.use("db").then(function (d) { if (!d) return; db = d;
+      db.collection("stimmwahl").onSnapshot(function (snap) {
+        (snap.docs || []).forEach(function (x) { var v = x.data ? x.data() : x; if (v && v.stimme) urteil[v.stimme] = v.urteil || null; });
+        document.querySelectorAll(".stimme").forEach(function (el) { var k = el.dataset.key;
+          el.querySelectorAll(".urteil button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.u === urteil[k])); }); });
+        fasse();
+      }, function () {});
+    }).catch(function () {});
+    claude.use("comments").then(function (c) { if (!c || !c.canSendToClaude) return; kom = c;
+      c.canSendToClaude().then(function (v) { anClaude = v === "available"; }, function () {}); }).catch(function () {});
+  }
+})();
+</script>
