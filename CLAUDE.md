@@ -84,8 +84,11 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.“ Ersetzt „Dieses Video ersetzt
   keinen ärztlichen Rat“. Nicht den HWG-Pflichttext („… fragen Sie Ihre Ärztin, Ihren Arzt oder in Ihrer Apotheke“)
   nachahmen, er klingt nach Arzneimittelwerbung. Konkrete Sicherheitssätze („nie plötzlich absetzen“) bleiben in der Szene.
-- Stimme: ElevenLabs „Christian – Warm and Captivating“ (`NBqeXKdZHweef6y0B67V`), Modell `eleven_v4`, Tempo 1,0;
-  spricht ≈ 2,1 Wörter/s, also 5 Minuten ≈ 600 Wörter.
+- Stimme: ElevenLabs „Christian – Warm and Captivating“ (`NBqeXKdZHweef6y0B67V`), Modell `eleven_v4`, **Tempo 1,05**
+  (Nutzerentscheidung 02.11., `"tempo": 1.05` im Drehbuch, wirkt nachträglich ohne neuen Ton). Grund: Bei 1,00 sprach er
+  3,94 Silben/s, langsamer als alle 12 gemessenen deutschen Erklärvideos (Median 4,48; Kurzgesagt/Simplicissimus
+  4,16–4,36); 1,05 ergibt ≈ 4,14 Silben/s ≈ 2,28 Wörter/s, also 6 Minuten ≈ 780 Wörter. Messung:
+  `themen/stil/sprechtempo/`.
   Stimme am 02.11. bestätigt (Sprecherprobe gegen Alexander, Marko, Marcus, Leo: `themen/stil/stimmprobe/`).
 - Tonaufbereitung fest im Renderer (Nutzerentscheidung 02.11.): Rauschunterdrückung und De-Esser wie im Seneca-Projekt,
   lineare Verstärkung auf −16 LUFS statt dynamischem loudnorm (`AUFBEREITUNG` in `werkzeug/render.py`, abschaltbar mit

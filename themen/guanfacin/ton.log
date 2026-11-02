@@ -1,11 +1,10 @@
-  ElevenLabs: 282 Zeichen, berechnet 121
-Ton aufbereitet (Rauschunterdrückung, De-Esser), -22.7 → -16 LUFS
-Gesamtdauer 365.5 s (6:05), 776 Woerter, Tempo 2.18 W/s Sprechzeit
-  g0      0.0–  23.1 s  ( 23.1 s)  Guanfacin: Was stimmt?
-  g1     23.1–  81.0 s  ( 57.9 s)  Was ist Guanfacin?
-  g2     81.0– 131.1 s  ( 50.1 s)  Für wen ist es zugelassen?
-  g3    131.1– 178.8 s  ( 47.7 s)  Wie gut wirkt es?
-  g4    178.8– 225.0 s  ( 46.2 s)  Müde, schwindlig, langsamer Puls
-  g5    225.0– 260.6 s  ( 35.6 s)  Täglich nehmen, nie plötzlich absetzen
-  g6    260.6– 322.6 s  ( 62.0 s)  Erwachsene, Angst, Tics
-  g7    322.6– 365.5 s  ( 42.9 s)  Was wirklich bleibt
+Ton aufbereitet (Rauschunterdrückung, De-Esser), -22.4 → -16 LUFS
+Gesamtdauer 348.7 s (5:48), 776 Woerter, Tempo 2.28 W/s Sprechzeit
+  g0      0.0–  22.0 s  ( 22.0 s)  Guanfacin: Was stimmt?
+  g1     22.0–  77.2 s  ( 55.2 s)  Was ist Guanfacin?
+  g2     77.2– 125.0 s  ( 47.7 s)  Für wen ist es zugelassen?
+  g3    125.0– 170.5 s  ( 45.5 s)  Wie gut wirkt es?
+  g4    170.5– 214.6 s  ( 44.1 s)  Müde, schwindlig, langsamer Puls
+  g5    214.6– 248.5 s  ( 33.9 s)  Täglich nehmen, nie plötzlich absetzen
+  g6    248.5– 307.6 s  ( 59.1 s)  Erwachsene, Angst, Tics
+  g7    307.6– 348.7 s  ( 41.0 s)  Was wirklich bleibt
