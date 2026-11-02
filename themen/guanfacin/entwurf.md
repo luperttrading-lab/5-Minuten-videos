@@ -45,8 +45,8 @@ Wenn Stimulanzien bei deinem Kind nicht passen, frag deine Ärztin gezielt nach 
 
 **3 Wie gut wirkt es?**
 Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als eine
-Scheintablette, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine.
-Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Scheintablette drei von zehn.
+Placebo, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine.
+Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Placebo drei von zehn.
 Fast alle Zulassungsstudien hat der Hersteller bezahlt.
 Oft heißt es, man merke die Wirkung nach wenigen Tagen. In den Studien baut sie sich über etwa vier Wochen auf, auch weil
 die Dosis langsam gesteigert wird. Früh spürt man vor allem eins: Müdigkeit.
@@ -73,7 +73,7 @@ Setz Guanfacin nie eigenmächtig ab und mach keine Pausen, ohne mit deiner Ärzt
 
 **6 Erwachsene und mehr**
 Und Erwachsene? Die einzige größere Studie stammt aus Japan, bezahlt vom dortigen Hersteller. Guanfacin wirkte, aber
-jeder Fünfte brach wegen Nebenwirkungen ab, mit Scheintablette kaum jemand. Die deutsche Leitlinie gibt für Erwachsene
+jeder Fünfte brach wegen Nebenwirkungen ab, mit Placebo kaum jemand. Die deutsche Leitlinie gibt für Erwachsene
 keine eigene Empfehlung.
 Oft heißt es auch, Guanfacin helfe gegen Angst. Die einzige kontrollierte Studie, mit Kindern, fand keinen Unterschied.
 Bei posttraumatischer Belastungsstörung waren zwei Studien negativ.

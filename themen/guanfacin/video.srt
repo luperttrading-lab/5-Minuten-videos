@@ -51,234 +51,234 @@ Wenn dir jemand Guanfacin als Gehirn-Booster verkauft: Das ist Tierforschung,
 keine Zusage für dich.
 
 14
-00:01:17,842 --> 00:01:27,112
+00:01:17,842 --> 00:01:27,180
 In Europa ist Guanfacin seit 2015 zugelassen: für Kinder und Jugendliche mit ADHS von sechs bis siebzehn Jahren.
 
 15
-00:01:26,962 --> 00:01:32,712
-Und nur, wenn Stimulanzien nicht passen, nicht vertragen werden oder nicht wirken.
+00:01:27,030 --> 00:01:32,787
+Und nur, wenn Stimulanzien wie Methylphenidat oder Lisdexamfetamin nicht passen,
 
 16
-00:01:32,562 --> 00:01:44,952
-Zugelassen ist es bei uns als alleiniges Medikament. Als Zusatz zum Stimulans erlauben es die USA; die neue deutsche Leitlinie hält diese Kombination bei Kindern für möglich.
+00:01:32,637 --> 00:01:35,660
+nicht vertragen werden oder nicht wirken.
 
 17
-00:01:44,802 --> 00:01:52,472
-Für Erwachsene ist es in Europa nicht zugelassen. Eine Zulassung für Erwachsene haben wir nur in Japan gefunden.
+00:01:35,510 --> 00:01:47,500
+Zugelassen ist es bei uns als alleiniges Medikament. Als Zusatz zum Stimulans erlauben es die USA; die neue deutsche Leitlinie hält diese Kombination bei Kindern für möglich.
 
 18
-00:01:52,322 --> 00:01:57,272
-Seit dem letzten Jahr gibt es auch ein günstigeres Nachahmerpräparat.
+00:01:47,350 --> 00:01:54,940
+Für Erwachsene ist es in Europa nicht zugelassen. Eine Zulassung für Erwachsene haben wir nur in Japan gefunden.
 
 19
-00:01:57,122 --> 00:02:00,442
-Wenn Stimulanzien bei deinem Kind nicht passen,
+00:01:54,790 --> 00:01:59,420
+Seit dem letzten Jahr gibt es auch ein günstigeres Nachahmerpräparat.
 
 20
-00:02:00,292 --> 00:02:05,432
-frag deine Ärztin gezielt nach den Alternativen; Guanfacin ist eine davon.
+00:01:59,270 --> 00:02:02,387
+Wenn Stimulanzien bei deinem Kind nicht passen,
 
 21
-00:02:06,032 --> 00:02:15,401
-Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als eine Scheintablette,
+00:02:02,237 --> 00:02:07,057
+frag deine Ärztin gezielt nach den Alternativen; Guanfacin ist eine davon.
 
 22
-00:02:15,251 --> 00:02:21,274
-etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine.
+00:02:07,657 --> 00:02:16,345
+Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als Placebo,
 
 23
-00:02:21,124 --> 00:02:25,682
-Anschaulich: Ungefähr sechs von zehn Kindern sprechen an,
+00:02:16,195 --> 00:02:22,367
+etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine.
 
 24
-00:02:25,532 --> 00:02:28,234
-mit Scheintablette drei von zehn.
+00:02:22,217 --> 00:02:28,927
+Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Placebo drei von zehn.
 
 25
-00:02:28,084 --> 00:02:31,994
+00:02:28,777 --> 00:02:32,607
 Fast alle Zulassungsstudien hat der Hersteller bezahlt.
 
 26
-00:02:31,844 --> 00:02:35,914
+00:02:32,457 --> 00:02:36,367
 Oft heißt es, man merke die Wirkung nach wenigen Tagen.
 
 27
-00:02:35,764 --> 00:02:39,940
+00:02:36,217 --> 00:02:40,393
 In den Studien baut sie sich über etwa vier Wochen auf,
 
 28
-00:02:39,790 --> 00:02:46,234
+00:02:40,243 --> 00:02:46,687
 auch weil die Dosis langsam gesteigert wird. Früh spürt man vor allem eins: Müdigkeit.
 
 29
-00:02:46,084 --> 00:02:50,954
+00:02:46,537 --> 00:02:51,087
 Als Zusatz zum Stimulans bringt es Kindern einen kleinen Gewinn.
 
 30
-00:02:50,804 --> 00:02:55,382
+00:02:50,937 --> 00:02:55,445
 Plane mit deiner Ärztin einige Wochen ein, bevor ihr die Wirkung beurteilt.
 
 31
-00:02:55,982 --> 00:03:02,769
+00:02:56,045 --> 00:03:02,833
 Die häufigste Nebenwirkung ist Schläfrigkeit: In den Studien betraf sie etwa vier von zehn Kindern,
 
 32
-00:03:02,619 --> 00:03:04,848
+00:03:02,683 --> 00:03:04,912
 vor allem in den ersten Wochen.
 
 33
-00:03:04,698 --> 00:03:08,288
+00:03:04,762 --> 00:03:08,352
 Auch Kopf- und Bauchschmerzen sind sehr häufig.
 
 34
-00:03:08,138 --> 00:03:09,573
+00:03:08,202 --> 00:03:09,636
 Manchmal heißt es,
 
 35
-00:03:09,423 --> 00:03:15,568
+00:03:09,486 --> 00:03:15,632
 Guanfacin senke den Blutdruck kaum. Das stimmt nicht; es war ja ein Blutdruckmittel.
 
 36
-00:03:15,418 --> 00:03:17,949
+00:03:15,482 --> 00:03:18,013
 Blutdruck und Puls sinken etwas,
 
 37
-00:03:17,799 --> 00:03:21,968
+00:03:17,863 --> 00:03:22,032
 manchen wird schwindlig, selten kommt es zur Ohnmacht.
 
 38
-00:03:21,818 --> 00:03:27,568
+00:03:21,882 --> 00:03:27,632
 Deshalb werden Blutdruck und Puls vor dem Start und danach regelmäßig kontrolliert.
 
 39
-00:03:27,418 --> 00:03:28,414
+00:03:27,482 --> 00:03:28,477
 Viele raten,
 
 40
-00:03:28,264 --> 00:03:36,448
+00:03:28,327 --> 00:03:36,512
 es abends zu nehmen. In einer Studie wirkte es morgens und abends gleich gut; die Fachinformation lässt beides zu.
 
 41
-00:03:36,298 --> 00:03:38,937
+00:03:36,362 --> 00:03:39,000
 Wenn dir oder deinem Kind schwindlig wird,
 
 42
-00:03:38,787 --> 00:03:41,603
+00:03:38,850 --> 00:03:41,667
 sag es sofort deiner Ärztin oder deinem Arzt.
 
 43
-00:03:42,203 --> 00:03:47,713
+00:03:42,267 --> 00:03:47,777
 Eine verbreitete Empfehlung lautet, man müsse Guanfacin nicht jeden Tag nehmen.
 
 44
-00:03:47,563 --> 00:03:50,593
+00:03:47,627 --> 00:03:50,657
 Das ist falsch und kann gefährlich werden.
 
 45
-00:03:50,443 --> 00:03:55,082
+00:03:50,507 --> 00:03:55,146
 Wer es plötzlich weglässt, riskiert, dass der Blutdruck wieder steigt,
 
 46
-00:03:54,932 --> 00:03:58,673
+00:03:54,996 --> 00:03:58,737
 in sehr seltenen Fällen bis zu einer gefährlichen Krise.
 
 47
-00:03:58,523 --> 00:04:04,833
+00:03:58,587 --> 00:04:04,897
 Nach mehreren vergessenen Tabletten muss die Dosis laut Fachinformation neu eingestellt werden.
 
 48
-00:04:04,683 --> 00:04:10,193
+00:04:04,747 --> 00:04:10,257
 Beendet wird die Behandlung schrittweise, mit Kontrollen von Blutdruck und Puls.
 
 49
-00:04:10,043 --> 00:04:13,858
+00:04:10,107 --> 00:04:13,921
 Setz Guanfacin nie eigenmächtig ab und mach keine Pausen,
 
 50
-00:04:13,708 --> 00:04:17,201
+00:04:13,771 --> 00:04:17,264
 ohne mit deiner Ärztin oder deinem Arzt zu sprechen.
 
 51
-00:04:17,801 --> 00:04:22,333
+00:04:17,864 --> 00:04:22,501
 Und Erwachsene? Die einzige größere Studie stammt aus Japan,
 
 52
-00:04:22,183 --> 00:04:24,671
+00:04:22,351 --> 00:04:24,894
 bezahlt vom dortigen Hersteller.
 
 53
-00:04:24,521 --> 00:04:29,515
+00:04:24,744 --> 00:04:30,174
 Guanfacin wirkte, aber jeder Fünfte brach wegen Nebenwirkungen ab,
 
 54
-00:04:29,365 --> 00:04:31,791
-mit Scheintablette kaum jemand.
+00:04:30,024 --> 00:04:32,094
+mit Placebo kaum jemand.
 
 55
-00:04:31,641 --> 00:04:35,951
+00:04:31,944 --> 00:04:36,174
 Die deutsche Leitlinie gibt für Erwachsene keine eigene Empfehlung.
 
 56
-00:04:35,801 --> 00:04:41,607
+00:04:36,024 --> 00:04:41,940
 Oft heißt es auch, Guanfacin helfe gegen Angst. Die einzige kontrollierte Studie,
 
 57
-00:04:41,457 --> 00:04:44,191
+00:04:41,790 --> 00:04:44,574
 mit Kindern, fand keinen Unterschied.
 
 58
-00:04:44,041 --> 00:04:48,671
+00:04:44,424 --> 00:04:49,054
 Bei posttraumatischer Belastungsstörung waren zwei Studien negativ.
 
 59
-00:04:48,521 --> 00:04:51,409
+00:04:48,904 --> 00:04:51,792
 Bei Tics hilft es vielleicht, aber nur,
 
 60
-00:04:51,259 --> 00:04:55,551
+00:04:51,642 --> 00:04:55,934
 wenn zugleich ADHS besteht; die Studien widersprechen sich.
 
 61
-00:04:55,401 --> 00:04:57,654
+00:04:55,784 --> 00:04:58,037
 Dass es das Aufschieben beendet,
 
 62
-00:04:57,504 --> 00:05:06,591
+00:04:57,887 --> 00:05:06,974
 beruht auf Erfahrungsberichten; untersucht wurde es nicht. Und als Denkhilfe für Gesunde oder Ältere zeigte es in Studien keine Wirkung.
 
 63
-00:05:06,441 --> 00:05:16,078
+00:05:06,824 --> 00:05:16,389
 Alles außer ADHS bei Kindern ist ein Einsatz außerhalb der Zulassung. Sprich das offen mit deiner Ärztin an und frag nach Nutzen und Risiken.
 
 64
-00:05:16,678 --> 00:05:18,108
+00:05:16,989 --> 00:05:18,419
 Was bleibt?
 
 65
-00:05:17,958 --> 00:05:24,391
+00:05:18,269 --> 00:05:24,702
 Erstens: Guanfacin ist kein Stimulans und eine echte Möglichkeit für Kinder und Jugendliche,
 
 66
-00:05:24,241 --> 00:05:26,508
+00:05:24,552 --> 00:05:26,819
 wenn Stimulanzien nicht passen.
 
 67
-00:05:26,358 --> 00:05:32,508
+00:05:26,669 --> 00:05:32,819
 Zweitens: Es wirkt langsamer und schwächer als Stimulanzien und macht anfangs oft müde.
 
 68
-00:05:32,358 --> 00:05:36,017
+00:05:32,669 --> 00:05:36,328
 Drittens: täglich nehmen, nie plötzlich absetzen,
 
 69
-00:05:35,867 --> 00:05:38,668
+00:05:36,178 --> 00:05:38,979
 Blutdruck und Puls im Blick behalten.
 
 70
-00:05:38,518 --> 00:05:43,228
+00:05:38,829 --> 00:05:43,539
 Für Erwachsene, gegen Angst und als Gehirn-Booster fehlt der Beleg.
 
 71
-00:05:43,078 --> 00:05:47,986
+00:05:43,389 --> 00:05:48,297
 Dieses Video ersetzt keinen ärztlichen Rat. Die Quellen stehen in der Beschreibung.
 

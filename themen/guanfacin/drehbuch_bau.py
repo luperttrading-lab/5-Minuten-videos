@@ -65,7 +65,7 @@ scenes = [
  {"id": "g2", "kapitel": "Für wen zugelassen?", "kicker": "Zulassung", "headline": "Für wen ist es zugelassen?",
   "sentences": [
    S("In Europa ist Guanfacin seit 2015 zugelassen: für Kinder und Jugendliche mit ADHS von sechs bis siebzehn Jahren.", "In Europa ist Guanfacin seit zweitausendfünfzehn zugelassen: für Kinder und Jugendliche mit ADHS von sechs bis siebzehn Jahren."),
-   "Und nur, wenn Stimulanzien nicht passen, nicht vertragen werden oder nicht wirken.",
+   "Und nur, wenn Stimulanzien wie Methylphenidat oder Lisdexamfetamin nicht passen, nicht vertragen werden oder nicht wirken.",
    "Zugelassen ist es bei uns als alleiniges Medikament. Als Zusatz zum Stimulans erlauben es die USA; die neue deutsche Leitlinie hält diese Kombination bei Kindern für möglich.",
    "Für Erwachsene ist es in Europa nicht zugelassen. Eine Zulassung für Erwachsene haben wir nur in Japan gefunden.",
    "Seit dem letzten Jahr gibt es auch ein günstigeres Nachahmerpräparat.",
@@ -80,8 +80,8 @@ scenes = [
    {"datei": "bilder/g2b.png", "prompt": "a large simple map of the world drawn in ink and watercolor, Europe softly tinted in dove blue, Japan highlighted in warm terracotta, no country names, no text"}]},
  {"id": "g3", "kapitel": "Wie gut wirkt es?", "kicker": "Wirksamkeit", "headline": "Wie gut wirkt es?",
   "sentences": [
-   "Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als eine Scheintablette, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine.",
-   "Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Scheintablette drei von zehn.",
+   "Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als Placebo, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine.",
+   "Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Placebo drei von zehn.",
    "Fast alle Zulassungsstudien hat der Hersteller bezahlt.",
    "Oft heißt es, man merke die Wirkung nach wenigen Tagen.",
    "In den Studien baut sie sich über etwa vier Wochen auf, auch weil die Dosis langsam gesteigert wird. Früh spürt man vor allem eins: Müdigkeit.",
@@ -131,7 +131,7 @@ scenes = [
  {"id": "g6", "kapitel": "Erwachsene und mehr", "kicker": "Off-Label", "headline": "Erwachsene, Angst, Tics",
   "sentences": [
    "Und Erwachsene? Die einzige größere Studie stammt aus Japan, bezahlt vom dortigen Hersteller.",
-   "Guanfacin wirkte, aber jeder Fünfte brach wegen Nebenwirkungen ab, mit Scheintablette kaum jemand.",
+   "Guanfacin wirkte, aber jeder Fünfte brach wegen Nebenwirkungen ab, mit Placebo kaum jemand.",
    "Die deutsche Leitlinie gibt für Erwachsene keine eigene Empfehlung.",
    "Oft heißt es auch, Guanfacin helfe gegen Angst. Die einzige kontrollierte Studie, mit Kindern, fand keinen Unterschied.",
    "Bei posttraumatischer Belastungsstörung waren zwei Studien negativ.",
