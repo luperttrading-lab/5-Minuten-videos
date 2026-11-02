@@ -385,23 +385,28 @@ def panel_states(sc):
         txt = b['t']
         if stil == 'A':
             txt = 'Falsch: „' + txt + '“'
-        elif stil == 'B':
-            txt = '„' + txt + '“ ist falsch'
+        elif stil == 'B':                               # „ist falsch“ bei Gegenbeleg, „ist nicht belegt“ ohne Belege
+            zusatz = 'ist nicht belegt' if b.get('unbelegt') else 'ist falsch'
+            txt = '„' + txt + '“ ' + zusatz
+            rot_ab = len(txt) - len(zusatz)             # ab diesem Zeichen rot, auch wenn der Zusatz umbricht
         lines = wrap(d, txt, fb, TX1 - TX0 - 50)
         if b.get('ev'):
             draw_mark(d, TX0 + 15, y + 22, 16, b['ev'])
         else:
             d.ellipse([TX0 + 9, y + 16, TX0 + 21, y + 28], fill=ACCENT)
         ROT = MARKS['keine'][0]
+        pos = 0
         for k, line in enumerate(lines):
             x = TX0 + 46
+            l0, pos = pos, pos + len(line) + 1
             if stil == 'A' and k == 0 and line.startswith('Falsch:'):
                 d.text((x, y), 'Falsch:', font=fb, fill=ROT)
                 x += d.textlength('Falsch: ', font=fb)
                 line = line[len('Falsch: '):]
-            if stil == 'B' and k == len(lines) - 1 and line.endswith('ist falsch'):
-                d.text((x, y), line[:-10], font=fb, fill=INK)
-                d.text((x + d.textlength(line[:-10], font=fb), y), 'ist falsch', font=fb, fill=ROT)
+            if stil == 'B' and rot_ab < l0 + len(line):
+                cut = max(0, rot_ab - l0)
+                d.text((x, y), line[:cut], font=fb, fill=INK)
+                d.text((x + d.textlength(line[:cut], font=fb), y), line[cut:], font=fb, fill=ROT)
             else:
                 d.text((x, y), line, font=fb, fill=INK)
             if stil == 'C':

@@ -77,6 +77,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   ist“). Alte Drehbücher mit `ev: "frueh"` rendert `render.py` automatisch als Gelb mit Zusatz.
   Gefährliche Behauptungen zusätzlich `"gefahr": true` (⚠). Farbe = Stärke der Belege, Zeichen = Eigenschaft.
   Rote Stichpunkte: Behauptung in Anführungszeichen, dahinter rot „ist falsch“ (Nutzerwahl 02.11., `ROT_STIL` B im Renderer).
+  Unterscheidung (Nutzerentscheidung 02.11.): „ist falsch“ nur bei Gegenbeleg (Studien zeigen das Gegenteil);
+  fehlen Belege ganz (nicht untersucht, nur Hersteller-Kleinststudie), `"unbelegt": true` → rot „ist nicht belegt“.
+  Beide bleiben Rot („nicht haltbar“): Eine unbelegte Behauptung ist nicht richtig, aber auch nicht widerlegt.
 - Quellen durchnummeriert nach erstem Auftreten, im Video „Quellen: [n] Autor Jahr“. Die YouTube-Beschreibung hat
   nackte URLs (YouTube macht nur die klickbar), höchstens 5000 Zeichen, mit Kapitelzeiten.
 - Bildausschnitte: Schrift ganz oder gar nicht, keine halben Nachbarmotive, kein Rahmenstrich der Grafik. Bei

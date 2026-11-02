@@ -445,12 +445,13 @@
     {
      "t": "Synthetisches Lykopin ist wirkungslos",
      "at": 1,
-     "ev": "keine"
+     "ev": "keine",
+     "unbelegt": true
     }
    ],
    "evidence": {
     "level": "keine",
-    "label": "Herstellerstudie, nicht haltbar"
+    "label": "Herstellerstudie, nicht belegt"
    },
    "quellen": [
     "wolak2019",
@@ -512,7 +513,8 @@
     {
      "t": "Mehr Bifidobakterien im Darm",
      "at": 6,
-     "ev": "keine"
+     "ev": "keine",
+     "unbelegt": true
     }
    ],
    "evidence": {
@@ -646,7 +648,8 @@
     {
      "t": "Nur natürliches Lykopin wirkt",
      "at": 3,
-     "ev": "keine"
+     "ev": "keine",
+     "unbelegt": true
     }
    ],
    "evidence": {
