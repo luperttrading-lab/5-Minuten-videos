@@ -1,0 +1,144 @@
+<title>Klangprobe Sprecherstimme</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  /* Eine Spalte wie ein Mischpult: oben Ausschnitt und Abspielen, darunter zwei Regler mit Skala, unten Übernehmen. */
+  :root {
+    --grund: #eef1f4; --pult: #ffffff; --tinte: #18202a; --grau: #5d6976; --linie: #d4dbe2;
+    --regler: #2f5f8a; --regler-text: #ffffff; --mitte: #b4541c; --gut: #2a7a4b;
+    --text: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --zahl: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --grund: #12171d; --pult: #1b222b; --tinte: #e6ebf0; --grau: #9aa6b2; --linie: #2e3843;
+    --regler: #7fb2e0; --regler-text: #0e151c; --mitte: #f0a06a; --gut: #6fd09a; color-scheme: dark } }
+  :root[data-theme="dark"] {
+    --grund: #12171d; --pult: #1b222b; --tinte: #e6ebf0; --grau: #9aa6b2; --linie: #2e3843;
+    --regler: #7fb2e0; --regler-text: #0e151c; --mitte: #f0a06a; --gut: #6fd09a; color-scheme: dark }
+  * { box-sizing: border-box; }
+  body { background: var(--grund); color: var(--tinte); font: 16px/1.5 var(--text); }
+  main { max-width: 640px; margin: 0 auto; display: grid; gap: 16px; padding-block: 24px 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  h1 { margin: 0; font: 600 clamp(24px, 6vw, 32px)/1.15 var(--text); text-wrap: balance; }
+  .aufgabe { margin: 0; padding: 12px 14px; border-left: 4px solid var(--mitte); background: var(--pult); border-radius: 6px; }
+  .pult { display: grid; gap: 18px; padding: 16px; background: var(--pult); border: 1px solid var(--linie); border-radius: 14px; }
+  .wahl { display: flex; flex-wrap: wrap; gap: 8px; }
+  .wahl button { border: 1px solid var(--linie); background: none; color: var(--tinte); border-radius: 999px; padding: 8px 14px; font: 600 14px/1 var(--text); cursor: pointer; }
+  .wahl button[aria-pressed="true"] { background: var(--regler); border-color: var(--regler); color: var(--regler-text); }
+  .spielen { display: flex; align-items: center; gap: 14px; }
+  .play { width: 60px; height: 60px; border-radius: 50%; border: 0; background: var(--regler); color: var(--regler-text); display: grid; place-items: center; cursor: pointer; flex: 0 0 auto; }
+  .play svg { width: 26px; height: 26px; }
+  .zeit { font: 500 14px/1 var(--zahl); color: var(--grau); font-variant-numeric: tabular-nums; }
+  .balken { flex: 1 1 auto; height: 6px; border-radius: 3px; background: var(--linie); overflow: hidden; min-width: 0; }
+  .balken i { display: block; height: 100%; width: 0; background: var(--regler); }
+  .regler { display: grid; gap: 6px; }
+  .regler label { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-weight: 600; }
+  .regler output { font: 500 18px/1 var(--zahl); color: var(--regler); font-variant-numeric: tabular-nums; }
+  .regler input { width: 100%; accent-color: var(--regler); height: 32px; }
+  .skala { display: flex; justify-content: space-between; font: 500 12px/1 var(--zahl); color: var(--grau); }
+  .folge { margin: 0; font-size: 14px; color: var(--grau); }
+  .folge b { color: var(--tinte); font-weight: 600; }
+  .zeile { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .knopf { border: 1px solid var(--linie); background: none; color: var(--tinte); border-radius: 10px; padding: 10px 14px; font: 600 15px/1 var(--text); cursor: pointer; }
+  .knopf.haupt { background: var(--regler); border-color: var(--regler); color: var(--regler-text); }
+  textarea { width: 100%; font: 16px/1.4 var(--text); color: var(--tinte); background: var(--grund); border: 1px solid var(--linie); border-radius: 8px; padding: 8px 10px; resize: vertical; }
+  .melde { font-size: 14px; color: var(--gut); }
+  button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--regler); outline-offset: 2px; }
+</style>
+
+<main>
+  <h1>Klangprobe: Tempo und Tonlage</h1>
+  <p class="aufgabe"><b>Deine Aufgabe:</b> ▶ antippen, dann beide Regler schieben, bis es dir gefällt. Zum Vergleich auch den Fachteil hören. Unten „An Claude“: Ich übernehme die Einstellung für die Videos.</p>
+
+  <section class="pult" aria-label="Probe">
+    <div class="wahl" role="group" aria-label="Ausschnitt">
+      <button type="button" data-a="einstieg" aria-pressed="true">Einstieg</button>
+      <button type="button" data-a="fachteil" aria-pressed="false">Fachteil (Szene 3)</button>
+    </div>
+    <div class="spielen">
+      <button type="button" class="play" id="play" aria-label="Abspielen"></button>
+      <div class="balken"><i id="fort"></i></div>
+      <span class="zeit" id="zeit">0:00</span>
+    </div>
+
+    <div class="regler">
+      <label for="tempo">Tempo <output id="tempo-wert">1,00</output></label>
+      <input type="range" id="tempo" min="0.85" max="1.15" step="0.01" value="1">
+      <div class="skala"><span>0,85 langsamer</span><span>1,00 jetzt</span><span>1,15 schneller</span></div>
+    </div>
+    <div class="regler">
+      <label for="lage">Tonlage <output id="lage-wert">±0 Halbtöne</output></label>
+      <input type="range" id="lage" min="-2" max="2" step="0.5" value="0">
+      <div class="skala"><span>−2 tiefer</span><span>0 jetzt</span><span>+2 höher</span></div>
+    </div>
+    <p class="folge" id="folge"></p>
+    <div class="zeile"><button type="button" class="knopf" id="zurueck">Auf jetzt zurück (1,00 / 0)</button></div>
+  </section>
+
+  <section class="pult" aria-label="Übernehmen">
+    <p class="folge">Zum Vergleich: Seneca läuft mit Tempo 0,96. Tonlage ändert nur die Höhe, nicht das Tempo; die Klangfarbe der Stimme bleibt erhalten. Kleine Schritte (±1) klingen sauber, bei −2 kann es leicht künstlich werden.</p>
+    <textarea id="notiz" rows="2" placeholder="Notiz (optional), z. B. „Fachteil langsamer als Einstieg?“" aria-label="Notiz"></textarea>
+    <div class="zeile"><button type="button" class="knopf haupt" id="senden">Diese Einstellung an Claude</button><span class="melde" id="melde" role="status" aria-live="polite"></span></div>
+  </section>
+  <audio id="ton" preload="auto"></audio>
+</main>
+
+<script>
+(function () {
+  var PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>';
+  var PAUSE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 5h4v14H7zm6 0h4v14h-4z"/></svg>';
+  var BASIS_WPM = 127, BASIS_SEK = 365;          // Guanfacin bei Tempo 1,00
+  var ton = document.getElementById("ton"), play = document.getElementById("play");
+  var tempo = document.getElementById("tempo"), lage = document.getElementById("lage");
+  var ausschnitt = "einstieg", db = null, kom = null, anClaude = false;
+  play.innerHTML = PLAY;
+  function datei() { var l = parseFloat(lage.value); return "audio/" + ausschnitt + "_" + (l >= 0 ? "+" : "") + l.toFixed(1) + ".mp3"; }
+  function setzeTempo() { try { ton.preservesPitch = true; ton.webkitPreservesPitch = true; } catch (e) {} var t = parseFloat(tempo.value); ton.defaultPlaybackRate = t; ton.playbackRate = t; }
+  function komma(x, n) { return x.toFixed(n).replace(".", ","); }
+  function anzeigen() {
+    var t = parseFloat(tempo.value), l = parseFloat(lage.value);
+    document.getElementById("tempo-wert").textContent = komma(t, 2);
+    document.getElementById("lage-wert").textContent = (l === 0 ? "±0" : (l > 0 ? "+" : "−") + komma(Math.abs(l), 1).replace(",0", "")) + " Halbtöne";
+    var sek = Math.round(BASIS_SEK / t);
+    document.getElementById("folge").innerHTML = "Ergibt etwa <b>" + Math.round(BASIS_WPM * t) + " Wörter pro Minute</b>; Guanfacin wäre <b>" + Math.floor(sek / 60) + ":" + String(sek % 60).padStart(2, "0") + "</b> lang (jetzt 6:05).";
+  }
+  function lade(weiter) {
+    var pos = ton.currentTime || 0, lief = !ton.paused;
+    ton.src = datei(); ton.load();
+    ton.addEventListener("loadedmetadata", function f() { ton.removeEventListener("loadedmetadata", f);
+      if (weiter) ton.currentTime = Math.min(pos, ton.duration - 0.1); setzeTempo(); if (lief) ton.play().catch(function () {}); });
+  }
+  play.addEventListener("click", function () { if (ton.paused) { setzeTempo(); ton.play().catch(function () {}); } else ton.pause(); });
+  ton.addEventListener("play", function () { play.innerHTML = PAUSE; setzeTempo(); });
+  ton.addEventListener("pause", function () { play.innerHTML = PLAY; });
+  ton.addEventListener("ended", function () { play.innerHTML = PLAY; });
+  ton.addEventListener("timeupdate", function () {
+    if (!ton.duration) return;
+    document.getElementById("fort").style.width = (100 * ton.currentTime / ton.duration) + "%";
+    var s = Math.floor(ton.currentTime); document.getElementById("zeit").textContent = Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  });
+  tempo.addEventListener("input", function () { setzeTempo(); anzeigen(); });
+  lage.addEventListener("input", function () { anzeigen(); });
+  lage.addEventListener("change", function () { lade(true); });
+  document.querySelectorAll(".wahl button").forEach(function (b) { b.addEventListener("click", function () {
+    ausschnitt = b.dataset.a; document.querySelectorAll(".wahl button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    ton.pause(); ton.currentTime = 0; lade(false); }); });
+  document.getElementById("zurueck").addEventListener("click", function () { tempo.value = 1; lage.value = 0; setzeTempo(); anzeigen(); lade(true); });
+  document.getElementById("senden").addEventListener("click", function () {
+    var t = parseFloat(tempo.value), l = parseFloat(lage.value), n = document.getElementById("notiz").value.trim(), m = document.getElementById("melde");
+    var text = "Klangprobe Sprecherstimme: Tempo " + komma(t, 2) + ", Tonlage " + (l > 0 ? "+" : "") + komma(l, 1) + " Halbtöne" + (n ? "\nNotiz: " + n : "");
+    if (db) db.collection("klangwahl").doc("aktuell").set({ tempo: t, tonlage: l, notiz: n, zeit: new Date().toISOString() }).catch(function () {});
+    if (!kom || !anClaude) { m.textContent = db ? "Gespeichert. Claude liest es beim nächsten Mal." : "Bitte Claude im Chat Bescheid geben: " + text; return; }
+    kom.anchorFor(document.getElementById("senden")).then(function (a) { return kom.sendToClaude({ anchor: a, text: text }); })
+      .then(function () { m.textContent = "An Claude geschickt ✓"; }, function (e) { m.textContent = e && e.code === "consent_required" ? "Gespeichert. Zum Senden bitte die Freigabe erlauben." : "Gespeichert, Senden fehlgeschlagen."; });
+  });
+  anzeigen(); ton.src = datei();
+  if (window.claude && claude.use) {
+    claude.use("db").then(function (d) { if (d) db = d; }).catch(function () {});
+    claude.use("comments").then(function (c) { if (!c || !c.canSendToClaude) return; kom = c;
+      c.canSendToClaude().then(function (v) { anClaude = v === "available"; }, function () {}); }).catch(function () {});
+  }
+})();
+</script>
