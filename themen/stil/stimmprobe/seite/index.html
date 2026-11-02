@@ -69,7 +69,7 @@
   <header>
     <span class="eyebrow">Stimme für die Faktencheck-Reihe</span>
     <h1>Sprecherprobe: fünf Stimmen, ein Absatz</h1>
-    <p class="lead">Derselbe Absatz aus dem Guanfacin-Video, gleiche Einstellungen (ElevenLabs v4, Stimm-Standard), alle auf dieselbe Lautstärke gebracht wie im Video. Vier Kandidaten stammen aus der Endrunde des Seneca-Duells; Helmut bleibt Seneca. Christian ist die Stimme, mit der die Reihe bisher läuft.</p>
+    <p class="lead">Derselbe Absatz aus dem Guanfacin-Video, gleiche Einstellungen (ElevenLabs v4, Stimm-Standard), alle auf dieselbe Lautstärke gebracht wie im Video. Neu: Schalter „Aufbereitet“ mit der Seneca-Kette (Rauschunterdrückung, De-Esser); beim Umschalten läuft die Stelle weiter. Vier Kandidaten stammen aus der Endrunde des Seneca-Duells; Helmut bleibt Seneca. Christian ist die Stimme, mit der die Reihe bisher läuft.</p>
   </header>
 
   <p class="probe"><b>Gesprochener Text · 81 Wörter</b><span id="probetext"></span></p>
@@ -77,6 +77,7 @@
   <div class="leiste">
     <label class="schalter" for="blind"><input type="checkbox" id="blind"> Blind hören (Namen verdeckt, Reihenfolge gemischt)</label>
     <button type="button" class="knopf-text" id="aufloesen" hidden>Auflösen</button>
+    <label class="schalter" for="aufb"><input type="checkbox" id="aufb" checked> Aufbereitet wie Seneca (Rauschunterdrückung, gegen Zischen)</label>
   </div>
 
   <section class="liste" id="liste" aria-label="Stimmen"></section>
@@ -132,10 +133,17 @@
   function spiele(s) {
     var el = document.getElementById("st-" + s.key);
     if (aktiv === s.key && !ton.paused) { ton.pause(); return; }
-    if (aktiv !== s.key) { ton.src = s.datei; aktiv = s.key; }
+    if (aktiv !== s.key) { ton.src = quelle(s); aktiv = s.key; }
     ton.play().catch(function () {});
     document.querySelectorAll(".stimme").forEach(function (x) { x.classList.toggle("laeuft", x === el); });
   }
+  function quelle(s) { return "audio/" + s.key + (aufb.checked ? "_auf" : "_roh") + ".mp3"; }
+  var aufb = document.getElementById("aufb");
+  aufb.addEventListener("change", function () {
+    if (!aktiv) return; var s = STIMMEN.filter(function (x) { return x.key === aktiv; })[0];
+    var t = ton.currentTime, lief = !ton.paused; ton.src = quelle(s);
+    ton.addEventListener("loadedmetadata", function f() { ton.removeEventListener("loadedmetadata", f); ton.currentTime = t; if (lief) ton.play().catch(function () {}); });
+  });
   function knoepfe() {
     document.querySelectorAll(".stimme").forEach(function (x) {
       var an = x.dataset.key === aktiv && !ton.paused; x.querySelector(".play").innerHTML = an ? ICON_PAUSE : ICON_PLAY;
@@ -151,7 +159,7 @@
     urteil[key] = urteil[key] === u ? null : u;
     document.querySelectorAll("#st-" + key + " .urteil button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.u === urteil[key])); });
     fasse();
-    if (db) db.collection("stimmwahl").doc(key).set({ stimme: key, urteil: urteil[key] || null, blind: verdeckt, zeit: new Date().toISOString() }).catch(function () { stand.textContent = "Urteil nicht gespeichert."; });
+    if (db) db.collection("stimmwahl").doc(key).set({ stimme: key, urteil: urteil[key] || null, blind: verdeckt, fassung: aufb.checked ? "aufbereitet" : "roh", zeit: new Date().toISOString() }).catch(function () { stand.textContent = "Urteil nicht gespeichert."; });
   }
   function fasse() {
     var teile = STIMMEN.filter(function (s) { return urteil[s.key]; }).map(function (s) {

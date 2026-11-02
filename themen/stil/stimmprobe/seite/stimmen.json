@@ -10,7 +10,9 @@
    "dauer": 37.52,
    "wps": 2.16,
    "f0": 101.1,
-   "video_min": 6.24
+   "video_min": 6.24,
+   "datei_roh": "audio/christian_roh.mp3",
+   "datei_auf": "audio/christian_auf.mp3"
   },
   {
    "key": "alexander",
@@ -21,7 +23,9 @@
    "dauer": 35.68,
    "wps": 2.27,
    "f0": 113.8,
-   "video_min": 5.96
+   "video_min": 5.96,
+   "datei_roh": "audio/alexander_roh.mp3",
+   "datei_auf": "audio/alexander_auf.mp3"
   },
   {
    "key": "marko",
@@ -32,7 +36,9 @@
    "dauer": 35.52,
    "wps": 2.28,
    "f0": 108.6,
-   "video_min": 5.93
+   "video_min": 5.93,
+   "datei_roh": "audio/marko_roh.mp3",
+   "datei_auf": "audio/marko_auf.mp3"
   },
   {
    "key": "marcus",
@@ -43,7 +49,9 @@
    "dauer": 34.8,
    "wps": 2.33,
    "f0": 107.8,
-   "video_min": 5.82
+   "video_min": 5.82,
+   "datei_roh": "audio/marcus_roh.mp3",
+   "datei_auf": "audio/marcus_auf.mp3"
   },
   {
    "key": "leo",
@@ -54,7 +62,9 @@
    "dauer": 37.68,
    "wps": 2.15,
    "f0": 105.5,
-   "video_min": 6.26
+   "video_min": 6.26,
+   "datei_roh": "audio/leo_roh.mp3",
+   "datei_auf": "audio/leo_auf.mp3"
   }
  ]
 }
