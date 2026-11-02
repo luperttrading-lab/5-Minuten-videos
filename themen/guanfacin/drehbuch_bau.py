@@ -80,7 +80,7 @@ scenes = [
    {"datei": "bilder/g2b.png", "prompt": "a large simple map of the world drawn in ink and watercolor, Europe softly tinted in dove blue, Japan highlighted in warm terracotta, no country names, no text"}]},
  {"id": "g3", "kapitel": "Wie gut wirkt es?", "kicker": "Wirksamkeit", "headline": "Wie gut wirkt es?",
   "sentences": [
-   "Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als Placebo, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine.",
+   "Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als ein Placebo, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine.",
    "Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Placebo drei von zehn.",
    "Fast alle Zulassungsstudien hat der Hersteller bezahlt.",
    "Oft heißt es, man merke die Wirkung nach wenigen Tagen.",
@@ -136,7 +136,7 @@ scenes = [
    "Oft heißt es auch, Guanfacin helfe gegen Angst. Die einzige kontrollierte Studie, mit Kindern, fand keinen Unterschied.",
    "Bei posttraumatischer Belastungsstörung waren zwei Studien negativ.",
    "Bei Tics hilft es vielleicht, aber nur, wenn zugleich ADHS besteht; die Studien widersprechen sich.",
-   "Dass man mit Guanfacin leichter ins Tun kommt und Aufgaben weniger vor sich herschiebt, berichten einzelne Nutzer; untersucht wurde es nicht. Und als Denkhilfe für Gesunde oder Ältere zeigte es in Studien keine Wirkung.",
+   "Dass man mit Guanfacin leichter ins Handeln kommt und Aufgaben weniger vor sich herschiebt, berichten einzelne Nutzer; untersucht wurde es nicht. Und als Denkhilfe für Gesunde oder Ältere zeigte es in Studien keine Wirkung.",
    "Alles außer ADHS bei Kindern ist ein Einsatz außerhalb der Zulassung. Sprich das offen mit Arzt oder Ärztin an und frag nach Nutzen und Risiken."],
   "bullets": [{"t": "Gute Option für Erwachsene", "at": 0, "ev": "mittel"},
               {"t": "Hilft bei Angst", "at": 3, "ev": "keine"},
