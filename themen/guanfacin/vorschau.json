@@ -1,8 +1,8 @@
 {"titel": "Guanfacin",
- "aufgabe": "Oben das fertige Video (5:48, Tempo 1,05, Einstieg B) ansehen. Wenn es passt, „passt“ und „An Claude“; dann ist es fertig für YouTube.",
+ "aufgabe": "Oben das neue Video (5:50) ansehen: 12 neue Bilder, freundlicher Schluss, ⚠ in Szene 5. Wenn es passt, „passt“ und „An Claude“; dann ist es fertig für YouTube.",
  "videos": [
-  {"datei": "video_720p.mp4", "titel": "Fertiges Video: Tempo 1,05, Einstieg B", "stand": "02.11., 13:05", "pruefen": true, "poster_bei": 9,
-   "notiz": "5:48 statt 6:05. Einstieg endet mit „Was davon stimmt wirklich?“. Sprechtempo jetzt etwa wie das langsamste Kurzgesagt-Video (4,14 Silben pro Sekunde)."},
+  {"datei": "video_720p.mp4", "titel": "Fertiges Video: neue Bilder und Schluss", "stand": "02.11., 14:45", "pruefen": true, "poster_bei": 9,
+   "notiz": "Kein Bild kommt in einer Szene doppelt; jedes neue Bild erscheint beim passenden Satz. Schluss: „… unterstützen, aber nicht ersetzen. Bis zum nächsten Video!“"},
   {"datei": "hook_A.mp4", "titel": "Zur Info: Einstieg A (nicht gewählt)", "stand": "02.11., 12:08", "pruefen": false, "poster_bei": 9.3,
    "notiz": "„Nicht alles davon stimmt.“ – noch mit Tempo 1,00."}
  ]}
