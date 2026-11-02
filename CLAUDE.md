@@ -66,7 +66,11 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Falsche Aussagen im Bild nur zeigen, wenn das Video sie richtigstellt.
 - Keine durchlaufende Gesamtgrafik als Einstieg.
 - Stimme: ElevenLabs „Christian – Warm and Captivating“ (`NBqeXKdZHweef6y0B67V`), Modell `eleven_v4`, Tempo 1,0;
-  spricht ≈ 2,1 Wörter/s, also 5 Minuten ≈ 600 Wörter. Die Antworten (JSON mit Audio und Zeitmarken) in
+  spricht ≈ 2,1 Wörter/s, also 5 Minuten ≈ 600 Wörter.
+  Stimme am 02.11. bestätigt (Sprecherprobe gegen Alexander, Marko, Marcus, Leo: `themen/stil/stimmprobe/`).
+- Tonaufbereitung fest im Renderer (Nutzerentscheidung 02.11.): Rauschunterdrückung und De-Esser wie im Seneca-Projekt,
+  lineare Verstärkung auf −16 LUFS statt dynamischem loudnorm (`AUFBEREITUNG` in `werkzeug/render.py`, abschaltbar mit
+  `"aufbereitung": false`). Grund: Roh rauschte Christian in Pausen bei −50 dB („blechern, knisternd“). Die Antworten (JSON mit Audio und Zeitmarken) in
   `tts_cache/` einchecken, dann kosten Neu-Renders nichts.
 
 ## Zugänge (Cloud-Umgebung „Standard“)

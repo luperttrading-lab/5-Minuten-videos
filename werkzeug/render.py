@@ -258,6 +258,29 @@ def build_audio(cfg, args):
     return total, (buf * 32767).astype(np.int16)
 
 
+# Tonaufbereitung wie im Seneca-Projekt (seneca-audio/werkzeuge/kette.py), Nutzerentscheidung 02.11.2026:
+# Rauschunterdrückung (highpass, anlmdn, sanftes Gate; Versatz von anlmdn um 353 Samples bei 44,1 kHz ausgeglichen,
+# Zeitmarken bleiben gültig), De-Esser, dann lineare Verstärkung auf −16 LUFS mit Limiter. Kein dynamisches loudnorm
+# mehr: Das hob in Sprechpausen das Grundrauschen an (Christian roh −50 dB, aufbereitet −70 dB).
+# Abschalten mit "aufbereitung": false im Drehbuch-Kopf.
+AUFBEREITUNG = ("highpass=f=60,anlmdn=s=0.0007,agate=threshold=0.01:ratio=3:range=0.15:attack=5:release=200:knee=6:"
+                "detection=rms,atrim=start_sample=353,apad=pad_len=353,deesser=i=0.5:m=0.5:f=0.5")
+
+
+def aufbereiten(path, ziel_lufs=-16.0):
+    tmp = path + '.auf.wav'
+    subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-i', path, '-af', AUFBEREITUNG, '-ar', str(SR), '-ac', '1',
+                    '-c:a', 'pcm_s16le', tmp], check=True)
+    o = subprocess.run(['ffmpeg', '-nostdin', '-hide_banner', '-i', tmp, '-af', 'ebur128', '-f', 'null', '-'],
+                       capture_output=True, text=True).stderr
+    lufs = float(o.rsplit('I:', 1)[1].split('LUFS')[0])
+    subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-i', tmp, '-af',
+                    f'volume={ziel_lufs - lufs:.2f}dB,alimiter=limit=0.84:level=disabled', '-ar', str(SR), '-ac', '1',
+                    '-c:a', 'pcm_s16le', path], check=True)
+    os.remove(tmp)
+    print(f'Ton aufbereitet (Rauschunterdrückung, De-Esser), {lufs:.1f} → {ziel_lufs:.0f} LUFS')
+
+
 def write_wav(path, pcm):
     with wave.open(path, 'wb') as w:
         w.setnchannels(1)
@@ -607,7 +630,7 @@ def render(cfg, src, total, out_mp4, wav, srt):
     cmd = ['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS),
            '-i', '-', '-i', wav, '-map', '0:v', '-map', '1:a',
            '-c:v', 'libx264', '-preset', 'medium', '-crf', '24', '-pix_fmt', 'yuv420p',
-           '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-ac', '2',
+           *([] if cfg.get('aufbereitung', True) else ['-af', 'loudnorm=I=-16:TP=-1.5:LRA=11']), '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-ac', '2',
            '-movflags', '+faststart', '-t', f'{total:.2f}', out_mp4]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     k = 0
@@ -668,6 +691,8 @@ def main():
     total, pcm = build_audio(cfg, args)
     stem = os.path.splitext(args.ausgabe)[0]
     write_wav(stem + '.wav', pcm)
+    if cfg.get('aufbereitung', True):
+        aufbereiten(stem + '.wav')
     write_srt(cfg, stem + '.srt')
     words = sum(len(sentence(s)[0].split()) for sc in cfg['scenes'] for s in sc['sentences'])
     speech = sum(d for sc in cfg['scenes'] for _, d, _ in sc['st'])
