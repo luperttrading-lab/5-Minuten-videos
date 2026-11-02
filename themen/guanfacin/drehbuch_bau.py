@@ -169,7 +169,7 @@ scenes = [
    "Drittens: täglich nehmen, nie plötzlich absetzen, Blutdruck und Puls im Blick behalten.",
    "Für Erwachsene, gegen Angst und als Gehirn-Booster fehlt der Beleg.",
    "Die Quellen stehen in der Beschreibung.",
-   "Gut, dass du dich informierst. Nimm deine Fragen gern mit zu deinem Arzt oder deiner Ärztin. Bis zum nächsten Video!"],
+   "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"],
   "bullets": [{"t": "Option für Kinder, wenn Stimulanzien nicht passen", "at": 1, "ev": "stark"},
               {"t": "Täglich, nie plötzlich absetzen", "at": 3, "ev": "stark"},
               {"t": "Erwachsene, Angst, Booster", "at": 4, "ev": "keine"}],
