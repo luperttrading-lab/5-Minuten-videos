@@ -28,6 +28,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
    Langer Druck auf ein Wort markiert direkt. Danach `python3 ../../werkzeug/bildwahl.py szenen.json hoerprobe`: je Szene
    alle Bilder antippbar (mehrere = beide, in Reihenfolge; Sammlung `bildwahl`, Feld `bilder`) und „Notiz zum ganzen
    Kapitel“ (Sammlung `kapitelnotizen`, geht auch als Kommentar an Claude).
+   **Abnahme ohne Suchen** (Nutzerwunsch 02.11.): Vor jeder Bitte um Abnahme `python3 ../../werkzeug/abnahme.py
+   szenen.json hoerprobe abnahme.json` – Kasten ganz oben mit allen geänderten Stellen seit dem letzten Durchgang (je ▶,
+   „passt“/„nochmal“) und EINEM Knopf „Abnehmen und rendern“ (Kommentar an Claude, Sammlung `abnahme`).
    Markierungen des Nutzers mit `db_list` (Sammlung `markierungen`) lesen, betroffene Sätze einzeln in 2–3 Fassungen neu.
    **Reihenfolge:** Korrekturen nur in die Hörprobe (vorher/nachher). Erst rendern, wenn der Nutzer die Hörprobe
    abgenommen hat.
@@ -106,6 +109,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 
 ## Antworten an den Nutzer
 - Kurz halten und Bilder zeigen statt viel Text (Kontaktbogen, Stichbilder, Vorher/nachher).
+- Braucht es eine Entscheidung oder Abnahme des Nutzers: erste Zeile **„Deine Aufgabe: …“** mit Link, Ort auf der
+  Seite und Zahl der Stellen („oben im Kasten, 10 Stellen, dann grüner Knopf“). Nie nur „bitte abnehmen“ (Suchzeit).
 - Am Ende jeder Antwort genau eine Kostenzeile: `python3 tools/kosten.py` ausführen, Ausgabe wörtlich als letzte Zeile.
 - Jede Internetadresse als klickbarer Markdown-Link. Wurde ein Artifact oder eine Datei veröffentlicht: den Link als letzte
   Zeile vor der Kostenzeile wiederholen (`**Link:** [Name](URL)`).
