@@ -438,6 +438,12 @@ def motiv_box(img, aspect):
         w = min(h * aspect, img.size[0])
     else:
         h = min(w / aspect, img.size[1])
+    # randlose Bilder: Polster kann über das Bild hinausragen; auf Bildgröße begrenzen, Seitenverhältnis halten
+    w, h = min(w, img.size[0]), min(h, img.size[1])
+    if w / h > aspect:
+        w = h * aspect
+    else:
+        h = w / aspect
     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
     cx = min(max(cx, w / 2), img.size[0] - w / 2)
     cy = min(max(cy, h / 2), img.size[1] - h / 2)
@@ -543,6 +549,12 @@ class AgendaScene:
         self.wt = [w - 0.15 for w in wts] if all(w is not None for w in wts) else None
         lg = sc.get('legende_at')
         self.lg = st[lg][0] if lg is not None else None
+        # Hook (CLAUDE.md, 02.11.): bis Satz `kacheln_ab` ein Vollbild (`hook_bild`), dann Überblendung zu den Kacheln
+        ka = sc.get('kacheln_ab')
+        self.k0 = st[ka][0] - 0.2 if ka is not None and sc.get('hook_bild') else None
+        if self.k0 is not None:
+            himg, _ = quelle({'bild': sc['hook_bild']}, src, W / H)
+            self.hook = (himg, (0, 0, himg.size[0], himg.size[1]))   # ganzes Bild, kein Freistellen
         self.x0 = (W - 3 * self.TW - 2 * self.GAP) // 2
         self.base = Image.new('RGB', (W, H), PAPER)
         d = ImageDraw.Draw(self.base)
@@ -574,7 +586,26 @@ class AgendaScene:
             dl.text((xx + 40, 30), t, font=fl, fill=INK, anchor='lm')
             xx += w + 60
 
+    def hook_frame(self, t):
+        himg, (x0, y0, x1, y1) = self.hook
+        z = 0.05 * ease((t - self.sc['v0']) / max(self.k0 - self.sc['v0'], 0.1))   # langsam hinein
+        dx, dy = (x1 - x0) * z / 2, (y1 - y0) * z / 2
+        bw, bh = x1 - x0 - 2 * dx, y1 - y0 - 2 * dy
+        s_ = max(W / bw, H / bh)                                # Vollbild, Ränder beschnitten
+        cw, ch = W / s_, H / s_
+        cx, cy = x0 + dx + bw / 2, y0 + dy + bh / 2
+        bx = (max(cx - cw / 2, 0), max(cy - ch / 2, 0), min(cx + cw / 2, himg.size[0]), min(cy + ch / 2, himg.size[1]))
+        return himg.resize((W, H), Image.BICUBIC, box=bx)
+
     def frame(self, t):
+        if self.k0 is not None and t < self.k0 + FADE:
+            hook = self.hook_frame(min(t, self.k0))
+            if t < self.k0:
+                return hook
+            return Image.blend(hook, self.agenda_frame(t), (t - self.k0) / FADE)
+        return self.agenda_frame(t)
+
+    def agenda_frame(self, t):
         img = self.base.copy()
         d = ImageDraw.Draw(img)
         u = ease((t - self.sc['v0']) / (self.sc['v1'] - self.sc['v0']))

@@ -2,57 +2,57 @@
  {
   "id": "g0",
   "v0": 0.0,
-  "v1": 25.21988662131519,
+  "v1": 21.10126984126984,
   "st": [
    [
     1.0,
-    11.44,
-    "Guanfacin ist ein ADHS-Medikament, über das im Netz viel erzählt wird: Es sei sanfter als Ritalin, wirke nach wenigen Tagen und helfe sogar gegen Angst."
+    7.28,
+    "Sanfter als Ritalin, wirkt nach ein paar Tagen, hilft sogar gegen Angst: Nicht alles davon hält."
    ],
    [
-    12.44,
-    12.629886621315192,
+    8.280000000000001,
+    12.67126984126984,
     "Wir prüfen sechs Fragen: Was ist Guanfacin? Für wen ist es zugelassen? Wie gut wirkt es? Welche Nebenwirkungen hat es? Was gilt beim Absetzen? Und was ist mit Erwachsenen?"
    ]
   ]
  },
  {
   "id": "g1",
-  "v0": 25.21988662131519,
-  "v1": 83.12600907029478,
+  "v0": 21.10126984126984,
+  "v1": 79.00739229024944,
   "st": [
    [
-    25.81988662131519,
+    21.70126984126984,
     8.4,
     "Guanfacin kam in den Achtzigerjahren als Blutdruckmittel auf den Markt; heute gibt es es als Retardtablette gegen ADHS."
    ],
    [
-    34.21988662131519,
+    30.10126984126984,
     4.959999999999999,
     "Oft heißt es: Guanfacin ist kein Stimulans und macht nicht süchtig."
    ],
    [
-    39.17988662131519,
+    35.06126984126984,
     13.16,
     "Das stimmt. Die üblichen ADHS-Mittel wie Methylphenidat, bekannt als Ritalin, sind Stimulanzien: Sie wirken anregend, schon nach einer Stunde, und fallen unter das Betäubungsmittelgesetz."
    ],
    [
-    52.33988662131519,
+    48.221269841269844,
     6.599999999999998,
     "Guanfacin arbeitet anders, ist kein Betäubungsmittel, und Hinweise auf Missbrauch gibt es nicht."
    ],
    [
-    58.93988662131519,
+    54.82126984126984,
     5.359999999999999,
     "Es wirkt an einer Art Bremse für Stresssignale, dem Alpha-2A-Rezeptor."
    ],
    [
-    64.29988662131518,
+    60.18126984126984,
     11.840000000000003,
     "Viele sagen, es stärke so die Netzwerke im Stirnhirn. Gezeigt wurde das vor allem an Affen und Ratten; beim Menschen ist der Mechanismus laut Fachinformation nicht vollständig geklärt."
    ],
    [
-    76.13988662131518,
+    72.02126984126984,
     6.836122448979594,
     "Wenn dir jemand Guanfacin als Gehirn-Booster verkauft: Das ist Tierforschung, keine Zusage für dich."
    ]
@@ -60,36 +60,36 @@
  },
  {
   "id": "g2",
-  "v0": 83.12600907029478,
-  "v1": 133.20988662131518,
+  "v0": 79.00739229024944,
+  "v1": 129.09126984126985,
   "st": [
    [
-    83.72600907029478,
+    79.60739229024944,
     9.039319727891156,
     "In Europa ist Guanfacin seit 2015 zugelassen: für Kinder und Jugendliche mit ADHS von sechs bis siebzehn Jahren."
    ],
    [
-    92.76532879818593,
+    88.64671201814059,
     9.039999999999997,
     "Und nur, wenn Stimulanzien wie Methylphenidat oder Lisdexamfetamin nicht passen, nicht vertragen werden oder nicht wirken."
    ],
    [
-    101.80532879818594,
+    97.68671201814058,
     12.400000000000002,
     "Zugelassen ist es bei uns als alleiniges Medikament. Als Zusatz zum Stimulans erlauben es die USA; die neue deutsche Leitlinie hält diese Kombination bei Kindern für möglich."
    ],
    [
-    114.20532879818593,
+    110.08671201814059,
     7.599999999999998,
     "Für Erwachsene ist es in Europa nicht zugelassen. Eine Zulassung für Erwachsene haben wir nur in Japan gefunden."
    ],
    [
-    121.80532879818594,
+    117.68671201814058,
     4.719999999999999,
     "Seit dem letzten Jahr gibt es auch ein günstigeres Nachahmerpräparat."
    ],
    [
-    126.52532879818594,
+    122.40671201814058,
     6.534557823129255,
     "Wenn Stimulanzien bei deinem Kind nicht passen, frag den Arzt oder die Ärztin gezielt nach den Alternativen."
    ]
@@ -97,41 +97,41 @@
  },
  {
   "id": "g3",
-  "v0": 133.20988662131518,
-  "v1": 181.76741496598638,
+  "v0": 129.09126984126985,
+  "v1": 177.64879818594105,
   "st": [
    [
-    133.80988662131517,
+    129.69126984126984,
     14.24,
     "Eine große unabhängige Auswertung vieler Studien bei Kindern zeigt: Guanfacin wirkt deutlich besser als Placebo, etwa so gut wie Atomoxetin, aber schwächer als Methylphenidat oder Amphetamine."
    ],
    [
-    148.04988662131518,
+    143.93126984126985,
     6.720000000000001,
     "Anschaulich: Ungefähr sechs von zehn Kindern sprechen an, mit Placebo drei von zehn."
    ],
    [
-    154.76988662131518,
+    150.65126984126985,
     3.6799999999999997,
     "Fast alle Zulassungsstudien hat der Hersteller bezahlt."
    ],
    [
-    158.44988662131516,
+    154.33126984126983,
     3.6799999999999997,
     "Oft heißt es, man merke die Wirkung nach wenigen Tagen."
    ],
    [
-    162.12988662131517,
+    158.01126984126984,
     10.079999999999998,
     "In den Studien baut sie sich über etwa vier Wochen auf, auch weil die Dosis langsam gesteigert wird. Früh spürt man vor allem eins: Müdigkeit."
    ],
    [
-    172.20988662131518,
+    168.09126984126985,
     4.480000000000004,
     "Als Zusatz zum Stimulans bringt es Kindern einen kleinen Gewinn."
    ],
    [
-    176.68988662131517,
+    172.57126984126984,
     4.927528344671202,
     "Plane mit Arzt oder Ärztin einige Wochen ein, bevor ihr die Wirkung beurteilt."
    ]
@@ -139,41 +139,41 @@
  },
  {
   "id": "g4",
-  "v0": 181.76741496598638,
-  "v1": 227.98891156462582,
+  "v0": 177.64879818594105,
+  "v1": 223.8702947845805,
   "st": [
    [
-    182.36741496598637,
+    178.24879818594104,
     8.716326530612246,
     "Die häufigste Nebenwirkung ist Schläfrigkeit: In den Studien betraf sie etwa vier von zehn Kindern, vor allem in den ersten Wochen."
    ],
    [
-    191.0837414965986,
+    186.96512471655328,
     3.4399999999999995,
     "Auch Kopf- und Bauchschmerzen sind sehr häufig."
    ],
    [
-    194.5237414965986,
+    190.40512471655327,
     7.279999999999999,
     "Manchmal heißt es, Guanfacin senke den Blutdruck kaum. Das stimmt nicht; es war ja ein Blutdruckmittel."
    ],
    [
-    201.8037414965986,
+    197.68512471655328,
     6.399999999999999,
     "Blutdruck und Puls sinken etwas, manchen wird schwindlig, selten kommt es zur Ohnmacht."
    ],
    [
-    208.2037414965986,
+    204.08512471655328,
     5.600000000000001,
     "Deshalb werden Blutdruck und Puls vor dem Start und danach regelmäßig kontrolliert."
    ],
    [
-    213.8037414965986,
+    209.68512471655328,
     8.879999999999999,
     "Viele raten, es abends zu nehmen. In einer Studie wirkte es morgens und abends gleich gut; die Fachinformation lässt beides zu."
    ],
    [
-    222.6837414965986,
+    218.56512471655327,
     5.155170068027211,
     "Wenn dir oder deinem Kind schwindlig wird, sag es sofort deiner Ärztin oder deinem Arzt."
    ]
@@ -181,36 +181,36 @@
  },
  {
   "id": "g5",
-  "v0": 227.98891156462582,
-  "v1": 263.58643990929704,
+  "v0": 223.8702947845805,
+  "v1": 259.4678231292517,
   "st": [
    [
-    228.58891156462582,
+    224.4702947845805,
     5.36,
     "Eine verbreitete Empfehlung lautet, man müsse Guanfacin nicht jeden Tag nehmen."
    ],
    [
-    233.94891156462583,
+    229.8302947845805,
     2.88,
     "Das ist falsch und kann gefährlich werden."
    ],
    [
-    236.82891156462583,
+    232.7102947845805,
     8.08,
     "Wer es plötzlich weglässt, riskiert, dass der Blutdruck wieder steigt, in sehr seltenen Fällen bis zu einer gefährlichen Krise."
    ],
    [
-    244.9089115646258,
+    240.79029478458048,
     6.16,
     "Nach mehreren vergessenen Tabletten muss die Dosis laut Fachinformation neu eingestellt werden."
    ],
    [
-    251.0689115646258,
+    246.95029478458048,
     5.359999999999999,
     "Beendet wird die Behandlung schrittweise, mit Kontrollen von Blutdruck und Puls."
    ],
    [
-    256.4289115646258,
+    252.3102947845805,
     7.007528344671204,
     "Setz Guanfacin nie eigenmächtig ab und mach keine Pausen, ohne mit deiner Ärztin oder deinem Arzt zu sprechen."
    ]
@@ -218,46 +218,46 @@
  },
  {
   "id": "g6",
-  "v0": 263.58643990929704,
-  "v1": 325.58630385487527,
+  "v0": 259.4678231292517,
+  "v1": 321.46768707483,
   "st": [
    [
-    264.18643990929706,
+    260.06782312925174,
     6.798027210884354,
     "Und Erwachsene? Die einzige größere Studie stammt aus Japan, bezahlt vom dortigen Hersteller."
    ],
    [
-    270.9844671201814,
+    266.8658503401361,
     6.72,
     "Guanfacin wirkte, aber jeder Fünfte brach wegen Nebenwirkungen ab, mit Placebo kaum jemand."
    ],
    [
-    277.7044671201814,
+    273.58585034013606,
     4.159999999999998,
     "Die deutsche Leitlinie gibt für Erwachsene keine eigene Empfehlung."
    ],
    [
-    281.8644671201814,
+    277.7458503401361,
     8.16,
     "Oft heißt es auch, Guanfacin helfe gegen Angst. Die einzige kontrollierte Studie, mit Kindern, fand keinen Unterschied."
    ],
    [
-    290.02446712018144,
+    285.9058503401361,
     4.48,
     "Bei posttraumatischer Belastungsstörung waren zwei Studien negativ."
    ],
    [
-    294.5044671201814,
+    290.3858503401361,
     6.560000000000002,
     "Bei Tics hilft es vielleicht, aber nur, wenn zugleich ADHS besteht; die Studien widersprechen sich."
    ],
    [
-    301.0644671201814,
+    296.9458503401361,
     14.479999999999997,
     "Dass man mit Guanfacin leichter ins Tun kommt und Aufgaben weniger vor sich herschiebt, berichten einzelne Nutzer; untersucht wurde es nicht. Und als Denkhilfe für Gesunde oder Ältere zeigte es in Studien keine Wirkung."
    ],
    [
-    315.5444671201814,
+    311.4258503401361,
     9.891836734693882,
     "Alles außer ADHS bei Kindern ist ein Einsatz außerhalb der Zulassung. Sprich das offen mit Arzt oder Ärztin an und frag nach Nutzen und Risiken."
    ]
@@ -265,36 +265,36 @@
  },
  {
   "id": "g7",
-  "v0": 325.58630385487527,
-  "v1": 363.4319501133787,
+  "v0": 321.46768707483,
+  "v1": 359.31333333333345,
   "st": [
    [
-    326.1863038548753,
+    322.06768707483,
     1.28,
     "Was bleibt?"
    ],
    [
-    327.46630385487526,
+    323.34768707483,
     11.76,
     "Erstens: Guanfacin ist kein Stimulans wie Ritalin, sondern eine ruhigere Alternative für Kinder und Jugendliche, wenn die Stimulanzien nicht passen oder nicht vertragen werden."
    ],
    [
-    339.2263038548753,
+    335.10768707483004,
     6.039999999999999,
     "Zweitens: Es wirkt langsamer und schwächer als Stimulanzien und macht anfangs oft müde."
    ],
    [
-    345.2663038548753,
+    341.14768707483,
     6.200000000000003,
     "Drittens: täglich nehmen, nie plötzlich absetzen, Blutdruck und Puls im Blick behalten."
    ],
    [
-    351.46630385487526,
+    347.34768707483,
     4.640000000000001,
     "Für Erwachsene, gegen Angst und als Gehirn-Booster fehlt der Beleg."
    ],
    [
-    356.1063038548753,
+    351.98768707483003,
     4.575646258503397,
     "Dieses Video ersetzt keinen ärztlichen Rat. Die Quellen stehen in der Beschreibung."
    ]

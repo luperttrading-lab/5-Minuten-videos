@@ -34,9 +34,10 @@ scenes = [
  {"id": "g0", "layout": "kacheln", "kapitel": "Einleitung", "kicker": "Info-Video · Faktencheck",
   "headline": "Guanfacin: Was stimmt?",
   "sentences": [
-   "Guanfacin ist ein ADHS-Medikament, über das im Netz viel erzählt wird: Es sei sanfter als Ritalin, wirke nach wenigen Tagen und helfe sogar gegen Angst.",
+   "Sanfter als Ritalin, wirkt nach ein paar Tagen, hilft sogar gegen Angst: Nicht alles davon hält.",
    "Wir prüfen sechs Fragen: Was ist Guanfacin? Für wen ist es zugelassen? Wie gut wirkt es? Welche Nebenwirkungen hat es? Was gilt beim Absetzen? Und was ist mit Erwachsenen?"],
-  "hervorheben_at": 1, "legende_at": 1,
+  "hervorheben_at": 1, "legende_at": 1, "kacheln_ab": 1, "hook_bild": "bilder/g0_hook.png",
+  "bilder": [{"datei": "bilder/g0_hook.png", "prompt": "a single large white pill lying on a warm wooden table, lit from the side so that it casts one long soft shadow across the table that clearly takes the shape of a question mark; the pill and its shadow fill most of the wide frame, calm and slightly mysterious mood"}],
   "kacheln": [
    {"t": "Was ist Guanfacin?", "bild": "bilder/g1a.png", "wort": "Was ist"},
    {"t": "Für wen zugelassen?", "bild": "bilder/g2a.png", "wort": "zugelassen"},
