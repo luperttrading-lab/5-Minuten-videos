@@ -1,0 +1,70 @@
+{
+ "titel": "Vitamin D · Erklärvideo in acht Stilen",
+ "aufgabe": "Alle acht Videos haben denselben Ton und dieselben Szenen, nur der Bildstil wechselt. Bei deinem Favoriten „passt“ tippen (gern zwei), bei Stellen mit Fehlern „ändern“ mit Notiz.",
+ "videos": [
+  {
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_C.mp4",
+   "titel": "C  Papierschnitt-Diorama",
+   "stand": "03.11., 14:46",
+   "pruefen": true,
+   "poster_bei": 8,
+   "notiz": "Warm und handgemacht, Abläufe (Haut → Leber → Niere) gut lesbar."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_D.mp4",
+   "titel": "D  Knetfiguren",
+   "stand": "03.11., 14:46",
+   "pruefen": true,
+   "poster_bei": 8,
+   "notiz": "Freundlich und auffällig, wirkt etwas kindlich."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_E.mp4",
+   "titel": "E  Isometrische Miniaturwelt",
+   "stand": "03.11., 14:46",
+   "pruefen": true,
+   "poster_bei": 8,
+   "notiz": "Ruhig und sauber; die Bilder sind kleine Inseln auf Farbfläche."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_G.mp4",
+   "titel": "G  Aquarell und Tusche",
+   "stand": "03.11., 14:46",
+   "pruefen": true,
+   "poster_bei": 8,
+   "notiz": "Ernsthaft, nah an der Faktencheck-Reihe; hebt sich davon am wenigsten ab."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_H.mp4",
+   "titel": "H  Comic (Ligne claire)",
+   "stand": "03.11., 14:46",
+   "pruefen": true,
+   "poster_bei": 8,
+   "notiz": "Klar und gut lesbar, eigenständiger Look."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_I.mp4",
+   "titel": "I  3D-Trickfilm",
+   "stand": "03.11., 14:46",
+   "pruefen": true,
+   "poster_bei": 8,
+   "notiz": "Wirkt am aufwendigsten. Badeszene und Laborbild mussten neu (zu aufreizend, falsche Skala)."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_J.mp4",
+   "titel": "J  Skizze im Schulheft",
+   "stand": "03.11., 14:46",
+   "pruefen": true,
+   "poster_bei": 8,
+   "notiz": "Passt zum Namen. Zwei Bilder mussten neu, weil englische Notizen drinstanden."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_L.mp4",
+   "titel": "L  Pixel-Art",
+   "stand": "03.11., 14:46",
+   "pruefen": true,
+   "poster_bei": 8,
+   "notiz": "Spricht eher Jugendliche an. Drei Bilder mussten neu (englische Schilder, Tippfehler)."
+  }
+ ]
+}

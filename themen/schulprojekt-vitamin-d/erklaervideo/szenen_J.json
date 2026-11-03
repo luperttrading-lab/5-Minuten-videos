@@ -1,0 +1,476 @@
+{
+ "tts": "elevenlabs",
+ "voice_id": "NBqeXKdZHweef6y0B67V",
+ "model": "eleven_v4",
+ "tempo": 1.05,
+ "titel": "Vitamin D: Das Sonnenhormon",
+ "stil": "J",
+ "untertitel": "Ein Erklärvideo: was Vitamin D ist, wie du die Sonne richtig nutzt, deinen Wert liest und wie viel du brauchst.",
+ "fuss": "Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.",
+ "scenes": [
+  {
+   "id": "v0",
+   "layout": "kacheln",
+   "kapitel": "Einleitung",
+   "kicker": "Erklärvideo",
+   "headline": "Vitamin D: Das Sonnenhormon",
+   "sentences": [
+    "Vitamin D: Dein Körper macht es selbst, aus Sonnenlicht. Doch im Winter fehlt es vielen.",
+    "Du erfährst, was es eigentlich ist, wie du die Sonne richtig nutzt, wie du deinen Wert liest, wie viel du brauchst, was Studien zeigen und wer besonders profitiert."
+   ],
+   "hervorheben_at": 1,
+   "kacheln": [
+    {
+     "t": "Ein Hormon aus Licht",
+     "bild": "bilder/J/e1.jpg",
+     "wort": "eigentlich"
+    },
+    {
+     "t": "Sonne richtig nutzen",
+     "bild": "bilder/J/e2a.jpg",
+     "wort": "Sonne richtig"
+    },
+    {
+     "t": "Dein Wert in ng/ml",
+     "bild": "bilder/J/e3.jpg",
+     "wort": "Wert"
+    },
+    {
+     "t": "Wie viel du brauchst",
+     "bild": "bilder/J/e4.jpg",
+     "wort": "wie viel"
+    },
+    {
+     "t": "Was Studien zeigen",
+     "bild": "bilder/J/e5.jpg",
+     "wort": "Studien"
+    },
+    {
+     "t": "Wer profitiert",
+     "bild": "bilder/J/e6.jpg",
+     "wort": "profitiert"
+    }
+   ]
+  },
+  {
+   "id": "v1",
+   "kicker": "Grundlagen",
+   "headline": "Ein Hormon aus Licht",
+   "sentences": [
+    "Vitamin D ist eigentlich kein klassisches Vitamin, sondern die Vorstufe eines Hormons.",
+    "Den größten Teil bildet dein Körper selbst: in der Haut, mit dem UV-Licht der Sonne.",
+    "Leber und Niere machen daraus die aktive Form, und Andockstellen dafür gibt es in fast allen Geweben.",
+    "Am bekanntesten ist seine Aufgabe für Knochen und Muskeln: Es hilft dem Darm, Kalzium aufzunehmen.",
+    "Aus dem Essen kommt nur wenig, am meisten steckt in fettem Fisch wie Hering.",
+    "Tipp für dich: Fetter Fisch ein- bis zweimal pro Woche hilft etwas, die wichtigste Quelle bleibt aber die Sonne."
+   ],
+   "bullets": [
+    {
+     "t": "Vorstufe eines Hormons",
+     "at": 0
+    },
+    {
+     "t": "Gebildet in der Haut",
+     "at": 1
+    },
+    {
+     "t": "Hilft, Kalzium aufzunehmen",
+     "at": 3
+    },
+    {
+     "t": "Wenig im Essen, viel im Hering",
+     "at": 4
+    }
+   ],
+   "quellen": [
+    "holick2007",
+    "bfr2025"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/J/e1.jpg"
+    }
+   ]
+  },
+  {
+   "id": "v2",
+   "kicker": "Sonne",
+   "headline": "Sonne richtig nutzen",
+   "sentences": [
+    "Im Sommer ist die Sonne die beste Quelle, und es kommt auf die Fläche an.",
+    "Gesicht und Arme allein sind wenig Haut.",
+    "In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle die Untergrenze, aber nur jeder Vierte höhere Werte.",
+    "Mittags im Hochsommer, in Badehose oder Bikini, bildet die Haut nach einer bekannten Schätzung in wenigen Minuten mehrere tausend Einheiten, lange bevor sie rot wird.",
+    "Von Oktober bis März steht die Sonne in Deutschland zu tief, dann bildet die Haut kaum Vitamin D.",
+    "Im Alter, mit dunkler Haut und mit Sonnencreme bildet sie weniger.",
+    {
+     "t": "Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus, mit möglichst viel freier Haut. Je nach Hauttyp reichen 5 bis 25 Minuten, aber nie bis zum Sonnenbrand.",
+     "say": "Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus, mit möglichst viel freier Haut. Je nach Hauttyp reichen fünf bis fünfundzwanzig Minuten, aber nie bis zum Sonnenbrand."
+    }
+   ],
+   "bullets": [
+    {
+     "t": "Viel freie Haut zählt",
+     "at": 1
+    },
+    {
+     "t": "Wenige Minuten im Hochsommer",
+     "at": 3
+    },
+    {
+     "t": "Oktober bis März: zu wenig Sonne",
+     "at": 4
+    }
+   ],
+   "quellen": [
+    "rhodes2010",
+    "holick2007",
+    "bfr2025"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/J/e2a.jpg"
+    },
+    {
+     "bild": "bilder/J/e2b.jpg",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "id": "v3",
+   "kicker": "Laborwert",
+   "headline": "Dein Wert in ng/ml",
+   "sentences": [
+    {
+     "t": "Gemessen wird die Speicherform im Blut, das 25-OH-Vitamin D.",
+     "say": "Gemessen wird die Speicherform im Blut, das fünfundzwanzig-O-H-Vitamin D."
+    },
+    "Wir rechnen in Nanogramm pro Milliliter.",
+    "Manche Labore schreiben Nanomol pro Liter, das ist das Zweieinhalbfache: Zwanzig Nanogramm sind fünfzig Nanomol.",
+    "Schau deshalb immer auf die Einheit, sonst hältst du einen guten Wert womöglich für einen Mangel.",
+    "Unter zwölf gilt als Mangel.",
+    "Ab zwanzig reicht es laut großen Fachgremien.",
+    "Eine Fachgesellschaft für Hormonmedizin nannte lange dreißig als Ziel, das Optimum ist bis heute umstritten.",
+    "In Deutschland liegt im Jahresmittel etwa jeder Siebte unter zwölf, im Winter sind es deutlich mehr.",
+    "Tipp für dich: Lässt du deinen Wert messen, frag nach der Einheit und nach der Grenze, die dein Labor verwendet."
+   ],
+   "bullets": [
+    {
+     "t": "Messgröße: 25-OH-Vitamin D",
+     "at": 0
+    },
+    {
+     "t": "20 ng/ml = 50 nmol/l",
+     "at": 2
+    },
+    {
+     "t": "Mangel: unter 12 ng/ml",
+     "at": 4
+    },
+    {
+     "t": "Ziel 20 oder 30? Umstritten",
+     "at": 6
+    }
+   ],
+   "quellen": [
+    "ross2011",
+    "holick2011",
+    "demay2024",
+    "rabenberg2018"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/J/e3.jpg"
+    }
+   ]
+  },
+  {
+   "id": "v4",
+   "kicker": "Dosis",
+   "headline": "Wie viel du brauchst",
+   "sentences": [
+    {
+     "t": "Ohne Sonne braucht ein Erwachsener laut Fachgesellschaft für Ernährung etwa 800 Einheiten am Tag.",
+     "say": "Ohne Sonne braucht ein Erwachsener laut Fachgesellschaft für Ernährung etwa achthundert Einheiten am Tag."
+    },
+    {
+     "t": "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000 Einheiten täglich.",
+     "say": "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde viertausend Einheiten täglich."
+    },
+    "Wer mehr wiegt, braucht mehr: bei Übergewicht etwa anderthalbmal so viel, bei starkem Übergewicht zwei- bis dreimal so viel für denselben Wert.",
+    "Für die amerikanische Empfehlung fanden Statistiker sogar einen Rechenfehler, danach läge der Bedarf deutlich höher. Das ist allerdings umstritten.",
+    "Am besten nimmst du es täglich statt als riesige Einzeldosis, und zu einer Mahlzeit mit etwas Fett, dann wird es besser aufgenommen.",
+    {
+     "t": "Tipp für dich: 800 Einheiten decken den Grundbedarf. Mehr als 4.000 nur, wenn Arzt oder Ärztin es mit Laborkontrolle festlegen.",
+     "say": "Tipp für dich: Achthundert Einheiten decken den Grundbedarf. Mehr als viertausend nur, wenn Arzt oder Ärztin es mit Laborkontrolle festlegen."
+    }
+   ],
+   "bullets": [
+    {
+     "t": "Grundbedarf: 800 IE",
+     "at": 0
+    },
+    {
+     "t": "Obergrenze: 4.000 IE",
+     "at": 1
+    },
+    {
+     "t": "Mehr Gewicht, mehr Bedarf",
+     "at": 2
+    },
+    {
+     "t": "Täglich und mit etwas Fett",
+     "at": 4
+    }
+   ],
+   "quellen": [
+    "bfr2025",
+    "efsa2023",
+    "ekwaru2014",
+    "veugelers2014",
+    "sanders2010",
+    "dawson2015"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/J/e4.jpg"
+    }
+   ]
+  },
+  {
+   "id": "v5",
+   "kicker": "Forschung",
+   "headline": "Was Studien zeigen",
+   "sentences": [
+    "Was bringt die Einnahme? Am meisten bei Menschen mit niedrigem Wert.",
+    "Bei täglicher Einnahme starben in einer Auswertung großer Studien etwa ein Achtel weniger Menschen an Krebs.",
+    "Bei einer Diabetes-Vorstufe erkrankten weniger Menschen an Typ-2-Diabetes, etwa jeder siebte Fall weniger.",
+    "In der großen amerikanischen Studie traten Autoimmunerkrankungen wie Rheuma oder Schuppenflechte um etwa ein Fünftel seltener auf.",
+    "Gegen Atemwegsinfekte gibt es einen kleinen Schutz, vor allem bei täglicher Einnahme.",
+    "Und die Telomere, die Schutzkappen der Chromosomen, verkürzten sich langsamer.",
+    "Bei gut versorgten Gesunden fanden große Studien dagegen wenig. Die Chance liegt vor allem darin, einen Mangel auszugleichen.",
+    "Tipp für dich: Vitamin D lohnt sich besonders, wenn dein Wert niedrig ist, und das ist im Winter häufig."
+   ],
+   "bullets": [
+    {
+     "t": "Weniger Krebstodesfälle bei täglicher Einnahme",
+     "at": 1
+    },
+    {
+     "t": "Seltener Typ-2-Diabetes bei Vorstufe",
+     "at": 2
+    },
+    {
+     "t": "Seltener Autoimmunerkrankungen",
+     "at": 3
+    },
+    {
+     "t": "Etwas weniger Atemwegsinfekte",
+     "at": 4
+    }
+   ],
+   "quellen": [
+    "kuznia2023",
+    "pittas2023",
+    "hahn2022",
+    "jolliffe2021",
+    "zhu2025",
+    "manson2019"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/J/e5.jpg"
+    }
+   ]
+  },
+  {
+   "id": "v6",
+   "kicker": "Für wen",
+   "headline": "Wer besonders profitiert",
+   "sentences": [
+    "Wer profitiert besonders?",
+    "Säuglinge: Sie bekommen Vitamin D gegen Rachitis, bis zu ihrem zweiten Frühsommer.",
+    "Ältere Menschen bilden in der Haut weniger. Im Pflegeheim senkte Vitamin D zusammen mit Kalzium die Hüftbrüche.",
+    "Auch Menschen mit dunkler Haut, mit starkem Übergewicht oder die fast nur drinnen arbeiten, haben öfter niedrige Werte.",
+    "Schwangere mit wenig Sonne sollten es in der Praxis ansprechen.",
+    "Tipp für dich: Gehörst du zu einer dieser Gruppen, sprich Arzt oder Ärztin auf Vitamin D an."
+   ],
+   "bullets": [
+    {
+     "t": "Säuglinge",
+     "at": 1
+    },
+    {
+     "t": "Ältere, Pflegeheim",
+     "at": 2
+    },
+    {
+     "t": "Dunkle Haut, Übergewicht, Innenarbeit",
+     "at": 3
+    },
+    {
+     "t": "Schwangere mit wenig Sonne",
+     "at": 4
+    }
+   ],
+   "quellen": [
+    "bfr2025",
+    "chapuy1992",
+    "holick2007",
+    "koletzko2018"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/J/e6.jpg"
+    }
+   ]
+  },
+  {
+   "id": "v7",
+   "kapitel": "Fazit",
+   "kicker": "Fazit",
+   "headline": "Das Wichtigste",
+   "sentences": [
+    "Vitamin D ist ein Sonnenhormon, das dein Körper selbst macht, wenn du ihn lässt.",
+    "Im Sommer heißt das: mittags kurz raus, viel freie Haut, nie bis zum Sonnenbrand.",
+    {
+     "t": "Im Winter hilft eine tägliche Dosis von etwa 800 Einheiten.",
+     "say": "Im Winter hilft eine tägliche Dosis von etwa achthundert Einheiten."
+    },
+    {
+     "t": "Mehr als 4.000 nur mit ärztlicher Begleitung.",
+     "say": "Mehr als viertausend nur mit ärztlicher Begleitung."
+    },
+    "Und wenn du deinen Wert misst, achte auf die Einheit.",
+    "Die Quellen stehen in der Beschreibung.",
+    "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
+   ],
+   "bullets": [
+    {
+     "t": "Sommer: Sonne auf viel Haut",
+     "at": 1
+    },
+    {
+     "t": "Winter: tägliche kleine Dosis",
+     "at": 2
+    },
+    {
+     "t": "Auf die Einheit achten",
+     "at": 4
+    }
+   ],
+   "quellen": [
+    "bfr2025",
+    "efsa2023"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/J/e7.jpg"
+    }
+   ]
+  }
+ ],
+ "quellen": {
+  "bfr2025": {
+   "kurz": "BfR 2025",
+   "voll": "Bundesinstitut für Risikobewertung: Ausgewählte Fragen und Antworten zu Vitamin D, Stand 30.12.2025.",
+   "url": "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-vitamin-d.pdf"
+  },
+  "rhodes2010": {
+   "kurz": "Rhodes et al. 2010",
+   "voll": "Rhodes LE, Webb AR et al. Recommended summer sunlight exposure levels can produce sufficient (≥20 ng/ml) but not the proposed optimal (≥32 ng/ml) 25(OH)D levels at UK latitudes. J Invest Dermatol 2010;130(5):1411–1418.",
+   "url": "https://doi.org/10.1038/jid.2009.417"
+  },
+  "rabenberg2018": {
+   "kurz": "Rabenberg et al. 2018",
+   "voll": "Rabenberg M et al. Implications of standardization of serum 25-hydroxyvitamin D data for the evaluation of vitamin D status in Germany. BMC Public Health 2018;18:845.",
+   "url": "https://doi.org/10.1186/s12889-018-5769-y"
+  },
+  "ross2011": {
+   "kurz": "Ross et al. 2011",
+   "voll": "Ross AC et al. The 2011 Report on Dietary Reference Intakes for Calcium and Vitamin D from the Institute of Medicine. J Clin Endocrinol Metab 2011;96(1):53–58.",
+   "url": "https://doi.org/10.1210/jc.2010-2704"
+  },
+  "demay2024": {
+   "kurz": "Demay et al. 2024",
+   "voll": "Demay MB et al. Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab 2024;109(8):1907–1947.",
+   "url": "https://doi.org/10.1210/clinem/dgae290"
+  },
+  "manson2019": {
+   "kurz": "Manson et al. 2019",
+   "voll": "Manson JE et al. Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease (VITAL). N Engl J Med 2019;380:33–44. (Präparate von Pharmavite gespendet)",
+   "url": "https://doi.org/10.1056/NEJMoa1809944"
+  },
+  "kuznia2023": {
+   "kurz": "Kuznia et al. 2023",
+   "voll": "Kuznia S et al. Efficacy of vitamin D3 supplementation on cancer mortality: Systematic review and individual patient data meta-analysis of randomised controlled trials. Ageing Res Rev 2023;87:101923.",
+   "url": "https://doi.org/10.1016/j.arr.2023.101923"
+  },
+  "jolliffe2021": {
+   "kurz": "Jolliffe et al. 2021",
+   "voll": "Jolliffe DA et al. Vitamin D supplementation to prevent acute respiratory infections: a systematic review and meta-analysis of aggregate data from randomised controlled trials. Lancet Diabetes Endocrinol 2021;9(5):276–292.",
+   "url": "https://doi.org/10.1016/S2213-8587(21)00051-6"
+  },
+  "zhu2025": {
+   "kurz": "Zhu et al. 2025",
+   "voll": "Zhu H et al. Vitamin D3 and marine ω-3 fatty acids supplementation and leukocyte telomere length: 4-year findings from VITAL. Am J Clin Nutr 2025.",
+   "url": "https://doi.org/10.1016/j.ajcnut.2025.05.003"
+  },
+  "efsa2023": {
+   "kurz": "EFSA 2023",
+   "voll": "EFSA NDA Panel. Scientific opinion on the tolerable upper intake level for vitamin D, including the derivation of a conversion factor for calcidiol monohydrate. EFSA J 2023;21(8):e08145.",
+   "url": "https://doi.org/10.2903/j.efsa.2023.8145"
+  },
+  "sanders2010": {
+   "kurz": "Sanders et al. 2010",
+   "voll": "Sanders KM et al. Annual high-dose oral vitamin D and falls and fractures in older women: a randomized controlled trial. JAMA 2010;303(18):1815–1822.",
+   "url": "https://doi.org/10.1001/jama.2010.594"
+  },
+  "chapuy1992": {
+   "kurz": "Chapuy et al. 1992",
+   "voll": "Chapuy MC et al. Vitamin D3 and calcium to prevent hip fractures in elderly women. N Engl J Med 1992;327:1637–1642.",
+   "url": "https://doi.org/10.1056/NEJM199212033272305"
+  },
+  "koletzko2018": {
+   "kurz": "Koletzko et al. 2018",
+   "voll": "Koletzko B et al. Ernährung und Lebensstil vor und während der Schwangerschaft – Handlungsempfehlungen des bundesweiten Netzwerks Gesund ins Leben. Geburtsh Frauenheilk 2018;78:1262–1282.",
+   "url": "https://www.gesund-ins-leben.de/fileadmin/resources/import/pdf/3589_empfehlungen_vor_und_in_schwangerschaft_2018_gebfra.pdf"
+  },
+  "holick2007": {
+   "kurz": "Holick 2007",
+   "voll": "Holick MF. Vitamin D Deficiency. N Engl J Med 2007;357:266–281.",
+   "url": "https://doi.org/10.1056/NEJMra070553"
+  },
+  "holick2011": {
+   "kurz": "Holick et al. 2011",
+   "voll": "Holick MF et al. Evaluation, Treatment, and Prevention of Vitamin D Deficiency: an Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab 2011;96(7):1911–1930.",
+   "url": "https://doi.org/10.1210/jc.2011-0385"
+  },
+  "ekwaru2014": {
+   "kurz": "Ekwaru et al. 2014",
+   "voll": "Ekwaru JP et al. The Importance of Body Weight for the Dose Response Relationship of Oral Vitamin D Supplementation and Serum 25-Hydroxyvitamin D in Healthy Volunteers. PLoS One 2014;9(11):e111265.",
+   "url": "https://doi.org/10.1371/journal.pone.0111265"
+  },
+  "veugelers2014": {
+   "kurz": "Veugelers & Ekwaru 2014",
+   "voll": "Veugelers PJ, Ekwaru JP. A Statistical Error in the Estimation of the Recommended Dietary Allowance for Vitamin D. Nutrients 2014;6(10):4472–4475.",
+   "url": "https://doi.org/10.3390/nu6104472"
+  },
+  "dawson2015": {
+   "kurz": "Dawson-Hughes et al. 2015",
+   "voll": "Dawson-Hughes B et al. Dietary Fat Increases Vitamin D-3 Absorption. J Acad Nutr Diet 2015;115(2):225–230.",
+   "url": "https://doi.org/10.1016/j.jand.2014.09.014"
+  },
+  "pittas2023": {
+   "kurz": "Pittas et al. 2023",
+   "voll": "Pittas AG et al. Vitamin D and Risk for Type 2 Diabetes in People With Prediabetes: Meta-analysis of Individual Participant Data From 3 Randomized Clinical Trials. Ann Intern Med 2023;176(3):355–363.",
+   "url": "https://doi.org/10.7326/M22-3018"
+  },
+  "hahn2022": {
+   "kurz": "Hahn et al. 2022",
+   "voll": "Hahn J et al. Vitamin D and marine omega 3 fatty acid supplementation and incident autoimmune disease: VITAL randomized controlled trial. BMJ 2022;376:e066452.",
+   "url": "https://doi.org/10.1136/bmj-2021-066452"
+  }
+ }
+}

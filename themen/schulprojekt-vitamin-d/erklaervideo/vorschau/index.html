@@ -1,0 +1,120 @@
+<title>Vitamin D · Erklärvideo in acht Stilen · Vorschau</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /* Eine Spalte, je Fassung eine Karte mit Player; die neueste oben. */
+  :root { --grund: #f4f1ec; --karte: #ffffff; --tinte: #1f2430; --grau: #646b75; --linie: #ddd6cc; --akzent: #324e7a;
+    --akzent-text: #ffffff; --gut: #2f7d50; --pruefen: #a35a12; --pruefen-grund: #fbebd9; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --grund: #15181d; --karte: #1e232a; --tinte: #e8eaee;
+    --grau: #9aa3ad; --linie: #2f3640; --akzent: #8fb0e3; --akzent-text: #10151c; --gut: #6fcf97; --pruefen: #f0b067;
+    --pruefen-grund: #3a2a17; color-scheme: dark } }
+  :root[data-theme="dark"] { --grund: #15181d; --karte: #1e232a; --tinte: #e8eaee; --grau: #9aa3ad; --linie: #2f3640;
+    --akzent: #8fb0e3; --akzent-text: #10151c; --gut: #6fcf97; --pruefen: #f0b067; --pruefen-grund: #3a2a17; color-scheme: dark }
+  * { box-sizing: border-box; }
+  body { background: var(--grund); color: var(--tinte); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; display: grid; gap: 18px; padding-block: 24px 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  h1 { margin: 0; font: 700 clamp(24px, 6vw, 34px)/1.15 Georgia, "Times New Roman", serif; text-wrap: balance; }
+  .aufgabe { margin: 0; padding: 12px 14px; border-left: 4px solid var(--pruefen); background: var(--pruefen-grund); border-radius: 6px; }
+  .video { display: grid; gap: 8px; padding: 14px; background: var(--karte); border: 1px solid var(--linie); border-radius: 14px; }
+  .kopfzeile { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+  .video h2 { margin: 0; font: 650 19px/1.3 system-ui, sans-serif; }
+  .marke { font: 600 12px/1 system-ui, sans-serif; letter-spacing: .05em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; }
+  .marke.pruefen { background: var(--pruefen-grund); color: var(--pruefen); }
+  .marke.info { background: var(--linie); color: var(--grau); }
+  .stand, .notiz { margin: 0; font-size: 14px; color: var(--grau); }
+  video { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; }
+  .urteil { display: flex; gap: 8px; }
+  .urteil button, .senden { border: 1px solid var(--linie); background: none; color: var(--tinte); border-radius: 999px; padding: 9px 16px;
+    font: 600 15px/1 system-ui, sans-serif; cursor: pointer; }
+  .urteil button[aria-pressed="true"][data-u="passt"] { background: var(--gut); border-color: var(--gut); color: var(--karte); }
+  .urteil button[aria-pressed="true"][data-u="aendern"] { background: var(--pruefen); border-color: var(--pruefen); color: var(--karte); }
+  .senden { background: var(--akzent); border-color: var(--akzent); color: var(--akzent-text); border-radius: 10px; }
+  textarea { width: 100%; font: 16px/1.4 system-ui, sans-serif; color: var(--tinte); background: var(--grund); border: 1px solid var(--linie);
+    border-radius: 8px; padding: 8px 10px; resize: vertical; }
+  .zeile { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .melde { font-size: 14px; color: var(--gut); }
+  button:focus-visible, textarea:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; }
+</style>
+<main>
+  <h1>Vitamin D · Erklärvideo in acht Stilen · Vorschau</h1>
+  <p class="aufgabe"><b>Deine Aufgabe:</b> Alle acht Videos haben denselben Ton und dieselben Szenen, nur der Bildstil wechselt. Bei deinem Favoriten „passt“ tippen (gern zwei), bei Stellen mit Fehlern „ändern“ mit Notiz. Ton kommt beim Antippen von ▶; nichts wird heruntergeladen.</p>
+  <article class="video" id="v1" data-id="v_56bc4f5fdd" data-titel="C  Papierschnitt-Diorama">
+      <div class="kopfzeile"><h2>C  Papierschnitt-Diorama</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 03.11., 14:46 · 9.5 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v1_vorschau_C.jpg" src="videos/v1_vorschau_C.mp4"></video>
+      <p class="notiz">Warm und handgemacht, Abläufe (Haut → Leber → Niere) gut lesbar.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu C  Papierschnitt-Diorama"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v2" data-id="v_5ec8802047" data-titel="D  Knetfiguren">
+      <div class="kopfzeile"><h2>D  Knetfiguren</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 03.11., 14:46 · 8.2 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v2_vorschau_D.jpg" src="videos/v2_vorschau_D.mp4"></video>
+      <p class="notiz">Freundlich und auffällig, wirkt etwas kindlich.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu D  Knetfiguren"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v3" data-id="v_407e4ce3f3" data-titel="E  Isometrische Miniaturwelt">
+      <div class="kopfzeile"><h2>E  Isometrische Miniaturwelt</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 03.11., 14:46 · 7.8 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v3_vorschau_E.jpg" src="videos/v3_vorschau_E.mp4"></video>
+      <p class="notiz">Ruhig und sauber; die Bilder sind kleine Inseln auf Farbfläche.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu E  Isometrische Miniaturwelt"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v4" data-id="v_f36fd2f79c" data-titel="G  Aquarell und Tusche">
+      <div class="kopfzeile"><h2>G  Aquarell und Tusche</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 03.11., 14:46 · 12.2 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v4_vorschau_G.jpg" src="videos/v4_vorschau_G.mp4"></video>
+      <p class="notiz">Ernsthaft, nah an der Faktencheck-Reihe; hebt sich davon am wenigsten ab.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu G  Aquarell und Tusche"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v5" data-id="v_bd43506275" data-titel="H  Comic (Ligne claire)">
+      <div class="kopfzeile"><h2>H  Comic (Ligne claire)</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 03.11., 14:46 · 11.4 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v5_vorschau_H.jpg" src="videos/v5_vorschau_H.mp4"></video>
+      <p class="notiz">Klar und gut lesbar, eigenständiger Look.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu H  Comic (Ligne claire)"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v6" data-id="v_43744e67f9" data-titel="I  3D-Trickfilm">
+      <div class="kopfzeile"><h2>I  3D-Trickfilm</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 03.11., 14:46 · 8.8 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v6_vorschau_I.jpg" src="videos/v6_vorschau_I.mp4"></video>
+      <p class="notiz">Wirkt am aufwendigsten. Badeszene und Laborbild mussten neu (zu aufreizend, falsche Skala).</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu I  3D-Trickfilm"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v7" data-id="v_d23f3fe156" data-titel="J  Skizze im Schulheft">
+      <div class="kopfzeile"><h2>J  Skizze im Schulheft</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 03.11., 14:46 · 12.1 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v7_vorschau_J.jpg" src="videos/v7_vorschau_J.mp4"></video>
+      <p class="notiz">Passt zum Namen. Zwei Bilder mussten neu, weil englische Notizen drinstanden.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu J  Skizze im Schulheft"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v8" data-id="v_6e45b9f456" data-titel="L  Pixel-Art">
+      <div class="kopfzeile"><h2>L  Pixel-Art</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 03.11., 14:46 · 9.6 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v8_vorschau_L.jpg" src="videos/v8_vorschau_L.mp4"></video>
+      <p class="notiz">Spricht eher Jugendliche an. Drei Bilder mussten neu (englische Schilder, Tippfehler).</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu L  Pixel-Art"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article>
+</main>
+<script>
+(function () {
+  var TITEL = "Vitamin D · Erklärvideo in acht Stilen", db = null, kom = null, anClaude = false, urteil = {};
+  document.querySelectorAll("video").forEach(function (v) { v.addEventListener("play", function () {
+    document.querySelectorAll("video").forEach(function (w) { if (w !== v) w.pause(); }); v.muted = false; }); });
+  document.querySelectorAll(".video").forEach(function (k) {
+    var id = k.dataset.id, ta = k.querySelector("textarea"), melde = k.querySelector(".melde");
+    k.querySelectorAll(".urteil button").forEach(function (b) { b.addEventListener("click", function () {
+      urteil[id] = b.dataset.u; k.querySelectorAll(".urteil button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      if (b.dataset.u === "aendern" && ta) ta.focus();
+      if (db) db.collection("vorschau_urteile").doc(id).set({ video: k.dataset.titel, urteil: b.dataset.u, notiz: ta ? ta.value.trim() : "", zeit: new Date().toISOString() }).catch(function () {});
+    }); });
+    var s = k.querySelector(".senden"); if (!s) return;
+    s.addEventListener("click", function () {
+      var text = "Vorschau " + TITEL + ": " + k.dataset.titel + " – " + ({ passt: "PASST", aendern: "ÄNDERN" }[urteil[id]] || "ohne Urteil") + (ta.value.trim() ? "\nNotiz: " + ta.value.trim() : "");
+      if (db) db.collection("vorschau_urteile").doc(id).set({ video: k.dataset.titel, urteil: urteil[id] || null, notiz: ta.value.trim(), zeit: new Date().toISOString() }).catch(function () {});
+      if (!kom || !anClaude) { melde.textContent = db ? "Gespeichert. Claude liest es beim nächsten Mal." : "Bitte Claude im Chat Bescheid geben."; return; }
+      s.disabled = true;
+      kom.anchorFor(k).then(function (a) { return kom.sendToClaude({ anchor: a, text: text.slice(0, 3900) }); })
+        .then(function () { melde.textContent = "An Claude geschickt ✓"; }, function (e) { melde.textContent = e && e.code === "consent_required" ? "Gespeichert. Zum Senden bitte die Freigabe erlauben." : "Gespeichert, Senden fehlgeschlagen."; })
+        .then(function () { s.disabled = false; });
+    });
+  });
+  if (window.claude && claude.use) {
+    claude.use("db").then(function (d) { if (d) db = d; }).catch(function () {});
+    claude.use("comments").then(function (c) { if (!c || !c.canSendToClaude) return; kom = c;
+      c.canSendToClaude().then(function (v) { anClaude = v === "available"; }, function () {}); }).catch(function () {});
+  }
+})();
+</script>
