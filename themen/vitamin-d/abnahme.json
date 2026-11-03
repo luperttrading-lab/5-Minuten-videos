@@ -1,13 +1,10 @@
-{"seit": "Probevideo vom 03.11. (ohne Vorab-Freigabe, alles selbst entschieden)",
+{"seit": "der ersten Fassung (03.11., 07:41) – fünf Stellen fairer gegenüber Vitamin D",
  "stellen": [
-  {"suche": "Vitamin D: Viele raten", "was": "Hook (≈ 9 s): zehntausend Einheiten, Krebs, Infekte, Altern"},
-  {"suche": "Faustregel: Ist dein Schatten", "was": "Schattenregel nur als ungeprüfte Faustregel, ohne Stichpunkt"},
-  {"suche": "Die große Messung des Robert", "was": "RKI-Zahlen standardisiert: jeder Siebte im Mangel"},
-  {"suche": "Die hohen Mangel-Zahlen", "was": "Grenzwertstreit 50 gegen 75 nmol/l"},
-  {"suche": "Die Kasse zahlt ihn nur", "was": "Testkosten „rund dreißig Euro“ (GOÄ 27,98 € plus Blutentnahme)"},
-  {"suche": "Ein Lichtblick", "was": "Krebstod: nur Teilauswertung, gelb"},
-  {"suche": "Doch das ist hochgerechnet", "was": "Telomere: „drei Jahre“ hochgerechnet, knapp an der Zufallsgrenze"},
-  {"suche": "Als sichere Obergrenze", "was": "EFSA 4.000 IE, erste Schäden bei 10.000"},
-  {"suche": "Tipp für dich: Nimm aus Nahrungsergänzung", "was": "Dosis-Tipp = BfR-Empfehlung höchstens 800 IE"},
-  {"suche": "Für alle anderen: Sommersonne", "was": "Fazit für alle anderen"}
+  {"suche": "Gesicht und Arme allein", "was": "Neu: Gesicht und Arme sind wenig Fläche (Versuch mit T-Shirt und kurzer Hose)"},
+  {"suche": "Tipp für dich: Geh von Frühling", "was": "Sonnentipp: mittags kurz, möglichst viel freie Haut, nie bis zum Sonnenbrand"},
+  {"suche": "Diese Zahlen sind Jahresmittel", "was": "Winter: Jahresmittel, im Winter und Frühjahr deutlich mehr Mangel"},
+  {"suche": "Wichtig: Fast alle Teilnehmer", "was": "Echter Mangel: Genanalyse – unter fünfzig Nanomol höheres Sterberisiko"},
+  {"suche": "Bei Corona sahen frühe", "was": "Corona: frühe kleine Studien positiv, größere nicht"},
+  {"suche": "Als sichere Obergrenze", "was": "Normale Tagesmengen kein Problem, erst bei zehntausend Schäden"},
+  {"suche": "Tipp für dich: 800 Einheiten", "was": "Dosis-Tipp: achthundert decken den Bedarf, bis viertausend sicher"}
  ]}

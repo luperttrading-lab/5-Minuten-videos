@@ -19,6 +19,11 @@
    "voll": "Rabenberg M et al. Vitamin D status among adults in Germany – results from DEGS1. BMC Public Health 2015;15:641.",
    "url": "https://doi.org/10.1186/s12889-015-2016-7"
   },
+  "rhodes2010": {
+   "kurz": "Rhodes et al. 2010",
+   "voll": "Rhodes LE, Webb AR et al. Recommended summer sunlight exposure levels can produce sufficient (≥20 ng/ml) but not the proposed optimal (≥32 ng/ml) 25(OH)D levels at UK latitudes. J Invest Dermatol 2010;130(5):1411–1418.",
+   "url": "https://doi.org/10.1038/jid.2009.417"
+  },
   "rabenberg2018": {
    "kurz": "Rabenberg et al. 2018",
    "voll": "Rabenberg M et al. Implications of standardization of serum 25-hydroxyvitamin D data for the evaluation of vitamin D status in Germany. BMC Public Health 2018;18:845.",
@@ -84,10 +89,25 @@
    "voll": "Kuznia S et al. Efficacy of vitamin D3 supplementation on cancer mortality: Systematic review and individual patient data meta-analysis of randomised controlled trials. Ageing Res Rev 2023;87:101923.",
    "url": "https://doi.org/10.1016/j.arr.2023.101923"
   },
+  "sutherland2022": {
+   "kurz": "Sutherland et al. 2022",
+   "voll": "Sutherland JP, Zhou A, Hyppönen E. Vitamin D Deficiency Increases Mortality Risk in the UK Biobank: A Nonlinear Mendelian Randomization Study. Ann Intern Med 2022;175(11):1552–1559.",
+   "url": "https://doi.org/10.7326/M21-3324"
+  },
   "jolliffe2021": {
    "kurz": "Jolliffe et al. 2021",
    "voll": "Jolliffe DA et al. Vitamin D supplementation to prevent acute respiratory infections: a systematic review and meta-analysis of aggregate data from randomised controlled trials. Lancet Diabetes Endocrinol 2021;9(5):276–292.",
    "url": "https://doi.org/10.1016/S2213-8587(21)00051-6"
+  },
+  "entrenas2020": {
+   "kurz": "Entrenas Castillo et al. 2020",
+   "voll": "Entrenas Castillo M et al. Effect of calcifediol treatment and best available therapy versus best available therapy on intensive care unit admission and mortality among patients hospitalized for COVID-19: A pilot randomized clinical study. J Steroid Biochem Mol Biol 2020;203:105751. (offen, 76 Patienten)",
+   "url": "https://doi.org/10.1016/j.jsbmb.2020.105751"
+  },
+  "murai2021": {
+   "kurz": "Murai et al. 2021",
+   "voll": "Murai IH et al. Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19: A Randomized Clinical Trial. JAMA 2021;325(11):1053–1060.",
+   "url": "https://doi.org/10.1001/jama.2020.26848"
   },
   "jolliffe2022": {
    "kurz": "Jolliffe et al. 2022",
@@ -243,9 +263,10 @@
     "Von Oktober bis März steht die Sonne in Deutschland zu tief. Dann bildet die Haut kaum Vitamin D.",
     "Faustregel: Ist dein Schatten länger als du, bildet die Haut wenig. Geprüft ist das aber nicht.",
     "Im Alter, mit dunkler Haut und mit Sonnencreme bildet die Haut weniger.",
+    "Gesicht und Arme allein sind wenig Fläche. In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle die Untergrenze, aber nur jeder Vierte höhere Werte.",
     {
-     "t": "Tipp für dich: Geh von Frühling bis Herbst oft raus, Gesicht und Arme frei, 5 bis 25 Minuten je nach Hauttyp, ohne Sonnenbrand.",
-     "say": "Tipp für dich: Geh von Frühling bis Herbst oft raus, Gesicht und Arme frei, fünf bis fünfundzwanzig Minuten je nach Hauttyp, ohne Sonnenbrand."
+     "t": "Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus, mit möglichst viel freier Haut. Je nach Hauttyp reichen 5 bis 25 Minuten, aber nie bis zum Sonnenbrand.",
+     "say": "Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus, mit möglichst viel freier Haut. Je nach Hauttyp reichen fünf bis fünfundzwanzig Minuten, aber nie bis zum Sonnenbrand."
     }
    ],
    "bullets": [
@@ -263,6 +284,11 @@
      "t": "Oktober bis März kaum Bildung",
      "at": 2,
      "ev": "stark"
+    },
+    {
+     "t": "Gesicht und Arme reichen",
+     "at": 5,
+     "ev": "mittel"
     }
    ],
    "evidence": {
@@ -271,7 +297,8 @@
    },
    "quellen": [
     "bfr2025",
-    "rabenberg2015"
+    "rabenberg2015",
+    "rhodes2010"
    ],
    "shots": [
     {
@@ -290,7 +317,7 @@
      "at": 2
     },
     {
-     "bild": "bilder/d1b.png",
+     "bild": "bilder/d2b.png",
      "zoom": 0.18,
      "at": 5
     }
@@ -318,7 +345,7 @@
      "say": "Die große Messung des Robert Koch-Instituts zeigt: Etwa jeder Siebte liegt im echten Mangel, unter dreißig Nanomol pro Liter."
     },
     "Gut vier von zehn liegen in einem Graubereich darüber, knapp die Hälfte ist gut versorgt.",
-    "Im Winter liegen die Werte deutlich tiefer.",
+    "Diese Zahlen sind Jahresmittel: Im Winter und Frühjahr ist der Anteil im Mangel deutlich höher.",
     {
      "t": "Die hohen Mangel-Zahlen entstehen mit einer Grenze von 75, die nicht einmal jeder Zehnte erreicht.",
      "say": "Die hohen Mangel-Zahlen entstehen mit einer Grenze von fünfundsiebzig, die nicht einmal jeder Zehnte erreicht."
@@ -336,7 +363,7 @@
      "ev": "keine"
     },
     {
-     "t": "Im Winter niedrigere Werte",
+     "t": "Im Winter mehr Mangel",
      "at": 3,
      "ev": "stark"
     },
@@ -458,7 +485,7 @@
     },
     "Ergebnis: nicht weniger Krebs, nicht weniger Herzinfarkte und Schlaganfälle, nicht weniger Brüche. Ähnlich in Australien, Neuseeland und Europa.",
     "Ein Lichtblick: Bei täglicher Einnahme starben etwas weniger Menschen an Krebs. Gesichert ist das aber nicht.",
-    "Wichtig: Fast alle Teilnehmer waren gut versorgt. Über echten Mangel sagen diese Studien wenig.",
+    "Wichtig: Fast alle Teilnehmer waren gut versorgt. Eine große Genanalyse deutet an: Unter fünfzig Nanomol steigt das Sterberisiko, darüber kaum noch.",
     "Tipp für dich: Nimm Vitamin D nicht als Krebs- oder Herzschutz. Bewegung und Nichtrauchen sind dafür viel besser belegt."
    ],
    "bullets": [
@@ -496,7 +523,8 @@
     "bischoff2020",
     "bolland2018",
     "keum2019",
-    "kuznia2023"
+    "kuznia2023",
+    "sutherland2022"
    ],
    "shots": [
     {
@@ -538,7 +566,7 @@
    "headline": "Infekte, Corona, Altern",
    "sentences": [
     "Gegen Erkältungen gibt es einen kleinen Schutz: Von hundert Menschen bleibt etwa einer mehr gesund.",
-    "Vor Corona schützte Vitamin D in einer großen Studie nicht, und Depressionen verhinderte es auch nicht.",
+    "Bei Corona sahen frühe kleine Studien einen Nutzen, größere bestätigten das nicht. Depressionen verhinderte Vitamin D auch nicht.",
     "Und das Altern? In einer Studie verkürzten sich mit Vitamin D die Telomere etwas langsamer, die Schutzkappen der Chromosomen.",
     "Daraus wurde: Vitamin D bremse das Altern um fast drei Jahre.",
     "Doch das ist hochgerechnet, knapp an der Grenze zum Zufall. Und Telomere sind ein Laborwert, keine Krankheit.",
@@ -568,6 +596,8 @@
    },
    "quellen": [
     "jolliffe2021",
+    "entrenas2020",
+    "murai2021",
     "jolliffe2022",
     "okereke2020",
     "zhu2025"
@@ -615,16 +645,16 @@
      "say": "Wer selbst kaum Vitamin D bildet, braucht laut Fachgesellschaft für Ernährung etwa achthundert Einheiten."
     },
     {
-     "t": "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000. Bei 10.000 täglich sah sie schon erste Schäden.",
-     "say": "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde viertausend. Bei zehntausend täglich sah sie schon erste Schäden."
+     "t": "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000. Normale Tagesmengen sind also kein Problem, erst bei 10.000 täglich sah sie erste Schäden.",
+     "say": "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde viertausend. Normale Tagesmengen sind also kein Problem, erst bei zehntausend täglich sah sie erste Schäden."
     },
     "Zu viel treibt das Kalzium im Blut hoch. Das kann Nierensteine machen und die Nieren bleibend schädigen.",
     "Das Bundesinstitut für Risikobewertung meldet Vergiftungen, auch bei Säuglingen mit Mitteln für Erwachsene.",
     "Auch riesige Einzeldosen sind riskant: Ältere Frauen mit einer Megadosis pro Jahr stürzten und brachen sich öfter etwas.",
     "Die Stiftung Warentest fand die meisten Präparate überdosiert. Und Vitamin K2 dazu? Ein Nutzen ist nicht belegt.",
     {
-     "t": "Tipp für dich: Nimm aus Nahrungsergänzung höchstens 800 Einheiten am Tag, außer Arzt oder Ärztin verordnen mehr.",
-     "say": "Tipp für dich: Nimm aus Nahrungsergänzung höchstens achthundert Einheiten am Tag, außer Arzt oder Ärztin verordnen mehr."
+     "t": "Tipp für dich: 800 Einheiten am Tag decken laut Fachgesellschaft den Bedarf, bis 4.000 gelten als sicher. Mehr nur, wenn Arzt oder Ärztin das verordnen.",
+     "say": "Tipp für dich: Achthundert Einheiten am Tag decken laut Fachgesellschaft den Bedarf, bis viertausend gelten als sicher. Mehr nur, wenn Arzt oder Ärztin das verordnen."
     }
    ],
    "bullets": [

@@ -76,6 +76,14 @@ Geprüft von zwei Recherche-Agenten mit Websuche, alle DOIs per `curl -sI https:
 - Pflegeheim: BfR rät, bis 20 µg/Tag zu erwägen. Chapuy 1992 (3.270 Frauen, 84 J., D + Calcium): 43 % weniger Hüftbrüche; Cochrane Avenell 2014: D + Calcium Hüfte RR 0,84 (0,74–0,96), D allein kein Effekt → **stark** (mit Calcium).
 - Schwangere: Netzwerk Gesund ins Leben 2018 für Schwangere mit wenig Sonne oder dunkler Haut → **mittel**, im Video als Hinweis.
 
+## H. Nachträge 03.11. (zweite Fassung, Nutzerwunsch: fairer gegenüber Vitamin D)
+- Sonne: Rhodes 2010 (120 Erwachsene, Manchester, simulierte Sommersonne 1,3 SED 3×/Woche, 6 Wochen, T-Shirt und kurze Hose ≈ 35 % Haut): 90 % erreichten ≥ 20 ng/ml, nur 26,2 % ≥ 32 ng/ml. Gesicht und Arme sind höchstens ≈ 25 % der Haut → „Gesicht und Arme reichen“ **mittel** (reicht für die Untergrenze eher knapp, für höhere Werte kaum).
+- Winter: Rabenberg 2015 (Originalmessung): im Sommer hatte die Hälfte ≥ 50 nmol/l, im Winter lag ein Viertel unter 30 nmol/l. Standardisierte Werte nach Jahreszeit sind nicht veröffentlicht; das Video sagt deshalb nur „Jahresmittel, im Winter und Frühjahr deutlich höher“, ohne Mischung der beiden Datenstände.
+- Echter Mangel: Sutherland 2022 (Mendelsche Randomisierung, 307.601 UK-Biobank-Teilnehmer): L-förmig, OR 1,25 (1,16–1,35) für 25 gegen 50 nmol/l, darüber flach. Methode später kritisiert → im Video „deutet an“.
+- Corona-Behandlung: Entrenas Castillo 2020 (Córdoba, 76 Patienten, offen, Calcifediol): Intensivstation 1/50 gegen 13/26; Zuteilungsliste für Personal einsehbar, Spiegel nicht gemessen. Murai 2021 (JAMA, 240 Klinikpatienten, doppelblind, 200.000 IE einmalig): kein Unterschied bei Liegedauer (Hauptendpunkt), Intensivstation, Beatmung, Sterblichkeit. → „frühe kleine Studien sahen Nutzen, größere bestätigten das nicht“.
+- Dosis: EFSA-UL 4.000 IE als sichere Obergrenze ist eine Behördenangabe, keine Empfehlung; Tipp nennt DGE-Bedarf 800 IE und UL 4.000 IE, mehr nur ärztlich.
+- Ton: Rauschunterdrückung und De-Esser laufen im Renderer (AUFBEREITUNG); gemessen: Pegel in Sprechpausen −58 bis −75 dB (5.–1. Perzentil der nicht stummen 50-ms-Fenster).
+
 ## Quellenverzeichnis
 | ID | Kurz | Voll | URL |
 |---|---|---|---|
@@ -109,3 +117,7 @@ Geprüft von zwei Recherche-Agenten mit Websuche, alle DOIs per `curl -sI https:
 | chapuy1992 | Chapuy et al. 1992 | Chapuy MC et al. Vitamin D3 and calcium to prevent hip fractures in elderly women. N Engl J Med 1992;327:1637–1642. | https://doi.org/10.1056/NEJM199212033272305 |
 | avenell2014 | Avenell et al. 2014 | Avenell A et al. Vitamin D and vitamin D analogues for preventing fractures in post-menopausal women and older men. Cochrane Database Syst Rev 2014;CD000227. | https://doi.org/10.1002/14651858.CD000227.pub4 |
 | koletzko2018 | Koletzko et al. 2018 | Koletzko B et al. Ernährung und Lebensstil vor und während der Schwangerschaft – Handlungsempfehlungen des bundesweiten Netzwerks Gesund ins Leben. Geburtsh Frauenheilk 2018;78:1262–1282. | https://www.gesund-ins-leben.de/fileadmin/resources/import/pdf/3589_empfehlungen_vor_und_in_schwangerschaft_2018_gebfra.pdf |
+| rhodes2010 | Rhodes et al. 2010 | Rhodes LE, Webb AR et al. Recommended summer sunlight exposure levels can produce sufficient (≥20 ng/ml) but not the proposed optimal (≥32 ng/ml) 25(OH)D levels at UK latitudes. J Invest Dermatol 2010;130(5):1411–1418. | https://doi.org/10.1038/jid.2009.417 |
+| sutherland2022 | Sutherland et al. 2022 | Sutherland JP, Zhou A, Hyppönen E. Vitamin D Deficiency Increases Mortality Risk in the UK Biobank: A Nonlinear Mendelian Randomization Study. Ann Intern Med 2022;175(11):1552–1559. | https://doi.org/10.7326/M21-3324 |
+| entrenas2020 | Entrenas Castillo et al. 2020 | Entrenas Castillo M et al. Effect of calcifediol treatment and best available therapy versus best available therapy on intensive care unit admission and mortality among patients hospitalized for COVID-19: A pilot randomized clinical study. J Steroid Biochem Mol Biol 2020;203:105751. (offen, 76 Patienten) | https://doi.org/10.1016/j.jsbmb.2020.105751 |
+| murai2021 | Murai et al. 2021 | Murai IH et al. Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19: A Randomized Clinical Trial. JAMA 2021;325(11):1053–1060. | https://doi.org/10.1001/jama.2020.26848 |

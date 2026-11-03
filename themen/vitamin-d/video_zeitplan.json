@@ -19,114 +19,119 @@
  {
   "id": "d1",
   "v0": 20.849614512471653,
-  "v1": 61.26746031746031,
+  "v1": 73.49646258503401,
   "st": [
    [
     21.449614512471655,
-    6.540725623582766,
+    6.66827664399093,
     "Den größten Teil seines Vitamin D bildet dein Körper selbst: in der Haut, mit dem UV-Licht der Sonne."
    ],
    [
-    27.99034013605442,
-    7.238095238095237,
+    28.117891156462584,
+    7.238095238095238,
     "Aus dem Essen kommt nur ein kleiner Teil, viel steckt nur in fettem Fisch wie Hering, etwas in Eiern und Pilzen."
    ],
    [
-    35.228435374149655,
-    6.0190476190476225,
+    35.355986394557824,
+    6.019047619047621,
     "Von Oktober bis März steht die Sonne in Deutschland zu tief. Dann bildet die Haut kaum Vitamin D."
    ],
    [
-    41.24748299319728,
-    6.323809523809523,
+    41.37503401360544,
+    6.399999999999999,
     "Faustregel: Ist dein Schatten länger als du, bildet die Haut wenig. Geprüft ist das aber nicht."
    ],
    [
-    47.5712925170068,
-    4.571428571428573,
+    47.77503401360544,
+    4.4952380952380935,
     "Im Alter, mit dunkler Haut und mit Sonnencreme bildet die Haut weniger."
    ],
    [
-    52.14272108843538,
-    8.974739229024937,
-    "Tipp für dich: Geh von Frühling bis Herbst oft raus, Gesicht und Arme frei, 5 bis 25 Minuten je nach Hauttyp, ohne Sonnenbrand."
+    52.270272108843535,
+    10.057142857142857,
+    "Gesicht und Arme allein sind wenig Fläche. In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle die Untergrenze, aber nur jeder Vierte höhere Werte."
+   ],
+   [
+    62.32741496598639,
+    11.019047619047619,
+    "Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus, mit möglichst viel freier Haut. Je nach Hauttyp reichen 5 bis 25 Minuten, aber nie bis zum Sonnenbrand."
    ]
   ]
  },
  {
   "id": "d2",
-  "v0": 61.26746031746031,
-  "v1": 99.88582766439909,
+  "v0": 73.49646258503401,
+  "v1": 116.56183673469387,
   "st": [
    [
-    61.86746031746031,
-    3.712244897959183,
+    74.096462585034,
+    3.733333333333333,
     "Oft heißt es, fast alle Deutschen hätten einen Mangel."
    ],
    [
-    65.5797052154195,
-    8.152380952380954,
+    77.82979591836734,
+    8.304761904761905,
     "Die große Messung des Robert Koch-Instituts zeigt: Etwa jeder Siebte liegt im echten Mangel, unter 30 Nanomol pro Liter."
    ],
    [
-    73.73208616780045,
-    5.333333333333332,
+    86.13455782312924,
+    5.866666666666667,
     "Gut vier von zehn liegen in einem Graubereich darüber, knapp die Hälfte ist gut versorgt."
    ],
    [
-    79.06541950113379,
-    2.5142857142857125,
-    "Im Winter liegen die Werte deutlich tiefer."
+    92.0012244897959,
+    5.790476190476188,
+    "Diese Zahlen sind Jahresmittel: Im Winter und Frühjahr ist der Anteil im Mangel deutlich höher."
    ],
    [
-    81.5797052154195,
-    5.942857142857147,
+    97.7917006802721,
+    6.0952380952380985,
     "Die hohen Mangel-Zahlen entstehen mit einer Grenze von 75, die nicht einmal jeder Zehnte erreicht."
    ],
    [
-    87.52256235827664,
-    5.86666666666666,
+    103.8869387755102,
+    6.019047619047619,
     "Doch diese Grenze ist umstritten: Laut den großen Fachgremien reichen 50 für fast alle."
    ],
    [
-    93.3892290249433,
-    6.346598639455788,
+    109.90598639455781,
+    6.505850340136057,
     "Tipp für dich: Ein Wert im Graubereich ist kein Notfall. Frag nach, welche Grenze dein Labor verwendet."
    ]
   ]
  },
  {
   "id": "d3",
-  "v0": 99.88582766439909,
-  "v1": 139.72306122448978,
+  "v0": 116.56183673469387,
+  "v1": 156.39907029478456,
   "st": [
    [
-    100.48582766439908,
+    117.16183673469386,
     4.190476190476191,
     "Viele raten, den Vitamin-D-Wert regelmäßig messen zu lassen."
    ],
    [
-    104.67630385487527,
+    121.35231292517005,
     8.228571428571428,
     "Eine große Fachgesellschaft für Hormonmedizin rät seit 2024 davon ab, Gesunde routinemäßig zu testen."
    ],
    [
-    112.9048752834467,
+    129.58088435374148,
     5.790476190476191,
     "Denn der richtige Zielwert ist unklar, und Studien zum Nutzen solcher Tests fehlen."
    ],
    [
-    118.6953514739229,
+    135.37136054421768,
     6.019047619047619,
     "Die Kasse zahlt ihn nur bei begründetem Verdacht, sonst kostet er meist rund dreißig Euro."
    ],
    [
-    124.71439909297051,
+    141.3904081632653,
     8.990476190476194,
     "Achte auf die Einheit: Nanogramm pro Milliliter mal zweieinhalb ergibt Nanomol pro Liter. Zwanzig sind also fünfzig."
    ],
    [
-    133.7048752834467,
+    150.3808843537415,
     5.86818594104308,
     "Tipp für dich: Lass testen, wenn Arzt oder Ärztin einen Grund sehen, etwa bei Knochenschwund."
    ]
@@ -134,172 +139,172 @@
  },
  {
   "id": "d4",
-  "v0": 139.72306122448978,
-  "v1": 195.69829931972788,
+  "v0": 156.39907029478456,
+  "v1": 215.21036281179136,
   "st": [
    [
-    140.32306122448978,
-    4.876190476190476,
+    156.99907029478456,
+    4.709546485260771,
     "Vitamin D soll vor Krebs, Herzinfarkt und Knochenbrüchen schützen."
    ],
    [
-    145.19925170068026,
+    161.70861678004533,
     6.095238095238094,
     "Zwar sind Menschen mit wenig Vitamin D öfter krank, doch Krankheit kann den Wert auch senken."
    ],
    [
-    151.29448979591834,
-    6.704761904761904,
+    167.80385487528343,
+    6.476190476190478,
     "Deshalb zählen Studien, in denen das Los entscheidet, wer Vitamin D bekommt und wer ein Scheinmittel."
    ],
    [
-    157.99925170068025,
-    5.714285714285715,
+    174.28004535147392,
+    5.409523809523808,
     "Die größte lief in den USA, mit über 25.000 Menschen, fünf Jahre lang."
    ],
    [
-    163.71353741496597,
-    10.514285714285716,
+    179.6895691609977,
+    10.209523809523812,
     "Ergebnis: nicht weniger Krebs, nicht weniger Herzinfarkte und Schlaganfälle, nicht weniger Brüche. Ähnlich in Australien, Neuseeland und Europa."
    ],
    [
-    174.22782312925168,
-    7.009523809523806,
+    189.8990929705215,
+    6.780952380952378,
     "Ein Lichtblick: Bei täglicher Einnahme starben etwas weniger Menschen an Krebs. Gesichert ist das aber nicht."
    ],
    [
-    181.2373469387755,
-    6.704761904761909,
-    "Wichtig: Fast alle Teilnehmer waren gut versorgt. Über echten Mangel sagen diese Studien wenig."
+    196.6800453514739,
+    10.819047619047616,
+    "Wichtig: Fast alle Teilnehmer waren gut versorgt. Eine große Genanalyse deutet an: Unter fünfzig Nanomol steigt das Sterberisiko, darüber kaum noch."
    ],
    [
-    187.9421088435374,
-    7.606190476190477,
+    207.49909297052153,
+    7.561269841269848,
     "Tipp für dich: Nimm Vitamin D nicht als Krebs- oder Herzschutz. Bewegung und Nichtrauchen sind dafür viel besser belegt."
    ]
   ]
  },
  {
   "id": "d5",
-  "v0": 195.69829931972788,
-  "v1": 236.62850340136052,
+  "v0": 215.21036281179136,
+  "v1": 257.5110430839002,
   "st": [
    [
-    196.29829931972787,
-    6.3999999999999995,
+    215.81036281179135,
+    6.3238095238095235,
     "Gegen Erkältungen gibt es einen kleinen Schutz: Von hundert Menschen bleibt etwa einer mehr gesund."
    ],
    [
-    202.69829931972788,
-    6.704761904761905,
-    "Vor Corona schützte Vitamin D in einer großen Studie nicht, und Depressionen verhinderte es auch nicht."
+    222.13417233560088,
+    8.838095238095239,
+    "Bei Corona sahen frühe kleine Studien einen Nutzen, größere bestätigten das nicht. Depressionen verhinderte Vitamin D auch nicht."
    ],
    [
-    209.4030612244898,
-    7.847619047619048,
+    230.97226757369612,
+    7.771428571428569,
     "Und das Altern? In einer Studie verkürzten sich mit Vitamin D die Telomere etwas langsamer, die Schutzkappen der Chromosomen."
    ],
    [
-    217.25068027210884,
-    4.723809523809525,
+    238.7436961451247,
+    4.571428571428573,
     "Daraus wurde: Vitamin D bremse das Altern um fast drei Jahre."
    ],
    [
-    221.97448979591834,
-    7.31428571428571,
+    243.31512471655324,
+    7.085714285714285,
     "Doch das ist hochgerechnet, knapp an der Grenze zum Zufall. Und Telomere sind ein Laborwert, keine Krankheit."
    ],
    [
-    229.28877551020406,
-    7.1897278911564655,
+    250.40083900226753,
+    6.960204081632654,
     "Tipp für dich: Bei Versprechen gegen das Altern frag nach: Wurden weniger Krankheiten gemessen oder nur ein Laborwert?"
    ]
   ]
  },
  {
   "id": "d6",
-  "v0": 236.62850340136052,
-  "v1": 294.5426757369614,
+  "v0": 257.5110430839002,
+  "v1": 320.53412698412694,
   "st": [
    [
-    237.2285034013605,
-    4.266666666666667,
+    258.1110430839002,
+    4.190476190476191,
     "Manche raten zu 10.000 Einheiten am Tag oder mehr."
    ],
    [
-    241.4951700680272,
-    6.3999999999999995,
+    262.3015192743764,
+    6.323809523809522,
     "Wer selbst kaum Vitamin D bildet, braucht laut Fachgesellschaft für Ernährung etwa 800 Einheiten."
    ],
    [
-    247.89517006802717,
-    9.219047619047616,
-    "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000. Bei 10.000 täglich sah sie schon erste Schäden."
+    268.62532879818593,
+    11.80952380952381,
+    "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000. Normale Tagesmengen sind also kein Problem, erst bei 10.000 täglich sah sie erste Schäden."
    ],
    [
-    257.1142176870748,
-    6.5523809523809575,
+    280.43485260770973,
+    6.628571428571426,
     "Zu viel treibt das Kalzium im Blut hoch. Das kann Nierensteine machen und die Nieren bleibend schädigen."
    ],
    [
-    263.66659863945574,
-    6.628571428571423,
+    287.06342403628116,
+    6.399999999999999,
     "Das Bundesinstitut für Risikobewertung meldet Vergiftungen, auch bei Säuglingen mit Mitteln für Erwachsene."
    ],
    [
-    270.2951700680272,
-    8.076190476190483,
+    293.46342403628114,
+    8.152380952380952,
     "Auch riesige Einzeldosen sind riskant: Ältere Frauen mit einer Megadosis pro Jahr stürzten und brachen sich öfter etwas."
    ],
    [
-    278.3713605442177,
-    8.533333333333324,
+    301.6158049886621,
+    8.457142857142863,
     "Die Stiftung Warentest fand die meisten Präparate überdosiert. Und Vitamin K2 dazu? Ein Nutzen ist nicht belegt."
    ],
    [
-    286.904693877551,
-    7.487981859410439,
-    "Tipp für dich: Nimm aus Nahrungsergänzung höchstens 800 Einheiten am Tag, außer Arzt oder Ärztin verordnen mehr."
+    310.07294784580495,
+    10.311179138321997,
+    "Tipp für dich: 800 Einheiten am Tag decken laut Fachgesellschaft den Bedarf, bis 4.000 gelten als sicher. Mehr nur, wenn Arzt oder Ärztin das verordnen."
    ]
   ]
  },
  {
   "id": "d7",
-  "v0": 294.5426757369614,
-  "v1": 334.3852607709751,
+  "v0": 320.53412698412694,
+  "v1": 360.3767120181406,
   "st": [
    [
-    295.14267573696145,
+    321.13412698412696,
     2.9714285714285715,
     "Wann ist Vitamin D also klar sinnvoll?"
    ],
    [
-    298.11410430839004,
+    324.10555555555555,
     4.8,
     "Bei Säuglingen: Sie bekommen es gegen Rachitis, bis zu ihrem zweiten Frühsommer."
    ],
    [
-    302.91410430839,
+    328.9055555555555,
     6.019047619047618,
     "Bei Menschen im Pflegeheim, die kaum nach draußen kommen. Zusammen mit Kalzium senkt es dort Hüftbrüche."
    ],
    [
-    308.9331519274376,
+    334.92460317460313,
     4.952380952380951,
     "Und bei nachgewiesenem Mangel. Schwangere mit wenig Sonne sollten es ansprechen."
    ],
    [
-    313.8855328798186,
+    339.8769841269841,
     7.923809523809524,
     "Für alle anderen: Sommersonne hilft viel, im Winter kann eine kleine Tagesdosis sinnvoll sein, Megadosen schaden eher."
    ],
    [
-    321.80934240362814,
+    347.80079365079365,
     1.980952380952381,
     "Die Quellen stehen in der Beschreibung."
    ],
    [
-    323.7902947845805,
+    349.781746031746,
     7.844965986394563,
     "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
    ]

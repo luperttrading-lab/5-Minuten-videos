@@ -4,42 +4,46 @@ Ein Faktencheck zu Sonne, Mangel, Test, großen Studien, Altern und Megadosen. J
 Kapitel
 0:00 Einleitung
 0:20 Sonne oder Essen?
-1:01 Wie verbreitet ist Mangel?
-1:39 Testen lassen?
-2:19 Die großen Studien
-3:15 Infekte und Altern
-3:56 Megadosen
-4:54 Fazit
+1:13 Wie verbreitet ist Mangel?
+1:56 Testen lassen?
+2:36 Die großen Studien
+3:35 Infekte und Altern
+4:17 Megadosen
+5:20 Fazit
 
 Quellen (Nummern wie im Video)
 [1] BfR 2025: https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-vitamin-d.pdf
 [2] Rabenberg et al. 2015: https://doi.org/10.1186/s12889-015-2016-7
-[3] Rabenberg et al. 2018: https://doi.org/10.1186/s12889-018-5769-y
-[4] Ross et al. 2011: https://doi.org/10.1210/jc.2010-2704
-[5] Demay et al. 2024: https://doi.org/10.1210/clinem/dgae290
-[6] KVB 2026: https://www.kvb.de/fileadmin/kvb/Mitglieder/Verordnungen/VO-aktuell/2026-DS/KVB-VA-260226-WIS-Vitamin-D.pdf
-[7] Autier et al. 2014: https://doi.org/10.1016/S2213-8587(13)70165-7
-[8] Manson et al. 2019: https://doi.org/10.1056/NEJMoa1809944
-[9] LeBoff et al. 2022: https://doi.org/10.1056/NEJMoa2202106
-[10] Neale et al. 2022: https://doi.org/10.1016/S2213-8587(21)00345-4
-[11] Scragg et al. 2017: https://doi.org/10.1001/jamacardio.2017.0175
-[12] Bischoff-Ferrari et al. 2020: https://doi.org/10.1001/jama.2020.16909
-[13] Bolland et al. 2018: https://doi.org/10.1016/S2213-8587(18)30265-1
-[14] Keum et al. 2019: https://doi.org/10.1093/annonc/mdz059
-[15] Kuznia et al. 2023: https://doi.org/10.1016/j.arr.2023.101923
-[16] Jolliffe et al. 2021: https://doi.org/10.1016/S2213-8587(21)00051-6
-[17] Jolliffe et al. 2022: https://doi.org/10.1136/bmj-2022-071230
-[18] Okereke et al. 2020: https://doi.org/10.1001/jama.2020.10224
-[19] Zhu et al. 2025: https://doi.org/10.1016/j.ajcnut.2025.05.003
-[20] EFSA 2023: https://doi.org/10.2903/j.efsa.2023.8145
-[21] Burt et al. 2019: https://doi.org/10.1001/jama.2019.11889
-[22] BfR 2026: https://www.bfr.bund.de/mitteilung/vitamin-d-vergiftung-bei-saeuglingen/
-[23] Sanders et al. 2010: https://doi.org/10.1001/jama.2010.594
-[24] BfR 2025b: https://doi.org/10.17590/20250903-104032-0
-[25] Stiftung Warentest 2025: https://www.test.de/presse/pressemitteilungen/Vitamin-D-Praeparate-Fuer-viele-ueberfluessig-6259497-0/
-[26] Verbraucherzentrale 2026: https://www.verbraucherzentrale.de/faq/lebensmittel/vitamin-d-besser-mit-vitamin-k2-39144
-[27] Chapuy et al. 1992: https://doi.org/10.1056/NEJM199212033272305
-[28] Avenell et al. 2014: https://doi.org/10.1002/14651858.CD000227.pub4
-[29] Koletzko et al. 2018: https://www.gesund-ins-leben.de/fileadmin/resources/import/pdf/3589_empfehlungen_vor_und_in_schwangerschaft_2018_gebfra.pdf
+[3] Rhodes et al. 2010: https://doi.org/10.1038/jid.2009.417
+[4] Rabenberg et al. 2018: https://doi.org/10.1186/s12889-018-5769-y
+[5] Ross et al. 2011: https://doi.org/10.1210/jc.2010-2704
+[6] Demay et al. 2024: https://doi.org/10.1210/clinem/dgae290
+[7] KVB 2026: https://www.kvb.de/fileadmin/kvb/Mitglieder/Verordnungen/VO-aktuell/2026-DS/KVB-VA-260226-WIS-Vitamin-D.pdf
+[8] Autier et al. 2014: https://doi.org/10.1016/S2213-8587(13)70165-7
+[9] Manson et al. 2019: https://doi.org/10.1056/NEJMoa1809944
+[10] LeBoff et al. 2022: https://doi.org/10.1056/NEJMoa2202106
+[11] Neale et al. 2022: https://doi.org/10.1016/S2213-8587(21)00345-4
+[12] Scragg et al. 2017: https://doi.org/10.1001/jamacardio.2017.0175
+[13] Bischoff-Ferrari et al. 2020: https://doi.org/10.1001/jama.2020.16909
+[14] Bolland et al. 2018: https://doi.org/10.1016/S2213-8587(18)30265-1
+[15] Keum et al. 2019: https://doi.org/10.1093/annonc/mdz059
+[16] Kuznia et al. 2023: https://doi.org/10.1016/j.arr.2023.101923
+[17] Sutherland et al. 2022: https://doi.org/10.7326/M21-3324
+[18] Jolliffe et al. 2021: https://doi.org/10.1016/S2213-8587(21)00051-6
+[19] Entrenas Castillo et al. 2020: https://doi.org/10.1016/j.jsbmb.2020.105751
+[20] Murai et al. 2021: https://doi.org/10.1001/jama.2020.26848
+[21] Jolliffe et al. 2022: https://doi.org/10.1136/bmj-2022-071230
+[22] Okereke et al. 2020: https://doi.org/10.1001/jama.2020.10224
+[23] Zhu et al. 2025: https://doi.org/10.1016/j.ajcnut.2025.05.003
+[24] EFSA 2023: https://doi.org/10.2903/j.efsa.2023.8145
+[25] Burt et al. 2019: https://doi.org/10.1001/jama.2019.11889
+[26] BfR 2026: https://www.bfr.bund.de/mitteilung/vitamin-d-vergiftung-bei-saeuglingen/
+[27] Sanders et al. 2010: https://doi.org/10.1001/jama.2010.594
+[28] BfR 2025b: https://doi.org/10.17590/20250903-104032-0
+[29] Stiftung Warentest 2025: https://www.test.de/presse/pressemitteilungen/Vitamin-D-Praeparate-Fuer-viele-ueberfluessig-6259497-0/
+[30] Verbraucherzentrale 2026: https://www.verbraucherzentrale.de/faq/lebensmittel/vitamin-d-besser-mit-vitamin-k2-39144
+[31] Chapuy et al. 1992: https://doi.org/10.1056/NEJM199212033272305
+[32] Avenell et al. 2014: https://doi.org/10.1002/14651858.CD000227.pub4
+[33] Koletzko et al. 2018: https://www.gesund-ins-leben.de/fileadmin/resources/import/pdf/3589_empfehlungen_vor_und_in_schwangerschaft_2018_gebfra.pdf
 
 Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Kein Ersatz für ärztlichen Rat: Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.

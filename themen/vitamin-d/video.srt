@@ -15,286 +15,302 @@ Wir prüfen sechs Fragen: Sonne oder Essen, wie häufig Mangel ist,
 Testen, die großen Studien, Infekte und Altern, und Megadosen.
 
 5
-00:00:21,450 --> 00:00:26,374
+00:00:21,450 --> 00:00:26,467
 Den größten Teil seines Vitamin D bildet dein Körper selbst: in der Haut,
 
 6
-00:00:26,224 --> 00:00:28,140
+00:00:26,317 --> 00:00:28,268
 mit dem UV-Licht der Sonne.
 
 7
-00:00:27,990 --> 00:00:30,814
+00:00:28,118 --> 00:00:30,941
 Aus dem Essen kommt nur ein kleiner Teil,
 
 8
-00:00:30,664 --> 00:00:35,378
+00:00:30,791 --> 00:00:35,506
 viel steckt nur in fettem Fisch wie Hering, etwas in Eiern und Pilzen.
 
 9
-00:00:35,228 --> 00:00:41,397
+00:00:35,356 --> 00:00:41,525
 Von Oktober bis März steht die Sonne in Deutschland zu tief. Dann bildet die Haut kaum Vitamin D.
 
 10
-00:00:41,247 --> 00:00:44,358
+00:00:41,375 --> 00:00:44,521
 Faustregel: Ist dein Schatten länger als du,
 
 11
-00:00:44,208 --> 00:00:47,721
+00:00:44,371 --> 00:00:47,925
 bildet die Haut wenig. Geprüft ist das aber nicht.
 
 12
-00:00:47,571 --> 00:00:52,293
+00:00:47,775 --> 00:00:52,420
 Im Alter, mit dunkler Haut und mit Sonnencreme bildet die Haut weniger.
 
 13
-00:00:52,143 --> 00:00:57,635
-Tipp für dich: Geh von Frühling bis Herbst oft raus, Gesicht und Arme frei,
+00:00:52,270 --> 00:01:00,277
+Gesicht und Arme allein sind wenig Fläche. In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle die Untergrenze,
 
 14
-00:00:57,485 --> 00:01:01,267
-5 bis 25 Minuten je nach Hauttyp, ohne Sonnenbrand.
+00:01:00,127 --> 00:01:02,477
+aber nur jeder Vierte höhere Werte.
 
 15
-00:01:01,867 --> 00:01:05,730
-Oft heißt es, fast alle Deutschen hätten einen Mangel.
+00:01:02,327 --> 00:01:06,576
+Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus,
 
 16
-00:01:05,580 --> 00:01:12,032
-Die große Messung des Robert Koch-Instituts zeigt: Etwa jeder Siebte liegt im echten Mangel,
+00:01:06,426 --> 00:01:13,496
+mit möglichst viel freier Haut. Je nach Hauttyp reichen 5 bis 25 Minuten, aber nie bis zum Sonnenbrand.
 
 17
-00:01:11,882 --> 00:01:13,882
-unter 30 Nanomol pro Liter.
+00:01:14,096 --> 00:01:17,980
+Oft heißt es, fast alle Deutschen hätten einen Mangel.
 
 18
-00:01:13,732 --> 00:01:17,155
-Gut vier von zehn liegen in einem Graubereich darüber,
+00:01:17,830 --> 00:01:24,400
+Die große Messung des Robert Koch-Instituts zeigt: Etwa jeder Siebte liegt im echten Mangel,
 
 19
-00:01:17,005 --> 00:01:19,215
-knapp die Hälfte ist gut versorgt.
+00:01:24,250 --> 00:01:26,285
+unter 30 Nanomol pro Liter.
 
 20
-00:01:19,065 --> 00:01:21,730
-Im Winter liegen die Werte deutlich tiefer.
+00:01:26,135 --> 00:01:29,885
+Gut vier von zehn liegen in einem Graubereich darüber,
 
 21
-00:01:21,580 --> 00:01:25,283
-Die hohen Mangel-Zahlen entstehen mit einer Grenze von 75,
+00:01:29,735 --> 00:01:32,151
+knapp die Hälfte ist gut versorgt.
 
 22
-00:01:25,133 --> 00:01:27,673
-die nicht einmal jeder Zehnte erreicht.
+00:01:32,001 --> 00:01:37,942
+Diese Zahlen sind Jahresmittel: Im Winter und Frühjahr ist der Anteil im Mangel deutlich höher.
 
 23
-00:01:27,523 --> 00:01:33,539
-Doch diese Grenze ist umstritten: Laut den großen Fachgremien reichen 50 für fast alle.
+00:01:37,792 --> 00:01:41,586
+Die hohen Mangel-Zahlen entstehen mit einer Grenze von 75,
 
 24
-00:01:33,389 --> 00:01:37,708
-Tipp für dich: Ein Wert im Graubereich ist kein Notfall. Frag nach,
+00:01:41,436 --> 00:01:44,037
+die nicht einmal jeder Zehnte erreicht.
 
 25
-00:01:37,558 --> 00:01:39,886
-welche Grenze dein Labor verwendet.
+00:01:43,887 --> 00:01:50,056
+Doch diese Grenze ist umstritten: Laut den großen Fachgremien reichen 50 für fast alle.
 
 26
-00:01:40,486 --> 00:01:44,826
-Viele raten, den Vitamin-D-Wert regelmäßig messen zu lassen.
+00:01:49,906 --> 00:01:54,329
+Tipp für dich: Ein Wert im Graubereich ist kein Notfall. Frag nach,
 
 27
-00:01:44,676 --> 00:01:50,504
-Eine große Fachgesellschaft für Hormonmedizin rät seit 2024 davon ab,
+00:01:54,179 --> 00:01:56,562
+welche Grenze dein Labor verwendet.
 
 28
-00:01:50,354 --> 00:01:53,055
-Gesunde routinemäßig zu testen.
+00:01:57,162 --> 00:02:01,502
+Viele raten, den Vitamin-D-Wert regelmäßig messen zu lassen.
 
 29
-00:01:52,905 --> 00:01:58,845
-Denn der richtige Zielwert ist unklar, und Studien zum Nutzen solcher Tests fehlen.
+00:02:01,352 --> 00:02:07,180
+Eine große Fachgesellschaft für Hormonmedizin rät seit 2024 davon ab,
 
 30
-00:01:58,695 --> 00:02:02,159
-Die Kasse zahlt ihn nur bei begründetem Verdacht,
+00:02:07,030 --> 00:02:09,731
+Gesunde routinemäßig zu testen.
 
 31
-00:02:02,009 --> 00:02:04,864
-sonst kostet er meist rund dreißig Euro.
+00:02:09,581 --> 00:02:15,521
+Denn der richtige Zielwert ist unklar, und Studien zum Nutzen solcher Tests fehlen.
 
 32
-00:02:04,714 --> 00:02:13,855
-Achte auf die Einheit: Nanogramm pro Milliliter mal zweieinhalb ergibt Nanomol pro Liter. Zwanzig sind also fünfzig.
+00:02:15,371 --> 00:02:18,835
+Die Kasse zahlt ihn nur bei begründetem Verdacht,
 
 33
-00:02:13,705 --> 00:02:15,577
-Tipp für dich: Lass testen,
+00:02:18,685 --> 00:02:21,540
+sonst kostet er meist rund dreißig Euro.
 
 34
-00:02:15,427 --> 00:02:19,723
-wenn Arzt oder Ärztin einen Grund sehen, etwa bei Knochenschwund.
+00:02:21,390 --> 00:02:30,531
+Achte auf die Einheit: Nanogramm pro Milliliter mal zweieinhalb ergibt Nanomol pro Liter. Zwanzig sind also fünfzig.
 
 35
-00:02:20,323 --> 00:02:25,349
-Vitamin D soll vor Krebs, Herzinfarkt und Knochenbrüchen schützen.
+00:02:30,381 --> 00:02:32,253
+Tipp für dich: Lass testen,
 
 36
-00:02:25,199 --> 00:02:28,728
-Zwar sind Menschen mit wenig Vitamin D öfter krank,
+00:02:32,103 --> 00:02:36,399
+wenn Arzt oder Ärztin einen Grund sehen, etwa bei Knochenschwund.
 
 37
-00:02:28,578 --> 00:02:31,444
-doch Krankheit kann den Wert auch senken.
+00:02:36,999 --> 00:02:41,859
+Vitamin D soll vor Krebs, Herzinfarkt und Knochenbrüchen schützen.
 
 38
-00:02:31,294 --> 00:02:34,998
-Deshalb zählen Studien, in denen das Los entscheidet,
+00:02:41,709 --> 00:02:45,237
+Zwar sind Menschen mit wenig Vitamin D öfter krank,
 
 39
-00:02:34,848 --> 00:02:38,149
-wer Vitamin D bekommt und wer ein Scheinmittel.
+00:02:45,087 --> 00:02:47,954
+doch Krankheit kann den Wert auch senken.
 
 40
-00:02:37,999 --> 00:02:43,864
-Die größte lief in den USA, mit über 25.000 Menschen, fünf Jahre lang.
+00:02:47,804 --> 00:02:51,386
+Deshalb zählen Studien, in denen das Los entscheidet,
 
 41
-00:02:43,714 --> 00:02:49,452
-Ergebnis: nicht weniger Krebs, nicht weniger Herzinfarkte und Schlaganfälle,
+00:02:51,236 --> 00:02:54,430
+wer Vitamin D bekommt und wer ein Scheinmittel.
 
 42
-00:02:49,302 --> 00:02:54,378
-nicht weniger Brüche. Ähnlich in Australien, Neuseeland und Europa.
+00:02:54,280 --> 00:02:59,840
+Die größte lief in den USA, mit über 25.000 Menschen, fünf Jahre lang.
 
 43
-00:02:54,228 --> 00:03:01,387
-Ein Lichtblick: Bei täglicher Einnahme starben etwas weniger Menschen an Krebs. Gesichert ist das aber nicht.
+00:02:59,690 --> 00:03:05,266
+Ergebnis: nicht weniger Krebs, nicht weniger Herzinfarkte und Schlaganfälle,
 
 44
-00:03:01,237 --> 00:03:08,092
-Wichtig: Fast alle Teilnehmer waren gut versorgt. Über echten Mangel sagen diese Studien wenig.
+00:03:05,116 --> 00:03:10,049
+nicht weniger Brüche. Ähnlich in Australien, Neuseeland und Europa.
 
 45
-00:03:07,942 --> 00:03:15,698
-Tipp für dich: Nimm Vitamin D nicht als Krebs- oder Herzschutz. Bewegung und Nichtrauchen sind dafür viel besser belegt.
+00:03:09,899 --> 00:03:16,830
+Ein Lichtblick: Bei täglicher Einnahme starben etwas weniger Menschen an Krebs. Gesichert ist das aber nicht.
 
 46
-00:03:16,298 --> 00:03:22,848
-Gegen Erkältungen gibt es einen kleinen Schutz: Von hundert Menschen bleibt etwa einer mehr gesund.
+00:03:16,680 --> 00:03:26,324
+Wichtig: Fast alle Teilnehmer waren gut versorgt. Eine große Genanalyse deutet an: Unter fünfzig Nanomol steigt das Sterberisiko,
 
 47
-00:03:22,698 --> 00:03:26,727
-Vor Corona schützte Vitamin D in einer großen Studie nicht,
+00:03:26,174 --> 00:03:27,649
+darüber kaum noch.
 
 48
-00:03:26,577 --> 00:03:29,553
-und Depressionen verhinderte es auch nicht.
+00:03:27,499 --> 00:03:35,210
+Tipp für dich: Nimm Vitamin D nicht als Krebs- oder Herzschutz. Bewegung und Nichtrauchen sind dafür viel besser belegt.
 
 49
-00:03:29,403 --> 00:03:35,312
-Und das Altern? In einer Studie verkürzten sich mit Vitamin D die Telomere etwas langsamer,
+00:03:35,810 --> 00:03:42,284
+Gegen Erkältungen gibt es einen kleinen Schutz: Von hundert Menschen bleibt etwa einer mehr gesund.
 
 50
-00:03:35,162 --> 00:03:37,401
-die Schutzkappen der Chromosomen.
+00:03:42,134 --> 00:03:45,806
+Bei Corona sahen frühe kleine Studien einen Nutzen,
 
 51
-00:03:37,251 --> 00:03:42,124
-Daraus wurde: Vitamin D bremse das Altern um fast drei Jahre.
+00:03:45,656 --> 00:03:51,122
+größere bestätigten das nicht. Depressionen verhinderte Vitamin D auch nicht.
 
 52
-00:03:41,974 --> 00:03:43,953
-Doch das ist hochgerechnet,
+00:03:50,972 --> 00:03:56,825
+Und das Altern? In einer Studie verkürzten sich mit Vitamin D die Telomere etwas langsamer,
 
 53
-00:03:43,803 --> 00:03:49,439
-knapp an der Grenze zum Zufall. Und Telomere sind ein Laborwert, keine Krankheit.
+00:03:56,675 --> 00:03:58,894
+die Schutzkappen der Chromosomen.
 
 54
-00:03:49,289 --> 00:03:56,629
-Tipp für dich: Bei Versprechen gegen das Altern frag nach: Wurden weniger Krankheiten gemessen oder nur ein Laborwert?
+00:03:58,744 --> 00:04:03,465
+Daraus wurde: Vitamin D bremse das Altern um fast drei Jahre.
 
 55
-00:03:57,229 --> 00:04:01,645
-Manche raten zu 10.000 Einheiten am Tag oder mehr.
+00:04:03,315 --> 00:04:05,237
+Doch das ist hochgerechnet,
 
 56
-00:04:01,495 --> 00:04:03,845
-Wer selbst kaum Vitamin D bildet,
+00:04:05,087 --> 00:04:10,551
+knapp an der Grenze zum Zufall. Und Telomere sind ein Laborwert, keine Krankheit.
 
 57
-00:04:03,695 --> 00:04:08,045
-braucht laut Fachgesellschaft für Ernährung etwa 800 Einheiten.
+00:04:10,401 --> 00:04:17,511
+Tipp für dich: Bei Versprechen gegen das Altern frag nach: Wurden weniger Krankheiten gemessen oder nur ein Laborwert?
 
 58
-00:04:07,895 --> 00:04:17,264
-Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000. Bei 10.000 täglich sah sie schon erste Schäden.
+00:04:18,111 --> 00:04:22,452
+Manche raten zu 10.000 Einheiten am Tag oder mehr.
 
 59
-00:04:17,114 --> 00:04:23,817
-Zu viel treibt das Kalzium im Blut hoch. Das kann Nierensteine machen und die Nieren bleibend schädigen.
+00:04:22,302 --> 00:04:24,625
+Wer selbst kaum Vitamin D bildet,
 
 60
-00:04:23,667 --> 00:04:27,506
-Das Bundesinstitut für Risikobewertung meldet Vergiftungen,
+00:04:24,475 --> 00:04:28,775
+braucht laut Fachgesellschaft für Ernährung etwa 800 Einheiten.
 
 61
-00:04:27,356 --> 00:04:30,445
-auch bei Säuglingen mit Mitteln für Erwachsene.
+00:04:28,625 --> 00:04:37,498
+Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000. Normale Tagesmengen sind also kein Problem,
 
 62
-00:04:30,295 --> 00:04:38,521
-Auch riesige Einzeldosen sind riskant: Ältere Frauen mit einer Megadosis pro Jahr stürzten und brachen sich öfter etwas.
+00:04:37,348 --> 00:04:40,585
+erst bei 10.000 täglich sah sie erste Schäden.
 
 63
-00:04:38,371 --> 00:04:47,055
-Die Stiftung Warentest fand die meisten Präparate überdosiert. Und Vitamin K2 dazu? Ein Nutzen ist nicht belegt.
+00:04:40,435 --> 00:04:47,213
+Zu viel treibt das Kalzium im Blut hoch. Das kann Nierensteine machen und die Nieren bleibend schädigen.
 
 64
-00:04:46,905 --> 00:04:51,979
-Tipp für dich: Nimm aus Nahrungsergänzung höchstens 800 Einheiten am Tag,
+00:04:47,063 --> 00:04:50,776
+Das Bundesinstitut für Risikobewertung meldet Vergiftungen,
 
 65
-00:04:51,829 --> 00:04:54,543
-außer Arzt oder Ärztin verordnen mehr.
+00:04:50,626 --> 00:04:53,613
+auch bei Säuglingen mit Mitteln für Erwachsene.
 
 66
-00:04:55,143 --> 00:04:58,264
-Wann ist Vitamin D also klar sinnvoll?
+00:04:53,463 --> 00:05:01,766
+Auch riesige Einzeldosen sind riskant: Ältere Frauen mit einer Megadosis pro Jahr stürzten und brachen sich öfter etwas.
 
 67
-00:04:58,114 --> 00:05:03,064
-Bei Säuglingen: Sie bekommen es gegen Rachitis, bis zu ihrem zweiten Frühsommer.
+00:05:01,616 --> 00:05:10,223
+Die Stiftung Warentest fand die meisten Präparate überdosiert. Und Vitamin K2 dazu? Ein Nutzen ist nicht belegt.
 
 68
-00:05:02,914 --> 00:05:04,642
-Bei Menschen im Pflegeheim,
+00:05:10,073 --> 00:05:15,413
+Tipp für dich: 800 Einheiten am Tag decken laut Fachgesellschaft den Bedarf,
 
 69
-00:05:04,492 --> 00:05:09,083
-die kaum nach draußen kommen. Zusammen mit Kalzium senkt es dort Hüftbrüche.
+00:05:15,263 --> 00:05:20,534
+bis 4.000 gelten als sicher. Mehr nur, wenn Arzt oder Ärztin das verordnen.
 
 70
-00:05:08,933 --> 00:05:14,036
-Und bei nachgewiesenem Mangel. Schwangere mit wenig Sonne sollten es ansprechen.
+00:05:21,134 --> 00:05:24,256
+Wann ist Vitamin D also klar sinnvoll?
 
 71
-00:05:13,886 --> 00:05:16,812
-Für alle anderen: Sommersonne hilft viel,
+00:05:24,106 --> 00:05:29,056
+Bei Säuglingen: Sie bekommen es gegen Rachitis, bis zu ihrem zweiten Frühsommer.
 
 72
-00:05:16,662 --> 00:05:21,959
-im Winter kann eine kleine Tagesdosis sinnvoll sein, Megadosen schaden eher.
+00:05:28,906 --> 00:05:30,633
+Bei Menschen im Pflegeheim,
 
 73
-00:05:21,809 --> 00:05:23,940
-Die Quellen stehen in der Beschreibung.
+00:05:30,483 --> 00:05:35,075
+die kaum nach draußen kommen. Zusammen mit Kalzium senkt es dort Hüftbrüche.
 
 74
-00:05:23,790 --> 00:05:29,266
-Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
+00:05:34,925 --> 00:05:40,027
+Und bei nachgewiesenem Mangel. Schwangere mit wenig Sonne sollten es ansprechen.
 
 75
-00:05:29,116 --> 00:05:31,785
+00:05:39,877 --> 00:05:42,804
+Für alle anderen: Sommersonne hilft viel,
+
+76
+00:05:42,654 --> 00:05:47,951
+im Winter kann eine kleine Tagesdosis sinnvoll sein, Megadosen schaden eher.
+
+77
+00:05:47,801 --> 00:05:49,932
+Die Quellen stehen in der Beschreibung.
+
+78
+00:05:49,782 --> 00:05:55,257
+Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
+
+79
+00:05:55,107 --> 00:05:57,777
 aber nicht ersetzen. Bis zum nächsten Video!
 

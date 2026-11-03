@@ -1,12 +1,20 @@
 {
  "titel": "Vitamin D",
- "aufgabe": "Probevideo ansehen (5:34, Ton an), dann „passt“ oder „ändern“ mit Notiz. Feinarbeit auf der Hörprobe: https://claude.ai/artifact/UerqNP87Zb4q4erTUT3ny2 – oben 10 Stellen im Abnahmekasten, Wörter mit langem Druck markieren, je Szene Bilder antippen.",
+ "aufgabe": "Zweite Fassung ansehen (6:00), dann „passt“ oder „ändern“. Die fünf geänderten Stellen einzeln anhören: Hörprobe https://claude.ai/artifact/UerqNP87Zb4q4erTUT3ny2, oben im Kasten 7 Stellen, dann grüner Knopf.",
  "videos": [
   {
-   "datei": "video_720p.mp4",
-   "titel": "Probevideo, erste Fassung (ohne Vorab-Freigabe)",
-   "stand": "03.11., 07:41",
+   "datei": "video_720p_v2.mp4",
+   "titel": "Probevideo, zweite Fassung: fairer gegenüber Vitamin D",
+   "stand": "03.11., 10:50",
    "pruefen": true,
+   "poster_bei": 66,
+   "notiz": "6:00, 820 Wörter, 33 Quellen. Neu: (1) Sonne: Gesicht und Arme sind wenig Fläche, Tipp „mittags kurz, möglichst viel freie Haut, nie bis zum Sonnenbrand“ (Rhodes 2010), Stichpunkt „Gesicht und Arme reichen“ gelb. (2) Winter: „Jahresmittel, im Winter und Frühjahr deutlich mehr Mangel“. (3) Echter Mangel: Genanalyse mit 300.000 Menschen, unter fünfzig Nanomol höheres Sterberisiko. (4) Corona: frühe kleine Studien positiv, größere nicht (Córdoba, Brasilien). (5) Dosis: normale Tagesmengen kein Problem, Tipp „achthundert decken den Bedarf, bis viertausend sicher“. Beim Sonnentipp jetzt das Bild der Frau in der Sonne statt Fisch. Rauschunterdrückung war schon aktiv (Pausen −58 bis −75 dB)."
+  },
+  {
+   "datei": "video_720p.mp4",
+   "titel": "Probevideo, erste Fassung (ersetzt)",
+   "stand": "03.11., 07:41",
+   "pruefen": false,
    "poster_bei": 16,
    "notiz": "5:34, 757 Wörter, 8 Szenen (Hook, 6 Kapitel, Fazit), Stimme Christian, 15 Bilder GPT Image 2. Alles ohne Rückfragen entschieden; meine Entscheidungen stehen darunter unter „zur Info“."
   },

@@ -1,18 +1,15 @@
-  ElevenLabs: 249 Zeichen, berechnet 107
-  ElevenLabs: 623 Zeichen, berechnet 268
-  ElevenLabs: 622 Zeichen, berechnet 267
-  ElevenLabs: 569 Zeichen, berechnet 244
-  ElevenLabs: 820 Zeichen, berechnet 352
-  ElevenLabs: 620 Zeichen, berechnet 266
-  ElevenLabs: 875 Zeichen, berechnet 376
-  ElevenLabs: 603 Zeichen, berechnet 259
-Ton aufbereitet (Rauschunterdrückung, De-Esser), -21.2 → -16 LUFS
-Gesamtdauer 334.4 s (5:34), 757 Woerter, Tempo 2.33 W/s Sprechzeit
+  ElevenLabs: 823 Zeichen, berechnet 354
+  ElevenLabs: 674 Zeichen, berechnet 290
+  ElevenLabs: 873 Zeichen, berechnet 375
+  ElevenLabs: 646 Zeichen, berechnet 278
+  ElevenLabs: 964 Zeichen, berechnet 414
+Ton aufbereitet (Rauschunterdrückung, De-Esser), -21.1 → -16 LUFS
+Gesamtdauer 360.4 s (6:00), 820 Woerter, Tempo 2.33 W/s Sprechzeit
   d0      0.0–  20.8 s  ( 20.8 s)  Vitamin D: Was stimmt wirklich?
-  d1     20.8–  61.3 s  ( 40.4 s)  Woher kommt Vitamin D?
-  d2     61.3–  99.9 s  ( 38.6 s)  Wie verbreitet ist ein Mangel?
-  d3     99.9– 139.7 s  ( 39.8 s)  Solltest du testen lassen?
-  d4    139.7– 195.7 s  ( 56.0 s)  Was zeigen die großen Studien?
-  d5    195.7– 236.6 s  ( 40.9 s)  Infekte, Diabetes, Altern
-  d6    236.6– 294.5 s  ( 57.9 s)  Wie riskant sind Megadosen?
-  d7    294.5– 334.4 s  ( 39.8 s)  Wann Vitamin D sinnvoll ist
+  d1     20.8–  73.5 s  ( 52.6 s)  Woher kommt Vitamin D?
+  d2     73.5– 116.6 s  ( 43.1 s)  Wie verbreitet ist ein Mangel?
+  d3    116.6– 156.4 s  ( 39.8 s)  Solltest du testen lassen?
+  d4    156.4– 215.2 s  ( 58.8 s)  Was zeigen die großen Studien?
+  d5    215.2– 257.5 s  ( 42.3 s)  Infekte, Corona, Altern
+  d6    257.5– 320.5 s  ( 63.0 s)  Wie riskant sind Megadosen?
+  d7    320.5– 360.4 s  ( 39.8 s)  Wann Vitamin D sinnvoll ist
