@@ -27,8 +27,14 @@
     },
     {
      "t": "Sonne richtig nutzen",
-     "bild": "bilder/J/e2a.jpg",
-     "wort": "Sonne richtig"
+     "bild": "bilder/J/v2a.jpg",
+     "wort": "Sonne richtig",
+     "a": [
+      0,
+      40,
+      1280,
+      751
+     ]
     },
     {
      "t": "Dein Wert in ng/ml",
@@ -88,7 +94,19 @@
    ],
    "shots": [
     {
-     "bild": "bilder/J/e1.jpg"
+     "bild": "bilder/J/v1a.jpg"
+    },
+    {
+     "bild": "bilder/J/v1b.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/J/v1c.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/J/v1d.jpg",
+     "at": 4
     }
    ]
   },
@@ -129,11 +147,27 @@
    ],
    "shots": [
     {
-     "bild": "bilder/J/e2a.jpg"
+     "bild": "bilder/J/v2a.jpg"
     },
     {
-     "bild": "bilder/J/e2b.jpg",
+     "bild": "bilder/J/v2b.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/J/v2c.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/J/v2d.jpg",
      "at": 4
+    },
+    {
+     "bild": "bilder/J/v2e.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/J/v2f.jpg",
+     "at": 6
     }
    ]
   },
@@ -181,7 +215,24 @@
    ],
    "shots": [
     {
-     "bild": "bilder/J/e3.jpg"
+     "bild": "bilder/J/v3a.jpg"
+    },
+    {
+     "bild": "bilder/J/v3b_rand.jpg",
+     "zoom": "none",
+     "at": 2
+    },
+    {
+     "bild": "bilder/J/v3c.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/J/v3d.jpg",
+     "at": 7
+    },
+    {
+     "bild": "bilder/J/v3e.jpg",
+     "at": 8
     }
    ]
   },
@@ -234,7 +285,27 @@
    ],
    "shots": [
     {
-     "bild": "bilder/J/e4.jpg"
+     "bild": "bilder/J/v4a.jpg"
+    },
+    {
+     "bild": "bilder/J/v4b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/J/v4c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/J/v4d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/J/v4e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/J/v4f.jpg",
+     "at": 5
     }
    ]
   },
@@ -280,7 +351,27 @@
    ],
    "shots": [
     {
-     "bild": "bilder/J/e5.jpg"
+     "bild": "bilder/J/v5a.jpg"
+    },
+    {
+     "bild": "bilder/J/v5b.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/J/v5d.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/J/v5e.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/J/v5f.jpg",
+     "at": 6
+    },
+    {
+     "bild": "bilder/J/v5g.jpg",
+     "at": 7
     }
    ]
   },

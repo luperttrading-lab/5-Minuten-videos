@@ -1,70 +1,70 @@
 {
  "titel": "Vitamin D · Erklärvideo in acht Stilen",
- "aufgabe": "Alle acht Videos haben denselben Ton und dieselben Szenen, nur der Bildstil wechselt. Bei deinem Favoriten „passt“ tippen (gern zwei), bei Stellen mit Fehlern „ändern“ mit Notiz.",
+ "aufgabe": "Zweite Fassung: Jedes Kapitel hat jetzt eigene Bilder, die alle 6–12 Sekunden wechseln (statt eines Ausschnitts aus dem Kachelbild). Sonnenbad mit Mann und Frau, glatte Haut ohne Funken. Bei deinem Favoriten „passt“ tippen, bei Fehlern „ändern“ mit Notiz. L (Pixel-Art) ist noch die alte Fassung, weil die ChatLLM-Credits aufgebraucht sind.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_C.mp4",
-   "titel": "C  Papierschnitt-Diorama",
-   "stand": "03.11., 14:46",
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_C.mp4",
+   "titel": "C  Papierschnitt (neu)",
+   "stand": "03.11., 17:46",
    "pruefen": true,
-   "poster_bei": 8,
-   "notiz": "Warm und handgemacht, Abläufe (Haut → Leber → Niere) gut lesbar."
+   "poster_bei": 60,
+   "notiz": "36 Bilder. Laborbild: älteres Bild, weil die Schrift im neuen am Rand abgeschnitten war."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_D.mp4",
-   "titel": "D  Knetfiguren",
-   "stand": "03.11., 14:46",
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_D.mp4",
+   "titel": "D  Knetfiguren (neu)",
+   "stand": "03.11., 17:46",
    "pruefen": true,
-   "poster_bei": 8,
-   "notiz": "Freundlich und auffällig, wirkt etwas kindlich."
+   "poster_bei": 60,
+   "notiz": "36 Bilder. Haut jetzt glatt (kein „Ausschlag“ mehr)."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_E.mp4",
-   "titel": "E  Isometrische Miniaturwelt",
-   "stand": "03.11., 14:46",
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_E.mp4",
+   "titel": "E  Isometrische Miniaturwelt (neu)",
+   "stand": "03.11., 17:46",
    "pruefen": true,
-   "poster_bei": 8,
-   "notiz": "Ruhig und sauber; die Bilder sind kleine Inseln auf Farbfläche."
+   "poster_bei": 60,
+   "notiz": "36 Bilder."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_G.mp4",
-   "titel": "G  Aquarell und Tusche",
-   "stand": "03.11., 14:46",
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_G.mp4",
+   "titel": "G  Aquarell und Tusche (neu)",
+   "stand": "03.11., 17:46",
    "pruefen": true,
-   "poster_bei": 8,
-   "notiz": "Ernsthaft, nah an der Faktencheck-Reihe; hebt sich davon am wenigsten ab."
+   "poster_bei": 60,
+   "notiz": "35 Bilder. Ein Strandbild weggelassen (knapper Bikini von hinten)."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_H.mp4",
-   "titel": "H  Comic (Ligne claire)",
-   "stand": "03.11., 14:46",
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_H.mp4",
+   "titel": "H  Comic (Ligne claire) (neu)",
+   "stand": "03.11., 17:46",
    "pruefen": true,
-   "poster_bei": 8,
-   "notiz": "Klar und gut lesbar, eigenständiger Look."
+   "poster_bei": 60,
+   "notiz": "36 Bilder."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_I.mp4",
-   "titel": "I  3D-Trickfilm",
-   "stand": "03.11., 14:46",
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_I.mp4",
+   "titel": "I  3D-Trickfilm (neu)",
+   "stand": "03.11., 17:46",
    "pruefen": true,
-   "poster_bei": 8,
-   "notiz": "Wirkt am aufwendigsten. Badeszene und Laborbild mussten neu (zu aufreizend, falsche Skala)."
+   "poster_bei": 60,
+   "notiz": "36 Bilder."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_J.mp4",
-   "titel": "J  Skizze im Schulheft",
-   "stand": "03.11., 14:46",
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_J.mp4",
+   "titel": "J  Skizze im Schulheft (neu)",
+   "stand": "03.11., 17:46",
    "pruefen": true,
-   "poster_bei": 8,
-   "notiz": "Passt zum Namen. Zwei Bilder mussten neu, weil englische Notizen drinstanden."
+   "poster_bei": 60,
+   "notiz": "29 Bilder. Für die letzten beiden Kapitel fehlen neue Bilder (Credits leer), dort noch die alten."
   },
   {
    "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_L.mp4",
-   "titel": "L  Pixel-Art",
+   "titel": "L  Pixel-Art (alte Fassung)",
    "stand": "03.11., 14:46",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 8,
-   "notiz": "Spricht eher Jugendliche an. Drei Bilder mussten neu (englische Schilder, Tippfehler)."
+   "notiz": "Noch ohne neue Bilder: Die ChatLLM-Credits waren aufgebraucht, bevor L an der Reihe war. Die Credits erneuern sich laut deiner Angabe am 5. des Monats."
   }
  ]
 }

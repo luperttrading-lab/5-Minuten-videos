@@ -1,4 +1,5 @@
-"""Drehbuch „Vitamin D: Das Sonnenhormon“ (Erklärvideo, kein Faktencheck, keine Ampel) für acht Bildstile.
+"""Drehbuch „Vitamin D: Das Sonnenhormon“ (zweite Bildrunde 03.11.: eigene 5:4-Szenenbilder, Bildwechsel alle 6–12 s)
+ (Erklärvideo, kein Faktencheck, keine Ampel) für acht Bildstile.
 Ein Sprechtext für alle Stile (gemeinsamer Ton-Cache), nur die Bilder wechseln. Quellen aus themen/vitamin-d/ übernommen
 (dort geprüft), neue per Crossref geprüft (03.11.). Aufruf: python3 drehbuch_bau.py"""
 import json, os
@@ -31,7 +32,7 @@ SZENEN = [
   'sentences': ['Vitamin D: Dein Körper macht es selbst, aus Sonnenlicht. Doch im Winter fehlt es vielen.',
                 'Du erfährst, was es eigentlich ist, wie du die Sonne richtig nutzt, wie du deinen Wert liest, wie viel du brauchst, was Studien zeigen und wer besonders profitiert.'],
   'hervorheben_at': 1,
-  'kacheln': [('Ein Hormon aus Licht', 'e1', 'eigentlich'), ('Sonne richtig nutzen', 'e2a', 'Sonne richtig'),
+  'kacheln': [('Ein Hormon aus Licht', 'e1', 'eigentlich'), ('Sonne richtig nutzen', 'e2a_v2', 'Sonne richtig'),
               ('Dein Wert in ng/ml', 'e3', 'Wert'), ('Wie viel du brauchst', 'e4', 'wie viel'),
               ('Was Studien zeigen', 'e5', 'Studien'), ('Wer profitiert', 'e6', 'profitiert')]},
  {'id': 'v1', 'kicker': 'Grundlagen', 'headline': 'Ein Hormon aus Licht',
@@ -42,7 +43,7 @@ SZENEN = [
                 'Aus dem Essen kommt nur wenig, am meisten steckt in fettem Fisch wie Hering.',
                 'Tipp für dich: Fetter Fisch ein- bis zweimal pro Woche hilft etwas, die wichtigste Quelle bleibt aber die Sonne.'],
   'bullets': [B('Vorstufe eines Hormons', 0), B('Gebildet in der Haut', 1), B('Hilft, Kalzium aufzunehmen', 3), B('Wenig im Essen, viel im Hering', 4)],
-  'quellen': ['holick2007', 'bfr2025'], 'bilder': [('e1', None)]},
+  'quellen': ['holick2007', 'bfr2025'], 'bilder': [('v1a', None), ('v1b', 2), ('v1c', 3), ('v1d', 4)]},
  {'id': 'v2', 'kicker': 'Sonne', 'headline': 'Sonne richtig nutzen',
   'sentences': ['Im Sommer ist die Sonne die beste Quelle, und es kommt auf die Fläche an.',
                 'Gesicht und Arme allein sind wenig Haut.',
@@ -53,7 +54,7 @@ SZENEN = [
                 S('Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus, mit möglichst viel freier Haut. Je nach Hauttyp reichen 5 bis 25 Minuten, aber nie bis zum Sonnenbrand.',
                   'Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus, mit möglichst viel freier Haut. Je nach Hauttyp reichen fünf bis fünfundzwanzig Minuten, aber nie bis zum Sonnenbrand.')],
   'bullets': [B('Viel freie Haut zählt', 1), B('Wenige Minuten im Hochsommer', 3), B('Oktober bis März: zu wenig Sonne', 4)],
-  'quellen': ['rhodes2010', 'holick2007', 'bfr2025'], 'bilder': [('e2a', None), ('e2b', 4)]},
+  'quellen': ['rhodes2010', 'holick2007', 'bfr2025'], 'bilder': [('v2a', None), ('v2b', 2), ('v2c', 3), ('v2d', 4), ('v2e', 5), ('v2f', 6)]},
  {'id': 'v3', 'kicker': 'Laborwert', 'headline': 'Dein Wert in ng/ml',
   'sentences': [S('Gemessen wird die Speicherform im Blut, das 25-OH-Vitamin D.', 'Gemessen wird die Speicherform im Blut, das fünfundzwanzig-O-H-Vitamin D.'),
                 'Wir rechnen in Nanogramm pro Milliliter.',
@@ -65,7 +66,7 @@ SZENEN = [
                 'In Deutschland liegt im Jahresmittel etwa jeder Siebte unter zwölf, im Winter sind es deutlich mehr.',
                 'Tipp für dich: Lässt du deinen Wert messen, frag nach der Einheit und nach der Grenze, die dein Labor verwendet.'],
   'bullets': [B('Messgröße: 25-OH-Vitamin D', 0), B('20 ng/ml = 50 nmol/l', 2), B('Mangel: unter 12 ng/ml', 4), B('Ziel 20 oder 30? Umstritten', 6)],
-  'quellen': ['ross2011', 'holick2011', 'demay2024', 'rabenberg2018'], 'bilder': [('e3', None)]},
+  'quellen': ['ross2011', 'holick2011', 'demay2024', 'rabenberg2018'], 'bilder': [('v3a', None), ('v3b', 2), ('v3c', 4), ('v3d', 7), ('v3e', 8)]},
  {'id': 'v4', 'kicker': 'Dosis', 'headline': 'Wie viel du brauchst',
   'sentences': [S('Ohne Sonne braucht ein Erwachsener laut Fachgesellschaft für Ernährung etwa 800 Einheiten am Tag.', 'Ohne Sonne braucht ein Erwachsener laut Fachgesellschaft für Ernährung etwa achthundert Einheiten am Tag.'),
                 S('Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000 Einheiten täglich.', 'Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde viertausend Einheiten täglich.'),
@@ -74,7 +75,7 @@ SZENEN = [
                 'Am besten nimmst du es täglich statt als riesige Einzeldosis, und zu einer Mahlzeit mit etwas Fett, dann wird es besser aufgenommen.',
                 S('Tipp für dich: 800 Einheiten decken den Grundbedarf. Mehr als 4.000 nur, wenn Arzt oder Ärztin es mit Laborkontrolle festlegen.', 'Tipp für dich: Achthundert Einheiten decken den Grundbedarf. Mehr als viertausend nur, wenn Arzt oder Ärztin es mit Laborkontrolle festlegen.')],
   'bullets': [B('Grundbedarf: 800 IE', 0), B('Obergrenze: 4.000 IE', 1), B('Mehr Gewicht, mehr Bedarf', 2), B('Täglich und mit etwas Fett', 4)],
-  'quellen': ['bfr2025', 'efsa2023', 'ekwaru2014', 'veugelers2014', 'sanders2010', 'dawson2015'], 'bilder': [('e4', None)]},
+  'quellen': ['bfr2025', 'efsa2023', 'ekwaru2014', 'veugelers2014', 'sanders2010', 'dawson2015'], 'bilder': [('v4a', None), ('v4b', 1), ('v4c', 2), ('v4d', 3), ('v4e', 4), ('v4f', 5)]},
  {'id': 'v5', 'kicker': 'Forschung', 'headline': 'Was Studien zeigen',
   'sentences': ['Was bringt die Einnahme? Am meisten bei Menschen mit niedrigem Wert.',
                 'Bei täglicher Einnahme starben in einer Auswertung großer Studien etwa ein Achtel weniger Menschen an Krebs.',
@@ -85,7 +86,7 @@ SZENEN = [
                 'Bei gut versorgten Gesunden fanden große Studien dagegen wenig. Die Chance liegt vor allem darin, einen Mangel auszugleichen.',
                 'Tipp für dich: Vitamin D lohnt sich besonders, wenn dein Wert niedrig ist, und das ist im Winter häufig.'],
   'bullets': [B('Weniger Krebstodesfälle bei täglicher Einnahme', 1), B('Seltener Typ-2-Diabetes bei Vorstufe', 2), B('Seltener Autoimmunerkrankungen', 3), B('Etwas weniger Atemwegsinfekte', 4)],
-  'quellen': ['kuznia2023', 'pittas2023', 'hahn2022', 'jolliffe2021', 'zhu2025', 'manson2019'], 'bilder': [('e5', None)]},
+  'quellen': ['kuznia2023', 'pittas2023', 'hahn2022', 'jolliffe2021', 'zhu2025', 'manson2019'], 'bilder': [('v5a', None), ('v5b', 2), ('v5c', 3), ('v5d', 4), ('v5e', 5), ('v5f', 6), ('v5g', 7)]},
  {'id': 'v6', 'kicker': 'Für wen', 'headline': 'Wer besonders profitiert',
   'sentences': ['Wer profitiert besonders?',
                 'Säuglinge: Sie bekommen Vitamin D gegen Rachitis, bis zu ihrem zweiten Frühsommer.',
@@ -94,7 +95,7 @@ SZENEN = [
                 'Schwangere mit wenig Sonne sollten es in der Praxis ansprechen.',
                 'Tipp für dich: Gehörst du zu einer dieser Gruppen, sprich Arzt oder Ärztin auf Vitamin D an.'],
   'bullets': [B('Säuglinge', 1), B('Ältere, Pflegeheim', 2), B('Dunkle Haut, Übergewicht, Innenarbeit', 3), B('Schwangere mit wenig Sonne', 4)],
-  'quellen': ['bfr2025', 'chapuy1992', 'holick2007', 'koletzko2018'], 'bilder': [('e6', None)]},
+  'quellen': ['bfr2025', 'chapuy1992', 'holick2007', 'koletzko2018'], 'bilder': [('v6a', None), ('v6b', 2), ('v6c', 3), ('v6d', 4)]},
  {'id': 'v7', 'kapitel': 'Fazit', 'kicker': 'Fazit', 'headline': 'Das Wichtigste',
   'sentences': ['Vitamin D ist ein Sonnenhormon, das dein Körper selbst macht, wenn du ihn lässt.',
                 'Im Sommer heißt das: mittags kurz raus, viel freie Haut, nie bis zum Sonnenbrand.',
@@ -104,17 +105,50 @@ SZENEN = [
                 'Die Quellen stehen in der Beschreibung.',
                 'Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!'],
   'bullets': [B('Sommer: Sonne auf viel Haut', 1), B('Winter: tägliche kleine Dosis', 2), B('Auf die Einheit achten', 4)],
-  'quellen': ['bfr2025', 'efsa2023'], 'bilder': [('e7', None)]},
+  'quellen': ['bfr2025', 'efsa2023'], 'bilder': [('v7a', None), ('v7b', 1), ('v7c', 2), ('v7d', 3), ('v7e', 5)]},
 ]
+
+# Nach Sichtprüfung weggelassen (03.11.): v5c (Pose auf allen vieren, wirkte teils anzüglich), G-v2c (knapper Bikini von hinten)
+WEG = {(s, 'v5c') for s in STILE} | {('G', 'v2c')}
+# Fallback, solange Bilder fehlen (ChatLLM-Credits am 03.11. aufgebraucht): fehlende Szenenbilder auslassen,
+# ganz ohne neue Bilder das alte 16:9-Bild der Szene; Kachel e2a_v2 -> Szenenbild v2a -> altes e2a
+ALT = {'v1': 'e1', 'v2': 'e2a', 'v3': 'e3', 'v4': 'e4', 'v5': 'e5', 'v6': 'e6', 'v7': 'e7'}
+
+
+def da(stil, b):
+    return os.path.exists(f'bilder/{stil}/{b}.jpg')
+
 
 def bauen(stil):
     szenen = []
     for sc in SZENEN:
         s = {k: v for k, v in sc.items() if k not in ('bilder', 'kacheln')}
         if 'kacheln' in sc:
-            s['kacheln'] = [{'t': t, 'bild': f'bilder/{stil}/{b}.jpg', 'wort': w} for t, b, w in sc['kacheln']]
+            kach = []
+            for t, b, w in sc['kacheln']:
+                if not da(stil, b) and b == 'e2a_v2':
+                    b = 'v2a' if da(stil, 'v2a') else 'e2a'
+                k = {'t': t, 'bild': f'bilder/{stil}/{b}.jpg', 'wort': w}
+                if b == 'v2a':                      # 5:4-Bild in 16:9-Kachel: oberen Teil zeigen, damit die Köpfe bleiben
+                    k['a'] = [0, 40, 1280, 751]
+                kach.append(k)
+            s['kacheln'] = kach
         if 'bilder' in sc:
-            s['shots'] = [dict({'bild': f'bilder/{stil}/{b}.jpg'}, **({'at': at} if at is not None else {})) for b, at in sc['bilder']]
+            liste = [(b, at) for b, at in sc['bilder'] if da(stil, b) and (stil, b) not in WEG]
+            if not liste:
+                liste = [(ALT[sc['id']], None)]
+            liste[0] = (liste[0][0], None)
+            shots = []
+            for b, at in liste:
+                sh = {'bild': f'bilder/{stil}/{b}.jpg'}
+                if (stil, b) == ('C', 'v3b'):           # Schrift schon im Original abgeschnitten -> älteres Laborbild
+                    sh = {'bild': 'bilder/C/e3.jpg'}
+                elif b == 'v3b' and da(stil, 'v3b_rand'):  # Beschriftung am Bildrand: mit Rand und ohne Zoom zeigen
+                    sh = {'bild': f'bilder/{stil}/v3b_rand.jpg', 'zoom': 'none'}
+                if at is not None:
+                    sh['at'] = at
+                shots.append(sh)
+            s['shots'] = shots
         szenen.append(s)
     return {'tts': 'elevenlabs', 'voice_id': 'NBqeXKdZHweef6y0B67V', 'model': 'eleven_v4', 'tempo': 1.05,
             'titel': 'Vitamin D: Das Sonnenhormon', 'stil': stil,

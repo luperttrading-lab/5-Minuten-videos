@@ -7,9 +7,9 @@ import bilder
 import base64, urllib.request
 
 
-def erzeuge(stil, motiv, ziel, modell='gpt_image2'):
+def erzeuge(stil, motiv, ziel, modell='gpt_image2', config=None):
     """Wie bilder.erzeuge, aber mit dem Stil als Parameter (bilder.STIL ist global, mit Threads sonst ein Wettlauf)."""
-    body = {'model': modell, 'modalities': ['image', 'text'], 'image_config': bilder.MODELLE[modell],
+    body = {'model': modell, 'modalities': ['image', 'text'], 'image_config': config or bilder.MODELLE[modell],
             'messages': [{'role': 'user', 'content': f'Generate an image. {stil} Motif: {motiv}'}]}
     req = urllib.request.Request(bilder.URL, data=json.dumps(body).encode(), headers={
         'Authorization': 'Bearer ' + os.environ['ABACUS_API_KEY'], 'Content-Type': 'application/json'})

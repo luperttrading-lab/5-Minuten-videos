@@ -27,8 +27,14 @@
     },
     {
      "t": "Sonne richtig nutzen",
-     "bild": "bilder/E/e2a.jpg",
-     "wort": "Sonne richtig"
+     "bild": "bilder/E/v2a.jpg",
+     "wort": "Sonne richtig",
+     "a": [
+      0,
+      40,
+      1280,
+      751
+     ]
     },
     {
      "t": "Dein Wert in ng/ml",
@@ -88,7 +94,19 @@
    ],
    "shots": [
     {
-     "bild": "bilder/E/e1.jpg"
+     "bild": "bilder/E/v1a.jpg"
+    },
+    {
+     "bild": "bilder/E/v1b.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/E/v1c.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/E/v1d.jpg",
+     "at": 4
     }
    ]
   },
@@ -129,11 +147,27 @@
    ],
    "shots": [
     {
-     "bild": "bilder/E/e2a.jpg"
+     "bild": "bilder/E/v2a.jpg"
     },
     {
-     "bild": "bilder/E/e2b.jpg",
+     "bild": "bilder/E/v2b.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/E/v2c.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/E/v2d.jpg",
      "at": 4
+    },
+    {
+     "bild": "bilder/E/v2e.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/E/v2f.jpg",
+     "at": 6
     }
    ]
   },
@@ -181,7 +215,24 @@
    ],
    "shots": [
     {
-     "bild": "bilder/E/e3.jpg"
+     "bild": "bilder/E/v3a.jpg"
+    },
+    {
+     "bild": "bilder/E/v3b_rand.jpg",
+     "zoom": "none",
+     "at": 2
+    },
+    {
+     "bild": "bilder/E/v3c.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/E/v3d.jpg",
+     "at": 7
+    },
+    {
+     "bild": "bilder/E/v3e.jpg",
+     "at": 8
     }
    ]
   },
@@ -234,7 +285,27 @@
    ],
    "shots": [
     {
-     "bild": "bilder/E/e4.jpg"
+     "bild": "bilder/E/v4a.jpg"
+    },
+    {
+     "bild": "bilder/E/v4b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/E/v4c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/E/v4d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/E/v4e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/E/v4f.jpg",
+     "at": 5
     }
    ]
   },
@@ -280,7 +351,27 @@
    ],
    "shots": [
     {
-     "bild": "bilder/E/e5.jpg"
+     "bild": "bilder/E/v5a.jpg"
+    },
+    {
+     "bild": "bilder/E/v5b.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/E/v5d.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/E/v5e.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/E/v5f.jpg",
+     "at": 6
+    },
+    {
+     "bild": "bilder/E/v5g.jpg",
+     "at": 7
     }
    ]
   },
@@ -322,7 +413,19 @@
    ],
    "shots": [
     {
-     "bild": "bilder/E/e6.jpg"
+     "bild": "bilder/E/v6a.jpg"
+    },
+    {
+     "bild": "bilder/E/v6b.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/E/v6c.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/E/v6d.jpg",
+     "at": 4
     }
    ]
   },
@@ -366,7 +469,23 @@
    ],
    "shots": [
     {
-     "bild": "bilder/E/e7.jpg"
+     "bild": "bilder/E/v7a.jpg"
+    },
+    {
+     "bild": "bilder/E/v7b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/E/v7c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/E/v7d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/E/v7e.jpg",
+     "at": 5
     }
    ]
   }
