@@ -1,0 +1,773 @@
+{
+ "tts": "elevenlabs",
+ "voice_id": "NBqeXKdZHweef6y0B67V",
+ "voice_name": "Christian - Warm and Captivating",
+ "model": "eleven_v4",
+ "tempo": 1.05,
+ "aussprache": {},
+ "titel": "Vitamin D: Was stimmt wirklich?",
+ "untertitel": "Ein Faktencheck zu Sonne, Mangel, Test, großen Studien, Altern und Megadosen. Jeder Punkt ist gegen Studien und Behörden geprüft; die Marker zeigen, wie gut er belegt ist.",
+ "fuss": "Sprecherstimme synthetisch (ElevenLabs). Illustrationen KI-generiert. Kein Ersatz für ärztlichen Rat: Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen.",
+ "quellen": {
+  "bfr2025": {
+   "kurz": "BfR 2025",
+   "voll": "Bundesinstitut für Risikobewertung: Ausgewählte Fragen und Antworten zu Vitamin D, Stand 30.12.2025.",
+   "url": "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-vitamin-d.pdf"
+  },
+  "rabenberg2015": {
+   "kurz": "Rabenberg et al. 2015",
+   "voll": "Rabenberg M et al. Vitamin D status among adults in Germany – results from DEGS1. BMC Public Health 2015;15:641.",
+   "url": "https://doi.org/10.1186/s12889-015-2016-7"
+  },
+  "rabenberg2018": {
+   "kurz": "Rabenberg et al. 2018",
+   "voll": "Rabenberg M et al. Implications of standardization of serum 25-hydroxyvitamin D data for the evaluation of vitamin D status in Germany. BMC Public Health 2018;18:845.",
+   "url": "https://doi.org/10.1186/s12889-018-5769-y"
+  },
+  "ross2011": {
+   "kurz": "Ross et al. 2011",
+   "voll": "Ross AC et al. The 2011 Report on Dietary Reference Intakes for Calcium and Vitamin D from the Institute of Medicine. J Clin Endocrinol Metab 2011;96(1):53–58.",
+   "url": "https://doi.org/10.1210/jc.2010-2704"
+  },
+  "demay2024": {
+   "kurz": "Demay et al. 2024",
+   "voll": "Demay MB et al. Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab 2024;109(8):1907–1947.",
+   "url": "https://doi.org/10.1210/clinem/dgae290"
+  },
+  "kvb2026": {
+   "kurz": "KVB 2026",
+   "voll": "Kassenärztliche Vereinigung Bayerns: Vitamin D zwischen Verordnungsfähigkeit und Patientenwunsch. Verordnung aktuell, 26.02.2026.",
+   "url": "https://www.kvb.de/fileadmin/kvb/Mitglieder/Verordnungen/VO-aktuell/2026-DS/KVB-VA-260226-WIS-Vitamin-D.pdf"
+  },
+  "autier2014": {
+   "kurz": "Autier et al. 2014",
+   "voll": "Autier P et al. Vitamin D status and ill health: a systematic review. Lancet Diabetes Endocrinol 2014;2(1):76–89.",
+   "url": "https://doi.org/10.1016/S2213-8587(13)70165-7"
+  },
+  "manson2019": {
+   "kurz": "Manson et al. 2019",
+   "voll": "Manson JE et al. Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease (VITAL). N Engl J Med 2019;380:33–44. (Präparate von Pharmavite gespendet)",
+   "url": "https://doi.org/10.1056/NEJMoa1809944"
+  },
+  "leboff2022": {
+   "kurz": "LeBoff et al. 2022",
+   "voll": "LeBoff MS et al. Supplemental Vitamin D and Incident Fractures in Midlife and Older Adults. N Engl J Med 2022;387:299–309.",
+   "url": "https://doi.org/10.1056/NEJMoa2202106"
+  },
+  "neale2022": {
+   "kurz": "Neale et al. 2022",
+   "voll": "Neale RE et al. The D-Health Trial: a randomised controlled trial of the effect of vitamin D on mortality. Lancet Diabetes Endocrinol 2022;10(2):120–128.",
+   "url": "https://doi.org/10.1016/S2213-8587(21)00345-4"
+  },
+  "scragg2017": {
+   "kurz": "Scragg et al. 2017",
+   "voll": "Scragg R et al. Effect of Monthly High-Dose Vitamin D Supplementation on Cardiovascular Disease in the Vitamin D Assessment Study. JAMA Cardiol 2017;2(6):608–616.",
+   "url": "https://doi.org/10.1001/jamacardio.2017.0175"
+  },
+  "bischoff2020": {
+   "kurz": "Bischoff-Ferrari et al. 2020",
+   "voll": "Bischoff-Ferrari HA et al. Effect of Vitamin D Supplementation, Omega-3 Fatty Acids, and a Strength-Training Exercise Program on Clinical Outcomes in Older Adults: The DO-HEALTH Randomized Clinical Trial. JAMA 2020;324(18):1855–1868. (Industrie-Mitfinanzierung)",
+   "url": "https://doi.org/10.1001/jama.2020.16909"
+  },
+  "bolland2018": {
+   "kurz": "Bolland et al. 2018",
+   "voll": "Bolland MJ et al. Effects of vitamin D supplementation on musculoskeletal health: a systematic review, meta-analysis, and trial sequential analysis. Lancet Diabetes Endocrinol 2018;6(11):847–858.",
+   "url": "https://doi.org/10.1016/S2213-8587(18)30265-1"
+  },
+  "keum2019": {
+   "kurz": "Keum et al. 2019",
+   "voll": "Keum N et al. Vitamin D supplementation and total cancer incidence and mortality: a meta-analysis of randomized controlled trials. Ann Oncol 2019;30(5):733–743.",
+   "url": "https://doi.org/10.1093/annonc/mdz059"
+  },
+  "kuznia2023": {
+   "kurz": "Kuznia et al. 2023",
+   "voll": "Kuznia S et al. Efficacy of vitamin D3 supplementation on cancer mortality: Systematic review and individual patient data meta-analysis of randomised controlled trials. Ageing Res Rev 2023;87:101923.",
+   "url": "https://doi.org/10.1016/j.arr.2023.101923"
+  },
+  "jolliffe2021": {
+   "kurz": "Jolliffe et al. 2021",
+   "voll": "Jolliffe DA et al. Vitamin D supplementation to prevent acute respiratory infections: a systematic review and meta-analysis of aggregate data from randomised controlled trials. Lancet Diabetes Endocrinol 2021;9(5):276–292.",
+   "url": "https://doi.org/10.1016/S2213-8587(21)00051-6"
+  },
+  "jolliffe2022": {
+   "kurz": "Jolliffe et al. 2022",
+   "voll": "Jolliffe DA et al. Effect of a test-and-treat approach to vitamin D supplementation on risk of all cause acute respiratory tract infection and covid-19 (CORONAVIT). BMJ 2022;378:e071230. (Hersteller-Mitfinanzierung)",
+   "url": "https://doi.org/10.1136/bmj-2022-071230"
+  },
+  "okereke2020": {
+   "kurz": "Okereke et al. 2020",
+   "voll": "Okereke OI et al. Effect of Long-term Vitamin D3 Supplementation vs Placebo on Risk of Depression or Clinically Relevant Depressive Symptoms (VITAL-DEP). JAMA 2020;324(5):471–480.",
+   "url": "https://doi.org/10.1001/jama.2020.10224"
+  },
+  "zhu2025": {
+   "kurz": "Zhu et al. 2025",
+   "voll": "Zhu H et al. Vitamin D3 and marine ω-3 fatty acids supplementation and leukocyte telomere length: 4-year findings from VITAL. Am J Clin Nutr 2025.",
+   "url": "https://doi.org/10.1016/j.ajcnut.2025.05.003"
+  },
+  "efsa2023": {
+   "kurz": "EFSA 2023",
+   "voll": "EFSA NDA Panel. Scientific opinion on the tolerable upper intake level for vitamin D, including the derivation of a conversion factor for calcidiol monohydrate. EFSA J 2023;21(8):e08145.",
+   "url": "https://doi.org/10.2903/j.efsa.2023.8145"
+  },
+  "burt2019": {
+   "kurz": "Burt et al. 2019",
+   "voll": "Burt LA et al. Effect of High-Dose Vitamin D Supplementation on Volumetric Bone Density and Bone Strength: A Randomized Clinical Trial. JAMA 2019;322(8):736–745.",
+   "url": "https://doi.org/10.1001/jama.2019.11889"
+  },
+  "bfr045_2026": {
+   "kurz": "BfR 2026",
+   "voll": "BfR-Mitteilung 045/2026: Vitamin-D-Vergiftung bei Säuglingen, 07.08.2026.",
+   "url": "https://www.bfr.bund.de/mitteilung/vitamin-d-vergiftung-bei-saeuglingen/"
+  },
+  "sanders2010": {
+   "kurz": "Sanders et al. 2010",
+   "voll": "Sanders KM et al. Annual high-dose oral vitamin D and falls and fractures in older women: a randomized controlled trial. JAMA 2010;303(18):1815–1822.",
+   "url": "https://doi.org/10.1001/jama.2010.594"
+  },
+  "bfr031_2025": {
+   "kurz": "BfR 2025b",
+   "voll": "BfR-Stellungnahme 031/2025: Einnahme hoher Einzeldosen Vitamin D über Nahrungsergänzungsmittel im Abstand von Tagen oder Wochen birgt gesundheitliche Risiken.",
+   "url": "https://doi.org/10.17590/20250903-104032-0"
+  },
+  "warentest2025": {
+   "kurz": "Stiftung Warentest 2025",
+   "voll": "Stiftung Warentest: Vitamin-D-Präparate – Für viele überflüssig. Pressemitteilung 15.12.2025 (test 01/2026).",
+   "url": "https://www.test.de/presse/pressemitteilungen/Vitamin-D-Praeparate-Fuer-viele-ueberfluessig-6259497-0/"
+  },
+  "vz2026": {
+   "kurz": "Verbraucherzentrale 2026",
+   "voll": "Verbraucherzentrale: Vitamin D besser mit Vitamin K2? Stand 15.07.2026.",
+   "url": "https://www.verbraucherzentrale.de/faq/lebensmittel/vitamin-d-besser-mit-vitamin-k2-39144"
+  },
+  "chapuy1992": {
+   "kurz": "Chapuy et al. 1992",
+   "voll": "Chapuy MC et al. Vitamin D3 and calcium to prevent hip fractures in elderly women. N Engl J Med 1992;327:1637–1642.",
+   "url": "https://doi.org/10.1056/NEJM199212033272305"
+  },
+  "avenell2014": {
+   "kurz": "Avenell et al. 2014",
+   "voll": "Avenell A et al. Vitamin D and vitamin D analogues for preventing fractures in post-menopausal women and older men. Cochrane Database Syst Rev 2014;CD000227.",
+   "url": "https://doi.org/10.1002/14651858.CD000227.pub4"
+  },
+  "koletzko2018": {
+   "kurz": "Koletzko et al. 2018",
+   "voll": "Koletzko B et al. Ernährung und Lebensstil vor und während der Schwangerschaft – Handlungsempfehlungen des bundesweiten Netzwerks Gesund ins Leben. Geburtsh Frauenheilk 2018;78:1262–1282.",
+   "url": "https://www.gesund-ins-leben.de/fileadmin/resources/import/pdf/3589_empfehlungen_vor_und_in_schwangerschaft_2018_gebfra.pdf"
+  }
+ },
+ "scenes": [
+  {
+   "id": "d0",
+   "layout": "kacheln",
+   "kapitel": "Einleitung",
+   "kicker": "Faktencheck",
+   "headline": "Vitamin D: Was stimmt wirklich?",
+   "sentences": [
+    {
+     "t": "Vitamin D: Viele raten zu 10.000 Einheiten am Tag, gegen Krebs, Infekte und sogar gegen das Altern. Was davon hält?",
+     "say": "Vitamin D: Viele raten zu zehntausend Einheiten am Tag, gegen Krebs, Infekte und sogar gegen das Altern. Was davon hält?"
+    },
+    "Wir prüfen sechs Fragen: Sonne oder Essen, wie häufig Mangel ist, Testen, die großen Studien, Infekte und Altern, und Megadosen."
+   ],
+   "hervorheben_at": 1,
+   "legende_at": 1,
+   "kacheln_ab": 1,
+   "hook_bild": "bilder/d0_hook.png",
+   "hook_titel": "Vitamin D",
+   "hook_zeilen": [
+    {
+     "t": "10.000 Einheiten am Tag?",
+     "wort": "zehntausend"
+    },
+    {
+     "t": "Gegen Krebs und Infekte?",
+     "wort": "Krebs"
+    },
+    {
+     "t": "Bremst es das Altern?",
+     "wort": "Altern"
+    },
+    {
+     "t": "Was davon hält?",
+     "wort": "Was",
+     "art": "urteil"
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/d0_hook.png",
+     "prompt": "a wide winter view through a large window: on the RIGHT half of the frame a big glass jar filled with golden soft-gel capsules (plain jar, no label) stands on a wooden windowsill, behind it a pale low winter sun hangs above snowy rooftops; the LEFT half of the frame is calm, empty, softly lit pale sky and plain wall with nothing in it, leaving room for a title; calm and slightly mysterious mood"
+    }
+   ],
+   "kacheln": [
+    {
+     "t": "Sonne oder Essen?",
+     "bild": "bilder/d1b.png",
+     "wort": "Essen"
+    },
+    {
+     "t": "Wie verbreitet ist Mangel?",
+     "bild": "bilder/d2a.png",
+     "wort": "Mangel"
+    },
+    {
+     "t": "Testen lassen?",
+     "bild": "bilder/d3a.png",
+     "wort": "Testen"
+    },
+    {
+     "t": "Die großen Studien",
+     "bild": "bilder/d4a.png",
+     "wort": "Studien"
+    },
+    {
+     "t": "Infekte und Altern",
+     "bild": "bilder/d5a.png",
+     "wort": "Altern, und"
+    },
+    {
+     "t": "Megadosen",
+     "bild": "bilder/d6a.png",
+     "wort": "Megadosen"
+    }
+   ]
+  },
+  {
+   "id": "d1",
+   "kapitel": "Sonne oder Essen?",
+   "kicker": "Herkunft",
+   "headline": "Woher kommt Vitamin D?",
+   "sentences": [
+    "Den größten Teil seines Vitamin D bildet dein Körper selbst: in der Haut, mit dem UV-Licht der Sonne.",
+    "Aus dem Essen kommt nur ein kleiner Teil, viel steckt nur in fettem Fisch wie Hering, etwas in Eiern und Pilzen.",
+    "Von Oktober bis März steht die Sonne in Deutschland zu tief. Dann bildet die Haut kaum Vitamin D.",
+    "Faustregel: Ist dein Schatten länger als du, bildet die Haut wenig. Geprüft ist das aber nicht.",
+    "Im Alter, mit dunkler Haut und mit Sonnencreme bildet die Haut weniger.",
+    {
+     "t": "Tipp für dich: Geh von Frühling bis Herbst oft raus, Gesicht und Arme frei, 5 bis 25 Minuten je nach Hauttyp, ohne Sonnenbrand.",
+     "say": "Tipp für dich: Geh von Frühling bis Herbst oft raus, Gesicht und Arme frei, fünf bis fünfundzwanzig Minuten je nach Hauttyp, ohne Sonnenbrand."
+    }
+   ],
+   "bullets": [
+    {
+     "t": "Haut bildet den Großteil",
+     "at": 0,
+     "ev": "stark"
+    },
+    {
+     "t": "Essen allein reicht",
+     "at": 1,
+     "ev": "keine"
+    },
+    {
+     "t": "Oktober bis März kaum Bildung",
+     "at": 2,
+     "ev": "stark"
+    }
+   ],
+   "evidence": {
+    "level": "stark",
+    "label": "gut belegt"
+   },
+   "quellen": [
+    "bfr2025",
+    "rabenberg2015"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/d1b.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/d1a.png",
+     "zoom": "none",
+     "a": [
+      0,
+      0,
+      2048,
+      1152
+     ],
+     "at": 2
+    },
+    {
+     "bild": "bilder/d1b.png",
+     "zoom": 0.18,
+     "at": 5
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/d1a.png",
+     "prompt": "split picture in two halves side by side: LEFT half a bright summer midday, sun high in the sky, a woman standing on a meadow casting a very SHORT shadow at her feet; RIGHT half a cold winter noon, sun very low near the horizon, the same woman in a coat casting a very LONG shadow stretching far across the snow; the two shadows clearly visible and the main point of the picture"
+    },
+    {
+     "datei": "bilder/d1b.png",
+     "prompt": "on a wooden board seen slightly from above: a large fillet of salmon, two whole herrings, two eggs (one cut open showing the yolk) and a small heap of brown mushrooms, all big in the frame"
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "kapitel": "Wie verbreitet ist Mangel?",
+   "kicker": "Verbreitung",
+   "headline": "Wie verbreitet ist ein Mangel?",
+   "sentences": [
+    "Oft heißt es, fast alle Deutschen hätten einen Mangel.",
+    {
+     "t": "Die große Messung des Robert Koch-Instituts zeigt: Etwa jeder Siebte liegt im echten Mangel, unter 30 Nanomol pro Liter.",
+     "say": "Die große Messung des Robert Koch-Instituts zeigt: Etwa jeder Siebte liegt im echten Mangel, unter dreißig Nanomol pro Liter."
+    },
+    "Gut vier von zehn liegen in einem Graubereich darüber, knapp die Hälfte ist gut versorgt.",
+    "Im Winter liegen die Werte deutlich tiefer.",
+    {
+     "t": "Die hohen Mangel-Zahlen entstehen mit einer Grenze von 75, die nicht einmal jeder Zehnte erreicht.",
+     "say": "Die hohen Mangel-Zahlen entstehen mit einer Grenze von fünfundsiebzig, die nicht einmal jeder Zehnte erreicht."
+    },
+    {
+     "t": "Doch diese Grenze ist umstritten: Laut den großen Fachgremien reichen 50 für fast alle.",
+     "say": "Doch diese Grenze ist umstritten: Laut den großen Fachgremien reichen fünfzig für fast alle."
+    },
+    "Tipp für dich: Ein Wert im Graubereich ist kein Notfall. Frag nach, welche Grenze dein Labor verwendet."
+   ],
+   "bullets": [
+    {
+     "t": "Fast alle haben einen Mangel",
+     "at": 1,
+     "ev": "keine"
+    },
+    {
+     "t": "Im Winter niedrigere Werte",
+     "at": 3,
+     "ev": "stark"
+    },
+    {
+     "t": "Ziel: mindestens 75 nmol/l",
+     "at": 5,
+     "ev": "mittel"
+    }
+   ],
+   "evidence": {
+    "level": "mittel",
+    "label": "Mangel seltener als behauptet"
+   },
+   "quellen": [
+    "rabenberg2018",
+    "rabenberg2015",
+    "ross2011",
+    "demay2024"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/d2a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/d2b.png",
+     "zoom": 0.18,
+     "at": 6
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/d2a.png",
+     "prompt": "a busy pedestrian street in a German town on a grey winter day, many adults of different ages and looks in warm coats and scarves walking, pale sky, soft muted light, the people fill the frame"
+    },
+    {
+     "datei": "bilder/d2b.png",
+     "prompt": "a woman in her fifties sitting relaxed on a park bench in late spring sunshine with short sleeves, face and forearms in the sun, eyes closed, blossoming trees behind her"
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "kapitel": "Testen lassen?",
+   "kicker": "Test",
+   "headline": "Solltest du testen lassen?",
+   "sentences": [
+    "Viele raten, den Vitamin-D-Wert regelmäßig messen zu lassen.",
+    {
+     "t": "Eine große Fachgesellschaft für Hormonmedizin rät seit 2024 davon ab, Gesunde routinemäßig zu testen.",
+     "say": "Eine große Fachgesellschaft für Hormonmedizin rät seit zweitausendvierundzwanzig davon ab, Gesunde routinemäßig zu testen."
+    },
+    "Denn der richtige Zielwert ist unklar, und Studien zum Nutzen solcher Tests fehlen.",
+    "Die Kasse zahlt ihn nur bei begründetem Verdacht, sonst kostet er meist rund dreißig Euro.",
+    "Achte auf die Einheit: Nanogramm pro Milliliter mal zweieinhalb ergibt Nanomol pro Liter. Zwanzig sind also fünfzig.",
+    "Tipp für dich: Lass testen, wenn Arzt oder Ärztin einen Grund sehen, etwa bei Knochenschwund."
+   ],
+   "bullets": [
+    {
+     "t": "Alle sollten regelmäßig testen",
+     "at": 1,
+     "ev": "keine",
+     "unbelegt": true
+    },
+    {
+     "t": "ng/ml mal 2,5 = nmol/l",
+     "at": 4,
+     "ev": "stark"
+    }
+   ],
+   "evidence": {
+    "level": "keine",
+    "label": "Routinetest: Nutzen unbelegt"
+   },
+   "quellen": [
+    "demay2024",
+    "kvb2026"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/d3a.png",
+     "zoom": "none",
+     "a": [
+      0,
+      0,
+      2048,
+      1152
+     ]
+    },
+    {
+     "bild": "bilder/d3b.png",
+     "zoom": 0.18,
+     "at": 3
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/d3a.png",
+     "prompt": "a laboratory rack holding five glass test tubes filled with clear pale amber serum, large in the frame, next to a simple round dial gauge with a green, a yellow and a red zone and a pointer, no numbers or marks on the dial"
+    },
+    {
+     "datei": "bilder/d3b.png",
+     "prompt": "a calm conversation in a bright cosy office: a doctor in a cardigan and a man in his forties sit at a wooden desk with a green plant, the doctor explaining with an open friendly gesture, no screens, no papers with writing"
+    }
+   ]
+  },
+  {
+   "id": "d4",
+   "kapitel": "Die großen Studien",
+   "kicker": "Studien",
+   "headline": "Was zeigen die großen Studien?",
+   "sentences": [
+    "Vitamin D soll vor Krebs, Herzinfarkt und Knochenbrüchen schützen.",
+    "Zwar sind Menschen mit wenig Vitamin D öfter krank, doch Krankheit kann den Wert auch senken.",
+    "Deshalb zählen Studien, in denen das Los entscheidet, wer Vitamin D bekommt und wer ein Scheinmittel.",
+    {
+     "t": "Die größte lief in den USA, mit über 25.000 Menschen, fünf Jahre lang.",
+     "say": "Die größte lief in den USA, mit über fünfundzwanzigtausend Menschen, fünf Jahre lang."
+    },
+    "Ergebnis: nicht weniger Krebs, nicht weniger Herzinfarkte und Schlaganfälle, nicht weniger Brüche. Ähnlich in Australien, Neuseeland und Europa.",
+    "Ein Lichtblick: Bei täglicher Einnahme starben etwas weniger Menschen an Krebs. Gesichert ist das aber nicht.",
+    "Wichtig: Fast alle Teilnehmer waren gut versorgt. Über echten Mangel sagen diese Studien wenig.",
+    "Tipp für dich: Nimm Vitamin D nicht als Krebs- oder Herzschutz. Bewegung und Nichtrauchen sind dafür viel besser belegt."
+   ],
+   "bullets": [
+    {
+     "t": "Schützt vor Krebs",
+     "at": 4,
+     "ev": "keine"
+    },
+    {
+     "t": "Schützt Herz und Gefäße",
+     "at": 4,
+     "ev": "keine"
+    },
+    {
+     "t": "Schützt Gesunde vor Brüchen",
+     "at": 4,
+     "ev": "keine"
+    },
+    {
+     "t": "Weniger Krebstodesfälle",
+     "at": 5,
+     "ev": "mittel"
+    }
+   ],
+   "evidence": {
+    "level": "keine",
+    "label": "kein Schutz bei guter Versorgung"
+   },
+   "quellen": [
+    "autier2014",
+    "manson2019",
+    "leboff2022",
+    "neale2022",
+    "scragg2017",
+    "bischoff2020",
+    "bolland2018",
+    "keum2019",
+    "kuznia2023"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/d4a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/d4b.png",
+     "zoom": "none",
+     "a": [
+      0,
+      0,
+      2048,
+      1152
+     ],
+     "at": 4
+    },
+    {
+     "bild": "bilder/d4a.png",
+     "zoom": 0.18,
+     "at": 6
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/d4a.png",
+     "prompt": "aerial view of a huge green meadow where thousands of tiny people stand in two large, equally sized groups side by side, one group in warm ochre clothes and one group in dove blue clothes, like a gigantic scientific study seen from above"
+    },
+    {
+     "datei": "bilder/d4b.png",
+     "prompt": "a large old-fashioned brass balance scale standing perfectly level and balanced, on the left pan one golden soft-gel capsule, on the right pan one plain white pill, both pans at exactly the same height"
+    }
+   ]
+  },
+  {
+   "id": "d5",
+   "kapitel": "Infekte und Altern",
+   "kicker": "Weitere Versprechen",
+   "headline": "Infekte, Corona, Altern",
+   "sentences": [
+    "Gegen Erkältungen gibt es einen kleinen Schutz: Von hundert Menschen bleibt etwa einer mehr gesund.",
+    "Vor Corona schützte Vitamin D in einer großen Studie nicht, und Depressionen verhinderte es auch nicht.",
+    "Und das Altern? In einer Studie verkürzten sich mit Vitamin D die Telomere etwas langsamer, die Schutzkappen der Chromosomen.",
+    "Daraus wurde: Vitamin D bremse das Altern um fast drei Jahre.",
+    "Doch das ist hochgerechnet, knapp an der Grenze zum Zufall. Und Telomere sind ein Laborwert, keine Krankheit.",
+    "Tipp für dich: Bei Versprechen gegen das Altern frag nach: Wurden weniger Krankheiten gemessen oder nur ein Laborwert?"
+   ],
+   "bullets": [
+    {
+     "t": "Weniger Atemwegsinfekte",
+     "at": 0,
+     "ev": "mittel"
+    },
+    {
+     "t": "Schützt vor Corona und Depression",
+     "at": 1,
+     "ev": "keine"
+    },
+    {
+     "t": "Bremst das Altern um 3 Jahre",
+     "at": 3,
+     "ev": "mittel",
+     "neu": "erst eine Studie"
+    }
+   ],
+   "evidence": {
+    "level": "mittel",
+    "label": "kleine Effekte"
+   },
+   "quellen": [
+    "jolliffe2021",
+    "jolliffe2022",
+    "okereke2020",
+    "zhu2025"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/d5b.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/d5a.png",
+     "zoom": "none",
+     "a": [
+      0,
+      0,
+      2048,
+      1152
+     ],
+     "at": 2
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/d5a.png",
+     "prompt": "explanatory picture: one big stylized chromosome shaped like an X in dove blue, at each of its four ends a bright terracotta protective cap like the plastic tip of a shoelace, the caps clearly highlighted, simple and large in the frame"
+    },
+    {
+     "datei": "bilder/d5b.png",
+     "prompt": "a woman in her thirties wrapped in a thick blanket on a sofa with a cold, holding a large mug of tea with both hands close to her chest, a box of tissues beside her, a snowy window behind, the person has a simple, friendly hand-drawn human face with clearly drawn eyes, nose and mouth (not a blank face)"
+    }
+   ]
+  },
+  {
+   "id": "d6",
+   "kapitel": "Megadosen",
+   "kicker": "Dosis",
+   "headline": "Wie riskant sind Megadosen?",
+   "sentences": [
+    {
+     "t": "Manche raten zu 10.000 Einheiten am Tag oder mehr.",
+     "say": "Manche raten zu zehntausend Einheiten am Tag oder mehr."
+    },
+    {
+     "t": "Wer selbst kaum Vitamin D bildet, braucht laut Fachgesellschaft für Ernährung etwa 800 Einheiten.",
+     "say": "Wer selbst kaum Vitamin D bildet, braucht laut Fachgesellschaft für Ernährung etwa achthundert Einheiten."
+    },
+    {
+     "t": "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000. Bei 10.000 täglich sah sie schon erste Schäden.",
+     "say": "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde viertausend. Bei zehntausend täglich sah sie schon erste Schäden."
+    },
+    "Zu viel treibt das Kalzium im Blut hoch. Das kann Nierensteine machen und die Nieren bleibend schädigen.",
+    "Das Bundesinstitut für Risikobewertung meldet Vergiftungen, auch bei Säuglingen mit Mitteln für Erwachsene.",
+    "Auch riesige Einzeldosen sind riskant: Ältere Frauen mit einer Megadosis pro Jahr stürzten und brachen sich öfter etwas.",
+    "Die Stiftung Warentest fand die meisten Präparate überdosiert. Und Vitamin K2 dazu? Ein Nutzen ist nicht belegt.",
+    {
+     "t": "Tipp für dich: Nimm aus Nahrungsergänzung höchstens 800 Einheiten am Tag, außer Arzt oder Ärztin verordnen mehr.",
+     "say": "Tipp für dich: Nimm aus Nahrungsergänzung höchstens achthundert Einheiten am Tag, außer Arzt oder Ärztin verordnen mehr."
+    }
+   ],
+   "bullets": [
+    {
+     "t": "10.000 Einheiten täglich sind sicher",
+     "at": 2,
+     "ev": "keine",
+     "gefahr": true
+    },
+    {
+     "t": "Hohe Einzeldosen sind unbedenklich",
+     "at": 5,
+     "ev": "keine",
+     "gefahr": true
+    },
+    {
+     "t": "Vitamin K2 gehört dazu",
+     "at": 6,
+     "ev": "keine",
+     "unbelegt": true
+    }
+   ],
+   "evidence": {
+    "level": "keine",
+    "label": "Megadosen schaden eher"
+   },
+   "quellen": [
+    "efsa2023",
+    "bfr2025",
+    "burt2019",
+    "bfr045_2026",
+    "sanders2010",
+    "bfr031_2025",
+    "warentest2025",
+    "vz2026"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/d6a.png",
+     "zoom": "none",
+     "a": [
+      0,
+      0,
+      2048,
+      1152
+     ]
+    },
+    {
+     "bild": "bilder/d6b.png",
+     "zoom": "none",
+     "a": [
+      0,
+      0,
+      2048,
+      1152
+     ],
+     "at": 3
+    },
+    {
+     "bild": "bilder/d6a.png",
+     "zoom": "none",
+     "a": [
+      0,
+      0,
+      2048,
+      1152
+     ],
+     "at": 5
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/d6a.png",
+     "prompt": "a giant glass jar on a kitchen table overflowing with hundreds of golden soft-gel capsules that spill across the table, next to it for contrast a single small capsule on a teaspoon, a slightly uneasy mood with a warm terracotta glow"
+    },
+    {
+     "datei": "bilder/d6b.png",
+     "prompt": "explanatory picture: a pair of large stylized human kidneys in terracotta, inside them several small chalky white crystal grains are visible, simple and large in the frame, medical illustration style but in watercolor"
+    }
+   ]
+  },
+  {
+   "id": "d7",
+   "kapitel": "Fazit",
+   "kicker": "Fazit",
+   "headline": "Wann Vitamin D sinnvoll ist",
+   "sentences": [
+    "Wann ist Vitamin D also klar sinnvoll?",
+    "Bei Säuglingen: Sie bekommen es gegen Rachitis, bis zu ihrem zweiten Frühsommer.",
+    "Bei Menschen im Pflegeheim, die kaum nach draußen kommen. Zusammen mit Kalzium senkt es dort Hüftbrüche.",
+    "Und bei nachgewiesenem Mangel. Schwangere mit wenig Sonne sollten es ansprechen.",
+    "Für alle anderen: Sommersonne hilft viel, im Winter kann eine kleine Tagesdosis sinnvoll sein, Megadosen schaden eher.",
+    "Die Quellen stehen in der Beschreibung.",
+    "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
+   ],
+   "bullets": [
+    {
+     "t": "Säuglinge: Schutz vor Rachitis",
+     "at": 1,
+     "ev": "stark"
+    },
+    {
+     "t": "Pflegeheim: weniger Hüftbrüche",
+     "at": 2,
+     "ev": "stark"
+    },
+    {
+     "t": "Viel hilft viel",
+     "at": 4,
+     "ev": "keine"
+    }
+   ],
+   "evidence": {
+    "level": "stark",
+    "label": "sinnvoll für Risikogruppen"
+   },
+   "quellen": [
+    "bfr2025",
+    "chapuy1992",
+    "avenell2014",
+    "koletzko2018"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/d7a.png",
+     "zoom": 0.18
+    },
+    {
+     "bild": "bilder/d7b.png",
+     "zoom": 0.18,
+     "at": 2
+    }
+   ],
+   "bilder": [
+    {
+     "datei": "bilder/d7a.png",
+     "prompt": "a young mother sitting in a sunny nursery holding her sleeping baby in her arms, on a small table beside them stands a small brown glass dropper bottle without any label, tender and calm, the person has a simple, friendly hand-drawn human face with clearly drawn eyes, nose and mouth (not a blank face)"
+    },
+    {
+     "datei": "bilder/d7b.png",
+     "prompt": "two elderly people, a woman with a walking stick and a man, sitting together on a bench in a sunny garden of a care home, smiling, flowers around them"
+    }
+   ]
+  }
+ ]
+}

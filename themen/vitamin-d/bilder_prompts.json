@@ -1,0 +1,104 @@
+{
+ "scenes": [
+  {
+   "id": "d0",
+   "bilder": [
+    {
+     "datei": "bilder/d0_hook.png",
+     "prompt": "a wide winter view through a large window: on the RIGHT half of the frame a big glass jar filled with golden soft-gel capsules (plain jar, no label) stands on a wooden windowsill, behind it a pale low winter sun hangs above snowy rooftops; the LEFT half of the frame is calm, empty, softly lit pale sky and plain wall with nothing in it, leaving room for a title; calm and slightly mysterious mood"
+    }
+   ]
+  },
+  {
+   "id": "d1",
+   "bilder": [
+    {
+     "datei": "bilder/d1a.png",
+     "prompt": "split picture in two halves side by side: LEFT half a bright summer midday, sun high in the sky, a woman standing on a meadow casting a very SHORT shadow at her feet; RIGHT half a cold winter noon, sun very low near the horizon, the same woman in a coat casting a very LONG shadow stretching far across the snow; the two shadows clearly visible and the main point of the picture"
+    },
+    {
+     "datei": "bilder/d1b.png",
+     "prompt": "on a wooden board seen slightly from above: a large fillet of salmon, two whole herrings, two eggs (one cut open showing the yolk) and a small heap of brown mushrooms, all big in the frame"
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "bilder": [
+    {
+     "datei": "bilder/d2a.png",
+     "prompt": "a busy pedestrian street in a German town on a grey winter day, many adults of different ages and looks in warm coats and scarves walking, pale sky, soft muted light, the people fill the frame"
+    },
+    {
+     "datei": "bilder/d2b.png",
+     "prompt": "a woman in her fifties sitting relaxed on a park bench in late spring sunshine with short sleeves, face and forearms in the sun, eyes closed, blossoming trees behind her"
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "bilder": [
+    {
+     "datei": "bilder/d3a.png",
+     "prompt": "a laboratory rack holding five glass test tubes filled with clear pale amber serum, large in the frame, next to a simple round dial gauge with a green, a yellow and a red zone and a pointer, no numbers or marks on the dial"
+    },
+    {
+     "datei": "bilder/d3b.png",
+     "prompt": "a calm conversation in a bright cosy office: a doctor in a cardigan and a man in his forties sit at a wooden desk with a green plant, the doctor explaining with an open friendly gesture, no screens, no papers with writing"
+    }
+   ]
+  },
+  {
+   "id": "d4",
+   "bilder": [
+    {
+     "datei": "bilder/d4a.png",
+     "prompt": "aerial view of a huge green meadow where thousands of tiny people stand in two large, equally sized groups side by side, one group in warm ochre clothes and one group in dove blue clothes, like a gigantic scientific study seen from above"
+    },
+    {
+     "datei": "bilder/d4b.png",
+     "prompt": "a large old-fashioned brass balance scale standing perfectly level and balanced, on the left pan one golden soft-gel capsule, on the right pan one plain white pill, both pans at exactly the same height"
+    }
+   ]
+  },
+  {
+   "id": "d5",
+   "bilder": [
+    {
+     "datei": "bilder/d5a.png",
+     "prompt": "explanatory picture: one big stylized chromosome shaped like an X in dove blue, at each of its four ends a bright terracotta protective cap like the plastic tip of a shoelace, the caps clearly highlighted, simple and large in the frame"
+    },
+    {
+     "datei": "bilder/d5b.png",
+     "prompt": "a woman in her thirties wrapped in a thick blanket on a sofa with a cold, holding a large mug of tea with both hands close to her chest, a box of tissues beside her, a snowy window behind, the person has a simple, friendly hand-drawn human face with clearly drawn eyes, nose and mouth (not a blank face)"
+    }
+   ]
+  },
+  {
+   "id": "d6",
+   "bilder": [
+    {
+     "datei": "bilder/d6a.png",
+     "prompt": "a giant glass jar on a kitchen table overflowing with hundreds of golden soft-gel capsules that spill across the table, next to it for contrast a single small capsule on a teaspoon, a slightly uneasy mood with a warm terracotta glow"
+    },
+    {
+     "datei": "bilder/d6b.png",
+     "prompt": "explanatory picture: a pair of large stylized human kidneys in terracotta, inside them several small chalky white crystal grains are visible, simple and large in the frame, medical illustration style but in watercolor"
+    }
+   ]
+  },
+  {
+   "id": "d7",
+   "bilder": [
+    {
+     "datei": "bilder/d7a.png",
+     "prompt": "a young mother sitting in a sunny nursery holding her sleeping baby in her arms, on a small table beside them stands a small brown glass dropper bottle without any label, tender and calm, the person has a simple, friendly hand-drawn human face with clearly drawn eyes, nose and mouth (not a blank face)"
+    },
+    {
+     "datei": "bilder/d7b.png",
+     "prompt": "two elderly people, a woman with a walking stick and a man, sitting together on a bench in a sunny garden of a care home, smiling, flowers around them"
+    }
+   ]
+  }
+ ]
+}
