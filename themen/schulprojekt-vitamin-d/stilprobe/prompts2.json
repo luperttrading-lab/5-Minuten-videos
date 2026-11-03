@@ -1,0 +1,13 @@
+{
+ "motiv": "a young woman in a t-shirt and shorts sitting relaxed on a park bench in bright midday summer sun, a big sun high in the sky, a short shadow under the bench, tiny glowing golden sparks rising from the sunlit skin of her arms and legs, and exactly one short label reading 'Vitamin D' next to the sparks",
+ "gemeinsam": " Wide 16:9 landscape composition for a phone screen: the main motif is large and fills most of the frame, few big clearly readable elements, nothing cut off at the edges. The only text in the image is the single label 'Vitamin D', spelled exactly like that. No other text, no logos.",
+ "stile": {
+  "g_aquarell": "Ink and watercolor illustration on warm textured off-white paper, loose expressive black ink lines, soft washes of dusty blue, terracotta, ochre and sage green, calm editorial magazine style, label hand-lettered in ink.",
+  "h_comic": "Clean-line European comic book style (ligne claire), bold uniform black outlines, flat bright colors, simple shading, a single comic panel with a thin black border, label in hand-lettered comic font. STRICT: the label 'Vitamin D' appears exactly once in the whole image. No speech bubbles, no lists, no notes, no captions, no numbers, no other words or letters anywhere.",
+  "i_trickfilm": "3D animated feature film style, appealing stylized characters with large expressive eyes, soft subsurface skin, warm cinematic lighting, rich colors, polished family movie look, label on a small wooden sign.",
+  "j_heft": "Doodle drawn with blue ballpoint pen and a few colored markers on squared school notebook paper, playful hand-drawn arrows and little stars around the scene, handwritten label. STRICT: the label 'Vitamin D' appears exactly once in the whole image. No speech bubbles, no lists, no notes, no captions, no numbers, no other words or letters anywhere.",
+  "k_blaupause": "Technical blueprint drawing, fine white construction lines on deep blueprint blue paper, precise outlines, dimension arrows and grid, scientific schematic look, label in white technical stencil lettering.",
+  "l_pixel": "Retro 16-bit pixel art like a classic video game scene, crisp visible pixels, limited bright palette, chunky clouds and trees, label in a blocky pixel font."
+ },
+ "hinweis": "h_comic und j_heft mit strenger Etikett-Vorgabe neu erzeugt (erster Lauf: mehrfaches Etikett bzw. englische Notizen)"
+}
