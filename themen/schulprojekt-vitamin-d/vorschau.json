@@ -1,14 +1,14 @@
 {
  "titel": "Schulprojekt Vitamin D",
- "aufgabe": "Bildstil wählen: bei deinem Favoriten „passt“ tippen (auch zwei möglich). Erst danach baue ich Drehbuch und Bilder.",
+ "aufgabe": "Bildstil wählen: bei deinem Favoriten „passt“ tippen (auch zwei oder drei möglich). Zwölf Stile A–L, meine Empfehlung bleibt A (Kreide), Alternativen J (Schulheft) und H (Comic).",
  "videos": [
   {
-   "datei": "stil_uebersicht.mp4",
-   "titel": "Alle sechs Stile auf einen Blick (zur Info)",
-   "stand": "03.11., 10:30",
+   "datei": "stil_uebersicht_12.mp4",
+   "titel": "Alle zwölf Stile auf einen Blick (zur Info)",
+   "stand": "03.11., 11:05",
    "pruefen": false,
    "poster_bei": 1,
-   "notiz": "Dasselbe Motiv in sechs Stilen: Frau auf der Parkbank in der Mittagssonne, Funken auf der Haut, Etikett „Vitamin D“. Unten jeder Stil einzeln: „passt“ = diesen Stil nehmen (auch zwei möglich, dann entscheide ich nach Szene). Kosten der Probe: 67 Credits."
+   "notiz": "A–F aus dieser Sitzung, G–L aus der Hauptsitzung (gleiches Motiv, gleicher Prompt). Unten jeder Stil einzeln: „passt“ = diesen Stil nehmen."
   },
   {
    "datei": "stil_a_kreide.mp4",
@@ -57,6 +57,54 @@
    "pruefen": true,
    "poster_bei": 1,
    "notiz": "Seriös und nostalgisch, passt auch zum Schulthema, klassische Beschriftung. Nachteil: gedeckte Farben, leuchtet auf dem Handy weniger."
+  },
+  {
+   "datei": "stil_g_aquarell.mp4",
+   "titel": "G  Aquarell und Tusche",
+   "stand": "03.11., 11:05",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Nah am Stil der Faktencheck-Reihe, aber mit Schrift. Nachteil: grenzt sich kaum von den Faktencheck-Videos ab, die das Schulprojekt ja nicht sein soll."
+  },
+  {
+   "datei": "stil_h_comic.mp4",
+   "titel": "H  Comic (Ligne claire)",
+   "stand": "03.11., 11:05",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Klar, freundlich, gut lesbar auf dem Handy; Etikett als Schriftzug im Bild. Nachteil: erster Lauf hatte mehrfach „Vitamin D“, braucht strenge Vorgaben."
+  },
+  {
+   "datei": "stil_i_trickfilm.mp4",
+   "titel": "I  3D-Trickfilm",
+   "stand": "03.11., 11:05",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Sehr ansprechend, warmes Licht, stark fürs Vorschaubild. Nachteil: großes Holzschild wirkt etwas gestellt; Erklärbilder im Körper schwer."
+  },
+  {
+   "datei": "stil_j_heft.mp4",
+   "titel": "J  Skizze im Schulheft",
+   "stand": "03.11., 11:05",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Passt wörtlich zum Namen „Schulprojekt“, Pfeile und Notizen natürlich. Nachteil: Sonne mit Gesicht, und der erste Lauf schrieb ungeprüfte Notizen ins Bild."
+  },
+  {
+   "datei": "stil_k_blaupause.mp4",
+   "titel": "K  Blaupause",
+   "stand": "03.11., 11:05",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Auffällig und technisch, Lupen-Ausschnitt der Haut ist eine gute Idee für Erklärbilder. Nachteil: Maßzahlen im Bild (1600, 1800 …), die nichts bedeuten."
+  },
+  {
+   "datei": "stil_l_pixel.mp4",
+   "titel": "L  Pixel-Art",
+   "stand": "03.11., 11:05",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Verspielt, sofort erkennbar, spricht Jüngere an. Nachteil: wenig Details für Erklärbilder, wirkt wie ein Spiel."
   }
  ]
 }
