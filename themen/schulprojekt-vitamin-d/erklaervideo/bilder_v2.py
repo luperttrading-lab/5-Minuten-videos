@@ -79,7 +79,9 @@ def eins(job):
 
 if __name__ == '__main__':
     stile = sys.argv[1:] or list(BB.STILE)
-    jobs = [(s, k, 'szene') for s in stile for k in SZENE] + [(s, k, 'kachel') for s in stile for k in KACHEL]
+    jobs = [(s, k, 'szene') for s in stile for k in SZENE]
+    if os.environ.get('MIT_KACHEL'):
+        jobs += [(s, k, 'kachel') for s in stile for k in KACHEL]
     with ThreadPoolExecutor(8) as ex:
         erg = list(ex.map(eins, jobs))
     kosten = json.load(open('bilder_kosten.json'))

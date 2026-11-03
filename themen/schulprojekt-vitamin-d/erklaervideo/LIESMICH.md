@@ -16,3 +16,6 @@ Format: Erklärvideo ohne Faktencheck-Ampel (Schulprojekt), Gliederung nach dem 
 - ChatLLM-Credits während des Laufs aufgebraucht: J ohne neue Bilder für v6/v7 (alte Bilder), L ganz ohne neue Bilder,
   Kachel „Sonne“ aus dem Szenenbild v2a (16:9-Fassung `e2a_v2` fehlt). Nachholen: `python3 bilder_v2.py J L`, dann `drehbuch_bau.py` und rendern
 - Kosten zweite Runde: 122 Bilder geloggt 1.751 Credits, 128 weitere ungeloggt (Lauf brach ab) ≈ 1.840 geschätzt, 2 Tests 35
+
+## Nachtrag 03.11., 19:20: J und L vollständig
+- Nach dem Auffüllen der Credits: 46 Bilder (J v6/v7, L alle Szenenbilder), 644,9 Credits. Alle acht Stile jetzt mit eigenen Szenenbildern.

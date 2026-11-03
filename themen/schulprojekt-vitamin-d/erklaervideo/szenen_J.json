@@ -413,7 +413,19 @@
    ],
    "shots": [
     {
-     "bild": "bilder/J/e6.jpg"
+     "bild": "bilder/J/v6a.jpg"
+    },
+    {
+     "bild": "bilder/J/v6b.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/J/v6c.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/J/v6d.jpg",
+     "at": 4
     }
    ]
   },
@@ -457,7 +469,23 @@
    ],
    "shots": [
     {
-     "bild": "bilder/J/e7.jpg"
+     "bild": "bilder/J/v7a.jpg"
+    },
+    {
+     "bild": "bilder/J/v7b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/J/v7c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/J/v7d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/J/v7e.jpg",
+     "at": 5
     }
    ]
   }

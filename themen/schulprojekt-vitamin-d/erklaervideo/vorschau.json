@@ -1,6 +1,6 @@
 {
  "titel": "Vitamin D · Erklärvideo in acht Stilen",
- "aufgabe": "Zweite Fassung: Jedes Kapitel hat jetzt eigene Bilder, die alle 6–12 Sekunden wechseln (statt eines Ausschnitts aus dem Kachelbild). Sonnenbad mit Mann und Frau, glatte Haut ohne Funken. Bei deinem Favoriten „passt“ tippen, bei Fehlern „ändern“ mit Notiz. L (Pixel-Art) ist noch die alte Fassung, weil die ChatLLM-Credits aufgebraucht sind.",
+ "aufgabe": "Zweite Fassung, jetzt alle acht Stile: Jedes Kapitel hat eigene Bilder, die alle 6–12 Sekunden wechseln. Sonnenbad mit Mann und Frau, glatte Haut ohne Funken. Bei deinem Favoriten „passt“ tippen, bei Fehlern „ändern“ mit Notiz.",
  "videos": [
   {
    "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_C.mp4",
@@ -53,18 +53,18 @@
   {
    "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_J.mp4",
    "titel": "J  Skizze im Schulheft (neu)",
-   "stand": "03.11., 17:46",
+   "stand": "03.11., 18:16",
    "pruefen": true,
    "poster_bei": 60,
-   "notiz": "29 Bilder. Für die letzten beiden Kapitel fehlen neue Bilder (Credits leer), dort noch die alten."
+   "notiz": "36 Bilder, jetzt vollständig."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer/vorschau_L.mp4",
-   "titel": "L  Pixel-Art (alte Fassung)",
-   "stand": "03.11., 14:46",
-   "pruefen": false,
-   "poster_bei": 8,
-   "notiz": "Noch ohne neue Bilder: Die ChatLLM-Credits waren aufgebraucht, bevor L an der Reihe war. Die Credits erneuern sich laut deiner Angabe am 5. des Monats."
+   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_L.mp4",
+   "titel": "L  Pixel-Art (neu)",
+   "stand": "03.11., 18:16",
+   "pruefen": true,
+   "poster_bei": 60,
+   "notiz": "36 Bilder, nach dem Auffüllen der Credits nachgeholt."
   }
  ]
 }
