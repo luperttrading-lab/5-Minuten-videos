@@ -1,0 +1,62 @@
+{
+ "titel": "Schulprojekt Vitamin D",
+ "aufgabe": "Bildstil wählen: bei deinem Favoriten „passt“ tippen (auch zwei möglich). Erst danach baue ich Drehbuch und Bilder.",
+ "videos": [
+  {
+   "datei": "stil_uebersicht.mp4",
+   "titel": "Alle sechs Stile auf einen Blick (zur Info)",
+   "stand": "03.11., 10:30",
+   "pruefen": false,
+   "poster_bei": 1,
+   "notiz": "Dasselbe Motiv in sechs Stilen: Frau auf der Parkbank in der Mittagssonne, Funken auf der Haut, Etikett „Vitamin D“. Unten jeder Stil einzeln: „passt“ = diesen Stil nehmen (auch zwei möglich, dann entscheide ich nach Szene). Kosten der Probe: 67 Credits."
+  },
+  {
+   "datei": "stil_a_kreide.mp4",
+   "titel": "A  Kreide auf Schultafel (meine Empfehlung)",
+   "stand": "03.11., 10:30",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Passt zum Namen „Schulprojekt“. Pfeile und Beschriftungen wirken natürlich, ideal für Erklärbilder (Haut → Leber → Niere, ng/ml-Skala). Dunkler Grund ist auf dem Handy kontrastreich. Nachteil: Menschen und Lebensmittel wirken gröber."
+  },
+  {
+   "datei": "stil_b_vektor.mp4",
+   "titel": "B  Flache Vektorgrafik",
+   "stand": "03.11., 10:30",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Modern, sehr gut lesbar, stark für Diagramme und Zahlen. Nachteil: Das Etikett steht viermal da statt einmal (Anweisung nicht befolgt), der Look ist austauschbar."
+  },
+  {
+   "datei": "stil_c_papier.mp4",
+   "titel": "C  Papierschnitt-Diorama",
+   "stand": "03.11., 10:30",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Warm, handgemacht, eigenständig, Etikett als Papierschild. Nachteil: Abläufe im Körper (Moleküle, Organe) lassen sich schwerer darstellen."
+  },
+  {
+   "datei": "stil_d_knete.mp4",
+   "titel": "D  Knetfiguren",
+   "stand": "03.11., 10:30",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Sympathisch und auffällig, stark fürs Vorschaubild. Nachteil: wirkt kindlich, bei Gesundheitsthemen eher weniger ernst."
+  },
+  {
+   "datei": "stil_e_isometrisch.mp4",
+   "titel": "E  Isometrische Miniaturwelt",
+   "stand": "03.11., 10:30",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Sauber und ruhig, gut für „Sonnenstand Sommer gegen Winter“ als kleine Welt. Nachteil: Das Motiv ist klein, viel leerer Himmel, schwach auf dem Handy."
+  },
+  {
+   "datei": "stil_f_lehrtafel.mp4",
+   "titel": "F  Retro-Lehrtafel",
+   "stand": "03.11., 10:30",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Seriös und nostalgisch, passt auch zum Schulthema, klassische Beschriftung. Nachteil: gedeckte Farben, leuchtet auf dem Handy weniger."
+  }
+ ]
+}
