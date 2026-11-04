@@ -25,7 +25,7 @@ const server = http.createServer((req, res) => {
 }).listen(0);
 const basis = `http://127.0.0.1:${server.address().port}/5-Minuten-videos/uebung/`;
 
-const FOLGE = '16x18,12x18,13x17,14x16,15x15,11x19,17x13,19x19,11x11,15x14';
+const FOLGE = '16x18,12x18,13x17,14x16,15x15,11x19,17x14,19x19,11x11,15x14';   // 17 · 14 = 238, gesagt wird 221: ein Fehler
 const GESAGT = [288, 216, 221, 224, 225, 209, 221, 361, 121, 210];   // so steht es in folge.wav (15 · 14 = 210)
 let fehler = 0;
 const ok = (bed, text) => { console.log((bed ? '  ok   ' : '  FEHLER ') + text); if (!bed) fehler++; };
@@ -41,11 +41,16 @@ await page.goto(basis);
 await page.evaluate(() => localStorage.setItem('kopfrechnen.stand', JSON.stringify({ eingabe: 'sprechen', ton: false })));
 await page.goto(basis + '?folge=' + FOLGE);
 const t0 = Date.now();
-await page.evaluate(() => window.uebung.ladeSprache());   // Modell vorab: sonst läuft die Aufnahme schon während des Ladens
-ok(true, `Sprachmodell geladen in ${((Date.now() - t0) / 1000).toFixed(1)} s`);
+// „Sprechen“ war zuletzt gewählt: die App lädt das Modell schon auf der Startseite (sonst liefe die Aufnahme beim Laden)
+await page.waitForFunction(() => window.uebung.sprache.modell, null, { timeout: 180000 });
+ok(true, `Sprachmodell auf der Startseite vorgeladen in ${((Date.now() - t0) / 1000).toFixed(1)} s`);
+ok((await page.textContent('#sprachstatus')).includes('Sprache bereit'), `Startseite: „${(await page.textContent('#sprachstatus')).trim()}“`);
 await page.click('#los');
 await page.waitForFunction(() => window.uebung.sprache.hoert, null, { timeout: 180000 });
 ok(true, 'Mikrofon an, Ton kommt an');
+await page.waitForTimeout(300);
+ok((await page.getAttribute('#mikro', 'class')).includes('an') && (await page.textContent('#mikro')).includes('Mikrofon an'),
+  `Anzeige im Spiel: „${(await page.textContent('#mikro')).trim()}“ (grün, mit Pegel)`);
 await page.waitForFunction(() => window.uebung.runde.phase === 'ende', null, { timeout: 150000 }).catch(() => {});
 const r = await page.evaluate(() => ({ p: window.uebung.sprache.protokoll, e: window.uebung.runde.ergebnisse, phase: window.uebung.runde.phase }));
 const werte = r.p.map(x => x.wert).filter(x => x !== null);
@@ -58,7 +63,12 @@ for (let v = 0; v < GESAGT.length; v++) {
   treffer = Math.max(treffer, t);
 }
 ok(werte.length >= 10 && treffer >= werte.length - 1, `${treffer} von ${werte.length} erkannten Zahlen stimmen mit dem Gesprochenen`);
-ok(r.phase === 'ende' && r.e.length === 10, `Runde nur mit Sprechen zu Ende gespielt (${r.e.filter(x => x.ok).length} richtig, Phase ${r.phase})`);
+ok(r.phase === 'ende' && r.e.length === 10 && r.e.filter(x => x.ok).length === 9,
+  `Runde nur mit Sprechen zu Ende gespielt (${r.e.filter(x => x.ok).length} von 10 richtig, der eingebaute Fehler zählt)`);
+const knopf = await page.$('.hoerfehler');
+ok(!!knopf && (await knopf.textContent()).includes('238'), `Gesprochener Fehler: Knopf „${knopf ? (await knopf.textContent()).trim() : '–'}“`);
+if (knopf) { await knopf.click(); ok((await page.textContent('#e-richtig')).trim() === '10 von 10 richtig', 'Nach „Hörfehler“: 10 von 10 richtig'); }
+ok((await page.getAttribute('#mikro', 'class')).includes('aus'), 'Am Ende ist das Mikrofon aus');
 const z = r.e.map(x => x.dauer / 1000);
 if (z.length) ok(true, `Antwortzeit gesprochen: Ø ${(z.reduce((a, b) => a + b, 0) / z.length).toFixed(2)} s (inkl. 3 s Pause der Aufnahme)`);
 ok(konsole.length === 0, 'Keine Fehler in der Konsole' + (konsole.length ? ': ' + konsole.join(' | ') : ''));

@@ -26,8 +26,8 @@ const basis = `http://127.0.0.1:${server.address().port}/5-Minuten-videos/uebung
 
 let fehler = 0;
 const ok = (bed, text) => { console.log((bed ? '  ok   ' : '  FEHLER ') + text); if (!bed) fehler++; };
-const browser = await pw.chromium.launch();
-const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: bilder ? 2 : 1 });
+const browser = await pw.chromium.launch({ args: ['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream'] });   // Ersatz-Mikrofon (Piepton)
+const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: bilder ? 2 : 1, permissions: ['microphone'] });
 const page = await ctx.newPage();
 const konsole = [];
 page.on('pageerror', e => konsole.push(e.message));
@@ -44,8 +44,9 @@ for (const [t, z] of Object.entries(faelle)) {
   const w = await page.evaluate(t => window.uebung.zahlwortZuZahl(t), t);
   ok(w === z, `„${t}“ → ${w}`);
 }
-const gram = await page.evaluate(() => JSON.parse(GRAMMATIK));
-ok(gram.includes('zweihundert') && gram.includes('achtundachtzig') && gram.includes('[unk]'), `Grammatik mit ${gram.length} Wörtern`);
+const gram = await page.evaluate(() => JSON.parse(window.uebung.grammatik()));
+ok(gram.includes('zweihundert achtundachtzig') && gram.includes('zweihundert dreiundzwanzig') && gram.includes('hundert einundzwanzig')
+  && gram.includes('[unk]'), `Grammatik: ${gram.length} Phrasen für 100 … 399, auch Zahlen, die kein Ergebnis sind (223)`);
 
 console.log('Runde mit Tippen');
 await page.evaluate(() => localStorage.clear());
@@ -54,26 +55,31 @@ await page.goto(basis + '?folge=' + folge);
 await foto('1_start');
 await page.click('#los');
 ok(await page.isVisible('#spiel'), 'Start zeigt die erste Aufgabe');
+ok((await page.getAttribute('#mikro', 'class')).includes('aus') && (await page.textContent('#mikro')).includes('Mikrofon aus'),
+  `Tippen: Anzeige „${(await page.textContent('#mikro')).trim()}“`);
 ok((await page.textContent('#frage')).replace(/\s/g, '') === '16·18', 'Erste Aufgabe 16 · 18');
 const loes = folge.split(',').map(p => p.split('x').map(Number)).map(([x, y]) => x * y);
+const pausen = {};
 for (let i = 0; i < loes.length; i++) {
   const falsch = i === 2;
   const ziffern = String(falsch ? 999 : loes[i]);
   if (i === 0) await foto('2_aufgabe');
   for (const z of ziffern) { await page.dispatchEvent(`#tasten button[aria-label="${z}"]`, 'pointerdown'); await page.waitForTimeout(120); }
+  const t = Date.now();
   if (i === 0) { await page.waitForTimeout(100); await foto('3_richtig'); }
   if (falsch) {
-    await page.waitForSelector('#weg:not([hidden])', { timeout: 3000 });
-    const weg = await page.textContent('#weg');
-    ok(weg.includes('13 + 7 = 20') && weg.includes('200') && weg.includes('21') && weg.includes('221'),
-      'Nach dem Fehler: Lösungsweg 13 + 7 = 20 → 200 → + 3 · 7 = 21 → 221');
-    await foto('4_loesungsweg');
-    await page.click('#weiter');
-  } else {
-    await page.waitForFunction(n => window.uebung.runde.i === n && (window.uebung.runde.phase === 'frage' || window.uebung.runde.phase === 'ende'),
-      i + 1, { timeout: 3000 });
+    await page.waitForTimeout(150);
+    const a = await page.innerHTML('#antwort');
+    ok(a.includes('<s>999</s>') && a.includes('<b>221</b>'), 'Falsch: 999 durchgestrichen, 221 daneben – in der Antwort selbst');
+    await foto('4_falsch');
   }
+  await page.waitForFunction(n => window.uebung.runde.i === n && (window.uebung.runde.phase === 'frage' || window.uebung.runde.phase === 'ende'),
+    i + 1, { timeout: 3000 });
+  if (i < loes.length - 1) (pausen[falsch ? 'falsch' : 'richtig'] ||= []).push(Date.now() - t);
 }
+const mittel = l => l.reduce((a, b) => a + b, 0) / l.length;
+ok(Math.abs(mittel(pausen.falsch) - mittel(pausen.richtig)) < 200,
+  `Nach falsch geht es genauso schnell weiter wie nach richtig (${Math.round(mittel(pausen.falsch))} ms / ${Math.round(mittel(pausen.richtig))} ms), kein Lösungsweg in der Runde`);
 await page.waitForSelector('#ende:not([hidden])', { timeout: 4000 });
 ok((await page.textContent('#e-richtig')).trim() === '9 von 10 richtig', 'Ende: 9 von 10 richtig');
 const e = await page.evaluate(() => window.uebung.runde.ergebnisse);
@@ -81,12 +87,43 @@ const schnitt = e.reduce((s, x) => s + x.dauer, 0) / e.length / 1000;
 ok(/Ø \d+,\d s je Aufgabe/.test(await page.textContent('#e-zeit')), `Durchschnittszeit angezeigt (${(await page.textContent('#e-zeit')).trim()}, gemessen ${schnitt.toFixed(2)} s)`);
 ok(e.length === 10 && e.every(x => x.dauer > 0 && x.dauer < 5000), 'Jede Aufgabe hat eine Zeit');
 ok((await page.$$('#liste li')).length === 10, 'Liste mit allen 10 Aufgaben');
+const weg = await page.textContent('#liste li.nein .weg');
+ok(weg.includes('13 + 7 = 20') && weg.includes('200') && weg.includes('= 21') && weg.includes('221'),
+  `Im Ergebnis der Lösungsweg zum Fehler: „${weg.trim()}“`);
+ok((await page.$$('.hoerfehler')).length === 0, 'Getippter Fehler: kein „Hörfehler“-Knopf');
 ok((await page.textContent('#e-spruch')).length > 10, `Motivation: „${(await page.textContent('#e-spruch')).trim()}“`);
 await foto('5_ende');
 await page.click('#uebersicht');
 ok(await page.isVisible('#verlauf'), 'Übersicht zeigt die letzte Runde');
 ok((await page.textContent('#bester')).includes('Bester Schnitt'), `Verlauf: ${(await page.textContent('#bester')).trim()}`);
 await foto('6_verlauf');
+
+console.log('Sprechen wählen: Laden sichtbar, „Solange tippen“');
+await page.click('#eingabe button[data-e="sprechen"]');
+await page.waitForTimeout(600);
+const st = await page.textContent('#sprachstatus');
+ok(/wird geladen … \d+ s/.test(st) && (await page.getAttribute('#sprachstatus', 'class')).includes('laedt'), `Startseite zeigt das Laden: „${st.trim()}“`);
+ok((await page.textContent('#los')).includes('Sprechen'), `Start-Knopf nennt die Art: „${(await page.textContent('#los')).trim()}“`);
+await foto('7_laedt');
+await page.click('#los');
+ok(await page.isVisible('#vorbereitung'), 'Start beim Laden: „Sprache wird vorbereitet …“ ist zu sehen, nicht ein leerer Bildschirm');
+ok((await page.getAttribute('#mikro', 'class')).includes('laedt'), `Anzeige: „${(await page.textContent('#mikro')).trim()}“`);
+await foto('8_vorbereitung');
+await page.click('#solange-tippen');
+ok(!(await page.isVisible('#vorbereitung')) && (await page.textContent('#frage')).includes('16'), '„Solange tippen“ startet sofort');
+for (const z of '288') await page.dispatchEvent(`#tasten button[aria-label="${z}"]`, 'pointerdown');
+await page.waitForFunction(() => window.uebung.runde.ergebnisse.length === 1, null, { timeout: 2000 });
+ok(true, 'Tippen geht, während die Sprache noch lädt');
+await page.waitForFunction(() => window.uebung.sprache.modell, null, { timeout: 120000 });
+ok(true, 'Sprache danach geladen');
+await page.waitForFunction(() => document.querySelector('#mikro').classList.contains('an'), null, { timeout: 10000 });
+ok((await page.textContent('#mikro')).includes('Mikrofon an'), `Danach mitten in der Runde: „${(await page.textContent('#mikro')).trim()}“`);
+await foto('9_mikro_an');
+await page.click('#mikro');
+ok((await page.getAttribute('#mikro', 'class')).includes('aus') && !(await page.evaluate(() => !!window.uebung.sprache.strom)),
+  'Antippen der Anzeige schaltet das Mikrofon wirklich aus');
+await page.click('#abbruch');
+ok((await page.getAttribute('#sprachstatus', 'class')).includes('bereit'), `Startseite danach: „${(await page.textContent('#sprachstatus')).trim()}“`);
 
 console.log('Aufgaben-Erzeugung');
 const z = await page.evaluate(() => {

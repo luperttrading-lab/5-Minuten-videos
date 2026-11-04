@@ -56,6 +56,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .wahl-titel { font-size: 13px; font-weight: 800; color: var(--grau); letter-spacing: .06em; text-transform: uppercase; margin: 6px 0 6px; }
 .los { width: 100%; padding: 18px; border-radius: 18px; background: var(--c10); color: #fff; font-size: 22px; font-weight: 800; margin-top: 8px; }
 .los:active { transform: scale(.98); }
+.los small { display: block; font-size: 15px; font-weight: 700; opacity: .85; margin-top: 2px; }
 #verlauf h3 { margin: 0 0 8px; font-size: 13px; font-weight: 800; color: var(--grau); letter-spacing: .06em; text-transform: uppercase; }
 #verlauf .bester { font-size: 17px; margin: 0 0 10px; }
 #verlauf ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 15px; color: var(--grau); }
@@ -86,20 +87,30 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .tasten button:active { transform: translateY(2px); box-shadow: 0 1px 0 #ded6c8; }
 .tasten .ok-taste { background: var(--c10); color: #fff; box-shadow: 0 3px 0 #0a524c; }
 .tasten .loeschen { font-size: 26px; color: var(--grau); }
-#mikro { position: relative; }
-#mikro.an { background: var(--c10); color: #fff; }
-#mikro.hoert::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 3px solid var(--ok); }
-/* Lösungsweg nach einem Fehler */
-#weg { position: absolute; inset: 6% 0 auto; margin: auto; max-width: 420px; }
-#weg h3 { margin: 0 0 10px; font-size: 26px; }
-#weg ol { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 8px; }
-#weg li { display: grid; grid-template-columns: 34px 1fr; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; }
-#weg li span { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 16px; background: var(--ink); }
-#weg li small { display: block; font-size: 13px; color: var(--grau); font-weight: 600; }
-#weg li:nth-child(1) span { background: var(--c2); } #weg li:nth-child(2) span { background: var(--c10); }
-#weg li:nth-child(3) span { background: var(--c3); } #weg li:nth-child(4) span { background: var(--ok); }
+/* Mikrofon-Zustand: eindeutig mit Farbe UND Text, dazu Pegel, damit man sieht, dass Ton ankommt */
+.mikrostatus { display: flex; align-items: center; justify-content: center; gap: 10px; align-self: center; margin-top: 8px;
+  padding: 10px 18px; min-height: 46px; border-radius: 999px; font-weight: 800; font-size: 16px; background: #ece6da; color: #5d6170; }
+.mikrostatus.an { background: var(--ok); color: #fff; }
+.mikrostatus.laedt, .mikrostatus.still { background: #f4b13c; color: #3a2600; }
+.mikrostatus.fehler { background: var(--falsch); color: #fff; }
+.mikrostatus .pegel { display: none; gap: 3px; align-items: flex-end; height: 20px; }
+.mikrostatus.an .pegel { display: inline-flex; }
+.mikrostatus .pegel i { width: 4px; height: 4px; border-radius: 2px; background: currentColor; }
+.mikrostatus .dreh { display: none; width: 16px; height: 16px; border: 3px solid currentColor; border-right-color: transparent;
+  border-radius: 50%; animation: dreh .8s linear infinite; }
+.mikrostatus.laedt .dreh { display: inline-block; }
+@keyframes dreh { to { transform: rotate(360deg); } }
+.sprachstatus { margin: 0 0 10px; padding: 10px 12px; border-radius: 12px; font-size: 15px; font-weight: 700; background: #ece6da; color: #5d6170; }
+.sprachstatus.bereit { background: #dff1e4; color: #1d6b35; }
+.sprachstatus.laedt { background: #fdecc8; color: #6b4300; }
+.sprachstatus.fehler { background: #f9d9dc; color: #8f1b26; }
+#vorbereitung { text-align: center; max-width: 340px; }
+#vorbereitung p { margin: 0 0 6px; font-size: 20px; font-weight: 800; }
+#vorbereitung small { display: block; color: var(--grau); font-size: 15px; margin-bottom: 14px; }
+#vorbereitung button { padding: 14px 22px; border-radius: 14px; background: var(--ink); color: #fff; font-weight: 800; font-size: 17px; }
+.antwort.nein s { opacity: .75; font-weight: 700; margin-right: .35em; }
+.antwort.nein b { background: #fff; color: var(--ok); border-radius: 12px; padding: 0 .25em; }
 .c1 { color: var(--c1); } .c2 { color: var(--c2); } .c3 { color: var(--c3); } .c10 { color: var(--c10); } .cok { color: var(--ok); }
-#weiter { width: 100%; padding: 14px; border-radius: 14px; background: var(--ink); color: #fff; font-weight: 800; font-size: 18px; }
 
 /* ---------- Ende ---------- */
 #ende .inhalt { flex: 1; display: flex; flex-direction: column; gap: 14px; padding-top: 6px; overflow-y: auto; }
@@ -117,6 +128,10 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 #liste li .z { color: var(--grau); }
 #liste li.nein s { color: var(--falsch); }
 #liste li.nein .r { color: var(--ok); font-weight: 800; }
+#liste .weg { grid-column: 2 / 4; font-size: 14px; color: var(--grau); margin: -2px 0 4px; line-height: 1.35; }
+#liste .weg b { color: var(--ink); }
+#liste .hoerfehler { grid-column: 2 / 4; justify-self: start; font-size: 14px; font-weight: 700; padding: 6px 10px; border-radius: 10px;
+  background: #f3efe7; color: var(--ink); margin-bottom: 4px; }
 .knoepfe { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .knoepfe button { padding: 16px; border-radius: 16px; font-weight: 800; font-size: 18px; background: var(--karte); box-shadow: 0 3px 0 #ded6c8; }
 .knoepfe .los { margin: 0; box-shadow: none; background: var(--c10); color: #fff; }
@@ -153,6 +168,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
         <button data-e="tippen" aria-pressed="true">⌨︎ Tippen<small>Ziffern antippen</small></button>
         <button data-e="sprechen" aria-pressed="false">🎤 Sprechen<small>Zahl laut sagen</small></button>
       </div>
+      <p class="sprachstatus" id="sprachstatus" hidden></p>
       <button class="los" id="los">Start · 10 Aufgaben</button>
     </div>
     <div class="karte" id="verlauf" hidden>
@@ -169,17 +185,18 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
   <div class="kopf">
     <button class="rund" id="abbruch" aria-label="Abbrechen">✕</button>
     <div class="punkte" id="punkte"></div>
-    <button class="rund" id="mikro" aria-label="Sprechen an oder aus">🎤</button>
+    <span style="width:44px"></span>
   </div>
+  <button class="mikrostatus" id="mikro" aria-live="polite"><span class="dreh"></span><span id="mikro-text"></span><span class="pegel" id="pegel"><i></i><i></i><i></i><i></i><i></i></span></button>
   <div class="buehne">
     <div class="frage" id="frage"></div>
     <div class="antwort" id="antwort"><span class="leer">?</span></div>
     <div class="rueck" id="rueck"></div>
     <div class="gehoert" id="gehoert"></div>
-    <div class="karte" id="weg" hidden>
-      <h3 id="weg-titel"></h3>
-      <ol id="weg-schritte"></ol>
-      <button id="weiter">Weiter</button>
+    <div class="karte" id="vorbereitung" hidden>
+      <p>Sprache wird vorbereitet …</p>
+      <small id="vorbereitung-text"></small>
+      <button id="solange-tippen">Solange tippen</button>
     </div>
   </div>
   <div class="tasten" id="tasten"></div>
@@ -202,7 +219,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 
 <script src="aufgaben.js"></script>
 <script>
-const APP_VERSION = '0.1';          // bei JEDER Änderung hochzählen
+const APP_VERSION = '0.2';          // bei JEDER Änderung hochzählen
 const $ = s => document.querySelector(s);
 const ANZAHL = 10;
 const ZIEL = 3.0;                    // Sekunden je Aufgabe, wie im Video („in drei Sekunden“)
@@ -258,6 +275,8 @@ function baueStart() {
     $('#stufen').append(b);
   }
   for (const b of document.querySelectorAll('#eingabe button')) b.setAttribute('aria-pressed', String(stand.eingabe === b.dataset.e));
+  $('#los').innerHTML = 'Start · 10 Aufgaben<small>' + (stand.eingabe === 'sprechen' ? '🎤 mit Sprechen' : '⌨︎ mit Tippen') + '</small>';
+  zeigeSprachstatus();
   $('#ton').textContent = stand.ton ? '🔊' : '🔇';
   // Verlauf: letzte Runden und bester Schnitt (nur Runden mit mindestens 8 richtig zählen für „bester“)
   const r = lies(RUNDEN, []).filter(x => x.uebung === u.id);
@@ -271,7 +290,11 @@ function baueStart() {
   }
 }
 for (const b of document.querySelectorAll('#eingabe button'))
-  b.addEventListener('click', () => { stand.eingabe = b.dataset.e; speichereAlles(); baueStart(); });
+  b.addEventListener('click', () => {
+    stand.eingabe = b.dataset.e; speichereAlles();
+    if (stand.eingabe === 'sprechen') vorladen();       // Modell schon jetzt laden, nicht erst beim Start
+    baueStart();
+  });
 $('#ton').addEventListener('click', () => { stand.ton = !stand.ton; speichereAlles(); baueStart(); if (stand.ton) klang.tipp(); });
 
 /* ---------- Runde ---------- */
@@ -286,12 +309,20 @@ function starteRunde() {
   runde.i = 0; runde.ergebnisse = [];
   $('#punkte').innerHTML = runde.aufgaben.map(() => '<i></i>').join('');
   zeigeSeite('spiel');
-  zeigeMikro();
-  if (stand.eingabe === 'sprechen') mikrofonAn().finally(naechste); else naechste();
+  runde.gestartet = false;
+  const los = () => { if (runde.gestartet) return; runde.gestartet = true; $('#vorbereitung').hidden = true; naechste(); };
+  runde.los = los;
+  if (stand.eingabe !== 'sprechen') { setzeMikro('aus'); return los(); }
+  if (!sprache.modell) {                             // erstes Mal: deutlich zeigen, dass geladen wird, Tippen geht schon
+    $('#frage').innerHTML = ''; $('#antwort').innerHTML = '<span class="leer">?</span>'; $('#antwort').className = 'antwort';
+    $('#rueck').textContent = ''; $('#gehoert').textContent = '';
+    $('#vorbereitung').hidden = false;
+  }
+  mikrofonAn().finally(los);
 }
+$('#solange-tippen').addEventListener('click', () => runde.los?.());
 function naechste() {
   clearTimeout(runde.weiterTimer);
-  $('#weg').hidden = true;
   if (runde.i >= runde.aufgaben.length) return ende();
   const a = runde.aufgaben[runde.i];
   const zx = String(a.x), zy = String(a.y);
@@ -324,52 +355,58 @@ function pruefe(wert, wie) {
   const dauer = performance.now() - runde.t0;
   const ok = wert === a.loesung;
   runde.phase = 'geloest';
-  runde.ergebnisse.push({ frage: a.frage, loesung: a.loesung, wert, ok, dauer, wie });
-  runde.eingabe = String(wert); zeigeEingabe();
+  runde.ergebnisse.push({ frage: a.frage, loesung: a.loesung, wert, ok, dauer, wie, a });
+  // Falsch: falsche Zahl durchgestrichen, richtige daneben – genauso lange wie bei richtig, kein Halt in der Runde
+  $('#antwort').innerHTML = ok ? String(wert) : `<s>${wert}</s><b>${a.loesung}</b>`;
   $('#antwort').className = 'antwort ' + (ok ? 'ok' : 'nein');
   const p = $('#punkte').children[runde.i];
   p.classList.remove('jetzt'); p.classList.add(ok ? 'ok' : 'nein');
   $('#rueck').className = 'rueck ' + (ok ? 'ok' : 'nein');
-  $('#rueck').textContent = ok ? `✓ richtig · ${sek(dauer)}` : `✗ richtig wäre ${a.loesung}`;
+  $('#rueck').textContent = ok ? `✓ richtig · ${sek(dauer)}` : `✗ richtig ist ${a.loesung}`;
   runde.i++;
-  if (ok) { klang.richtig(); runde.weiterTimer = setTimeout(naechste, 800); }
-  else { klang.falsch(); runde.weiterTimer = setTimeout(zeigeWeg, 900); }
+  (ok ? klang.richtig : klang.falsch)();
+  runde.weiterTimer = setTimeout(naechste, 800);
 }
-function zeigeWeg() {                                // nach einem Fehler: der Lösungsweg mit den drei Schritten
-  const a = runde.aufgaben[runde.i - 1];
-  $('#weg-titel').textContent = `${a.frage} = ${a.loesung}`;
-  $('#weg-schritte').innerHTML = uebung().weg(a).map(s =>
-    `<li><span>${s.nr}</span><div>${s.titel ? `<small>${s.titel}</small>` : ''}${s.text}</div></li>`).join('');
-  $('#weg').hidden = false;
-  runde.phase = 'weg';
-  if (stand.eingabe === 'sprechen') runde.weiterTimer = setTimeout(naechste, 6000);   // freihändig: weiter von selbst
-}
-$('#weiter').addEventListener('click', naechste);
 function ende() {
   runde.phase = 'ende';
   mikrofonAus();
+  const alle0 = lies(RUNDEN, []);
+  runde.platz = alle0.length;                        // Index dieser Runde im Verlauf (für „Hörfehler“)
+  zeigeEnde(true);
+  klang.fertig();
+}
+function zeigeEnde(neu) {
   const e = runde.ergebnisse, richtig = e.filter(x => x.ok).length;
   const schnitt = e.reduce((s, x) => s + x.dauer, 0) / e.length;
   const schnellste = Math.min(...e.map(x => x.dauer));
   const alle = lies(RUNDEN, []);
-  const frueher = alle.filter(x => x.uebung === stand.uebung && x.richtig >= 8).map(x => x.schnitt);
+  const frueher = alle.filter((x, k) => k !== runde.platz && x.uebung === stand.uebung && x.richtig >= 8).map(x => x.schnitt);
   const rekord = richtig >= 8 && frueher.length && schnitt < Math.min(...frueher);
-  alle.push({ uebung: stand.uebung, stufe: stand.stufe, zeit: Date.now(), anzahl: e.length, richtig, schnitt, eingabe: stand.eingabe });
+  const eintrag = { uebung: stand.uebung, stufe: stand.stufe, zeit: Date.now(), anzahl: e.length, richtig, schnitt, eingabe: stand.eingabe };
+  if (neu) alle.push(eintrag); else alle[runde.platz] = Object.assign(alle[runde.platz] || eintrag, { richtig });
   schreib(RUNDEN, alle.slice(-200));
   $('#e-richtig').textContent = `${richtig} von ${e.length} richtig`;
   $('#e-zeit').innerHTML = `Ø <b>${sek(schnitt)}</b> je Aufgabe · schnellste ${sek(schnellste)}`;
   $('#e-ziel').textContent = rekord ? '🏆 Neuer bester Schnitt!' :
     schnitt <= ZIEL * 1000 ? 'Unter drei Sekunden – so schnell wie im Video!' : 'Ziel: unter drei Sekunden je Aufgabe.';
-  const spruch = SPRUECHE[zufallInt(SPRUECHE.length)];
+  runde.spruch ||= SPRUECHE[zufallInt(SPRUECHE.length)];
+  const spruch = runde.spruch;
   const schnell = schnitt <= ZIEL * 1000, fehlerfrei = richtig === e.length;
   $('#e-spruch').innerHTML = (schnell && fehlerfrei ? 'Schnell und fehlerfrei – stark!' : schnell ? 'Schnell! Jetzt noch ohne Fehler.'
     : fehlerfrei ? 'Alles richtig! Mit ein bisschen Übung wirst du auch schneller.' : 'Mit ein bisschen Übung wird es schneller und sicherer.')
     + `<b>${spruch}</b>`;
-  $('#liste').innerHTML = e.map(x => `<li class="${x.ok ? 'ok' : 'nein'}"><span class="m">${x.ok ? '✓' : '✗'}</span>`
-    + `<span>${x.frage} = ${x.ok ? `<b>${x.wert}</b>` : `<s>${x.wert}</s> <span class="r">${x.loesung}</span>`}</span>`
-    + `<span class="z">${sek(x.dauer)}</span></li>`).join('');
+  // Fehler: hier (nicht in der Runde) der Lösungsweg; bei gesprochenen Antworten „Hörfehler“, falls die App falsch verstand
+  $('#liste').innerHTML = e.map((x, k) => `<li class="${x.ok ? 'ok' : 'nein'}"><span class="m">${x.ok ? '✓' : '✗'}</span>`
+    + `<span>${x.frage} = ${x.ok ? `<b>${x.loesung}</b>` : `<s>${x.wert}</s> <span class="r">${x.loesung}</span>`}`
+    + `${x.wie === 'gesagt' && !x.ok ? ' <small class="z">gehört</small>' : ''}${x.korrigiert ? ' <small class="z">(Hörfehler)</small>' : ''}</span>`
+    + `<span class="z">${sek(x.dauer)}</span>`
+    + (x.ok ? '' : `<span class="weg">${uebung().weg(x.a).map(s => (s.titel ? s.titel + ': ' : '') + s.text).join(' · ')}</span>`)
+    + (x.wie === 'gesagt' && !x.ok ? `<button class="hoerfehler" data-k="${k}">Hörfehler – ich habe ${x.loesung} gesagt</button>` : '')
+    + '</li>').join('');
+  for (const b of document.querySelectorAll('.hoerfehler')) b.addEventListener('click', () => {
+    const x = runde.ergebnisse[Number(b.dataset.k)]; x.ok = true; x.korrigiert = true; x.wert = x.loesung; zeigeEnde(false);
+  });
   zeigeSeite('ende');
-  klang.fertig();
 }
 $('#los').addEventListener('click', starteRunde);
 $('#nochmal').addEventListener('click', starteRunde);
@@ -388,7 +425,7 @@ document.addEventListener('keydown', e => {          // Tastatur am Rechner
   if ($('#spiel').hidden) return;
   if (/^[0-9]$/.test(e.key)) tippe(e.key);
   else if (e.key === 'Backspace') tippe('x');
-  else if (e.key === 'Enter') { if (runde.phase === 'weg') naechste(); else tippe('ok'); }
+  else if (e.key === 'Enter') tippe('ok');
 });
 document.addEventListener('touchmove', e => { if (!e.target.closest('.inhalt')) e.preventDefault(); }, { passive: false });
 
@@ -398,24 +435,65 @@ document.addEventListener('touchmove', e => { if (!e.target.closest('.inhalt')) 
 // Adresse (luperttrading-lab.github.io) – einmal geladen, nutzen beide Apps denselben Speicher.
 const SPRACHE_JS = new URL('../../wuerfel/sprache/vosk.js', location.href).href;
 const SPRACHMODELL = new URL('../../wuerfel/sprache/vosk-model-small-de-0.15.tar.gz', location.href).href;
-const GRAMMATIK = JSON.stringify(zahlGrammatik());
-const sprache = { modell: null, laden: null, strom: null, quelle: null, knoten: null, erkenner: null, hoert: false,
-  letzterTon: 0, protokoll: [] };
+// Grammatik: jede mögliche Antwort als ganze Zahl (Hörtest 04.11.: mit Raumrauschen 100 % statt 96 % bei freien
+// Zahlwörtern – dort ging das Ende verloren, „zweihundertacht“ → „zweihundert“). Nicht nur die 45 Ergebnisse, sonst würde
+// eine falsch gerechnete 223 als richtige 221 „gehört“.
+const grammatik = () => { const u = uebung(); return JSON.stringify(u.antworten ? zahlPhrasen(u.antworten[0], u.antworten[1]) : zahlGrammatik()); };
+const MODELL_GELADEN = 'kopfrechnen.modell';        // gemerkt: das Modell lag schon einmal im Gerät
+const sprache = { modell: null, laden: null, ladeStart: 0, fehler: null, strom: null, quelle: null, knoten: null, erkenner: null,
+  hoert: false, letzterTon: 0, pegel: 0, protokoll: [] };
 function ladeSprache() {
-  sprache.laden ||= new Promise((ok, fehler) => {
-    if (window.Vosk) return ok();
-    const s = document.createElement('script');
-    s.src = SPRACHE_JS; s.onload = ok; s.onerror = fehler;
-    document.head.append(s);
-  }).then(() => Vosk.createModel(SPRACHMODELL)).then(m => (sprache.modell = m))
-    .catch(e => { sprache.laden = null; throw e; });
+  if (!sprache.laden) {
+    sprache.ladeStart = performance.now(); sprache.fehler = null;
+    sprache.laden = new Promise((ok, fehler) => {
+      if (window.Vosk) return ok();
+      const s = document.createElement('script');
+      s.src = SPRACHE_JS; s.onload = ok; s.onerror = () => fehler(new Error('Sprachdatei nicht erreichbar'));
+      document.head.append(s);
+    }).then(() => Vosk.createModel(SPRACHMODELL)).then(m => {
+      sprache.modell = m; try { localStorage.setItem(MODELL_GELADEN, '1'); } catch (_) {}
+      zeigeSprachstatus(); return m;
+    }).catch(e => { sprache.laden = null; sprache.fehler = e; zeigeSprachstatus(); throw e; });
+  }
   return sprache.laden;
 }
-function zeigeMikro() {
-  const m = $('#mikro');
-  m.classList.toggle('an', stand.eingabe === 'sprechen');
-  m.classList.toggle('hoert', stand.eingabe === 'sprechen' && sprache.hoert);
+const vorladen = () => ladeSprache().catch(() => {});
+function ladeText() {
+  const s = Math.round((performance.now() - sprache.ladeStart) / 1000);
+  let erstes = true; try { erstes = !localStorage.getItem(MODELL_GELADEN); } catch (_) {}
+  return erstes ? `Sprachmodell wird geladen … ${s} s (nur beim ersten Mal, 45 MB, bis zu 1 Minute)` : `Sprachmodell wird vorbereitet … ${s} s`;
 }
+function zeigeSprachstatus() {                       // Startseite: Zustand der Spracherkennung, solange „Sprechen“ gewählt ist
+  const el = $('#sprachstatus');
+  el.hidden = stand.eingabe !== 'sprechen';
+  if (el.hidden) return;
+  if (sprache.modell) { el.className = 'sprachstatus bereit'; el.textContent = '✓ Sprache bereit – nach „Start“ geht das Mikrofon an'; }
+  else if (sprache.fehler) { el.className = 'sprachstatus fehler'; el.textContent = '✗ Sprache lässt sich nicht laden (' + (sprache.fehler.message || sprache.fehler) + ') – bitte tippen'; }
+  else if (sprache.laden) { el.className = 'sprachstatus laedt'; el.textContent = ladeText(); }
+  else { el.className = 'sprachstatus'; el.textContent = 'Sprache wird geladen, sobald du „Start“ tippst'; }
+}
+setInterval(() => {                                  // Sekunden beim Laden mitzählen (Startseite und Vorbereitung)
+  if (!sprache.laden || sprache.modell) return;
+  if (!$('#start').hidden) zeigeSprachstatus();
+  if (!$('#spiel').hidden) { $('#vorbereitung-text').textContent = ladeText(); if (!sprache.strom || !sprache.erkenner) setzeMikro('laedt', 'Sprache lädt …'); }
+}, 500);
+// Mikrofon-Anzeige im Spiel: aus (grau) · lädt (gelb, dreht) · an (grün, Pegel) · still (gelb: kein Ton) · Fehler (rot)
+function setzeMikro(zustand, text) {
+  const m = $('#mikro');
+  m.className = 'mikrostatus ' + zustand;
+  $('#mikro-text').textContent = text || { aus: '🎤 Mikrofon aus – antippen', an: '🎤 Mikrofon an – sag die Zahl',
+    laedt: 'Mikrofon wird eingeschaltet …', still: '🎤 Mikrofon an, aber kein Ton', fehler: 'Mikrofon geht nicht – bitte tippen' }[zustand];
+  m.setAttribute('aria-label', $('#mikro-text').textContent);
+}
+const zeigeMikro = () => setzeMikro(stand.eingabe !== 'sprechen' ? 'aus' : !sprache.erkenner ? 'laedt' : sprache.hoert ? 'an' : 'still');
+(function pegelZeigen() {                            // fünf Balken folgen der Lautstärke
+  if (!$('#spiel').hidden && sprache.erkenner) {
+    const balken = $('#pegel').children, p = Math.min(1, sprache.pegel * 9);
+    for (let k = 0; k < balken.length; k++) balken[k].style.height = Math.max(4, Math.min(20, 4 + 16 * Math.max(0, p - k * 0.12) * (1 + k * 0.15))) + 'px';
+    if (performance.now() - sprache.letzterTon > 1500 && sprache.hoert) { sprache.hoert = false; zeigeMikro(); try { ctx?.resume(); } catch (_) {} }
+  }
+  requestAnimationFrame(pegelZeigen);
+})();
 $('#mikro').addEventListener('click', async () => {  // im Spiel umschalten: Tippen geht immer, Sprechen dazu
   stand.eingabe = stand.eingabe === 'sprechen' ? 'tippen' : 'sprechen'; speichereAlles();
   if (stand.eingabe === 'sprechen') await mikrofonAn(); else mikrofonAus();
@@ -424,17 +502,20 @@ $('#mikro').addEventListener('click', async () => {  // im Spiel umschalten: Tip
 async function mikrofonAn() {
   if (sprache.strom) return;
   tonsitzung('play-and-record');                    // mit „playback“ verweigert iOS die Aufnahme
-  $('#gehoert').textContent = sprache.modell ? '' : 'Sprache wird geladen … (einmalig 45 MB)';
+  setzeMikro('laedt', sprache.modell ? null : 'Sprache lädt …');
   try {
+    await ladeSprache();                             // erst das Modell, dann das Mikrofon: beim ersten Laden ist es nicht minutenlang offen
+    if ($('#spiel').hidden || stand.eingabe !== 'sprechen') return;
+    setzeMikro('laedt');
     const strom = await navigator.mediaDevices.getUserMedia({ video: false,
       audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 } });
+    if ($('#spiel').hidden) { strom.getTracks().forEach(t => t.stop()); return; }   // inzwischen abgebrochen
     sprache.strom = strom;
     try { ctx?.close(); } catch (_) {}               // EIN Tonkanal, neu angelegt NACH dem Mikrofon (Lehre aus dem Würfel)
     ctx = new (window.AudioContext || window.webkitAudioContext)();
     if (ctx.state !== 'running') await ctx.resume();
-    await ladeSprache();
     if (sprache.strom !== strom) return;
-    const erkenner = sprache.erkenner = new sprache.modell.KaldiRecognizer(ctx.sampleRate, GRAMMATIK);
+    const erkenner = sprache.erkenner = new sprache.modell.KaldiRecognizer(ctx.sampleRate, grammatik());
     erkenner.on('partialresult', m => { const t = (m.result.partial || '').replace(/\[unk\]/g, '').trim(); if (t && runde.phase === 'frage') $('#gehoert').textContent = '… ' + t; });
     erkenner.on('result', m => gehoert(m.result.text || ''));
     sprache.quelle = ctx.createMediaStreamSource(strom);
@@ -442,15 +523,21 @@ async function mikrofonAn() {
     sprache.knoten.onaudioprocess = ev => {
       sprache.letzterTon = performance.now();
       if (!sprache.hoert) { sprache.hoert = true; zeigeMikro(); }
+      const d = ev.inputBuffer.getChannelData(0); let q = 0;
+      for (let k = 0; k < d.length; k += 8) q += d[k] * d[k];
+      sprache.pegel = 0.6 * sprache.pegel + 0.4 * Math.sqrt(q / (d.length / 8));
       try { erkenner.acceptWaveform(ev.inputBuffer); } catch (_) {}
     };
     sprache.quelle.connect(sprache.knoten);
     sprache.knoten.connect(ctx.destination);         // Safari ruft onaudioprocess nur auf, wenn der Knoten angeschlossen ist
-    $('#gehoert').textContent = 'Sag die Zahl – oder tippe sie';
+    setzeMikro('laedt', 'Mikrofon wird eingeschaltet …');   // grün wird es erst, wenn wirklich Ton ankommt
+    setTimeout(() => { if (sprache.strom === strom && !sprache.hoert) setzeMikro('still'); }, 3000);
   } catch (err) {
     mikrofonAus();
-    stand.eingabe = 'tippen'; zeigeMikro();
-    showInfo(err?.name === 'NotAllowedError' ? 'Mikrofon nicht erlaubt – bitte tippen' : 'Sprechen geht nicht: ' + (err?.message || err?.name || err), 6);
+    const text = err?.name === 'NotAllowedError' ? 'Mikrofon nicht erlaubt – bitte tippen'
+      : 'Sprechen geht nicht: ' + (err?.message || err?.name || err);
+    setzeMikro('fehler', text);
+    showInfo(text, 6);
   }
 }
 function mikrofonAus() {
@@ -458,7 +545,8 @@ function mikrofonAus() {
   sprache.quelle?.disconnect(); sprache.knoten?.disconnect();
   try { sprache.erkenner?.remove(); } catch (_) {}
   sprache.strom = sprache.quelle = sprache.knoten = sprache.erkenner = null;
-  sprache.hoert = false; zeigeMikro();
+  sprache.hoert = false; sprache.pegel = 0;
+  if (!$('#mikro').classList.contains('fehler')) setzeMikro('aus');
   tonsitzung('playback');
 }
 function gehoert(text) {
@@ -466,7 +554,7 @@ function gehoert(text) {
   sprache.protokoll.push({ text, wert, aufgabe: runde.aufgaben[runde.i]?.frage, phase: runde.phase });
   if (wert === null || runde.phase !== 'frage') return;
   const a = runde.aufgaben[runde.i];
-  $('#gehoert').textContent = '„' + text.replace(/\[unk\]/g, '').trim() + '“';
+  $('#gehoert').textContent = 'gehört: „' + text.replace(/\[unk\]/g, '').trim() + '“';
   // „zweihundert … achtundachtzig“ mit Pause: die Hunderter kurz aufheben und mit dem Rest verbinden
   if (runde.offenHundert !== null && wert < 100) { const w = runde.offenHundert + wert; runde.offenHundert = null; clearTimeout(runde.hundertTimer); return pruefe(w, 'gesagt'); }
   if (wert % 100 === 0 && wert >= 100 && a.loesung % 100 !== 0) {
@@ -536,7 +624,8 @@ $('#version').addEventListener('click', e => checkForUpdate(true, e.currentTarge
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 
 baueStart();
-window.uebung = { runde, stand, sprache, zahlwortZuZahl, tippe, starteRunde, ladeSprache };   // für Tests
+if (stand.eingabe === 'sprechen') vorladen();        // wer zuletzt gesprochen hat, bekommt das Modell gleich vorbereitet
+window.uebung = { runde, stand, sprache, zahlwortZuZahl, tippe, starteRunde, ladeSprache, grammatik };   // für Tests
 </script>
 </body>
 </html>

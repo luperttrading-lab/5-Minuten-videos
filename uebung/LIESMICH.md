@@ -8,8 +8,13 @@ Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das �
   Aufgaben mit Zeit, wechselndem Motivationsspruch und Ziel „unter drei Sekunden“ (wie im Video).
 - **Antworten:** tippen (Tastenfeld; bei dreistelligen Ergebnissen wird nach der 3. Ziffer geprüft) oder **sprechen**.
   Beides geht in derselben Runde, 🎤 schaltet um.
-- **Fehler:** kurz rot, dann der Lösungsweg mit den drei Schritten aus dem Video (Einer rüber · mal 10 · Einer · Einer dazu),
-  „Weiter“ (beim Sprechen nach 6 s von selbst).
+- **Fehler:** falsche Zahl durchgestrichen, richtige daneben – genauso lange (0,8 s) wie bei richtig, kein Halt in der Runde
+  (Nutzerwunsch 04.11.). Der Lösungsweg mit den drei Schritten steht im **Ergebnis** unter der Aufgabe.
+- **Hörfehler:** Bei einer gesprochenen falschen Antwort im Ergebnis ein Knopf „Hörfehler – ich habe … gesagt“ → zählt richtig.
+- **Mikrofon-Anzeige** unter der Kopfzeile, Farbe **und** Text: grau „Mikrofon aus – antippen“, gelb „Sprache lädt …“ /
+  „Mikrofon wird eingeschaltet …“ / „kein Ton“, grün „Mikrofon an – sag die Zahl“ mit Pegel, rot bei Fehler. Antippen schaltet um.
+- **Laden sichtbar:** Wählt man „Sprechen“, lädt das Modell sofort (Startseite zählt die Sekunden). Start während des Ladens
+  zeigt „Sprache wird vorbereitet …“ mit „Solange tippen“. Reihenfolge: erst Modell, dann Mikrofon.
 - **Verlauf:** letzte Runden und bester Schnitt (Runden mit ≥ 8 richtig) im Gerät (localStorage).
 - **Stufen:** „Alle Zahlen“ (11–19 · 11–19, 10 verschiedene Paare je Runde) und „Einer ergeben 10“ (12 · 18 = 200 + 16).
 
@@ -19,8 +24,12 @@ Erkennung im Gerät mit Vosk (WebAssembly) und dem kleinen deutschen Modell, bei
 Speicher). Apples eigene Erkennung ist in Home-Bildschirm-Apps gesperrt (WebKit-Bug 225298). Grammatik: nur Zahlwörter
 0 … 999 (`zahlGrammatik()` in `aufgaben.js`), das Modell liefert z. B. „zweihundert achtundachtzig“ → 288.
 Sagt man „zweihundert … achtundachtzig“ mit Pause, wartet die App 1,5 s auf den Rest.
-Geprüft mit Christians Stimme (ElevenLabs) als Ersatz-Mikrofon: 10 von 10 bzw. 18 von 18 richtig verstanden, Runde nur
-mit Sprechen fehlerfrei. Am iPhone und mit Kinderstimmen noch ungeprüft.
+Hörtest 04.11. (`tests/hoertest.mjs`, 108 Aufnahmen: Christian 67, Alexander 41 – dann war das Schlüssel-Kontingent leer):
+sauber 100 % in allen Grammatiken; mit Handy-Klang, Hall und Rauschen (12 dB) **freie Zahlwörter 96 %** (Ende geht verloren,
+„zweihundertacht“ → „zweihundert“), **jede Zahl 100–399 als Phrase 100 %**, nur die 45 Ergebnisse 100 %; bei 6 dB alle ≈ 61–67 %.
+Gewählt: 100–399 (`antworten` in `aufgaben.js`) – nicht nur die Ergebnisse, sonst würde eine falsch gerechnete 223 als
+richtige 221 „gehört“. Schlampige Formen („zwohundert…“, „zweihundertund…“, „einhundert…“) 10/10.
+Am iPhone beobachtet (Nutzer 04.11.): einmal 221 als 223 verstanden – dafür der Knopf „Hörfehler“.
 
 ## Neue Übung zu einem neuen Video
 In `aufgaben.js` ein Objekt in `UEBUNGEN` ergänzen: `id`, `titel`, `video`, `stufen`, `erzeuge(stufe, anzahl)`,

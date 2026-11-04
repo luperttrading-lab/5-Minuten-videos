@@ -15,6 +15,7 @@ const UEBUNGEN = [
     titel: '11 bis 19 mal 11 bis 19',
     video: 'Einer rüber · mal 10 · Einer · Einer dazu',
     auto: true,                                    // alle Ergebnisse dreistellig (121 … 361): nach 3 Ziffern prüfen
+    antworten: [100, 399],                         // Grammatik der Spracherkennung: jede Zahl 100 … 399 (auch falsche)
     stufen: [
       { id: 'alle', name: 'Alle Zahlen', info: 'z. B. 16 · 18' },
       { id: 'zehn', name: 'Einer ergeben 10', info: 'z. B. 12 · 18 = 200 + 16' },
@@ -73,6 +74,29 @@ function zahlwortZuZahl(text) {
   const k = rest.match(/^(ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)und(zwanzig|dreißig|vierzig|fünfzig|sechzig|siebzig|achtzig|neunzig)$/);
   if (k) return wert + EINER[k[1]] + ZEHNER[k[2]];
   return null;
+}
+// Grammatik aus ganzen Zahlen statt freier Wörter: jede erlaubte Zahl als Phrase in mehreren Schreibweisen
+// („zweihundert einundzwanzig“, „zweihundert und einundzwanzig“, „zwohundert ein und zwanzig“ …).
+// zahlen: Liste oder (von, bis). Wörter, die das Modell nicht kennt, ignoriert Vosk mit einer Warnung.
+function zahlPhrasen(zahlen, bis) {
+  if (!Array.isArray(zahlen)) { const v = zahlen; zahlen = []; for (let n = v; n <= bis; n++) zahlen.push(n); }
+  const E = ['', 'ein', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht', 'neun'];
+  const T = ['', '', 'zwanzig', 'dreißig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig', 'achtzig', 'neunzig'];
+  const TEEN = ['zehn', 'elf', 'zwölf', 'dreizehn', 'vierzehn', 'fünfzehn', 'sechzehn', 'siebzehn', 'achtzehn', 'neunzehn'];
+  const HUNDERT = { 1: ['hundert', 'einhundert'], 2: ['zweihundert', 'zwohundert'], 3: ['dreihundert'], 4: ['vierhundert'],
+    5: ['fünfhundert'], 6: ['sechshundert'], 7: ['siebenhundert'], 8: ['achthundert'], 9: ['neunhundert'] };
+  const rest = r => r === 0 ? [''] : r === 1 ? ['eins'] : r < 10 ? [E[r]] : r < 20 ? [TEEN[r - 10]]
+    : r % 10 === 0 ? [T[r / 10]] : [`${E[r % 10]}und${T[Math.floor(r / 10)]}`, `${E[r % 10]} und ${T[Math.floor(r / 10)]}`];
+  const aus = new Set();
+  for (const n of zahlen) {
+    const h = Math.floor(n / 100), r = n % 100;
+    const hs = h ? HUNDERT[h] : [''];
+    for (const hw of hs) for (const rw of rest(r)) {
+      aus.add(`${hw} ${rw}`.trim());
+      if (hw && rw) aus.add(`${hw} und ${rw}`);
+    }
+  }
+  return [...aus, '[unk]'];
 }
 // Wörter, die die Erkennung überhaupt kennen darf (Grammatik): alles, woraus 0 … 999 gebaut wird
 function zahlGrammatik() {
