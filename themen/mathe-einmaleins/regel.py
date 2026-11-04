@@ -77,7 +77,7 @@ SZENEN = [
         'neunzehn breit, also hundertneunzig und nicht zweihundert. Dazu kommt die Ecke, fünf mal vier gleich '
         'zwanzig. Zusammen zweihundertzehn, nicht zweihundertzwanzig.')),
     dict(id='merke', kicker='Merke', pause=DENKPAUSE, text=(   # Nutzerwunsch 04.11.: die langen Sätze, nicht die Kurzformen
-        'Merk dir die drei Schritte: Einer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. Beide Einer '
+        'Merk dir die drei Schritte: Den Einer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. Beide Einer '
         'multiplizieren und dazuzählen. Und jetzt du: dreizehn mal vierzehn.')),
     dict(id='schluss', kicker='Merke', anhang=True, text=(   # gehört zum Kapitel „Merke“, läuft nach der Lösung
         'Hat es bei dir länger als drei Sekunden gedauert? Ganz normal. Mit ein bisschen Übung schaffst du das auch '
@@ -751,7 +751,7 @@ def s_vorsicht(b, sc, t):
             b.linie([(x1 - w - 4, y + 8), (mix(x1 - w - 4, x1 + 4, ps), y + 8 - 16 * ps)], CD, 5, alpha=a)
 
 
-MERKSAETZE = [('1', CB, ['Einer zur anderen Zahl', 'addieren – egal, welche'], 'Einer zur'),   # Nutzer 04.11.: „addieren“
+MERKSAETZE = [('1', CB, ['Den Einer zur anderen Zahl', 'addieren – egal, welche'], 'Den Einer'),   # Nutzer 04.11.
               ('2', TEAL, ['Eine Null anhängen'], 'Eine Null'),
               ('3', CD, ['Beide Einer multiplizieren', 'und dazuzählen'], 'Beide Einer')]
 
