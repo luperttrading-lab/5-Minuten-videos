@@ -22,6 +22,8 @@ Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das �
   einmal plus genau eine Wiederholung, nie 15 · 15, frühestens 4 Aufgaben später; nie dasselbe Paar direkt hintereinander,
   auch nicht verdreht (12 · 18 → 18 · 12). Nutzerwunsch 04.11., geprüft über 2000 Runden in `tests/uebung.mjs`.
 
+**Nächste Version: 1.7** (Nutzerwunsch 04.11., nach 0.6 folgt nicht 0.7). Die Update-Prüfung vergleicht nur auf Gleichheit, der Sprung ist unkritisch.
+
 ## Sprechen
 - **Zeitmessung beim Sprechen (v0.5, Messung 04.11.):** gezählt wird bis zum Ende des letzten Wortes, nicht bis die
   Erkennung meldet. Vosk meldet erst nach ≥ 0,5 s Stille (Endpunkt), mit Puffer und Rechenzeit im Test Ø 0,9 s
