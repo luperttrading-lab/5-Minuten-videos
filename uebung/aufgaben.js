@@ -21,17 +21,33 @@ const UEBUNGEN = [
       { id: 'zehn', name: 'Einer ergeben 10', info: 'z. B. 12 · 18 = 200 + 16' },
     ],
     erzeuge(stufe, anzahl) {
-      // Paare ohne Reihenfolge ziehen, damit nicht 16 · 18 und 18 · 16 in einer Runde kommen; dann zufällig drehen
-      const paare = [];
+      const paare = [];                            // ohne Reihenfolge: [12, 18] steht für 12 · 18 und 18 · 12
       for (let x = 11; x <= 19; x++) for (let y = x; y <= 19; y++)
         if (stufe !== 'zehn' || (x - 10) + (y - 10) === 10) paare.push([x, y]);
-      let gezogen = [];
-      while (gezogen.length < anzahl) gezogen = gezogen.concat(mischen(paare.slice()));   // „Einer ergeben 10“ hat nur 5 Paare
-      gezogen = gezogen.slice(0, anzahl);
-      for (let i = 1; i < gezogen.length; i++)     // nie zweimal dasselbe direkt hintereinander
-        if (gezogen[i][0] === gezogen[i - 1][0] && gezogen[i][1] === gezogen[i - 1][1] && i + 1 < gezogen.length)
-          [gezogen[i], gezogen[i + 1]] = [gezogen[i + 1], gezogen[i]];
-      return gezogen.map(([x, y]) => (zufallInt(2) ? [x, y] : [y, x])).map(([x, y]) => this.aufgabe(x, y));
+      let ziehe;
+      if (stufe === 'zehn') {
+        // Nutzerwunsch 04.11.: so wenig Doppelte wie möglich. Mit beiden Reihenfolgen gibt es hier 9 Aufgaben
+        // (11·19, 19·11 … 16·14, dazu 15·15 nur einmal) – bei 10 Aufgaben ist genau EINE Wiederholung nötig, nie 15 · 15.
+        const varianten = paare.flatMap(([x, y]) => (x === y ? [[x, y]] : [[x, y], [y, x]]));
+        ziehe = () => {
+          const l = [];
+          while (l.length < anzahl) {
+            const runde = mischen(varianten.slice()), rest = anzahl - l.length;
+            l.push(...(rest >= runde.length ? runde : runde.filter(([x, y]) => x !== y).slice(0, rest)));
+          }
+          return mischen(l);
+        };
+      } else {
+        // 10 verschiedene Paare, jedes zufällig gedreht: keine Aufgabe doppelt, auch nicht verdreht
+        ziehe = () => mischen(paare.slice()).slice(0, anzahl).map(([x, y]) => (zufallInt(2) ? [x, y] : [y, x]));
+      }
+      const gleichesPaar = (a, b) => Math.min(...a) === Math.min(...b) && Math.max(...a) === Math.max(...b);
+      const passt = l => l.every((a, i) =>
+        (i === 0 || !gleichesPaar(a, l[i - 1])) &&                                   // nie 12·18 und dann 18·12 (oder 12·18)
+        l.every((b, j) => j <= i || !(a[0] === b[0] && a[1] === b[1]) || j - i >= 4)); // Wiederholung frühestens 4 später
+      let liste = ziehe();
+      for (let k = 0; k < 2000 && !passt(liste); k++) liste = ziehe();
+      return liste.map(([x, y]) => this.aufgabe(x, y));
     },
     aufgabe(x, y) {
       return { x, y, frage: `${x} · ${y}`, loesung: x * y };

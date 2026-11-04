@@ -17,7 +17,10 @@ Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das �
 - **Laden sichtbar:** Wählt man „Sprechen“, lädt das Modell sofort (Startseite zählt die Sekunden). Start während des Ladens
   zeigt „Sprache wird vorbereitet …“ mit „Solange tippen“. Reihenfolge: erst Modell, dann Mikrofon.
 - **Verlauf:** letzte Runden und bester Schnitt (Runden mit ≥ 8 richtig) im Gerät (localStorage).
-- **Stufen:** „Alle Zahlen“ (11–19 · 11–19, 10 verschiedene Paare je Runde) und „Einer ergeben 10“ (12 · 18 = 200 + 16).
+- **Stufen:** „Alle Zahlen“ (11–19 · 11–19, 10 verschiedene Paare je Runde, jedes zufällig gedreht, keins doppelt) und
+  „Einer ergeben 10“ (12 · 18 = 200 + 16). Dort gibt es mit beiden Reihenfolgen nur 9 Aufgaben (15 · 15 einmal): alle 9 je
+  einmal plus genau eine Wiederholung, nie 15 · 15, frühestens 4 Aufgaben später; nie dasselbe Paar direkt hintereinander,
+  auch nicht verdreht (12 · 18 → 18 · 12). Nutzerwunsch 04.11., geprüft über 2000 Runden in `tests/uebung.mjs`.
 
 ## Sprechen
 Erkennung im Gerät mit Vosk (WebAssembly) und dem kleinen deutschen Modell, beides von der **Würfel-App** geladen

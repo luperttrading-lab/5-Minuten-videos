@@ -141,6 +141,27 @@ const z = await page.evaluate(() => {
 });
 ok(z.r.every(l => l.length === 10 && new Set(l.map(f => f.split(' · ').sort().join())).size === 10), '„Alle Zahlen“: 10 verschiedene Paare je Runde (200 Runden)');
 ok(z.zehn.every(([x, y]) => (x - 10) + (y - 10) === 10), '„Einer ergeben 10“: nur 11·19, 12·18, 13·17, 14·16, 15·15');
+const v = await page.evaluate(() => {
+  const u = UEBUNGEN[0], paar = a => [Math.min(a.x, a.y), Math.max(a.x, a.y)].join('·');
+  const z = { runden: 2000, nachbar: 0, quadrat2: 0, mehrAlsEinDoppel: 0, abstand: 99, gedreht: 0, aufgaben: 0, alleNachbar: 0, alleDoppel: 0 };
+  for (let k = 0; k < z.runden; k++) {
+    const l = u.erzeuge('zehn', 10);
+    l.forEach((a, i) => { if (i && paar(a) === paar(l[i - 1])) z.nachbar++; z.aufgaben++; if (a.x > a.y) z.gedreht++; });
+    if (l.filter(a => a.x === 15 && a.y === 15).length > 1) z.quadrat2++;
+    const fr = l.map(a => a.frage), doppelt = fr.filter((f, i) => fr.indexOf(f) !== i);
+    if (doppelt.length > 1) z.mehrAlsEinDoppel++;
+    for (const d of doppelt) { const i = fr.indexOf(d), j = fr.lastIndexOf(d); z.abstand = Math.min(z.abstand, j - i); }
+    const m = u.erzeuge('alle', 10);
+    m.forEach((a, i) => { if (i && paar(a) === paar(m[i - 1])) z.alleNachbar++; });
+    if (new Set(m.map(paar)).size !== 10) z.alleDoppel++;
+  }
+  return z;
+});
+ok(v.nachbar === 0, `„Einer ergeben 10“, ${v.runden} Runden: nie dasselbe Paar direkt hintereinander (auch nicht 12·18 → 18·12)`);
+ok(v.quadrat2 === 0, '15 · 15 höchstens einmal je Runde');
+ok(v.mehrAlsEinDoppel === 0 && v.abstand >= 4, `Höchstens eine Wiederholung je Runde (9 Aufgaben gibt es nur), frühestens 4 Aufgaben später (kleinster Abstand ${v.abstand})`);
+ok(v.gedreht / v.aufgaben > 0.4 && v.gedreht / v.aufgaben < 0.6, `Beide Reihenfolgen: ${Math.round(100 * v.gedreht / v.aufgaben)} % mit der größeren Zahl vorne`);
+ok(v.alleDoppel === 0 && v.alleNachbar === 0, '„Alle Zahlen“: nie ein Paar doppelt, auch nicht verdreht');
 ok(z.r.flat().every(f => { const [x, y] = f.split(' · ').map(Number); return x >= 11 && x <= 19 && y >= 11 && y <= 19; }), 'Alle Faktoren zwischen 11 und 19');
 
 ok(konsole.length === 0, 'Keine Fehler in der Konsole' + (konsole.length ? ': ' + konsole.join(' | ') : ''));
