@@ -659,13 +659,13 @@ def s_vorsicht(b, sc, t):
 
 def s_merke(b, sc, t):
     t1, t2, t3, tdu = C(sc, 'Einer rüber'), C(sc, 'mal zehn'), C(sc, 'Einer mal Einer'), C(sc, 'Und jetzt du')
-    zeilen = [dict(nr='1', farbe=CB, titel='Einer der 2. Zahl zur 1. zählen', t_titel=0, t_rech=t1, aktiv=(t1, t2),
+    zeilen = [dict(nr='1', farbe=CB, titel='Einer zur anderen Zahl – egal, welche', t_titel=0, t_rech=t1, aktiv=(t1, t2),
                    teile=[('Einer rüber', INK)]),
               dict(nr='2', farbe=TEAL, titel='eine Null anhängen', t_titel=0, t_rech=t2, aktiv=(t2, t3),
                    teile=[('mal 10', INK)]),
               dict(nr='3', farbe=CD, titel='beide Einer multiplizieren', t_titel=0, t_rech=t3, aktiv=(t3, tdu),
                    teile=[('Einer · Einer dazu', INK)])]
-    schritte(b, t, 90, 130, 540, zeilen, titel='Merke')
+    schritte(b, t, 80, 130, 590, zeilen, titel='Merke')
     a = ein(t, tdu)
     karte(b, 700, 130, 490, 450, a)
     if a <= 0:
@@ -691,9 +691,9 @@ def s_schluss(b, sc, t):
     a = ein(t, 0.1)
     if a > 0:
         band(b, 190, 604 + 10 * (1 - a), 1090, 684 + 10 * (1 - a), TEAL, 0.94 * a, r=20)
-        w = ein(t, C(sc, 'Mit ein bisschen'), 0.4)
-        b.text('Länger als drei Sekunden? Ganz normal.', 640, 644 - 16 * w, 30, '#ffffff', INTER_X, alpha=a * (1 - w))
-        b.text('Mit ein bisschen Übung schaffst du das auch.', 640, 628, 25, '#ffffff', INTER, alpha=a * w)
+        w = ein(t, C(sc, 'Mit ein bisschen'), 0.5)        # erst aus-, dann einblenden: nie zwei Texte übereinander
+        b.text('Länger als drei Sekunden? Ganz normal.', 640, 644, 30, '#ffffff', INTER_X, alpha=a * (1 - klemm(w * 2)))
+        b.text('Mit ein bisschen Übung schaffst du das auch.', 640, 628, 25, '#ffffff', INTER, alpha=a * klemm(w * 2 - 1))
         a2 = ein(t, C(sc, SPRUCH))
         b.text(SPRUCH, 640, 660 + 10 * (1 - a), 32, '#ffffff', INTER_X, alpha=a * a2, skala=0.85 + 0.15 * zurueck(a2))
 
