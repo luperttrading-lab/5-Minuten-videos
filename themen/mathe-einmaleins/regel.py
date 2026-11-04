@@ -76,9 +76,9 @@ SZENEN = [
         'Aber Vorsicht: Bei fünfzehn mal vierzehn ergeben die Einer nur neun. Das lange Rechteck ist dann nur '
         'neunzehn breit, also hundertneunzig und nicht zweihundert. Dazu kommt die Ecke, fünf mal vier gleich '
         'zwanzig. Zusammen zweihundertzehn, nicht zweihundertzwanzig.')),
-    dict(id='merke', kicker='Merke', pause=DENKPAUSE, text=(
-        'Merk dir die drei Schritte: Einer rüber, mal zehn, Einer mal Einer dazu. Und jetzt du: dreizehn mal '
-        'vierzehn.')),
+    dict(id='merke', kicker='Merke', pause=DENKPAUSE, text=(   # Nutzerwunsch 04.11.: die langen Sätze, nicht die Kurzformen
+        'Merk dir die drei Schritte: Einer zur anderen Zahl, egal, welche. Eine Null anhängen. Beide Einer multiplizieren '
+        'und dazuzählen. Und jetzt du: dreizehn mal vierzehn.')),
     dict(id='schluss', kicker='Merke', anhang=True, text=(   # gehört zum Kapitel „Merke“, läuft nach der Lösung
         'Hat es bei dir länger als drei Sekunden gedauert? Ganz normal. Mit ein bisschen Übung schaffst du das auch '
         'so schnell. ' + SPRUCH)),
@@ -272,7 +272,7 @@ def beschriftung(b, rechnung, wert, x, y, a, gross=36):
     b.text(wert, x, y + 13, gross, '#ffffff', INTER_X, skala=a, alpha=klemm(a))
 
 
-def funken(b, t, start, cx, cy, r0=46, r1=150, n=14, dauer=0.8, fy=0.75):
+def funken(b, t, start, cx, cy, r0=46, r1=150, n=16, dauer=0.8, fy=0.75):
     """Kleiner Funkenkranz um ein Ergebnis (Belohnung, Nutzerwunsch 04.11.: „etwas ansprechender“), 0,8 s."""
     f = p(t, start, dauer)
     if not 0 < f < 1:
@@ -282,7 +282,7 @@ def funken(b, t, start, cx, cy, r0=46, r1=150, n=14, dauer=0.8, fy=0.75):
     for k in range(n):
         w = 2 * math.pi * (k + 0.37 * ((k * 7) % 5) / 5) / n
         r = mix(r0, r1 * (0.85 + 0.3 * ((k * 3) % 4) / 3), aus)
-        b.kreis(cx + r * math.cos(w), cy + fy * r * math.sin(w), 5.5 - 3 * f, farben[k % len(farben)],
+        b.kreis(cx + r * math.cos(w), cy + fy * r * math.sin(w), 6.5 - 3.5 * f, farben[k % len(farben)],
                 alpha=0.9 * (1 - f) ** 1.4)
 
 
@@ -467,7 +467,7 @@ def s_regel(b, sc, t):
     if q > 0:
         w288 = breite('288', INTER_X, GR)
         b.text('288', XS - w288 / 2, 590, GR, GRUEN, INTER_X, skala=0.5 + 0.5 * q, alpha=klemm(q * 2))
-        funken(b, t, T['z288'] + 0.05, XS - w288 / 2, 590, r0=60, r1=170)
+        funken(b, t, T['z288'] + 0.05, XS - w288 / 2, 590, r0=70, r1=190)
         ring = p(t, T['z288'], 0.9)
         if 0 < ring < 1:
             r = 60 + 120 * ring
@@ -712,7 +712,7 @@ def s_vorsicht(b, sc, t):
                    teile=[('+ ', INK), ('5', CA), (' · ', INK), ('4', CB), (' = ', INK), ('20', CD)], aktiv=(t54, tz))]
     schritte(b, t, 640, 120, 560, zeilen, ([('15 · 14 = ', INK), ('210', GRUEN)], tz), titel='15 · 14',
              alpha=ein(t, t19 - 0.5))                     # keine leere Karte am Anfang
-    funken(b, t, tz + 0.1, mitten([('15 · 14 = ', INK), ('210', GRUEN)], 920, 46)[1], 120 + 462 - 46, r0=58, r1=125, fy=0.42)
+    funken(b, t, tz + 0.1, mitten([('15 · 14 = ', INK), ('210', GRUEN)], 920, 46)[1], 120 + 462 - 46, r0=60, r1=170, fy=0.6)
     a = ein(t, t220)
     if a > 0:                                              # „nicht 220“, die 220 durchgestrichen
         y = 120 + 66 + 3 * 104 + 84 + 40
@@ -724,15 +724,36 @@ def s_vorsicht(b, sc, t):
             b.linie([(x1 - w - 4, y + 8), (mix(x1 - w - 4, x1 + 4, ps), y + 8 - 16 * ps)], CD, 5, alpha=a)
 
 
+MERKSAETZE = [('1', CB, ['Einer zur anderen Zahl –', 'egal, welche'], 'Einer zur'),
+              ('2', TEAL, ['Eine Null anhängen'], 'Eine Null'),
+              ('3', CD, ['Beide Einer multiplizieren', 'und dazuzählen'], 'Beide Einer')]
+
+
+def merkkarte(b, sc, t, x0=80, y0=130, w=590):
+    """Merkzettel: genau die Sätze, die gesprochen werden, groß und fett; jeder erscheint, wenn er gesagt wird."""
+    tdu = C(sc, 'Und jetzt du')
+    zeiten = [C(sc, wort) for *_, wort in MERKSAETZE] + [tdu]
+    h = 70 + sum(30 + 44 * len(z) for _, _, z, _ in MERKSAETZE) + 10
+    karte(b, x0, y0, w, h)
+    b.text('MERKE', x0 + 30, y0 + 38, 22, GRAU, INTER_X, anker='l')
+    y = y0 + 70
+    for k, (nr, col, zeilen, _) in enumerate(MERKSAETZE):
+        hoehe = 30 + 44 * len(zeilen)
+        a = ein(t, zeiten[k])
+        akt = ein(t, zeiten[k], 0.3) * (1 - ein(t, zeiten[k + 1], 0.3))
+        band(b, x0 + 14, y + 2, x0 + w - 14, y + hoehe - 6, col, 0.13 * akt)
+        if a > 0:
+            dy = 12 * (1 - a)
+            b.kreis(x0 + 52, y + 15 + 22 + dy, 23, col, alpha=a)
+            b.text(nr, x0 + 52, y + 15 + 22 + dy, 25, '#ffffff', INTER_X, alpha=a)
+            for j, z in enumerate(zeilen):
+                b.text(z, x0 + 92, y + 15 + 22 + 44 * j + dy, 34, INK, INTER_X, anker='l', alpha=a)
+        y += hoehe
+
+
 def s_merke(b, sc, t):
-    t1, t2, t3, tdu = C(sc, 'Einer rüber'), C(sc, 'mal zehn'), C(sc, 'Einer mal Einer'), C(sc, 'Und jetzt du')
-    zeilen = [dict(nr='1', farbe=CB, titel='Einer zur anderen Zahl – egal, welche', t_titel=0, t_rech=t1, aktiv=(t1, t2),
-                   teile=[('Einer rüber', INK)]),
-              dict(nr='2', farbe=TEAL, titel='eine Null anhängen', t_titel=0, t_rech=t2, aktiv=(t2, t3),
-                   teile=[('mal 10', INK)]),
-              dict(nr='3', farbe=CD, titel='beide Einer multiplizieren', t_titel=0, t_rech=t3, aktiv=(t3, tdu),
-                   teile=[('Einer · Einer dazu', INK)])]
-    schritte(b, t, 80, 130, 590, zeilen, titel='Merke')
+    tdu = C(sc, 'Und jetzt du')
+    merkkarte(b, sc, t)
     a = ein(t, tdu)
     karte(b, 700, 130, 490, 450, a)
     if a <= 0:
@@ -749,7 +770,7 @@ def s_merke(b, sc, t):
     for i, (teile, tl) in enumerate(loes):
         einblenden(b, teile, 945, 335 + i * 62, 38, t, tl)
     einblenden(b, [('= ', INK), ('182', GRUEN)], 945, 530, 56, t, te + 5.1)
-    funken(b, t, te + 5.25, mitten([('= ', INK), ('182', GRUEN)], 945, 56)[1], 530, r0=62, r1=135, fy=0.42)
+    funken(b, t, te + 5.25, mitten([('= ', INK), ('182', GRUEN)], 945, 56)[1], 530, r0=60, r1=170, fy=0.6)
 
 
 def s_schluss(b, sc, t):
@@ -767,18 +788,15 @@ def s_schluss(b, sc, t):
 
 
 KLAENGE = {  # Stichwort (oder '#ende' = Ende des Sprechtexts), Klang, Versatz in s – passend zu den Einblendungen
+    # Nutzer 04.11.: kein „Plopp“ (fallender Ton, klang wie „Boing“). Glöckchen nur an den vier grünen Ergebnissen,
+    # dort zusammen mit den Funken: ein Zeichen für „fertig gerechnet“.
     'hook': [('drei Sekunden', 'tick', 0), ('drei Sekunden', 'tick', 1), ('drei Sekunden', 'tick', 2),
              ('drei Sekunden', 'ding', 3.0)],
-    'regel': [('zur ersten Zahl', 'wusch', 0), ('gibt vierundzwanzig', 'plopp', 0), ('eine Null', 'plopp', 0.35),
-              ('sechs mal acht', 'wusch', 0.05), ('gleich acht', 'plopp', 0), ('macht zwei', 'ding', 0)],
-    'warum': [('vier Teile', 'plopp', 0), ('drehen', 'wusch', 0), ('also mal zehn', 'ding', 0), ('Übrig', 'plopp', 0)],
-    'andersrum': [('legst du', 'wusch', 0), ('Wieder', 'ding', 0.4)],
-    'sonderfall': [('zwanzig breit', 'plopp', 0), ('Elf mal', 'plopp', 0), ('Zwölf mal', 'plopp', 0),
-                   ('Und so', 'plopp', 0), ('Und so', 'plopp', 1.0), ('fünfzehn mal fünfzehn', 'plopp', 0)],
-    'vorsicht': [('und nicht zweihundert', 'tief', 0), ('fünf mal vier', 'plopp', 0), ('Zusammen', 'ding', 0)],
-    'merke': [('Und jetzt du', 'plopp', 0), ('#ende', 'tick', 0.2), ('#ende', 'tick', 1.2), ('#ende', 'tick', 2.2),
-              ('#ende', 'ding', 5.3)],
-    'schluss': [('Mit ein bisschen', 'plopp', 0), (SPRUCH, 'ding', 0.2)],
+    'regel': [('zur ersten Zahl', 'wusch', 0), ('sechs mal acht', 'wusch', 0.05), ('macht zwei', 'ding', 0)],
+    'warum': [('drehen', 'wusch', 0)],
+    'andersrum': [('legst du', 'wusch', 0)],
+    'vorsicht': [('und nicht zweihundert', 'tief', 0), ('Zusammen', 'ding', 0)],
+    'merke': [('#ende', 'tick', 0.2), ('#ende', 'tick', 1.2), ('#ende', 'tick', 2.2), ('#ende', 'ding', 5.3)],
 }
 
 
@@ -812,6 +830,64 @@ def klang(art):
         t = zeit(0.45)
         y = (np.sin(2 * np.pi * 196 * t) + np.sin(2 * np.pi * 207 * t)) * np.exp(-t * 6) * np.minimum(1, t * 200) * 0.05
     return y.astype(np.float32)
+
+
+# ---------------------------------------------------------------- Ton: Knackser und Zischeln (Nutzer 04.11.: „Knistern“)
+# Gemessen: Die Sprachausgabe liefert vereinzelte Klicks in Sprechpausen (≈ 20 in 2:50, z. B. bei 1,8 s, 3,8 s, 5,7 s),
+# nach der Anhebung auf −16 LUFS hörbar. Gedämpft werden nur kurze Hochton-Spitzen mit Stille davor, die sofort wieder
+# abklingen; Konsonanten (t, k, p gehen in Behauchung über) bleiben. Dazu ein sanfter Tiefpass bei 12 kHz.
+def _hochpass(x, fc, sr):
+    n = 1 << int(np.ceil(np.log2(len(x) + 1)))
+    F = np.fft.rfft(x, n)
+    F[np.fft.rfftfreq(n, 1 / sr) < fc] = 0
+    return np.fft.irfft(F, n)[:len(x)]
+
+
+def entknacksen(x, sr, bericht=None):
+    """Einzelne Knackser (Klicks der Sprachausgabe) dämpfen, Konsonanten bleiben.
+    Knackser = Hochton-Spitze (> 5 kHz) in 2-ms-Fenstern, die
+      • mindestens 6× über dem gleitenden Median (50 ms) liegt,
+      • vorher leise ist (−28 … −3 ms: Gesamtpegel unter −42 dBFS) und
+      • sofort wieder abklingt (+4 … +20 ms: Hochton unter einem Viertel der Spitze) –
+    ein t/k/p-Knall dagegen geht in Behauchung oder Vokal über und bleibt unberührt.
+    Gedämpft wird das Fenster ±2 ms um −20 dB mit 1-ms-Rampen."""
+    w = int(0.002 * sr)
+    n = len(x) // w
+    h = _hochpass(x, 5000, sr)
+    eh = np.sqrt((h[:n * w].reshape(n, w) ** 2).mean(1)) + 1e-9
+    ev = np.sqrt((x[:n * w].reshape(n, w) ** 2).mean(1)) + 1e-9
+    k = 25
+    med = np.median(np.lib.stride_tricks.sliding_window_view(np.pad(eh, (k // 2, k // 2), mode='edge'), k), axis=1)
+    kand = np.where((eh > 6 * med) & (eh > 10 ** (-58 / 20)))[0]
+    g = np.ones(len(x))
+    rampe = int(0.001 * sr)
+    treffer = []
+    for i in kand:
+        if i < 15 or i + 11 > n:
+            continue
+        vorher = np.sqrt((ev[i - 14:i - 1] ** 2).mean())
+        nachher = eh[i + 2:i + 10].max()
+        if vorher < 10 ** (-42 / 20) and nachher < eh[i] / 4:
+            a, b = max(0, (i - 1) * w), min(len(x), (i + 2) * w)
+            seg = np.full(b - a, 0.1)
+            r = min(rampe, (b - a) // 2)
+            seg[:r] = np.linspace(1, 0.1, r)
+            seg[-r:] = np.linspace(0.1, 1, r)
+            g[a:b] = np.minimum(g[a:b], seg)
+            treffer.append(i * w / sr)
+    if bericht is not None:
+        bericht.extend(treffer)
+    return (x * g).astype(np.float32)
+
+
+def tiefpass(x, sr, fc=12000, breite=1500):
+    """Sanfter Tiefpass (Kosinus-Flanke fc ± breite/2): nimmt Zischeln und Knistern über 12 kHz, die Stimme bleibt."""
+    n = 1 << int(np.ceil(np.log2(len(x) + 1)))
+    F = np.fft.rfft(x, n)
+    f = np.fft.rfftfreq(n, 1 / sr)
+    m = np.clip((fc + breite / 2 - f) / breite, 0, 1)
+    F *= 0.5 - 0.5 * np.cos(np.pi * m)
+    return np.fft.irfft(F, n)[:len(x)].astype(np.float32)
 
 
 def klangspur(n_samples):
@@ -921,6 +997,9 @@ def main():
     R.aufbereiten(wav)
     with wave.open(wav) as f:                              # Geräusche erst nach der Aufbereitung (sonst greift das Gate)
         stimme = np.frombuffer(f.readframes(f.getnframes()), np.int16).astype(np.float32) / 32768
+    knackser = []
+    stimme = tiefpass(entknacksen(stimme, R.SR, knackser), R.SR)
+    print(f'Knackser gedämpft: {len(knackser)}, Tiefpass 12 kHz')
     mix_ = np.clip(stimme + klangspur(len(stimme)), -0.97, 0.97)
     with wave.open(wav, 'wb') as f:
         f.setnchannels(1); f.setsampwidth(2); f.setframerate(R.SR)

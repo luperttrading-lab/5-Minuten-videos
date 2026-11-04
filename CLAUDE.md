@@ -158,6 +158,11 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Zu jedem Mathe-Video eine Übung** in der App `uebung/` (https://luperttrading-lab.github.io/5-Minuten-videos/uebung/,
   Nutzerwunsch 04.11.: 10 Aufgaben, tippen oder sprechen, richtig gezählt, Ø-Zeit). Neue Übung in `uebung/aufgaben.js`,
   `APP_VERSION` hochzählen, `node uebung/tests/uebung.mjs` muss „Alles grün“ melden. Details `uebung/LIESMICH.md`.
+- **Merksätze so sprechen, wie sie dastehen** (Nutzerwunsch 04.11.): keine Kurzformen („Einer rüber“), die man nur
+  lesend versteht; der Merkzettel zeigt genau die gesprochenen Sätze.
+- **Geräusche sparsam** (Nutzer 04.11.): kein „Plopp“ (klang wie „Boing“); Glöckchen nur zusammen mit den Funken an den
+  grünen Endergebnissen. Klicks der Sprachausgabe in Pausen dämpft `entknacksen` in `regel.py` (≈ 30 → 5), dazu
+  Tiefpass 12 kHz. Vorschau-Ton direkt aus der WAV kodieren (`-map 1:a`, AAC 160k), nicht AAC aus AAC.
 - **Keine künstlichen Pausen in den Ton schneiden** (Messung 04.11.): Christian pausiert an Satzenden selbst 200–500 ms,
   die Zeitmarken sind nur auf ≈ 40 ms genau, Schnitte landeten im Wort („Sprechabsetzer“).
 

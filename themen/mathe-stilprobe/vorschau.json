@@ -1,12 +1,20 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Neu oben: etwas mehr Bewegung im Video. Bitte anschauen und „passt“ oder „ändern“ mit Notiz tippen.",
+ "aufgabe": "Neu oben: ohne Knistern und ohne „Boing“. Bitte mit Kopfhörer anhören und „passt“ oder „ändern“ tippen. Der neue Merkzettel folgt.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel8/regel_720p.mp4",
-   "titel": "Neu: etwas mehr Bewegung, gleicher Ton (2:50)",
-   "stand": "04.11., 16:50",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel9/regel_720p.mp4",
+   "titel": "Zwischenstand: ohne Knistern und „Boing“, Funken an allen Ergebnissen (2:50)",
+   "stand": "04.11., 17:20",
    "pruefen": true,
+   "poster_bei": 158.3,
+   "notiz": "Bitte mit Kopfhörer anhören, ob das Knistern weg ist. Gemessen: Die Sprachausgabe hatte rund 30 kleine Klicks in den Sprechpausen, jetzt sind es 5; Konsonanten bleiben unberührt. Dazu ein sanfter Tiefpass bei 12 kHz und bessere Kodierung (Ton direkt aus der Originalspur). Das „Boing“ (fallender Ton) ist überall raus. Glöckchen und Funken kommen jetzt gemeinsam an den vier grünen Ergebnissen: 288 im Einstieg, 288 im Trick, 210 und 182. Noch NICHT drin: der neue Merkzettel mit den langen Sätzen – dafür fehlt Sprechzeit bei ElevenLabs."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel8/regel_720p.mp4",
+   "titel": "Vorher: mit „Boing“ und Knistern (2:50)",
+   "stand": "04.11., 16:50",
+   "pruefen": false,
    "poster_bei": 6.2,
    "notiz": "Sprechtext und Ablauf sind gleich, nur die Bilder bewegen sich etwas mehr: Funken bei den Ergebnissen (288, 210, 182), eine leichte Flugspur hinter den wandernden Ziffern, das Rechteck entsteht Kästchen für Kästchen, die vier Teile rücken kurz auseinander, die Kapitelnummer springt auf, das Fragezeichen pocht mit den Ticks der Uhr. Dazu: keine leere Karte am Anfang von „Vorsicht“, die Überschrift beim Sonderfall kommt sofort, und „10 · 8 = 80“ erscheint jetzt erst, wenn es gesagt wird (vorher zu früh)."
   },
