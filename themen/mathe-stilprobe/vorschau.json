@@ -1,12 +1,20 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Neu oben: ohne Knistern und ohne „Boing“. Bitte mit Kopfhörer anhören und „passt“ oder „ändern“ tippen. Der neue Merkzettel folgt.",
+ "aufgabe": "Neu oben: Kreis, 240-Fläche und Klammern überarbeitet. Bitte anschauen und „passt“ oder „ändern“ tippen.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel9/regel_720p.mp4",
-   "titel": "Zwischenstand: ohne Knistern und „Boing“, Funken an allen Ergebnissen (2:50)",
-   "stand": "04.11., 17:20",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel11/regel_720p.mp4",
+   "titel": "Neu: Kreis mittig, 240 in der Fläche, eine Klammer (2:50)",
+   "stand": "04.11., 18:25",
    "pruefen": true,
+   "poster_bei": 69.5,
+   "notiz": "Die Acht (und später 6 und 8) ist jetzt genau mittig eingekreist; der Kreis schneidet die Nachbarziffer nicht mehr, der Strich unter 18 verschwindet, sobald der Kreis kommt. Die 240 steht jetzt in der Fläche: Die drei Teile werden türkis wie Schritt 2 und tragen „24 · 10 / 240“ wie die anderen Teile, kein Kasten mehr obendrauf. Links nur noch eine Klammer, die von 16 auf 24 wächst (beim Andersherum oben von 18 auf 24). Dasselbe beim Sonderfall (200) und bei Vorsicht (190). Beim Sonderfall erscheint das Rechteck schon bei „Einer zusammen zehn“, mit Klammer „Einer: 10 Spalten“, die auf 20 wächst. Ton wie im Zwischenstand (ohne Knistern, ohne Boing). Der Merkzettel ist noch der alte, bis ElevenLabs wieder Zeichen hat."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel9/regel_720p.mp4",
+   "titel": "Vorher: Kreis schief, 240 im aufgesetzten Kasten (2:50)",
+   "stand": "04.11., 17:20",
+   "pruefen": false,
    "poster_bei": 158.3,
    "notiz": "Bitte mit Kopfhörer anhören, ob das Knistern weg ist. Gemessen: Die Sprachausgabe hatte rund 30 kleine Klicks in den Sprechpausen, jetzt sind es 5; Konsonanten bleiben unberührt. Dazu ein sanfter Tiefpass bei 12 kHz und bessere Kodierung (Ton direkt aus der Originalspur). Das „Boing“ (fallender Ton) ist überall raus. Glöckchen und Funken kommen jetzt gemeinsam an den vier grünen Ergebnissen: 288 im Einstieg, 288 im Trick, 210 und 182. Noch NICHT drin: der neue Merkzettel mit den langen Sätzen – dafür fehlt Sprechzeit bei ElevenLabs."
   },

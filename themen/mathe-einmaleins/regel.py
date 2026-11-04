@@ -272,6 +272,30 @@ def beschriftung(b, rechnung, wert, x, y, a, gross=36):
     b.text(wert, x, y + 13, gross, '#ffffff', INTER_X, skala=a, alpha=klemm(a))
 
 
+_tinte = {}
+
+
+def tinte(s, g, pfad=INTER_X):
+    """Tintenkasten eines Textes: Versatz der Mitte gegenüber der Textmitte und Breite, Höhe (Zeichenkoordinaten)."""
+    if (s, g, pfad) not in _tinte:
+        sp = A.sprite(s, pfad, g, '#000000')
+        x0, y0, x1, y1 = sp.getchannel('A').getbbox()
+        _tinte[(s, g, pfad)] = (((x0 + x1) / 2 - sp.width / 2) / K, ((y0 + y1) / 2 - sp.height / 2) / K,
+                                (x1 - x0) / K, (y1 - y0) / K)
+    return _tinte[(s, g, pfad)]
+
+
+def einkreisen(b, ziffer, x, y, g, col, a, skala=1.0):
+    """Ziffer einkreisen (Nutzer 04.11.: „sehr gut, aber unsymmetrisch“): Ellipse mittig um die Tinte, ringsum gleich
+    viel Luft, schmal genug, dass sie die Nachbarziffer nicht schneidet (Lücke 1|8 bei 112 px ≈ 10 Punkte)."""
+    if a <= 0:
+        return
+    ox, oy, w, h = tinte(ziffer, g)
+    cx, cy, rx, ry = x + ox * skala, y + oy * skala, (w / 2 + 9) * skala, (h / 2 + 11) * skala
+    b.d.ellipse([(cx - rx) * K, (cy - ry) * K, (cx + rx) * K, (cy + ry) * K], fill=farbe(col, 28 * a),
+                outline=farbe(col, 230 * a), width=int(4 * K))
+
+
 def funken(b, t, start, cx, cy, r0=46, r1=150, n=16, dauer=0.8, fy=0.75):
     """Kleiner Funkenkranz um ein Ergebnis (Belohnung, Nutzerwunsch 04.11.: „etwas ansprechender“), 0,8 s."""
     f = p(t, start, dauer)
@@ -391,19 +415,20 @@ def s_regel(b, sc, t):
     p8 = math.sin(math.pi * p(t, T['acht'], 0.6))
     p68 = math.sin(math.pi * p(t, T['f68'], 0.6))
     t_zweite, t_mult = C(sc, 'Einer der zweiten Zahl'), C(sc, 'Multipliziere')
-    au = ein(t, t_zweite, 0.4) * (1 - ein(t, T['flug'] + 0.6, 0.4))
-    w1 = breite('1', INTER_X, G)
-    if au > 0:                                             # „die zweite Zahl“: 18 unterstrichen
-        b.linie([(cs[3] - w1 / 2, YT + 64), (cs[4] + w1 / 2, YT + 64)], CB, 6, alpha=au)
+    # „die zweite Zahl“: 18 unterstrichen – bis die Acht eingekreist wird (sonst schneidet der Strich den Kreis)
+    au = ein(t, t_zweite, 0.4) * (1 - ein(t, T['acht'] - 0.1, 0.3))
+    ox1, _, w1i, h1i = tinte('1', G)
+    ox8, _, w8i, h8i = tinte('8', G)
+    if au > 0:
+        y_strich = YT + h8i / 2 + 14
+        b.linie([(cs[3] + ox1 - w1i / 2, y_strich), (cs[4] + ox8 + w8i / 2, y_strich)], CB, 6, alpha=au)
+    def sk_(i):                                            # die gemeinte Ziffer pulst kurz, der Kreis wächst mit
+        return 1 + 0.12 * max(p8 if i == 4 else 0, p68 if i in (1, 4) else 0)
     for i, farbe_i, von, bis in ((4, CB, T['acht'], T['flug'] + 0.4), (1, CA, t_mult, T['f68'] + 0.5),
                                  (4, CB, t_mult, T['f68'] + 0.5)):
-        ar = ein(t, von, 0.3) * (1 - ein(t, bis, 0.3))
-        if ar > 0:                                         # Ring um die gemeinte Ziffer, solange von ihr die Rede ist
-            r = 58
-            b.d.ellipse([(cs[i] - r) * K, (YT - r) * K, (cs[i] + r) * K, (YT + r) * K], fill=farbe(farbe_i, 30 * ar),
-                        outline=farbe(farbe_i, 220 * ar), width=int(4 * K))
+        einkreisen(b, oben[i][0], cs[i], YT, G, farbe_i, ein(t, von, 0.3) * (1 - ein(t, bis, 0.3)), sk_(i))
     for i, ((s, c), cx) in enumerate(zip(oben, cs)):
-        sk = 1 + 0.28 * max(p8 if i == 4 else 0, p68 if i in (1, 4) else 0)
+        sk = sk_(i)
         b.text(s, cx, YT, G, c, INTER_X, skala=sk)
     # Schritt 1: 16 und die 8 wandern nach unten und werden zu 24
     fl = glatt(p(t, T['flug'], 1.1))
@@ -508,8 +533,10 @@ def flaechen(b, t, wandert, T, RX, RY):
         elif name == wandert == 'C':
             mx, my = mix(mx, RX + 21 * U, pd), mix(my, RY + 5 * U, pd) + math.sin(pd * math.pi) * 70
             winkel = -90 * pd
-        lx, ly = teil(b, w, h, U, mischfarbe('#a9c9e8', col, farbig), mx, my, winkel, wachsen, zentrum,
-                      gitter=0.3, rand=farbig)
+        fuell = mischfarbe('#a9c9e8', col, farbig)
+        if name != 'D':                                    # „also mal zehn“: A, C und der Streifen werden eine Fläche
+            fuell = mischfarbe(fuell, TEAL, lang)
+        lx, ly = teil(b, w, h, U, fuell, mx, my, winkel, wachsen, zentrum, gitter=0.3, rand=farbig * (1 - 0.85 * lang))
         if farbig > 0:
             a = zurueck(p(t, T[name], 0.5)) if name in T else 1.0
             if name != 'D':
@@ -524,30 +551,26 @@ def flaechen(b, t, wandert, T, RX, RY):
     b.text('10', RX - 34, RY + 5 * U, 30, INK, INTER_X, alpha=a2)
     b.text('6', RX - 34, RY + 13 * U, 30, CA, INTER_X, alpha=a2 * ((1 - pd) if wandert == 'C' else 1))
     b.text('8', RX + 14 * U, RY - 26, 30, CB, INTER_X, alpha=a2 * ((1 - pd) if wandert == 'B' else 1))
-    a16, a24 = ein(t, T['k16']), ein(t, T['k24'])
+    # EINE Klammer (Nutzer 04.11.: zwei Klammern und drei Zahlenspalten waren unübersichtlich): erst 16 bzw. 18,
+    # dann wächst sie auf 24 und färbt sich türkis
+    a16, g24 = ein(t, T['k16']), glatt(p(t, T['k24'], 0.6))
+    ck = mischfarbe(INK, TEAL, g24)
     if wandert == 'B':
         b.text('8', RX - 34, RY + 20 * U, 30, CB, INTER_X, alpha=a2 * pd)
-        klammer_senkrecht(b, RY, RY + 16 * U, RX - 64, INK, a16)
-        b.text('16', RX - 92, RY + 8 * U, 30, INK, INTER_X, alpha=a16)
-        klammer_senkrecht(b, RY, RY + 24 * U, RX - 120, TEAL, a24)
-        b.text('24', RX - 150, RY + 12 * U, 32, TEAL, INTER_X, alpha=a24)
-        rahmen_, mitte, summe = ((RX - 5, RY - 5, RX + 10 * U + 5, RY + 24 * U + 5), (RX + 5 * U, RY + 12 * U),
-                                 '100 + 60 + 80')
+        ende = mix(16, 24, g24) * U
+        klammer_senkrecht(b, RY, RY + ende, RX - 64, ck, a16)
+        b.text('16', RX - 92, RY + ende / 2, 30, INK, INTER_X, alpha=a16 * (1 - g24))
+        b.text('24', RX - 94, RY + ende / 2, 34, TEAL, INTER_X, alpha=a16 * g24)
+        mitte, rech = (RX + 5 * U, RY + 12 * U), '24 · 10'
     else:
         b.text('6', RX + 21 * U, RY - 26, 30, CA, INTER_X, alpha=a2 * pd)
-        klammer_waagrecht(b, RX, RX + 18 * U, RY - 52, INK, a16)
-        b.text('18', RX + 9 * U, RY - 72, 30, INK, INTER_X, alpha=a16)
-        klammer_waagrecht(b, RX, RX + 24 * U, RY - 96, TEAL, a24)
-        b.text('24', RX + 12 * U, RY - 116, 32, TEAL, INTER_X, alpha=a24)
-        rahmen_, mitte, summe = ((RX - 5, RY - 5, RX + 24 * U + 5, RY + 10 * U + 5), (RX + 12 * U, RY + 5 * U),
-                                 '100 + 80 + 60')
-    if lang > 0:                                           # 100, 80, 60 verschmelzen sichtbar zu 240
-        x0, y0, x1, y1 = rahmen_
-        b.d.rounded_rectangle([x0 * K, y0 * K, x1 * K, y1 * K], radius=6 * K, outline=farbe(TEAL, 255 * lang),
-                              width=int(6 * K))
-        band(b, mitte[0] - 92, mitte[1] - 56, mitte[0] + 92, mitte[1] + 44, TEAL, 0.85 * lang)
-        b.text(summe, mitte[0], mitte[1] - 32, 23, '#ffffff', INTER, alpha=lang)
-        b.text('240', mitte[0], mitte[1] + 6, 56, '#ffffff', INTER_X, alpha=lang)
+        ende = mix(18, 24, g24) * U
+        klammer_waagrecht(b, RX, RX + ende, RY - 52, ck, a16)
+        b.text('18', RX + ende / 2, RY - 72, 30, INK, INTER_X, alpha=a16 * (1 - g24))
+        b.text('24', RX + ende / 2, RY - 74, 34, TEAL, INTER_X, alpha=a16 * g24)
+        mitte, rech = (RX + 12 * U, RY + 5 * U), '10 · 24'
+    if lang > 0:                                           # die 240 steht in der Fläche, wie die Werte der Teile
+        beschriftung(b, rech, '240', mitte[0], mitte[1], zurueck(p(t, T['lang'] + 0.2, 0.5)), 54)
     if 'uebrig' in T:
         puls = math.sin(math.pi * p(t, T['uebrig'], 0.7))
         if puls > 0:
@@ -615,12 +638,15 @@ def s_andersrum(b, sc, t):
 FAELLE = [(11, 19), (12, 18), (13, 17), (14, 16), (15, 15)]
 
 
-def langes_rechteck(b, a, bb, x0, y0, u, alpha=1.0, gitter=0.3):
+def langes_rechteck(b, a, bb, x0, y0, u, alpha=1.0, gitter=0.3, tuerkis=0.0):
     """Form nach Schritt 1 (Streifen rechts angelegt): A, B, C nebeneinander, Ecke D unter B.
-    a = Einer der ersten Zahl, bb = Einer der zweiten; Breite 10 + a + bb Spalten."""
-    teil(b, 10, 10, u, CBLAU, x0 + 5 * u, y0 + 5 * u, gitter=gitter, alpha=alpha)
-    teil(b, bb, 10, u, CB, x0 + (10 + bb / 2) * u, y0 + 5 * u, gitter=gitter, alpha=alpha)
-    teil(b, a, 10, u, CA, x0 + (10 + bb + a / 2) * u, y0 + 5 * u, gitter=gitter, alpha=alpha)
+    a = Einer der ersten Zahl, bb = Einer der zweiten; Breite 10 + a + bb Spalten. tuerkis: A, B, C werden eine Fläche."""
+    rand = 1 - 0.85 * tuerkis
+    teil(b, 10, 10, u, mischfarbe(CBLAU, TEAL, tuerkis), x0 + 5 * u, y0 + 5 * u, gitter=gitter, alpha=alpha, rand=rand)
+    teil(b, bb, 10, u, mischfarbe(CB, TEAL, tuerkis), x0 + (10 + bb / 2) * u, y0 + 5 * u, gitter=gitter, alpha=alpha,
+         rand=rand)
+    teil(b, a, 10, u, mischfarbe(CA, TEAL, tuerkis), x0 + (10 + bb + a / 2) * u, y0 + 5 * u, gitter=gitter, alpha=alpha,
+         rand=rand)
     teil(b, bb, a, u, CD, x0 + (10 + bb / 2) * u, y0 + (10 + a / 2) * u, gitter=gitter, alpha=alpha)
 
 
@@ -649,21 +675,24 @@ def s_sonderfall(b, sc, t):
         stufe = 1.0 if i == k else 0.55
         zeile(b, [(f'{x} · {y} = ', INK), ('200', TEAL), (' + ', INK), (f'{aa} · {bb}', CD),
                   (f' = {200 + aa * bb}', INK)], 360, yy + 12 * (1 - ai), 38, INTER_X, alpha=ai * stufe)
-    ad = ein(t, tz)                                        # rechts: 20 Spalten, die Ecke wächst von 1 × 9 bis 5 × 5
+    # rechts: das Rechteck kommt schon bei „Einer zusammen zehn“ (vorher 6 s nur die Überschrift), die Klammer zeigt erst
+    # die 10 Einer-Spalten und wächst bei „zwanzig breit“ auf 20; die Ecke wächst von 1 × 9 bis 5 × 5
+    ad = ein(t, th)
     if ad > 0:
         a_, b_ = 1.0, 9.0
         for (x, y), tk in zip(FAELLE[1:], zeiten[1:]):
             f = glatt(p(t, tk, 0.7))
             a_, b_ = mix(a_, x - 10, f), mix(b_, y - 10, f)
         u, x0, y0 = 15, 730, 230
-        langes_rechteck(b, a_, b_, x0, y0, u, alpha=ad)
+        tue = ein(t, C(sc, 'also zweihundert'), 0.6)       # erst die Farben (die Einer-Spalten ergeben 10), dann eine Fläche
+        langes_rechteck(b, a_, b_, x0, y0, u, alpha=ad, tuerkis=tue)
         p200 = math.sin(math.pi * p(t, t200, 0.8))
-        b.d.rounded_rectangle([(x0 - 5) * K, (y0 - 5) * K, (x0 + 20 * u + 5) * K, (y0 + 10 * u + 5) * K], radius=6 * K,
-                              outline=farbe(TEAL, 255 * ad), width=int((5 + 4 * p200) * K))
-        band(b, x0 + 10 * u - 64, y0 + 5 * u - 30, x0 + 10 * u + 64, y0 + 5 * u + 30, TEAL, 0.85 * ad)
-        b.text('200', x0 + 10 * u, y0 + 5 * u, 46, '#ffffff', INTER_X, alpha=ad, skala=1 + 0.12 * p200)
-        klammer_waagrecht(b, x0, x0 + 20 * u, y0 - 26, TEAL, ad)
-        b.text('20 Spalten', x0 + 10 * u, y0 - 48, 26, TEAL, INTER_X, alpha=ad)
+        beschriftung(b, '20 · 10', '200', x0 + 10 * u, y0 + 5 * u, tue * (1 + 0.12 * p200), 46)
+        g20 = glatt(p(t, tz, 0.6))
+        xa = mix(x0 + 10 * u, x0, g20)
+        klammer_waagrecht(b, xa, x0 + 20 * u, y0 - 26, mischfarbe(INK, TEAL, g20), ad)
+        b.text('Einer: 10 Spalten', (xa + x0 + 20 * u) / 2, y0 - 48, 24, INK, INTER_X, alpha=ad * (1 - g20))
+        b.text('20 Spalten', (xa + x0 + 20 * u) / 2, y0 - 48, 26, TEAL, INTER_X, alpha=ad * g20)
         if k >= 0:
             x, y = FAELLE[k]
             pe = 1 + 0.15 * math.sin(math.pi * p(t, tecke, 0.8))
@@ -679,11 +708,12 @@ def s_vorsicht(b, sc, t):
     zeile(b, [('Einer: ', GRAU), ('5', CA), (' + ', INK), ('4', CB), (' = 9', CD), ('  (nicht 10)', CD)], 300, 172, 30,
           INTER_X, alpha=ein(t, t9))
     u, x0, y0 = 18, 110, 270
-    ad = ein(t, t19)
+    ad, a190 = ein(t, t19), ein(t, t190, 0.6)
     if ad > 0:
-        teil(b, 10, 10, u, CBLAU, x0 + 5 * u, y0 + 5 * u, alpha=ad)
-        teil(b, 4, 10, u, CB, x0 + 12 * u, y0 + 5 * u, alpha=ad)
-        teil(b, 5, 10, u, CA, x0 + 16.5 * u, y0 + 5 * u, alpha=ad)
+        rand = 1 - 0.85 * a190
+        teil(b, 10, 10, u, mischfarbe(CBLAU, TEAL, a190), x0 + 5 * u, y0 + 5 * u, alpha=ad, rand=rand)
+        teil(b, 4, 10, u, mischfarbe(CB, TEAL, a190), x0 + 12 * u, y0 + 5 * u, alpha=ad, rand=rand)
+        teil(b, 5, 10, u, mischfarbe(CA, TEAL, a190), x0 + 16.5 * u, y0 + 5 * u, alpha=ad, rand=rand)
         klammer_waagrecht(b, x0, x0 + 19 * u, y0 - 26, TEAL, ad)
         b.text('19 Spalten', x0 + 9.5 * u, y0 - 48, 26, TEAL, INTER_X, alpha=ad)
     an = ein(t, tnicht)
@@ -693,12 +723,8 @@ def s_vorsicht(b, sc, t):
             b.linie([(xs + 3, y0 + k * u + 3), (xs + 3, y0 + (k + 1) * u - 3)], CD, 3, alpha=an)
             b.linie([(xs + u - 3, y0 + k * u + 3), (xs + u - 3, y0 + (k + 1) * u - 3)], CD, 3, alpha=an)
         b.text('fehlt: 10', xs + u + 14, y0 + 5 * u, 28, CD, INTER_X, anker='l', alpha=an)
-    a190 = ein(t, t190, 0.6)
-    if a190 > 0:
-        b.d.rounded_rectangle([(x0 - 5) * K, (y0 - 5) * K, (x0 + 19 * u + 5) * K, (y0 + 10 * u + 5) * K], radius=6 * K,
-                              outline=farbe(TEAL, 255 * a190), width=int(6 * K))
-        band(b, x0 + 9.5 * u - 60, y0 + 5 * u - 28, x0 + 9.5 * u + 60, y0 + 5 * u + 28, TEAL, 0.85 * a190)
-        b.text('190', x0 + 9.5 * u, y0 + 5 * u, 42, '#ffffff', INTER_X, alpha=a190)
+    if a190 > 0:                                           # die 190 steht in der Fläche
+        beschriftung(b, '19 · 10', '190', x0 + 9.5 * u, y0 + 5 * u, a190, 44)
     ae = zurueck(p(t, t54, 0.6))
     if ae > 0:
         teil(b, 4, 5, u, CD, x0 + 12 * u, y0 + 12.5 * u, skala=0.4 + 0.6 * klemm(ae),
