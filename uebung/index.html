@@ -122,6 +122,9 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .ergebnis { text-align: center; }
 .ergebnis .gross { font-size: 40px; font-weight: 850; margin: 4px 0 0; }
 .ergebnis .zeit { font-size: 22px; font-weight: 700; margin: 6px 0 0; }
+.ergebnis .zeit small { display: block; margin-top: 8px; font-size: 15px; font-weight: 500; line-height: 1.45; color: var(--grau); }
+.ergebnis .zeit small b { color: var(--ink); }
+.nobr { white-space: nowrap; }
 .ergebnis .zeit b { color: var(--c10); }
 .ergebnis .ziel { color: var(--grau); margin: 6px 0 0; font-size: 15px; }
 .spruch { text-align: center; background: var(--c10); color: #fff; border-radius: 18px; padding: 14px; font-weight: 700; font-size: 17px; }
@@ -225,7 +228,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 
 <script src="aufgaben.js"></script>
 <script>
-const APP_VERSION = '0.4';          // bei JEDER Änderung hochzählen
+const APP_VERSION = '0.5';          // bei JEDER Änderung hochzählen
 const $ = s => document.querySelector(s);
 const ANZAHL = 10;
 const ZIEL = 3.0;                    // Sekunden je Aufgabe, wie im Video („in drei Sekunden“)
@@ -288,11 +291,12 @@ function baueStart() {
   const r = lies(RUNDEN, []).filter(x => x.uebung === u.id);
   $('#verlauf').hidden = !r.length;
   if (r.length) {
-    const gute = r.filter(x => x.richtig >= 8);
+    const gute = r.filter(x => x.richtig >= 8 && (x.mess === 2 || x.eingabe !== 'sprechen'));
     const best = gute.length ? Math.min(...gute.map(x => x.schnitt)) : null;
-    $('#bester').innerHTML = best ? `Bester Schnitt: <b>${sek(best)}</b> je Aufgabe` : 'Noch keine Runde mit 8 oder mehr richtig';
+    $('#bester').innerHTML = best ? `Bester Schnitt: <b>${sek(best)}</b> je Aufgabe`
+      : r.some(x => x.richtig >= 8) ? 'Bester Schnitt: ab jetzt neu gemessen (ohne Wartezeit der Erkennung)' : 'Noch keine Runde mit 8 oder mehr richtig';
     $('#runden').innerHTML = r.slice(-5).reverse().map(x =>
-      `<li>${new Date(x.zeit).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' })} · <b>${x.richtig}/${x.anzahl}</b> richtig · Ø <b>${sek(x.schnitt)}</b>${x.stufe === 'zehn' ? ' · Einer = 10' : ''}</li>`).join('');
+      `<li>${new Date(x.zeit).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' })} · <b>${x.richtig}/${x.anzahl}</b> richtig · Ø <b>${sek(x.schnitt)}</b>${x.stufe === 'zehn' ? ' · Einer = 10' : ''}${x.eingabe === 'sprechen' && x.mess !== 2 ? ' · alte Messung' : ''}</li>`).join('');
   }
 }
 for (const b of document.querySelectorAll('#eingabe button'))
@@ -375,13 +379,17 @@ function tippe(z) {
   const a = runde.aufgaben[runde.i];
   if (uebung().auto && runde.eingabe.length === String(a.loesung).length) pruefe(Number(runde.eingabe), 'getippt');
 }
-function pruefe(wert, wie) {
+function pruefe(wert, wie, sp) {
   if (runde.phase !== 'frage') return;
   const a = runde.aufgaben[runde.i];
-  const dauer = performance.now() - runde.t0;
+  const jetzt = performance.now(), roh = jetzt - runde.t0;
+  // Gesprochen: Zeit bis zum Ende deiner Antwort (nicht bis die Erkennung fertig ist), dazu die Denkzeit bis zum ersten Wort
+  const gut = sp && sp.schluss !== null && sp.beginn !== null && sp.schluss <= jetzt && sp.schluss > runde.t0;
+  const dauer = gut ? sp.schluss - runde.t0 : roh;
+  const denk = gut ? Math.max(0, sp.beginn - runde.t0) : null;
   const ok = wert === a.loesung;
   runde.phase = 'geloest';
-  runde.ergebnisse.push({ frage: a.frage, loesung: a.loesung, wert, ok, dauer, wie, a });
+  runde.ergebnisse.push({ frage: a.frage, loesung: a.loesung, wert, ok, dauer, denk, roh, wie, a });
   // Falsch: falsche Zahl durchgestrichen, richtige daneben – genauso lange wie bei richtig, kein Halt in der Runde
   $('#antwort').innerHTML = ok ? String(wert) : `<s>${wert}</s><b>${a.loesung}</b>`;
   $('#antwort').className = 'antwort ' + (ok ? 'ok' : 'nein');
@@ -406,13 +414,21 @@ function zeigeEnde(neu) {
   const schnitt = e.reduce((s, x) => s + x.dauer, 0) / e.length;
   const schnellste = Math.min(...e.map(x => x.dauer));
   const alle = lies(RUNDEN, []);
-  const frueher = alle.filter((x, k) => k !== runde.platz && x.uebung === stand.uebung && x.richtig >= 8).map(x => x.schnitt);
+  const gs = e.filter(x => x.denk !== null);       // gesprochene Antworten mit Wort-Zeitmarken
+  const mittel = l => l.reduce((s, v) => s + v, 0) / l.length;
+  const denk = gs.length ? mittel(gs.map(x => x.denk)) : null, warte = gs.length ? mittel(gs.map(x => x.roh - x.dauer)) : null;
+  // Zeitmessung 2 (ab v0.5): gesprochen ohne die Wartezeit der Erkennung. Ältere Sprech-Runden sind damit nicht vergleichbar.
+  const vergleichbar = x => x.mess === 2 || x.eingabe !== 'sprechen';
+  const frueher = alle.filter((x, k) => k !== runde.platz && x.uebung === stand.uebung && x.richtig >= 8 && vergleichbar(x)).map(x => x.schnitt);
   const rekord = richtig >= 8 && frueher.length && schnitt < Math.min(...frueher);
-  const eintrag = { uebung: stand.uebung, stufe: stand.stufe, zeit: Date.now(), anzahl: e.length, richtig, schnitt, eingabe: stand.eingabe };
+  const eintrag = { uebung: stand.uebung, stufe: stand.stufe, zeit: Date.now(), anzahl: e.length, richtig, schnitt, eingabe: stand.eingabe,
+    mess: 2, ...(denk !== null ? { denk } : {}) };
   if (neu) alle.push(eintrag); else alle[runde.platz] = Object.assign(alle[runde.platz] || eintrag, { richtig });
   schreib(RUNDEN, alle.slice(-200));
   $('#e-richtig').textContent = `${richtig} von ${e.length} richtig`;
-  $('#e-zeit').innerHTML = `Ø <b>${sek(schnitt)}</b> je Aufgabe · schnellste ${sek(schnellste)}`;
+  $('#e-zeit').innerHTML = `Ø <b>${sek(schnitt)}</b> je Aufgabe · schnellste ${sek(schnellste)}`
+    + (denk !== null ? `<small>gemessen bis zum Ende deiner Antwort<br>davon bis zum ersten Wort: Ø <b>${sek(denk)}</b>`
+      + `<br>Erkennung danach: Ø ${sek(warte)} (zählt nicht)</small>` : '');
   $('#e-ziel').textContent = rekord ? '🏆 Neuer bester Schnitt!' :
     schnitt <= ZIEL * 1000 ? 'Unter drei Sekunden – so schnell wie im Video!' : 'Ziel: unter drei Sekunden je Aufgabe.';
   runde.spruch ||= SPRUECHE[zufallInt(SPRUECHE.length)];
@@ -420,7 +436,7 @@ function zeigeEnde(neu) {
   const schnell = schnitt <= ZIEL * 1000, fehlerfrei = richtig === e.length;
   $('#e-spruch').innerHTML = (schnell && fehlerfrei ? 'Schnell und fehlerfrei – stark!' : schnell ? 'Schnell! Jetzt noch ohne Fehler.'
     : fehlerfrei ? 'Alles richtig! Mit ein bisschen Übung wirst du auch schneller.' : 'Mit ein bisschen Übung wird es schneller und sicherer.')
-    + `<b>${spruch}</b>`;
+    + `<b>${spruch.replace(/(\S+-\S+)/g, '<span class="nobr">$1</span>')}</b>`;
   // Fehler: hier (nicht in der Runde) der Lösungsweg; bei gesprochenen Antworten „Hörfehler“, falls die App falsch verstand
   $('#liste').innerHTML = e.map((x, k) => `<li class="${x.ok ? 'ok' : 'nein'}"><span class="m">${x.ok ? '✓' : '✗'}</span>`
     + `<span>${x.frage} = ${x.ok ? `<b>${x.loesung}</b>` : `<s>${x.wert}</s> <span class="r">${x.loesung}</span>`}`
@@ -467,7 +483,16 @@ const SPRACHMODELL = new URL('../../wuerfel/sprache/vosk-model-small-de-0.15.tar
 const grammatik = () => { const u = uebung(); return JSON.stringify(u.antworten ? zahlPhrasen(u.antworten[0], u.antworten[1]) : zahlGrammatik()); };
 const MODELL_GELADEN = 'kopfrechnen.modell';        // gemerkt: das Modell lag schon einmal im Gerät
 const sprache = { modell: null, laden: null, ladeStart: 0, fehler: null, strom: null, quelle: null, knoten: null, erkenner: null,
-  hoert: false, letzterTon: 0, pegel: 0, protokoll: [] };
+  hoert: false, letzterTon: 0, pegel: 0, protokoll: [], proben: 0, uhr: [] };
+// Zeitmessung beim Sprechen (Nutzerwunsch 04.11.): Die Erkennung meldet eine Zahl erst, wenn nach dem letzten Wort
+// mindestens 0,5 s Stille war (Vosk-Endpunkt), dazu kommen Puffer und Rechenzeit. Diese Wartezeit gehört nicht zu
+// deiner Zeit. Vosk liefert je Wort Anfang und Ende in Sekunden ab dem ersten Ton, den es bekam; die Uhr rechnet das in
+// Seitenzeit um: Für jeden Tonblock gilt Seitenzeit ≈ Ankunft − (gezählte Proben)/Abtastrate. Blöcke kommen nie zu früh,
+// nur zu spät, darum zählt das Minimum der letzten 3 s (≈ 35 Blöcke).
+function stromZuSeite(sek) {
+  if (!sprache.uhr.length) return null;
+  return Math.min(...sprache.uhr) + sek * 1000;
+}
 function ladeSprache() {
   if (!sprache.laden) {
     sprache.ladeStart = performance.now(); sprache.fehler = null;
@@ -543,8 +568,10 @@ async function mikrofonAn() {
     if (ctx.state !== 'running') await ctx.resume();
     if (sprache.strom !== strom) return;
     const erkenner = sprache.erkenner = new sprache.modell.KaldiRecognizer(ctx.sampleRate, grammatik());
+    try { erkenner.setWords(true); } catch (_) {}   // Anfang und Ende jedes Wortes
+    sprache.proben = 0; sprache.uhr = [];
     erkenner.on('partialresult', m => { const t = (m.result.partial || '').replace(/\[unk\]/g, '').trim(); if (t && runde.phase === 'frage') $('#gehoert').textContent = '… ' + t; });
-    erkenner.on('result', m => gehoert(m.result.text || ''));
+    erkenner.on('result', m => gehoert(m.result.text || '', m.result.result));
     sprache.quelle = ctx.createMediaStreamSource(strom);
     sprache.knoten = ctx.createScriptProcessor(4096, 1, 1);
     sprache.knoten.onaudioprocess = ev => {
@@ -553,6 +580,9 @@ async function mikrofonAn() {
       const d = ev.inputBuffer.getChannelData(0); let q = 0;
       for (let k = 0; k < d.length; k += 8) q += d[k] * d[k];
       sprache.pegel = 0.6 * sprache.pegel + 0.4 * Math.sqrt(q / (d.length / 8));
+      sprache.proben += d.length;
+      sprache.uhr.push(performance.now() - sprache.proben / ctx.sampleRate * 1000);
+      if (sprache.uhr.length > 35) sprache.uhr.shift();
       try { erkenner.acceptWaveform(ev.inputBuffer); } catch (_) {}
     };
     sprache.quelle.connect(sprache.knoten);
@@ -576,20 +606,26 @@ function mikrofonAus() {
   if (!$('#mikro').classList.contains('fehler')) setzeMikro('aus');
   tonsitzung('playback');
 }
-function gehoert(text) {
-  const wert = zahlwortZuZahl(text);
-  sprache.protokoll.push({ text, wert, aufgabe: runde.aufgaben[runde.i]?.frage, phase: runde.phase });
+function gehoert(text, woerter) {
+  const wert = zahlwortZuZahl(text), jetzt = performance.now();
+  const w = (woerter || []).filter(x => x.word && x.word !== '[unk]');
+  const sp = w.length ? { beginn: stromZuSeite(w[0].start), schluss: stromZuSeite(w[w.length - 1].end), erkannt: jetzt } : null;
+  sprache.protokoll.push({ text, wert, aufgabe: runde.aufgaben[runde.i]?.frage, phase: runde.phase, t0: runde.t0, ...sp,
+    woerter: w.map(x => [x.word, x.start, x.end]) });
   if (wert === null || runde.phase !== 'frage') return;
   const a = runde.aufgaben[runde.i];
   $('#gehoert').textContent = 'gehört: „' + text.replace(/\[unk\]/g, '').trim() + '“';
   // „zweihundert … achtundachtzig“ mit Pause: die Hunderter kurz aufheben und mit dem Rest verbinden
-  if (runde.offenHundert !== null && wert < 100) { const w = runde.offenHundert + wert; runde.offenHundert = null; clearTimeout(runde.hundertTimer); return pruefe(w, 'gesagt'); }
+  if (runde.offenHundert !== null && wert < 100) {
+    const h = runde.offenHundert, b = runde.offenSp; runde.offenHundert = null; clearTimeout(runde.hundertTimer);
+    return pruefe(h + wert, 'gesagt', sp && b ? { ...sp, beginn: b.beginn } : sp);
+  }
   if (wert % 100 === 0 && wert >= 100 && a.loesung % 100 !== 0) {
-    runde.offenHundert = wert; $('#antwort').textContent = wert + ' …';
-    runde.hundertTimer = setTimeout(() => { const w = runde.offenHundert; runde.offenHundert = null; if (w !== null) pruefe(w, 'gesagt'); }, 1500);
+    runde.offenHundert = wert; runde.offenSp = sp; $('#antwort').textContent = wert + ' …';
+    runde.hundertTimer = setTimeout(() => { const h = runde.offenHundert; runde.offenHundert = null; if (h !== null) pruefe(h, 'gesagt', runde.offenSp); }, 1500);
     return;
   }
-  pruefe(wert, 'gesagt');
+  pruefe(wert, 'gesagt', sp);
 }
 
 /* ---------- Update-Mechanismus (Skill app-update-iphone) ---------- */
@@ -652,7 +688,7 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
 
 baueStart();
 if (stand.eingabe === 'sprechen') vorladen();        // wer zuletzt gesprochen hat, bekommt das Modell gleich vorbereitet
-window.uebung = { runde, stand, sprache, zahlwortZuZahl, tippe, starteRunde, ladeSprache, grammatik, los };   // für Tests
+window.uebung = { runde, stand, sprache, zahlwortZuZahl, tippe, starteRunde, ladeSprache, grammatik, los, stromZuSeite };   // für Tests
 </script>
 </body>
 </html>

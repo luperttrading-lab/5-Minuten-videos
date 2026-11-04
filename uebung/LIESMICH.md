@@ -23,6 +23,12 @@ Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das �
   auch nicht verdreht (12 · 18 → 18 · 12). Nutzerwunsch 04.11., geprüft über 2000 Runden in `tests/uebung.mjs`.
 
 ## Sprechen
+- **Zeitmessung beim Sprechen (v0.5, Messung 04.11.):** gezählt wird bis zum Ende des letzten Wortes, nicht bis die
+  Erkennung meldet. Vosk meldet erst nach ≥ 0,5 s Stille (Endpunkt), mit Puffer und Rechenzeit im Test Ø 0,9 s
+  (0,7 … 1,4 s; „zweihundert neun“ am längsten, weil noch „…undzwanzig“ folgen könnte). Wort-Zeitmarken (`setWords`)
+  stimmen auf Ø 35 ms mit der Lautstärke überein. Umrechnung Strom → Seitenzeit: Minimum von Ankunft − Proben/Rate über
+  die letzten 35 Tonblöcke. Ergebnisseite zeigt zusätzlich die Zeit bis zum ersten Wort und die Wartezeit der Erkennung.
+  Sprech-Runden vor v0.5 (ohne `mess: 2`) zählen nicht mehr für „Bester Schnitt“.
 Erkennung im Gerät mit Vosk (WebAssembly) und dem kleinen deutschen Modell, beides von der **Würfel-App** geladen
 (`/wuerfel/sprache/` auf derselben Adresse luperttrading-lab.github.io – einmal geladen, nutzen beide Apps denselben
 Speicher). Apples eigene Erkennung ist in Home-Bildschirm-Apps gesperrt (WebKit-Bug 225298). Grammatik: nur Zahlwörter

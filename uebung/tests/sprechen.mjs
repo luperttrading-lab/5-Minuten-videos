@@ -49,12 +49,22 @@ await page.click('#los');
 ok(await page.isVisible('#bereit'), 'Nach „Start“: Bereit-Karte, Mikrofon schaltet ein');
 await page.waitForFunction(() => window.uebung.sprache.hoert && !document.querySelector('#bereit-los').disabled, null, { timeout: 30000 });
 ok(true, `Mikrofon an, Ton kommt an – „Los“ freigegeben: „${(await page.textContent('#bereit-text')).trim()}“`);
+// Lautstärke je 10 ms mitschreiben (nur im Test): unabhängiger Vergleich für Anfang und Ende jeder gesprochenen Zahl
+await page.evaluate(() => {
+  const s = window.uebung.sprache, alt = s.knoten.onaudioprocess; s.energie = [];
+  s.knoten.onaudioprocess = ev => {
+    alt(ev);
+    const d = ev.inputBuffer.getChannelData(0), sr = ev.inputBuffer.sampleRate, n = Math.round(sr / 100), basis = s.proben - d.length;
+    for (let k = 0; k + n <= d.length; k += n) { let q = 0; for (let j = k; j < k + n; j++) q += d[j] * d[j]; s.energie.push([(basis + k) / sr, Math.sqrt(q / n)]); }
+  };
+});
 await page.click('#bereit-los');                     // die Aufnahme beginnt mit 2 s Stille: die erste Zahl kommt nach „Los“
 await page.waitForTimeout(300);
 ok((await page.getAttribute('#mikro', 'class')).includes('an') && (await page.textContent('#mikro')).includes('Mikrofon an'),
   `Anzeige im Spiel: „${(await page.textContent('#mikro')).trim()}“ (grün, mit Pegel)`);
 await page.waitForFunction(() => window.uebung.runde.phase === 'ende', null, { timeout: 150000 }).catch(() => {});
-const r = await page.evaluate(() => ({ p: window.uebung.sprache.protokoll, e: window.uebung.runde.ergebnisse, phase: window.uebung.runde.phase }));
+const r = await page.evaluate(() => ({ p: window.uebung.sprache.protokoll, e: window.uebung.runde.ergebnisse.map(x => ({ ...x, a: undefined })),
+  phase: window.uebung.runde.phase, energie: window.uebung.sprache.energie, zeit: document.querySelector('#e-zeit').textContent }));
 const werte = r.p.map(x => x.wert).filter(x => x !== null);
 console.log('  gehört: ' + r.p.map(x => `„${x.text}“→${x.wert}`).join('  '));
 // Wie viele gesprochene Zahlen kamen richtig an? Die Aufnahme läuft in Schleife; gezählt wird die erste Runde.
@@ -71,8 +81,31 @@ const knopf = await page.$('.hoerfehler');
 ok(!!knopf && (await knopf.textContent()).includes('238'), `Gesprochener Fehler: Knopf „${knopf ? (await knopf.textContent()).trim() : '–'}“`);
 if (knopf) { await knopf.click(); ok((await page.textContent('#e-richtig')).trim() === '10 von 10 richtig', 'Nach „Hörfehler“: 10 von 10 richtig'); }
 ok((await page.getAttribute('#mikro', 'class')).includes('aus'), 'Am Ende ist das Mikrofon aus');
-const z = r.e.map(x => x.dauer / 1000);
-if (z.length) ok(true, `Antwortzeit gesprochen: Ø ${(z.reduce((a, b) => a + b, 0) / z.length).toFixed(2)} s (inkl. 3 s Pause der Aufnahme)`);
+if (process.env.FOTO) await page.screenshot({ path: path.join(process.env.FOTO, 'sprechen_ende.png') });   // FOTO=ordner: Bild vom Ergebnis
+// Wohin gehen die Sekunden? Je gesprochene Zahl: Sprechdauer (erstes bis letztes Wort) und Wartezeit der Erkennung
+// (Ende des letzten Wortes bis zur Meldung). Gegenprobe: Anfang und Ende laut Lautstärke statt laut Vosk.
+const mittel = l => l.reduce((a, b) => a + b, 0) / l.length, f2 = v => (v / 1000).toFixed(2);
+const mit = r.p.filter(x => x.woerter?.length && x.schluss);
+const max = Math.max(...r.energie.map(x => x[1])), laut = r.energie.filter(x => x[1] > max * 0.01);   // −40 dB: leise Endungen („-zig“) zählen mit
+const segmente = [];                                 // zusammenhängend laut, Lücken unter 0,3 s überbrückt
+for (const [t] of laut) { const g = segmente.at(-1); if (g && t - g[1] < 0.3) g[1] = t + 0.01; else segmente.push([t, t + 0.01]); }
+const zeilen = mit.map(x => {
+  const a = x.woerter[0][1], b = x.woerter.at(-1)[2];
+  const g = segmente.find(s => s[1] > a - 0.3 && s[0] < b + 0.3);
+  return { text: x.text, sprechen: x.schluss - x.beginn, warten: x.erkannt - x.schluss, dA: g ? (a - g[0]) * 1000 : null, dE: g ? (b - g[1]) * 1000 : null };
+});
+for (const z of zeilen) console.log(`    „${z.text}“: gesprochen ${f2(z.sprechen)} s · Erkennung danach ${f2(z.warten)} s`
+  + (z.dE !== null ? ` · Vosk gegen Lautstärke: Anfang ${z.dA >= 0 ? '+' : ''}${Math.round(z.dA)} ms, Ende ${z.dE >= 0 ? '+' : ''}${Math.round(z.dE)} ms` : ''));
+const w = zeilen.map(z => z.warten);
+ok(zeilen.length >= 10 && zeilen.every(z => z.sprechen > 300 && z.sprechen < 2500),
+  `Wort-Zeitmarken für jede Zahl: Sprechdauer Ø ${f2(mittel(zeilen.map(z => z.sprechen)))} s`);
+ok(w.every(v => v > 0 && v < 2500), `Wartezeit der Erkennung nach dem letzten Wort: Ø ${f2(mittel(w))} s (${f2(Math.min(...w))} … ${f2(Math.max(...w))} s)`);
+const dE = zeilen.filter(z => z.dE !== null).map(z => Math.abs(z.dE));
+ok(dE.length >= 8 && mittel(dE) < 150, `Vosk-Wortende passt zur Lautstärke: Abweichung Ø ${Math.round(mittel(dE))} ms`);
+const ab = r.e.filter(x => x.denk !== null);
+ok(ab.length >= 9 && ab.every(x => x.dauer < x.roh && x.roh - x.dauer < 2500),
+  `Gezählt wird bis zum Ende der Antwort: Ø ${f2(mittel(ab.map(x => x.dauer)))} s statt ${f2(mittel(ab.map(x => x.roh)))} s bis zur Erkennung`);
+ok(r.zeit.includes('ersten Wort') && r.zeit.includes('zählt nicht'), `Ergebnis: „${r.zeit}“`);
 ok(konsole.length === 0, 'Keine Fehler in der Konsole' + (konsole.length ? ': ' + konsole.join(' | ') : ''));
 await browser.close(); server.close();
 console.log(fehler ? `${fehler} Fehler` : 'Alles grün');
