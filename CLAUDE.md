@@ -161,6 +161,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Immer beide Links** (Nutzerwunsch 04.11.): Jede Antwort zu Mathe-Videos oder Übungs-App endet (vor der Kostenzeile)
   mit beiden Links: [Mathe-Videos · Vorschau](https://claude.ai/artifact/PVisw26MxXcVy1NJngcMFu) und
   [Kopfrechnen üben](https://luperttrading-lab.github.io/5-Minuten-videos/uebung/).
+- **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
+  unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
+  Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).
 - **Merksätze so sprechen, wie sie dastehen** (Nutzerwunsch 04.11.): keine Kurzformen („Einer rüber“), die man nur
   lesend versteht; der Merkzettel zeigt genau die gesprochenen Sätze.
 - **Geräusche sparsam** (Nutzer 04.11.): kein „Plopp“ (klang wie „Boing“); Glöckchen nur zusammen mit den Funken an den
