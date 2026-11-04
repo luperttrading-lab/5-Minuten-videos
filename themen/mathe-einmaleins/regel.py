@@ -1,61 +1,77 @@
 #!/usr/bin/env python3
-"""Erklärvideo mit Ton: die allgemeine Regel fürs Multiplizieren zweier Zahlen von 11 bis 19.
+"""Erklärvideo mit Ton: Kopfrechnen mit zwei Zahlen von 11 bis 19 (dritte Fassung, Nutzerwunsch 04.11.:
+„schöner und verständlicher, das ganze Video“).
 
     (10 + a)(10 + b) = 10·(10 + a + b) + a·b
-    16 · 18:  16 + 8 = 24 (oder 18 + 6 = 24), mal 10 = 240, plus 6 · 8 = 48  →  288
-    Sonderfall a + b = 10:  200 + a·b   (11·19 = 209 … 15·15 = 225)
+    Schritt 1  Einer rüber:        16 + 8 = 24   (oder 18 + 6 = 24)
+    Schritt 2  mal 10:             240
+    Schritt 3  Einer · Einer dazu: + 6 · 8 = 48  →  288
+    Sonderfall a + b = 10: 200 + a·b (11·19 = 209 … 15·15 = 225); Vorsicht 15·14: 190 + 20 = 210
 
-Bilder per Code (Flächenmodell, Stil A aus animationen.py), Ton ElevenLabs (Christian, eleven_v4, Tempo 1,05) mit
-Zeitmarken: Jede Einblendung hängt an einem gesprochenen Wort (`cue`), nicht an einer festen Sekunde.
+Aufbau: Einstieg → Trick (Ziffern wandern) → Warum (Fläche, Streifen nach unten = Schritt 1–3) → Andersherum
+(Streifen nach rechts) → Sonderfall (die 200 bleiben, nur die Ecke wächst) → Vorsicht (eine Spalte fehlt) →
+Merke + Übung mit Denkpause. Eine Schritte-Karte rechts verbindet Regel und Bild.
+
+Bilder per Code, Ton ElevenLabs (Christian, eleven_v4, Tempo 1,05) mit Zeitmarken: Jede Einblendung hängt an einem
+gesprochenen Wort. Ausgabe 1920 × 1080, 30 Bilder/s, in vier Teilen parallel gerendert.
 
 Aufruf: python3 regel.py <ausgabe.mp4> [--nur-ton] [--bild <s>[,<s>…]]
 """
-import json, math, os, subprocess, sys, wave
+import math, os, subprocess, sys, wave
+from multiprocessing import Pool
 import numpy as np
+from PIL import Image, ImageDraw, ImageFilter
 
 HIER = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HIER, '..', '..', 'werkzeug'))
 sys.path.insert(0, HIER)
 import render as R                                         # noqa: E402  (ElevenLabs, Dekodieren, Tonaufbereitung)
-from animationen import (Bild, INTER, INTER_X, W, H, breite, glatt, klemm, mischfarbe, mix, p, rechteck,  # noqa: E402
-                         drehen, zeile, zurueck)
+import animationen as A                                    # noqa: E402
+from animationen import (Bild, INTER, INTER_X, breite, einfuegen, farbe, glatt, klemm, mischfarbe, mit_alpha,  # noqa
+                         mix, p, zeile, zurueck)
 
+W, H, K = A.W, A.H, A.K                                    # Zeichenkoordinaten 1280 × 720, intern 2× gezeichnet
+OUT = (1920, 1080)
 FPS = 30
 CFG = {'voice_id': 'NBqeXKdZHweef6y0B67V', 'model': 'eleven_v4', 'tempo': 1.05}
 CACHE = os.path.join(HIER, 'tts_cache')
 PAUSE = 0.7                                                # Stille zwischen Szenen
-NACHLAUF = 4.0                                             # nach dem letzten Satz: Auflösung der Übungsaufgabe
+NACHLAUF = 7.0                                             # nach dem letzten Satz: Denkpause, dann Lösung der Übung
 
-INK, GRAU, BG = '#2b2d42', '#7b7f8c', '#f6f1e7'
-CA, CB, CBLAU, CD, GRUEN = '#ff9f1c', '#8338ec', '#3a86ff', '#e63946', '#2a9d4a'   # a = 6 orange, b = 8 violett
+INK, GRAU, BG, HELL = '#2b2d42', '#6f7380', '#f6f1e7', '#e6dfd2'
+CA, CB, CBLAU, CD = '#ff9f1c', '#8338ec', '#3a86ff', '#e63946'   # Einer der 1. Zahl orange, der 2. violett
+TEAL, GRUEN = '#0f766e', '#2a9d4a'
 
 SZENEN = [
     dict(id='hook', kicker='Kopfrechnen', text=(
-        'Sechzehn mal achtzehn, im Kopf, in drei Sekunden? Mit einem einfachen Trick klappt das für alle Zahlen '
-        'von elf bis neunzehn.')),
-    dict(id='regel', kicker='Die Regel', text=(
-        'So geht es: Zur ersten Zahl addierst du den Einer der zweiten. Sechzehn plus acht macht vierundzwanzig. '
-        'Das nimmst du mal zehn, also zweihundertvierzig. Dazu kommt das Produkt der beiden Einer: sechs mal acht '
-        'gleich achtundvierzig. Zusammen zweihundertachtundachtzig.')),
-    dict(id='warum', kicker='Warum stimmt das?', text=(
-        'Warum das stimmt, zeigt ein Rechteck aus sechzehn mal achtzehn Kästchen. Es zerfällt in vier Teile: zehn mal '
-        'zehn, zehn mal acht, sechs mal zehn und eine kleine Ecke, sechs mal acht. Jetzt drehen wir den Streifen '
-        'zehn mal acht und legen ihn unten an. So entsteht ein langes Rechteck: zehn breit und sechzehn plus acht, '
-        'also vierundzwanzig hoch. Das sind zweihundertvierzig Kästchen. Übrig bleibt die Ecke mit achtundvierzig. '
-        'Zusammen zweihundertachtundachtzig.')),
+        'Sechzehn mal achtzehn. Im Kopf, in drei Sekunden? Mit diesem Trick schaffst du das für alle Zahlen von elf '
+        'bis neunzehn.')),
+    dict(id='regel', kicker='Der Trick', text=(
+        'Schritt eins: Nimm den Einer der zweiten Zahl, also die Acht, und zähl ihn zur ersten Zahl dazu. Sechzehn '
+        'plus acht gibt vierundzwanzig. Schritt zwei: mal zehn, du hängst also eine Null an. Aus vierundzwanzig wird '
+        'zweihundertvierzig. Schritt drei: Multipliziere die beiden Einer, sechs mal acht gleich achtundvierzig, und '
+        'zähl das dazu. Zweihundertvierzig plus achtundvierzig macht zweihundertachtundachtzig.')),
+    dict(id='warum', kicker='Warum klappt das?', text=(
+        'Warum das klappt, zeigt ein Rechteck aus sechzehn mal achtzehn Kästchen. Wir teilen es in vier Teile: zehn '
+        'mal zehn, zehn mal acht, sechs mal zehn und eine kleine Ecke, sechs mal acht. Jetzt drehen wir den Streifen '
+        'zehn mal acht und legen ihn unten an. Das ist Schritt eins: Das lange Rechteck ist sechzehn plus acht, also '
+        'vierundzwanzig Kästchen hoch. Es ist zehn breit, also mal zehn: zweihundertvierzig. Das ist Schritt zwei. '
+        'Übrig bleibt die kleine Ecke, sechs mal acht. Das ist Schritt drei.')),
     dict(id='andersrum', kicker='Andersherum', text=(
-        'Es geht auch andersherum: Achtzehn plus sechs ist ebenfalls vierundzwanzig. Im Bild drehst du dann den '
-        'anderen Streifen, sechs mal zehn, und legst ihn rechts an. Das Rechteck ist jetzt achtzehn plus sechs breit, '
-        'wieder vierundzwanzig. Kein Zufall: Beide Male rechnest du zehn plus sechs plus acht.')),
+        'Du kannst auch umgekehrt den Einer der ersten Zahl zur zweiten zählen: Achtzehn plus sechs ist ebenfalls '
+        'vierundzwanzig. Im Bild legst du dann den anderen Streifen, sechs mal zehn, rechts an. Wieder zehn mal '
+        'vierundzwanzig. Kein Zufall: Beide Male rechnest du zehn plus sechs plus acht.')),
     dict(id='sonderfall', kicker='Sonderfall', text=(
-        'Ein Sonderfall: Ergeben die beiden Einer zusammen zehn, ist das lange Rechteck genau zwanzig breit. Dann '
-        'rechnest du einfach zweihundert plus das Produkt der Einer. Elf mal neunzehn: zweihundertneun. Zwölf mal '
-        'achtzehn: zweihundertsechzehn. Und so weiter, bis fünfzehn mal fünfzehn: zweihundertfünfundzwanzig. '
-        'Je näher die beiden Zahlen beieinanderliegen, desto größer wird die Ecke.')),
+        'Besonders schnell geht es, wenn die beiden Einer zusammen zehn ergeben. Dann ist das lange Rechteck immer '
+        'genau zwanzig breit, also zweihundert. Du rechnest nur noch zweihundert plus Einer mal Einer. Elf mal '
+        'neunzehn: zweihundertneun. Zwölf mal achtzehn: zweihundertsechzehn. Und so weiter bis fünfzehn mal '
+        'fünfzehn: zweihundertfünfundzwanzig. Die zweihundert bleiben, nur die Ecke wächst.')),
     dict(id='vorsicht', kicker='Vorsicht', text=(
-        'Aber Vorsicht: Die Abkürzung mit zweihundert gilt nur, wenn die Einer zusammen zehn ergeben. Fünfzehn mal '
-        'vierzehn ist nicht zweihundertzwanzig. Mit der allgemeinen Regel: fünfzehn plus vier gleich neunzehn, mal '
-        'zehn hundertneunzig, plus fünf mal vier, also zweihundertzehn. Probier es gleich selbst: dreizehn mal '
+        'Aber Vorsicht: Bei fünfzehn mal vierzehn ergeben die Einer nur neun. Das lange Rechteck ist dann nur '
+        'neunzehn breit, also hundertneunzig und nicht zweihundert. Dazu kommt die Ecke, fünf mal vier gleich '
+        'zwanzig. Zusammen zweihundertzehn, nicht zweihundertzwanzig.')),
+    dict(id='merke', kicker='Merke', text=(
+        'Merk dir die drei Schritte: Einer rüber, mal zehn, Einer mal Einer dazu. Und jetzt du: dreizehn mal '
         'vierzehn.')),
 ]
 
@@ -82,25 +98,61 @@ def ton_und_zeitplan():
     return np.concatenate(stuecke), t + NACHLAUF
 
 
-def cue(sc, wort, nach=0):
-    """Sekunde (relativ zur Szene), in der `wort` gesprochen wird; `nach` = ab welcher Textstelle gesucht wird."""
-    i = sc['text'].find(wort, nach)
+def C(sc, wort, nach=None):
+    """Sekunde (relativ zur Szene), in der `wort` gesprochen wird; mit `nach` erst hinter diesem Stichwort suchen."""
+    start = sc['text'].find(nach) + len(nach) if nach else 0
+    i = sc['text'].find(wort, start)
     if i < 0:
         sys.exit(f'Stichwort fehlt in {sc["id"]}: {wort}')
     j = min(int(round(i * sc['_skala'])), len(sc['_starts']) - 1)
     return max(0.0, sc['_starts'][j] / CFG['tempo'] - sc['_lead'])
 
 
-def C(sc, wort, nach=None):
-    """Zeitmarke mit Gedächtnis: gleiche Wörter später im Text über `nach` (ein vorheriges Stichwort) finden."""
-    start = sc['text'].find(nach) + len(nach) if nach else 0
-    return cue(sc, wort, start)
+# ---------------------------------------------------------------- Gestaltung
+_grund = None
 
 
-# ---------------------------------------------------------------- Bausteine
-def kicker(b, sc, t):
-    a = glatt(p(t, 0, 0.4))
-    b.text(sc['kicker'].upper(), 60, 48, 22, GRAU, INTER_X, anker='l', alpha=a)
+def grund():
+    """Warmes Papier mit feinem Punktraster und weicher Vignette (einmal berechnet)."""
+    global _grund
+    if _grund is None:
+        img = Image.new('RGB', (W * K, H * K), farbe(BG)[:3])
+        d = ImageDraw.Draw(img, 'RGBA')
+        for y in range(16, H, 32):
+            for x in range(16, W, 32):
+                d.ellipse([(x - 1.4) * K, (y - 1.4) * K, (x + 1.4) * K, (y + 1.4) * K], fill=(120, 100, 70, 34))
+        v = Image.new('L', img.size, 0)
+        ImageDraw.Draw(v).ellipse([-0.2 * W * K, -0.3 * H * K, 1.2 * W * K, 1.3 * H * K], fill=255)
+        v = v.filter(ImageFilter.GaussianBlur(160))
+        _grund = Image.composite(img, Image.new('RGB', img.size, (222, 210, 190)), v)
+    return _grund
+
+
+_karten = {}
+
+
+def karte(b, x, y, w, h, alpha=1.0, r=22):
+    """Weiße Karte mit runden Ecken und weichem Schatten."""
+    if alpha <= 0:
+        return
+    key = (int(w), int(h), r)
+    if key not in _karten:
+        m = 34
+        img = Image.new('RGBA', (int((w + 2 * m) * K), int((h + 2 * m) * K)), (0, 0, 0, 0))
+        sch = Image.new('RGBA', img.size, (0, 0, 0, 0))
+        ImageDraw.Draw(sch).rounded_rectangle([m * K, (m + 8) * K, (m + w) * K, (m + h + 8) * K], radius=r * K,
+                                              fill=(70, 50, 25, 55))
+        img.alpha_composite(sch.filter(ImageFilter.GaussianBlur(12 * K)))
+        ImageDraw.Draw(img).rounded_rectangle([m * K, m * K, (m + w) * K, (m + h) * K], radius=r * K,
+                                              fill=(255, 255, 255, 255))
+        _karten[key] = (img, m)
+    img, m = _karten[key]
+    einfuegen(b.img, mit_alpha(img, alpha), (x - m) * K, (y - m) * K)
+
+
+def band(b, x0, y0, x1, y1, c, a, r=14):
+    if a > 0:
+        b.d.rounded_rectangle([x0 * K, y0 * K, x1 * K, y1 * K], radius=r * K, fill=farbe(c, 255 * a))
 
 
 def ein(t, start, dauer=0.5):
@@ -110,239 +162,508 @@ def ein(t, start, dauer=0.5):
 def einblenden(b, teile, x, y, g, t, start, pfad=INTER_X, anker='m'):
     a = ein(t, start)
     if a > 0:
-        zeile(b, teile, x, y + 18 * (1 - a), g, pfad, alpha=a, anker=anker)
+        zeile(b, teile, x, y + 16 * (1 - a), g, pfad, alpha=a, anker=anker)
 
 
-def zahl16_18(b, x, y, g, alpha=1.0):
-    zeile(b, [('1', INK), ('6', CA), (' · ', INK), ('1', INK), ('8', CB)], x, y, g, INTER_X, alpha=alpha)
+def mitten(teile, x, g, pfad=INTER_X):
+    """x-Mitten der Teile einer zentrierten Zeile."""
+    ws = [breite(s, pfad, g) for s, _ in teile]
+    x0, aus = x - sum(ws) / 2, []
+    for w in ws:
+        aus.append(x0 + w / 2)
+        x0 += w
+    return aus
+
+
+def uhr(b, cx, cy, r, f, alpha=1.0):
+    """Drei-Sekunden-Uhr: Ring läuft ab, innen 3 – 2 – 1."""
+    if alpha <= 0:
+        return
+    box = [(cx - r) * K, (cy - r) * K, (cx + r) * K, (cy + r) * K]
+    b.d.ellipse(box, outline=farbe(HELL, 255 * alpha), width=int(9 * K))
+    if f < 1:
+        b.d.arc(box, start=-90 + 360 * klemm(f), end=270, fill=farbe(TEAL, 255 * alpha), width=int(9 * K))
+    b.text(str(max(1, 3 - int(klemm(f) * 3))), cx, cy, r * 0.95, INK, INTER_X, alpha=alpha)
+
+
+def teil(b, w, h, u, col, mx, my, winkel=0.0, skala=1.0, zentrum=(0, 0), gitter=0.3, rand=1.0, alpha=1.0):
+    """Rechteck aus w × h Kästchen (Kantenlänge u), Mitte (mx, my), gedreht, optional um `zentrum` skaliert.
+    Gitterlinien bleiben sichtbar, damit man die Kästchen zählen kann."""
+    c, s = math.cos(math.radians(winkel)), math.sin(math.radians(winkel))
+    zx, zy = zentrum
+
+    def f(a, bb):
+        px, py = (a - w / 2) * u, (bb - h / 2) * u
+        X, Y = mx + px * c + py * s, my - px * s + py * c
+        return (zx + (X - zx) * skala, zy + (Y - zy) * skala)
+
+    pts = [f(0, 0), f(w, 0), f(w, h), f(0, h)]
+    b.poly(pts, col, alpha=alpha, schatten=5)
+    if gitter > 0:
+        i = 1
+        while i < w - 1e-6:
+            b.linie([f(i, 0), f(i, h)], '#ffffff', 1.3, alpha=gitter * alpha)
+            i += 1
+        j = 1
+        while j < h - 1e-6:
+            b.linie([f(0, j), f(w, j)], '#ffffff', 1.3, alpha=gitter * alpha)
+            j += 1
+    if rand > 0:
+        b.poly(pts, None, '#ffffff', 3, alpha=rand * alpha)
+    return f(w / 2, h / 2)
+
+
+def beschriftung(b, rechnung, wert, x, y, a, gross=36):
+    """Zweizeilig im Teil: oben die Rechnung, darunter der Wert."""
+    if a <= 0:
+        return
+    b.text(rechnung, x, y - 21, 25, '#ffffff', INTER, alpha=klemm(a) * 0.92)
+    b.text(wert, x, y + 13, gross, '#ffffff', INTER_X, skala=a, alpha=klemm(a))
+
+
+def klammer_waagrecht(b, x0, x1, y, c, a):
+    b.linie([(x0, y + 9), (x0, y), (x1, y), (x1, y + 9)], c, 3, alpha=a)
+
+
+def klammer_senkrecht(b, y0, y1, x, c, a):
+    b.linie([(x + 9, y0), (x, y0), (x, y1), (x + 9, y1)], c, 3, alpha=a)
+
+
+# ---------------------------------------------------------------- Schritte-Karte (verbindet Regel und Bild)
+def schritte(b, t, x0, y0, w, zeilen, ergebnis=None, titel='Der Trick', alpha=1.0, dim=False, g_erg=46):
+    """zeilen: dict(nr, farbe, titel, teile, t_titel, t_rech, aktiv=(von, bis)); dim = nicht aktive Zeilen blass."""
+    h = 66 + len(zeilen) * 104 + (84 if ergebnis else 12)
+    karte(b, x0, y0, w, h, alpha)
+    if alpha <= 0:
+        return
+    b.text(titel.upper(), x0 + 30, y0 + 38, 22, GRAU, INTER_X, anker='l', alpha=alpha)
+    for i, z in enumerate(zeilen):
+        yy = y0 + 66 + i * 104 + 44
+        at = ein(t, z.get('t_titel', -1)) * alpha
+        if at <= 0:
+            continue
+        akt = 0.0
+        if 'aktiv' in z:
+            von, bis = z['aktiv']
+            akt = ein(t, von, 0.3) * (1 - ein(t, bis, 0.3))
+        band(b, x0 + 14, yy - 48, x0 + w - 14, yy + 48, z.get('farbe', TEAL), 0.13 * akt * alpha)
+        stufe = (0.45 + 0.55 * akt) if dim else 1.0
+        a = at * stufe
+        b.kreis(x0 + 52, yy, 23, z.get('farbe', TEAL), alpha=a)
+        b.text(z['nr'], x0 + 52, yy, 25, '#ffffff', INTER_X, alpha=a)
+        b.text(z['titel'], x0 + 92, yy - 22, 25, GRAU, INTER, anker='l', alpha=a)
+        ar = ein(t, z.get('t_rech', -1)) * a
+        if ar > 0:
+            zeile(b, z['teile'], x0 + 92, yy + 17, 36, INTER_X, alpha=ar, anker='l')
+    if ergebnis:
+        teile, te = ergebnis
+        a = ein(t, te) * alpha
+        if a > 0:
+            yy = y0 + h - 46
+            b.linie([(x0 + 30, yy - 38), (x0 + w - 30, yy - 38)], HELL, 2, alpha=a)
+            zeile(b, teile, x0 + w / 2, yy, g_erg, INTER_X, alpha=a)
+
+
+def trick_zeilen(t1t, t1r, t2t, t2r, t3t, t3r, aktiv=None):
+    aktiv = aktiv or [None, None, None]
+    z = [dict(nr='1', farbe=CB, titel='Einer rüber', t_titel=t1t, t_rech=t1r,
+              teile=[('16', INK), (' + ', INK), ('8', CB), (' = 24', INK)]),
+         dict(nr='2', farbe=TEAL, titel='mal 10', t_titel=t2t, t_rech=t2r,
+              teile=[('24 · 10 = ', INK), ('240', TEAL)]),
+         dict(nr='3', farbe=CD, titel='Einer · Einer dazu', t_titel=t3t, t_rech=t3r,
+              teile=[('+ ', INK), ('6', CA), (' · ', INK), ('8', CB), (' = ', INK), ('48', CD)])]
+    for zz, a in zip(z, aktiv):
+        if a:
+            zz['aktiv'] = a
+    return z
+
+
+ERG288 = [('16 · 18 = ', INK), ('288', GRUEN)]
 
 
 # ---------------------------------------------------------------- Szenen
 def s_hook(b, sc, t):
     q = zurueck(p(t, 0.0, 0.7))
-    b.text('16 · 18 = ?', 640, 300, 120, INK, INTER_X, skala=0.5 + 0.5 * q, alpha=klemm(q * 2))
-    t0 = C(sc, 'elf')
+    zeile(b, [('16', INK), (' · ', INK), ('18', INK), (' = ?', GRAU)], 640, 270, 140 * (0.6 + 0.4 * q), INTER_X,
+          alpha=klemm(q * 2))
+    tu = C(sc, 'drei Sekunden')
+    a = ein(t, tu, 0.3)
+    uhr(b, 640, 455, 52, (t - tu) / 3.0, alpha=a * (1 - ein(t, tu + 3.2, 0.4)))
+    t0 = C(sc, 'elf bis')
     for i, n in enumerate(range(11, 20)):
-        q = zurueck(p(t, t0 + i * 0.09, 0.4))
-        b.text(str(n), 640 + (i - 4) * 100, 470, 46, CBLAU if n in (16, 18) else GRAU, INTER_X, skala=q, alpha=klemm(q))
+        q = zurueck(p(t, t0 + i * 0.08, 0.4))
+        if q > 0:
+            hervor = n in (16, 18)
+            if hervor:
+                band(b, 640 + (i - 4) * 104 - 40, 590 - 34, 640 + (i - 4) * 104 + 40, 590 + 34, CBLAU, 0.12 * klemm(q))
+            b.text(str(n), 640 + (i - 4) * 104, 590, 46, CBLAU if hervor else GRAU, INTER_X, skala=q, alpha=klemm(q))
 
 
 def s_regel(b, sc, t):
-    zahl16_18(b, 640, 120, 64)
-    y0, dy, g = 250, 82, 56
-    einblenden(b, [('16', INK), (' + ', INK), ('8', CB), (' = 24', INK)], 640, y0, g, t, C(sc, 'Sechzehn plus'))
-    einblenden(b, [('24 · 10 = ', INK), ('240', TEAL)], 640, y0 + dy, g, t, C(sc, 'mal zehn'))
-    einblenden(b, [('6', CA), (' · ', INK), ('8', CB), (' = ', INK), ('48', CD)], 640, y0 + 2 * dy, g, t,
-               C(sc, 'sechs mal acht'))
-    einblenden(b, [('240 + 48 = ', INK), ('288', GRUEN)], 640, y0 + 3 * dy, g + 8, t, C(sc, 'Zusammen'))
-    a = ein(t, C(sc, 'Zur ersten'))
-    if a > 0:
-        b.poly(rechteck(150, 610, 980, 70), '#ffffff', alpha=a, schatten=4)
-        b.text('Erste Zahl + Einer der zweiten, mal 10, plus Einer · Einer', 640, 645, 28, INK, alpha=a)
+    T = {k: C(sc, w) for k, w in dict(
+        s1='Schritt eins', acht='die Acht', flug='zur ersten Zahl', z24='gibt vierundzwanzig', s2='Schritt zwei',
+        null='eine Null', z240='wird zweihundert', s3='Schritt drei', f68='sechs mal acht', z48='gleich acht',
+        summe='Zweihundertvierzig plus', z288='macht zwei').items()}
+    X, YT, G = 400, 175, 112                               # Bühne links: oben die Aufgabe
+    YR, GR, Y3, XS = 345, 92, 462, 560                     # Zeile 240, Zeile 48, rechter Rand der Addition
+    oben = [('1', INK), ('6', CA), (' · ', INK), ('1', INK), ('8', CB)]
+    cs = mitten(oben, X, G)
+    p8 = math.sin(math.pi * p(t, T['acht'], 0.6))
+    p68 = math.sin(math.pi * p(t, T['f68'], 0.6))
+    for i, ((s, c), cx) in enumerate(zip(oben, cs)):
+        sk = 1 + 0.28 * max(p8 if i == 4 else 0, p68 if i in (1, 4) else 0)
+        b.text(s, cx, YT, G, c, INTER_X, skala=sk)
+    # Schritt 1: 16 und die 8 wandern nach unten und werden zu 24
+    fl = glatt(p(t, T['flug'], 1.1))
+    m24 = glatt(p(t, T['z24'], 0.45))
+    ziel = [('16', INK), (' + ', INK), ('8', CB)]
+    zc = mitten(ziel, X, GR)
+    if fl > 0 and m24 < 1:
+        a = 1 - m24
+        b.text('16', mix((cs[0] + cs[1]) / 2, zc[0], fl), mix(YT, YR, fl), mix(G, GR, fl), INK, INTER_X,
+               alpha=a * klemm(fl * 3))
+        b.text(' + ', zc[1], YR, GR, INK, INTER_X, alpha=a * fl)
+        b.text('8', mix(cs[4], zc[2], fl), mix(YT, YR, fl) - math.sin(fl * math.pi) * 110, mix(G, GR, fl), CB, INTER_X,
+               alpha=a * klemm(fl * 3))
+    # Schritt 2: eine Null fällt an die 24
+    sm = glatt(p(t, T['summe'], 0.8))                      # Umbau zur schriftlichen Addition
+    w2, w0 = breite('24', INTER_X, GR), breite('0', INTER_X, GR)
+    nul = p(t, T['null'], 0.55)
+    rueck = glatt(p(t, T['null'], 0.35))
+    links = X - (w2 + w0 * rueck) / 2
+    dx = (XS - (X + (w2 + w0) / 2)) * sm
+    c240 = mischfarbe(INK, TEAL, p(t, T['z240'], 0.4))
+    if m24 > 0:
+        b.text('24', links + w2 / 2 + dx, YR, GR, c240, INTER_X, skala=0.6 + 0.4 * zurueck(m24), alpha=m24)
+    if nul > 0:
+        b.text('0', links + w2 + w0 / 2 + dx, YR - 120 * (1 - zurueck(nul)), GR, c240, INTER_X, alpha=klemm(nul * 2))
+        b.text('· 10', X + dx, YR - 72, 32, GRAU, INTER_X, alpha=glatt(nul * 2) * (1 - sm))
+    # Schritt 3: die Einer 6 und 8 wandern nach unten und werden zu 48
+    f3 = glatt(p(t, T['f68'] + 0.25, 1.0))
+    m48 = glatt(p(t, T['z48'], 0.45))
+    ziel3 = [('6', CA), (' · ', INK), ('8', CB)]
+    zc3 = mitten(ziel3, X, GR * 0.9)
+    if f3 > 0 and m48 < 1:
+        a = 1 - m48
+        b.text('6', mix(cs[1], zc3[0], f3), mix(YT, Y3, f3) - math.sin(f3 * math.pi) * 60, mix(G, GR * 0.9, f3), CA,
+               INTER_X, alpha=a * klemm(f3 * 3))
+        b.text(' · ', zc3[1], Y3, GR * 0.9, INK, INTER_X, alpha=a * f3)
+        b.text('8', mix(cs[4], zc3[2], f3), mix(YT, Y3, f3) - math.sin(f3 * math.pi) * 60, mix(G, GR * 0.9, f3), CB,
+               INTER_X, alpha=a * klemm(f3 * 3))
+    w48, w240 = breite('48', INTER_X, GR), w2 + w0
+    if m48 > 0:
+        b.text('48', mix(X, XS - w48 / 2, sm), Y3, GR, CD, INTER_X, skala=0.6 + 0.4 * zurueck(m48), alpha=m48)
+    if sm > 0:                                             # schriftliche Addition
+        b.text('+', XS - w240 - 46, Y3, GR, INK, INTER_X, alpha=sm)
+        b.linie([(XS - w240 - 80, 522), (mix(XS - w240 - 80, XS + 12, sm), 522)], INK, 5)
+    q = zurueck(p(t, T['z288'], 0.6))
+    if q > 0:
+        w288 = breite('288', INTER_X, GR)
+        b.text('288', XS - w288 / 2, 590, GR, GRUEN, INTER_X, skala=0.5 + 0.5 * q, alpha=klemm(q * 2))
+        ring = p(t, T['z288'], 0.9)
+        if 0 < ring < 1:
+            r = 60 + 120 * ring
+            b.d.ellipse([(XS - w288 / 2 - r) * K, (590 - r) * K, (XS - w288 / 2 + r) * K, (590 + r) * K],
+                        outline=farbe(GRUEN, 160 * (1 - ring)), width=int(5 * K))
+    # Karte rechts: die drei Schritte sammeln sich
+    zeilen = trick_zeilen(T['s1'], T['z24'], T['s2'], T['z240'], T['s3'], T['z48'],
+                          [(T['s1'], T['s2']), (T['s2'], T['s3']), (T['s3'], T['summe'])])
+    schritte(b, t, 780, 120, 440, zeilen, (ERG288, T['z288']))
 
 
-U, RX, RY = 20, 240, 150
-TEAL = '#0f766e'                                           # 240 und das lange Rechteck, auch im Bild „Die Regel“
-TEILE = {'A': (0, 0, 10, 10, CBLAU, '10 · 10', '100'), 'B': (10, 0, 8, 10, CB, '10 · 8', '80'),
-         'C': (0, 10, 10, 6, CA, '6 · 10', '60'), 'D': (10, 10, 8, 6, CD, '6 · 8', '48')}
-XR = 780                                                   # Spalte der Rechnungen rechts
+U = 20
 
 
-def beschriftung(b, rechnung, wert, x, y, a, gross=34):
-    """Zweizeilig im Teil: oben die Rechnung (klein), darunter der Wert – dieselben Zahlen wie im Bild „Die Regel“."""
-    if a <= 0:
-        return
-    b.text(rechnung, x, y - 20, 24, '#ffffff', INTER, alpha=klemm(a) * 0.9)
-    b.text(wert, x, y + 13, gross, '#ffffff', INTER_X, skala=a, alpha=klemm(a))
-
-
-def klammer_waagrecht(b, x0, x1, y, c, a):
-    b.linie([(x0, y + 8), (x0, y), (x1, y), (x1, y + 8)], c, 2.5, alpha=a)
-
-
-def klammer_senkrecht(b, y0, y1, x, c, a):
-    b.linie([(x + 8, y0), (x, y0), (x, y1), (x + 8, y1)], c, 2.5, alpha=a)
-
-
-def rechnungen(b, t, zeilen):
-    for i, (teile, start) in enumerate(zeilen):
-        einblenden(b, teile, XR, 220 + i * 76, 46 if i < 3 else 52, t, start, anker='l')
-
-
-def flaechen(b, t, wandert, T):
-    """Vier Teile; `wandert` = 'B' (10 × 8 nach unten → 16 + 8 hoch) oder 'C' (6 × 10 nach rechts → 18 + 6 breit).
-    T: wachsen, teile (Färben), A/B/C/D (Beschriftung), drehen, lang (verschmelzen zu 240), klammer, uebrig."""
-    wachsen = zurueck(p(t, T['wachsen'], 0.8)) if T.get('wachsen') is not None else 1.0
-    farbig = p(t, T['teile'], 0.6) if T.get('teile') is not None else 1.0
+def flaechen(b, t, wandert, T, RX, RY):
+    """Rechteck 16 × 18 in vier Teilen; `wandert` = 'B' (10 × 8 nach unten → 24 hoch) oder 'C' (6 × 10 nach
+    rechts → 24 breit). T: wachsen, teile, A–D (Beschriftung), drehen, k16 (erste Klammer), k24, lang, uebrig."""
+    wachsen = zurueck(p(t, T['wachsen'], 0.8)) if 'wachsen' in T else 1.0
+    farbig = p(t, T['teile'], 0.6) if 'teile' in T else 1.0
     pd = glatt(p(t, T['drehen'], 1.8))
-    lang = glatt(p(t, T['lang'], 0.6))
-    cx, cy = RX + 9 * U, RY + 8 * U
-    for name, (x, y, w, h, col, rechnung, wert) in TEILE.items():
-        col = mischfarbe('#a9c9e8', col, farbig)
+    lang = glatt(p(t, T['lang'], 0.7))
+    zentrum = (RX + 9 * U, RY + 8 * U)
+    stuecke = {'A': (10, 10, CBLAU, '10 · 10', '100', RX + 5 * U, RY + 5 * U),
+               'B': (8, 10, CB, '10 · 8', '80', RX + 14 * U, RY + 5 * U),
+               'C': (10, 6, CA, '6 · 10', '60', RX + 5 * U, RY + 13 * U),
+               'D': (8, 6, CD, '6 · 8', '48', RX + 14 * U, RY + 13 * U)}
+    for name, (w, h, col, rechnung, wert, mx, my) in stuecke.items():
+        winkel = 0.0
         if name == wandert == 'B':
-            mx = mix(RX + 14 * U, RX + 5 * U, pd) + math.sin(pd * math.pi) * 70
-            my = mix(RY + 5 * U, RY + 20 * U, pd)
-            pts = drehen(rechteck(-4 * U, -5 * U, 8 * U, 10 * U), 90 * pd, 0, 0, mx, my)
-            lx, ly = mx, my
+            mx, my = mix(mx, RX + 5 * U, pd) + math.sin(pd * math.pi) * 80, mix(my, RY + 20 * U, pd)
+            winkel = 90 * pd
         elif name == wandert == 'C':
-            mx = mix(RX + 5 * U, RX + 21 * U, pd)
-            my = mix(RY + 13 * U, RY + 5 * U, pd) + math.sin(pd * math.pi) * 60
-            pts = drehen(rechteck(-5 * U, -3 * U, 10 * U, 6 * U), -90 * pd, 0, 0, mx, my)
-            lx, ly = mx, my
-        else:
-            pts = [(cx + (px - cx) * wachsen, cy + (py - cy) * wachsen)
-                   for px, py in rechteck(RX + x * U, RY + y * U, w * U, h * U)]
-            lx, ly = RX + (x + w / 2) * U, RY + (y + h / 2) * U
-        b.poly(pts, col, schatten=5)
+            mx, my = mix(mx, RX + 21 * U, pd), mix(my, RY + 5 * U, pd) + math.sin(pd * math.pi) * 70
+            winkel = -90 * pd
+        lx, ly = teil(b, w, h, U, mischfarbe('#a9c9e8', col, farbig), mx, my, winkel, wachsen, zentrum,
+                      gitter=0.3, rand=farbig)
         if farbig > 0:
-            b.poly(pts, None, '#ffffff', 2, alpha=farbig)
-            a = zurueck(p(t, T[name], 0.5)) if T.get(name) is not None else 1.0
+            a = zurueck(p(t, T[name], 0.5)) if name in T else 1.0
             if name != 'D':
                 a *= 1 - lang
-            beschriftung(b, rechnung, wert, lx, ly, a, 30 if name in 'CD' else 34)
-    ag = 0.45 * ein(t, T['wachsen'] + 0.4) * (1 - farbig) if T.get('wachsen') is not None else 0
-    if ag > 0:                                             # Kästchengitter, solange das Rechteck ganz ist
-        for i in range(1, 18):
-            b.linie([(RX + i * U, RY), (RX + i * U, RY + 16 * U)], '#ffffff', 1, alpha=ag)
-        for j in range(1, 16):
-            b.linie([(RX, RY + j * U), (RX + 18 * U, RY + j * U)], '#ffffff', 1, alpha=ag)
-    if T.get('wachsen') is not None:                       # zuerst 18 und 16 an den Kanten
+            beschriftung(b, rechnung, wert, lx, ly, a, 32 if name in 'CD' else 36)
+    if 'wachsen' in T:                                     # zuerst 18 und 16 an den Kanten
         a1 = ein(t, T['wachsen'] + 0.3) * (1 - ein(t, T['teile'], 0.3))
-        zeile(b, [('1', INK), ('8', CB)], RX + 9 * U, RY - 24, 30, INTER_X, alpha=a1)
-        zeile(b, [('1', INK), ('6', CA)], RX - 34, RY + 8 * U, 30, INTER_X, alpha=a1)
-    a2 = farbig if T.get('teile') is None else ein(t, T['teile'], 0.4)
-    b.text('10', RX + 5 * U, RY - 24, 28, INK, INTER_X, alpha=a2)
-    b.text('10', RX - 32, RY + 5 * U, 28, INK, INTER_X, alpha=a2)
-    b.text('6', RX - 32, RY + 13 * U, 28, CA, INTER_X, alpha=a2 * (1 - pd if wandert == 'C' else 1))
-    b.text('8', RX + 14 * U, RY - 24, 28, CB, INTER_X, alpha=a2 * (1 - pd if wandert == 'B' else 1))
-    ak = ein(t, T['klammer'])
-    a24 = ein(t, T['klammer'] + 0.8)
+        zeile(b, [('1', INK), ('8', CB)], RX + 9 * U, RY - 26, 32, INTER_X, alpha=a1)
+        zeile(b, [('1', INK), ('6', CA)], RX - 36, RY + 8 * U, 32, INTER_X, alpha=a1)
+    a2 = ein(t, T['teile'], 0.4) if 'teile' in T else 1.0
+    b.text('10', RX + 5 * U, RY - 26, 30, INK, INTER_X, alpha=a2)
+    b.text('10', RX - 34, RY + 5 * U, 30, INK, INTER_X, alpha=a2)
+    b.text('6', RX - 34, RY + 13 * U, 30, CA, INTER_X, alpha=a2 * ((1 - pd) if wandert == 'C' else 1))
+    b.text('8', RX + 14 * U, RY - 26, 30, CB, INTER_X, alpha=a2 * ((1 - pd) if wandert == 'B' else 1))
+    a16, a24 = ein(t, T['k16']), ein(t, T['k24'])
     if wandert == 'B':
-        b.text('8', RX - 32, RY + 20 * U, 28, CB, INTER_X, alpha=a2 * pd)
-        if ak > 0:
-            klammer_senkrecht(b, RY, RY + 16 * U, RX - 60, INK, ak)
-            b.text('16', RX - 86, RY + 8 * U, 28, INK, INTER_X, alpha=ak)
-            klammer_senkrecht(b, RY, RY + 24 * U, RX - 112, TEAL, a24)
-            b.text('24', RX - 140, RY + 12 * U, 30, TEAL, INTER_X, alpha=a24)
-        rahmen, mitte, summe = rechteck(RX - 4, RY - 4, 10 * U + 8, 24 * U + 8), (RX + 5 * U, RY + 12 * U), '100 + 60 + 80'
+        b.text('8', RX - 34, RY + 20 * U, 30, CB, INTER_X, alpha=a2 * pd)
+        klammer_senkrecht(b, RY, RY + 16 * U, RX - 64, INK, a16)
+        b.text('16', RX - 92, RY + 8 * U, 30, INK, INTER_X, alpha=a16)
+        klammer_senkrecht(b, RY, RY + 24 * U, RX - 120, TEAL, a24)
+        b.text('24', RX - 150, RY + 12 * U, 32, TEAL, INTER_X, alpha=a24)
+        rahmen_, mitte, summe = ((RX - 5, RY - 5, RX + 10 * U + 5, RY + 24 * U + 5), (RX + 5 * U, RY + 12 * U),
+                                 '100 + 60 + 80')
     else:
-        b.text('6', RX + 21 * U, RY - 24, 28, CA, INTER_X, alpha=a2 * pd)
-        if ak > 0:
-            klammer_waagrecht(b, RX, RX + 18 * U, RY - 48, INK, ak)
-            b.text('18', RX + 9 * U, RY - 66, 28, INK, INTER_X, alpha=ak)
-            klammer_waagrecht(b, RX, RX + 24 * U, RY - 88, TEAL, a24)
-            b.text('24', RX + 12 * U, RY - 106, 30, TEAL, INTER_X, alpha=a24)
-        rahmen, mitte, summe = rechteck(RX - 4, RY - 4, 24 * U + 8, 10 * U + 8), (RX + 12 * U, RY + 5 * U), '100 + 80 + 60'
+        b.text('6', RX + 21 * U, RY - 26, 30, CA, INTER_X, alpha=a2 * pd)
+        klammer_waagrecht(b, RX, RX + 18 * U, RY - 52, INK, a16)
+        b.text('18', RX + 9 * U, RY - 72, 30, INK, INTER_X, alpha=a16)
+        klammer_waagrecht(b, RX, RX + 24 * U, RY - 96, TEAL, a24)
+        b.text('24', RX + 12 * U, RY - 116, 32, TEAL, INTER_X, alpha=a24)
+        rahmen_, mitte, summe = ((RX - 5, RY - 5, RX + 24 * U + 5, RY + 10 * U + 5), (RX + 12 * U, RY + 5 * U),
+                                 '100 + 80 + 60')
     if lang > 0:                                           # 100, 80, 60 verschmelzen sichtbar zu 240
-        b.poly(rahmen, None, TEAL, 5, alpha=lang)
-        b.text(summe, mitte[0], mitte[1] - 30, 22, '#ffffff', INTER, alpha=lang)
-        b.text('240', mitte[0], mitte[1] + 8, 56, '#ffffff', INTER_X, alpha=lang)
-    if T.get('uebrig') is not None:
-        puls = math.sin(math.pi * p(t, T['uebrig'], 0.6))
+        x0, y0, x1, y1 = rahmen_
+        b.d.rounded_rectangle([x0 * K, y0 * K, x1 * K, y1 * K], radius=6 * K, outline=farbe(TEAL, 255 * lang),
+                              width=int(6 * K))
+        band(b, mitte[0] - 92, mitte[1] - 56, mitte[0] + 92, mitte[1] + 44, TEAL, 0.85 * lang)
+        b.text(summe, mitte[0], mitte[1] - 32, 23, '#ffffff', INTER, alpha=lang)
+        b.text('240', mitte[0], mitte[1] + 6, 56, '#ffffff', INTER_X, alpha=lang)
+    if 'uebrig' in T:
+        puls = math.sin(math.pi * p(t, T['uebrig'], 0.7))
         if puls > 0:
-            b.poly(rechteck(RX + 10 * U - 4, RY + 10 * U - 4, 8 * U + 8, 6 * U + 8), None, CD, 5, alpha=puls)
+            b.d.rounded_rectangle([(RX + 10 * U - 6) * K, (RY + 10 * U - 6) * K, (RX + 18 * U + 6) * K,
+                                   (RY + 16 * U + 6) * K], radius=6 * K, outline=farbe(CD, 255 * puls), width=int(6 * K))
 
 
 def s_warum(b, sc, t):
-    """Gleicher Weg wie „Die Regel“: 16 + 8. Streifen 10 × 8 nach unten → 10 breit, 24 hoch."""
     T = dict(wachsen=C(sc, 'Rechteck aus'), teile=C(sc, 'vier Teile'), A=C(sc, 'zehn mal', 'vier Teile'),
              B=C(sc, 'zehn mal acht'), C=C(sc, 'sechs mal zehn'), D=C(sc, 'sechs mal acht'), drehen=C(sc, 'drehen'),
-             klammer=C(sc, 'sechzehn plus acht'), lang=C(sc, 'Das sind'), uebrig=C(sc, 'Übrig'))
-    if t < T['wachsen']:
-        zahl16_18(b, 640, 360, 90)
-        return
-    flaechen(b, t, 'B', T)
-    rechnungen(b, t, [([('16', INK), (' + ', INK), ('8', CB), (' = 24', INK)], T['klammer']),
-                      ([('24 · 10 = ', INK), ('240', TEAL)], T['lang']),
-                      ([('6', CA), (' · ', INK), ('8', CB), (' = ', INK), ('48', CD)], T['uebrig']),
-                      ([('240 + 48 = ', INK), ('288', GRUEN)], C(sc, 'Zusammen'))])
+             k16=C(sc, 'sechzehn plus acht'), k24=C(sc, 'vierundzwanzig Kästchen'), lang=C(sc, 'also mal zehn'),
+             uebrig=C(sc, 'Übrig'))
+    s1, s2, s3 = C(sc, 'Schritt eins'), C(sc, 'zehn breit'), C(sc, 'Übrig')
+    flaechen(b, t, 'B', T, 250, 132)
+    zeilen = trick_zeilen(-1, -1, -1, -1, -1, -1, [(s1, s2), (s2, s3), (s3, sc['dauer'] + 2)])
+    schritte(b, t, 780, 120, 440, zeilen, (ERG288, -1), dim=True)
 
 
 def s_andersrum(b, sc, t):
-    """Andere Richtung: 18 + 6. Streifen 6 × 10 nach rechts → 24 breit, 10 hoch."""
-    T = dict(teile=None, drehen=C(sc, 'drehst'), klammer=C(sc, 'achtzehn plus sechs breit'), lang=C(sc, 'wieder'))
-    flaechen(b, t, 'C', T)
-    t10 = C(sc, 'rechnest du zehn')   # nicht 'zehn plus sechs': steckt schon in 'Acht-zehn plus sechs'
-    rechnungen(b, t, [([('18', INK), (' + ', INK), ('6', CA), (' = 24', INK)], C(sc, 'Achtzehn plus')),
-                      ([('24 · 10 = ', INK), ('240', TEAL)], T['lang']),
-                      ([('10', INK), (' + ', INK), ('6', CA), (' + ', INK), ('8', CB), (' = 24', INK)], t10)])
-    einblenden(b, [('Beide Wege: 10 + beide Einer', GRAU)], XR, 450, 30, t, t10 + 0.8, INTER, anker='l')
+    T = dict(drehen=C(sc, 'legst du'), k16=C(sc, 'Wieder'), k24=C(sc, 'Wieder') + 0.7, lang=C(sc, 'Wieder') + 0.4)
+    flaechen(b, t, 'C', T, 220, 190)
+    t18 = C(sc, 'Achtzehn plus')
+    t10 = C(sc, 'rechnest du zehn')                        # nicht 'zehn plus sechs': steckt in 'Acht-zehn plus sechs'
+    zeilen = [dict(nr='8', farbe=CB, titel='Einer der 2. Zahl rüber',
+                   teile=[('16', INK), (' + ', INK), ('8', CB), (' = 24', INK)]),
+              dict(nr='6', farbe=CA, titel='Einer der 1. Zahl rüber', t_titel=t18, t_rech=t18,
+                   teile=[('18', INK), (' + ', INK), ('6', CA), (' = 24', INK)], aktiv=(t18, t10))]
+    schritte(b, t, 780, 150, 440, zeilen, ([('beides: 10 + ', INK), ('6', CA), (' + ', INK), ('8', CB)], t10),
+             titel='Schritt 1, zwei Wege', g_erg=36)
+
+
+FAELLE = [(11, 19), (12, 18), (13, 17), (14, 16), (15, 15)]
+
+
+def langes_rechteck(b, a, bb, x0, y0, u, alpha=1.0, gitter=0.3):
+    """Form nach Schritt 1 (Streifen rechts angelegt): A, B, C nebeneinander, Ecke D unter B.
+    a = Einer der ersten Zahl, bb = Einer der zweiten; Breite 10 + a + bb Spalten."""
+    teil(b, 10, 10, u, CBLAU, x0 + 5 * u, y0 + 5 * u, gitter=gitter, alpha=alpha)
+    teil(b, bb, 10, u, CB, x0 + (10 + bb / 2) * u, y0 + 5 * u, gitter=gitter, alpha=alpha)
+    teil(b, a, 10, u, CA, x0 + (10 + bb + a / 2) * u, y0 + 5 * u, gitter=gitter, alpha=alpha)
+    teil(b, bb, a, u, CD, x0 + (10 + bb / 2) * u, y0 + (10 + a / 2) * u, gitter=gitter, alpha=alpha)
 
 
 def s_sonderfall(b, sc, t):
-    einblenden(b, [('Einer zusammen 10:  ', GRAU), ('10 · 20 = 200', INK)], 640, 120, 40, t, C(sc, 'zwanzig breit'))
-    reihen = [(11, 19, 'Elf mal'), (12, 18, 'Zwölf mal'), (13, 17, 'Und so'), (14, 16, 'Und so'), (15, 15, 'fünfzehn mal fünfzehn')]
-    naeher = C(sc, 'Je näher')
-    for i, (x, y, w) in enumerate(reihen):
-        t0 = C(sc, w) + (0.5 if (x, w) == (14, 'Und so') else 0)
-        a, b_ = x - 10, y - 10
-        yy = 210 + i * 78
-        einblenden(b, [(f'{x} · {y} = 200 + ', INK), (f'{a} · {b_}', CD), (f' = {200 + a * b_}', INK)], 560, yy, 44, t, t0)
-        q = zurueck(p(t, t0 + 0.2, 0.5))                     # Ecke a × b als kleines Rechteck, wächst bis 5 × 5
-        puls = 1 + 0.12 * math.sin(math.pi * p(t, naeher + i * 0.15, 0.5))
-        s_ = 8 * q * puls
-        if q > 0:
-            b.poly(rechteck(900, yy - b_ * s_ / 2, a * s_ * 1.0, b_ * s_), CD, alpha=klemm(q), schatten=3)
-    einblenden(b, [('Je näher beieinander, desto größer die Ecke', GRAU)], 640, 650, 30, t, naeher, INTER)
+    th, tz, tn = C(sc, 'zusammen zehn'), C(sc, 'zwanzig breit'), C(sc, 'nur noch')
+    zeiten = [C(sc, 'Elf mal'), C(sc, 'Zwölf mal'), C(sc, 'Und so'), C(sc, 'Und so') + 1.0,
+              C(sc, 'fünfzehn mal fünfzehn')]
+    t200, tecke = C(sc, 'Die zweihundert'), C(sc, 'Ecke wächst')
+    a, an = ein(t, th), ein(t, tn)
+    zeile(b, [('Einer zusammen 10', GRAU)], 640, 112, 38, INTER_X, alpha=a * (1 - an))
+    zeile(b, [('Einer zusammen 10:  ', GRAU), ('200 + ', TEAL), ('Einer · Einer', CD)], 640, 112, 38, INTER_X,
+          alpha=a * an)
+    karte(b, 60, 168, 600, 440, ein(t, zeiten[0] - 0.4))   # Tabelle links
+    k = -1
+    for i, tk in enumerate(zeiten):
+        if t >= tk:
+            k = i
+    for i, ((x, y), tk) in enumerate(zip(FAELLE, zeiten)):
+        aa, bb = x - 10, y - 10
+        yy = 222 + i * 82
+        ai = ein(t, tk)
+        if ai <= 0:
+            continue
+        if i == k:
+            band(b, 76, yy - 36, 644, yy + 36, CD, 0.10 * ai)
+        stufe = 1.0 if i == k else 0.55
+        zeile(b, [(f'{x} · {y} = ', INK), ('200', TEAL), (' + ', INK), (f'{aa} · {bb}', CD),
+                  (f' = {200 + aa * bb}', INK)], 360, yy + 12 * (1 - ai), 38, INTER_X, alpha=ai * stufe)
+    ad = ein(t, tz)                                        # rechts: 20 Spalten, die Ecke wächst von 1 × 9 bis 5 × 5
+    if ad > 0:
+        a_, b_ = 1.0, 9.0
+        for (x, y), tk in zip(FAELLE[1:], zeiten[1:]):
+            f = glatt(p(t, tk, 0.7))
+            a_, b_ = mix(a_, x - 10, f), mix(b_, y - 10, f)
+        u, x0, y0 = 15, 730, 230
+        langes_rechteck(b, a_, b_, x0, y0, u, alpha=ad)
+        p200 = math.sin(math.pi * p(t, t200, 0.8))
+        b.d.rounded_rectangle([(x0 - 5) * K, (y0 - 5) * K, (x0 + 20 * u + 5) * K, (y0 + 10 * u + 5) * K], radius=6 * K,
+                              outline=farbe(TEAL, 255 * ad), width=int((5 + 4 * p200) * K))
+        band(b, x0 + 10 * u - 64, y0 + 5 * u - 30, x0 + 10 * u + 64, y0 + 5 * u + 30, TEAL, 0.85 * ad)
+        b.text('200', x0 + 10 * u, y0 + 5 * u, 46, '#ffffff', INTER_X, alpha=ad, skala=1 + 0.12 * p200)
+        klammer_waagrecht(b, x0, x0 + 20 * u, y0 - 26, TEAL, ad)
+        b.text('20 Spalten', x0 + 10 * u, y0 - 48, 26, TEAL, INTER_X, alpha=ad)
+        if k >= 0:
+            x, y = FAELLE[k]
+            pe = 1 + 0.15 * math.sin(math.pi * p(t, tecke, 0.8))
+            b.text(f'{x - 10} · {y - 10} = {(x - 10) * (y - 10)}', x0 + (10 + b_) * u + 18, y0 + (10 + a_ / 2) * u, 32,
+                   CD, INTER_X, anker='l', alpha=ad, skala=pe)
 
 
 def s_vorsicht(b, sc, t):
-    b.text('15 · 14', 640, 120, 80, INK, INTER_X, alpha=ein(t, 0))
-    t1 = C(sc, 'nicht zweihundertzwanzig')
-    a = ein(t, t1)
-    w = 0
-    if a > 0:
-        w = breite('200 + 5 · 4 = 220', INTER_X, 44)
-        b.text('200 + 5 · 4 = 220', 640, 210, 44, CD, INTER_X, alpha=a)
-        ps = glatt(p(t, t1 + 0.4, 0.4))
+    t9, t19, t190 = C(sc, 'nur neun'), C(sc, 'neunzehn breit'), C(sc, 'hundertneunzig')
+    tnicht, t54 = C(sc, 'und nicht zweihundert'), C(sc, 'fünf mal vier')
+    tz, t220 = C(sc, 'Zusammen'), C(sc, 'nicht zweihundertzwanzig')
+    zeile(b, [('1', INK), ('5', CA), (' · ', INK), ('1', INK), ('4', CB)], 300, 110, 66, INTER_X, alpha=ein(t, 0))
+    zeile(b, [('Einer: ', GRAU), ('5', CA), (' + ', INK), ('4', CB), (' = 9', CD), ('  (nicht 10)', CD)], 300, 172, 30,
+          INTER_X, alpha=ein(t, t9))
+    u, x0, y0 = 18, 110, 270
+    ad = ein(t, t19)
+    if ad > 0:
+        teil(b, 10, 10, u, CBLAU, x0 + 5 * u, y0 + 5 * u, alpha=ad)
+        teil(b, 4, 10, u, CB, x0 + 12 * u, y0 + 5 * u, alpha=ad)
+        teil(b, 5, 10, u, CA, x0 + 16.5 * u, y0 + 5 * u, alpha=ad)
+        klammer_waagrecht(b, x0, x0 + 19 * u, y0 - 26, TEAL, ad)
+        b.text('19 Spalten', x0 + 9.5 * u, y0 - 48, 26, TEAL, INTER_X, alpha=ad)
+    an = ein(t, tnicht)
+    if an > 0:                                             # die fehlende 20. Spalte, gestrichelt
+        xs = x0 + 19 * u
+        for k in range(0, 10, 2):
+            b.linie([(xs + 3, y0 + k * u + 3), (xs + 3, y0 + (k + 1) * u - 3)], CD, 3, alpha=an)
+            b.linie([(xs + u - 3, y0 + k * u + 3), (xs + u - 3, y0 + (k + 1) * u - 3)], CD, 3, alpha=an)
+        b.text('fehlt: 10', xs + u + 14, y0 + 5 * u, 28, CD, INTER_X, anker='l', alpha=an)
+    a190 = ein(t, t190, 0.6)
+    if a190 > 0:
+        b.d.rounded_rectangle([(x0 - 5) * K, (y0 - 5) * K, (x0 + 19 * u + 5) * K, (y0 + 10 * u + 5) * K], radius=6 * K,
+                              outline=farbe(TEAL, 255 * a190), width=int(6 * K))
+        band(b, x0 + 9.5 * u - 60, y0 + 5 * u - 28, x0 + 9.5 * u + 60, y0 + 5 * u + 28, TEAL, 0.85 * a190)
+        b.text('190', x0 + 9.5 * u, y0 + 5 * u, 42, '#ffffff', INTER_X, alpha=a190)
+    ae = zurueck(p(t, t54, 0.6))
+    if ae > 0:
+        teil(b, 4, 5, u, CD, x0 + 12 * u, y0 + 12.5 * u, skala=0.4 + 0.6 * klemm(ae),
+             zentrum=(x0 + 12 * u, y0 + 12.5 * u), alpha=klemm(ae * 2))
+        b.text('20', x0 + 12 * u, y0 + 12.5 * u, 32, '#ffffff', INTER_X, alpha=klemm(ae))
+    zeilen = [dict(nr='1', farbe=CB, titel='Einer rüber', t_titel=t19, t_rech=t19,
+                   teile=[('15', INK), (' + ', INK), ('4', CB), (' = 19', INK)], aktiv=(t19, t190)),
+              dict(nr='2', farbe=TEAL, titel='mal 10', t_titel=t190, t_rech=t190,
+                   teile=[('19 · 10 = ', INK), ('190', TEAL)], aktiv=(t190, t54)),
+              dict(nr='3', farbe=CD, titel='Einer · Einer dazu', t_titel=t54, t_rech=t54,
+                   teile=[('+ ', INK), ('5', CA), (' · ', INK), ('4', CB), (' = ', INK), ('20', CD)], aktiv=(t54, tz))]
+    schritte(b, t, 640, 120, 560, zeilen, ([('15 · 14 = ', INK), ('210', GRUEN)], tz), titel='15 · 14')
+    a = ein(t, t220)
+    if a > 0:                                              # „nicht 220“, die 220 durchgestrichen
+        y = 120 + 66 + 3 * 104 + 84 + 40
+        b.text('nicht 220', 920, y, 34, CD, INTER_X, alpha=a)
+        w = breite('220', INTER_X, 34)
+        x1 = 920 + breite('nicht 220', INTER_X, 34) / 2
+        ps = glatt(p(t, t220 + 0.3, 0.4))
         if ps > 0:
-            b.linie([(640 - w / 2 - 10, 222), (640 - w / 2 - 10 + (w + 20) * ps, 200)], CD, 6)
-    einblenden(b, [('15 + 4 = 19', INK)], 640, 310, 50, t, C(sc, 'fünfzehn plus'))
-    einblenden(b, [('19 · 10 = 190', INK)], 640, 380, 50, t, C(sc, 'mal zehn', 'neunzehn'))
-    einblenden(b, [('190 + 5 · 4 = ', INK), ('210', GRUEN)], 640, 450, 56, t, C(sc, 'plus fünf'))
-    t3 = C(sc, 'Probier')
-    a = ein(t, t3)
-    if a > 0:
-        b.poly(rechteck(330, 545, 620, 120), '#ffffff', alpha=a, schatten=4)
-        b.text('Probier selbst:  13 · 14 = ?', 640, 580, 36, INK, INTER_X, alpha=a)
-        ende = sc['dauer'] + 1.8                           # Auflösung erst nach einer Denkpause
-        b.text('13 + 4 = 17,  170 + 3 · 4 = 182', 640, 630, 30, GRUEN, INTER_X, alpha=ein(t, ende, 0.6))
+            b.linie([(x1 - w - 4, y + 8), (mix(x1 - w - 4, x1 + 4, ps), y + 8 - 16 * ps)], CD, 5, alpha=a)
+
+
+def s_merke(b, sc, t):
+    t1, t2, t3, tdu = C(sc, 'Einer rüber'), C(sc, 'mal zehn'), C(sc, 'Einer mal Einer'), C(sc, 'Und jetzt du')
+    zeilen = [dict(nr='1', farbe=CB, titel='Einer der 2. Zahl zur 1. zählen', t_titel=0, t_rech=t1, aktiv=(t1, t2),
+                   teile=[('Einer rüber', INK)]),
+              dict(nr='2', farbe=TEAL, titel='eine Null anhängen', t_titel=0, t_rech=t2, aktiv=(t2, t3),
+                   teile=[('mal 10', INK)]),
+              dict(nr='3', farbe=CD, titel='beide Einer multiplizieren', t_titel=0, t_rech=t3, aktiv=(t3, tdu),
+                   teile=[('Einer · Einer dazu', INK)])]
+    schritte(b, t, 90, 130, 540, zeilen, titel='Merke')
+    a = ein(t, tdu)
+    karte(b, 700, 130, 490, 450, a)
+    if a <= 0:
+        return
+    b.text('UND JETZT DU', 730, 168, 22, GRAU, INTER_X, anker='l', alpha=a)
+    zeile(b, [('1', INK), ('3', CA), (' · ', INK), ('1', INK), ('4', CB), (' = ?', GRAU)], 945, 245, 64, INTER_X,
+          alpha=a)
+    te = sc['dauer'] + 0.2                                 # Denkpause mit Uhr, dann die Lösung
+    au = ein(t, te, 0.3) * (1 - ein(t, te + 3.0, 0.3))
+    uhr(b, 945, 400, 62, (t - te) / 3.0, alpha=au * a)
+    loes = [([('13', INK), (' + ', INK), ('4', CB), (' = 17', INK)], te + 3.2),
+            ([('17 · 10 = ', INK), ('170', TEAL)], te + 3.8),
+            ([('+ ', INK), ('3', CA), (' · ', INK), ('4', CB), (' = ', INK), ('12', CD)], te + 4.4)]
+    for i, (teile, tl) in enumerate(loes):
+        einblenden(b, teile, 945, 335 + i * 62, 38, t, tl)
+    einblenden(b, [('= ', INK), ('182', GRUEN)], 945, 530, 56, t, te + 5.1)
 
 
 ZEICHNER = {'hook': s_hook, 'regel': s_regel, 'warum': s_warum, 'andersrum': s_andersrum, 'sonderfall': s_sonderfall,
-            'vorsicht': s_vorsicht}
+            'vorsicht': s_vorsicht, 'merke': s_merke}
+
+
+# ---------------------------------------------------------------- Rahmen: Kapitelname und Fortschritt
+def rahmen(b, i, tl, t):
+    sc = SZENEN[i]
+    a = ein(tl, 0, 0.4)
+    if i > 0:
+        b.kreis(78, 46, 17, TEAL, alpha=a)
+        b.text(str(i), 78, 46, 21, '#ffffff', INTER_X, alpha=a)
+    b.text(sc['kicker'].upper(), 106 if i > 0 else 60, 46, 22, GRAU, INTER_X, anker='l', alpha=a)
+    gesamt = sum(s['dauer'] + PAUSE for s in SZENEN)
+    x, y = 60, 700
+    for s in SZENEN:
+        w = (1160 - 6 * (len(SZENEN) - 1)) * (s['dauer'] + PAUSE) / gesamt
+        b.linie([(x, y), (x + w, y)], HELL, 5)
+        f = klemm((t - s['start']) / (s['dauer'] + PAUSE))
+        if f > 0:
+            b.linie([(x, y), (x + w * f, y)], TEAL, 5)
+        x += w + 6
 
 
 def szene_bei(t):
     for i, sc in enumerate(SZENEN):
-        ende = sc['start'] + sc['dauer'] + PAUSE
-        if t < ende or i == len(SZENEN) - 1:
+        if t < sc['start'] + sc['dauer'] + PAUSE:
             return i
     return len(SZENEN) - 1
+
+
+def zeichne(i, tl, t):
+    b = Bild(grund())
+    ZEICHNER[SZENEN[i]['id']](b, SZENEN[i], tl)
+    rahmen(b, i, tl, t)
+    return b.img.resize(OUT, Image.LANCZOS)
 
 
 def bild(t):
     i = szene_bei(t)
     sc = SZENEN[i]
-    b = Bild(BG)
-    kicker(b, sc, t - sc['start'])
-    ZEICHNER[sc['id']](b, sc, t - sc['start'])
-    out = b.fertig()
-    # weiche Überblendung in den letzten 0,35 s der Pause
+    out = zeichne(i, t - sc['start'], t)
     ende = sc['start'] + sc['dauer'] + PAUSE
-    if i + 1 < len(SZENEN) and t > ende - 0.35:
-        nb = Bild(BG)
-        nsc = SZENEN[i + 1]
-        kicker(nb, nsc, 0)
-        ZEICHNER[nsc['id']](nb, nsc, 0)
-        from PIL import Image
-        out = Image.blend(out, nb.fertig(), glatt((t - (ende - 0.35)) / 0.35))
+    if i + 1 < len(SZENEN) and t > ende - 0.4:             # weiche Überblendung am Ende der Pause
+        out = Image.blend(out, zeichne(i + 1, 0.0, t), glatt((t - (ende - 0.4)) / 0.4))
     return out
+
+
+def rendere_teil(arg):
+    k0, k1, pfad = arg
+    ff = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s',
+                           f'{OUT[0]}x{OUT[1]}', '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'medium',
+                           '-crf', '19', '-pix_fmt', 'yuv420p', pfad], stdin=subprocess.PIPE)
+    for k in range(k0, k1):
+        ff.stdin.write(bild(k / FPS).tobytes())
+    ff.stdin.close()
+    ff.wait()
+    return pfad
 
 
 def main():
     args = sys.argv[1:]
-    ziel = args[0]
+    ziel = os.path.abspath(args[0])
     ton, gesamt = ton_und_zeitplan()
     print(f'Länge {gesamt:.1f} s, Wörter {sum(len(s["text"].split()) for s in SZENEN)}, '
           f'Zeichen {sum(len(s["text"]) for s in SZENEN)}')
@@ -350,7 +671,7 @@ def main():
         print(f'  {sc["id"]:11s} {sc["start"]:6.1f} s  +{sc["dauer"]:.1f}')
     if '--bild' in args:
         for s in args[args.index('--bild') + 1].split(','):
-            bild(float(s)).save(ziel.replace('.mp4', f'_{s}.png'))
+            bild(float(s)).resize((1280, 720), Image.LANCZOS).save(ziel.replace('.mp4', f'_{s}.png'))
         return
     wav = ziel.replace('.mp4', '.wav')
     with wave.open(wav, 'wb') as f:
@@ -359,14 +680,19 @@ def main():
     R.aufbereiten(wav)
     if '--nur-ton' in args:
         return
-    ff = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
-                           '-r', str(FPS), '-i', '-', '-i', wav, '-c:v', 'libx264', '-preset', 'medium', '-crf', '20',
-                           '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '128k', '-shortest', '-movflags', '+faststart',
-                           ziel], stdin=subprocess.PIPE)
-    for k in range(int(gesamt * FPS)):
-        ff.stdin.write(bild(k / FPS).tobytes())
-    ff.stdin.close()
-    ff.wait()
+    n = int(gesamt * FPS)
+    teile = 4
+    grenzen = [n * i // teile for i in range(teile + 1)]
+    auftraege = [(grenzen[i], grenzen[i + 1], ziel.replace('.mp4', f'_teil{i}.mp4')) for i in range(teile)]
+    with Pool(teile) as pool:
+        pfade = pool.map(rendere_teil, auftraege)
+    liste = ziel.replace('.mp4', '_teile.txt')
+    with open(liste, 'w') as f:
+        f.writelines(f"file '{q}'\n" for q in pfade)
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', liste, '-i', wav, '-c:v', 'copy',
+                    '-c:a', 'aac', '-b:a', '160k', '-shortest', '-movflags', '+faststart', ziel], check=True)
+    for q in pfade + [liste]:
+        os.remove(q)
     print('fertig:', ziel)
 
 

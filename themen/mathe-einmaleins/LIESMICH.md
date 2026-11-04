@@ -14,3 +14,12 @@ Das Beispiel des Nutzers 15 · 14 ist 210, nicht 220. Jedes Video zeigt das am E
 - Allgemeine Regel 16 · 18 = (16 + 8) · 10 + 6 · 8 = 288, beide Richtungen, Flächenbeweis (Streifen 6 × 10 drehen → 10 × 24), Sonderfall 11·19 … 15·15, Vorsicht 15 · 14 = 210, Übung 13 · 14 = 182
 - `python3 regel.py <ziel.mp4> [--nur-ton] [--bild s,…]`; Einblendungen hängen an gesprochenen Wörtern (ElevenLabs-Zeitmarken)
 - 2:02, 244 Wörter, ElevenLabs 708 Zeichen berechnet; Ton in `tts_cache/` (JSON eingecheckt)
+
+## Dritte Fassung (04.11., „schöner und verständlicher, das ganze Video“)
+- Drei benannte Schritte: Einer rüber · mal 10 · Einer · Einer dazu. Eine Schritte-Karte rechts verbindet Regel und Bild
+  (leuchtet in den Flächenszenen beim passenden Schritt auf)
+- Trick mit wandernden Ziffern (8 springt zur 16, Null fällt an die 24, 6 und 8 werden 48, schriftliche Addition)
+- Sonderfall: Form mit 20 Spalten, die Ecke wächst von 1 × 9 bis 5 × 5. Vorsicht: 19 Spalten, die 20. fehlt (−10)
+- Merkzettel und Übung 13 · 14 mit Drei-Sekunden-Uhr. Kästchen-Gitter in allen Flächen, Fortschrittsbalken, Kapitelnummern
+- 1920 × 1080, in vier Teilen parallel gerendert (≈ 3 min). Länge 2:39, 319 Wörter, ElevenLabs ≈ 830 Zeichen berechnet
+- Achtung beim Stichwort-Suchen: „zehn plus sechs“ steckt in „acht*zehn plus sechs*“
