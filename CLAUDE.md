@@ -158,6 +158,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Zu jedem Mathe-Video eine Übung** in der App `uebung/` (https://luperttrading-lab.github.io/5-Minuten-videos/uebung/,
   Nutzerwunsch 04.11.: 10 Aufgaben, tippen oder sprechen, richtig gezählt, Ø-Zeit). Neue Übung in `uebung/aufgaben.js`,
   `APP_VERSION` hochzählen, `node uebung/tests/uebung.mjs` muss „Alles grün“ melden. Details `uebung/LIESMICH.md`.
+- **Immer beide Links** (Nutzerwunsch 04.11.): Jede Antwort zu Mathe-Videos oder Übungs-App endet (vor der Kostenzeile)
+  mit beiden Links: [Mathe-Videos · Vorschau](https://claude.ai/artifact/PVisw26MxXcVy1NJngcMFu) und
+  [Kopfrechnen üben](https://luperttrading-lab.github.io/5-Minuten-videos/uebung/).
 - **Merksätze so sprechen, wie sie dastehen** (Nutzerwunsch 04.11.): keine Kurzformen („Einer rüber“), die man nur
   lesend versteht; der Merkzettel zeigt genau die gesprochenen Sätze.
 - **Geräusche sparsam** (Nutzer 04.11.): kein „Plopp“ (klang wie „Boing“); Glöckchen nur zusammen mit den Funken an den
