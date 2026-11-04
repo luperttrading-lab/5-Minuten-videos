@@ -1,20 +1,20 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben: neuer Merkzettel (Standbild) und darunter das Video mit der 240 an der 48. Je „passt“ oder „ändern“ tippen.",
+ "aufgabe": "Neu oben: das Video mit dem neuen Merkzettel. Bitte ab 2:24 (Merke) anhören und „passt“ oder „ändern“ tippen.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/merke_neu/merkzettel.mp4",
-   "titel": "Neuer Merkzettel (Standbild, noch nicht im Video)",
-   "stand": "04.11., 20:40",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel13/regel_720p.mp4",
+   "titel": "Neu: Merkzettel mit den gesprochenen Sätzen (2:56)",
+   "stand": "04.11., 20:55",
    "pruefen": true,
-   "poster_bei": 1,
-   "notiz": "So wird der Merkzettel: Gesprochen und gezeigt werden genau diese Sätze, die Kurzformen („Einer rüber“, „mal 10“, „Einer · Einer dazu“) fallen weg. Gesprochen: „Merk dir die drei Schritte: Einen Einer zur anderen Zahl addieren, egal, welchen. Eine Null anhängen. Beide Einer multiplizieren und dazuzählen. Und jetzt du: dreizehn mal vierzehn.“ Jeder Satz erscheint, wenn er gesagt wird. Ins Video kommt er, sobald der ElevenLabs-Schlüssel „Seneca 3“ wieder Zeichen hat. „passt“ = so übernehmen."
+   "poster_bei": 156,
+   "notiz": "Jetzt mit neuem Ton im Merke-Teil: „Merk dir die drei Schritte: Einen Einer zur anderen Zahl addieren, egal, welchen. Eine Null anhängen. Beide Einer multiplizieren und dazuzählen. Und jetzt du: dreizehn mal vierzehn.“ Der Merkzettel zeigt genau diese Sätze, jeder erscheint, wenn er gesagt wird; die Kurzformen sind weg. Sonst alles wie zuletzt: Kreis mittig, 240 bündig mit der 48, eine Klammer, kein Knistern, kein Boing. Video 6 s länger (2:56)."
   },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel12/regel_720p.mp4",
-   "titel": "Neu: 240 bündig mit der 48 (2:50)",
+   "titel": "Vorher: alter Merkzettel mit Kurzformen (2:50)",
    "stand": "04.11., 20:25",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 73,
    "notiz": "Die 240 steht jetzt bündig mit der 48 und in derselben Größe: bei „Warum klappt das?“ auf einer Linie daneben („24 · 10 / 240“ neben „6 · 8 / 48“), beim „Andersherum“ genau darüber („10 · 24 / 240“ über „6 · 8 / 48“). Die 48 bleibt, wo sie war. Sonst alles wie in der Fassung darunter."
   },
