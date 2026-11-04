@@ -4,7 +4,8 @@
 
 Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das üben kann … Übung macht den Meister“.
 
-- **Runde:** Start → 10 Aufgaben → Ende mit „x von 10 richtig“, **Ø Sekunden je Aufgabe**, schnellste Zeit, Liste aller
+- **Runde:** Start (Übersicht) → Übungsseite „Bereit?“ (Sprache lädt, Mikrofon geht an; beim Sprechen ist „Los“ erst frei,
+  wenn Ton ankommt, sonst „Ohne Sprechen los“) → **„Los“: ab hier zählt die Zeit** (Nutzerwunsch 04.11.) → 10 Aufgaben → Ende mit „x von 10 richtig“, **Ø Sekunden je Aufgabe**, schnellste Zeit, Liste aller
   Aufgaben mit Zeit, wechselndem Motivationsspruch und Ziel „unter drei Sekunden“ (wie im Video).
 - **Antworten:** tippen (Tastenfeld; bei dreistelligen Ergebnissen wird nach der 3. Ziffer geprüft) oder **sprechen**.
   Beides geht in derselben Runde, 🎤 schaltet um.

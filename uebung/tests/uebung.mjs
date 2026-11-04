@@ -54,7 +54,12 @@ const folge = '16x18,12x18,13x17,14x16,15x15,11x19,17x13,19x19,11x11,15x14';
 await page.goto(basis + '?folge=' + folge);
 await foto('1_start');
 await page.click('#los');
-ok(await page.isVisible('#spiel'), 'Start zeigt die erste Aufgabe');
+ok(await page.isVisible('#bereit') && !(await page.isVisible('#frage')), 'Start zeigt erst „Bereit?“ – noch keine Aufgabe, die Zeit läuft noch nicht');
+ok(await page.evaluate(() => window.uebung.runde.phase === 'bereit' && window.uebung.runde.ergebnisse.length === 0), 'Phase „bereit“');
+await foto('1b_bereit');
+await page.waitForTimeout(700);                      // warten auf der Bereit-Karte darf nicht in die Zeit der ersten Aufgabe zählen
+await page.click('#bereit-los');
+ok(await page.isVisible('#frage'), '„Los“ zeigt die erste Aufgabe');
 ok((await page.getAttribute('#mikro', 'class')).includes('aus') && (await page.textContent('#mikro')).includes('Mikrofon aus'),
   `Tippen: Anzeige „${(await page.textContent('#mikro')).trim()}“`);
 ok((await page.textContent('#frage')).replace(/\s/g, '') === '16·18', 'Erste Aufgabe 16 · 18');
@@ -86,6 +91,7 @@ const e = await page.evaluate(() => window.uebung.runde.ergebnisse);
 const schnitt = e.reduce((s, x) => s + x.dauer, 0) / e.length / 1000;
 ok(/Ø \d+,\d s je Aufgabe/.test(await page.textContent('#e-zeit')), `Durchschnittszeit angezeigt (${(await page.textContent('#e-zeit')).trim()}, gemessen ${schnitt.toFixed(2)} s)`);
 ok(e.length === 10 && e.every(x => x.dauer > 0 && x.dauer < 5000), 'Jede Aufgabe hat eine Zeit');
+ok(e[0].dauer < 600, `Die Wartezeit vor „Los“ zählt nicht: erste Aufgabe ${Math.round(e[0].dauer)} ms`);
 ok((await page.$$('#liste li')).length === 10, 'Liste mit allen 10 Aufgaben');
 const weg = await page.textContent('#liste li.nein .weg');
 ok(weg.includes('13 + 7 = 20') && weg.includes('200') && weg.includes('= 21') && weg.includes('221'),
@@ -106,11 +112,12 @@ ok(/wird geladen … \d+ s/.test(st) && (await page.getAttribute('#sprachstatus'
 ok((await page.textContent('#los')).includes('Sprechen'), `Start-Knopf nennt die Art: „${(await page.textContent('#los')).trim()}“`);
 await foto('7_laedt');
 await page.click('#los');
-ok(await page.isVisible('#vorbereitung'), 'Start beim Laden: „Sprache wird vorbereitet …“ ist zu sehen, nicht ein leerer Bildschirm');
+ok(await page.isVisible('#bereit') && await page.isDisabled('#bereit-los') && await page.isVisible('#ohne-sprechen'),
+  `Beim Laden: „Los“ gesperrt, „${(await page.textContent('#bereit-text')).trim()}“, daneben „Ohne Sprechen los“`);
 ok((await page.getAttribute('#mikro', 'class')).includes('laedt'), `Anzeige: „${(await page.textContent('#mikro')).trim()}“`);
 await foto('8_vorbereitung');
-await page.click('#solange-tippen');
-ok(!(await page.isVisible('#vorbereitung')) && (await page.textContent('#frage')).includes('16'), '„Solange tippen“ startet sofort');
+await page.click('#ohne-sprechen');
+ok(!(await page.isVisible('#bereit')) && (await page.textContent('#frage')).includes('16'), '„Ohne Sprechen los“ startet sofort');
 for (const z of '288') await page.dispatchEvent(`#tasten button[aria-label="${z}"]`, 'pointerdown');
 await page.waitForFunction(() => window.uebung.runde.ergebnisse.length === 1, null, { timeout: 2000 });
 ok(true, 'Tippen geht, während die Sprache noch lädt');

@@ -46,8 +46,10 @@ await page.waitForFunction(() => window.uebung.sprache.modell, null, { timeout: 
 ok(true, `Sprachmodell auf der Startseite vorgeladen in ${((Date.now() - t0) / 1000).toFixed(1)} s`);
 ok((await page.textContent('#sprachstatus')).includes('Sprache bereit'), `Startseite: „${(await page.textContent('#sprachstatus')).trim()}“`);
 await page.click('#los');
-await page.waitForFunction(() => window.uebung.sprache.hoert, null, { timeout: 180000 });
-ok(true, 'Mikrofon an, Ton kommt an');
+ok(await page.isVisible('#bereit'), 'Nach „Start“: Bereit-Karte, Mikrofon schaltet ein');
+await page.waitForFunction(() => window.uebung.sprache.hoert && !document.querySelector('#bereit-los').disabled, null, { timeout: 30000 });
+ok(true, `Mikrofon an, Ton kommt an – „Los“ freigegeben: „${(await page.textContent('#bereit-text')).trim()}“`);
+await page.click('#bereit-los');                     // die Aufnahme beginnt mit 2 s Stille: die erste Zahl kommt nach „Los“
 await page.waitForTimeout(300);
 ok((await page.getAttribute('#mikro', 'class')).includes('an') && (await page.textContent('#mikro')).includes('Mikrofon an'),
   `Anzeige im Spiel: „${(await page.textContent('#mikro')).trim()}“ (grün, mit Pegel)`);
