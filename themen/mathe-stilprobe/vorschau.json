@@ -1,0 +1,86 @@
+{
+ "titel": "Mathe · zehn Stile im Vergleich",
+ "aufgabe": "Dieselbe 15-Sekunden-Szene (13 · 17 im Kopf: 15² − 2² = 221) in zehn Stilen, noch ohne Ton. Alles per Code gezeichnet, keine KI-Bilder, deshalb stimmt jede Zahl. Tippe bei deinen Favoriten „passt“, bei den anderen gern „ändern“ mit Notiz.",
+ "videos": [
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/flat.mp4",
+   "titel": "1  Flat Design",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Weiche Farben, Schatten, Elemente springen auf. Typisch für Erklärvideo-Kanäle und Apps."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/whiteboard.mp4",
+   "titel": "2  Whiteboard (Handzeichnung)",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Filzstift auf weißer Tafel, Linien zittern leicht („boil“). Wirkt persönlich, wie live gezeichnet."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/kreide.mp4",
+   "titel": "3  Kreidetafel",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Kreide auf grüner Tafel mit Wischspuren. Klassenzimmer-Gefühl."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/dunkel.mp4",
+   "titel": "4  Dunkle Vektorgrafik",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Dunkler Grund, dünne leuchtende Linien, Serifenschrift für Formeln. Der übliche Stil anspruchsvoller Mathe-Kanäle."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/heft.mp4",
+   "titel": "5  Schulheft (Karopapier)",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Kuli auf Karopapier mit rotem Rand. Sieht aus wie die eigene Mitschrift."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/blaupause.mp4",
+   "titel": "6  Blaupause (Blueprint)",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Technische Zeichnung: weiße Linien auf Blau, Maßketten, Schreibmaschinenschrift beim Tippen."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/swiss.mp4",
+   "titel": "7  Minimalistisch (Swiss Style)",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Weiß, Schwarz, ein Rot. Text gleitet herein. Sachlich, sehr gut lesbar."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/comic.mp4",
+   "titel": "8  Comic / Pop-Art",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Rasterpunkte, dicke Umrisse, Knall-Stern beim Ergebnis. Formeln in Inter, weil die Comic-Schrift „=“ wie „:“ zeichnet."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/pixel.mp4",
+   "titel": "9  Pixel-Art (Retro)",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Spielkonsolen-Optik, Text wird getippt. Minuszeichen als Bindestrich, weil die Pixelschrift kein „−“ hat."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/videos/neon.mp4",
+   "titel": "10  Neon (Synthwave)",
+   "stand": "04.11., 07:15",
+   "pruefen": true,
+   "poster_bei": 14,
+   "notiz": "Leuchtende Linien auf Violett, Gitterboden. Auffällig, auf Dauer anstrengend."
+  }
+ ]
+}

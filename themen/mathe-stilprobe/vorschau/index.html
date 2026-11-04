@@ -1,0 +1,132 @@
+<title>Mathe · zehn Stile im Vergleich · Vorschau</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /* Eine Spalte, je Fassung eine Karte mit Player; die neueste oben. */
+  :root { --grund: #f4f1ec; --karte: #ffffff; --tinte: #1f2430; --grau: #646b75; --linie: #ddd6cc; --akzent: #324e7a;
+    --akzent-text: #ffffff; --gut: #2f7d50; --pruefen: #a35a12; --pruefen-grund: #fbebd9; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --grund: #15181d; --karte: #1e232a; --tinte: #e8eaee;
+    --grau: #9aa3ad; --linie: #2f3640; --akzent: #8fb0e3; --akzent-text: #10151c; --gut: #6fcf97; --pruefen: #f0b067;
+    --pruefen-grund: #3a2a17; color-scheme: dark } }
+  :root[data-theme="dark"] { --grund: #15181d; --karte: #1e232a; --tinte: #e8eaee; --grau: #9aa3ad; --linie: #2f3640;
+    --akzent: #8fb0e3; --akzent-text: #10151c; --gut: #6fcf97; --pruefen: #f0b067; --pruefen-grund: #3a2a17; color-scheme: dark }
+  * { box-sizing: border-box; }
+  body { background: var(--grund); color: var(--tinte); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; display: grid; gap: 18px; padding-block: 24px 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  h1 { margin: 0; font: 700 clamp(24px, 6vw, 34px)/1.15 Georgia, "Times New Roman", serif; text-wrap: balance; }
+  .aufgabe { margin: 0; padding: 12px 14px; border-left: 4px solid var(--pruefen); background: var(--pruefen-grund); border-radius: 6px; }
+  .video { display: grid; gap: 8px; padding: 14px; background: var(--karte); border: 1px solid var(--linie); border-radius: 14px; }
+  .kopfzeile { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+  .video h2 { margin: 0; font: 650 19px/1.3 system-ui, sans-serif; }
+  .marke { font: 600 12px/1 system-ui, sans-serif; letter-spacing: .05em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; }
+  .marke.pruefen { background: var(--pruefen-grund); color: var(--pruefen); }
+  .marke.info { background: var(--linie); color: var(--grau); }
+  .stand, .notiz { margin: 0; font-size: 14px; color: var(--grau); }
+  video { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; }
+  .urteil { display: flex; gap: 8px; }
+  .urteil button, .senden { border: 1px solid var(--linie); background: none; color: var(--tinte); border-radius: 999px; padding: 9px 16px;
+    font: 600 15px/1 system-ui, sans-serif; cursor: pointer; }
+  .urteil button[aria-pressed="true"][data-u="passt"] { background: var(--gut); border-color: var(--gut); color: var(--karte); }
+  .urteil button[aria-pressed="true"][data-u="aendern"] { background: var(--pruefen); border-color: var(--pruefen); color: var(--karte); }
+  .senden { background: var(--akzent); border-color: var(--akzent); color: var(--akzent-text); border-radius: 10px; }
+  textarea { width: 100%; font: 16px/1.4 system-ui, sans-serif; color: var(--tinte); background: var(--grund); border: 1px solid var(--linie);
+    border-radius: 8px; padding: 8px 10px; resize: vertical; }
+  .zeile { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .melde { font-size: 14px; color: var(--gut); }
+  button:focus-visible, textarea:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; }
+</style>
+<main>
+  <h1>Mathe · zehn Stile im Vergleich · Vorschau</h1>
+  <p class="aufgabe"><b>Deine Aufgabe:</b> Dieselbe 15-Sekunden-Szene (13 · 17 im Kopf: 15² − 2² = 221) in zehn Stilen, noch ohne Ton. Alles per Code gezeichnet, keine KI-Bilder, deshalb stimmt jede Zahl. Tippe bei deinen Favoriten „passt“, bei den anderen gern „ändern“ mit Notiz. Ton kommt beim Antippen von ▶; nichts wird heruntergeladen.</p>
+  <article class="video" id="v1" data-id="v_414d5f9b10" data-titel="1  Flat Design">
+      <div class="kopfzeile"><h2>1  Flat Design</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 0.3 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v1_flat.jpg" src="videos/v1_flat.mp4"></video>
+      <p class="notiz">Weiche Farben, Schatten, Elemente springen auf. Typisch für Erklärvideo-Kanäle und Apps.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 1  Flat Design"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v2" data-id="v_0692b7ca73" data-titel="2  Whiteboard (Handzeichnung)">
+      <div class="kopfzeile"><h2>2  Whiteboard (Handzeichnung)</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 1.2 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v2_whiteboard.jpg" src="videos/v2_whiteboard.mp4"></video>
+      <p class="notiz">Filzstift auf weißer Tafel, Linien zittern leicht („boil“). Wirkt persönlich, wie live gezeichnet.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 2  Whiteboard (Handzeichnung)"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v3" data-id="v_c759c7ac84" data-titel="3  Kreidetafel">
+      <div class="kopfzeile"><h2>3  Kreidetafel</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 0.8 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v3_kreide.jpg" src="videos/v3_kreide.mp4"></video>
+      <p class="notiz">Kreide auf grüner Tafel mit Wischspuren. Klassenzimmer-Gefühl.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 3  Kreidetafel"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v4" data-id="v_a40604a5ca" data-titel="4  Dunkle Vektorgrafik">
+      <div class="kopfzeile"><h2>4  Dunkle Vektorgrafik</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 0.2 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v4_dunkel.jpg" src="videos/v4_dunkel.mp4"></video>
+      <p class="notiz">Dunkler Grund, dünne leuchtende Linien, Serifenschrift für Formeln. Der übliche Stil anspruchsvoller Mathe-Kanäle.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 4  Dunkle Vektorgrafik"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v5" data-id="v_5d97d149a7" data-titel="5  Schulheft (Karopapier)">
+      <div class="kopfzeile"><h2>5  Schulheft (Karopapier)</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 0.4 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v5_heft.jpg" src="videos/v5_heft.mp4"></video>
+      <p class="notiz">Kuli auf Karopapier mit rotem Rand. Sieht aus wie die eigene Mitschrift.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 5  Schulheft (Karopapier)"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v6" data-id="v_34d592c44b" data-titel="6  Blaupause (Blueprint)">
+      <div class="kopfzeile"><h2>6  Blaupause (Blueprint)</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 0.4 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v6_blaupause.jpg" src="videos/v6_blaupause.mp4"></video>
+      <p class="notiz">Technische Zeichnung: weiße Linien auf Blau, Maßketten, Schreibmaschinenschrift beim Tippen.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 6  Blaupause (Blueprint)"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v7" data-id="v_9d079b0fa2" data-titel="7  Minimalistisch (Swiss Style)">
+      <div class="kopfzeile"><h2>7  Minimalistisch (Swiss Style)</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 0.3 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v7_swiss.jpg" src="videos/v7_swiss.mp4"></video>
+      <p class="notiz">Weiß, Schwarz, ein Rot. Text gleitet herein. Sachlich, sehr gut lesbar.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 7  Minimalistisch (Swiss Style)"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v8" data-id="v_8536e20a79" data-titel="8  Comic / Pop-Art">
+      <div class="kopfzeile"><h2>8  Comic / Pop-Art</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 1.0 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v8_comic.jpg" src="videos/v8_comic.mp4"></video>
+      <p class="notiz">Rasterpunkte, dicke Umrisse, Knall-Stern beim Ergebnis. Formeln in Inter, weil die Comic-Schrift „=“ wie „:“ zeichnet.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 8  Comic / Pop-Art"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v9" data-id="v_77e27b1fec" data-titel="9  Pixel-Art (Retro)">
+      <div class="kopfzeile"><h2>9  Pixel-Art (Retro)</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 0.1 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v9_pixel.jpg" src="videos/v9_pixel.mp4"></video>
+      <p class="notiz">Spielkonsolen-Optik, Text wird getippt. Minuszeichen als Bindestrich, weil die Pixelschrift kein „−“ hat.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 9  Pixel-Art (Retro)"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article><article class="video" id="v10" data-id="v_bcb2a5892a" data-titel="10  Neon (Synthwave)">
+      <div class="kopfzeile"><h2>10  Neon (Synthwave)</h2><span class="marke pruefen">zu prüfen</span></div>
+      <p class="stand">Stand 04.11., 07:15 · 0.4 MB</p>
+      <video controls playsinline preload="metadata" poster="videos/v10_neon.jpg" src="videos/v10_neon.mp4"></video>
+      <p class="notiz">Leuchtende Linien auf Violett, Gitterboden. Auffällig, auf Dauer anstrengend.</p>
+      <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu 10  Neon (Synthwave)"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
+    </article>
+</main>
+<script>
+(function () {
+  var TITEL = "Mathe · zehn Stile im Vergleich", db = null, kom = null, anClaude = false, urteil = {};
+  document.querySelectorAll("video").forEach(function (v) { v.addEventListener("play", function () {
+    document.querySelectorAll("video").forEach(function (w) { if (w !== v) w.pause(); }); v.muted = false; }); });
+  document.querySelectorAll(".video").forEach(function (k) {
+    var id = k.dataset.id, ta = k.querySelector("textarea"), melde = k.querySelector(".melde");
+    k.querySelectorAll(".urteil button").forEach(function (b) { b.addEventListener("click", function () {
+      urteil[id] = b.dataset.u; k.querySelectorAll(".urteil button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      if (b.dataset.u === "aendern" && ta) ta.focus();
+      if (db) db.collection("vorschau_urteile").doc(id).set({ video: k.dataset.titel, urteil: b.dataset.u, notiz: ta ? ta.value.trim() : "", zeit: new Date().toISOString() }).catch(function () {});
+    }); });
+    var s = k.querySelector(".senden"); if (!s) return;
+    s.addEventListener("click", function () {
+      var text = "Vorschau " + TITEL + ": " + k.dataset.titel + " – " + ({ passt: "PASST", aendern: "ÄNDERN" }[urteil[id]] || "ohne Urteil") + (ta.value.trim() ? "\nNotiz: " + ta.value.trim() : "");
+      if (db) db.collection("vorschau_urteile").doc(id).set({ video: k.dataset.titel, urteil: urteil[id] || null, notiz: ta.value.trim(), zeit: new Date().toISOString() }).catch(function () {});
+      if (!kom || !anClaude) { melde.textContent = db ? "Gespeichert. Claude liest es beim nächsten Mal." : "Bitte Claude im Chat Bescheid geben."; return; }
+      s.disabled = true;
+      kom.anchorFor(k).then(function (a) { return kom.sendToClaude({ anchor: a, text: text.slice(0, 3900) }); })
+        .then(function () { melde.textContent = "An Claude geschickt ✓"; }, function (e) { melde.textContent = e && e.code === "consent_required" ? "Gespeichert. Zum Senden bitte die Freigabe erlauben." : "Gespeichert, Senden fehlgeschlagen."; })
+        .then(function () { s.disabled = false; });
+    });
+  });
+  if (window.claude && claude.use) {
+    claude.use("db").then(function (d) { if (d) db = d; }).catch(function () {});
+    claude.use("comments").then(function (c) { if (!c || !c.canSendToClaude) return; kom = c;
+      c.canSendToClaude().then(function (v) { anClaude = v === "available"; }, function () {}); }).catch(function () {});
+  }
+})();
+</script>
