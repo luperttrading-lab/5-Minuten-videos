@@ -272,6 +272,28 @@ def beschriftung(b, rechnung, wert, x, y, a, gross=36):
     b.text(wert, x, y + 13, gross, '#ffffff', INTER_X, skala=a, alpha=klemm(a))
 
 
+def funken(b, t, start, cx, cy, r0=46, r1=150, n=14, dauer=0.8, fy=0.75):
+    """Kleiner Funkenkranz um ein Ergebnis (Belohnung, Nutzerwunsch 04.11.: „etwas ansprechender“), 0,8 s."""
+    f = p(t, start, dauer)
+    if not 0 < f < 1:
+        return
+    aus = 1 - (1 - f) ** 3                                 # schnell raus, sanft auslaufen
+    farben = [GRUEN, CA, CB, CBLAU, CD]
+    for k in range(n):
+        w = 2 * math.pi * (k + 0.37 * ((k * 7) % 5) / 5) / n
+        r = mix(r0, r1 * (0.85 + 0.3 * ((k * 3) % 4) / 3), aus)
+        b.kreis(cx + r * math.cos(w), cy + fy * r * math.sin(w), 5.5 - 3 * f, farben[k % len(farben)],
+                alpha=0.9 * (1 - f) ** 1.4)
+
+
+def spur(b, ort, t, c, n=7, abstand=0.045, r=5.0, alpha=0.4):
+    """Flugspur: Punkte an den Orten der letzten Augenblicke; ort(tt) gibt (x, y) oder None (nicht im Flug)."""
+    for k in range(1, n + 1):
+        q = ort(t - k * abstand)
+        if q is not None:
+            b.kreis(q[0], q[1], r * (1 - 0.1 * k), c, alpha=alpha * (1 - k / (n + 1)))
+
+
 def klammer_waagrecht(b, x0, x1, y, c, a):
     b.linie([(x0, y + 9), (x0, y), (x1, y), (x1, y + 9)], c, 3, alpha=a)
 
@@ -338,11 +360,13 @@ def s_hook(b, sc, t):
     tu = C(sc, 'drei Sekunden')
     loes = zurueck(p(t, tu + 3.0, 0.6))                    # nach der Uhr: die Lösung
     g = 140 * (0.6 + 0.4 * q)
+    tick = max(math.sin(math.pi * p(t, tu + k, 0.3)) for k in range(3))   # „?“ pocht mit den drei Ticks
     zeile(b, [('16', INK), (' · ', INK), ('18', INK), (' = ?', GRAU)], 640, 270, g, INTER_X,
-          alpha=klemm(q * 2) * (1 - klemm(loes * 2)))
+          alpha=klemm(q * 2) * (1 - klemm(loes * 2)), effekte={3: dict(skala=1 + 0.1 * tick)})
     if loes > 0:
-        zeile(b, [('16', INK), (' · ', INK), ('18', INK), (' = ', GRAU), ('288', GRUEN)], 640, 270, g, INTER_X,
-              alpha=klemm(loes * 2), effekte={4: dict(skala=0.6 + 0.4 * loes)})
+        pos = zeile(b, [('16', INK), (' · ', INK), ('18', INK), (' = ', GRAU), ('288', GRUEN)], 640, 270, g, INTER_X,
+                    alpha=klemm(loes * 2), effekte={4: dict(skala=0.6 + 0.4 * loes)})
+        funken(b, t, tu + 3.05, pos[4], 270, r0=70, r1=190)
     a = ein(t, tu, 0.3)
     uhr(b, 640, 455, 52, (t - tu) / 3.0, alpha=a * (1 - ein(t, tu + 2.85, 0.3)))
     t0 = C(sc, 'elf bis')
@@ -383,9 +407,14 @@ def s_regel(b, sc, t):
         b.text(s, cx, YT, G, c, INTER_X, skala=sk)
     # Schritt 1: 16 und die 8 wandern nach unten und werden zu 24
     fl = glatt(p(t, T['flug'], 1.1))
+
+    def ort8(tt):                                          # die 8 auf ihrem Bogen (für die Flugspur)
+        f = glatt(p(tt, T['flug'], 1.1))
+        return None if not 0 < f < 1 else (mix(cs[4], zc[2], f), mix(YT, YR, f) - math.sin(f * math.pi) * 110)
     m24 = glatt(p(t, T['z24'], 0.45))
     ziel = [('16', INK), (' + ', INK), ('8', CB)]
     zc = mitten(ziel, X, GR)
+    spur(b, ort8, t, CB)
     if fl > 0 and m24 < 1:
         a = 1 - m24
         b.text('16', mix((cs[0] + cs[1]) / 2, zc[0], fl), mix(YT, YR, fl), mix(G, GR, fl), INK, INTER_X,
@@ -411,6 +440,15 @@ def s_regel(b, sc, t):
     m48 = glatt(p(t, T['z48'], 0.45))
     ziel3 = [('6', CA), (' · ', INK), ('8', CB)]
     zc3 = mitten(ziel3, X, GR * 0.9)
+
+    def ort3(tt, i):                                       # 6 (links herum) und 8 (rechts herum)
+        f = glatt(p(tt, T['f68'] + 0.05, 0.7))
+        if not 0 < f < 1:
+            return None
+        bg = math.sin(f * math.pi) * 190
+        return (mix(cs[1], zc3[0], f) - bg, mix(YT, Y3, f)) if i == 0 else (mix(cs[4], zc3[2], f) + bg, mix(YT, Y3, f))
+    spur(b, lambda tt: ort3(tt, 0), t, CA)
+    spur(b, lambda tt: ort3(tt, 1), t, CB)
     if f3 > 0 and m48 < 1:
         a = 1 - m48
         bogen = math.sin(f3 * math.pi) * 190                # seitlich um die 240 herum, nicht durch sie hindurch
@@ -429,6 +467,7 @@ def s_regel(b, sc, t):
     if q > 0:
         w288 = breite('288', INTER_X, GR)
         b.text('288', XS - w288 / 2, 590, GR, GRUEN, INTER_X, skala=0.5 + 0.5 * q, alpha=klemm(q * 2))
+        funken(b, t, T['z288'] + 0.05, XS - w288 / 2, 590, r0=60, r1=170)
         ring = p(t, T['z288'], 0.9)
         if 0 < ring < 1:
             r = 60 + 120 * ring
@@ -446,17 +485,23 @@ U = 20
 def flaechen(b, t, wandert, T, RX, RY):
     """Rechteck 16 × 18 in vier Teilen; `wandert` = 'B' (10 × 8 nach unten → 24 hoch) oder 'C' (6 × 10 nach
     rechts → 24 breit). T: wachsen, teile, A–D (Beschriftung), drehen, k16 (erste Klammer), k24, lang, uebrig."""
-    wachsen = zurueck(p(t, T['wachsen'], 0.8)) if 'wachsen' in T else 1.0
+    if 'wachsen' in T and p(t, T['wachsen'], KASKADE) < 1:
+        return kaskade(b, t, T['wachsen'], RX, RY)
+    wachsen = 1.0
     farbig = p(t, T['teile'], 0.6) if 'teile' in T else 1.0
     pd = glatt(p(t, T['drehen'], 1.8))
     lang = glatt(p(t, T['lang'], 0.7))
     zentrum = (RX + 9 * U, RY + 8 * U)
+    # „Wir teilen es in vier Teile“: die Teile rücken ein paar Punkte auseinander, vor dem Drehen wieder zusammen
+    los = 9 * ein(t, T['teile'], 0.4) * (1 - ein(t, T['drehen'] - 0.6, 0.4)) if 'teile' in T else 0.0
+    weg_ = {'A': (-1, -1), 'B': (1, -1), 'C': (-1, 1), 'D': (1, 1)}
     stuecke = {'A': (10, 10, CBLAU, '10 · 10', '100', RX + 5 * U, RY + 5 * U),
                'B': (8, 10, CB, '10 · 8', '80', RX + 14 * U, RY + 5 * U),
                'C': (10, 6, CA, '6 · 10', '60', RX + 5 * U, RY + 13 * U),
                'D': (8, 6, CD, '6 · 8', '48', RX + 14 * U, RY + 13 * U)}
     for name, (w, h, col, rechnung, wert, mx, my) in stuecke.items():
         winkel = 0.0
+        mx, my = mx + los * weg_[name][0], my + los * weg_[name][1]
         if name == wandert == 'B':
             mx, my = mix(mx, RX + 5 * U, pd) + math.sin(pd * math.pi) * 80, mix(my, RY + 20 * U, pd)
             winkel = 90 * pd
@@ -510,9 +555,29 @@ def flaechen(b, t, wandert, T, RX, RY):
                                    (RY + 16 * U + 6) * K], radius=6 * K, outline=farbe(CD, 255 * puls), width=int(6 * K))
 
 
+KASKADE = 1.15                                             # s, bis alle 16 × 18 Kästchen da sind
+
+
+def kaskade(b, t, start, RX, RY):
+    """Das Rechteck entsteht Kästchen für Kästchen, als Welle von oben links (statt aus der Mitte zu wachsen)."""
+    f = p(t, start, KASKADE)
+    b.d.rectangle([(RX + 3) * K, (RY + 5) * K, (RX + 18 * U + 3) * K, (RY + 16 * U + 5) * K],
+                  fill=(0, 0, 0, int(38 * glatt(f * 1.2 - 0.2))))   # Schatten kommt mit
+    for i in range(18):
+        for j in range(16):
+            q = zurueck(p(t, start + (i + j) / 32 * 0.8, 0.35))
+            if q <= 0:
+                continue
+            cx, cy, h = RX + (i + 0.5) * U, RY + (j + 0.5) * U, (U - 1.3) * q / 2
+            b.d.rectangle([(cx - h) * K, (cy - h) * K, (cx + h) * K, (cy + h) * K], fill=farbe('#a9c9e8'))
+    a1 = ein(t, start + 0.3)                               # 18 und 16 an den Kanten wie sonst
+    zeile(b, [('1', INK), ('8', CB)], RX + 9 * U, RY - 26, 32, INTER_X, alpha=a1)
+    zeile(b, [('1', INK), ('6', CA)], RX - 36, RY + 8 * U, 32, INTER_X, alpha=a1)
+
+
 def s_warum(b, sc, t):
     T = dict(wachsen=C(sc, 'Rechteck aus'), teile=C(sc, 'vier Teile'), A=C(sc, 'zehn mal', 'vier Teile'),
-             B=C(sc, 'zehn mal acht'), C=C(sc, 'sechs mal zehn'), D=C(sc, 'sechs mal acht'), drehen=C(sc, 'drehen'),
+             B=C(sc, 'zehn mal acht', 'vier Teile'), C=C(sc, 'sechs mal zehn'), D=C(sc, 'sechs mal acht'), drehen=C(sc, 'drehen'),
              k16=C(sc, 'sechzehn plus acht'), k24=C(sc, 'vierundzwanzig Kästchen'), lang=C(sc, 'also mal zehn'),
              uebrig=C(sc, 'Übrig'))
     s1, s2, s3 = C(sc, 'Schritt eins'), C(sc, 'zehn breit'), C(sc, 'Übrig')
@@ -564,7 +629,7 @@ def s_sonderfall(b, sc, t):
     zeiten = [C(sc, 'Elf mal'), C(sc, 'Zwölf mal'), C(sc, 'Und so'), C(sc, 'Und so') + 1.0,
               C(sc, 'fünfzehn mal fünfzehn')]
     t200, tecke = C(sc, 'Die zweihundert'), C(sc, 'Ecke wächst')
-    a, an = ein(t, th), ein(t, tn)
+    a, an = ein(t, 0.15), ein(t, tn)                       # Überschrift sofort: vorher war das Bild 2 s leer
     zeile(b, [('Einer zusammen 10', GRAU)], 640, 112, 38, INTER_X, alpha=a * (1 - an))
     zeile(b, [('Einer zusammen 10:  ', GRAU), ('200 + ', TEAL), ('Einer · Einer', CD)], 640, 112, 38, INTER_X,
           alpha=a * an)
@@ -645,7 +710,9 @@ def s_vorsicht(b, sc, t):
                    teile=[('19 · 10 = ', INK), ('190', TEAL)], aktiv=(t190, t54)),
               dict(nr='3', farbe=CD, titel='Einer · Einer dazu', t_titel=t54, t_rech=t54,
                    teile=[('+ ', INK), ('5', CA), (' · ', INK), ('4', CB), (' = ', INK), ('20', CD)], aktiv=(t54, tz))]
-    schritte(b, t, 640, 120, 560, zeilen, ([('15 · 14 = ', INK), ('210', GRUEN)], tz), titel='15 · 14')
+    schritte(b, t, 640, 120, 560, zeilen, ([('15 · 14 = ', INK), ('210', GRUEN)], tz), titel='15 · 14',
+             alpha=ein(t, t19 - 0.5))                     # keine leere Karte am Anfang
+    funken(b, t, tz + 0.1, mitten([('15 · 14 = ', INK), ('210', GRUEN)], 920, 46)[1], 120 + 462 - 46, r0=58, r1=125, fy=0.42)
     a = ein(t, t220)
     if a > 0:                                              # „nicht 220“, die 220 durchgestrichen
         y = 120 + 66 + 3 * 104 + 84 + 40
@@ -682,6 +749,7 @@ def s_merke(b, sc, t):
     for i, (teile, tl) in enumerate(loes):
         einblenden(b, teile, 945, 335 + i * 62, 38, t, tl)
     einblenden(b, [('= ', INK), ('182', GRUEN)], 945, 530, 56, t, te + 5.1)
+    funken(b, t, te + 5.25, mitten([('= ', INK), ('182', GRUEN)], 945, 56)[1], 530, r0=62, r1=135, fy=0.42)
 
 
 def s_schluss(b, sc, t):
@@ -780,10 +848,12 @@ def rahmen(b, i, tl, t):
     sc = SZENEN[i]
     nr = sum(1 for s in SZENEN[:i + 1] if not s.get('anhang')) - 1
     a = 1.0 if sc.get('anhang') else ein(tl, 0, 0.4)
+    sp = 1.0 if sc.get('anhang') else zurueck(p(tl, 0.05, 0.45))   # Kapitelnummer springt auf
+    dx = 0.0 if sc.get('anhang') else 18 * (1 - glatt(p(tl, 0.1, 0.5)))    # Kapitelname gleitet von rechts herein
     if nr > 0:
-        b.kreis(78, 46, 17, TEAL, alpha=a)
-        b.text(str(nr), 78, 46, 21, '#ffffff', INTER_X, alpha=a)
-    b.text(sc['kicker'].upper(), 106 if nr > 0 else 60, 46, 22, GRAU, INTER_X, anker='l', alpha=a)
+        b.kreis(78, 46, 17 * sp, TEAL, alpha=a)
+        b.text(str(nr), 78, 46, 21, '#ffffff', INTER_X, alpha=a, skala=max(sp, 0.02))
+    b.text(sc['kicker'].upper(), (106 if nr > 0 else 60) + dx, 46, 22, GRAU, INTER_X, anker='l', alpha=a)
     kap = kapitel()
     gesamt = sum(d for _, _, d in kap)
     x, y = 60, 700
