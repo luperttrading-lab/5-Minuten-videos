@@ -29,6 +29,11 @@ Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das �
   stimmen auf Ø 35 ms mit der Lautstärke überein. Umrechnung Strom → Seitenzeit: Minimum von Ankunft − Proben/Rate über
   die letzten 35 Tonblöcke. Ergebnisseite zeigt zusätzlich die Zeit bis zum ersten Wort und die Wartezeit der Erkennung.
   Sprech-Runden vor v0.5 (ohne `mess: 2`) zählen nicht mehr für „Bester Schnitt“.
+- **v0.6 (Nutzerwunsch 04.11.): gezählt wird bis zum ANFANG der Antwort** (erstes Wort), weder Sprechen noch Erkennung.
+  Zur Kontrolle auf der Ergebnisseite: bis nach „…hundert“ (Anfang des gerechneten Teils) und bis zum Ende der Antwort.
+  Grund für die Kontrolle: Im Sonderfall beginnt jede Antwort mit „zweihundert“ – wer das sofort sagt und dabei rechnet,
+  hat ein sehr kurzes „erstes Wort“; die wahre Rechenzeit liegt zwischen „erstes Wort“ und „nach …hundert“.
+  „Bester Schnitt“ getrennt nach Tippen und Sprechen, beim Sprechen nur Runden mit `mess: 3`.
 Erkennung im Gerät mit Vosk (WebAssembly) und dem kleinen deutschen Modell, beides von der **Würfel-App** geladen
 (`/wuerfel/sprache/` auf derselben Adresse luperttrading-lab.github.io – einmal geladen, nutzen beide Apps denselben
 Speicher). Apples eigene Erkennung ist in Home-Bildschirm-Apps gesperrt (WebKit-Bug 225298). Grammatik: nur Zahlwörter

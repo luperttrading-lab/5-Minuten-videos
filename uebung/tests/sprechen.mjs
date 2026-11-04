@@ -92,9 +92,10 @@ for (const [t] of laut) { const g = segmente.at(-1); if (g && t - g[1] < 0.3) g[
 const zeilen = mit.map(x => {
   const a = x.woerter[0][1], b = x.woerter.at(-1)[2];
   const g = segmente.find(s => s[1] > a - 0.3 && s[0] < b + 0.3);
-  return { text: x.text, sprechen: x.schluss - x.beginn, warten: x.erkannt - x.schluss, dA: g ? (a - g[0]) * 1000 : null, dE: g ? (b - g[1]) * 1000 : null };
+  return { text: x.text, sprechen: x.schluss - x.beginn, hundert: x.zweiter !== null ? x.zweiter - x.beginn : null, warten: x.erkannt - x.schluss,
+    dA: g ? (a - g[0]) * 1000 : null, dE: g ? (b - g[1]) * 1000 : null };
 });
-for (const z of zeilen) console.log(`    „${z.text}“: gesprochen ${f2(z.sprechen)} s · Erkennung danach ${f2(z.warten)} s`
+for (const z of zeilen) console.log(`    „${z.text}“: gesprochen ${f2(z.sprechen)} s (davon „…hundert“ ${z.hundert !== null ? f2(z.hundert) : '–'} s) · Erkennung danach ${f2(z.warten)} s`
   + (z.dE !== null ? ` · Vosk gegen Lautstärke: Anfang ${z.dA >= 0 ? '+' : ''}${Math.round(z.dA)} ms, Ende ${z.dE >= 0 ? '+' : ''}${Math.round(z.dE)} ms` : ''));
 const w = zeilen.map(z => z.warten);
 ok(zeilen.length >= 10 && zeilen.every(z => z.sprechen > 300 && z.sprechen < 2500),
@@ -102,10 +103,11 @@ ok(zeilen.length >= 10 && zeilen.every(z => z.sprechen > 300 && z.sprechen < 250
 ok(w.every(v => v > 0 && v < 2500), `Wartezeit der Erkennung nach dem letzten Wort: Ø ${f2(mittel(w))} s (${f2(Math.min(...w))} … ${f2(Math.max(...w))} s)`);
 const dE = zeilen.filter(z => z.dE !== null).map(z => Math.abs(z.dE));
 ok(dE.length >= 8 && mittel(dE) < 150, `Vosk-Wortende passt zur Lautstärke: Abweichung Ø ${Math.round(mittel(dE))} ms`);
-const ab = r.e.filter(x => x.denk !== null);
-ok(ab.length >= 9 && ab.every(x => x.dauer < x.roh && x.roh - x.dauer < 2500),
-  `Gezählt wird bis zum Ende der Antwort: Ø ${f2(mittel(ab.map(x => x.dauer)))} s statt ${f2(mittel(ab.map(x => x.roh)))} s bis zur Erkennung`);
-ok(r.zeit.includes('ersten Wort') && r.zeit.includes('zählt nicht'), `Ergebnis: „${r.zeit}“`);
+const ab = r.e.filter(x => x.schluss != null);
+ok(ab.length >= 9 && ab.every(x => x.dauer <= x.zweiter && x.zweiter < x.schluss && x.schluss < x.roh),
+  `Gezählt wird bis zum ersten Wort: Ø ${f2(mittel(ab.map(x => x.dauer)))} s · bis nach „…hundert“ Ø ${f2(mittel(ab.map(x => x.zweiter)))} s`
+  + ` · bis Ende Ø ${f2(mittel(ab.map(x => x.schluss)))} s · bis zur Erkennung Ø ${f2(mittel(ab.map(x => x.roh)))} s`);
+ok(r.zeit.includes('ersten Wort') && r.zeit.includes('hundert') && r.zeit.includes('Erkennung danach'), `Ergebnis: „${r.zeit}“`);
 ok(konsole.length === 0, 'Keine Fehler in der Konsole' + (konsole.length ? ': ' + konsole.join(' | ') : ''));
 await browser.close(); server.close();
 console.log(fehler ? `${fehler} Fehler` : 'Alles grün');

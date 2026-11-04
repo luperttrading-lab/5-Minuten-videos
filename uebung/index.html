@@ -124,6 +124,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .ergebnis .zeit { font-size: 22px; font-weight: 700; margin: 6px 0 0; }
 .ergebnis .zeit small { display: block; margin-top: 8px; font-size: 15px; font-weight: 500; line-height: 1.45; color: var(--grau); }
 .ergebnis .zeit small b { color: var(--ink); }
+.ergebnis .zeit small.teil { margin-top: 6px; font-size: 14px; }
 .nobr { white-space: nowrap; }
 .ergebnis .zeit b { color: var(--c10); }
 .ergebnis .ziel { color: var(--grau); margin: 6px 0 0; font-size: 15px; }
@@ -228,7 +229,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 
 <script src="aufgaben.js"></script>
 <script>
-const APP_VERSION = '0.5';          // bei JEDER Änderung hochzählen
+const APP_VERSION = '0.6';          // bei JEDER Änderung hochzählen
 const $ = s => document.querySelector(s);
 const ANZAHL = 10;
 const ZIEL = 3.0;                    // Sekunden je Aufgabe, wie im Video („in drei Sekunden“)
@@ -291,12 +292,13 @@ function baueStart() {
   const r = lies(RUNDEN, []).filter(x => x.uebung === u.id);
   $('#verlauf').hidden = !r.length;
   if (r.length) {
-    const gute = r.filter(x => x.richtig >= 8 && (x.mess === 2 || x.eingabe !== 'sprechen'));
-    const best = gute.length ? Math.min(...gute.map(x => x.schnitt)) : null;
-    $('#bester').innerHTML = best ? `Bester Schnitt: <b>${sek(best)}</b> je Aufgabe`
-      : r.some(x => x.richtig >= 8) ? 'Bester Schnitt: ab jetzt neu gemessen (ohne Wartezeit der Erkennung)' : 'Noch keine Runde mit 8 oder mehr richtig';
+    const gute = r.filter(x => x.richtig >= 8 && vergleichbar(x, stand.eingabe));
+    const best = gute.length ? Math.min(...gute.map(x => x.schnitt)) : null, wie = stand.eingabe === 'sprechen' ? 'beim Sprechen' : 'beim Tippen';
+    $('#bester').innerHTML = best ? `Bester Schnitt ${wie}: <b>${sek(best)}</b> je Aufgabe`
+      : r.some(x => x.richtig >= 8 && x.eingabe === stand.eingabe) ? `Bester Schnitt ${wie}: ab jetzt neu gemessen (bis zum ersten Wort)`
+      : `Noch keine Runde ${wie} mit 8 oder mehr richtig`;
     $('#runden').innerHTML = r.slice(-5).reverse().map(x =>
-      `<li>${new Date(x.zeit).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' })} · <b>${x.richtig}/${x.anzahl}</b> richtig · Ø <b>${sek(x.schnitt)}</b>${x.stufe === 'zehn' ? ' · Einer = 10' : ''}${x.eingabe === 'sprechen' && x.mess !== 2 ? ' · alte Messung' : ''}</li>`).join('');
+      `<li>${new Date(x.zeit).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' })} · <b>${x.richtig}/${x.anzahl}</b> richtig · Ø <b>${sek(x.schnitt)}</b>${x.stufe === 'zehn' ? ' · Einer = 10' : ''}${x.eingabe === 'sprechen' ? (x.mess === 3 ? ' · 🎤' : ' · 🎤 alte Messung') : ''}</li>`).join('');
   }
 }
 for (const b of document.querySelectorAll('#eingabe button'))
@@ -383,13 +385,15 @@ function pruefe(wert, wie, sp) {
   if (runde.phase !== 'frage') return;
   const a = runde.aufgaben[runde.i];
   const jetzt = performance.now(), roh = jetzt - runde.t0;
-  // Gesprochen: Zeit bis zum Ende deiner Antwort (nicht bis die Erkennung fertig ist), dazu die Denkzeit bis zum ersten Wort
+  // Gesprochen (Nutzerwunsch 04.11.): Zeit bis zum ANFANG deiner Antwort – Sprechen und Erkennung zählen nicht.
+  // Zur Kontrolle: bis zum gerechneten Teil (nach „…hundert“) und bis zum Ende der Antwort.
   const gut = sp && sp.schluss !== null && sp.beginn !== null && sp.schluss <= jetzt && sp.schluss > runde.t0;
-  const dauer = gut ? sp.schluss - runde.t0 : roh;
-  const denk = gut ? Math.max(0, sp.beginn - runde.t0) : null;
+  const ab = t => Math.max(0, t - runde.t0);
+  const dauer = gut ? ab(sp.beginn) : roh;
+  const zweiter = gut && sp.zweiter !== null ? ab(sp.zweiter) : null, schluss = gut ? ab(sp.schluss) : null;
   const ok = wert === a.loesung;
   runde.phase = 'geloest';
-  runde.ergebnisse.push({ frage: a.frage, loesung: a.loesung, wert, ok, dauer, denk, roh, wie, a });
+  runde.ergebnisse.push({ frage: a.frage, loesung: a.loesung, wert, ok, dauer, zweiter, schluss, roh, wie, a });
   // Falsch: falsche Zahl durchgestrichen, richtige daneben – genauso lange wie bei richtig, kein Halt in der Runde
   $('#antwort').innerHTML = ok ? String(wert) : `<s>${wert}</s><b>${a.loesung}</b>`;
   $('#antwort').className = 'antwort ' + (ok ? 'ok' : 'nein');
@@ -409,31 +413,37 @@ function ende() {
   zeigeEnde(true);
   klang.fertig();
 }
+// Vergleichbar sind nur Runden mit gleicher Eingabe; beim Sprechen nur ab Messung 3 (v0.6, bis zum ersten Wort)
+const vergleichbar = (x, eingabe) => x.eingabe === eingabe && (eingabe !== 'sprechen' || x.mess === 3);
 function zeigeEnde(neu) {
   const e = runde.ergebnisse, richtig = e.filter(x => x.ok).length;
   const schnitt = e.reduce((s, x) => s + x.dauer, 0) / e.length;
   const schnellste = Math.min(...e.map(x => x.dauer));
   const alle = lies(RUNDEN, []);
-  const gs = e.filter(x => x.denk !== null);       // gesprochene Antworten mit Wort-Zeitmarken
+  const gs = e.filter(x => x.schluss != null), zw = gs.filter(x => x.zweiter != null);   // gesprochen, mit Wort-Zeitmarken
   const mittel = l => l.reduce((s, v) => s + v, 0) / l.length;
-  const denk = gs.length ? mittel(gs.map(x => x.denk)) : null, warte = gs.length ? mittel(gs.map(x => x.roh - x.dauer)) : null;
-  // Zeitmessung 2 (ab v0.5): gesprochen ohne die Wartezeit der Erkennung. Ältere Sprech-Runden sind damit nicht vergleichbar.
-  const vergleichbar = x => x.mess === 2 || x.eingabe !== 'sprechen';
-  const frueher = alle.filter((x, k) => k !== runde.platz && x.uebung === stand.uebung && x.richtig >= 8 && vergleichbar(x)).map(x => x.schnitt);
+  const bisEnde = gs.length ? mittel(gs.map(x => x.schluss)) : null, warte = gs.length ? mittel(gs.map(x => x.roh - x.schluss)) : null;
+  const bisRest = zw.length ? mittel(zw.map(x => x.zweiter)) : null;
+  const sprechRunde = gs.length > e.length / 2;
+  // Zeitmessung 3 (ab v0.6): gesprochen bis zum ersten Wort. Nur gleiche Eingabe und gleiche Messung sind vergleichbar.
+  const eingabe = sprechRunde ? 'sprechen' : 'tippen';
+  const frueher = alle.filter((x, k) => k !== runde.platz && x.uebung === stand.uebung && x.richtig >= 8 && vergleichbar(x, eingabe)).map(x => x.schnitt);
   const rekord = richtig >= 8 && frueher.length && schnitt < Math.min(...frueher);
-  const eintrag = { uebung: stand.uebung, stufe: stand.stufe, zeit: Date.now(), anzahl: e.length, richtig, schnitt, eingabe: stand.eingabe,
-    mess: 2, ...(denk !== null ? { denk } : {}) };
+  const eintrag = { uebung: stand.uebung, stufe: stand.stufe, zeit: Date.now(), anzahl: e.length, richtig, schnitt, eingabe,
+    mess: 3, ...(bisEnde !== null ? { bisEnde } : {}) };
   if (neu) alle.push(eintrag); else alle[runde.platz] = Object.assign(alle[runde.platz] || eintrag, { richtig });
   schreib(RUNDEN, alle.slice(-200));
   $('#e-richtig').textContent = `${richtig} von ${e.length} richtig`;
   $('#e-zeit').innerHTML = `Ø <b>${sek(schnitt)}</b> je Aufgabe · schnellste ${sek(schnellste)}`
-    + (denk !== null ? `<small>gemessen bis zum Ende deiner Antwort<br>davon bis zum ersten Wort: Ø <b>${sek(denk)}</b>`
-      + `<br>Erkennung danach: Ø ${sek(warte)} (zählt nicht)</small>` : '');
+    + (bisEnde !== null ? `<small>gemessen bis zu deinem ersten Wort –<br>Sprechen und Erkennung zählen nicht</small>`
+      + `<small class="teil">${bisRest !== null ? `bis nach „…hundert“: Ø ${sek(bisRest)}<br>` : ''}bis zum Ende der Antwort: Ø ${sek(bisEnde)}`
+      + `<br>Erkennung danach: Ø ${sek(warte)}</small>` : '');
   $('#e-ziel').textContent = rekord ? '🏆 Neuer bester Schnitt!' :
     schnitt <= ZIEL * 1000 ? 'Unter drei Sekunden – so schnell wie im Video!' : 'Ziel: unter drei Sekunden je Aufgabe.';
-  runde.spruch ||= SPRUECHE[zufallInt(SPRUECHE.length)];
-  const spruch = runde.spruch;
   const schnell = schnitt <= ZIEL * 1000, fehlerfrei = richtig === e.length;
+  const passend = schnell ? SPRUECHE.filter(x => !/langsam|schneller/.test(x)) : SPRUECHE;
+  runde.spruch ||= passend[zufallInt(passend.length)];
+  const spruch = runde.spruch;
   $('#e-spruch').innerHTML = (schnell && fehlerfrei ? 'Schnell und fehlerfrei – stark!' : schnell ? 'Schnell! Jetzt noch ohne Fehler.'
     : fehlerfrei ? 'Alles richtig! Mit ein bisschen Übung wirst du auch schneller.' : 'Mit ein bisschen Übung wird es schneller und sicherer.')
     + `<b>${spruch.replace(/(\S+-\S+)/g, '<span class="nobr">$1</span>')}</b>`;
@@ -609,7 +619,9 @@ function mikrofonAus() {
 function gehoert(text, woerter) {
   const wert = zahlwortZuZahl(text), jetzt = performance.now();
   const w = (woerter || []).filter(x => x.word && x.word !== '[unk]');
-  const sp = w.length ? { beginn: stromZuSeite(w[0].start), schluss: stromZuSeite(w[w.length - 1].end), erkannt: jetzt } : null;
+  const rest = w.find(x => !/hundert$/.test(x.word) && x.word !== 'und');   // „einundzwanzig“ in „zweihundert einundzwanzig“
+  const sp = w.length ? { beginn: stromZuSeite(w[0].start), zweiter: rest ? stromZuSeite(rest.start) : null,
+    schluss: stromZuSeite(w[w.length - 1].end), erkannt: jetzt } : null;
   sprache.protokoll.push({ text, wert, aufgabe: runde.aufgaben[runde.i]?.frage, phase: runde.phase, t0: runde.t0, ...sp,
     woerter: w.map(x => [x.word, x.start, x.end]) });
   if (wert === null || runde.phase !== 'frage') return;
