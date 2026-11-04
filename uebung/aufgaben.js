@@ -67,7 +67,7 @@ const UEBUNGEN = [
 // Motivationssätze für das Ende einer Runde (wie werkzeug/motivation.py, beim Ergänzen beide pflegen)
 const SPRUECHE = [
   'Das ist kein Hexenwerk.', 'Das ist keine Raketenwissenschaft.', 'Übung macht den Meister.', 'Das kann jeder lernen.',
-  'Nach ein paar Runden geht das wie von selbst.', 'Dein Kopf ist schneller, als du denkst.', 'Jeder fängt mal langsam an.',
+  'Nach ein paar Runden geht das wie von selbst.', 'Dein Kopf ist schneller, als du denkst.', 'Dranbleiben lohnt sich.',
   'Mit jeder Aufgabe wird es leichter.', 'Dafür musst du kein Mathe-Genie sein.', 'Ein paar Minuten am Tag reichen schon.',
 ];
 

@@ -226,7 +226,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 
 <script src="aufgaben.js"></script>
 <script>
-const APP_VERSION = '1.7';          // bei JEDER Änderung hochzählen
+const APP_VERSION = '1.8';          // bei JEDER Änderung hochzählen
 const $ = s => document.querySelector(s);
 const ANZAHL = 10;
 const ZIEL = 3.0;                    // Sekunden je Aufgabe, wie im Video („in drei Sekunden“)
@@ -436,7 +436,7 @@ function zeigeEnde(neu) {
   $('#e-ziel').textContent = rekord ? '🏆 Neuer bester Schnitt!' :
     schnitt <= ZIEL * 1000 ? 'Unter drei Sekunden – so schnell wie im Video!' : 'Ziel: unter drei Sekunden je Aufgabe.';
   const schnell = schnitt <= ZIEL * 1000, fehlerfrei = richtig === e.length;
-  const passend = schnell ? SPRUECHE.filter(x => !/langsam|schneller/.test(x)) : SPRUECHE;
+  const passend = schnell ? SPRUECHE.filter(x => !/schneller/.test(x)) : SPRUECHE;
   runde.spruch ||= passend[zufallInt(passend.length)];
   const spruch = runde.spruch;
   $('#e-spruch').innerHTML = (schnell && fehlerfrei ? 'Schnell und fehlerfrei – stark!' : schnell ? 'Schnell! Jetzt noch ohne Fehler.'

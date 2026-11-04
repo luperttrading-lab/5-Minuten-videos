@@ -17,7 +17,7 @@ SPRUECHE = {
         'Das kann jeder lernen.',
         'Nach ein paar Runden geht das wie von selbst.',
         'Dein Kopf ist schneller, als du denkst.',
-        'Jeder fängt mal langsam an.',
+        'Dranbleiben lohnt sich.',   # „Jeder fängt mal langsam an“ raus (Nutzer 04.11.: klingt herablassend)
         'Mit jeder Aufgabe wird es leichter.',
         'Dafür musst du kein Mathe-Genie sein.',
         'Ein paar Minuten am Tag reichen schon.',
