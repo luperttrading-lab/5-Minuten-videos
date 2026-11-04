@@ -77,7 +77,7 @@ SZENEN = [
         'neunzehn breit, also hundertneunzig und nicht zweihundert. Dazu kommt die Ecke, fünf mal vier gleich '
         'zwanzig. Zusammen zweihundertzehn, nicht zweihundertzwanzig.')),
     dict(id='merke', kicker='Merke', pause=DENKPAUSE, text=(   # Nutzerwunsch 04.11.: die langen Sätze, nicht die Kurzformen
-        'Merk dir die drei Schritte: Den Einer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. Beide Einer '
+        'Merk dir die drei Schritte: Einen Einer zur anderen Zahl addieren, egal, welchen. Eine Null anhängen. Beide Einer '
         'multiplizieren und dazuzählen. Und jetzt du: dreizehn mal vierzehn.')),
     dict(id='schluss', kicker='Merke', anhang=True, text=(   # gehört zum Kapitel „Merke“, läuft nach der Lösung
         'Hat es bei dir länger als drei Sekunden gedauert? Ganz normal. Mit ein bisschen Übung schaffst du das auch '
@@ -751,7 +751,7 @@ def s_vorsicht(b, sc, t):
             b.linie([(x1 - w - 4, y + 8), (mix(x1 - w - 4, x1 + 4, ps), y + 8 - 16 * ps)], CD, 5, alpha=a)
 
 
-MERKSAETZE = [('1', CB, ['Den Einer zur anderen Zahl', 'addieren – egal, welche'], 'Den Einer'),   # Nutzer 04.11.
+MERKSAETZE = [('1', CB, ['Einen Einer zur anderen Zahl', 'addieren – egal, welchen'], 'Einen Einer'),   # Nutzerwahl 04.11.
               ('2', TEAL, ['Eine Null anhängen'], 'Eine Null'),
               ('3', CD, ['Beide Einer multiplizieren', 'und dazuzählen'], 'Beide Einer')]
 
@@ -774,7 +774,7 @@ def merkkarte(b, sc, t, x0=80, y0=130, w=590):
             b.kreis(x0 + 52, y + 15 + 22 + dy, 23, col, alpha=a)
             b.text(nr, x0 + 52, y + 15 + 22 + dy, 25, '#ffffff', INTER_X, alpha=a)
             for j, z in enumerate(zeilen):
-                b.text(z, x0 + 92, y + 15 + 22 + 44 * j + dy, 34, INK, INTER_X, anker='l', alpha=a)
+                b.text(z, x0 + 92, y + 15 + 22 + 44 * j + dy, 32, INK, INTER_X, anker='l', alpha=a)
         y += hoehe
 
 
