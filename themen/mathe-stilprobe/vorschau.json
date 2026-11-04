@@ -1,12 +1,20 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Neu oben: der Kopftrick 12 · 18 = 200 + 2 · 8 in fünf Animationsarten, nicht nur in fünf Farben. Wichtig: Der Trick gilt nur, wenn die Einer zusammen 10 ergeben. 15 · 14 ist 210, nicht 220, das zeigt jedes Video am Ende. Bei deinen Favoriten „passt“ tippen. Darunter die erste Stilprobe zur Info.",
+ "aufgabe": "Neu oben: die allgemeine Regel als Erklärvideo mit Ton, 2 Minuten. Hör es dir an und tippe „passt“ oder „ändern“ mit Notiz, zum Beispiel zu Sprechtext, Tempo oder Bild. Darunter zur Info die fünf Animationsarten und die erste Stilprobe.",
  "videos": [
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel/regel.mp4",
+   "titel": "Neu: Die allgemeine Regel, mit Ton (2:02)",
+   "stand": "04.11., 08:42",
+   "pruefen": true,
+   "poster_bei": 60,
+   "notiz": "16 · 18: 16 + 8 = 24 (oder 18 + 6), mal 10 = 240, plus 6 · 8 = 48, also 288. Danach das Warum als Fläche: Der Streifen 6 × 10 dreht sich und legt sich an, so entsteht 10 × 24. Dann der Sonderfall 11·19 bis 15·15 und die Vorsicht bei 15 · 14. Stil A (Flächenmodell), Stimme Christian."
+  },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/ein_videos/alle_fuenf.mp4",
    "titel": "Alle fünf hintereinander (1:45)",
    "stand": "04.11., 08:12",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 60,
    "notiz": "Zum Vergleich am Stück. Oben links steht kurz, welche Animationsart gerade läuft."
   },
@@ -14,7 +22,7 @@
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/ein_videos/flaeche.mp4",
    "titel": "A · Flächenmodell, weiche Übergänge",
    "stand": "04.11., 08:12",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 12,
    "notiz": "Das Rechteck 12 × 18 zerfällt in vier Teile. Der Streifen 2 × 10 dreht sich und legt sich an 8 × 10, so entsteht ein zweites 10 × 10."
   },
@@ -22,7 +30,7 @@
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/ein_videos/kinetik.mp4",
    "titel": "B · Kinetische Typografie",
    "stand": "04.11., 08:12",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 12,
    "notiz": "Nur Zahlen: Sie fliegen, verschmelzen und wackeln, die Kamera zoomt, es gibt harte Schnitte. Kein Bild, keine Fläche."
   },
@@ -30,7 +38,7 @@
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/ein_videos/handschrift.mp4",
    "titel": "C · Handschrift, Kamera folgt dem Stift",
    "stand": "04.11., 08:12",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 20,
    "notiz": "Ein Bleistift schreibt die Rechnung Zeile für Zeile. Die Kamera fährt mit, kreist (8 + 2) ein und zoomt am Ende auf die ganze Seite."
   },
@@ -38,7 +46,7 @@
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/ein_videos/punkte.mp4",
    "titel": "D · Punkte, Partikel fliegen",
    "stand": "04.11., 08:12",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 9,
    "notiz": "216 Punkte tauchen in einer Welle auf und färben sich. 20 davon fliegen mit Leuchtspur in die Lücke."
   },
@@ -46,7 +54,7 @@
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/ein_videos/papier.mp4",
    "titel": "E · Papierschnitt, Stop-Motion",
    "stand": "04.11., 08:12",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 16,
    "notiz": "Papierstücke auf Karton, 12 Bilder pro Sekunde mit leichtem Zittern wie gelegt und fotografiert. Etiketten fallen aufs Papier, am Ende ein Haftzettel."
   },

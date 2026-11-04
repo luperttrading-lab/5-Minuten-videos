@@ -9,3 +9,8 @@ Das Beispiel des Nutzers 15 · 14 ist 210, nicht 220. Jedes Video zeigt das am E
   handschrift (Bleistift schreibt, Kamera folgt), punkte (216 Partikel mit Leuchtspur), papier (Papierschnitt, Stop-Motion 12 fps)
 - Zeichenfläche ist RGB: ImageDraw blendet halbtransparente Farben nur auf RGB, auf RGBA überschreibt es den Alphakanal
 - Vorschau-Seite (gemeinsam für alle Mathe-Proben): `themen/mathe-stilprobe/vorschau.json` → https://claude.ai/artifact/PVisw26MxXcVy1NJngcMFu
+
+## Erklärvideo mit Ton: `regel.py` (04.11.)
+- Allgemeine Regel 16 · 18 = (16 + 8) · 10 + 6 · 8 = 288, beide Richtungen, Flächenbeweis (Streifen 6 × 10 drehen → 10 × 24), Sonderfall 11·19 … 15·15, Vorsicht 15 · 14 = 210, Übung 13 · 14 = 182
+- `python3 regel.py <ziel.mp4> [--nur-ton] [--bild s,…]`; Einblendungen hängen an gesprochenen Wörtern (ElevenLabs-Zeitmarken)
+- 2:02, 244 Wörter, ElevenLabs 708 Zeichen berechnet; Ton in `tts_cache/` (JSON eingecheckt)
