@@ -1,0 +1,190 @@
+# Quellen: IDs | Sprache | Titel | URL  (alle per Abruf geprüft, Stand 04.11.2026)
+A1,M1,M3,M10,M11,M12,M15,S4,A2 | de | Kopfrechnen – Wikipedia | https://de.wikipedia.org/wiki/Kopfrechnen
+A1,A2,M9,M10,M13,S1,S2,S3,S6,Q5,D1,D2 | en | Fast Arithmetic Tips (Cut-the-Knot) | https://www.cut-the-knot.org/arithmetic/rapid/rapid.shtml
+A2 | de | 2 einfache Tipps für schnelleres Kopfrechnen (Duolingo-Blog) | https://blog.duolingo.com/de/kopfrechnen-mathe-tipps/
+A3,A6 | en | Subtraction – Wikipedia | https://en.wikipedia.org/wiki/Subtraction
+A3 | en | Method of complements – Wikipedia | https://en.wikipedia.org/wiki/Method_of_complements
+A4,S1,S5,Q8,Q11,D1,D8 | de | Übungen im Kopfrechnen (M. Kreuzer, Uni Passau) | https://symbcomp.fim.uni-passau.de/fileadmin/dokumente/fakultaeten/fim/lehrstuhl/kreuzer/LFB/2016/UebungKopfrechnen.pdf
+A4,M3,D3,R1 | de | Vedische Mathematik (Rechenmethoden) – Wikipedia | https://de.wikipedia.org/wiki/Vedische_Mathematik_(Rechenmethoden)
+A5 | en | Triangular number – Wikipedia | https://en.wikipedia.org/wiki/Triangular_number
+A5,A7 | de | Gaußsche Summenformel – Wikipedia | https://de.wikipedia.org/wiki/Gaußsche_Summenformel
+A7 | en | Square number – Wikipedia | https://en.wikipedia.org/wiki/Square_number
+A8 | de | Rechnen im Zahlenraum bis 20 mit Zehnerüberschreitung (Brücken bauen, Bayern) | https://www.brueckenbauen.bayern.de/fileadmin/user_upload/brueckenbauen/Lernstaende_einschaetzen/GS_Ma_1_2_Lernweg_Rechnen_bis_20.pdf
+M1 | en | Multiplication algorithm – Wikipedia | https://en.wikipedia.org/wiki/Multiplication_algorithm
+M2 | en | Doubling and Halving Trick (Magoosh) | https://magoosh.com/gmat/doubling-and-halving-trick-for-gmat-math/
+M4,M8,M9,Q1,Q4,Q5,Q9,K2,F2,A11,E7 | de | Kopfrechnen geht schneller als Du denkst! (M. Kreuzer, Uni Passau) | https://symbcomp.fim.uni-passau.de/fileadmin/dokumente/fakultaeten/fim/lehrstuhl/kreuzer/LFB/2016/Kopfrechnen.pdf
+M5 | de | Russische Bauernmultiplikation – Wikipedia | https://de.wikipedia.org/wiki/Russische_Bauernmultiplikation
+M5 | en | Ancient Egyptian multiplication – Wikipedia | https://en.wikipedia.org/wiki/Ancient_Egyptian_multiplication
+M6 | en | How the Japanese multiplication method works (Whizz) | https://whizz.com/en-us/blog/its-not-magic-its-math-how-the-japanese-multiplication-method-works/
+M7 | en | Lattice multiplication – Wikipedia | https://en.wikipedia.org/wiki/Lattice_multiplication
+M13,S2,S9,Q3,Q10,Q12,D2,D5,P2,U1,U11,U12 | en | Mental Math Techniques: Quick Reference (Axiom Academy) | https://theaxiomacademy.org/formula-refs/mental-math-formulas.html
+S4,S5,S7,S13,R2 | en | Trachtenberg system – Wikipedia | https://en.wikipedia.org/wiki/Trachtenberg_system
+S6,F1,F2 | de | Fingerrechnen – Wikipedia | https://de.wikipedia.org/wiki/Fingerrechnen
+S8 | en | Spoken Rule for Multiplying by 15 (StudyRaid) | https://app.studyraid.com/en/read/75878/3609515/spoken-rule-for-multiplying-by-15
+S10 | en | Multiply a two-digit number by 101 (basic-mathematics.com) | https://basic-mathematics.com/multiply-a-two-digit-number-by-101.html
+S10,S16 | en | Math Tricks: Multiply by 75, 101 and 111 (OnlineMathLearning) | https://onlinemathlearning.com/math-trick-multiply-75-101-111.html
+S11 | en | Six-digit numbers abcabc divisible by 7, 11, 13 (Cuemath) | https://www.cuemath.com/ncert-solutions/a-six-digit-number-is-formed-by-repeating-a-three-digit-number-for-example-256256-678678-etc-any-number-of-this-form-is-divisible-by-a-7-only-b-11-only-c-13-only
+S12 | en | The Power of 37 (Math for Love) | https://mathforlove.com/lesson/the-power-of-37/
+S12,S16 | en | Multiplication by 111 (HMC Math Fun Facts) | https://math.hmc.edu/funfacts/?p=591
+Q1 | en | Squares Ending in 5 (HMC Math Fun Facts) | https://math.hmc.edu/funfacts/?p=240
+Q2 | en | Secrets of the Mathematical Ninja: squares near 50 | https://flyingcoloursmaths.co.uk/secrets-of-the-mathematical-ninja-squares-near-50/
+Q2,Q3,Q6 | en | Mentat Wiki: Squaring Numbers | https://ludism.org/mentat/SquaringNumbers
+Q6 | de | Kopfrechentricks 4: Quadratzahlen (Lehrerfortbildung BW) | https://www.lehrerfortbildung-bw.de/u_matnatech/mathematik/gym/bp2016/fb16/2_kopfrechnen/02-begabtenfoerderungmu-m05-kopfrechentricks-4-quadratzahlen.pdf
+Q7 | en | Methods of computing square roots – Wikipedia | https://en.wikipedia.org/wiki/Methods_of_computing_square_roots
+Q7,U6 | en | Binomial approximation – Wikipedia | https://en.wikipedia.org/wiki/Binomial_approximation
+D4 | en | Properties of division (The Math Page) | https://themathpage.com/Arith/division-3.htm
+D6,D7 | en | Repeating decimal – Wikipedia | https://en.wikipedia.org/wiki/Repeating_decimal
+D6 | en | Cyclic number – Wikipedia | https://en.wikipedia.org/wiki/Cyclic_number
+D9,M10 | en | Vedic Mathematics/Sutras/Ekadhikena Purvena (Wikibooks) | https://en.wikibooks.org/wiki/Vedic_Mathematics/Sutras/Ekadhikena_Purvena
+D10 | en | Chunking (division) – Wikipedia | https://en.wikipedia.org/wiki/Chunking_(division)
+P1 | en | Computing Percentages Easier (Jeremy Kun) | https://jeremykun.com/2023/09/05/computing-percentages-easier/
+P3,P12 | en | Percentage – Wikipedia | https://en.wikipedia.org/wiki/Percentage
+P4,P5,P9 | en | Rule of 72 – Wikipedia | https://en.wikipedia.org/wiki/Rule_of_72
+P4,P9 | en | Compound interest – Wikipedia | https://en.wikipedia.org/wiki/Compound_interest
+P6 | en | Rule of 72, Rule of 114 and Rule of 144 (BankExamsToday) | https://www.bankexamstoday.com/2018/04/rule-of-72.html
+P7,P10 | en | Volatility tax – Wikipedia | https://en.wikipedia.org/wiki/Volatility_tax
+P8 | de | Mehrwertsteuer berechnen (Taxfix) | https://taxfix.de/ratgeber/buchhaltung/mehrwertsteuer-berechnen/
+P11 | en | Square Root of Time Rule (Gregory Gundersen) | https://www.gregorygundersen.com/blog/2022/05/24/square-root-of-time-rule/
+T1,T2,T3,T4,T5,T6,T7,T8 | en | Divisibility rule – Wikipedia | https://en.wikipedia.org/wiki/Divisibility_rule
+T1,T2,T3,T5,T6,T7,T8,T9 | de | Teilbarkeit – Wikipedia | https://de.wikipedia.org/wiki/Teilbarkeit
+E1 | de | Neunerprobe – Wikipedia | https://de.wikipedia.org/wiki/Neunerprobe
+E1,E2 | en | Casting out nines – Wikipedia | https://en.wikipedia.org/wiki/Casting_out_nines
+E2 | de | Elferprobe – Wikipedia | https://de.wikipedia.org/wiki/Elferprobe
+E4,U1 | de | Überschlagsrechnung – Wikipedia | https://de.wikipedia.org/wiki/Überschlagsrechnung
+E4,U2 | en | Order of magnitude – Wikipedia | https://en.wikipedia.org/wiki/Order_of_magnitude
+E5 | en | Parity (mathematics) – Wikipedia | https://en.wikipedia.org/wiki/Parity_(mathematics)
+E6 | de | Umkehraufgaben (Studyflix) | https://studyflix.de/mathematik/umkehraufgaben-3813
+E6 | de | Proben (Lernhelfer Schülerlexikon) | https://www.lernhelfer.de/schuelerlexikon/mathematik/artikel/proben
+U3 | en | Fermi problem – Wikipedia | https://en.wikipedia.org/wiki/Fermi_problem
+U4 | en | Common logarithm – Wikipedia | https://en.wikipedia.org/wiki/Common_logarithm
+U5 | en | Binary prefix – Wikipedia | https://en.wikipedia.org/wiki/Binary_prefix
+U7 | en | Natural logarithm – Wikipedia | https://en.wikipedia.org/wiki/Natural_logarithm
+U8 | en | Propagation of uncertainty – Wikipedia | https://en.wikipedia.org/wiki/Propagation_of_uncertainty
+U9 | en | Approximations of π – Wikipedia | https://en.wikipedia.org/wiki/Approximations_of_%CF%80
+U10 | en | Seconds in a year approximation (Pearson, Aufgabe nach Young) | https://pearson.com/channels/physics/asset/c8f88eb8/a-useful-and-easy-to-remember-approximate-value-for-the-number-of-seconds-in-a-y
+K1,K3 | en | Doomsday rule – Wikipedia | https://en.wikipedia.org/wiki/Doomsday_rule
+K2 | en | Determination of the day of the week – Wikipedia | https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week
+K4 | en | Leap year – Wikipedia | https://en.wikipedia.org/wiki/Leap_year
+K4 | de | Schaltjahr – Wikipedia | https://de.wikipedia.org/wiki/Schaltjahr
+K5 | en | Clock angle problem – Wikipedia | https://en.wikipedia.org/wiki/Clock_angle_problem
+K6 | de | Gaußsche Osterformel – Wikipedia | https://de.wikipedia.org/wiki/Gaußsche_Osterformel
+K6 | en | Date of Easter – Wikipedia | https://en.wikipedia.org/wiki/Date_of_Easter
+W1 | en | Rule of three (statistics) – Wikipedia | https://en.wikipedia.org/wiki/Rule_of_three_(statistics)
+W1 | en | Hanley & Lippman-Hand: If Nothing Goes Wrong, Is Everything All Right? (JAMA 1983) | https://jamanetwork.com/journals/jama/fullarticle/385438
+W2 | en | 68–95–99.7 rule – Wikipedia | https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule
+W3 | en | Standard error – Wikipedia | https://en.wikipedia.org/wiki/Standard_error
+W4 | en | Margin of error – Wikipedia | https://en.wikipedia.org/wiki/Margin_of_error
+W5 | en | Birthday problem – Wikipedia | https://en.wikipedia.org/wiki/Birthday_problem
+W5 | de | Geburtstagsparadoxon – Wikipedia | https://de.wikipedia.org/wiki/Geburtstagsparadoxon
+W6,W7 | en | Probability to win at least once (O. Pirson) | https://www.opimedia.be/probability/
+W6,W7 | en | One in a Million and e (Count Bayesie) | https://countbayesie.com/blog/2015/2/18/one-in-a-million-and-e
+W8 | en | Simulating the Rule of Five (R-bloggers) | https://www.r-bloggers.com/2014/11/simulating-the-rule-of-five/
+W9 | en | Chebyshev's inequality – Wikipedia | https://en.wikipedia.org/wiki/Chebyshev%27s_inequality
+W10,P11 | en | Variance – Wikipedia | https://en.wikipedia.org/wiki/Variance
+R1 | en | Vedic Mathematics – Wikipedia (mit Kritik von S. G. Dani u. a.) | https://en.wikipedia.org/wiki/Vedic_Mathematics
+R3,R4 | en | Soroban – Wikipedia | https://en.wikipedia.org/wiki/Soroban
+R3 | en | Mental abacus – Wikipedia | https://en.wikipedia.org/wiki/Mental_abacus
+R5 | en | Napier's bones – Wikipedia | https://en.wikipedia.org/wiki/Napier%27s_bones
+R5 | de | Napiersche Rechenstäbchen – Wikipedia | https://de.wikipedia.org/wiki/Napiersche_Rechenstäbchen
+F3 | en | Chisanbop – Wikipedia | https://en.wikipedia.org/wiki/Chisanbop
+F4 | en | Knuckle mnemonic – Wikipedia | https://en.wikipedia.org/wiki/Knuckle_mnemonic
+F5 | en | Finger binary – Wikipedia | https://en.wikipedia.org/wiki/Finger_binary
+E1,E2,E3 | fr | Preuve par neuf | https://fr.wikipedia.org/wiki/Preuve_par_neuf
+T1,T2,T3,T4,T5,T6,T7,T9 | fr | Critère de divisibilité | https://fr.wikipedia.org/wiki/Critère_de_divisibilité
+R2,S5,S7,S13 | fr | Méthode Trachtenberg | https://fr.wikipedia.org/wiki/Méthode_Trachtenberg
+M7 | fr | Multiplication par jalousies | https://fr.wikipedia.org/wiki/Multiplication_par_jalousies
+R5 | fr | Bâtons de Napier | https://fr.wikipedia.org/wiki/Bâtons_de_Napier
+W5 | fr | Paradoxe des anniversaires | https://fr.wikipedia.org/wiki/Paradoxe_des_anniversaires
+K6 | fr | Calcul de la date de Pâques selon la méthode de Gauss | https://fr.wikipedia.org/wiki/Calcul_de_la_date_de_Pâques_selon_la_méthode_de_Gauss
+K2 | fr | Détermination du jour de la semaine | https://fr.wikipedia.org/wiki/Détermination_du_jour_de_la_semaine
+P4,P5,P6 | fr | Règle des 72 | https://fr.wikipedia.org/wiki/Règle_des_72
+R1 | fr | Mathématiques védiques | https://fr.wikipedia.org/wiki/Mathématiques_védiques
+R3 | fr | Soroban | https://fr.wikipedia.org/wiki/Soroban
+Q1,Q6,A7 | fr | Carré parfait | https://fr.wikipedia.org/wiki/Carré_parfait
+W9 | fr | Inégalité de Bienaymé-Tchebychev | https://fr.wikipedia.org/wiki/Inégalité_de_Bienaymé-Tchebychev
+K4 | fr | Année bissextile | https://fr.wikipedia.org/wiki/Année_bissextile
+A2,S4 | fr | 6 astuces de calcul mental efficaces (Pass Education) | https://www.pass-education.fr/actu-astuces-calcul-mental/
+E1 | es | Prueba del nueve | https://es.wikipedia.org/wiki/Prueba_del_nueve
+T1,T2,T3,T4,T6,T7,T8 | es | Divisibilidad | https://es.wikipedia.org/wiki/Divisibilidad
+A1,A2,S1,S3,S5,S6,S10,S12,M13,Q1,Q4,M4,Q7,Q9,Q11,U4,E1,E3,E4 | es | Cálculo mental | https://es.wikipedia.org/wiki/Cálculo_mental
+R2,S1,S5,S6,S7,S13 | es | Método Trachtenberg | https://es.wikipedia.org/wiki/Método_Trachtenberg
+M6,M7 | es | Algoritmo de multiplicación | https://es.wikipedia.org/wiki/Algoritmo_de_multiplicación
+M6 | es | Truco japonés para multiplicar con los niños (Guiainfantil) | https://www.guiainfantil.com/articulos/educacion/aprendizaje/truco-japones-para-multiplicar-con-los-ninos/
+P4,P5 | es | Regla del 72 (Openbank) | https://www.openbank.es/open-to-learn/regla-del-72
+R1,A4,Q1,Q3,M10,M3 | es | Matemáticas védicas | https://es.wikipedia.org/wiki/Matemáticas_védicas
+W5 | es | Paradoja del cumpleaños | https://es.wikipedia.org/wiki/Paradoja_del_cumpleaños
+K6 | es | Computus | https://es.wikipedia.org/wiki/Computus
+R3 | es | Soroban | https://es.wikipedia.org/wiki/Soroban
+R5 | es | Huesos de Napier | https://es.wikipedia.org/wiki/Huesos_de_Napier
+K4 | es | Año bisiesto | https://es.wikipedia.org/wiki/Año_bisiesto
+W9 | es | Desigualdad de Chebyshov | https://es.wikipedia.org/wiki/Desigualdad_de_Chebyshov
+E1,E2 | it | Prova del nove | https://it.wikipedia.org/wiki/Prova_del_nove
+T1,T2,T3,T5,T7,T8 | it | Criteri di divisibilità | https://it.wikipedia.org/wiki/Criteri_di_divisibilità
+A1,A2,A4,Q11 | it | Calcolo mentale | https://it.wikipedia.org/wiki/Calcolo_mentale
+S1,S2,S4,S6,M13,S11,M9 | it | Trucchi per fare le moltiplicazioni a mente (Geopop) | https://www.geopop.it/trucchi-per-fare-le-moltiplicazioni-a-mente-come-fare-calcoli-veloci/
+Q5 | it | Come calcolare i quadrati senza fare moltiplicazioni (Geopop) | https://www.geopop.it/il-trucco-per-fare-calcoli-veloci-a-mente-come-calcolare-i-quadrati-senza-fare-moltiplicazioni/
+S4,D8 | it | 4 trucchi per fare i calcoli velocemente (Studentville) | https://www.studentville.it/appunti/trucchi-calcoli-matematica-veloce/
+S4,M1,M8,M10,M3 | it | Moltiplicazioni: trucchi e segreti (Virgilio Sapere) | https://sapere.virgilio.it/scuola/elementari/matematica-aritmetica/moltiplicazioni/trucchi-velocizzare-moltiplicazioni
+P4,P5 | it | Regola del 72 | https://it.wikipedia.org/wiki/Regola_del_72
+W5 | it | Paradosso del compleanno | https://it.wikipedia.org/wiki/Paradosso_del_compleanno
+R5 | it | Bastoncini di Nepero | https://it.wikipedia.org/wiki/Bastoncini_di_Nepero
+K6 | it | Computus | https://it.wikipedia.org/wiki/Computus
+R3 | it | Soroban | https://it.wikipedia.org/wiki/Soroban
+K4 | it | Anno bisestile | https://it.wikipedia.org/wiki/Anno_bisestile
+T1,T2,T3,T4,T5,T6,T8,T9 | ru | Признаки делимости | https://ru.wikipedia.org/wiki/Признаки_делимости
+S1,S6,S4,Q1,Q6,M4,M1,S14,A10 | ru | Устный счёт | https://ru.wikipedia.org/wiki/Устный_счёт
+M5 | ru | Умножение в Древнем Египте (Умножение русских крестьян) | https://ru.wikipedia.org/wiki/Умножение_в_Древнем_Египте
+R2,S5,S7 | ru | Метод Трахтенберга | https://ru.wikipedia.org/wiki/Метод_Трахтенберга
+P4,P5 | ru | Правило 72 | https://ru.wikipedia.org/wiki/Правило_72
+W5 | ru | Парадокс дней рождения | https://ru.wikipedia.org/wiki/Парадокс_дней_рождения
+K6 | ru | Алгоритм Гаусса вычисления даты Пасхи | https://ru.wikipedia.org/wiki/Алгоритм_Гаусса_вычисления_даты_Пасхи
+R5 | ru | Палочки Непера | https://ru.wikipedia.org/wiki/Палочки_Непера
+K4 | ru | Високосный год | https://ru.wikipedia.org/wiki/Високосный_год
+W9 | ru | Неравенство Чебышёва | https://ru.wikipedia.org/wiki/Неравенство_Чебышёва
+A5 | ru | Арифметическая прогрессия | https://ru.wikipedia.org/wiki/Арифметическая_прогрессия
+F1,F2,Q1,S4,S1,A4,T2,M14 | ru | 10 лайфхаков, чтобы быстро считать в уме (Мел) | https://mel.fm/ucheba/6415729-10-layfkhakov-chtoby-bystro-schitat-v-ume-pochemu-eto-ne-rasskazyvayut-v-shkole
+R4,D1 | ru | Счёты | https://ru.wikipedia.org/wiki/Счёты
+R3 | ru | Соробан | https://ru.wikipedia.org/wiki/Соробан
+W2 | ru | Правило трёх сигм | https://ru.wikipedia.org/wiki/Правило_трёх_сигм
+A1,R3 | ja | 暗算 – Wikipedia | https://ja.wikipedia.org/wiki/暗算
+R3 | ja | そろばん – Wikipedia | https://ja.wikipedia.org/wiki/そろばん
+E1 | ja | 九去法 – Wikipedia | https://ja.wikipedia.org/wiki/九去法
+M6 | ja | 九九 – Wikipedia | https://ja.wikipedia.org/wiki/九九
+Q3 | ja | 速算術 – Wikibooks | https://ja.wikibooks.org/wiki/速算術
+M3,M8,M9,M10 | ja | 「インド式計算」の考え方と基本の暗算方法 (HugKum) | https://hugkum.sho.jp/513523
+M1 | ja | 2けたの難しいかけ算も暗算で解ける秘密の方法 (Diamond Online) | https://diamond.jp/articles/-/317472
+A2 | ja | 2けたの難しいかけ算も暗算で解ける秘密の方法 (Diamond Online) | https://diamond.jp/articles/-/232749
+M8 | ja | 算数が楽しくなるインド式計算法「19×19がすぐ解ける！」(Diamond Online) | https://diamond.jp/articles/-/232730
+M6 | ja | 「インド式棒算」で2ケタのかけ算を解く (PRESIDENT Online) | https://president.jp/articles/-/24898
+Q6 | ja | 「超おみやげ算」入門 (PRESIDENT Online) | https://president.jp/articles/-/24568
+Q6 | ja | 2ケタの2乗の計算がサクっとできる暗算ハック (Lifehacker Japan) | https://www.lifehacker.jp/article/10040222_tips/
+M10 | ja | 72×78の答えはいくつ？ (ヨムーノ) | https://yomuno.jp/posts/130246
+M7 | zh | 格子乘法 – 维基百科 | https://zh.wikipedia.org/wiki/格子乘法
+R3 | zh | 珠心算 – 维基百科 | https://zh.wikipedia.org/wiki/珠心算
+R4 | zh | 珠算 – 维基百科 | https://zh.wikipedia.org/wiki/珠算
+R3 | zh | 算盤 – 维基百科 | https://zh.wikipedia.org/wiki/算盤
+R1 | zh | 吠陀數學 – 维基百科 | https://zh.wikipedia.org/wiki/吠陀數學
+A8,A2,M1,S4,S5,Q3,M10,M11,A5,M16,Q13 | zh | 小学数学速算技巧总结 (LingoAce) | https://www.lingoace.com/zh/blog/elementry-school-math-tips/
+M3 | zh | 两位数快速乘法技巧的有效性证明 (火山引擎) | https://www.volcengine.com/article/107740
+M8 | zh | 印度式乘法口訣 (CMoney) | https://www.cmoney.tw/notes/note-detail.aspx?nid=10506
+F2 | zh | 9個簡單的運算法 (CMoney) | https://www.cmoney.tw/notes/note-detail.aspx?nid=23024
+M8,M10 | zh | 印度不思議 快捷數學和邏輯 (TVBS) | https://news.tvbs.com.tw/world/899187
+R1,Q1,D9 | hi | वैदिक गणित (पुस्तक) – विकिपीडिया | https://hi.wikipedia.org/wiki/वैदिक_गणित
+M3,M9 | hi | RBSE कक्षा 8, अध्याय 5 वैदिक गणित (StudiesToday) | https://www.studiestoday.com/rbse-board-solutions-for-class-8-maths-chapter-5-exercise-5-1
+M3,M9,M13,Q10 | hi | RBSE कक्षा 9, अध्याय 1 वैदिक गणित (StudiesToday) | https://www.studiestoday.com/rbse-board-solutions-for-class-9-maths-chapter-1-2
+M13,S1,S9,S2 | hi | RBSE कक्षा 7, अध्याय 6 वैदिक गणित (StudiesToday) | https://www.studiestoday.com/rbse-board-solutions-for-class-7-maths-chapter-6-in-text-exercise
+Q1,Q3,Q6,Q9,M10 | hi | RBSE कक्षा 10, अध्याय 1 वैदिक गणित (StudiesToday) | https://www.studiestoday.com/rbse-board-solutions-for-class-10-maths-chapter-1-2
+M9 | hi | निखिलम सूत्र द्वारा गुणन आधार 100 (Quick Maths, Blog) | https://quickmathsin.blogspot.com/2022/05/1-0905-100.html
+R1,Q1,D9,M3 | en-IN | Book excerptise: Vedic Mathematics (A. Mukerjee, IIT Kanpur) | https://cse.iitk.ac.in/users/amit/books/krishna-1992-vedic-mathematics-sixteen.html
+S6,S4,M9,S2,Q1 | en-IN | Multiplication Tricks (Vedantu) | https://www.vedantu.com/maths/multiplication-tricks
+D3,D10 | en-IN | Tips and Tricks Division, Vedic Maths Class 6 (EduRev) | https://edurev.in/t/277261/Tips-and-Tricks-Division
+D3 | en-IN | Master Division With Vedic Maths (Careers360) | https://school.careers360.com/articles/vedic-maths-division-techniques-for-dividing-large-numbers
+M12 | en | Ānurūpyena (vedicmathematics.blogspot) | https://vedicmathematics.blogspot.com/2007/12/nurpyena.html
+R1 | en | Vedic Mathematics/Sutras (Wikibooks) | https://en.wikibooks.org/wiki/Vedic_Mathematics/Sutras
+R1 | en-IN | SAHMAT: Erklärung von Wissenschaftlern zur „Vedic Mathematics“ | https://sahmat.in/1382001.html
+R1 | en | Critique: Vedic Mathematics in the Vedas (J. Senning, Gordon College) | https://math-cs.gordon.edu/~senning/research/VedicMathSlides/text18.html
+R1 | en-NP | Division in Vedic Mathematics (Parajuli, J. Nepal Math. Soc. 2025) | https://www.nepjol.info/index.php/jnms/article/view/87705
+F6 | de | Fingerrechnen – Die Multiplikationen für Zahlen von 10 bis 15 (H.-G. Weigand, Uni Würzburg) | https://mathematik.uni-wuerzburg.de/fileadmin/10040500/dokumente/Aktivitaeten_in_der_Vergangenheit/fingerrechnen_1314.pdf
+A9 | en | Use Near Doubles to Add Numbers Mentally (EdPlace) | https://www.edplace.com/worksheet_info/maths/keystage2/year3/topic/846/11649/using-near-doubles-to-add-numbers-mentally
+K7 | en | Solar cycle (calendar) – Wikipedia | https://en.wikipedia.org/wiki/Solar_cycle_(calendar)
+W11 | en | Geometric distribution – Wikipedia | https://en.wikipedia.org/wiki/Geometric_distribution

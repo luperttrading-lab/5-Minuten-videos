@@ -1,0 +1,558 @@
+{
+ "A1": {
+  "ok": true,
+  "text": "143.000 Paare a < 1000, b < 1000 (jede 7.) richtig"
+ },
+ "A2": {
+  "ok": true,
+  "text": "249.500 Fälle a, b < 500 (auf den nächsten Zehner ergänzt) richtig"
+ },
+ "A3": {
+  "ok": true,
+  "text": "61.000 Paare 0 ≤ a ≤ b < 2000 richtig"
+ },
+ "A4": {
+  "ok": true,
+  "text": "alle 999 Zahlen 1–999 (1000 − n) und 9.999 Zahlen 1–9999 richtig, sofern bei Endnull die letzte von 0 verschiedene Ziffer die 10er-Rolle übernimmt; stur angewandt wären 98 der 99 Zahlen mit Endnull falsch"
+ },
+ "A5": {
+  "ok": true,
+  "text": "n = 1 … 2000 richtig"
+ },
+ "A6": {
+  "ok": true,
+  "text": "360.000 Fälle a, b < 600 richtig"
+ },
+ "A7": {
+  "ok": true,
+  "text": "n = 1 … 1000 richtig"
+ },
+ "A8": {
+  "ok": true,
+  "text": "alle 36 Aufgaben mit Zehnerübergang im kleinen Einspluseins richtig"
+ },
+ "A9": {
+  "ok": true,
+  "text": "a = 1 … 999 (a + (a ± 1) = 2a ± 1) richtig"
+ },
+ "M1": {
+  "ok": true,
+  "text": "9.801 Paare 1–99 (auf den Zehner aufrunden, Rest abziehen) richtig"
+ },
+ "M2": {
+  "ok": true,
+  "text": "19.701 Paare (a gerade < 200, b < 200) richtig"
+ },
+ "M3": {
+  "ok": true,
+  "text": "alle 8.100 Paare zweistelliger Zahlen und 20.000 Zufallspaare dreistelliger Zahlen richtig"
+ },
+ "M4": {
+  "ok": true,
+  "text": "19.900 Fälle Mitte m < 200, Abstand d < m richtig"
+ },
+ "M5": {
+  "ok": true,
+  "text": "alle 89.401 Paare 1–299 richtig"
+ },
+ "M6": {
+  "ok": true,
+  "text": "Schnittpunkt-Zählung je Diagonale = Kreuzmultiplikation; alle 8.100 Paare zweistelliger Zahlen richtig"
+ },
+ "M7": {
+  "ok": true,
+  "text": "30.000 Zufallspaare bis vierstellig richtig"
+ },
+ "M8": {
+  "ok": true,
+  "text": "alle 81 Aufgaben 11–19 × 11–19 richtig; Sonderfall Einer-Summe 10 → 200 + a·b: 9 von 9"
+ },
+ "M9": {
+  "ok": true,
+  "text": "Identität x·y = (x + b)·Basis + a·b für alle 9.801 Paare 51–149 (Basis 100) und 20.000 Zufallspaare 900–1100 (Basis 1000) richtig; bei 90–99 ist der rechte Teil in 99 von 100 Fällen ohne Übertrag"
+ },
+ "M10": {
+  "ok": true,
+  "text": "alle 81 zweistelligen Paare richtig, ebenso 810 Fälle mit Vorderteil 10–99 (z. B. 123 · 127)"
+ },
+ "M11": {
+  "ok": true,
+  "text": "alle 90 Paare (Zehner-Summe 10, gleiche Einer) richtig"
+ },
+ "M12": {
+  "ok": true,
+  "text": "Identität für alle 39.601 Paare 1–199 richtig"
+ },
+ "M13": {
+  "ok": true,
+  "text": "k · 99 für k = 1 … 100 und k · 999 für k = 1 … 1000 richtig"
+ },
+ "S1": {
+  "ok": true,
+  "text": "k < 100.000 richtig"
+ },
+ "S2": {
+  "ok": true,
+  "text": "k < 100.000 richtig (auch ×75 = ×300 : 4)"
+ },
+ "S3": {
+  "ok": true,
+  "text": "k < 100.000 richtig"
+ },
+ "S4": {
+  "ok": true,
+  "text": "alle 90 zweistelligen Zahlen richtig; 45 davon brauchen den Übertrag (Ziffernsumme ≥ 10)"
+ },
+ "S5": {
+  "ok": true,
+  "text": "alle Zahlen 1 … 99.999 richtig"
+ },
+ "S6": {
+  "ok": true,
+  "text": "k < 100.000 richtig (ebenso ×19 = ×20 − k)"
+ },
+ "S7": {
+  "ok": true,
+  "text": "Trachtenberg-Regel ×12 für alle Zahlen 1 … 99.999 richtig"
+ },
+ "S8": {
+  "ok": true,
+  "text": "k < 10.000 richtig"
+ },
+ "S9": {
+  "ok": true,
+  "text": "k < 100.000 richtig"
+ },
+ "S10": {
+  "ok": true,
+  "text": "alle 90 zweistelligen Zahlen ergeben ‚abab‘; ab dreistellig gilt nur 100k + k"
+ },
+ "S11": {
+  "ok": true,
+  "text": "7 · 11 · 13 = 1001; alle 900 dreistelligen Zahlen ergeben ‚abcabc‘"
+ },
+ "S12": {
+  "ok": true,
+  "text": "37 · 3k = kkk für k = 1 … 9 richtig"
+ },
+ "S13": {
+  "ok": true,
+  "text": "×6 und ×7 nach Trachtenberg für alle Zahlen 1 … 99.999 richtig"
+ },
+ "Q1": {
+  "ok": true,
+  "text": "alle Zahlen 5, 15, … 9995 (1000 Stück) richtig"
+ },
+ "Q2": {
+  "ok": true,
+  "text": "Identität für 1–99 richtig (99 Zahlen); ohne Übertrag (a² < 100) nur 41–59"
+ },
+ "Q3": {
+  "ok": true,
+  "text": "Identität für 1–199 richtig (199 Zahlen); ohne Übertrag (a² < 100) nur 91–109"
+ },
+ "Q4": {
+  "ok": true,
+  "text": "(a + b)² für alle k < 1000 (a = Zehneranteil, b = Einer) richtig"
+ },
+ "Q5": {
+  "ok": true,
+  "text": "k < 9.999 richtig"
+ },
+ "Q6": {
+  "ok": true,
+  "text": "k = 1 … 999 (d = Abstand zum nächsten Zehner) richtig"
+ },
+ "Q7": {
+  "ok": true,
+  "text": "N = 2 … 10.000: immer zu groß; größter Fehler 15,5 % (bei N = 3), ab N = 100 höchstens 0,42 %; mit Nenner 2a + 1 höchstens 5,7 %"
+ },
+ "Q8": {
+  "ok": true,
+  "text": "alle 99 Quadratzahlen 1 … 9801 richtig zurückgeführt"
+ },
+ "Q9": {
+  "ok": true,
+  "text": "alle 99 Kubikzahlen 1 … 970.299 richtig; Endziffer der Kubikzahl bestimmt die Einer eindeutig"
+ },
+ "Q10": {
+  "ok": true,
+  "text": "alle Zahlen 1 … 9.999 richtig"
+ },
+ "D1": {
+  "ok": true,
+  "text": "k < 100.000 richtig"
+ },
+ "D2": {
+  "ok": true,
+  "text": "k < 100.000 richtig"
+ },
+ "D3": {
+  "ok": true,
+  "text": "alle Zahlen 10 … 99.999 richtig (Quotient und Rest)"
+ },
+ "D4": {
+  "ok": true,
+  "text": "89.401 Brüche richtig (Wert bleibt beim Erweitern gleich)"
+ },
+ "D5": {
+  "ok": true,
+  "text": "14 Stammbrüche gegen exakte Werte geprüft"
+ },
+ "D6": {
+  "ok": true,
+  "text": "k/7 für k = 1 … 6 ist jeweils eine Drehung von 142857"
+ },
+ "D7": {
+  "ok": true,
+  "text": "ab/99 für alle 98 Werte, abc/999 für alle 998 Werte richtig"
+ },
+ "D8": {
+  "ok": true,
+  "text": "126.150 Bruchpaare (Summe und Vergleich über Kreuz) richtig"
+ },
+ "D9": {
+  "ok": true,
+  "text": "Ziffernfolge von rechts (×k mit Übertrag) ergibt genau die Periode für 1/19, 1/29, 1/39, 1/49, 1/59, 1/69, 1/79, 1/89"
+ },
+ "D10": {
+  "ok": true,
+  "text": "16.302 Divisionen in Teilschritten richtig"
+ },
+ "P1": {
+  "ok": true,
+  "text": "40.401 Paare x, y ≤ 200 richtig"
+ },
+ "P2": {
+  "ok": true,
+  "text": "49.900 Fälle (q % = Zehner · 10 % + Einer · 1 %) richtig"
+ },
+ "P3": {
+  "ok": true,
+  "text": "p = 0 … 100 % richtig; Reihenfolge egal; Beispiel ±10 % → −1 %, ±50 % → −25 %"
+ },
+ "P4": {
+  "ok": true,
+  "text": "jährliche Verzinsung 1–20 %: Fehler höchstens 2,34 Jahre (5,3 % relativ); bei 1 % zu kurz um 2,34 J., bei 20 % zu kurz um 0,20 J.; exakt bei 7,85 %"
+ },
+ "P5": {
+  "ok": true,
+  "text": "69,3/p ist bei stetiger Verzinsung bis auf 0,02 % exakt (100·ln 2 = 69,31); 70/p bei jährlicher Verzinsung 1–10 %: Fehler höchstens 3,7 %"
+ },
+ "P6": {
+  "ok": true,
+  "text": "1–15 % jährlich: 114/p (Verdreifachung) Fehler höchstens 3,3 %, 144/p (Vervierfachung) höchstens 3,4 %"
+ },
+ "P7": {
+  "ok": true,
+  "text": "v = 1 … 99 % exakt: −10 % → +11,1 %, −20 % → +25 %, −50 % → +100 %"
+ },
+ "P8": {
+  "ok": true,
+  "text": "Netto = Brutto : 1,19 und Steueranteil = Brutto · 19/119 (15,97 %) für 9.999 Beträge exakt; bei 7 %: 7/107 = 6,54 %"
+ },
+ "P9": {
+  "ok": true,
+  "text": "e^(n·r) überschätzt (1 + r)^n: 3 %/10 J.: +0,4 %; 5 %/10 J.: +1,2 %; 5 %/30 J.: +3,7 %; 7 %/10 J.: +2,4 %"
+ },
+ "P10": {
+  "ok": true,
+  "text": "zwei gleich wahrscheinliche Renditen μ ± σ (μ 0–10 %, σ 5–30 %): Abweichung höchstens 0,33 Prozentpunkte; Extremfall +50 %/−50 %: exakt −13,4 % pro Periode, Näherung −12,5 %"
+ },
+ "P11": {
+  "ok": true,
+  "text": "√252 = 15,87; Simulation (4.000 Jahre, unabhängige Tagesrenditen mit σ = 1 %): Jahres-σ = 15,89 % (Regel: 15,87 %)"
+ },
+ "P12": {
+  "ok": true,
+  "text": "10.201 Paare −50 … +50 % exakt; der Kreuzterm a·b ist der Fehler der Summen-Näherung (bei +10 %/+10 %: 1 Prozentpunkt)"
+ },
+ "T1": {
+  "ok": true,
+  "text": "Teiler 2, 4, 8, 16, 5, 25, 125, 10 für alle n < 200.000 richtig"
+ },
+ "T2": {
+  "ok": true,
+  "text": "3 und 9 für alle n < 200.000 richtig; Quersumme liefert sogar den Rest"
+ },
+ "T3": {
+  "ok": true,
+  "text": "alle n < 200.000 richtig (von rechts beginnend +, −, +, …)"
+ },
+ "T4": {
+  "ok": true,
+  "text": "alle n < 200.000 richtig; Schritt beliebig oft wiederholbar"
+ },
+ "T5": {
+  "ok": true,
+  "text": "7, 11, 13 für 1,43 Mio. Zahlen < 10⁷ (jede 7.) richtig"
+ },
+ "T6": {
+  "ok": true,
+  "text": "alle n < 200.000 richtig"
+ },
+ "T7": {
+  "ok": true,
+  "text": "6 = 2·3, 12 = 3·4, 15 = 3·5, 18 = 2·9 für n < 200.000 richtig; Falle: 2 und 6 reichen für 12 nicht (Gegenbeispiel 6)"
+ },
+ "T8": {
+  "ok": true,
+  "text": "27, 37, 111, 333, 999 für 1,43 Mio. Zahlen < 10⁷ (jede 7.) richtig"
+ },
+ "T9": {
+  "ok": true,
+  "text": "33 und 99 für alle n < 200.000 richtig"
+ },
+ "E1": {
+  "ok": true,
+  "text": "richtige Ergebnisse bestehen immer; 20.000 Zufallsfehler: Ziffer falsch: 98 % erkannt; Nachbarziffern vertauscht: 0 % erkannt; Stelle verrutscht (×10): 0 % erkannt"
+ },
+ "E2": {
+  "ok": true,
+  "text": "richtige Ergebnisse bestehen immer; 20.000 Zufallsfehler: Ziffer falsch: 100 % erkannt; Nachbarziffern vertauscht: 100 % erkannt; Stelle verrutscht (×10): 83 % erkannt"
+ },
+ "E3": {
+  "ok": true,
+  "text": "Endziffer stimmt bei allen 333.000 Paaren < 1000; Ziffer falsch: 13 % erkannt; Nachbarziffern vertauscht: 15 % erkannt; Stelle verrutscht (×10): 73 % erkannt"
+ },
+ "E4": {
+  "ok": true,
+  "text": "100.000 Zufallsprodukte: Stellenzahl immer m + n − 1 oder m + n"
+ },
+ "E5": {
+  "ok": true,
+  "text": "90.000 Paare richtig; erkennt nur Fehler, die die Parität ändern (≈ jeder zweite Zufallsfehler)"
+ },
+ "E6": {
+  "ok": true,
+  "text": "89.401 Paare; Umkehraufgabe deckt jeden Fehler auf, kostet aber eine zweite Rechnung"
+ },
+ "U1": {
+  "ok": true,
+  "text": "beide Faktoren 10–99 auf eine gültige Ziffer gerundet: Median-Fehler 7 %, 90 % der Fälle unter 21 %, schlimmster Fall 78 %"
+ },
+ "U2": {
+  "ok": true,
+  "text": "Exponenten addieren, Mantissen multiplizieren – exakt; Beispiel 3,2·10⁴ · 6,5·10⁵ = 2,08·10¹⁰"
+ },
+ "U3": {
+  "ok": true,
+  "text": "geometrisches Mittel als Schätzwert zwischen Grenzen: √(100 · 10.000) = 1.000"
+ },
+ "U4": {
+  "ok": true,
+  "text": "lg 2 ≈ 0,301, lg 3 ≈ 0,477, lg 7 ≈ 0,845 auf 5 Stellen geprüft; 2⁶⁴ ≈ 10^(64·0,301) = 10^19,27 ≈ 1,8·10¹⁹ (exakt 1,84·10¹⁹)"
+ },
+ "U5": {
+  "ok": true,
+  "text": "Abweichung wächst: 2^10 / 10^3 = 1,024; 2^20 / 10^6 = 1,049; 2^30 / 10^9 = 1,074; 2^40 / 10^12 = 1,100"
+ },
+ "U6": {
+  "ok": true,
+  "text": "unterschätzt immer (für x > 0, n ≥ 2): x = 1 %, n = 10: 1,1046 statt 1,10; x = 2 %, n = 10: 1,2190 statt 1,20; x = 5 %, n = 10: 1,6289 statt 1,50; x = 1 %, n = 50: 1,6446 statt 1,50"
+ },
+ "U7": {
+  "ok": true,
+  "text": "Fehler ≈ x²/2: x = 1 %: ln(1 + x) = 0,0100; x = 5 %: ln(1 + x) = 0,0488; x = 10 %: ln(1 + x) = 0,0953; x = 20 %: ln(1 + x) = 0,1823"
+ },
+ "U8": {
+  "ok": true,
+  "text": "relative Fehler bis ±5 % je Faktor: Summen-Näherung weicht höchstens 0,25 Prozentpunkte ab"
+ },
+ "U9": {
+  "ok": true,
+  "text": "22/7: 0,04025 % daneben; 355/113: 0,00001 % daneben; 1,414: 0,01510 % daneben; 1,732: 0,00293 % daneben; 2,718: 0,01037 % daneben"
+ },
+ "U10": {
+  "ok": true,
+  "text": "Jahr = 31.556.952 s, π·10⁷ = 31.415.927 s, Abweichung 0,45 %"
+ },
+ "K1": {
+  "ok": true,
+  "text": "alle 334.928 Tage 1583–2499 (gregorianisch) richtig"
+ },
+ "K2": {
+  "ok": true,
+  "text": "alle 334.928 Tage 1583–2499 richtig"
+ },
+ "K3": {
+  "ok": true,
+  "text": "Jahreszahl-Anteil für alle 100 Endungen 00–99 identisch mit Conways Formel"
+ },
+ "K4": {
+  "ok": true,
+  "text": "Jahre 1583–9999 (8.417) richtig; 2100, 2200, 2300 sind keine Schaltjahre, 2400 schon"
+ },
+ "K5": {
+  "ok": true,
+  "text": "alle 1.440 Minuten eines Tages richtig; Zeiger decken sich alle 12/11 h ≈ 65 min 27 s"
+ },
+ "K6": {
+  "ok": true,
+  "text": "alle Jahre 1583–4999 (3.417) stimmen mit dem Meeus-Algorithmus überein und fallen auf Sonntag"
+ },
+ "K7": {
+  "ok": true,
+  "text": "Kalender von 1901–2071 wiederholt sich nach 28 Jahren (171 Jahre geprüft); bricht über 2100 hinweg (erstes Gegenbeispiel 2072)"
+ },
+ "W1": {
+  "ok": true,
+  "text": "95-%-Obergrenze bei 0 Ereignissen in n Versuchen: n = 10: 3/n = 30,00 %, exakt 25,89 %; n = 30: 3/n = 10,00 %, exakt 9,50 %; n = 100: 3/n = 3,00 %, exakt 2,95 %; n = 1000: 3/n = 0,30 %, exakt 0,30 %"
+ },
+ "W2": {
+  "ok": true,
+  "text": "Normalverteilung: ±1σ 68,27 %, ±2σ 95,45 %, ±3σ 99,73 %; 95 % genau bei ±1,96 σ"
+ },
+ "W3": {
+  "ok": true,
+  "text": "Standardfehler des Mittelwerts (Gleichverteilung, 4000 Wiederholungen): n = 25: 0,0579 (Regel 0,0577); n = 100: 0,0287 (Regel 0,0289); n = 400: 0,0146 (Regel 0,0144)"
+ },
+ "W4": {
+  "ok": true,
+  "text": "95-%-Fehlermarge für einen Anteil nahe 50 %: n = 100: 1/√n = 10,0 %, exakt 9,80 %; n = 400: 1/√n = 5,0 %, exakt 4,90 %; n = 1000: 1/√n = 3,2 %, exakt 3,10 %; n = 2500: 1/√n = 2,0 %, exakt 1,96 %; 1/√n ist um 2 % zu groß"
+ },
+ "W5": {
+  "ok": true,
+  "text": "P(23) = 50,7 % (erste Gruppe über 50 %: 23); Näherung 1,18·√365 = 22,5; 1 − e^(−n(n−1)/730) weicht für n < 80 höchstens 1,03 Prozentpunkte ab"
+ },
+ "W6": {
+  "ok": true,
+  "text": "n·p überschätzt immer: p = 1 %, n = 10: exakt 9,6 %, n·p = 10 %; p = 1 %, n = 50: exakt 39,5 %, n·p = 50 %; p = 5 %, n = 10: exakt 40,1 %, n·p = 50 %; p = 10 %, n = 10: exakt 65,1 %, n·p = 100 %"
+ },
+ "W7": {
+  "ok": true,
+  "text": "1 − 1/e = 63,2 %; n = 2: 75,0 %; n = 6: 66,5 %; n = 10: 65,1 %; n = 100: 63,4 %"
+ },
+ "W8": {
+  "ok": true,
+  "text": "exakt 1 − 2·(1/2)⁵ = 93,75 %; Simulation (200.000 Läufe): 93,75 %"
+ },
+ "W9": {
+  "ok": true,
+  "text": "gilt für jede Verteilung mit endlicher Varianz, ist aber grob: k = 2: Schranke 25,0 %, Normalverteilung 4,55 %; k = 3: Schranke 11,1 %, Normalverteilung 0,27 %"
+ },
+ "W10": {
+  "ok": true,
+  "text": "σ = 3 und σ = 4 unabhängig: Summe σ = 5 (nicht 7); Simulation 100.000 Werte: 5,002"
+ },
+ "W11": {
+  "ok": true,
+  "text": "Erwartung 1/p = 6 Würfe; Simulation 100.000 Läufe: Mittel 6,00, Median 4 (die Hälfte schafft es in ≤ 4)"
+ },
+ "R1": {
+  "ok": true,
+  "text": "Einzelverfahren geprüft: siehe A4, M3, M9, M10, Q3, Q10, D3, D9"
+ },
+ "R2": {
+  "ok": true,
+  "text": "Einzelregeln geprüft: siehe S5, S7, S13"
+ },
+ "R3": {
+  "ok": true,
+  "text": "jede Ziffer 0–9 eindeutig als 5·h + e (h ∈ {0,1}, e ∈ {0,…,4}) darstellbar"
+ },
+ "R4": {
+  "ok": true,
+  "text": "alle 90 Ziffernadditionen über 5er- und 10er-Freunde richtig"
+ },
+ "R5": {
+  "ok": true,
+  "text": "rechnerisch identisch mit der Gittermethode M7 (geprüft)"
+ },
+ "F1": {
+  "ok": true,
+  "text": "9 · k für k = 1 … 10 richtig"
+ },
+ "F2": {
+  "ok": true,
+  "text": "alle 25 Aufgaben 6–10 × 6–10 richtig; als Formel sogar für alle a, b (841 Paare geprüft), nur mit Fingern nicht darstellbar"
+ },
+ "F3": {
+  "ok": true,
+  "text": "jede Zahl 0–99 genau eine Fingerstellung (links: Daumen 50, Finger je 10; rechts: Daumen 5, Finger je 1)"
+ },
+ "F4": {
+  "ok": true,
+  "text": "alle 12 Monate richtig (Knöchel = 31 Tage; Juli und August liegen nebeneinander auf Knöcheln)"
+ },
+ "F5": {
+  "ok": true,
+  "text": "10 Finger als Binärziffern: 0 … 2¹⁰ − 1 = 1023, jede Zahl genau eine Stellung"
+ },
+ "F6": {
+  "ok": true,
+  "text": "alle 25 Aufgaben 11–15 × 11–15 richtig"
+ },
+ "S14": {
+  "ok": true,
+  "text": "k < 100.000 richtig (×1,5 = Zahl + Hälfte)"
+ },
+ "A10": {
+  "ok": true,
+  "text": "10² + 11² + 12² = 365 = 13² + 14², also (10² + … + 14²) : 365 = 2"
+ },
+ "M14": {
+  "ok": true,
+  "text": "38.416 Fälle richtig (Nullen zählen und anhängen)"
+ },
+ "S15": {
+  "ok": true,
+  "text": "×11 bis ×19 (k-fache Ziffer + rechter Nachbar, mit Übertrag) für alle Zahlen 1 … 19.999 richtig"
+ },
+ "Q11": {
+  "ok": true,
+  "text": "alle 99 fünften Potenzen von 1 … 99 richtig; Endziffer der Potenz = Endziffer der Basis"
+ },
+ "T10": {
+  "ok": true,
+  "text": "7-Regel ‚Zehnerzahl · 3 + Einer‘ für alle n < 200.000 richtig"
+ },
+ "P13": {
+  "ok": true,
+  "text": "Verdreifachung, 1–15 % jährlich: 108/p höchstens 8,4 % daneben; beste ganze Konstante im Bereich: 114; 100·ln 3 = 109,9 (stetig exakt)"
+ },
+ "W12": {
+  "ok": true,
+  "text": "mindestens 1 − 1/k² = 50 % innerhalb ±√2·σ; bei Normalverteilung tatsächlich 84,3 %"
+ },
+ "S16": {
+  "ok": true,
+  "text": "Nachbarsummen-Regel für alle Zahlen 1 … 99.999 richtig"
+ },
+ "M15": {
+  "ok": true,
+  "text": "alle 81 Paare ab · ba richtig"
+ },
+ "M16": {
+  "ok": true,
+  "text": "alle 81 Paare (Ziffernsumme 10) · (cc) richtig, z. B. 73 · 55 = 8·5 | 3·5 = 4015"
+ },
+ "E7": {
+  "ok": true,
+  "text": "16.039 Zufallsprodukte: ausgelassene Ziffer 1–8 immer richtig ergänzt; 0 und 9 sind nicht unterscheidbar"
+ },
+ "Q12": {
+  "ok": true,
+  "text": "∛30 ≈ 3,111 (exakt 3,107); für n = 27 … 1000 höchstens 8,9 % daneben, immer zu groß"
+ },
+ "Q13": {
+  "ok": true,
+  "text": "11…1² (k = 1 … 9 Einsen) ergibt 12…k…21; ab 10 Einsen falsch (1111111111² = 1.234.567.900.987.654.321)"
+ },
+ "A11": {
+  "ok": true,
+  "text": "1.681 Startpaare: Summe von 10 Gliedern = 11 · 7. Glied"
+ },
+ "U11": {
+  "ok": true,
+  "text": "0,6 statt 0,6214: −3,4 %; 10 km → 6 statt 6,2 mi; 100 km → 60 statt 62,1 mi; besser: Fibonacci-Paare (5 mi ≈ 8 km, 8 ≈ 13)"
+ },
+ "U12": {
+  "ok": true,
+  "text": "°C · 1,8 + 32 exakt; Faustregel ‚verdoppeln + 30‘: −10 °C: exakt 14,0 °F, grob 10; 0 °C: exakt 32,0 °F, grob 30; 20 °C: exakt 68,0 °F, grob 70; 37 °C: exakt 98,6 °F, grob 104 (stimmt genau bei 10 °C)"
+ },
+ "BSP": {
+  "ok": true,
+  "text": "alle 116 Zahlenbeispiele der Kärtchen nachgerechnet"
+ }
+}
