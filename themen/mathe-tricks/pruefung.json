@@ -554,5 +554,677 @@
  "BSP": {
   "ok": true,
   "text": "alle 116 Zahlenbeispiele der Kärtchen nachgerechnet"
+ },
+ "N1": {
+  "ok": true,
+  "text": "km/h : 3,6 = m/s für 0–300 km/h exakt; 72 km/h = 20 m/s"
+ },
+ "N2": {
+  "ok": true,
+  "text": "20 kn = 37,04 km/h"
+ },
+ "N3": {
+  "ok": true,
+  "text": "2 · sm − 10 % = 1,8 km statt 1,852 km: −2,8 %; 1° = 60 sm = 111,1 km"
+ },
+ "N4": {
+  "ok": true,
+  "text": "exakter Weg bei 1 s: v/3,6; Faustregel 3·v/10 ist 8 % länger; 80 km/h → 24 m (exakt 22,2 m)"
+ },
+ "N5": {
+  "ok": true,
+  "text": "(v/10)² als Bremsweg heißt a = (v/3,6)² / (2 · (v/10)²) = 3,86 m/s²; Gefahrbremsung 7,72 m/s²; 80 km/h → 64 m"
+ },
+ "N6": {
+  "ok": true,
+  "text": "100 km/h: 30 + 100 = 130 m; 50 km/h: 15 + 25 = 40 m"
+ },
+ "N7": {
+  "ok": true,
+  "text": "Tacho/2 entspricht 1,8 s bei jedem Tempo (exakt 1,8 s)"
+ },
+ "N8": {
+  "ok": true,
+  "text": "90 km/h = 25 m/s → 50 m"
+ },
+ "N9": {
+  "ok": true,
+  "text": "bei 343 m/s: 1 km in 2,92 s; Faustregel s/3 liegt 2,9 % daneben"
+ },
+ "N10": {
+  "ok": true,
+  "text": "gegen c = 331,3 · √(1 + ϑ/273,15) für −20 … 40 °C: höchstens 0,22 % daneben"
+ },
+ "N11": {
+  "ok": true,
+  "text": "c · 1 ns = 29,98 cm; 1 ft = 30,48 cm"
+ },
+ "N12": {
+  "ok": true,
+  "text": "149,6 Mio. km / c = 499 s = 8,3 min; 1 Lj = 9,461 · 10¹² km"
+ },
+ "N13": {
+  "ok": true,
+  "text": "√(2 · 6371 km · 1 m) = 3,570 km; h = 100 m → 35,7 km"
+ },
+ "N14": {
+  "ok": true,
+  "text": "g = 9,81: h(3 s) = 44,15 m; 5t² ist 1,9 % zu hoch"
+ },
+ "N15": {
+  "ok": true,
+  "text": "2π/√9,81 = 2,006; l = 1 m → T = 2,006 s"
+ },
+ "N16": {
+  "ok": true,
+  "text": "Standardatmosphäre: erste 8 m −0,96 hPa; halber Druck bei 5,48 km; 400 m → −47 hPa"
+ },
+ "N17": {
+  "ok": true,
+  "text": "ρ g h = 1000 · 9,81 · 10 Pa = 0,981 bar"
+ },
+ "N18": {
+  "ok": true,
+  "text": "g/c_p = 9,81/1005 ≈ 9,8 K/km; 2 km · 6,5 = 13 K"
+ },
+ "N19": {
+  "ok": true,
+  "text": "Spread 8 K · 125 = 1000 m; 1/125 m⁻¹ = 8 K/km"
+ },
+ "N20": {
+  "ok": true,
+  "text": "10 · lg 2 = 3,010 dB; 20 · lg 2 = 6,02 dB; 10 · lg 100 = 20 dB"
+ },
+ "N21": {
+  "ok": true,
+  "text": "r → 3r: Fläche × 9, Intensität × 1/9; −20 · lg 2 = −6,02 dB je Verdopplung"
+ },
+ "N22": {
+  "ok": true,
+  "text": "10^1,5 = 31,6; zwei Stufen 10³ = 1000"
+ },
+ "N23": {
+  "ok": true,
+  "text": "pH 3 vs. 5: 10^(5−3) = 100"
+ },
+ "N24": {
+  "ok": true,
+  "text": "Sonnentag/Sterntag: 24 h · (1 − 365,24/366,24) = 3,93 min"
+ },
+ "N25": {
+  "ok": true,
+  "text": "synodischer Monat 29,53 d: 24 · 60 / 29,53 = 50,5 min Verspätung je Tag (mit Erddrehung)"
+ },
+ "N26": {
+  "ok": true,
+  "text": "360/24 = 15; 45°/15 = 3 h"
+ },
+ "N27": {
+  "ok": true,
+  "text": "Faust 10 cm in 60 cm Armlänge: 9,5°"
+ },
+ "N28": {
+  "ok": true,
+  "text": "Armlänge 65 cm, Augenabstand 6,5 cm → Faktor 10 (Strahlensatz)"
+ },
+ "N29": {
+  "ok": true,
+  "text": "20 °C = 293,15 K"
+ },
+ "N30": {
+  "ok": true,
+  "text": "55 Zoll = 139,7 cm"
+ },
+ "N31": {
+  "ok": true,
+  "text": "10 lb = 4,536 kg; 1 kg = 2,205 lb; 1 oz = 28,35 g"
+ },
+ "N32": {
+  "ok": true,
+  "text": "10 US-gal = 37,85 l"
+ },
+ "N33": {
+  "ok": true,
+  "text": "100 · 3,785411784 / 1,609344 = 235,21; 30 mpg → 7,84 l/100 km"
+ },
+ "N34": {
+  "ok": true,
+  "text": "500 · 4,184 = 2092 kJ"
+ },
+ "N35": {
+  "ok": true,
+  "text": "1 kW = 1,3596 PS; 4/3 ist −1,9 % daneben"
+ },
+ "N36": {
+  "ok": true,
+  "text": "2 kW · 0,1 h = 0,2 kWh; 1 kWh = 3,6 MJ"
+ },
+ "N37": {
+  "ok": true,
+  "text": "81 / 1,8² = 25,0"
+ },
+ "N38": {
+  "ok": true,
+  "text": "Broca-Gewicht als BMI: 160 cm → BMI 23,4; 175 cm → BMI 24,5; 190 cm → BMI 24,9; 200 cm → BMI 25,0"
+ },
+ "N39": {
+  "ok": true,
+  "text": "Formel; Streuung nicht nachrechenbar, Warnung aus der Quelle übernommen"
+ },
+ "N40": {
+  "ok": true,
+  "text": "2,40 € / 0,4 kg = 6,00 €/kg"
+ },
+ "P14": {
+  "ok": true,
+  "text": "(1 + 0,06/12)¹² − 1 = 6,168 %"
+ },
+ "P15": {
+  "ok": true,
+  "text": "Nominal 0–10 %, Inflation 0–10 %: Näherung höchstens 0,91 Prozentpunkte daneben; 5 %/2 % → exakt 2,94 %"
+ },
+ "P16": {
+  "ok": true,
+  "text": "1000 / 1,05³ = 863,84 €"
+ },
+ "P17": {
+  "ok": true,
+  "text": "Σ 1000/1,05ᵏ (k = 1 … 2000) = 20.000,00 €"
+ },
+ "P18": {
+  "ok": true,
+  "text": "Σ 2 · 1,04^(k−1) / 1,1ᵏ (k ≤ 3000) = 33,33 €"
+ },
+ "P19": {
+  "ok": true,
+  "text": "200 000 · 0,05 = 10 000 €/Jahr; Monat ≈ 833,33 €"
+ },
+ "P20": {
+  "ok": true,
+  "text": "Rate 1.264,14 $; Restschuld nach 360 Raten = 0 (Tilgungsplan simuliert)"
+ },
+ "P21": {
+  "ok": true,
+  "text": "1 + … + 12 = 78; 12/78 · 780 = 120; Summe aller Monatsanteile = 1"
+ },
+ "P22": {
+  "ok": true,
+  "text": "4 % von 500 000 € = 20 000 €; historische Gültigkeit nicht nachrechenbar, aus der Quelle (Trinity-Studie)"
+ },
+ "P23": {
+  "ok": true,
+  "text": "1/0,04 = 25; 25 · 24 000 = 600 000"
+ },
+ "P24": {
+  "ok": true,
+  "text": "Daumenregel; nur die Arithmetik geprüft"
+ },
+ "P25": {
+  "ok": true,
+  "text": "1/20 = 5 %; 1/14 = 7,1 %"
+ },
+ "P26": {
+  "ok": true,
+  "text": "(0,12 − 0,05) / 0,10 = 0,7"
+ },
+ "P27": {
+  "ok": true,
+  "text": "Kelly f = 20 %; numerisch bestes f für maximales log-Wachstum = 20,0 %"
+ },
+ "P28": {
+  "ok": true,
+  "text": "50 → 40: −10 Punkte; −10/50 = −20 %"
+ },
+ "P29": {
+  "ok": true,
+  "text": "15 / 25 · 100 = 60"
+ },
+ "W13": {
+  "ok": true,
+  "text": "o = 4 → p = 0,8; p = 0,2 → o = 0,25, Dezimalquote 5"
+ },
+ "W14": {
+  "ok": true,
+  "text": "Quotenform und Bayes-Formel identisch: 50,0 %"
+ },
+ "W15": {
+  "ok": true,
+  "text": "20 / (20 + 0,05 · 980) = 29,0 %"
+ },
+ "W16": {
+  "ok": true,
+  "text": "C(49, 6) = 13.983.816; · 10 = 139.838.160"
+ },
+ "W17": {
+  "ok": true,
+  "text": "amerikanisch 35/38 − 37/38 = −2/38 = −5,26 %; europäisch −1/37 = −2,70 %"
+ },
+ "W18": {
+  "ok": true,
+  "text": "Simulation 40.000 Spiele (5 gegen 8): Ruin 61,5 %, Formel 8/13 = 61,5 %"
+ },
+ "W19": {
+  "ok": true,
+  "text": "Simulation (λ = 10/h, W = 0,5 h): mittlere Anzahl 4,97, Formel 5"
+ },
+ "W20": {
+  "ok": true,
+  "text": "Erste Ziffern von 2¹ … 2⁵⁰⁰⁰: Anteil 1 = 30,1 % (Benford 30,1 %), Anteil 9 = 4,5 % (Benford 4,6 %)"
+ },
+ "U13": {
+  "ok": true,
+  "text": "48, 52, 51, 49, 55: Mittel 51"
+ },
+ "U14": {
+  "ok": true,
+  "text": "120 km mit 60 und 20 km/h: 2 h + 6 h für 240 km → 30 km/h"
+ },
+ "L1": {
+  "ok": true,
+  "text": "1.681 Lösungspaare: x² + px + q mit p = −(x₁ + x₂), q = x₁x₂ hat genau diese Nullstellen"
+ },
+ "L2": {
+  "ok": true,
+  "text": "20.000 Zufallsgleichungen: beide Lösungen erfüllen die Gleichung"
+ },
+ "L3": {
+  "ok": true,
+  "text": "4x² − 12x − 40: x = (6 ± 14)/4 → 5, −2"
+ },
+ "L4": {
+  "ok": true,
+  "text": "x² − 4x + 3: D = 4, Nullstellen 1 und 3"
+ },
+ "L5": {
+  "ok": true,
+  "text": "2x(x − 3): x = 0, x = 3"
+ },
+ "L6": {
+  "ok": true,
+  "text": "2(x − 3)² − 5 = 2x² − 12x + 13 für x = −50 … 50"
+ },
+ "L7": {
+  "ok": true,
+  "text": "x³ − 7x + 6 = (x − 1)(x − 2)(x + 3)"
+ },
+ "L8": {
+  "ok": true,
+  "text": "5.000 Zufallspolynome 5. Grades: Horner-Wert = direkter Wert"
+ },
+ "L9": {
+  "ok": true,
+  "text": "(±a)(±b) für a, b = 1 … 30"
+ },
+ "L10": {
+  "ok": true,
+  "text": "2³ · 5³ = 1000; aᵐaⁿ = aᵐ⁺ⁿ für a, m, n ≤ 9"
+ },
+ "L11": {
+  "ok": true,
+  "text": "√45 = 3√5"
+ },
+ "L12": {
+  "ok": true,
+  "text": "1/(3 − √2) = (3 + √2)/7"
+ },
+ "L13": {
+  "ok": true,
+  "text": "1,5 · 10 / 2 = 7,5"
+ },
+ "D11": {
+  "ok": true,
+  "text": "2/7 + 1/6 + 9/14 = 46/42 = 23/21"
+ },
+ "D12": {
+  "ok": true,
+  "text": "2/15 · 27/14 = 9/35"
+ },
+ "D13": {
+  "ok": true,
+  "text": "3 : 1/4 = 12; a/b : c/d = ad/bc für 1 … 12"
+ },
+ "D14": {
+  "ok": true,
+  "text": "2 ¾ = 11/4"
+ },
+ "D15": {
+  "ok": true,
+  "text": "alle Brüche z/n mit n < 300: Regel stimmt mit der tatsächlichen Division überein"
+ },
+ "Z1": {
+  "ok": true,
+  "text": "159.201 Paare < 400 richtig; ggT(1071, 462) = 21"
+ },
+ "Z2": {
+  "ok": true,
+  "text": "kgV = ab/ggT für a, b < 300; kgV(1071, 462) = 23562"
+ },
+ "Z3": {
+  "ok": true,
+  "text": "Probedivision bis √n = Primtest für alle n < 20.000"
+ },
+ "Z4": {
+  "ok": true,
+  "text": "alle Primzahlen 5 … 100.000 haben Rest 1 oder 5 mod 6"
+ },
+ "Z5": {
+  "ok": true,
+  "text": "Sieb ab p² liefert dieselben Primzahlen < 10.000 wie Probedivision"
+ },
+ "Z6": {
+  "ok": true,
+  "text": "genau 25 Primzahlen < 100"
+ },
+ "Z7": {
+  "ok": true,
+  "text": "Teileranzahl für n = 1 … 2999 richtig; 72 hat 12 Teiler"
+ },
+ "Z8": {
+  "ok": true,
+  "text": "Endnullen von n! für n = 1 … 400 richtig; 100! hat 24"
+ },
+ "Z9": {
+  "ok": true,
+  "text": "Restmethode für n < 5000"
+ },
+ "Z10": {
+  "ok": true,
+  "text": "Verdoppeln für alle Binärzahlen < 2¹²"
+ },
+ "Z11": {
+  "ok": true,
+  "text": "1001011100₂ = 25C₁₆ = 604"
+ },
+ "Z12": {
+  "ok": true,
+  "text": "stellenweise Übersetzung für 1 … 3999 richtig; 1984 = MCMLXXXIV"
+ },
+ "Z13": {
+  "ok": true,
+  "text": "n = 1 … 500 richtig"
+ },
+ "Z14": {
+  "ok": true,
+  "text": "n = 1 … 500 richtig"
+ },
+ "Z15": {
+  "ok": true,
+  "text": "n = 1 … 1000 richtig"
+ },
+ "Z16": {
+  "ok": true,
+  "text": "x < 100.000: Test ⇔ Dreieckszahl"
+ },
+ "Z17": {
+  "ok": true,
+  "text": "n = 2 … 200 = Anzahl Paare"
+ },
+ "Z18": {
+  "ok": true,
+  "text": "endliche Summe exakt (q = 1/2, 2, 3; n ≤ 20); ½ + ¼ + … → 1"
+ },
+ "Z19": {
+  "ok": true,
+  "text": "n = 0 … 60"
+ },
+ "Z20": {
+  "ok": true,
+  "text": "Zeilen 0 … 30 mit Übertrag = 11ⁿ"
+ },
+ "Z21": {
+  "ok": true,
+  "text": "Diagonalsummen = Fibonacci für n ≤ 40"
+ },
+ "Z22": {
+  "ok": true,
+  "text": "r ≤ 10, n ≤ 40"
+ },
+ "Z23": {
+  "ok": true,
+  "text": "C(n, k) = C(n, n − k) für n ≤ 60; C(10, 8) = 45"
+ },
+ "G1": {
+  "ok": true,
+  "text": "alle m < n ≤ 50: Tripel erfüllt Pythagoras"
+ },
+ "G2": {
+  "ok": true,
+  "text": "k = 3, 5, … 199"
+ },
+ "G3": {
+  "ok": true,
+  "text": "l = 4, 6, … 200"
+ },
+ "G4": {
+  "ok": true,
+  "text": "3-4-5: p = 9/5, q = 16/5, h² = pq = 144/25 → h = 12/5"
+ },
+ "G5": {
+  "ok": true,
+  "text": "10.000 Zufallspunkte auf dem Halbkreis: Winkel immer 90° (Skalarprodukt 0)"
+ },
+ "G6": {
+  "ok": true,
+  "text": "1² + √3² = 2², 1² + 1² = √2²"
+ },
+ "G7": {
+  "ok": true,
+  "text": "sin 0/30/45/60/90° = √n/2"
+ },
+ "G8": {
+  "ok": true,
+  "text": "3/5 = 0,6"
+ },
+ "G9": {
+  "ok": true,
+  "text": "Vorzeichen in allen 4 Quadranten (Winkel 45°, 135°, 225°, 315°)"
+ },
+ "G10": {
+  "ok": true,
+  "text": "Fehler unter 1 %: sin bis 13°, tan bis 9°"
+ },
+ "G11": {
+  "ok": true,
+  "text": "1 rad = 57,30°; 45° = 0,785"
+ },
+ "G12": {
+  "ok": true,
+  "text": "regelmäßige n-Ecke n = 3 … 20: n · Innenwinkel = (n − 2)·180"
+ },
+ "G13": {
+  "ok": true,
+  "text": "Achteck: 45° außen, 135° innen"
+ },
+ "G14": {
+  "ok": true,
+  "text": "Nebenwinkel 180 − 70 = 110"
+ },
+ "G15": {
+  "ok": true,
+  "text": "n = 3 … 100 = Paare minus Seiten"
+ },
+ "G16": {
+  "ok": true,
+  "text": "277 Zufallsdreiecke im Gitter: A = i + b/2 − 1 (Punkte gezählt)"
+ },
+ "G17": {
+  "ok": true,
+  "text": "4, 13, 15: √(16 · 12 · 3 · 1) = 24"
+ },
+ "G18": {
+  "ok": true,
+  "text": "Fünfeck aus der Quelle: 16,5"
+ },
+ "G19": {
+  "ok": true,
+  "text": "r = 3, h = 10: ⅓ π r² h = 94,25"
+ },
+ "G20": {
+  "ok": true,
+  "text": "4/3 π r³ / (π r² · 2r) = 2/3"
+ },
+ "G21": {
+  "ok": true,
+  "text": "Würfel Kante 2: Oberfläche 24, Volumen 8"
+ },
+ "G22": {
+  "ok": true,
+  "text": "Würfel, Tetraeder, Oktaeder, Dodekaeder, Ikosaeder"
+ },
+ "X1": {
+  "ok": true,
+  "text": "alle 640 Zahlen mit |a − c| ≥ 2 ergeben 1089; auch |a − c| = 1, wenn 099 dreistellig gespiegelt wird (990)"
+ },
+ "X2": {
+  "ok": true,
+  "text": "alle 4-stelligen Zahlen (mit führenden Nullen, nicht alle Ziffern gleich) erreichen 6174, höchstens nach 7 Schritten"
+ },
+ "X3": {
+  "ok": true,
+  "text": "alle 3-stelligen Zahlen erreichen 495, höchstens nach 6 Schritten"
+ },
+ "X4": {
+  "ok": true,
+  "text": "12345679 · 9n = nnnnnnnnn für n = 1 … 9"
+ },
+ "X5": {
+  "ok": true,
+  "text": "20.000 Zufallsspiele: Summe = erste Zahl + 19 998"
+ },
+ "X6": {
+  "ok": true,
+  "text": "alle 366 Daten: Ergebnis = 100 · Tag + Monat"
+ },
+ "X7": {
+  "ok": true,
+  "text": "Alter 1 … 120"
+ },
+ "X8": {
+  "ok": true,
+  "text": "x = 1 … 10.000"
+ },
+ "X9": {
+  "ok": true,
+  "text": "alle zweistelligen Zahlen"
+ },
+ "X10": {
+  "ok": true,
+  "text": "x = 0 … 99.999: fortgesetzte Quersumme immer 9"
+ },
+ "X11": {
+  "ok": true,
+  "text": "alle Zahlen 0 … 999 (Zahlwort, ß/Umlaut als ein Buchstabe) landen bei „vier“"
+ },
+ "X12": {
+  "ok": true,
+  "text": "70 Lagen im Kalendergitter: Summe = 9 · Mitte"
+ },
+ "X13": {
+  "ok": true,
+  "text": "alle 6³ Kombinationen der oberen Fläche: sichtbar = 3 · 14 + oben"
+ },
+ "X14": {
+  "ok": true,
+  "text": "jede Zahl 1 … 63 = Summe der Kopfzahlen ihrer Karten"
+ },
+ "X15": {
+  "ok": true,
+  "text": "Quersumme von 9n = 9 für n = 1 … 10"
+ },
+ "X16": {
+  "ok": true,
+  "text": "2¹⁰ = 1024 ≥ 1000; 2²⁰ = 1.048.576"
+ },
+ "X17": {
+  "ok": true,
+  "text": "T = 22 … 499: alle Zeilen, Spalten und Diagonalen ergeben T"
+ },
+ "X18": {
+  "ok": true,
+  "text": "n = 3, 5, … 19: Siamesische Methode ergibt magische Quadrate"
+ },
+ "X19": {
+  "ok": true,
+  "text": "Gedächtnistechnik, keine Rechenprobe; Zuordnung 10 Ziffern ↔ 10 Lautgruppen"
+ },
+ "M17": {
+  "ok": true,
+  "text": "46 · 7 · 6 = 1932"
+ },
+ "Q14": {
+  "ok": true,
+  "text": "Formel für alle z (Zehner) und d = −5 … 5, 10 ≤ z + d ≤ 99"
+ },
+ "Q15": {
+  "ok": true,
+  "text": "alle 900 Kubikzahlen von 100³ … 999³: Mittelziffer über den Elferrest eindeutig richtig"
+ },
+ "Q16": {
+  "ok": true,
+  "text": "n¹³ ≡ n (mod 10) für alle Ziffern; 7¹³ = 96.889.010.407"
+ },
+ "Q17": {
+  "ok": true,
+  "text": "N = 1 … 19.999 auf 2 Nachkommastellen = exakte abgerundete Wurzel; √152,2756 = 12,34"
+ },
+ "Q18": {
+  "ok": true,
+  "text": "Start √S gerundet ± 0,5, S < 100.000: größter relativer Fehler 0,007003 %"
+ },
+ "Z24": {
+  "ok": true,
+  "text": "Endziffern-Perioden für Basis 0–9 teilen 4; 2¹⁰⁰ endet auf 6"
+ },
+ "Z25": {
+  "ok": true,
+  "text": "a^(p−1) ≡ 1 für alle Primzahlen p < 200, a < p; 2¹⁰⁰ mod 7 = 2"
+ },
+ "Z26": {
+  "ok": true,
+  "text": "2⁶⁴ − 1 = 18.446.744.073.709.551.615"
+ },
+ "D16": {
+  "ok": true,
+  "text": "k/17 (k = 1 … 16) ist Drehung von 0588235294117647"
+ },
+ "D17": {
+  "ok": true,
+  "text": "k/13 (k = 1 … 12) ist Drehung von 076923 oder 153846"
+ },
+ "D18": {
+  "ok": true,
+  "text": "Σ 2ᵏ/100ᵏ (k = 1 … 199) = 1/49 auf 100 Stellen; 13/49 = 0,265306…"
+ },
+ "D19": {
+  "ok": true,
+  "text": "Σ F(k)/10^(k+1) über 200 Glieder = 1/89 auf 150 Stellen"
+ },
+ "D20": {
+  "ok": true,
+  "text": "1/81 und 1/9801: Perioden geprüft"
+ },
+ "R6": {
+  "ok": true,
+  "text": "2456 = 2500 − 44; 48 = 50 − 2"
+ },
+ "R7": {
+  "ok": true,
+  "text": "432 = 11 · 39 + 3"
+ },
+ "R8": {
+  "ok": true,
+  "text": "1011 = 23 · 43 + 22"
+ },
+ "U15": {
+  "ok": true,
+  "text": "relativer Fehler: n = 1: −7,79 %; n = 5: −1,65 %; n = 10: −0,83 %; n = 20: −0,42 % (≈ −1/(12n))"
+ },
+ "G23": {
+  "ok": true,
+  "text": "0° … 180° in 0,1°-Schritten: größter absoluter Fehler 0,0016"
+ },
+ "K8": {
+  "ok": true,
+  "text": "1901–2099: Monatsanfänge der genannten Paare fallen immer auf denselben Wochentag (Normal- und Schaltjahre)"
  }
 }

@@ -188,3 +188,151 @@ F6 | de | Fingerrechnen – Die Multiplikationen für Zahlen von 10 bis 15 (H.-G
 A9 | en | Use Near Doubles to Add Numbers Mentally (EdPlace) | https://www.edplace.com/worksheet_info/maths/keystage2/year3/topic/846/11649/using-near-doubles-to-add-numbers-mentally
 K7 | en | Solar cycle (calendar) – Wikipedia | https://en.wikipedia.org/wiki/Solar_cycle_(calendar)
 W11 | en | Geometric distribution – Wikipedia | https://en.wikipedia.org/wiki/Geometric_distribution
+N1,N2 | de | Kilometer pro Stunde – Wikipedia | https://de.wikipedia.org/wiki/Kilometer_pro_Stunde
+N3 | de | Seemeile – Wikipedia | https://de.wikipedia.org/wiki/Seemeile
+N4,N5,N6 | de | Anhalteweg – Wikipedia | https://de.wikipedia.org/wiki/Anhalteweg
+N7,N8 | de | Sicherheitsabstand – Wikipedia | https://de.wikipedia.org/wiki/Sicherheitsabstand
+N9 | de | Donner – Wikipedia | https://de.wikipedia.org/wiki/Donner
+N10 | de | Schallgeschwindigkeit – Wikipedia | https://de.wikipedia.org/wiki/Schallgeschwindigkeit
+N11 | en | Speed of light – Wikipedia | https://en.wikipedia.org/wiki/Speed_of_light
+N12 | de | Lichtjahr – Wikipedia | https://de.wikipedia.org/wiki/Lichtjahr
+N13 | de | Sichtweite – Wikipedia | https://de.wikipedia.org/wiki/Sichtweite
+N14 | de | Freier Fall – Wikipedia | https://de.wikipedia.org/wiki/Freier_Fall
+N15 | de | Sekundenpendel – Wikipedia | https://de.wikipedia.org/wiki/Sekundenpendel
+N16 | de | Barometrische Höhenformel – Wikipedia | https://de.wikipedia.org/wiki/Barometrische_H%C3%B6henformel
+N17 | de | Hydrostatischer Druck – Wikipedia | https://de.wikipedia.org/wiki/Hydrostatischer_Druck
+N18 | de | Atmosphärischer Temperaturgradient – Wikipedia | https://de.wikipedia.org/wiki/Atmosph%C3%A4rischer_Temperaturgradient
+N19 | de | Kondensationsniveau – Wikipedia | https://de.wikipedia.org/wiki/Kondensationsniveau
+N20 | de | Dezibel – Wikipedia | https://de.wikipedia.org/wiki/Dezibel
+N21 | de | Abstandsgesetz – Wikipedia | https://de.wikipedia.org/wiki/Abstandsgesetz
+N22 | de | Richterskala – Wikipedia | https://de.wikipedia.org/wiki/Richterskala
+N23 | de | pH-Wert – Wikipedia | https://de.wikipedia.org/wiki/PH-Wert
+N24 | de | Sterntag – Wikipedia | https://de.wikipedia.org/wiki/Sterntag
+N25 | de | Mondaufgang – Wikipedia | https://de.wikipedia.org/wiki/Mondaufgang
+N26 | de | Zeitzone – Wikipedia | https://de.wikipedia.org/wiki/Zeitzone
+N27 | en | Angular diameter – Wikipedia | https://en.wikipedia.org/wiki/Angular_diameter
+N28 | de | Daumensprung – Wikipedia | https://de.wikipedia.org/wiki/Daumensprung
+N29 | de | Kelvin – Wikipedia | https://de.wikipedia.org/wiki/Kelvin
+N30 | de | Zoll (Einheit) – Wikipedia | https://de.wikipedia.org/wiki/Zoll_(Einheit)
+N31 | de | Avoirdupois – Wikipedia | https://de.wikipedia.org/wiki/Avoirdupois
+N32 | de | Gallone – Wikipedia | https://de.wikipedia.org/wiki/Gallone
+N33 | en | Fuel economy in automobiles – Wikipedia | https://en.wikipedia.org/wiki/Fuel_economy_in_automobiles
+N34 | de | Kalorie – Wikipedia | https://de.wikipedia.org/wiki/Kalorie
+N35 | de | Pferdestärke – Wikipedia | https://de.wikipedia.org/wiki/Pferdest%C3%A4rke
+N36 | de | Kilowattstunde – Wikipedia | https://de.wikipedia.org/wiki/Kilowattstunde
+N37 | de | Body-Mass-Index – Wikipedia | https://de.wikipedia.org/wiki/Body-Mass-Index
+N38 | de | Broca-Index – Wikipedia | https://de.wikipedia.org/wiki/Broca-Index
+N39 | de | Herzfrequenz – Wikipedia | https://de.wikipedia.org/wiki/Herzfrequenz
+N40 | de | Grundpreis – Wikipedia | https://de.wikipedia.org/wiki/Grundpreis
+P14 | en | Effective interest rate – Wikipedia | https://en.wikipedia.org/wiki/Effective_interest_rate
+P15 | en | Fisher equation – Wikipedia | https://en.wikipedia.org/wiki/Fisher_equation
+P16,P17 | de | Barwert – Wikipedia | https://de.wikipedia.org/wiki/Barwert
+P18 | en | Dividend discount model – Wikipedia | https://en.wikipedia.org/wiki/Dividend_discount_model
+P19 | de | Annuitätendarlehen – Wikipedia | https://de.wikipedia.org/wiki/Annuit%C3%A4tendarlehen
+P20 | en | Mortgage calculator – Wikipedia | https://en.wikipedia.org/wiki/Mortgage_calculator
+P21 | en | Rule of 78s – Wikipedia | https://en.wikipedia.org/wiki/Rule_of_78s
+P22 | en | Trinity study – Wikipedia | https://en.wikipedia.org/wiki/Trinity_study
+P23 | en | FIRE movement – Wikipedia | https://en.wikipedia.org/wiki/FIRE_movement
+P24 | en | 100 minus age rule (justETF Academy) | https://www.justetf.com/en/academy/100-minus-age-rule.html
+P25 | en | Earnings yield – Wikipedia | https://en.wikipedia.org/wiki/Earnings_yield
+P26 | en | Sharpe ratio – Wikipedia | https://en.wikipedia.org/wiki/Sharpe_ratio
+P27 | en | Kelly criterion – Wikipedia | https://en.wikipedia.org/wiki/Kelly_criterion
+P28 | en | Percentage point – Wikipedia | https://en.wikipedia.org/wiki/Percentage_point
+P29 | de | Grundwerte berechnen (Lernhelfer) | https://www.lernhelfer.de/schuelerlexikon/mathematik/artikel/grundwerte-berechnen
+W13 | en | Odds – Wikipedia | https://en.wikipedia.org/wiki/Odds
+W14 | en | Bayes' theorem – Wikipedia | https://en.wikipedia.org/wiki/Bayes%27_theorem
+W15 | en | Base rate fallacy – Wikipedia | https://en.wikipedia.org/wiki/Base_rate_fallacy
+W16 | de | Lotto – Wikipedia | https://de.wikipedia.org/wiki/Lotto
+W17 | en | Expected value – Wikipedia | https://en.wikipedia.org/wiki/Expected_value
+W18 | en | Gambler's ruin – Wikipedia | https://en.wikipedia.org/wiki/Gambler%27s_ruin
+W19 | en | Little's law – Wikipedia | https://en.wikipedia.org/wiki/Little%27s_law
+W20 | de | Benfordsches Gesetz – Wikipedia | https://de.wikipedia.org/wiki/Benfordsches_Gesetz
+U13 | en | Assumed mean – Wikipedia | https://en.wikipedia.org/wiki/Assumed_mean
+U14 | en | Harmonic mean – Wikipedia | https://en.wikipedia.org/wiki/Harmonic_mean
+L1 | de | Satz von Vieta – Wikipedia | https://de.wikipedia.org/wiki/Satz_von_Vieta
+L2 | de | pq-Formel (Mathebibel) | https://www.mathebibel.de/pq-formel
+L3 | de | Mitternachtsformel – Wikipedia | https://de.wikipedia.org/wiki/Mitternachtsformel
+L4 | de | Diskriminante – Wikipedia | https://de.wikipedia.org/wiki/Diskriminante
+L5 | de | Satz vom Nullprodukt – Wikipedia | https://de.wikipedia.org/wiki/Satz_vom_Nullprodukt
+L6 | de | Quadratische Ergänzung – Wikipedia | https://de.wikipedia.org/wiki/Quadratische_Erg%C3%A4nzung
+L7 | en | Rational root theorem – Wikipedia | https://en.wikipedia.org/wiki/Rational_root_theorem
+L8 | de | Horner-Schema – Wikipedia | https://de.wikipedia.org/wiki/Horner-Schema
+L8 | en | Horner's method – Wikipedia | https://en.wikipedia.org/wiki/Horner%27s_method
+L9 | es | Regla de los signos – Wikipedia | https://es.wikipedia.org/wiki/Regla_de_los_signos
+L10 | de | Potenz (Mathematik) – Wikipedia | https://de.wikipedia.org/wiki/Potenz_(Mathematik)
+L11 | en | Simplifying Square Roots (Math is Fun) | https://www.mathsisfun.com/numbers/simplify-square-roots.html
+L12 | en | Rationalize the Denominator (Math is Fun) | https://www.mathsisfun.com/algebra/rationalize-denominator.html
+L13 | fr | Règle de trois – Wikipédia | https://fr.wikipedia.org/wiki/R%C3%A8gle_de_trois
+D11,D12 | de | Bruchrechnung – Wikipedia | https://de.wikipedia.org/wiki/Bruchrechnung
+D13 | en | Dividing Fractions (Math is Fun) | https://www.mathsisfun.com/fractions_division.html
+D14 | en | Mixed number – Wikipedia | https://en.wikipedia.org/wiki/Mixed_number
+D15 | de | Dezimalbruch – Wikipedia | https://de.wikipedia.org/wiki/Dezimalbruch
+Z1 | de | Euklidischer Algorithmus – Wikipedia | https://de.wikipedia.org/wiki/Euklidischer_Algorithmus
+Z1 | en | Euclidean algorithm – Wikipedia | https://en.wikipedia.org/wiki/Euclidean_algorithm
+Z2 | de | Größter gemeinsamer Teiler – Wikipedia | https://de.wikipedia.org/wiki/Gr%C3%B6%C3%9Fter_gemeinsamer_Teiler
+Z3,Z4 | en | Primality test – Wikipedia | https://en.wikipedia.org/wiki/Primality_test
+Z5 | en | Sieve of Eratosthenes – Wikipedia | https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+Z6 | en | Prime number – Wikipedia | https://en.wikipedia.org/wiki/Prime_number
+Z7 | en | Divisor function – Wikipedia | https://en.wikipedia.org/wiki/Divisor_function
+Z8 | en | Trailing zero – Wikipedia | https://en.wikipedia.org/wiki/Trailing_zero
+Z9,Z10 | en | Binary number – Wikipedia | https://en.wikipedia.org/wiki/Binary_number
+Z11 | en | Hexadecimal – Wikipedia | https://en.wikipedia.org/wiki/Hexadecimal
+Z12 | de | Römische Zahlschrift – Wikipedia | https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift
+Z13 | en | Square pyramidal number – Wikipedia | https://en.wikipedia.org/wiki/Square_pyramidal_number
+Z14 | en | Squared triangular number – Wikipedia | https://en.wikipedia.org/wiki/Squared_triangular_number
+Z15,Z16 | en | Triangular number – Wikipedia | https://en.wikipedia.org/wiki/Triangular_number
+Z17 | en | Handshake problem – Wikipedia | https://en.wikipedia.org/wiki/Handshake_problem
+Z18 | de | Geometrische Reihe – Wikipedia | https://de.wikipedia.org/wiki/Geometrische_Reihe
+Z19,Z20,Z21 | en | Pascal's Triangle (Math is Fun) | https://www.mathsisfun.com/pascals-triangle.html
+Z20 | en | Pascal's triangle – Wikipedia | https://en.wikipedia.org/wiki/Pascal%27s_triangle
+Z22 | en | Hockey-stick identity – Wikipedia | https://en.wikipedia.org/wiki/Hockey-stick_identity
+Z23 | en | Binomial coefficient – Wikipedia | https://en.wikipedia.org/wiki/Binomial_coefficient
+G1,G2,G3 | de | Pythagoreisches Tripel – Wikipedia | https://de.wikipedia.org/wiki/Pythagoreisches_Tripel
+G1 | en | Pythagorean triple – Wikipedia | https://en.wikipedia.org/wiki/Pythagorean_triple
+G4 | de | Satzgruppe des Pythagoras – Wikipedia | https://de.wikipedia.org/wiki/Satzgruppe_des_Pythagoras
+G5 | de | Satz des Thales – Wikipedia | https://de.wikipedia.org/wiki/Satz_des_Thales
+G6 | en | Special right triangle – Wikipedia | https://en.wikipedia.org/wiki/Special_right_triangle
+G7 | en | Trig values of special angles (Mathwords) | https://www.mathwords.com/t/trig_values_of_special_angles.htm
+G8,G9 | en | Mnemonics in trigonometry – Wikipedia | https://en.wikipedia.org/wiki/Mnemonics_in_trigonometry
+G10 | en | Small-angle approximation – Wikipedia | https://en.wikipedia.org/wiki/Small-angle_approximation
+G11 | de | Bogenmaß – Wikipedia | https://de.wikipedia.org/wiki/Bogenma%C3%9F
+G12 | de | Innenwinkel – Wikipedia | https://de.wikipedia.org/wiki/Innenwinkel
+G13 | en | Exterior Angles of Polygons (Math is Fun) | https://www.mathsisfun.com/geometry/exterior-angles-polygons.html
+G14 | en | Parallel Lines and Pairs of Angles (Math is Fun) | https://www.mathsisfun.com/geometry/parallel-lines.html
+G15 | de | Diagonale (Geometrie) – Wikipedia | https://de.wikipedia.org/wiki/Diagonale_(Geometrie)
+G16 | en | Pick's theorem – Wikipedia | https://en.wikipedia.org/wiki/Pick%27s_theorem
+G17 | de | Satz des Heron – Wikipedia | https://de.wikipedia.org/wiki/Satz_des_Heron
+G18 | en | Shoelace formula – Wikipedia | https://en.wikipedia.org/wiki/Shoelace_formula
+G19 | de | Kegel (Geometrie) – Wikipedia | https://de.wikipedia.org/wiki/Kegel_(Geometrie)
+G20 | en | On the Sphere and Cylinder – Wikipedia | https://en.wikipedia.org/wiki/On_the_Sphere_and_Cylinder
+G21 | en | Square–cube law – Wikipedia | https://en.wikipedia.org/wiki/Square%E2%80%93cube_law
+G22 | de | Eulerscher Polyedersatz – Wikipedia | https://de.wikipedia.org/wiki/Eulerscher_Polyedersatz
+X1 | en | 1089 (number) – Wikipedia | https://en.wikipedia.org/wiki/1089_(number)
+X2,X3 | en | Kaprekar's routine – Wikipedia | https://en.wikipedia.org/wiki/Kaprekar%27s_routine
+X4,X5,X6 | de | Drei interessante Rechenkunststücke (Wikisource) | https://de.wikisource.org/wiki/Drei_interessante_Rechenkunstst%C3%BCcke
+X4 | en | The Digit Factory (Futility Closet) | https://futilitycloset.com/2020/02/06/the-digit-factory
+X6,X7,X8,X9,X10,X11,X12,X13 | de | Mathematische Zaubertricks (Bildungsserver Sachsen-Anhalt) | https://moodle.bildung-lsa.de/webakademie/pluginfile.php/1569/mod_resource/content/1/Mathematische%20Zaubertricks.pdf
+X12 | en | Calendar Magic (Pleacher) | https://pleacher.com/mp/puzzles/tricks/mobcalt1.html
+X14 | en | Binary Magic Cards (HMC Math Fun Facts) | https://math.hmc.edu/funfacts/?p=250
+X15 | en | Denmark, Kangaroo, Orange (Math = Love) | https://mathequalslove.net/?p=20720
+X16 | en | Twenty questions – Wikipedia | https://en.wikipedia.org/wiki/Twenty_questions
+X17 | en | Benjamin & Brown: Challenging Magic Squares (Coll. Math. J.) | https://ww2.amstat.org/mam/2014/calendar/MagicSquaresCMJFinal.pdf
+X18 | en | Siamese method – Wikipedia | https://en.wikipedia.org/wiki/Siamese_method
+X19 | en | Major system – Wikipedia | https://en.wikipedia.org/wiki/Major_system
+M17 | de | Kopfrechnen – Wikipedia | https://de.wikipedia.org/wiki/Kopfrechnen
+M17 | ru | Устный счёт | https://ru.wikipedia.org/wiki/Устный_счёт
+Q14,Q15 | en | Benjamin: Squaring, Cubing, and Cube Rooting (Harvey Mudd) | https://math.hmc.edu/benjamin/wp-content/uploads/sites/5/2019/06/Squaring-Cubing-and-Cube-Rooting.pdf
+Q16 | en | Mental calculation – Wikipedia | https://en.wikipedia.org/wiki/Mental_calculation
+Q17,Q18 | en | Methods of computing square roots – Wikipedia | https://en.wikipedia.org/wiki/Methods_of_computing_square_roots
+Z24 | en | Patterns in the last digits of the powers of two (Exploring Binary) | https://www.exploringbinary.com/patterns-in-the-last-digits-of-the-positive-powers-of-two/
+Z25 | en | Fermat's little theorem – Wikipedia | https://en.wikipedia.org/wiki/Fermat%27s_little_theorem
+Z26,Z18 | en | Wheat and chessboard problem – Wikipedia | https://en.wikipedia.org/wiki/Wheat_and_chessboard_problem
+D16 | en | Cyclic number – Wikipedia | https://en.wikipedia.org/wiki/Cyclic_number
+D17 | en | Repeating decimal – Wikipedia | https://en.wikipedia.org/wiki/Repeating_decimal
+D18 | en | The Mathematical Ninja divides by 49 (Flying Colours Maths) | https://blog.flyingcoloursmaths.co.uk/mathematical-ninja-divides-49/
+D19 | en | 1/89 and Fibonacci (MathPages) | https://mathpages.com/home/kmath108/kmath108.htm
+D20 | en | 1/9801 (nechita.net) | https://nechita.net/2012/11/30/19801/
+R6,R7,R8 | en | Vedic Math Tricks (Cuemath) | https://www.cuemath.com/learn/mathematics/vedicmath-tricks-2
+U15 | en | Stirling's approximation – Wikipedia | https://en.wikipedia.org/wiki/Stirling%27s_approximation
+G23 | en | Bhāskara I's sine approximation formula – Wikipedia | https://en.wikipedia.org/wiki/Bh%C4%81skara_I%27s_sine_approximation_formula
+K8 | en | Common year – Simple English Wikipedia | https://simple.wikipedia.org/wiki/Common_year

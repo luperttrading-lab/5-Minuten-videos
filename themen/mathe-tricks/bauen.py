@@ -12,7 +12,15 @@ import sys
 from collections import OrderedDict, defaultdict
 from pathlib import Path
 
-from tricks import KATEGORIEN, T, TOP15
+from tricks import KATEGORIEN as _K1, T as _T1, TOP15
+from tricks2 import NEUE_KATEGORIEN as _K2, T2
+from tricks3 import NEUE_KATEGORIEN as _K3, T3
+from folgen import STAFFELN
+
+_REIHE = "A M S Q D P T E U L Z G K W N X R F".split()
+_ALLE_K = dict(_K1 + _K2 + _K3)
+KATEGORIEN = [(k, _ALLE_K[k]) for k in _REIHE]
+T = sorted(_T1 + T2 + T3, key=lambda t: (_REIHE.index(t["id"][0]), int(t["id"][1:])))
 
 HIER = Path(__file__).parent
 PRUEF = json.loads((HIER / "pruefung.json").read_text())
@@ -96,6 +104,7 @@ def seite(seiten=None):
         return f'<span class="snr">{seiten.get(key, "")}</span>'
 
     toc = [f'<li><a href="#top15">Top 15: am besten für Video und Übung</a>{snr("top15")}</li>',
+           f'<li><a href="#folgen">Folgenplan der Videoreihe</a>{snr("folgen")}</li>',
            f'<li><a href="#legende">Lesehilfe und Prüfverfahren</a>{snr("legende")}</li>']
     for k, titel in KATEGORIEN:
         anz = sum(1 for t in T if t["id"].startswith(k) and re.fullmatch(k + r"\d+", t["id"]))
@@ -109,6 +118,24 @@ def seite(seiten=None):
         top.append(f"<tr><td class='r'>{rang}</td><td><a href='#t{tid}'><b>{e(t['name'])}</b></a> "
                    f"<span class='kid'>{tid}</span>{vorh}</td><td class='f'>{e(t['formel'])}</td>"
                    f"<td>{e(t['beispiel'])}</td><td class='c'>{sterne(t['video'])}</td><td class='c'>{sterne(t['app'])}</td></tr>")
+
+    folgen_html, nr = [], 0
+    for st_nr, (st_titel, fs) in enumerate(STAFFELN, 1):
+        zeilen = []
+        for titel, ids in fs:
+            nr += 1
+            haupt = nach_id[ids[0]]
+            dazu = ", ".join(f"<a href='#t{i}'>{e(nach_id[i]['name'])}</a>" for i in ids[1:])
+            app = max(ids, key=lambda i: nach_id[i]["app"])
+            uebung = (f"<a href='#t{app}'>{app}</a>" if nach_id[app]["app"] >= 2 else "–")
+            vorh = ' <span class="vorh">Video vorhanden</span>' if any(nach_id[i].get("vorhanden") for i in ids) else ""
+            zeilen.append(f"<tr><td class='r'>{nr}</td><td><b>{e(titel)}</b>{vorh}</td>"
+                          f"<td><a href='#t{ids[0]}'>{e(haupt['name'])}</a> <span class='kid'>{ids[0]}</span></td>"
+                          f"<td class='dazu'>{dazu}</td><td class='c'>{e(haupt['stufe'])}</td><td class='c'>{uebung}</td></tr>")
+        folgen_html.append(f"<h3>Staffel {st_nr}: {e(st_titel)} ({len(fs)} Folgen)</h3>"
+                           f"<table class='folgen'><tr><th>#</th><th>Folge</th><th>Haupttrick</th><th>dazu</th><th>Stufe</th><th>Übung</th></tr>"
+                           f"{''.join(zeilen)}</table>")
+    n_folgen = nr
 
     kap = []
     for k, titel in KATEGORIEN:
@@ -137,13 +164,13 @@ def seite(seiten=None):
     return f"""<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Rechentricks – Sammlung</title>
 <style>{stil}</style></head><body>
 <section class="titel">
-  <div class="ober">Themenvorrat für Mathe-Videos und die Übungs-App</div>
+  <div class="ober">Themenvorrat für eine Mathe-Videoreihe und die Übungs-App</div>
   <h1>Rechentricks – Sammlung</h1>
   <div class="unter">Kopfrechnen, Überschlagen, Ergebnisse prüfen: {len(T)} Tricks in {len(KATEGORIEN)} Kategorien,
   jede exakte Regel per Python durchgerechnet, jede Faustregel mit gemessenem Fehler.</div>
   <div class="zahlen">
     <div><b>{len(T)}</b>Tricks</div><div><b>{n_ok}/{n_proben}</b>Rechenproben bestanden</div>
-    <div><b>{len(QUELLEN)}</b>Quellen</div><div><b>{len(sprachen_benutzt)}</b>Sprachen</div>
+    <div><b>{n_folgen}</b>Folgen</div><div><b>{len(QUELLEN)}</b>Quellen</div><div><b>{len(sprachen_benutzt)}</b>Sprachen</div>
   </div>
   <div class="stand">Stand: 4. November 2026 · Quelle: <code>themen/mathe-tricks/</code> (tricks.py, pruefung.py, quellen.txt, bauen.py)</div>
   <h2 class="tochead">Inhalt</h2>
@@ -154,6 +181,14 @@ def seite(seiten=None):
 <p class="lead">Auswahl nach Sternen für Video und App: Die Antwort ist eine Zahl (passt zur Übungs-App), der Trick ist in
 einem Satz erklärbar, die Algebra dahinter passt in ein 5-Minuten-Video, und er spart spürbar Zeit.</p>
 <table class="top"><tr><th>#</th><th>Trick</th><th>Regel</th><th>Beispiel</th><th>Video</th><th>App</th></tr>{''.join(top)}</table>
+</section>
+
+<section id="folgen"><h2>Folgenplan der Videoreihe</h2>
+<p class="lead">{n_folgen} Folgen in {len(STAFFELN)} Staffeln, von der Grundschule bis zur Finanzmathematik. Jede Folge hat einen
+Haupttrick (trägt das Video) und kleine verwandte Tricks als Zugabe; jeder der {len(T)} Tricks kommt genau einmal vor.
+„Übung“ nennt den Trick, der sich am besten für die Übungs-App eignet (mindestens zwei Sterne), sonst „–“.
+Reihenfolge innerhalb einer Staffel: vom Leichten zum Schweren, Staffeln sind unabhängig voneinander drehbar.</p>
+{''.join(folgen_html)}
 </section>
 
 <section id="legende"><h2>Lesehilfe und Prüfverfahren</h2>
@@ -195,7 +230,7 @@ def seiten_finden(pdf):
     from pypdf import PdfReader
     r = PdfReader(str(pdf))
     texte = [(pg.extract_text() or "") for pg in r.pages]
-    ziele = {"top15": "Top 15", "legende": "Lesehilfe und Prüfverfahren",
+    ziele = {"top15": "Top 15", "folgen": "Folgenplan der Videoreihe", "legende": "Lesehilfe und Prüfverfahren",
              "quellen": "Quellenverzeichnis nach Sprache"}
     for k, titel in KATEGORIEN:
         ziele["k" + k] = titel
@@ -216,7 +251,7 @@ def main():
     rendern(seite(seiten), pdf)
     seiten2, n = seiten_finden(pdf)
     assert seiten == seiten2, (seiten, seiten2)
-    fehlt = [k for k in ["top15", "legende", "quellen"] + ["k" + k for k, _ in KATEGORIEN] if k not in seiten]
+    fehlt = [k for k in ["top15", "folgen", "legende", "quellen"] + ["k" + k for k, _ in KATEGORIEN] if k not in seiten]
     print(f"{n} Seiten; Kapitel: {seiten}; ohne Seitenzahl: {fehlt}")
     if "--bilder" in sys.argv:
         import subprocess

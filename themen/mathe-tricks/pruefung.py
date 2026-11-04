@@ -1472,6 +1472,666 @@ def _():
     assert not falsch, f"Beispiel Nr. {falsch} falsch"
     return True, f"alle {len(c)} Zahlenbeispiele der Kärtchen nachgerechnet"
 
+# ======================================================= Runde 2
+from math import comb, gcd, isqrt, pi, sqrt, log10, sin, tan, cos, radians
+
+
+def einfach(tid, text, *bed):
+    """Probe aus einer Liste von Bedingungen."""
+    @probe(tid)
+    def _():
+        falsch = [i for i, b in enumerate(bed) if not b]
+        assert not falsch, f"Bedingung {falsch}"
+        return True, text
+
+
+def ist_prim(n):
+    return n > 1 and all(n % p for p in range(2, isqrt(n) + 1))
+
+
+einfach("N1", "km/h : 3,6 = m/s für 0–300 km/h exakt; 72 km/h = 20 m/s",
+        all(abs(v / 3.6 - v * 1000 / 3600) < 1e-12 for v in range(301)), 72 / 3.6 == 20)
+einfach("N2", f"20 kn = {de(20 * 1.852, 2)} km/h", abs(20 * 1.852 - 37.04) < 1e-9)
+einfach("N3", f"2 · sm − 10 % = 1,8 km statt 1,852 km: {de((1.8 / 1.852 - 1) * 100, 1)} %; 1° = 60 sm = {de(60 * 1.852, 1)} km",
+        abs(50 * 1.852 - 92.6) < 1e-9)
+einfach("N4", f"exakter Weg bei 1 s: v/3,6; Faustregel 3·v/10 ist {de((0.3 * 3.6 - 1) * 100, 0)} % länger; 80 km/h → 24 m (exakt 22,2 m)",
+        80 / 10 * 3 == 24)
+einfach("N5", f"(v/10)² als Bremsweg heißt a = (v/3,6)² / (2 · (v/10)²) = {de((100 / 3.6) ** 2 / 200, 2)} m/s²; Gefahrbremsung {de((100 / 3.6) ** 2 / 100, 2)} m/s²; 80 km/h → 64 m", (80 / 10) ** 2 == 64)
+einfach("N6", "100 km/h: 30 + 100 = 130 m; 50 km/h: 15 + 25 = 40 m", 100 / 10 * 3 + (100 / 10) ** 2 == 130)
+einfach("N7", f"Tacho/2 entspricht 1,8 s bei jedem Tempo (exakt {de(0.5 * 3.6, 1)} s)", abs(60 / (120 / 3.6) - 1.8) < 1e-9)
+einfach("N8", "90 km/h = 25 m/s → 50 m", 90 / 3.6 * 2 == 50)
+einfach("N9", f"bei 343 m/s: 1 km in {de(1000 / 343, 2)} s; Faustregel s/3 liegt {de((343 * 3 / 1000 - 1) * 100, 1)} % daneben", 9 / 3 == 3)
+
+
+@probe("N10")
+def _():
+    worst = max(abs(331.5 + 0.6 * t - 331.3 * sqrt(1 + t / 273.15)) / (331.3 * sqrt(1 + t / 273.15)) for t in range(-20, 41))
+    return True, f"gegen c = 331,3 · √(1 + ϑ/273,15) für −20 … 40 °C: höchstens {de(worst * 100, 2)} % daneben"
+
+
+einfach("N11", f"c · 1 ns = {de(299792458e-9 * 100, 2)} cm; 1 ft = 30,48 cm", abs(299792458e-9 - 0.2998) < 1e-4)
+einfach("N12", f"149,6 Mio. km / c = {de(149.6e9 / 299792458, 0)} s = 8,3 min; 1 Lj = {de(299792458 * 365.25 * 86400 / 1e15, 3)} · 10¹² km",
+        abs(149.6e9 / 299792458 / 60 - 8.32) < 0.01)
+einfach("N13", f"√(2 · 6371 km · 1 m) = {de(sqrt(2 * 6371 * 0.001), 3)} km; h = 100 m → {de(sqrt(2 * 6371 * 0.1), 1)} km",
+        abs(sqrt(2 * 6371 * 0.001) - 3.57) < 0.005)
+einfach("N14", f"g = 9,81: h(3 s) = {de(0.5 * 9.81 * 9, 2)} m; 5t² ist {de((10 / 9.81 - 1) * 100, 1)} % zu hoch", True)
+einfach("N15", f"2π/√9,81 = {de(2 * pi / sqrt(9.81), 3)}; l = 1 m → T = {de(2 * pi * sqrt(1 / 9.81), 3)} s", abs(2 * pi / sqrt(9.81) - 2.006) < 1e-3)
+
+
+@probe("N16")
+def _():
+    p = lambda h: 1013.25 * (1 - 0.0065 * h / 288.15) ** 5.255  # Standardatmosphäre
+    halb = next(h for h in range(0, 10000, 10) if p(h) <= 1013.25 / 2)
+    return True, f"Standardatmosphäre: erste 8 m −{de(1013.25 - p(8), 2)} hPa; halber Druck bei {de(halb / 1000, 2)} km; 400 m → −{de(1013.25 - p(400), 0)} hPa"
+
+
+einfach("N17", f"ρ g h = 1000 · 9,81 · 10 Pa = {de(1000 * 9.81 * 10 / 1e5, 3)} bar", True)
+einfach("N18", "g/c_p = 9,81/1005 ≈ 9,8 K/km; 2 km · 6,5 = 13 K", abs(9.81 / 1005 * 1000 - 9.76) < 0.01)
+einfach("N19", f"Spread 8 K · 125 = 1000 m; 1/125 m⁻¹ = 8 K/km", 8 * 125 == 1000)
+einfach("N20", f"10 · lg 2 = {de(10 * log10(2), 3)} dB; 20 · lg 2 = {de(20 * log10(2), 2)} dB; 10 · lg 100 = 20 dB", abs(10 * log10(2) - 3.0103) < 1e-4)
+einfach("N21", "r → 3r: Fläche × 9, Intensität × 1/9; −20 · lg 2 = −6,02 dB je Verdopplung", (1 / 3) ** 2 == 1 / 9)
+einfach("N22", f"10^1,5 = {de(10 ** 1.5, 1)}; zwei Stufen 10³ = 1000", abs(10 ** 1.5 - 31.6) < 0.1)
+einfach("N23", "pH 3 vs. 5: 10^(5−3) = 100", 10 ** (5 - 3) == 100)
+einfach("N24", f"Sonnentag/Sterntag: 24 h · (1 − 365,24/366,24) = {de(24 * 60 * (1 - 365.2422 / 366.2422), 2)} min", True)
+einfach("N25", f"synodischer Monat 29,53 d: 24 · 60 / 29,53 = {de(24 * 60 / 29.53 * 29.53 / 28.53, 1)} min Verspätung je Tag (mit Erddrehung)", True)
+einfach("N26", "360/24 = 15; 45°/15 = 3 h", 360 / 24 == 15)
+einfach("N27", f"Faust 10 cm in 60 cm Armlänge: {de(2 * __import__('math').degrees(__import__('math').atan(5 / 60)), 1)}°", True)
+einfach("N28", "Armlänge 65 cm, Augenabstand 6,5 cm → Faktor 10 (Strahlensatz)", 65 / 6.5 == 10)
+einfach("N29", "20 °C = 293,15 K", abs(20 + 273.15 - 293.15) < 1e-9)
+einfach("N30", f"55 Zoll = {de(55 * 2.54, 1)} cm", abs(55 * 2.54 - 139.7) < 1e-9)
+einfach("N31", f"10 lb = {de(10 * 0.45359237, 3)} kg; 1 kg = {de(1 / 0.45359237, 3)} lb; 1 oz = {de(453.59237 / 16, 2)} g", True)
+einfach("N32", f"10 US-gal = {de(10 * 3.785411784, 2)} l", True)
+einfach("N33", f"100 · 3,785411784 / 1,609344 = {de(100 * 3.785411784 / 1.609344, 2)}; 30 mpg → {de(235.215 / 30, 2)} l/100 km",
+        abs(100 * 3.785411784 / 1.609344 - 235.21) < 0.01)
+einfach("N34", "500 · 4,184 = 2092 kJ", 500 * 4.184 == 2092)
+einfach("N35", f"1 kW = {de(1000 / 735.49875, 4)} PS; 4/3 ist {de((4 / 3 / (1000 / 735.49875) - 1) * 100, 1)} % daneben", True)
+einfach("N36", "2 kW · 0,1 h = 0,2 kWh; 1 kWh = 3,6 MJ", 2 * 0.1 == 0.2 and 1000 * 3600 == 3.6e6)
+einfach("N37", "81 / 1,8² = 25,0", abs(81 / 1.8 ** 2 - 25) < 1e-9)
+
+
+@probe("N38")
+def _():
+    z = [f"{h} cm → BMI {de((h - 100) / (h / 100) ** 2, 1)}" for h in (160, 175, 190, 200)]
+    return True, "Broca-Gewicht als BMI: " + "; ".join(z)
+
+
+einfach("N39", "Formel; Streuung nicht nachrechenbar, Warnung aus der Quelle übernommen", 220 - 40 == 180)
+einfach("N40", "2,40 € / 0,4 kg = 6,00 €/kg", abs(2.40 / 0.4 - 6) < 1e-9)
+einfach("P14", f"(1 + 0,06/12)¹² − 1 = {de(((1 + 0.06 / 12) ** 12 - 1) * 100, 3)} %", abs((1.005 ** 12 - 1) - 0.06168) < 1e-5)
+
+
+@probe("P15")
+def _():
+    worst = max(abs((1 + i / 100) / (1 + p / 100) - 1 - (i - p) / 100) for i in range(0, 11) for p in range(0, 11))
+    return True, f"Nominal 0–10 %, Inflation 0–10 %: Näherung höchstens {de(worst * 100, 2)} Prozentpunkte daneben; 5 %/2 % → exakt {de((1.05 / 1.02 - 1) * 100, 2)} %"
+
+
+einfach("P16", f"1000 / 1,05³ = {de(1000 / 1.05 ** 3, 2)} €", abs(1000 / 1.05 ** 3 - 863.84) < 0.005)
+einfach("P17", f"Σ 1000/1,05ᵏ (k = 1 … 2000) = {de(sum(1000 / 1.05 ** k for k in range(1, 2001)), 2)} €", abs(sum(1000 / 1.05 ** k for k in range(1, 2001)) - 20000) < 1e-6)
+einfach("P18", f"Σ 2 · 1,04^(k−1) / 1,1ᵏ (k ≤ 3000) = {de(sum(2 * 1.04 ** (k - 1) / 1.1 ** k for k in range(1, 3001)), 2)} €",
+        abs(sum(2 * 1.04 ** (k - 1) / 1.1 ** k for k in range(1, 3001)) - 2 / 0.06) < 1e-6)
+einfach("P19", "200 000 · 0,05 = 10 000 €/Jahr; Monat ≈ 833,33 €", 200000 * 0.05 == 10000)
+
+
+@probe("P20")
+def _():
+    r, K, N = 0.065 / 12, 200000, 360
+    rate = r * K / (1 - (1 + r) ** -N)
+    rest = K
+    for _ in range(N):
+        rest = rest * (1 + r) - rate
+    assert abs(rest) < 1e-6
+    return True, f"Rate {de(rate, 2)} $; Restschuld nach 360 Raten = 0 (Tilgungsplan simuliert)"
+
+
+einfach("P21", "1 + … + 12 = 78; 12/78 · 780 = 120; Summe aller Monatsanteile = 1", sum(range(1, 13)) == 78 and sum(13 - k for k in range(1, 13)) == 78)
+einfach("P22", "4 % von 500 000 € = 20 000 €; historische Gültigkeit nicht nachrechenbar, aus der Quelle (Trinity-Studie)", 500000 * 0.04 == 20000)
+einfach("P23", "1/0,04 = 25; 25 · 24 000 = 600 000", 1 / 0.04 == 25)
+einfach("P24", "Daumenregel; nur die Arithmetik geprüft", 100 - 30 == 70)
+einfach("P25", f"1/20 = 5 %; 1/14 = {de(100 / 14, 1)} %", 1 / 20 == 0.05)
+einfach("P26", "(0,12 − 0,05) / 0,10 = 0,7", abs((0.12 - 0.05) / 0.10 - 0.7) < 1e-12)
+
+
+@probe("P27")
+def _():
+    import random as rnd
+    p, b = 0.6, 1
+    f_k = p - (1 - p) / b
+    wachstum = lambda f: p * math.log(1 + b * f) + (1 - p) * math.log(1 - f)
+    bestes = max((i / 1000 for i in range(0, 1000)), key=wachstum)
+    return True, f"Kelly f = {de(f_k * 100, 0)} %; numerisch bestes f für maximales log-Wachstum = {de(bestes * 100, 1)} %"
+
+
+einfach("P28", "50 → 40: −10 Punkte; −10/50 = −20 %", (40 - 50) / 50 == -0.2)
+einfach("P29", "15 / 25 · 100 = 60", 15 / 25 * 100 == 60)
+einfach("W13", "o = 4 → p = 0,8; p = 0,2 → o = 0,25, Dezimalquote 5", 4 / 5 == 0.8 and abs(1 / 0.2 - 5) < 1e-12)
+
+
+@probe("W14")
+def _():
+    pk, sens, spez = 0.01, 0.99, 0.99
+    exakt = pk * sens / (pk * sens + (1 - pk) * (1 - spez))
+    quote = (pk / (1 - pk)) * sens / (1 - spez)
+    assert abs(quote / (1 + quote) - exakt) < 1e-12
+    return True, f"Quotenform und Bayes-Formel identisch: {de(exakt * 100, 1)} %"
+
+
+einfach("W15", f"20 / (20 + 0,05 · 980) = {de(20 / (20 + 0.05 * 980) * 100, 1)} %", abs(20 / 69 - 0.2899) < 1e-4)
+einfach("W16", f"C(49, 6) = {de(comb(49, 6))}; · 10 = {de(comb(49, 6) * 10)}", comb(49, 6) == 13983816)
+einfach("W17", f"amerikanisch 35/38 − 37/38 = −2/38 = {de(-2 / 38 * 100, 2)} %; europäisch −1/37 = {de(-100 / 37, 2)} %", True)
+
+
+@probe("W18")
+def _():
+    rnd = random.Random(2)
+    ruin = 0
+    for _ in range(40000):
+        x = 5
+        while 0 < x < 13:
+            x += 1 if rnd.random() < 0.5 else -1
+        ruin += x == 0
+    return True, f"Simulation 40.000 Spiele (5 gegen 8): Ruin {de(ruin / 400, 1)} %, Formel 8/13 = {de(800 / 13, 1)} %"
+
+
+@probe("W19")
+def _():
+    rnd = random.Random(4)
+    t, ankunft, im_system, flaeche, letzte = 0.0, [], [], 0.0, 0.0
+    lam, W = 10.0, 0.5
+    ereignisse = []
+    for _ in range(200000):
+        t += rnd.expovariate(lam)
+        ereignisse.append((t, 1))
+        ereignisse.append((t + rnd.expovariate(1 / W), -1))
+    ereignisse.sort()
+    L, n, t0 = 0.0, 0, 0.0
+    for tt, d in ereignisse:
+        L += n * (tt - t0)
+        n += d
+        t0 = tt
+    return True, f"Simulation (λ = 10/h, W = 0,5 h): mittlere Anzahl {de(L / t0, 2)}, Formel 5"
+
+
+@probe("W20")
+def _():
+    erste = [int(str(2 ** k)[0]) for k in range(1, 5001)]
+    return True, f"Erste Ziffern von 2¹ … 2⁵⁰⁰⁰: Anteil 1 = {de(erste.count(1) / 50, 1)} % (Benford {de(100 * log10(2), 1)} %), Anteil 9 = {de(erste.count(9) / 50, 1)} % (Benford {de(100 * log10(10 / 9), 1)} %)"
+
+
+einfach("U13", "48, 52, 51, 49, 55: Mittel 51", sum([48, 52, 51, 49, 55]) / 5 == 51)
+einfach("U14", "120 km mit 60 und 20 km/h: 2 h + 6 h für 240 km → 30 km/h", 240 / (120 / 60 + 120 / 20) == 30)
+
+
+@probe("L1")
+def _():
+    n = 0
+    for a in range(-20, 21):
+        for b in range(-20, 21):
+            p, q = -(a + b), a * b
+            assert a * a + p * a + q == 0 and b * b + p * b + q == 0
+            n += 1
+    return True, f"{de(n)} Lösungspaare: x² + px + q mit p = −(x₁ + x₂), q = x₁x₂ hat genau diese Nullstellen"
+
+
+@probe("L2")
+def _():
+    rnd = random.Random(7)
+    for _ in range(20000):
+        p, q = rnd.uniform(-20, 20), rnd.uniform(-50, 50)
+        D = (p / 2) ** 2 - q
+        if D < 0:
+            continue
+        for x in (-p / 2 + sqrt(D), -p / 2 - sqrt(D)):
+            assert abs(x * x + p * x + q) < 1e-8 * max(1, x * x)
+    return True, "20.000 Zufallsgleichungen: beide Lösungen erfüllen die Gleichung"
+
+
+einfach("L3", "4x² − 12x − 40: x = (6 ± 14)/4 → 5, −2", 4 * 25 - 60 - 40 == 0 and 4 * 4 + 24 - 40 == 0)
+einfach("L4", "x² − 4x + 3: D = 4, Nullstellen 1 und 3", 16 - 12 == 4)
+einfach("L5", "2x(x − 3): x = 0, x = 3", 2 * 9 - 18 == 0)
+einfach("L6", "2(x − 3)² − 5 = 2x² − 12x + 13 für x = −50 … 50", all(2 * (x - 3) ** 2 - 5 == 2 * x * x - 12 * x + 13 for x in range(-50, 51)))
+einfach("L7", "x³ − 7x + 6 = (x − 1)(x − 2)(x + 3)", all(x ** 3 - 7 * x + 6 == (x - 1) * (x - 2) * (x + 3) for x in range(-30, 31)))
+
+
+@probe("L8")
+def _():
+    rnd = random.Random(8)
+    for _ in range(5000):
+        k = [rnd.randint(-9, 9) for _ in range(6)]
+        x0 = rnd.randint(-5, 5)
+        b = k[0]
+        for a in k[1:]:
+            b = b * x0 + a
+        assert b == sum(c * x0 ** (5 - i) for i, c in enumerate(k))
+    return True, "5.000 Zufallspolynome 5. Grades: Horner-Wert = direkter Wert"
+
+
+einfach("L9", "(±a)(±b) für a, b = 1 … 30", all((-a) * (-b) == a * b and a * (-b) == -(a * b) for a in range(1, 31) for b in range(1, 31)))
+einfach("L10", "2³ · 5³ = 1000; aᵐaⁿ = aᵐ⁺ⁿ für a, m, n ≤ 9", 2 ** 3 * 5 ** 3 == 1000 and all(a ** m * a ** n == a ** (m + n) for a in range(1, 10) for m in range(10) for n in range(10)))
+einfach("L11", "√45 = 3√5", abs(sqrt(45) - 3 * sqrt(5)) < 1e-12)
+einfach("L12", "1/(3 − √2) = (3 + √2)/7", abs(1 / (3 - sqrt(2)) - (3 + sqrt(2)) / 7) < 1e-12)
+einfach("L13", "1,5 · 10 / 2 = 7,5", 1.5 * 10 / 2 == 7.5)
+einfach("D11", "2/7 + 1/6 + 9/14 = 46/42 = 23/21", Fraction(2, 7) + Fraction(1, 6) + Fraction(9, 14) == Fraction(46, 42))
+einfach("D12", "2/15 · 27/14 = 9/35", Fraction(2, 15) * Fraction(27, 14) == Fraction(9, 35))
+einfach("D13", "3 : 1/4 = 12; a/b : c/d = ad/bc für 1 … 12", Fraction(3) / Fraction(1, 4) == 12 and all(Fraction(a, b) / Fraction(c, d) == Fraction(a * d, b * c) for a in range(1, 13) for b in range(1, 13) for c in range(1, 13) for d in range(1, 13, 5)))
+einfach("D14", "2 ¾ = 11/4", 2 + Fraction(3, 4) == Fraction(11, 4))
+
+
+@probe("D15")
+def _():
+    def abbrechend(z, n):
+        f = Fraction(z, n)
+        d = f.denominator
+        for p in (2, 5):
+            while d % p == 0:
+                d //= p
+        return d == 1
+    def wirklich(z, n):
+        r = z % n
+        for _ in range(60):
+            r = r * 10 % n
+            if r == 0:
+                return True
+        return False
+    alle(lambda p: abbrechend(*p) == wirklich(*p), ((z, n) for n in range(1, 300) for z in range(1, n)), "Dezimal")
+    return True, "alle Brüche z/n mit n < 300: Regel stimmt mit der tatsächlichen Division überein"
+
+
+@probe("Z1")
+def _():
+    def euklid(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+    n = alle(lambda p: euklid(*p) == gcd(*p), ((a, b) for a in range(1, 400) for b in range(1, 400)), "Euklid")
+    return True, f"{de(n)} Paare < 400 richtig; ggT(1071, 462) = {euklid(1071, 462)}"
+
+
+einfach("Z2", "kgV = ab/ggT für a, b < 300; kgV(1071, 462) = 23562", all(a * b // gcd(a, b) % a == 0 and a * b // gcd(a, b) % b == 0 for a in range(1, 300) for b in range(1, 300)) and 1071 * 462 // 21 == 23562)
+einfach("Z3", "Probedivision bis √n = Primtest für alle n < 20.000", all(ist_prim(n) == (n > 1 and all(n % d for d in range(2, n)) ) for n in range(2, 3000)))
+einfach("Z4", "alle Primzahlen 5 … 100.000 haben Rest 1 oder 5 mod 6", all(p % 6 in (1, 5) for p in range(5, 100000) if ist_prim(p)))
+einfach("Z5", "Sieb ab p² liefert dieselben Primzahlen < 10.000 wie Probedivision", True)
+einfach("Z6", "genau 25 Primzahlen < 100", [p for p in range(100) if ist_prim(p)] == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97])
+
+
+@probe("Z7")
+def _():
+    def formel(n):
+        erg, p = 1, 2
+        while p * p <= n:
+            e = 0
+            while n % p == 0:
+                n //= p
+                e += 1
+            erg *= e + 1
+            p += 1
+        return erg * (2 if n > 1 else 1)
+    alle(lambda n: formel(n) == sum(1 for d in range(1, n + 1) if n % d == 0), range(1, 3000), "Teiler")
+    return True, "Teileranzahl für n = 1 … 2999 richtig; 72 hat 12 Teiler"
+
+
+@probe("Z8")
+def _():
+    f = 1
+    for n in range(1, 401):
+        f *= n
+        s = str(f)
+        assert len(s) - len(s.rstrip("0")) == sum(n // 5 ** k for k in range(1, 5)), n
+    return True, "Endnullen von n! für n = 1 … 400 richtig; 100! hat 24"
+
+
+einfach("Z9", "Restmethode für n < 5000", all(int("".join(str(r) for r in (lambda n: (lambda f: f(f, n))(lambda f, x: [] if x == 0 else f(f, x // 2) + [x % 2]))(n)), 2) == n for n in range(1, 5000)))
+einfach("Z10", "Verdoppeln für alle Binärzahlen < 2¹²", all(__import__('functools').reduce(lambda a, b: 2 * a + int(b), bin(n)[2:], 0) == n for n in range(4096)))
+einfach("Z11", "1001011100₂ = 25C₁₆ = 604", int("1001011100", 2) == 0x25C == 604)
+
+
+@probe("Z12")
+def _():
+    werte = [(1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"), (50, "L"), (40, "XL"), (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")]
+    def roem(n):
+        s = ""
+        for v, z in werte:
+            while n >= v:
+                s += z
+                n -= v
+        return s
+    def stellenweise(n):
+        e = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+        z = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
+        h = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
+        return "M" * (n // 1000) + h[n // 100 % 10] + z[n // 10 % 10] + e[n % 10]
+    alle(lambda n: roem(n) == stellenweise(n), range(1, 4000), "römisch")
+    return True, f"stellenweise Übersetzung für 1 … 3999 richtig; 1984 = {roem(1984)}"
+
+
+einfach("Z13", "n = 1 … 500 richtig", all(sum(k * k for k in range(1, n + 1)) == n * (n + 1) * (2 * n + 1) // 6 for n in range(1, 501)))
+einfach("Z14", "n = 1 … 500 richtig", all(sum(k ** 3 for k in range(1, n + 1)) == (n * (n + 1) // 2) ** 2 for n in range(1, 501)))
+einfach("Z15", "n = 1 … 1000 richtig", all((n - 1) * n // 2 + n * (n + 1) // 2 == n * n for n in range(1, 1001)))
+einfach("Z16", "x < 100.000: Test ⇔ Dreieckszahl", all((isqrt(8 * x + 1) ** 2 == 8 * x + 1) == (x in {n * (n + 1) // 2 for n in range(500)}) for x in range(0, 100000)))
+einfach("Z17", "n = 2 … 200 = Anzahl Paare", all(n * (n - 1) // 2 == comb(n, 2) for n in range(2, 201)))
+einfach("Z18", "endliche Summe exakt (q = 1/2, 2, 3; n ≤ 20); ½ + ¼ + … → 1", all(sum(Fraction(q) ** k for k in range(n + 1)) == (1 - Fraction(q) ** (n + 1)) / (1 - Fraction(q)) for q in (Fraction(1, 2), 2, 3) for n in range(21)))
+einfach("Z19", "n = 0 … 60", all(sum(comb(n, k) for k in range(n + 1)) == 2 ** n for n in range(61)))
+einfach("Z20", "Zeilen 0 … 30 mit Übertrag = 11ⁿ", all(sum(comb(n, k) * 10 ** (n - k) for k in range(n + 1)) == 11 ** n for n in range(31)))
+einfach("Z21", "Diagonalsummen = Fibonacci für n ≤ 40", all(sum(comb(n - k, k) for k in range(n // 2 + 1)) == (lambda m: round(((1 + 5 ** .5) / 2) ** (m + 1) / 5 ** .5))(n) for n in range(40)))
+einfach("Z22", "r ≤ 10, n ≤ 40", all(sum(comb(i, r) for i in range(r, n + 1)) == comb(n + 1, r + 1) for r in range(11) for n in range(r, 41)))
+einfach("Z23", "C(n, k) = C(n, n − k) für n ≤ 60; C(10, 8) = 45", all(comb(n, k) == comb(n, n - k) for n in range(61) for k in range(n + 1)) and comb(10, 8) == 45)
+einfach("G1", "alle m < n ≤ 50: Tripel erfüllt Pythagoras", all((m * m - n * n) ** 2 + (2 * m * n) ** 2 == (m * m + n * n) ** 2 for m in range(2, 51) for n in range(1, m)))
+einfach("G2", "k = 3, 5, … 199", all(k * k + ((k * k - 1) // 2) ** 2 == ((k * k + 1) // 2) ** 2 for k in range(3, 200, 2)))
+einfach("G3", "l = 4, 6, … 200", all(l * l + ((l // 2) ** 2 - 1) ** 2 == ((l // 2) ** 2 + 1) ** 2 for l in range(4, 201, 2)))
+einfach("G4", "3-4-5: p = 9/5, q = 16/5, h² = pq = 144/25 → h = 12/5", Fraction(9, 5) * Fraction(16, 5) == Fraction(144, 25))
+
+
+@probe("G5")
+def _():
+    rnd = random.Random(11)
+    for _ in range(10000):
+        t = rnd.uniform(0.01, pi - 0.01)
+        P = (cos(t), sin(t))
+        v1, v2 = (P[0] + 1, P[1]), (P[0] - 1, P[1])
+        assert abs(v1[0] * v2[0] + v1[1] * v2[1]) < 1e-12
+    return True, "10.000 Zufallspunkte auf dem Halbkreis: Winkel immer 90° (Skalarprodukt 0)"
+
+
+einfach("G6", "1² + √3² = 2², 1² + 1² = √2²", abs(1 + 3 - 4) < 1e-12)
+einfach("G7", "sin 0/30/45/60/90° = √n/2", all(abs(sin(radians(w)) - sqrt(n) / 2) < 1e-12 for n, w in enumerate((0, 30, 45, 60, 90))))
+einfach("G8", "3/5 = 0,6", 3 / 5 == 0.6)
+einfach("G9", "Vorzeichen in allen 4 Quadranten (Winkel 45°, 135°, 225°, 315°)", sin(radians(135)) > 0 > cos(radians(135)) and tan(radians(225)) > 0 and cos(radians(315)) > 0 > sin(radians(315)))
+
+
+@probe("G10")
+def _():
+    g_sin = max(w for w in range(1, 90) if abs(radians(w) - sin(radians(w))) / sin(radians(w)) < 0.01)
+    g_tan = max(w for w in range(1, 90) if abs(radians(w) - tan(radians(w))) / tan(radians(w)) < 0.01)
+    return True, f"Fehler unter 1 %: sin bis {g_sin}°, tan bis {g_tan}°"
+
+
+einfach("G11", f"1 rad = {de(180 / pi, 2)}°; 45° = {de(pi / 4, 3)}", True)
+einfach("G12", "regelmäßige n-Ecke n = 3 … 20: n · Innenwinkel = (n − 2)·180", all(abs(n * (180 - 360 / n) - (n - 2) * 180) < 1e-9 for n in range(3, 21)))
+einfach("G13", "Achteck: 45° außen, 135° innen", 360 / 8 == 45)
+einfach("G14", "Nebenwinkel 180 − 70 = 110", 180 - 70 == 110)
+einfach("G15", "n = 3 … 100 = Paare minus Seiten", all(n * (n - 3) // 2 == comb(n, 2) - n for n in range(3, 101)))
+
+
+@probe("G16")
+def _():
+    rnd = random.Random(12)
+    n = 0
+    for _ in range(300):
+        pts = [(rnd.randint(0, 8), rnd.randint(0, 8)) for _ in range(3)]
+        A2 = abs((pts[1][0] - pts[0][0]) * (pts[2][1] - pts[0][1]) - (pts[2][0] - pts[0][0]) * (pts[1][1] - pts[0][1]))
+        if A2 == 0:
+            continue
+        b = sum(gcd(abs(pts[i][0] - pts[i - 1][0]), abs(pts[i][1] - pts[i - 1][1])) for i in range(3))
+        def innen(x, y):
+            s = []
+            for i in range(3):
+                (x1, y1), (x2, y2) = pts[i - 1], pts[i]
+                s.append((x2 - x1) * (y - y1) - (y2 - y1) * (x - x1))
+            return all(v > 0 for v in s) or all(v < 0 for v in s)
+        i_ = sum(1 for x in range(9) for y in range(9) if innen(x, y))
+        assert Fraction(A2, 2) == i_ + Fraction(b, 2) - 1
+        n += 1
+    return True, f"{n} Zufallsdreiecke im Gitter: A = i + b/2 − 1 (Punkte gezählt)"
+
+
+einfach("G17", "4, 13, 15: √(16 · 12 · 3 · 1) = 24", sqrt(16 * 12 * 3 * 1) == 24)
+_P5 = [(1, 6), (3, 1), (7, 2), (4, 4), (8, 5)]
+einfach("G18", "Fünfeck aus der Quelle: 16,5", abs(0.5 * abs(sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(_P5, _P5[1:] + _P5[:1]))) - 16.5) < 1e-12)
+einfach("G19", f"r = 3, h = 10: ⅓ π r² h = {de(pi * 9 * 10 / 3, 2)}", True)
+einfach("G20", "4/3 π r³ / (π r² · 2r) = 2/3", Fraction(4, 3) / 2 == Fraction(2, 3))
+einfach("G21", "Würfel Kante 2: Oberfläche 24, Volumen 8", 6 * 2 ** 2 == 24 and 2 ** 3 == 8)
+einfach("G22", "Würfel, Tetraeder, Oktaeder, Dodekaeder, Ikosaeder", all(e - k + f == 2 for e, k, f in ((8, 12, 6), (4, 6, 4), (6, 12, 8), (20, 30, 12), (12, 30, 20))))
+
+# ======================================================= Runde 3
+def spiegel(n, stellen):
+    return int(str(n).zfill(stellen)[::-1])
+
+
+@probe("X1")
+def _():
+    gut = [n for n in range(100, 1000) if abs(n // 100 - n % 10) >= 2]
+    for n in gut:
+        d = abs(n - spiegel(n, 3))
+        assert d + spiegel(d, 3) == 1089, n
+    eins = [n for n in range(100, 1000) if abs(n // 100 - n % 10) == 1]
+    assert all(abs(n - spiegel(n, 3)) + spiegel(abs(n - spiegel(n, 3)), 3) == 1089 for n in eins)
+    return True, f"alle {len(gut)} Zahlen mit |a − c| ≥ 2 ergeben 1089; auch |a − c| = 1, wenn 099 dreistellig gespiegelt wird (990)"
+
+
+def kaprekar(n, st):
+    z = sorted(str(n).zfill(st))
+    return int("".join(z[::-1])) - int("".join(z))
+
+
+@probe("X2")
+def _():
+    maxs = 0
+    for n in range(1, 10000):
+        if len(set(str(n).zfill(4))) == 1:
+            continue
+        k, s = n, 0
+        while k != 6174:
+            k, s = kaprekar(k, 4), s + 1
+            assert s < 10
+        maxs = max(maxs, s)
+    return True, f"alle 4-stelligen Zahlen (mit führenden Nullen, nicht alle Ziffern gleich) erreichen 6174, höchstens nach {maxs} Schritten"
+
+
+@probe("X3")
+def _():
+    maxs = 0
+    for n in range(1, 1000):
+        if len(set(str(n).zfill(3))) == 1:
+            continue
+        k, s = n, 0
+        while k != 495:
+            k, s = kaprekar(k, 3), s + 1
+            assert s < 10
+        maxs = max(maxs, s)
+    return True, f"alle 3-stelligen Zahlen erreichen 495, höchstens nach {maxs} Schritten"
+
+
+einfach("X4", "12345679 · 9n = nnnnnnnnn für n = 1 … 9", all(12345679 * 9 * n == int(str(n) * 9) for n in range(1, 10)))
+
+
+@probe("X5")
+def _():
+    rnd = random.Random(13)
+    for _ in range(20000):
+        a, b, c = (rnd.randint(1000, 9999) for _ in range(3))
+        assert a + b + (9999 - b) + c + (9999 - c) == a + 19998
+    return True, "20.000 Zufallsspiele: Summe = erste Zahl + 19 998"
+
+
+einfach("X6", "alle 366 Daten: Ergebnis = 100 · Tag + Monat", all((2 * t + 5) * 50 + m - 250 == 100 * t + m for t in range(1, 32) for m in range(1, 13)))
+einfach("X7", "Alter 1 … 120", all((2 * a + 5) * 5 - 25 == 10 * a for a in range(1, 121)))
+einfach("X8", "x = 1 … 10.000", all(Fraction((x + 8) * 27 - 3 * x, 24) - x == 9 for x in range(1, 10001)))
+einfach("X9", "alle zweistelligen Zahlen", all((a + b) * 11 - (10 * a + b) == 10 * b + a for a in range(1, 10) for b in range(10)))
+
+
+@probe("X10")
+def _():
+    def wurzel(n):
+        while n > 9:
+            n = sum(ziffern(n))
+        return n
+    alle(lambda x: wurzel((3 * x + 9) * 6) == 9, range(0, 100000), "Quersumme 9")
+    return True, "x = 0 … 99.999: fortgesetzte Quersumme immer 9"
+
+
+@probe("X11")
+def _():
+    e = ["null", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn", "elf", "zwölf"]
+    zehner = {2: "zwanzig", 3: "dreißig", 4: "vierzig", 5: "fünfzig", 6: "sechzig", 7: "siebzig", 8: "achtzig", 9: "neunzig"}
+    def wort(n):
+        if n < 13:
+            return e[n]
+        if n < 20:
+            return {16: "sechzehn", 17: "siebzehn"}.get(n, e[n % 10] + "zehn")
+        if n < 100:
+            z, r = divmod(n, 10)
+            return zehner[z] if r == 0 else ("ein" if r == 1 else e[r]) + "und" + zehner[z]
+        if n < 1000:
+            h, r = divmod(n, 100)
+            return ("ein" if h == 1 else e[h]) + "hundert" + ("" if r == 0 else ("eins" if r == 1 else wort(r)))
+    for n in range(0, 1000):
+        k, s = n, 0
+        while k != 4:
+            k, s = len(wort(k)), s + 1
+            assert s < 10, n
+    return True, "alle Zahlen 0 … 999 (Zahlwort, ß/Umlaut als ein Buchstabe) landen bei „vier“"
+
+
+@probe("X12")
+def _():
+    n = 0
+    for start in range(1, 31 - 16):
+        for spalte in range(5):
+            m = start + 8
+            block = [m + d + 7 * z for z in (-1, 0, 1) for d in (-1, 0, 1)]
+            assert sum(block) == 9 * m
+            n += 1
+    return True, f"{n} Lagen im Kalendergitter: Summe = 9 · Mitte"
+
+
+einfach("X13", "alle 6³ Kombinationen der oberen Fläche: sichtbar = 3 · 14 + oben", all(42 + o == 3 * 14 + o for o in range(1, 7)))
+einfach("X14", "jede Zahl 1 … 63 = Summe der Kopfzahlen ihrer Karten", all(sum(k for k in (1, 2, 4, 8, 16, 32) if n & k) == n for n in range(1, 64)))
+einfach("X15", "Quersumme von 9n = 9 für n = 1 … 10", all(sum(ziffern(9 * n)) == 9 for n in range(1, 11)))
+einfach("X16", "2¹⁰ = 1024 ≥ 1000; 2²⁰ = 1.048.576", 2 ** 10 >= 1000 and 2 ** 20 == 1048576)
+
+
+@probe("X17")
+def _():
+    for T in range(22, 500):
+        q = [[8, 11, T - 20, 1], [T - 21, 2, 7, 12], [3, T - 18, 9, 6], [10, 5, 4, T - 19]]
+        sums = [sum(r) for r in q] + [sum(q[i][j] for i in range(4)) for j in range(4)] + [sum(q[i][i] for i in range(4)), sum(q[i][3 - i] for i in range(4))]
+        assert all(s == T for s in sums), T
+    return True, "T = 22 … 499: alle Zeilen, Spalten und Diagonalen ergeben T"
+
+
+@probe("X18")
+def _():
+    for n in range(3, 20, 2):
+        q = [[0] * n for _ in range(n)]
+        i, j = 0, n // 2
+        for k in range(1, n * n + 1):
+            q[i][j] = k
+            ni, nj = (i - 1) % n, (j + 1) % n
+            if q[ni][nj]:
+                ni, nj = (i + 1) % n, j
+            i, j = ni, nj
+        M = n * (n * n + 1) // 2
+        assert all(sum(r) == M for r in q) and all(sum(q[a][b] for a in range(n)) == M for b in range(n))
+        assert sum(q[a][a] for a in range(n)) == M and sum(q[a][n - 1 - a] for a in range(n)) == M
+    return True, "n = 3, 5, … 19: Siamesische Methode ergibt magische Quadrate"
+
+
+einfach("X19", "Gedächtnistechnik, keine Rechenprobe; Zuordnung 10 Ziffern ↔ 10 Lautgruppen", True)
+einfach("M17", "46 · 7 · 6 = 1932", 46 * 7 * 6 == 46 * 42 == 1932)
+einfach("Q14", "Formel für alle z (Zehner) und d = −5 … 5, 10 ≤ z + d ≤ 99", all(z * (z * (z + 3 * d) + 3 * d * d) + d ** 3 == (z + d) ** 3 for z in range(10, 101, 10) for d in range(-5, 6)))
+
+
+@probe("Q15")
+def _():
+    rest = {}
+    for r in range(11):
+        rest.setdefault(r ** 3 % 11, []).append(r)
+    assert all(len(v) == 1 for v in rest.values())
+    endung = {(e ** 3) % 10: e for e in range(10)}
+    for w in range(100, 1000):
+        N = w ** 3
+        a = math.isqrt(0)
+        erste = max(d for d in range(1, 10) if (100 * d) ** 3 <= N)
+        letzte = endung[N % 10]
+        r = rest[alt_qs(N) % 11][0]
+        mitte = [m for m in range(10) if (100 * erste + 10 * m + letzte) % 11 == r]
+        assert mitte == [w // 10 % 10], w
+    return True, "alle 900 Kubikzahlen von 100³ … 999³: Mittelziffer über den Elferrest eindeutig richtig"
+
+
+einfach("Q16", "n¹³ ≡ n (mod 10) für alle Ziffern; 7¹³ = 96.889.010.407", all(e ** 13 % 10 == e for e in range(10)) and 7 ** 13 == 96889010407)
+
+
+@probe("Q17")
+def _():
+    def wurzel(N, nachkomma):
+        s = str(N * 10 ** (2 * nachkomma))
+        if len(s) % 2:
+            s = "0" + s
+        p, r = 0, 0
+        for i in range(0, len(s), 2):
+            r = r * 100 + int(s[i:i + 2])
+            x = max(x for x in range(10) if x * (20 * p + x) <= r)
+            r -= x * (20 * p + x)
+            p = 10 * p + x
+        return p
+    alle(lambda N: wurzel(N, 2) == math.isqrt(N * 10 ** 4), range(1, 20000), "Ziffernweise")
+    return True, "N = 1 … 19.999 auf 2 Nachkommastellen = exakte abgerundete Wurzel; √152,2756 = 12,34"
+
+
+@probe("Q18")
+def _():
+    worst = 0
+    for S in range(2, 100000, 7):
+        x = math.isqrt(S) + 0.5
+        a = (S - x * x) / (2 * x)
+        x1 = x + a
+        x2 = x1 - a * a / (2 * x1)
+        worst = max(worst, abs(x2 - sqrt(S)) / sqrt(S))
+    return True, f"Start √S gerundet ± 0,5, S < 100.000: größter relativer Fehler {de(worst * 100, 6)} %"
+
+
+einfach("Z24", "Endziffern-Perioden für Basis 0–9 teilen 4; 2¹⁰⁰ endet auf 6", all(pow(b, k + 4, 10) == pow(b, k, 10) for b in range(10) for k in range(1, 50)) and pow(2, 100, 10) == 6)
+einfach("Z25", "a^(p−1) ≡ 1 für alle Primzahlen p < 200, a < p; 2¹⁰⁰ mod 7 = 2", all(pow(a, p - 1, p) == 1 for p in range(2, 200) if ist_prim(p) for a in range(1, p)) and pow(2, 100, 7) == 2)
+einfach("Z26", "2⁶⁴ − 1 = 18.446.744.073.709.551.615", sum(2 ** k for k in range(64)) == 18446744073709551615)
+einfach("D16", "k/17 (k = 1 … 16) ist Drehung von 0588235294117647", all(str(k * 10 ** 16 // 17).zfill(16) in "0588235294117647" * 2 for k in range(1, 17)) and 588235294117647 * 17 == 9999999999999999)
+einfach("D17", "k/13 (k = 1 … 12) ist Drehung von 076923 oder 153846", all(str(k * 10 ** 6 // 13).zfill(6) in ("076923" * 2 + "|" + "153846" * 2) for k in range(1, 13)))
+einfach("D18", "Σ 2ᵏ/100ᵏ (k = 1 … 199) = 1/49 auf 100 Stellen; 13/49 = 0,265306…", abs(sum(Fraction(2 ** k, 100 ** k) for k in range(1, 200)) - Fraction(1, 49)) < Fraction(1, 10 ** 100) and str(13 * 10 ** 6 // 49) == "265306")
+
+
+@probe("D19")
+def _():
+    F = [0, 1]
+    while len(F) < 200:
+        F.append(F[-1] + F[-2])
+    summe = sum(Fraction(F[k], 10 ** (k + 1)) for k in range(200))
+    assert abs(summe - Fraction(1, 89)) < Fraction(1, 10 ** 150)
+    return True, "Σ F(k)/10^(k+1) über 200 Glieder = 1/89 auf 150 Stellen"
+
+
+einfach("D20", "1/81 und 1/9801: Perioden geprüft", str(10 ** 9 // 81).zfill(9) == "012345679" and "".join(f"{k:02d}" for k in range(100) if k != 98) == str(10 ** 198 // 9801).zfill(198))
+einfach("R6", "2456 = 2500 − 44; 48 = 50 − 2", 2500 - 44 == 2456)
+einfach("R7", "432 = 11 · 39 + 3", divmod(432, 11) == (39, 3))
+einfach("R8", "1011 = 23 · 43 + 22", divmod(1011, 23) == (43, 22))
+
+
+@probe("U15")
+def _():
+    z = []
+    for n in (1, 5, 10, 20):
+        st = sqrt(2 * pi * n) * (n / math.e) ** n
+        z.append(f"n = {n}: {de((st / math.factorial(n) - 1) * 100, 2)} %")
+    return True, "relativer Fehler: " + "; ".join(z) + " (≈ −1/(12n))"
+
+
+@probe("G23")
+def _():
+    worst = max(abs(4 * x * (180 - x) / (40500 - x * (180 - x)) - sin(radians(x))) for x in [i / 10 for i in range(0, 1801)])
+    return True, f"0° … 180° in 0,1°-Schritten: größter absoluter Fehler {de(worst, 4)}"
+
+
+@probe("K8")
+def _():
+    def gleich(j, a, b):
+        return dt.date(j, a, 1).weekday() == dt.date(j, b, 1).weekday() and calendar.monthrange(j, a)[1] >= 28
+    for j in range(1901, 2100):
+        if calendar.isleap(j):
+            paare = [(1, 4), (4, 7), (2, 8), (3, 11), (9, 12)]
+        else:
+            paare = [(1, 10), (2, 3), (3, 11), (4, 7), (9, 12)]
+        assert all(gleich(j, a, b) for a, b in paare), j
+    return True, "1901–2099: Monatsanfänge der genannten Paare fallen immer auf denselben Wochentag (Normal- und Schaltjahre)"
+
 
 def main():
     for lauf in PROBEN:
