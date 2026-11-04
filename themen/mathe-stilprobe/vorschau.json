@@ -1,22 +1,22 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Neu oben: In den Flächen stehen jetzt die Zahlen aus der Regel, und es gibt beide Richtungen (18 + 6 und 16 + 8). Die Flächen kommen ab etwa 0:40. Tippe „passt“ oder „ändern“ mit Notiz.",
+ "aufgabe": "Neu oben: Die Flächen folgen jetzt der Regel (zuerst 16 + 8, dann andersherum 18 + 6). Die Flächen beginnen bei 0:28. Tippe „passt“ oder „ändern“ mit Notiz.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel2/regel.mp4",
-   "titel": "Neu: Regel mit Zahlen in den Flächen (2:23)",
-   "stand": "04.11., 10:05",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel3/regel.mp4",
+   "titel": "Neu: Regel, Flächen in der richtigen Reihenfolge (2:18)",
+   "stand": "04.11., 10:50",
    "pruefen": true,
-   "poster_bei": 72,
-   "notiz": "Jede Fläche zeigt jetzt Rechnung und Wert (10 · 8 = 80 usw.). Kanten und Ziffern haben dieselben Farben wie im Bild „Die Regel“. Beim Umlegen zeigen Klammern 18 + 6 = 24, die Teile 100 + 80 + 60 verschmelzen zu 240, und rechts stehen dieselben vier Zeilen wie in der Regel. Neu ist die Szene „Andere Richtung“: Der Streifen 10 × 8 wandert nach unten, so wird es 16 + 8 = 24."
+   "poster_bei": 58,
+   "notiz": "Die Flächen zeigen jetzt zuerst denselben Weg wie die Regel: 16 + 8. Der Streifen 10 × 8 wandert nach unten, so entsteht 10 × 24. Danach folgt „Andersherum“ mit Rechnung und Bild zusammen: 18 + 6, der Streifen 6 × 10 wandert nach rechts. Die reine Rechenszene „Andersherum“ vor den Flächen fällt weg."
   },
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel/regel.mp4",
-   "titel": "Erste Fassung der Regel (2:02)",
-   "stand": "04.11., 08:42",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel2/regel.mp4",
+   "titel": "Zweite Fassung der Regel (2:23)",
+   "stand": "04.11., 10:05",
    "pruefen": false,
-   "poster_bei": 60,
-   "notiz": "16 · 18: 16 + 8 = 24 (oder 18 + 6), mal 10 = 240, plus 6 · 8 = 48, also 288. Danach das Warum als Fläche: Der Streifen 6 × 10 dreht sich und legt sich an, so entsteht 10 × 24. Dann der Sonderfall 11·19 bis 15·15 und die Vorsicht bei 15 · 14. Stil A (Flächenmodell), Stimme Christian."
+   "poster_bei": 72,
+   "notiz": "Jede Fläche zeigt jetzt Rechnung und Wert (10 · 8 = 80 usw.). Kanten und Ziffern haben dieselben Farben wie im Bild „Die Regel“. Beim Umlegen zeigen Klammern 18 + 6 = 24, die Teile 100 + 80 + 60 verschmelzen zu 240, und rechts stehen dieselben vier Zeilen wie in der Regel. Neu ist die Szene „Andere Richtung“: Der Streifen 10 × 8 wandert nach unten, so wird es 16 + 8 = 24."
   },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/ein_videos/alle_fuenf.mp4",
