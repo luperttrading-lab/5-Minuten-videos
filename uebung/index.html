@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kopfrechnen üben</title>
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f6f1e7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kopfrechnen">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<style>
+/* Farben wie im Video: Papiergrund, Tinte, Einer der 1. Zahl orange, der 2. violett, Ecke rot, 240 dunkelgrün */
+:root {
+  --grund: #f6f1e7; --karte: #ffffff; --ink: #2b2d42; --grau: #6f7380; --hell: #e6dfd2;
+  --c1: #e8890c; --c2: #8338ec; --c3: #e63946; --c10: #0f766e; --ok: #2a9d4a; --falsch: #d62839;
+  --rand: 16px;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { touch-action: manipulation; -webkit-text-size-adjust: 100%; }
+html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+body {
+  position: fixed; inset: 0; margin: 0; background: var(--grund); color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-variant-numeric: tabular-nums;
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+  background-image: radial-gradient(rgba(120,100,70,.13) 1.2px, transparent 1.3px); background-size: 24px 24px;
+}
+button { font: inherit; color: inherit; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.seite {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  padding: max(env(safe-area-inset-top), 14px) max(env(safe-area-inset-right), var(--rand))
+           max(env(safe-area-inset-bottom), 14px) max(env(safe-area-inset-left), var(--rand));
+}
+.kopf { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; }
+.kopf h1 { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+.rund { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-size: 22px;
+  background: var(--karte); box-shadow: 0 2px 8px rgba(60,40,20,.12); }
+.karte { background: var(--karte); border-radius: 20px; box-shadow: 0 6px 22px rgba(70,50,25,.12); padding: 18px; }
+
+/* ---------- Start ---------- */
+#start .inhalt { flex: 1; display: flex; flex-direction: column; gap: 14px; padding-top: 10px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.uebung h2 { margin: 0 0 4px; font-size: 24px; font-weight: 800; }
+.uebung .video { margin: 0 0 14px; color: var(--grau); font-size: 15px; }
+.beispiel { font-size: 34px; font-weight: 800; margin: 4px 0 14px; }
+.beispiel .c1 { color: var(--c1); } .beispiel .c2 { color: var(--c2); }
+.wahl { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+.wahl button { padding: 12px 10px; border-radius: 14px; background: #f3efe7; font-weight: 700; font-size: 16px; text-align: left; line-height: 1.2; }
+.wahl button small { display: block; font-weight: 500; color: var(--grau); font-size: 13px; margin-top: 2px; }
+.wahl button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.wahl button[aria-pressed="true"] small { color: #cfd2da; }
+.wahl-titel { font-size: 13px; font-weight: 800; color: var(--grau); letter-spacing: .06em; text-transform: uppercase; margin: 6px 0 6px; }
+.los { width: 100%; padding: 18px; border-radius: 18px; background: var(--c10); color: #fff; font-size: 22px; font-weight: 800; margin-top: 8px; }
+.los:active { transform: scale(.98); }
+#verlauf h3 { margin: 0 0 8px; font-size: 13px; font-weight: 800; color: var(--grau); letter-spacing: .06em; text-transform: uppercase; }
+#verlauf .bester { font-size: 17px; margin: 0 0 10px; }
+#verlauf ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 15px; color: var(--grau); }
+#verlauf li b { color: var(--ink); }
+.fuss { text-align: center; color: var(--grau); font-size: 13px; padding-top: 8px; }
+#version { text-decoration: underline dotted; text-underline-offset: 3px; padding: 6px 10px; }
+
+/* ---------- Spiel ---------- */
+#spiel .punkte { display: flex; gap: 6px; flex: 1; justify-content: center; }
+#spiel .punkte i { width: 12px; height: 12px; border-radius: 50%; background: var(--hell); transition: background .2s, transform .2s; }
+#spiel .punkte i.jetzt { background: var(--ink); transform: scale(1.25); }
+#spiel .punkte i.ok { background: var(--ok); } #spiel .punkte i.nein { background: var(--falsch); }
+.buehne { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 0; position: relative; }
+.frage { font-size: min(19vw, 92px); font-weight: 850; letter-spacing: -.02em; line-height: 1; }
+.frage .c1 { color: var(--c1); } .frage .c2 { color: var(--c2); }
+.antwort { min-width: 62%; height: min(17vw, 84px); border-radius: 18px; background: var(--karte);
+  box-shadow: inset 0 0 0 3px var(--hell); display: flex; align-items: center; justify-content: center;
+  font-size: min(13vw, 64px); font-weight: 800; transition: background .15s, box-shadow .15s, color .15s; }
+.antwort .leer { color: var(--hell); }
+.antwort.ok { background: var(--ok); color: #fff; box-shadow: none; }
+.antwort.nein { background: var(--falsch); color: #fff; box-shadow: none; }
+.rueck { height: 26px; font-size: 18px; font-weight: 700; color: var(--grau); }
+.rueck.ok { color: var(--ok); } .rueck.nein { color: var(--falsch); }
+.gehoert { height: 20px; font-size: 15px; color: var(--grau); }
+.tasten { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 6px; }
+.tasten button { height: min(15vw, 66px); border-radius: 16px; background: var(--karte); font-size: 30px; font-weight: 750;
+  box-shadow: 0 3px 0 #ded6c8; }
+.tasten button:active { transform: translateY(2px); box-shadow: 0 1px 0 #ded6c8; }
+.tasten .ok-taste { background: var(--c10); color: #fff; box-shadow: 0 3px 0 #0a524c; }
+.tasten .loeschen { font-size: 26px; color: var(--grau); }
+#mikro { position: relative; }
+#mikro.an { background: var(--c10); color: #fff; }
+#mikro.hoert::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 3px solid var(--ok); }
+/* Lösungsweg nach einem Fehler */
+#weg { position: absolute; inset: 6% 0 auto; margin: auto; max-width: 420px; }
+#weg h3 { margin: 0 0 10px; font-size: 26px; }
+#weg ol { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 8px; }
+#weg li { display: grid; grid-template-columns: 34px 1fr; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; }
+#weg li span { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 16px; background: var(--ink); }
+#weg li small { display: block; font-size: 13px; color: var(--grau); font-weight: 600; }
+#weg li:nth-child(1) span { background: var(--c2); } #weg li:nth-child(2) span { background: var(--c10); }
+#weg li:nth-child(3) span { background: var(--c3); } #weg li:nth-child(4) span { background: var(--ok); }
+.c1 { color: var(--c1); } .c2 { color: var(--c2); } .c3 { color: var(--c3); } .c10 { color: var(--c10); } .cok { color: var(--ok); }
+#weiter { width: 100%; padding: 14px; border-radius: 14px; background: var(--ink); color: #fff; font-weight: 800; font-size: 18px; }
+
+/* ---------- Ende ---------- */
+#ende .inhalt { flex: 1; display: flex; flex-direction: column; gap: 14px; padding-top: 6px; overflow-y: auto; }
+.ergebnis { text-align: center; }
+.ergebnis .gross { font-size: 40px; font-weight: 850; margin: 4px 0 0; }
+.ergebnis .zeit { font-size: 22px; font-weight: 700; margin: 6px 0 0; }
+.ergebnis .zeit b { color: var(--c10); }
+.ergebnis .ziel { color: var(--grau); margin: 6px 0 0; font-size: 15px; }
+.spruch { text-align: center; background: var(--c10); color: #fff; border-radius: 18px; padding: 14px; font-weight: 700; font-size: 17px; }
+.spruch b { display: block; font-size: 21px; margin-top: 2px; }
+#liste { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; font-size: 17px; }
+#liste li { display: grid; grid-template-columns: 22px 1fr auto; gap: 8px; align-items: baseline; }
+#liste li .m { font-weight: 800; color: var(--ok); }
+#liste li.nein .m { color: var(--falsch); }
+#liste li .z { color: var(--grau); }
+#liste li.nein s { color: var(--falsch); }
+#liste li.nein .r { color: var(--ok); font-weight: 800; }
+.knoepfe { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.knoepfe button { padding: 16px; border-radius: 16px; font-weight: 800; font-size: 18px; background: var(--karte); box-shadow: 0 3px 0 #ded6c8; }
+.knoepfe .los { margin: 0; box-shadow: none; background: var(--c10); color: #fff; }
+
+/* ---------- Banner (Update, Hinweise) ---------- */
+.update {
+  position: fixed; left: 12px; right: 12px; top: max(env(safe-area-inset-top), 12px); z-index: 30;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: #34c759; color: #06240e; padding: 12px 14px; border-radius: 14px; font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25); opacity: 0; transition: opacity .35s ease; pointer-events: none;
+}
+.update.an { opacity: 1; pointer-events: auto; }
+.update[hidden] { display: none; }
+.update.info { background: #2d2d33; color: #f2f2f7; font-weight: 500; }
+.update.unten { top: auto; bottom: max(env(safe-area-inset-bottom), 12px); }
+.update .btn { padding: 8px 14px; border-radius: 10px; font-size: 15px; font-weight: 700; background: #06240e; color: #fff; }
+</style>
+</head>
+<body>
+<div class="update" id="update" hidden><span id="update-text"></span><button class="btn" id="update-go">Jetzt laden</button></div>
+
+<!-- Start -->
+<section class="seite" id="start">
+  <div class="kopf"><h1>Kopfrechnen üben</h1><button class="rund" id="ton" aria-label="Ton an oder aus">🔊</button></div>
+  <div class="inhalt">
+    <div class="karte uebung">
+      <h2 id="u-titel"></h2>
+      <p class="video" id="u-video"></p>
+      <div class="beispiel">1<span class="c1">6</span> · 1<span class="c2">8</span> = 288</div>
+      <div class="wahl-titel">Aufgaben</div>
+      <div class="wahl" id="stufen"></div>
+      <div class="wahl-titel">Antworten</div>
+      <div class="wahl" id="eingabe">
+        <button data-e="tippen" aria-pressed="true">⌨︎ Tippen<small>Ziffern antippen</small></button>
+        <button data-e="sprechen" aria-pressed="false">🎤 Sprechen<small>Zahl laut sagen</small></button>
+      </div>
+      <button class="los" id="los">Start · 10 Aufgaben</button>
+    </div>
+    <div class="karte" id="verlauf" hidden>
+      <h3>Deine letzten Runden</h3>
+      <p class="bester" id="bester"></p>
+      <ol id="runden"></ol>
+    </div>
+    <div class="fuss"><button id="version"></button></div>
+  </div>
+</section>
+
+<!-- Spiel -->
+<section class="seite" id="spiel" hidden>
+  <div class="kopf">
+    <button class="rund" id="abbruch" aria-label="Abbrechen">✕</button>
+    <div class="punkte" id="punkte"></div>
+    <button class="rund" id="mikro" aria-label="Sprechen an oder aus">🎤</button>
+  </div>
+  <div class="buehne">
+    <div class="frage" id="frage"></div>
+    <div class="antwort" id="antwort"><span class="leer">?</span></div>
+    <div class="rueck" id="rueck"></div>
+    <div class="gehoert" id="gehoert"></div>
+    <div class="karte" id="weg" hidden>
+      <h3 id="weg-titel"></h3>
+      <ol id="weg-schritte"></ol>
+      <button id="weiter">Weiter</button>
+    </div>
+  </div>
+  <div class="tasten" id="tasten"></div>
+</section>
+
+<!-- Ende -->
+<section class="seite" id="ende" hidden>
+  <div class="kopf"><h1>Geschafft!</h1><span></span></div>
+  <div class="inhalt">
+    <div class="karte ergebnis">
+      <p class="gross" id="e-richtig"></p>
+      <p class="zeit" id="e-zeit"></p>
+      <p class="ziel" id="e-ziel"></p>
+    </div>
+    <div class="spruch" id="e-spruch"></div>
+    <div class="karte"><ul id="liste"></ul></div>
+    <div class="knoepfe"><button id="uebersicht">Übersicht</button><button class="los" id="nochmal">Nochmal</button></div>
+  </div>
+</section>
+
+<script src="aufgaben.js"></script>
+<script>
+const APP_VERSION = '0.1';          // bei JEDER Änderung hochzählen
+const $ = s => document.querySelector(s);
+const ANZAHL = 10;
+const ZIEL = 3.0;                    // Sekunden je Aufgabe, wie im Video („in drei Sekunden“)
+const SPEICHER = 'kopfrechnen.stand', RUNDEN = 'kopfrechnen.runden';
+const lies = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (_) { return d; } };
+const schreib = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (_) {} };
+const stand = Object.assign({ uebung: UEBUNGEN[0].id, stufe: 'alle', eingabe: 'tippen', ton: true }, lies(SPEICHER, {}));
+const speichereAlles = () => schreib(SPEICHER, stand);
+const uebung = () => UEBUNGEN.find(u => u.id === stand.uebung) || UEBUNGEN[0];
+const sek = ms => (ms / 1000).toLocaleString('de-DE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' s';
+const zeigeSeite = id => { for (const s of document.querySelectorAll('.seite')) s.hidden = s.id !== id; };
+
+/* ---------- Ton (kurze erzeugte Klänge, keine Dateien) ---------- */
+let ctx = null;
+const tonsitzung = typ => { try { if (navigator.audioSession) navigator.audioSession.type = typ; } catch (_) {} };
+tonsitzung(stand.eingabe === 'sprechen' ? 'play-and-record' : 'playback');   // Ton trotz Stummschalter; Mikrofon braucht play-and-record
+function tonkanal() {
+  if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+  if (ctx.state !== 'running') ctx.resume();
+  return ctx;
+}
+function ton(folge) {                // folge: [[frequenz, start, dauer, lautstärke], …]
+  if (!stand.ton) return;
+  try {
+    const c = tonkanal(), t0 = c.currentTime + 0.01;
+    for (const [f, s, d, v = 0.18] of folge) {
+      const o = c.createOscillator(), g = c.createGain();
+      o.type = 'sine'; o.frequency.value = f;
+      g.gain.setValueAtTime(0, t0 + s); g.gain.linearRampToValueAtTime(v, t0 + s + 0.01);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + s + d);
+      o.connect(g).connect(c.destination); o.start(t0 + s); o.stop(t0 + s + d + 0.05);
+    }
+  } catch (_) {}
+}
+const klang = {
+  tipp: () => ton([[660, 0, 0.05, 0.05]]),
+  richtig: () => ton([[880, 0, 0.18], [1320, 0.08, 0.3]]),
+  falsch: () => ton([[220, 0, 0.35, 0.16], [208, 0, 0.35, 0.12]]),
+  fertig: () => ton([[523, 0, 0.3], [659, 0.12, 0.3], [784, 0.24, 0.3], [1046, 0.36, 0.6]]),
+};
+
+/* ---------- Startseite ---------- */
+function baueStart() {
+  const u = uebung();
+  $('#u-titel').textContent = u.titel;
+  $('#u-video').textContent = 'Aus dem Video: ' + u.video;
+  $('#stufen').innerHTML = '';
+  for (const s of u.stufen) {
+    const b = document.createElement('button');
+    b.dataset.s = s.id; b.innerHTML = `${s.name}<small>${s.info}</small>`;
+    b.setAttribute('aria-pressed', String(stand.stufe === s.id));
+    b.addEventListener('click', () => { stand.stufe = s.id; speichereAlles(); baueStart(); });
+    $('#stufen').append(b);
+  }
+  for (const b of document.querySelectorAll('#eingabe button')) b.setAttribute('aria-pressed', String(stand.eingabe === b.dataset.e));
+  $('#ton').textContent = stand.ton ? '🔊' : '🔇';
+  // Verlauf: letzte Runden und bester Schnitt (nur Runden mit mindestens 8 richtig zählen für „bester“)
+  const r = lies(RUNDEN, []).filter(x => x.uebung === u.id);
+  $('#verlauf').hidden = !r.length;
+  if (r.length) {
+    const gute = r.filter(x => x.richtig >= 8);
+    const best = gute.length ? Math.min(...gute.map(x => x.schnitt)) : null;
+    $('#bester').innerHTML = best ? `Bester Schnitt: <b>${sek(best)}</b> je Aufgabe` : 'Noch keine Runde mit 8 oder mehr richtig';
+    $('#runden').innerHTML = r.slice(-5).reverse().map(x =>
+      `<li>${new Date(x.zeit).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' })} · <b>${x.richtig}/${x.anzahl}</b> richtig · Ø <b>${sek(x.schnitt)}</b>${x.stufe === 'zehn' ? ' · Einer = 10' : ''}</li>`).join('');
+  }
+}
+for (const b of document.querySelectorAll('#eingabe button'))
+  b.addEventListener('click', () => { stand.eingabe = b.dataset.e; speichereAlles(); baueStart(); });
+$('#ton').addEventListener('click', () => { stand.ton = !stand.ton; speichereAlles(); baueStart(); if (stand.ton) klang.tipp(); });
+
+/* ---------- Runde ---------- */
+const runde = { aufgaben: [], i: 0, eingabe: '', phase: 'start', t0: 0, ergebnisse: [], weiterTimer: 0, offenHundert: null };
+const params = new URLSearchParams(location.search);
+function starteRunde() {
+  tonkanal();                                        // im Tipp entsperren (iOS)
+  const u = uebung();
+  const folge = params.get('folge');                 // Tests: ?folge=16x18,12x18,…
+  runde.aufgaben = folge ? folge.split(',').map(p => { const [x, y] = p.split('x').map(Number); return u.aufgabe(x, y); })
+                         : u.erzeuge(stand.stufe, ANZAHL);
+  runde.i = 0; runde.ergebnisse = [];
+  $('#punkte').innerHTML = runde.aufgaben.map(() => '<i></i>').join('');
+  zeigeSeite('spiel');
+  zeigeMikro();
+  if (stand.eingabe === 'sprechen') mikrofonAn().finally(naechste); else naechste();
+}
+function naechste() {
+  clearTimeout(runde.weiterTimer);
+  $('#weg').hidden = true;
+  if (runde.i >= runde.aufgaben.length) return ende();
+  const a = runde.aufgaben[runde.i];
+  const zx = String(a.x), zy = String(a.y);
+  $('#frage').innerHTML = `${zx.slice(0, -1)}<span class="c1">${zx.slice(-1)}</span> · ${zy.slice(0, -1)}<span class="c2">${zy.slice(-1)}</span>`;
+  runde.eingabe = ''; runde.offenHundert = null;
+  zeigeEingabe();
+  $('#antwort').className = 'antwort';
+  $('#rueck').className = 'rueck'; $('#rueck').textContent = '';
+  $('#gehoert').textContent = '';
+  [...$('#punkte').children].forEach((p, k) => p.classList.toggle('jetzt', k === runde.i));
+  runde.phase = 'frage';
+  runde.t0 = performance.now();
+}
+function zeigeEingabe() {
+  $('#antwort').innerHTML = runde.eingabe ? runde.eingabe : '<span class="leer">?</span>';
+}
+function tippe(z) {
+  if (runde.phase !== 'frage') return;
+  klang.tipp();
+  if (z === 'x') runde.eingabe = runde.eingabe.slice(0, -1);
+  else if (z === 'ok') { if (runde.eingabe) return pruefe(Number(runde.eingabe), 'getippt'); return; }
+  else if (runde.eingabe.length < 4) runde.eingabe += z;
+  zeigeEingabe();
+  const a = runde.aufgaben[runde.i];
+  if (uebung().auto && runde.eingabe.length === String(a.loesung).length) pruefe(Number(runde.eingabe), 'getippt');
+}
+function pruefe(wert, wie) {
+  if (runde.phase !== 'frage') return;
+  const a = runde.aufgaben[runde.i];
+  const dauer = performance.now() - runde.t0;
+  const ok = wert === a.loesung;
+  runde.phase = 'geloest';
+  runde.ergebnisse.push({ frage: a.frage, loesung: a.loesung, wert, ok, dauer, wie });
+  runde.eingabe = String(wert); zeigeEingabe();
+  $('#antwort').className = 'antwort ' + (ok ? 'ok' : 'nein');
+  const p = $('#punkte').children[runde.i];
+  p.classList.remove('jetzt'); p.classList.add(ok ? 'ok' : 'nein');
+  $('#rueck').className = 'rueck ' + (ok ? 'ok' : 'nein');
+  $('#rueck').textContent = ok ? `✓ richtig · ${sek(dauer)}` : `✗ richtig wäre ${a.loesung}`;
+  runde.i++;
+  if (ok) { klang.richtig(); runde.weiterTimer = setTimeout(naechste, 800); }
+  else { klang.falsch(); runde.weiterTimer = setTimeout(zeigeWeg, 900); }
+}
+function zeigeWeg() {                                // nach einem Fehler: der Lösungsweg mit den drei Schritten
+  const a = runde.aufgaben[runde.i - 1];
+  $('#weg-titel').textContent = `${a.frage} = ${a.loesung}`;
+  $('#weg-schritte').innerHTML = uebung().weg(a).map(s =>
+    `<li><span>${s.nr}</span><div>${s.titel ? `<small>${s.titel}</small>` : ''}${s.text}</div></li>`).join('');
+  $('#weg').hidden = false;
+  runde.phase = 'weg';
+  if (stand.eingabe === 'sprechen') runde.weiterTimer = setTimeout(naechste, 6000);   // freihändig: weiter von selbst
+}
+$('#weiter').addEventListener('click', naechste);
+function ende() {
+  runde.phase = 'ende';
+  mikrofonAus();
+  const e = runde.ergebnisse, richtig = e.filter(x => x.ok).length;
+  const schnitt = e.reduce((s, x) => s + x.dauer, 0) / e.length;
+  const schnellste = Math.min(...e.map(x => x.dauer));
+  const alle = lies(RUNDEN, []);
+  const frueher = alle.filter(x => x.uebung === stand.uebung && x.richtig >= 8).map(x => x.schnitt);
+  const rekord = richtig >= 8 && frueher.length && schnitt < Math.min(...frueher);
+  alle.push({ uebung: stand.uebung, stufe: stand.stufe, zeit: Date.now(), anzahl: e.length, richtig, schnitt, eingabe: stand.eingabe });
+  schreib(RUNDEN, alle.slice(-200));
+  $('#e-richtig').textContent = `${richtig} von ${e.length} richtig`;
+  $('#e-zeit').innerHTML = `Ø <b>${sek(schnitt)}</b> je Aufgabe · schnellste ${sek(schnellste)}`;
+  $('#e-ziel').textContent = rekord ? '🏆 Neuer bester Schnitt!' :
+    schnitt <= ZIEL * 1000 ? 'Unter drei Sekunden – so schnell wie im Video!' : 'Ziel: unter drei Sekunden je Aufgabe.';
+  const spruch = SPRUECHE[zufallInt(SPRUECHE.length)];
+  const schnell = schnitt <= ZIEL * 1000, fehlerfrei = richtig === e.length;
+  $('#e-spruch').innerHTML = (schnell && fehlerfrei ? 'Schnell und fehlerfrei – stark!' : schnell ? 'Schnell! Jetzt noch ohne Fehler.'
+    : fehlerfrei ? 'Alles richtig! Mit ein bisschen Übung wirst du auch schneller.' : 'Mit ein bisschen Übung wird es schneller und sicherer.')
+    + `<b>${spruch}</b>`;
+  $('#liste').innerHTML = e.map(x => `<li class="${x.ok ? 'ok' : 'nein'}"><span class="m">${x.ok ? '✓' : '✗'}</span>`
+    + `<span>${x.frage} = ${x.ok ? `<b>${x.wert}</b>` : `<s>${x.wert}</s> <span class="r">${x.loesung}</span>`}</span>`
+    + `<span class="z">${sek(x.dauer)}</span></li>`).join('');
+  zeigeSeite('ende');
+  klang.fertig();
+}
+$('#los').addEventListener('click', starteRunde);
+$('#nochmal').addEventListener('click', starteRunde);
+$('#uebersicht').addEventListener('click', () => { baueStart(); zeigeSeite('start'); });
+$('#abbruch').addEventListener('click', () => { clearTimeout(runde.weiterTimer); runde.phase = 'start'; mikrofonAus(); baueStart(); zeigeSeite('start'); });
+// Tastenfeld
+for (const z of ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'x', '0', 'ok']) {
+  const b = document.createElement('button');
+  b.textContent = z === 'x' ? '⌫' : z === 'ok' ? '✓' : z;
+  if (z === 'x') b.className = 'loeschen'; if (z === 'ok') b.className = 'ok-taste';
+  b.setAttribute('aria-label', z === 'x' ? 'Löschen' : z === 'ok' ? 'Prüfen' : z);
+  b.addEventListener('pointerdown', e => { e.preventDefault(); tippe(z); });
+  $('#tasten').append(b);
+}
+document.addEventListener('keydown', e => {          // Tastatur am Rechner
+  if ($('#spiel').hidden) return;
+  if (/^[0-9]$/.test(e.key)) tippe(e.key);
+  else if (e.key === 'Backspace') tippe('x');
+  else if (e.key === 'Enter') { if (runde.phase === 'weg') naechste(); else tippe('ok'); }
+});
+document.addEventListener('touchmove', e => { if (!e.target.closest('.inhalt')) e.preventDefault(); }, { passive: false });
+
+/* ---------- Sprechen: Erkennung auf dem Gerät (Vosk, wie in der Würfel-App) ---------- */
+// Apples Spracherkennung ist in Home-Bildschirm-Apps gesperrt (WebKit-Bug 225298). Vosk läuft als WebAssembly im
+// Gerät, nichts geht ins Internet. vosk.js und das deutsche Modell (45 MB) liegen bei der Würfel-App auf derselben
+// Adresse (luperttrading-lab.github.io) – einmal geladen, nutzen beide Apps denselben Speicher.
+const SPRACHE_JS = new URL('../../wuerfel/sprache/vosk.js', location.href).href;
+const SPRACHMODELL = new URL('../../wuerfel/sprache/vosk-model-small-de-0.15.tar.gz', location.href).href;
+const GRAMMATIK = JSON.stringify(zahlGrammatik());
+const sprache = { modell: null, laden: null, strom: null, quelle: null, knoten: null, erkenner: null, hoert: false,
+  letzterTon: 0, protokoll: [] };
+function ladeSprache() {
+  sprache.laden ||= new Promise((ok, fehler) => {
+    if (window.Vosk) return ok();
+    const s = document.createElement('script');
+    s.src = SPRACHE_JS; s.onload = ok; s.onerror = fehler;
+    document.head.append(s);
+  }).then(() => Vosk.createModel(SPRACHMODELL)).then(m => (sprache.modell = m))
+    .catch(e => { sprache.laden = null; throw e; });
+  return sprache.laden;
+}
+function zeigeMikro() {
+  const m = $('#mikro');
+  m.classList.toggle('an', stand.eingabe === 'sprechen');
+  m.classList.toggle('hoert', stand.eingabe === 'sprechen' && sprache.hoert);
+}
+$('#mikro').addEventListener('click', async () => {  // im Spiel umschalten: Tippen geht immer, Sprechen dazu
+  stand.eingabe = stand.eingabe === 'sprechen' ? 'tippen' : 'sprechen'; speichereAlles();
+  if (stand.eingabe === 'sprechen') await mikrofonAn(); else mikrofonAus();
+  zeigeMikro();
+});
+async function mikrofonAn() {
+  if (sprache.strom) return;
+  tonsitzung('play-and-record');                    // mit „playback“ verweigert iOS die Aufnahme
+  $('#gehoert').textContent = sprache.modell ? '' : 'Sprache wird geladen … (einmalig 45 MB)';
+  try {
+    const strom = await navigator.mediaDevices.getUserMedia({ video: false,
+      audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 } });
+    sprache.strom = strom;
+    try { ctx?.close(); } catch (_) {}               // EIN Tonkanal, neu angelegt NACH dem Mikrofon (Lehre aus dem Würfel)
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    if (ctx.state !== 'running') await ctx.resume();
+    await ladeSprache();
+    if (sprache.strom !== strom) return;
+    const erkenner = sprache.erkenner = new sprache.modell.KaldiRecognizer(ctx.sampleRate, GRAMMATIK);
+    erkenner.on('partialresult', m => { const t = (m.result.partial || '').replace(/\[unk\]/g, '').trim(); if (t && runde.phase === 'frage') $('#gehoert').textContent = '… ' + t; });
+    erkenner.on('result', m => gehoert(m.result.text || ''));
+    sprache.quelle = ctx.createMediaStreamSource(strom);
+    sprache.knoten = ctx.createScriptProcessor(4096, 1, 1);
+    sprache.knoten.onaudioprocess = ev => {
+      sprache.letzterTon = performance.now();
+      if (!sprache.hoert) { sprache.hoert = true; zeigeMikro(); }
+      try { erkenner.acceptWaveform(ev.inputBuffer); } catch (_) {}
+    };
+    sprache.quelle.connect(sprache.knoten);
+    sprache.knoten.connect(ctx.destination);         // Safari ruft onaudioprocess nur auf, wenn der Knoten angeschlossen ist
+    $('#gehoert').textContent = 'Sag die Zahl – oder tippe sie';
+  } catch (err) {
+    mikrofonAus();
+    stand.eingabe = 'tippen'; zeigeMikro();
+    showInfo(err?.name === 'NotAllowedError' ? 'Mikrofon nicht erlaubt – bitte tippen' : 'Sprechen geht nicht: ' + (err?.message || err?.name || err), 6);
+  }
+}
+function mikrofonAus() {
+  sprache.strom?.getTracks().forEach(t => t.stop());
+  sprache.quelle?.disconnect(); sprache.knoten?.disconnect();
+  try { sprache.erkenner?.remove(); } catch (_) {}
+  sprache.strom = sprache.quelle = sprache.knoten = sprache.erkenner = null;
+  sprache.hoert = false; zeigeMikro();
+  tonsitzung('playback');
+}
+function gehoert(text) {
+  const wert = zahlwortZuZahl(text);
+  sprache.protokoll.push({ text, wert, aufgabe: runde.aufgaben[runde.i]?.frage, phase: runde.phase });
+  if (wert === null || runde.phase !== 'frage') return;
+  const a = runde.aufgaben[runde.i];
+  $('#gehoert').textContent = '„' + text.replace(/\[unk\]/g, '').trim() + '“';
+  // „zweihundert … achtundachtzig“ mit Pause: die Hunderter kurz aufheben und mit dem Rest verbinden
+  if (runde.offenHundert !== null && wert < 100) { const w = runde.offenHundert + wert; runde.offenHundert = null; clearTimeout(runde.hundertTimer); return pruefe(w, 'gesagt'); }
+  if (wert % 100 === 0 && wert >= 100 && a.loesung % 100 !== 0) {
+    runde.offenHundert = wert; $('#antwort').textContent = wert + ' …';
+    runde.hundertTimer = setTimeout(() => { const w = runde.offenHundert; runde.offenHundert = null; if (w !== null) pruefe(w, 'gesagt'); }, 1500);
+    return;
+  }
+  pruefe(wert, 'gesagt');
+}
+
+/* ---------- Update-Mechanismus (Skill app-update-iphone) ---------- */
+const updateEl = $('#update');
+let infoTimer = null, ausTimer = null, checking = false, announced = null;
+function einblenden() { clearTimeout(ausTimer); updateEl.hidden = false; void updateEl.offsetWidth; updateEl.classList.add('an'); }
+function ausblenden() { updateEl.classList.remove('an'); clearTimeout(ausTimer); ausTimer = setTimeout(() => { if (!updateEl.classList.contains('an')) updateEl.hidden = true; }, 380); }
+function bannerAnKante(ausloeser) {
+  if (!ausloeser) { updateEl.classList.remove('unten'); return; }
+  const r = ausloeser.getBoundingClientRect();
+  updateEl.classList.toggle('unten', r.top + r.height / 2 > window.innerHeight / 2);
+}
+function showInfo(text, sekunden = 2, ausloeser = null) {
+  bannerAnKante(ausloeser);
+  updateEl.className = 'update info' + (updateEl.classList.contains('unten') ? ' unten' : '');
+  $('#update-text').textContent = text; $('#update-go').hidden = true;
+  einblenden(); clearTimeout(infoTimer);
+  if (sekunden) infoTimer = setTimeout(() => { if (updateEl.classList.contains('info')) ausblenden(); }, sekunden * 1000);
+}
+function zeigeBanner(text) {
+  bannerAnKante(null); updateEl.className = 'update';
+  $('#update-text').textContent = text; $('#update-go').hidden = false; einblenden();
+}
+updateEl.addEventListener('click', () => { if (updateEl.classList.contains('info')) ausblenden(); });
+$('#update-go').addEventListener('click', () => { speichereAlles(); location.reload(); });
+async function checkForUpdate(manual = false, ausloeser = null) {
+  if (checking) return;
+  if (!manual && document.visibilityState !== 'visible') return;
+  if (!navigator.onLine) { if (manual) showInfo('Offline – Prüfung nicht möglich', 3, ausloeser); return; }
+  checking = true;
+  try {
+    const res = await fetch('index.html', { cache: 'no-store' });
+    if (!res.ok) return;
+    const m = (await res.text()).match(/APP_VERSION = '([^']+)'/);
+    if (m && m[1] !== APP_VERSION) announceUpdate(m[1], manual);
+    else if (manual) showInfo('Version ' + APP_VERSION + ' ist aktuell', 4, ausloeser);
+  } catch (_) { if (manual) showInfo('Prüfung fehlgeschlagen', 3, ausloeser); }
+  finally { checking = false; }
+}
+function announceUpdate(v, manual) {
+  if (announced === v && !manual) return;
+  announced = v; speichereAlles();
+  zeigeBanner('Neue Version ' + v + ' ist da');
+  if (manual || $('#spiel').hidden) setTimeout(() => location.reload(), manual ? 1500 : 3000);   // nie mitten in einer Runde
+}
+window.addEventListener('pageshow', () => setTimeout(checkForUpdate, 800));
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') checkForUpdate(); });
+$('#version').textContent = 'Version ' + APP_VERSION;
+$('#version').addEventListener('click', e => checkForUpdate(true, e.currentTarget));
+{
+  const GESEHEN = 'kopfrechnen.gesehen';
+  let vorher = null;
+  try { vorher = localStorage.getItem(GESEHEN); } catch (_) {}
+  if (vorher !== APP_VERSION) {
+    try { localStorage.setItem(GESEHEN, APP_VERSION); } catch (_) {}
+    if (vorher) setTimeout(() => showInfo('Version ' + APP_VERSION + ' ist geladen', 4), 400);
+  }
+}
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+
+baueStart();
+window.uebung = { runde, stand, sprache, zahlwortZuZahl, tippe, starteRunde, ladeSprache };   // für Tests
+</script>
+</body>
+</html>
