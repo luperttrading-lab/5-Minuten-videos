@@ -23,3 +23,4 @@ Das Beispiel des Nutzers 15 · 14 ist 210, nicht 220. Jedes Video zeigt das am E
 - Merkzettel und Übung 13 · 14 mit Drei-Sekunden-Uhr. Kästchen-Gitter in allen Flächen, Fortschrittsbalken, Kapitelnummern
 - 1920 × 1080, in vier Teilen parallel gerendert (≈ 3 min). Länge 2:39, 319 Wörter, ElevenLabs ≈ 830 Zeichen berechnet
 - Achtung beim Stichwort-Suchen: „zehn plus sechs“ steckt in „acht*zehn plus sechs*“
+- Vierte Runde (04.11.): Atempausen an Satzenden (0,4 s, nach Doppelpunkt 0,15 s; Zeitmarken verschoben), Markierungen der gemeinten Ziffern, Auflösung „= 288“ nach der Uhr, leise synthetische Geräusche (KLAENGE, 15–20 dB unter der Stimme), 6 und 8 fliegen um die 240 herum. Länge 2:52

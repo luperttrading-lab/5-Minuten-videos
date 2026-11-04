@@ -90,6 +90,21 @@ def ton_und_zeitplan():
         sc['_starts'] = al['character_start_times_seconds']
         sc['_skala'] = len(sc['_starts']) / max(len(sc['text']), 1)
         sc['_lead'] = a / R.SR
+        # Atempausen: nach Satzende 0,4 s, nach Doppelpunkt 0,15 s (Schnitt mitten in der Stille zwischen den Wörtern)
+        enden, txt, pausen = al['character_end_times_seconds'], sc['text'], []
+        for i in range(len(txt) - 2):
+            if txt[i] in '.?!:' and txt[i + 1] == ' ':
+                j = min(int(round(i * sc['_skala'])), len(enden) - 1)
+                j2 = min(int(round((i + 2) * sc['_skala'])), len(enden) - 1)
+                tc = (enden[j] + sc['_starts'][j2]) / 2 / CFG['tempo'] - sc['_lead']
+                pausen.append((tc, 0.15 if txt[i] == ':' else 0.4))
+        stuecke_x, letzt = [], 0
+        for tc, d in pausen:
+            k = int(tc * R.SR)
+            stuecke_x += [x[letzt:k], np.zeros(int(d * R.SR), np.float32)]
+            letzt = k
+        x = np.concatenate(stuecke_x + [x[letzt:]])
+        sc['_pausen'] = pausen
         sc['start'] = t
         sc['dauer'] = len(x) / R.SR
         stuecke += [x, np.zeros(int(PAUSE * R.SR), np.float32)]
@@ -105,7 +120,8 @@ def C(sc, wort, nach=None):
     if i < 0:
         sys.exit(f'Stichwort fehlt in {sc["id"]}: {wort}')
     j = min(int(round(i * sc['_skala'])), len(sc['_starts']) - 1)
-    return max(0.0, sc['_starts'][j] / CFG['tempo'] - sc['_lead'])
+    t = max(0.0, sc['_starts'][j] / CFG['tempo'] - sc['_lead'])
+    return t + sum(d for tc, d in sc.get('_pausen', []) if tc <= t)
 
 
 # ---------------------------------------------------------------- Gestaltung
@@ -284,11 +300,16 @@ ERG288 = [('16 · 18 = ', INK), ('288', GRUEN)]
 # ---------------------------------------------------------------- Szenen
 def s_hook(b, sc, t):
     q = zurueck(p(t, 0.0, 0.7))
-    zeile(b, [('16', INK), (' · ', INK), ('18', INK), (' = ?', GRAU)], 640, 270, 140 * (0.6 + 0.4 * q), INTER_X,
-          alpha=klemm(q * 2))
     tu = C(sc, 'drei Sekunden')
+    loes = zurueck(p(t, tu + 3.0, 0.6))                    # nach der Uhr: die Lösung
+    g = 140 * (0.6 + 0.4 * q)
+    zeile(b, [('16', INK), (' · ', INK), ('18', INK), (' = ?', GRAU)], 640, 270, g, INTER_X,
+          alpha=klemm(q * 2) * (1 - klemm(loes * 2)))
+    if loes > 0:
+        zeile(b, [('16', INK), (' · ', INK), ('18', INK), (' = ', GRAU), ('288', GRUEN)], 640, 270, g, INTER_X,
+              alpha=klemm(loes * 2), effekte={4: dict(skala=0.6 + 0.4 * loes)})
     a = ein(t, tu, 0.3)
-    uhr(b, 640, 455, 52, (t - tu) / 3.0, alpha=a * (1 - ein(t, tu + 3.2, 0.4)))
+    uhr(b, 640, 455, 52, (t - tu) / 3.0, alpha=a * (1 - ein(t, tu + 2.85, 0.3)))
     t0 = C(sc, 'elf bis')
     for i, n in enumerate(range(11, 20)):
         q = zurueck(p(t, t0 + i * 0.08, 0.4))
@@ -310,6 +331,18 @@ def s_regel(b, sc, t):
     cs = mitten(oben, X, G)
     p8 = math.sin(math.pi * p(t, T['acht'], 0.6))
     p68 = math.sin(math.pi * p(t, T['f68'], 0.6))
+    t_zweite, t_mult = C(sc, 'Einer der zweiten Zahl'), C(sc, 'Multipliziere')
+    au = ein(t, t_zweite, 0.4) * (1 - ein(t, T['flug'] + 0.6, 0.4))
+    w1 = breite('1', INTER_X, G)
+    if au > 0:                                             # „die zweite Zahl“: 18 unterstrichen
+        b.linie([(cs[3] - w1 / 2, YT + 64), (cs[4] + w1 / 2, YT + 64)], CB, 6, alpha=au)
+    for i, farbe_i, von, bis in ((4, CB, T['acht'], T['flug'] + 0.4), (1, CA, t_mult, T['f68'] + 0.5),
+                                 (4, CB, t_mult, T['f68'] + 0.5)):
+        ar = ein(t, von, 0.3) * (1 - ein(t, bis, 0.3))
+        if ar > 0:                                         # Ring um die gemeinte Ziffer, solange von ihr die Rede ist
+            r = 58
+            b.d.ellipse([(cs[i] - r) * K, (YT - r) * K, (cs[i] + r) * K, (YT + r) * K], fill=farbe(farbe_i, 30 * ar),
+                        outline=farbe(farbe_i, 220 * ar), width=int(4 * K))
     for i, ((s, c), cx) in enumerate(zip(oben, cs)):
         sk = 1 + 0.28 * max(p8 if i == 4 else 0, p68 if i in (1, 4) else 0)
         b.text(s, cx, YT, G, c, INTER_X, skala=sk)
@@ -339,16 +372,17 @@ def s_regel(b, sc, t):
         b.text('0', links + w2 + w0 / 2 + dx, YR - 120 * (1 - zurueck(nul)), GR, c240, INTER_X, alpha=klemm(nul * 2))
         b.text('· 10', X + dx, YR - 72, 32, GRAU, INTER_X, alpha=glatt(nul * 2) * (1 - sm))
     # Schritt 3: die Einer 6 und 8 wandern nach unten und werden zu 48
-    f3 = glatt(p(t, T['f68'] + 0.25, 1.0))
+    f3 = glatt(p(t, T['f68'] + 0.05, 0.7))                # landet, bevor „gleich achtundvierzig“ kommt
     m48 = glatt(p(t, T['z48'], 0.45))
     ziel3 = [('6', CA), (' · ', INK), ('8', CB)]
     zc3 = mitten(ziel3, X, GR * 0.9)
     if f3 > 0 and m48 < 1:
         a = 1 - m48
-        b.text('6', mix(cs[1], zc3[0], f3), mix(YT, Y3, f3) - math.sin(f3 * math.pi) * 60, mix(G, GR * 0.9, f3), CA,
+        bogen = math.sin(f3 * math.pi) * 190                # seitlich um die 240 herum, nicht durch sie hindurch
+        b.text('6', mix(cs[1], zc3[0], f3) - bogen, mix(YT, Y3, f3), mix(G, GR * 0.9, f3), CA,
                INTER_X, alpha=a * klemm(f3 * 3))
         b.text(' · ', zc3[1], Y3, GR * 0.9, INK, INTER_X, alpha=a * f3)
-        b.text('8', mix(cs[4], zc3[2], f3), mix(YT, Y3, f3) - math.sin(f3 * math.pi) * 60, mix(G, GR * 0.9, f3), CB,
+        b.text('8', mix(cs[4], zc3[2], f3) + bogen, mix(YT, Y3, f3), mix(G, GR * 0.9, f3), CB,
                INTER_X, alpha=a * klemm(f3 * 3))
     w48, w240 = breite('48', INTER_X, GR), w2 + w0
     if m48 > 0:
@@ -455,6 +489,11 @@ def s_warum(b, sc, t):
 def s_andersrum(b, sc, t):
     T = dict(drehen=C(sc, 'legst du'), k16=C(sc, 'Wieder'), k24=C(sc, 'Wieder') + 0.7, lang=C(sc, 'Wieder') + 0.4)
     flaechen(b, t, 'C', T, 220, 190)
+    ah = ein(t, C(sc, 'Einer der ersten'), 0.3) * (1 - ein(t, T['drehen'], 0.3))
+    if ah > 0:
+        b.d.rounded_rectangle([(220 - 6) * K, (190 + 10 * U - 6) * K, (220 + 10 * U + 6) * K, (190 + 16 * U + 6) * K],
+                              radius=6 * K, outline=farbe(CA, 255 * ah), width=int(6 * K))
+        b.text('6', 220 - 34, 190 + 13 * U, 30 * (1 + 0.25 * ah), CA, INTER_X)
     t18 = C(sc, 'Achtzehn plus')
     t10 = C(sc, 'rechnest du zehn')                        # nicht 'zehn plus sechs': steckt in 'Acht-zehn plus sechs'
     zeilen = [dict(nr='8', farbe=CB, titel='Einer der 2. Zahl rüber',
@@ -462,7 +501,7 @@ def s_andersrum(b, sc, t):
               dict(nr='6', farbe=CA, titel='Einer der 1. Zahl rüber', t_titel=t18, t_rech=t18,
                    teile=[('18', INK), (' + ', INK), ('6', CA), (' = 24', INK)], aktiv=(t18, t10))]
     schritte(b, t, 780, 150, 440, zeilen, ([('beides: 10 + ', INK), ('6', CA), (' + ', INK), ('8', CB)], t10),
-             titel='Schritt 1, zwei Wege', g_erg=36)
+             titel='Einer rüber: zwei Wege', g_erg=36)
 
 
 FAELLE = [(11, 19), (12, 18), (13, 17), (14, 16), (15, 15)]
@@ -602,6 +641,65 @@ def s_merke(b, sc, t):
     einblenden(b, [('= ', INK), ('182', GRUEN)], 945, 530, 56, t, te + 5.1)
 
 
+KLAENGE = {  # Stichwort (oder '#ende' = Ende des Sprechtexts), Klang, Versatz in s – passend zu den Einblendungen
+    'hook': [('drei Sekunden', 'tick', 0), ('drei Sekunden', 'tick', 1), ('drei Sekunden', 'tick', 2),
+             ('drei Sekunden', 'ding', 3.0)],
+    'regel': [('zur ersten Zahl', 'wusch', 0), ('gibt vierundzwanzig', 'plopp', 0), ('eine Null', 'plopp', 0.35),
+              ('sechs mal acht', 'wusch', 0.05), ('gleich acht', 'plopp', 0), ('macht zwei', 'ding', 0)],
+    'warum': [('vier Teile', 'plopp', 0), ('drehen', 'wusch', 0), ('also mal zehn', 'ding', 0), ('Übrig', 'plopp', 0)],
+    'andersrum': [('legst du', 'wusch', 0), ('Wieder', 'ding', 0.4)],
+    'sonderfall': [('zwanzig breit', 'plopp', 0), ('Elf mal', 'plopp', 0), ('Zwölf mal', 'plopp', 0),
+                   ('Und so', 'plopp', 0), ('Und so', 'plopp', 1.0), ('fünfzehn mal fünfzehn', 'plopp', 0)],
+    'vorsicht': [('und nicht zweihundert', 'tief', 0), ('fünf mal vier', 'plopp', 0), ('Zusammen', 'ding', 0)],
+    'merke': [('Und jetzt du', 'plopp', 0), ('#ende', 'tick', 0.2), ('#ende', 'tick', 1.2), ('#ende', 'tick', 2.2),
+              ('#ende', 'ding', 5.3)],
+}
+
+
+def klang(art):
+    sr = R.SR
+    def zeit(d):
+        return np.arange(int(d * sr)) / sr
+    if art == 'plopp':                                     # weiches „Plopp“: Ton fällt von 700 auf 420 Hz
+        t = zeit(0.12)
+        f = 420 + 280 * np.exp(-t * 40)
+        y = np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-t * 32) * np.minimum(1, t * 400) * 0.10
+    elif art == 'tick':
+        t = zeit(0.05)
+        y = np.sin(2 * np.pi * 1600 * t) * np.exp(-t * 120) * 0.05
+    elif art == 'ding':                                    # Glöckchen: Grundton mit zwei Obertönen
+        t = zeit(1.2)
+        y = sum(a * np.sin(2 * np.pi * f * t) * np.exp(-t * d) for f, a, d in ((1046, 0.06, 3.5), (1568, 0.03, 5),
+                                                                              (2093, 0.015, 7)))
+        y *= np.minimum(1, t * 300)
+    elif art == 'wusch':                                   # Luftzug: gefiltertes Rauschen, schwillt an und ab
+        t = zeit(0.5)
+        rng = np.random.default_rng(7)
+        n = rng.standard_normal(len(t))
+        aus, z = np.zeros_like(n), 0.0
+        for i, v in enumerate(n):                          # Tiefpass mit steigender Grenzfrequenz
+            k = 0.04 + 0.25 * (i / len(n))
+            z += k * (v - z)
+            aus[i] = z
+        y = aus * np.sin(np.pi * t / 0.5) ** 2 * 0.09
+    else:                                                  # 'tief': gedämpfter Doppelton für „Achtung“
+        t = zeit(0.45)
+        y = (np.sin(2 * np.pi * 196 * t) + np.sin(2 * np.pi * 207 * t)) * np.exp(-t * 6) * np.minimum(1, t * 200) * 0.05
+    return y.astype(np.float32)
+
+
+def klangspur(n_samples):
+    spur = np.zeros(n_samples, np.float32)
+    for sc in SZENEN:
+        for wort, art, versatz in KLAENGE.get(sc['id'], []):
+            t0 = sc['start'] + (sc['dauer'] if wort == '#ende' else C(sc, wort)) + versatz
+            y = klang(art)
+            k = int(t0 * R.SR)
+            if k < n_samples:
+                spur[k:k + len(y)] += y[:n_samples - k]
+    return spur
+
+
 ZEICHNER = {'hook': s_hook, 'regel': s_regel, 'warum': s_warum, 'andersrum': s_andersrum, 'sonderfall': s_sonderfall,
             'vorsicht': s_vorsicht, 'merke': s_merke}
 
@@ -678,6 +776,12 @@ def main():
         f.setnchannels(1); f.setsampwidth(2); f.setframerate(R.SR)
         f.writeframes((np.clip(ton, -1, 1) * 32767).astype(np.int16).tobytes())
     R.aufbereiten(wav)
+    with wave.open(wav) as f:                              # Geräusche erst nach der Aufbereitung (sonst greift das Gate)
+        stimme = np.frombuffer(f.readframes(f.getnframes()), np.int16).astype(np.float32) / 32768
+    mix_ = np.clip(stimme + klangspur(len(stimme)), -0.97, 0.97)
+    with wave.open(wav, 'wb') as f:
+        f.setnchannels(1); f.setsampwidth(2); f.setframerate(R.SR)
+        f.writeframes((mix_ * 32767).astype(np.int16).tobytes())
     if '--nur-ton' in args:
         return
     n = int(gesamt * FPS)
