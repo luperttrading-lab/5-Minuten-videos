@@ -148,6 +148,16 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - Jede Internetadresse als klickbarer Markdown-Link. Wurde ein Artifact oder eine Datei veröffentlicht: den Link als letzte
   Zeile vor der Kostenzeile wiederholen (`**Link:** [Name](URL)`).
 
+## Mathe-Videos (`themen/mathe-*`, eigenes Format ohne Ampel)
+- Vorlage: `themen/mathe-einmaleins/regel.py` (Bilder ganz per Code, Formeln nie per KI-Bild; Einblendungen hängen an
+  gesprochenen Wörtern). Vorschau-Seite aller Mathe-Proben: `themen/mathe-stilprobe/vorschau.json`.
+- **Am Schluss immer ein Motivationssatz** (Nutzerwunsch 04.11.), z. B. nach einer Übung: „Länger als drei Sekunden? Ganz
+  normal. Mit ein bisschen Übung schaffst du das auch.“ plus ein **wechselnder Spruch** („Das ist kein Hexenwerk.“, „Das
+  ist keine Raketenwissenschaft.“ …) aus `werkzeug/motivation.py` (`spruch(thema, 'schluss')`; `'bruecke'` für Übergänge).
+  Ein Thema behält seinen Spruch, neue Themen bekommen den seltensten. Sprüche gern ergänzen.
+- **Keine künstlichen Pausen in den Ton schneiden** (Messung 04.11.): Christian pausiert an Satzenden selbst 200–500 ms,
+  die Zeitmarken sind nur auf ≈ 40 ms genau, Schnitte landeten im Wort („Sprechabsetzer“).
+
 ## Themenideen
 - Fahrplan aus dem Strategiepapier (vom Nutzer am 02.11. gutgeheißen, erst angehen, wenn die fünf vorhandenen Videos
   nach Vorlage v2 überarbeitet sind): Vitamin D (Telomere, Testen, Megadosen), Mikroplastik im Gehirn, Kollagen,

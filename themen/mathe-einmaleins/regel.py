@@ -26,6 +26,7 @@ HIER = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HIER, '..', '..', 'werkzeug'))
 sys.path.insert(0, HIER)
 import render as R                                         # noqa: E402  (ElevenLabs, Dekodieren, Tonaufbereitung)
+from motivation import spruch                              # noqa: E402  (wechselnde Motivationssätze)
 import animationen as A                                    # noqa: E402
 from animationen import (Bild, INTER, INTER_X, breite, einfuegen, farbe, glatt, klemm, mischfarbe, mit_alpha,  # noqa
                          mix, p, zeile, zurueck)
@@ -36,7 +37,12 @@ FPS = 30
 CFG = {'voice_id': 'NBqeXKdZHweef6y0B67V', 'model': 'eleven_v4', 'tempo': 1.05}
 CACHE = os.path.join(HIER, 'tts_cache')
 PAUSE = 0.7                                                # Stille zwischen Szenen
-NACHLAUF = 7.0                                             # nach dem letzten Satz: Denkpause, dann Lösung der Übung
+NACHLAUF = 2.5                                             # Stille nach dem letzten Satz
+# Künstliche Atempausen AUS (Messung 04.11.): Christian pausiert an Satzenden schon selbst 200–500 ms; zusätzliche
+# 0,35 s machten es abgehackt, und wo er Sätze zusammenzieht, lag die „Stille“ im Verschluss von k/d/b → Absetzer.
+ATEMPAUSEN = False
+DENKPAUSE = 6.0                                            # nach „Und jetzt du“: Uhr (3 s), dann die Lösung
+SPRUCH, BRUECKE = spruch('mathe-einmaleins', 'schluss'), spruch('mathe-einmaleins', 'bruecke')
 
 INK, GRAU, BG, HELL = '#2b2d42', '#6f7380', '#f6f1e7', '#e6dfd2'
 CA, CB, CBLAU, CD = '#ff9f1c', '#8338ec', '#3a86ff', '#e63946'   # Einer der 1. Zahl orange, der 2. violett
@@ -48,11 +54,11 @@ SZENEN = [
         'bis neunzehn.')),
     dict(id='regel', kicker='Der Trick', text=(
         'Schritt eins: Nimm den Einer der zweiten Zahl, also die Acht, und zähl ihn zur ersten Zahl dazu. Sechzehn '
-        'plus acht gibt vierundzwanzig. Schritt zwei: mal zehn, du hängst also eine Null an. Aus vierundzwanzig wird '
+        'plus acht gibt vierundzwanzig. Schritt zwei: Nimm das mal zehn, also häng eine Null an. Aus vierundzwanzig wird '
         'zweihundertvierzig. Schritt drei: Multipliziere die beiden Einer, sechs mal acht gleich achtundvierzig, und '
         'zähl das dazu. Zweihundertvierzig plus achtundvierzig macht zweihundertachtundachtzig.')),
     dict(id='warum', kicker='Warum klappt das?', text=(
-        'Warum das klappt, zeigt ein Rechteck aus sechzehn mal achtzehn Kästchen. Wir teilen es in vier Teile: zehn '
+        BRUECKE + ' Warum das klappt, zeigt ein Rechteck aus sechzehn mal achtzehn Kästchen. Wir teilen es in vier Teile: zehn '
         'mal zehn, zehn mal acht, sechs mal zehn und eine kleine Ecke, sechs mal acht. Jetzt drehen wir den Streifen '
         'zehn mal acht und legen ihn unten an. Das ist Schritt eins: Das lange Rechteck ist sechzehn plus acht, also '
         'vierundzwanzig Kästchen hoch. Es ist zehn breit, also mal zehn: zweihundertvierzig. Das ist Schritt zwei. '
@@ -70,10 +76,17 @@ SZENEN = [
         'Aber Vorsicht: Bei fünfzehn mal vierzehn ergeben die Einer nur neun. Das lange Rechteck ist dann nur '
         'neunzehn breit, also hundertneunzig und nicht zweihundert. Dazu kommt die Ecke, fünf mal vier gleich '
         'zwanzig. Zusammen zweihundertzehn, nicht zweihundertzwanzig.')),
-    dict(id='merke', kicker='Merke', text=(
+    dict(id='merke', kicker='Merke', pause=DENKPAUSE, text=(
         'Merk dir die drei Schritte: Einer rüber, mal zehn, Einer mal Einer dazu. Und jetzt du: dreizehn mal '
         'vierzehn.')),
+    dict(id='schluss', kicker='Merke', anhang=True, text=(   # gehört zum Kapitel „Merke“, läuft nach der Lösung
+        'Hat es bei dir länger als drei Sekunden gedauert? Ganz normal. Mit ein bisschen Übung schaffst du das auch '
+        'so schnell. ' + SPRUCH)),
 ]
+
+
+def pause(sc):
+    return sc.get('pause', PAUSE)
 
 
 # ---------------------------------------------------------------- Ton und Zeitplan
@@ -90,14 +103,22 @@ def ton_und_zeitplan():
         sc['_starts'] = al['character_start_times_seconds']
         sc['_skala'] = len(sc['_starts']) / max(len(sc['text']), 1)
         sc['_lead'] = a / R.SR
-        # Atempausen: nach Satzende 0,4 s, nach Doppelpunkt 0,15 s (Schnitt mitten in der Stille zwischen den Wörtern)
+        # Atempausen: nach Satzende 0,35 s, nach Doppelpunkt 0,15 s – aber NUR, wo der Ton wirklich still ist.
+        # Die Zeitmarken sind nur auf ≈ 40 ms genau, und oft spricht die Stimme ohne Lücke weiter; ein Schnitt dort
+        # zerhackt ein Wort (Nutzer 04.11.: „mehrere Sprechabsetzer“). Gemessen: 25 von 41 alten Schnitten lagen im Wort.
         enden, txt, pausen = al['character_end_times_seconds'], sc['text'], []
+        schwelle = 20 * np.log10(np.abs(x).max()) - 42      # 42 dB unter der Spitze gilt als Stille
         for i in range(len(txt) - 2):
             if txt[i] in '.?!:' and txt[i + 1] == ' ':
                 j = min(int(round(i * sc['_skala'])), len(enden) - 1)
                 j2 = min(int(round((i + 2) * sc['_skala'])), len(enden) - 1)
-                tc = (enden[j] + sc['_starts'][j2]) / 2 / CFG['tempo'] - sc['_lead']
-                pausen.append((tc, 0.15 if txt[i] == ':' else 0.4))
+                von = enden[j] / CFG['tempo'] - sc['_lead'] - 0.03
+                bis = sc['_starts'][j2] / CFG['tempo'] - sc['_lead'] + 0.06
+                tc = stille_stelle(x, von, bis, schwelle)
+                if ATEMPAUSEN and tc is not None:
+                    pausen.append((tc, 0.15 if txt[i] == ':' else 0.35))
+        grenzen = sum(1 for i in range(len(txt) - 2) if txt[i] in '.?!:' and txt[i + 1] == ' ')
+        sc['_pausen_bericht'] = f'{len(pausen)} von {grenzen} Satzgrenzen mit Pause'
         stuecke_x, letzt = [], 0
         for tc, d in pausen:
             k = int(tc * R.SR)
@@ -107,10 +128,24 @@ def ton_und_zeitplan():
         sc['_pausen'] = pausen
         sc['start'] = t
         sc['dauer'] = len(x) / R.SR
-        stuecke += [x, np.zeros(int(PAUSE * R.SR), np.float32)]
-        t += sc['dauer'] + PAUSE
+        stuecke += [x, np.zeros(int(pause(sc) * R.SR), np.float32)]
+        t += sc['dauer'] + pause(sc)
     stuecke.append(np.zeros(int(NACHLAUF * R.SR), np.float32))
     return np.concatenate(stuecke), t + NACHLAUF
+
+
+def stille_stelle(x, von, bis, schwelle):
+    """Leiseste Stelle (10-ms-Fenster) zwischen `von` und `bis` in Sekunden, falls sie unter `schwelle` dB liegt."""
+    a, b = int(max(0.0, von) * R.SR), int(bis * R.SR)
+    fenster, schritt = int(0.01 * R.SR), int(0.0025 * R.SR)
+    if b - a < fenster:
+        return None
+    bestes, ort = 0.0, None
+    for k in range(a, b - fenster, schritt):
+        pegel = 20 * np.log10(np.sqrt(np.mean(x[k:k + fenster] ** 2)) + 1e-9)
+        if ort is None or pegel < bestes:
+            bestes, ort = pegel, k + fenster // 2
+    return ort / R.SR if bestes < schwelle else None
 
 
 def C(sc, wort, nach=None):
@@ -481,6 +516,14 @@ def s_warum(b, sc, t):
              k16=C(sc, 'sechzehn plus acht'), k24=C(sc, 'vierundzwanzig Kästchen'), lang=C(sc, 'also mal zehn'),
              uebrig=C(sc, 'Übrig'))
     s1, s2, s3 = C(sc, 'Schritt eins'), C(sc, 'zehn breit'), C(sc, 'Übrig')
+    weg = 1 - ein(t, T['wachsen'] - 0.5, 0.4)               # Brücke („Klingt nach Zauberei? Ist es nicht.“) links groß
+    if weg > 0:
+        teile = BRUECKE.split('? ', 1)
+        if len(teile) == 2:
+            b.text(teile[0] + '?', 400, 300, 50, INK, INTER_X, alpha=weg * ein(t, 0.0))
+            b.text(teile[1], 400, 380, 50, TEAL, INTER_X, alpha=weg * ein(t, C(sc, teile[1])))
+        else:
+            b.text(BRUECKE, 400, 340, 44, INK, INTER_X, alpha=weg * ein(t, 0.0))
     flaechen(b, t, 'B', T, 250, 132)
     zeilen = trick_zeilen(-1, -1, -1, -1, -1, -1, [(s1, s2), (s2, s3), (s3, sc['dauer'] + 2)])
     schritte(b, t, 780, 120, 440, zeilen, (ERG288, -1), dim=True)
@@ -641,6 +684,20 @@ def s_merke(b, sc, t):
     einblenden(b, [('= ', INK), ('182', GRUEN)], 945, 530, 56, t, te + 5.1)
 
 
+def s_schluss(b, sc, t):
+    """Übung mit Lösung bleibt stehen, darunter der Motivationssatz."""
+    m = next(x for x in SZENEN if x['id'] == 'merke')
+    s_merke(b, m, m['dauer'] + 30)
+    a = ein(t, 0.1)
+    if a > 0:
+        band(b, 190, 604 + 10 * (1 - a), 1090, 684 + 10 * (1 - a), TEAL, 0.94 * a, r=20)
+        w = ein(t, C(sc, 'Mit ein bisschen'), 0.4)
+        b.text('Länger als drei Sekunden? Ganz normal.', 640, 644 - 16 * w, 30, '#ffffff', INTER_X, alpha=a * (1 - w))
+        b.text('Mit ein bisschen Übung schaffst du das auch.', 640, 628, 25, '#ffffff', INTER, alpha=a * w)
+        a2 = ein(t, C(sc, SPRUCH))
+        b.text(SPRUCH, 640, 660 + 10 * (1 - a), 32, '#ffffff', INTER_X, alpha=a * a2, skala=0.85 + 0.15 * zurueck(a2))
+
+
 KLAENGE = {  # Stichwort (oder '#ende' = Ende des Sprechtexts), Klang, Versatz in s – passend zu den Einblendungen
     'hook': [('drei Sekunden', 'tick', 0), ('drei Sekunden', 'tick', 1), ('drei Sekunden', 'tick', 2),
              ('drei Sekunden', 'ding', 3.0)],
@@ -653,6 +710,7 @@ KLAENGE = {  # Stichwort (oder '#ende' = Ende des Sprechtexts), Klang, Versatz i
     'vorsicht': [('und nicht zweihundert', 'tief', 0), ('fünf mal vier', 'plopp', 0), ('Zusammen', 'ding', 0)],
     'merke': [('Und jetzt du', 'plopp', 0), ('#ende', 'tick', 0.2), ('#ende', 'tick', 1.2), ('#ende', 'tick', 2.2),
               ('#ende', 'ding', 5.3)],
+    'schluss': [('Mit ein bisschen', 'plopp', 0), (SPRUCH, 'ding', 0.2)],
 }
 
 
@@ -701,23 +759,38 @@ def klangspur(n_samples):
 
 
 ZEICHNER = {'hook': s_hook, 'regel': s_regel, 'warum': s_warum, 'andersrum': s_andersrum, 'sonderfall': s_sonderfall,
-            'vorsicht': s_vorsicht, 'merke': s_merke}
+            'vorsicht': s_vorsicht, 'merke': s_merke, 'schluss': s_schluss}
 
 
 # ---------------------------------------------------------------- Rahmen: Kapitelname und Fortschritt
+def kapitel():
+    """Kapitel = Szenen, ein Anhang (anhang=True) zählt zum vorigen: [(nummer, start, dauer)]."""
+    aus = []
+    for s in SZENEN:
+        d = s['dauer'] + pause(s)
+        if s.get('anhang') and aus:
+            n, st, dd = aus[-1]
+            aus[-1] = (n, st, dd + d)
+        else:
+            aus.append((len(aus), s['start'], d))
+    return aus
+
+
 def rahmen(b, i, tl, t):
     sc = SZENEN[i]
-    a = ein(tl, 0, 0.4)
-    if i > 0:
+    nr = sum(1 for s in SZENEN[:i + 1] if not s.get('anhang')) - 1
+    a = 1.0 if sc.get('anhang') else ein(tl, 0, 0.4)
+    if nr > 0:
         b.kreis(78, 46, 17, TEAL, alpha=a)
-        b.text(str(i), 78, 46, 21, '#ffffff', INTER_X, alpha=a)
-    b.text(sc['kicker'].upper(), 106 if i > 0 else 60, 46, 22, GRAU, INTER_X, anker='l', alpha=a)
-    gesamt = sum(s['dauer'] + PAUSE for s in SZENEN)
+        b.text(str(nr), 78, 46, 21, '#ffffff', INTER_X, alpha=a)
+    b.text(sc['kicker'].upper(), 106 if nr > 0 else 60, 46, 22, GRAU, INTER_X, anker='l', alpha=a)
+    kap = kapitel()
+    gesamt = sum(d for _, _, d in kap)
     x, y = 60, 700
-    for s in SZENEN:
-        w = (1160 - 6 * (len(SZENEN) - 1)) * (s['dauer'] + PAUSE) / gesamt
+    for _, st, d in kap:
+        w = (1160 - 6 * (len(kap) - 1)) * d / gesamt
         b.linie([(x, y), (x + w, y)], HELL, 5)
-        f = klemm((t - s['start']) / (s['dauer'] + PAUSE))
+        f = klemm((t - st) / d)
         if f > 0:
             b.linie([(x, y), (x + w * f, y)], TEAL, 5)
         x += w + 6
@@ -725,7 +798,7 @@ def rahmen(b, i, tl, t):
 
 def szene_bei(t):
     for i, sc in enumerate(SZENEN):
-        if t < sc['start'] + sc['dauer'] + PAUSE:
+        if t < sc['start'] + sc['dauer'] + pause(sc):
             return i
     return len(SZENEN) - 1
 
@@ -741,7 +814,7 @@ def bild(t):
     i = szene_bei(t)
     sc = SZENEN[i]
     out = zeichne(i, t - sc['start'], t)
-    ende = sc['start'] + sc['dauer'] + PAUSE
+    ende = sc['start'] + sc['dauer'] + pause(sc)
     if i + 1 < len(SZENEN) and t > ende - 0.4:             # weiche Überblendung am Ende der Pause
         out = Image.blend(out, zeichne(i + 1, 0.0, t), glatt((t - (ende - 0.4)) / 0.4))
     return out
@@ -766,7 +839,7 @@ def main():
     print(f'Länge {gesamt:.1f} s, Wörter {sum(len(s["text"].split()) for s in SZENEN)}, '
           f'Zeichen {sum(len(s["text"]) for s in SZENEN)}')
     for sc in SZENEN:
-        print(f'  {sc["id"]:11s} {sc["start"]:6.1f} s  +{sc["dauer"]:.1f}')
+        print(f'  {sc["id"]:11s} {sc["start"]:6.1f} s  +{sc["dauer"]:.1f}   {sc["_pausen_bericht"]}')
     if '--bild' in args:
         for s in args[args.index('--bild') + 1].split(','):
             bild(float(s)).resize((1280, 720), Image.LANCZOS).save(ziel.replace('.mp4', f'_{s}.png'))
