@@ -541,7 +541,8 @@ def flaechen(b, t, wandert, T, RX, RY):
             a = zurueck(p(t, T[name], 0.5)) if name in T else 1.0
             if name != 'D':
                 a *= 1 - lang
-            beschriftung(b, rechnung, wert, lx, ly, a, 32 if name in 'CD' else 36)
+            gross = mix(32, 36, lang) if name == 'D' else 32 if name == 'C' else 36   # 48 und 240 gleich groß
+            beschriftung(b, rechnung, wert, lx, ly, a, gross)
     if 'wachsen' in T:                                     # zuerst 18 und 16 an den Kanten
         a1 = ein(t, T['wachsen'] + 0.3) * (1 - ein(t, T['teile'], 0.3))
         zeile(b, [('1', INK), ('8', CB)], RX + 9 * U, RY - 26, 32, INTER_X, alpha=a1)
@@ -561,16 +562,16 @@ def flaechen(b, t, wandert, T, RX, RY):
         klammer_senkrecht(b, RY, RY + ende, RX - 64, ck, a16)
         b.text('16', RX - 92, RY + ende / 2, 30, INK, INTER_X, alpha=a16 * (1 - g24))
         b.text('24', RX - 94, RY + ende / 2, 34, TEAL, INTER_X, alpha=a16 * g24)
-        mitte, rech = (RX + 5 * U, RY + 12 * U), '24 · 10'
+        mitte, rech = (RX + 5 * U, RY + 13 * U), '24 · 10'    # auf einer Linie mit „6 · 8 / 48“ rechts daneben
     else:
         b.text('6', RX + 21 * U, RY - 26, 30, CA, INTER_X, alpha=a2 * pd)
         ende = mix(18, 24, g24) * U
         klammer_waagrecht(b, RX, RX + ende, RY - 52, ck, a16)
         b.text('18', RX + ende / 2, RY - 72, 30, INK, INTER_X, alpha=a16 * (1 - g24))
         b.text('24', RX + ende / 2, RY - 74, 34, TEAL, INTER_X, alpha=a16 * g24)
-        mitte, rech = (RX + 12 * U, RY + 5 * U), '10 · 24'
+        mitte, rech = (RX + 14 * U, RY + 5 * U), '10 · 24'    # genau über „6 · 8 / 48“
     if lang > 0:                                           # die 240 steht in der Fläche, wie die Werte der Teile
-        beschriftung(b, rech, '240', mitte[0], mitte[1], zurueck(p(t, T['lang'] + 0.2, 0.5)), 54)
+        beschriftung(b, rech, '240', mitte[0], mitte[1], zurueck(p(t, T['lang'] + 0.2, 0.5)), 36)
     if 'uebrig' in T:
         puls = math.sin(math.pi * p(t, T['uebrig'], 0.7))
         if puls > 0:

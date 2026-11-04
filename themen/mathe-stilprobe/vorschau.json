@@ -1,12 +1,20 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Neu oben: Kreis, 240-Fläche und Klammern überarbeitet. Bitte anschauen und „passt“ oder „ändern“ tippen.",
+ "aufgabe": "Neu oben: 240 an der 48 ausgerichtet. Bitte anschauen und „passt“ oder „ändern“ tippen.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel11/regel_720p.mp4",
-   "titel": "Neu: Kreis mittig, 240 in der Fläche, eine Klammer (2:50)",
-   "stand": "04.11., 18:25",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel12/regel_720p.mp4",
+   "titel": "Neu: 240 bündig mit der 48 (2:50)",
+   "stand": "04.11., 20:25",
    "pruefen": true,
+   "poster_bei": 73,
+   "notiz": "Die 240 steht jetzt bündig mit der 48 und in derselben Größe: bei „Warum klappt das?“ auf einer Linie daneben („24 · 10 / 240“ neben „6 · 8 / 48“), beim „Andersherum“ genau darüber („10 · 24 / 240“ über „6 · 8 / 48“). Die 48 bleibt, wo sie war. Sonst alles wie in der Fassung darunter."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel11/regel_720p.mp4",
+   "titel": "Vorher: 240 nicht an der 48 ausgerichtet (2:50)",
+   "stand": "04.11., 18:25",
+   "pruefen": false,
    "poster_bei": 69.5,
    "notiz": "Die Acht (und später 6 und 8) ist jetzt genau mittig eingekreist; der Kreis schneidet die Nachbarziffer nicht mehr, der Strich unter 18 verschwindet, sobald der Kreis kommt. Die 240 steht jetzt in der Fläche: Die drei Teile werden türkis wie Schritt 2 und tragen „24 · 10 / 240“ wie die anderen Teile, kein Kasten mehr obendrauf. Links nur noch eine Klammer, die von 16 auf 24 wächst (beim Andersherum oben von 18 auf 24). Dasselbe beim Sonderfall (200) und bei Vorsicht (190). Beim Sonderfall erscheint das Rechteck schon bei „Einer zusammen zehn“, mit Klammer „Einer: 10 Spalten“, die auf 20 wächst. Ton wie im Zwischenstand (ohne Knistern, ohne Boing). Der Merkzettel ist noch der alte, bis ElevenLabs wieder Zeichen hat."
   },
