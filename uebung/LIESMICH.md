@@ -22,7 +22,7 @@ Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das �
   einmal plus genau eine Wiederholung, nie 15 · 15, frühestens 4 Aufgaben später; nie dasselbe Paar direkt hintereinander,
   auch nicht verdreht (12 · 18 → 18 · 12). Nutzerwunsch 04.11., geprüft über 2000 Runden in `tests/uebung.mjs`.
 
-**Nächste Version: 1.7** (Nutzerwunsch 04.11., nach 0.6 folgt nicht 0.7). Die Update-Prüfung vergleicht nur auf Gleichheit, der Sprung ist unkritisch.
+**Versionen:** nach 0.6 folgt 1.7 (Nutzerwunsch 04.11.). Die Update-Prüfung vergleicht nur auf Gleichheit, der Sprung ist unkritisch.
 
 ## Sprechen
 - **Zeitmessung beim Sprechen (v0.5, Messung 04.11.):** gezählt wird bis zum Ende des letzten Wortes, nicht bis die
@@ -36,6 +36,9 @@ Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das �
   Grund für die Kontrolle: Im Sonderfall beginnt jede Antwort mit „zweihundert“ – wer das sofort sagt und dabei rechnet,
   hat ein sehr kurzes „erstes Wort“; die wahre Rechenzeit liegt zwischen „erstes Wort“ und „nach …hundert“.
   „Bester Schnitt“ getrennt nach Tippen und Sprechen, beim Sprechen nur Runden mit `mess: 3`.
+- **v1.7:** Ergebnisseite zeigt nur noch „Ø … je Aufgabe · schnellste …“ (Nutzerwunsch 04.11.: Erklärtext und
+  Kontrollzeilen waren zu viel). Die Kontrollwerte `bisRest`, `bisEnde`, `warte` stehen weiter im Verlauf
+  (localStorage `kopfrechnen.runden`) und je Aufgabe in `runde.ergebnisse` (`zweiter`, `schluss`, `roh`).
 Erkennung im Gerät mit Vosk (WebAssembly) und dem kleinen deutschen Modell, beides von der **Würfel-App** geladen
 (`/wuerfel/sprache/` auf derselben Adresse luperttrading-lab.github.io – einmal geladen, nutzen beide Apps denselben
 Speicher). Apples eigene Erkennung ist in Home-Bildschirm-Apps gesperrt (WebKit-Bug 225298). Grammatik: nur Zahlwörter

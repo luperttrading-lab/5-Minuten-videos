@@ -122,9 +122,6 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .ergebnis { text-align: center; }
 .ergebnis .gross { font-size: 40px; font-weight: 850; margin: 4px 0 0; }
 .ergebnis .zeit { font-size: 22px; font-weight: 700; margin: 6px 0 0; }
-.ergebnis .zeit small { display: block; margin-top: 8px; font-size: 15px; font-weight: 500; line-height: 1.45; color: var(--grau); }
-.ergebnis .zeit small b { color: var(--ink); }
-.ergebnis .zeit small.teil { margin-top: 6px; font-size: 14px; }
 .nobr { white-space: nowrap; }
 .ergebnis .zeit b { color: var(--c10); }
 .ergebnis .ziel { color: var(--grau); margin: 6px 0 0; font-size: 15px; }
@@ -229,7 +226,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 
 <script src="aufgaben.js"></script>
 <script>
-const APP_VERSION = '0.6';          // bei JEDER Änderung hochzählen
+const APP_VERSION = '1.7';          // bei JEDER Änderung hochzählen
 const $ = s => document.querySelector(s);
 const ANZAHL = 10;
 const ZIEL = 3.0;                    // Sekunden je Aufgabe, wie im Video („in drei Sekunden“)
@@ -430,14 +427,12 @@ function zeigeEnde(neu) {
   const frueher = alle.filter((x, k) => k !== runde.platz && x.uebung === stand.uebung && x.richtig >= 8 && vergleichbar(x, eingabe)).map(x => x.schnitt);
   const rekord = richtig >= 8 && frueher.length && schnitt < Math.min(...frueher);
   const eintrag = { uebung: stand.uebung, stufe: stand.stufe, zeit: Date.now(), anzahl: e.length, richtig, schnitt, eingabe,
-    mess: 3, ...(bisEnde !== null ? { bisEnde } : {}) };
+    mess: 3, ...(bisEnde !== null ? { bisEnde, warte, ...(bisRest !== null ? { bisRest } : {}) } : {}) };   // Kontrollwerte nur gespeichert
   if (neu) alle.push(eintrag); else alle[runde.platz] = Object.assign(alle[runde.platz] || eintrag, { richtig });
   schreib(RUNDEN, alle.slice(-200));
   $('#e-richtig').textContent = `${richtig} von ${e.length} richtig`;
-  $('#e-zeit').innerHTML = `Ø <b>${sek(schnitt)}</b> je Aufgabe · schnellste ${sek(schnellste)}`
-    + (bisEnde !== null ? `<small>gemessen bis zu deinem ersten Wort –<br>Sprechen und Erkennung zählen nicht</small>`
-      + `<small class="teil">${bisRest !== null ? `bis nach „…hundert“: Ø ${sek(bisRest)}<br>` : ''}bis zum Ende der Antwort: Ø ${sek(bisEnde)}`
-      + `<br>Erkennung danach: Ø ${sek(warte)}</small>` : '');
+  // Nur die Hauptzahl (Nutzerwunsch 04.11.: Erklärtext und Kontrollzeilen sind zu viel); die Kontrollwerte stehen im Verlauf
+  $('#e-zeit').innerHTML = `Ø <b>${sek(schnitt)}</b> je Aufgabe · schnellste ${sek(schnellste)}`;
   $('#e-ziel').textContent = rekord ? '🏆 Neuer bester Schnitt!' :
     schnitt <= ZIEL * 1000 ? 'Unter drei Sekunden – so schnell wie im Video!' : 'Ziel: unter drei Sekunden je Aufgabe.';
   const schnell = schnitt <= ZIEL * 1000, fehlerfrei = richtig === e.length;

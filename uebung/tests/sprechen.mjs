@@ -107,7 +107,7 @@ const ab = r.e.filter(x => x.schluss != null);
 ok(ab.length >= 9 && ab.every(x => x.dauer <= x.zweiter && x.zweiter < x.schluss && x.schluss < x.roh),
   `Gezählt wird bis zum ersten Wort: Ø ${f2(mittel(ab.map(x => x.dauer)))} s · bis nach „…hundert“ Ø ${f2(mittel(ab.map(x => x.zweiter)))} s`
   + ` · bis Ende Ø ${f2(mittel(ab.map(x => x.schluss)))} s · bis zur Erkennung Ø ${f2(mittel(ab.map(x => x.roh)))} s`);
-ok(r.zeit.includes('ersten Wort') && r.zeit.includes('hundert') && r.zeit.includes('Erkennung danach'), `Ergebnis: „${r.zeit}“`);
+ok(/^Ø \d+,\d s je Aufgabe · schnellste \d+,\d s$/.test(r.zeit.trim()), `Ergebnis nur mit der Hauptzahl: „${r.zeit.trim()}“`);
 ok(konsole.length === 0, 'Keine Fehler in der Konsole' + (konsole.length ? ': ' + konsole.join(' | ') : ''));
 await browser.close(); server.close();
 console.log(fehler ? `${fehler} Fehler` : 'Alles grün');
