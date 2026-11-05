@@ -27,6 +27,14 @@ FASSUNGEN = {
               [('1', G.CB, ['Eine Einerziffer zur anderen', 'Zahl addieren – egal, welche'], 'Eine EINERziffer'),
                ('2', G.TEAL, ['Eine Null anhängen'], 'Eine Null'),
                ('3', G.CD, ['Beide Einerziffern', 'multiplizieren und dazuzählen'], 'Beide EINERziffern')]),
+    # Messung 05.11.: In „Beide Einerziffern multiplizieren“ lag der Satzakzent auf „Beide“ (≈ 170 Hz), „Einerziffern“ im Tal
+    # (≈ 116 Hz) – daher die flache, falsch klingende Betonung. Ohne „Beide“ trägt „Einerziffern“ den Akzent (Ei 173 Hz,
+    # zif 138 Hz: +3,9 Halbtöne). Aufnahme: seed 22 (Punkt 1 ebenfalls richtig, +2,1 Halbtöne).
+    'malnehmen': ('Merk dir die drei Schritte: Eine Einerziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. '
+                  'Die Einerziffern malnehmen und dazuzählen. Und jetzt du: dreizehn mal vierzehn.',
+                  [('1', G.CB, ['Eine Einerziffer zur anderen', 'Zahl addieren – egal, welche'], 'Eine Einerziffer'),
+                   ('2', G.TEAL, ['Eine Null anhängen'], 'Eine Null'),
+                   ('3', G.CD, ['Die Einerziffern malnehmen', 'und dazuzählen'], 'Die Einerziffern')]),
     'den': ('Merk dir die drei Schritte: Den Einer zur anderen Zahl dazuzählen, egal, welchen. Eine Null anhängen. '
             'Die beiden Einer malnehmen und dazuzählen. Und jetzt du: dreizehn mal vierzehn.',
             [('1', G.CB, ['Den Einer zur anderen Zahl', 'dazuzählen – egal, welchen'], 'Den Einer'),

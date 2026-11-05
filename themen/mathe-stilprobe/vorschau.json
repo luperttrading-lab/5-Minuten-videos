@@ -1,22 +1,14 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben: zwei Hörproben nur für die Aussprache von „Einerziffer“ (je 20 s). Bei der besseren „passt“, sonst bei beiden „ändern“.",
+ "aufgabe": "Oben: eine Hörprobe (20 s) – Punkt 3 jetzt „Die Einerziffern malnehmen und dazuzählen“, Betonung gemessen besser. Bitte „passt“ oder „ändern“.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hoerprobe/merke_bindestrich.mp4",
-   "titel": "Hörprobe Aussprache: „Einer-Ziffer“ mit Bindestrich",
-   "stand": "05.11., 06:20",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hoerprobe/merke_malnehmen.mp4",
+   "titel": "Hörprobe: „Die Einerziffern malnehmen und dazuzählen“ (gemessen besser)",
+   "stand": "05.11., 06:45",
    "pruefen": true,
-   "poster_bei": 19,
-   "notiz": "Gleicher Text und gleicher Merkzettel, nur bekommt die Stimme „Einer-Ziffer“ und „Einer-Ziffern“ mit Bindestrich. Das soll die Betonung auf „Einer“ legen. Achte auf Punkt 3 („Beide Einerziffern multiplizieren …“, etwa bei 0:09). „passt“ = diese Aussprache ins Video."
-  },
-  {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hoerprobe/merke_gross.mp4",
-   "titel": "Hörprobe Aussprache: „EINERziffer“ mit Großschreibung",
-   "stand": "05.11., 06:20",
-   "pruefen": true,
-   "poster_bei": 19,
-   "notiz": "Gleicher Text und gleicher Merkzettel, nur bekommt die Stimme „EINERziffer“ und „EINERziffern“ – großgeschriebene Silben betont ElevenLabs stärker. Achte auf Punkt 3 (etwa bei 0:09). „passt“ = diese Aussprache ins Video."
+   "poster_bei": 9.5,
+   "notiz": "Punkt 3 ohne „Beide“: Das „Beide“ zog den Satzakzent auf sich, „Einerziffern“ lag im Tal (116 Hz) und klang flach. Jetzt trägt „Einerziffern“ den Akzent: „Ei“ 173 Hz, „zif“ 138 Hz, also +3,9 Halbtöne (vorher −0,1). Punkt 1 ist in dieser Aufnahme ebenfalls richtig betont (+2,1 Halbtöne, „Ei“ länger). Beste von drei Aufnahmen. „passt“ = so ins Video."
   },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel14/regel_720p.mp4",
