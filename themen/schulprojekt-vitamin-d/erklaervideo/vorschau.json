@@ -1,70 +1,70 @@
 {
  "titel": "Vitamin D · Erklärvideo in acht Stilen",
- "aufgabe": "Zweite Fassung, jetzt alle acht Stile: Jedes Kapitel hat eigene Bilder, die alle 6–12 Sekunden wechseln. Sonnenbad mit Mann und Frau, glatte Haut ohne Funken. Bei deinem Favoriten „passt“ tippen, bei Fehlern „ändern“ mit Notiz.",
+ "aufgabe": "Neue Fassung mit geändertem Text, alle acht Stile. Oben deine Favoriten G und I. Bei deinem Favoriten „passt“, bei Fehlern „ändern“ mit Notiz.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_C.mp4",
-   "titel": "C  Papierschnitt (neu)",
-   "stand": "03.11., 17:46",
+   "datei": "vorschau_neu_G.mp4",
+   "titel": "G  Aquarell und Tusche – neuer Text",
+   "stand": "05.11., 13:15",
    "pruefen": true,
    "poster_bei": 60,
-   "notiz": "36 Bilder. Laborbild: älteres Bild, weil die Schrift im neuen am Rand abgeschnitten war."
+   "notiz": "Neuer Text (05.11.): Kalzium-Satz eindeutig (0:36), Fisch-Tipp mit Quecksilber-Hinweis (0:51), „fast alle zwanzig Nanogramm, aber nur jeder Vierte zweiunddreißig“ (1:12), Winter „kein Vitamin D“ mit 45 Grad (1:32), Einheiten-Warnung „sonst hältst du einen Mangel fälschlich für einen guten Wert“ (2:14). 5:37, Ton 128 kbit/s direkt aus der Tonspur."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_D.mp4",
-   "titel": "D  Knetfiguren (neu)",
-   "stand": "03.11., 17:46",
+   "datei": "vorschau_neu_I.mp4",
+   "titel": "I  3D-Trickfilm – neuer Text",
+   "stand": "05.11., 13:15",
    "pruefen": true,
    "poster_bei": 60,
-   "notiz": "36 Bilder. Haut jetzt glatt (kein „Ausschlag“ mehr)."
+   "notiz": "Neuer Text (05.11.): Kalzium-Satz eindeutig (0:36), Fisch-Tipp mit Quecksilber-Hinweis (0:51), „fast alle zwanzig Nanogramm, aber nur jeder Vierte zweiunddreißig“ (1:12), Winter „kein Vitamin D“ mit 45 Grad (1:32), Einheiten-Warnung „sonst hältst du einen Mangel fälschlich für einen guten Wert“ (2:14). 5:37, Ton 128 kbit/s direkt aus der Tonspur."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_E.mp4",
-   "titel": "E  Isometrische Miniaturwelt (neu)",
-   "stand": "03.11., 17:46",
+   "datei": "vorschau_neu_C.mp4",
+   "titel": "C  Papierschnitt – neuer Text",
+   "stand": "05.11., 13:15",
    "pruefen": true,
    "poster_bei": 60,
-   "notiz": "36 Bilder."
+   "notiz": "Neuer Text (05.11.): Kalzium-Satz eindeutig (0:36), Fisch-Tipp mit Quecksilber-Hinweis (0:51), „fast alle zwanzig Nanogramm, aber nur jeder Vierte zweiunddreißig“ (1:12), Winter „kein Vitamin D“ mit 45 Grad (1:32), Einheiten-Warnung „sonst hältst du einen Mangel fälschlich für einen guten Wert“ (2:14). 5:37, Ton 128 kbit/s direkt aus der Tonspur."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_G.mp4",
-   "titel": "G  Aquarell und Tusche (neu)",
-   "stand": "03.11., 17:46",
+   "datei": "vorschau_neu_D.mp4",
+   "titel": "D  Knetfiguren – neuer Text",
+   "stand": "05.11., 13:15",
    "pruefen": true,
    "poster_bei": 60,
-   "notiz": "35 Bilder. Ein Strandbild weggelassen (knapper Bikini von hinten)."
+   "notiz": "Neuer Text (05.11.): Kalzium-Satz eindeutig (0:36), Fisch-Tipp mit Quecksilber-Hinweis (0:51), „fast alle zwanzig Nanogramm, aber nur jeder Vierte zweiunddreißig“ (1:12), Winter „kein Vitamin D“ mit 45 Grad (1:32), Einheiten-Warnung „sonst hältst du einen Mangel fälschlich für einen guten Wert“ (2:14). 5:37, Ton 128 kbit/s direkt aus der Tonspur."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_H.mp4",
-   "titel": "H  Comic (Ligne claire) (neu)",
-   "stand": "03.11., 17:46",
+   "datei": "vorschau_neu_E.mp4",
+   "titel": "E  Isometrische Miniaturwelt – neuer Text",
+   "stand": "05.11., 13:15",
    "pruefen": true,
    "poster_bei": 60,
-   "notiz": "36 Bilder."
+   "notiz": "Neuer Text (05.11.): Kalzium-Satz eindeutig (0:36), Fisch-Tipp mit Quecksilber-Hinweis (0:51), „fast alle zwanzig Nanogramm, aber nur jeder Vierte zweiunddreißig“ (1:12), Winter „kein Vitamin D“ mit 45 Grad (1:32), Einheiten-Warnung „sonst hältst du einen Mangel fälschlich für einen guten Wert“ (2:14). 5:37, Ton 128 kbit/s direkt aus der Tonspur."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_I.mp4",
-   "titel": "I  3D-Trickfilm (neu)",
-   "stand": "03.11., 17:46",
+   "datei": "vorschau_neu_H.mp4",
+   "titel": "H  Comic (Ligne claire) – neuer Text",
+   "stand": "05.11., 13:15",
    "pruefen": true,
    "poster_bei": 60,
-   "notiz": "36 Bilder."
+   "notiz": "Neuer Text (05.11.): Kalzium-Satz eindeutig (0:36), Fisch-Tipp mit Quecksilber-Hinweis (0:51), „fast alle zwanzig Nanogramm, aber nur jeder Vierte zweiunddreißig“ (1:12), Winter „kein Vitamin D“ mit 45 Grad (1:32), Einheiten-Warnung „sonst hältst du einen Mangel fälschlich für einen guten Wert“ (2:14). 5:37, Ton 128 kbit/s direkt aus der Tonspur."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_J.mp4",
-   "titel": "J  Skizze im Schulheft (neu)",
-   "stand": "03.11., 18:16",
+   "datei": "vorschau_neu_J.mp4",
+   "titel": "J  Skizze im Schulheft – neuer Text",
+   "stand": "05.11., 13:15",
    "pruefen": true,
    "poster_bei": 60,
-   "notiz": "36 Bilder, jetzt vollständig."
+   "notiz": "Neuer Text (05.11.): Kalzium-Satz eindeutig (0:36), Fisch-Tipp mit Quecksilber-Hinweis (0:51), „fast alle zwanzig Nanogramm, aber nur jeder Vierte zweiunddreißig“ (1:12), Winter „kein Vitamin D“ mit 45 Grad (1:32), Einheiten-Warnung „sonst hältst du einen Mangel fälschlich für einen guten Wert“ (2:14). 5:37, Ton 128 kbit/s direkt aus der Tonspur."
   },
   {
-   "datei": "/tmp/claude-0/-home-user/8d8951d7-cc12-56dd-aecb-507200373dcb/scratchpad/erklaer2/vorschau_L.mp4",
-   "titel": "L  Pixel-Art (neu)",
-   "stand": "03.11., 18:16",
+   "datei": "vorschau_neu_L.mp4",
+   "titel": "L  Pixel-Art – neuer Text",
+   "stand": "05.11., 13:15",
    "pruefen": true,
    "poster_bei": 60,
-   "notiz": "36 Bilder, nach dem Auffüllen der Credits nachgeholt."
+   "notiz": "Neuer Text (05.11.): Kalzium-Satz eindeutig (0:36), Fisch-Tipp mit Quecksilber-Hinweis (0:51), „fast alle zwanzig Nanogramm, aber nur jeder Vierte zweiunddreißig“ (1:12), Winter „kein Vitamin D“ mit 45 Grad (1:32), Einheiten-Warnung „sonst hältst du einen Mangel fälschlich für einen guten Wert“ (2:14). 5:37, Ton 128 kbit/s direkt aus der Tonspur."
   }
  ]
 }
