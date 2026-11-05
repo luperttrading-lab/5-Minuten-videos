@@ -201,7 +201,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Muss vor dem Hochladen im Video sein. Abo-Zeile (Probe 05.11.): links ein gezeichneter Knopf „Abonnieren“, auf den beim
   Wort „Abonnier“ eine Emoji-Hand „👆“ (`zeigehand`, Bild `HAND_BILD` in `bilder/`, Microsoft Fluent Emoji, MIT-Lizenz in
   `bilder/LIZENZ_fluent_emoji.txt`; selbst gezeichnete Hand verworfen: „nicht schön“) schräg von links unten tippt (Klang `klick`, Spitze ≈ 0,16 wie die übrigen
-  Geräusche), danach „Abonniert“ mit Häkchen. Welche Hand (Form, Farbe), wählt der Nutzer noch aus Bildbögen im Chat. Finger statt
+  Geräusche) und eine Tipp-Welle auslöst; danach weißer Knopf mit grünem Rand und grüner Schrift „✓ Abonniert“ (bleibt
+  deutlich, statt wie bei YouTube grau zu werden). Hand: Form „Handrücken, nach oben“, mittelhell, plastisch
+  (Nutzerwahl 05.11., `bilder/hand_fluent_3d_mittelhell.png`). Finger statt
   Mauszeiger (Nutzer 05.11.): YouTube läuft vor allem auf Handy und Fernseher, kaum am PC.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer

@@ -1061,21 +1061,29 @@ def s_abspann(b, sc, t):
     mx = x0 + w / 2
     hw, hh = w / 2 * dr * (0.85 + 0.15 * q), h / 2 * dr * (0.85 + 0.15 * q)
     an = t >= tk + 0.05
-    band(b, mx - hw, cy - hh, mx + hw, cy + hh, HELL if an else TEAL, q, r=hh)
-    if an:
-        b.text('Abonniert', mx + 20, cy, 28, INK, INTER_X, alpha=q)
+    if an:                                                 # abonniert: weiß mit grünem Rand, Schrift grün (bleibt deutlich)
+        band(b, mx - hw, cy - hh, mx + hw, cy + hh, '#ffffff', q, r=hh)
+        b.d.rounded_rectangle([(mx - hw) * K, (cy - hh) * K, (mx + hw) * K, (cy + hh) * K], radius=hh * K,
+                              outline=farbe(TEAL, 255 * q), width=int(3.5 * K))
+        b.text('Abonniert', mx + 20, cy, 28, TEAL, INTER_X, alpha=q)
         b.linie([(mx - 96, cy + 1), (mx - 86, cy + 11), (mx - 68, cy - 10)], TEAL, 6, alpha=q)
     else:
+        band(b, mx - hw, cy - hh, mx + hw, cy + hh, TEAL, q, r=hh)
         b.text('Abonnieren', mx, cy, 28, '#ffffff', INTER_X, alpha=q, skala=dr)
     rein = glatt(p(t, t_abo - 0.6, 0.7))                   # Hand kommt von links unten, tippt, zieht sich zurück
     raus = glatt(p(t, tk + 0.9, 0.5))
     f = rein * (1 - raus)
     if f > 0:
         zx, zy = x0 + 150, cy + 4                          # Fingerspitze auf dem Knopf
+        wl = p(t, tk, 0.55)                                # Tipp-Welle wie auf dem Handy-Bildschirm
+        if 0 < wl < 1:
+            rw = 12 + 58 * glatt(wl)
+            b.d.ellipse([(zx - rw) * K, (zy - rw) * K, (zx + rw) * K, (zy + rw) * K],
+                        outline=farbe(TEAL, 255 * 0.8 * (1 - wl)), width=int(4 * K))
         zeigehand(b, mix(zx - 260, zx, f) + 3 * druck, mix(zy + 300, zy, f) + 4 * druck, 1.0 - 0.04 * druck)
 
 
-HAND_BILD = os.path.join(HIER, 'bilder', 'hand_fluent_3d.png')   # Fluent Emoji (MIT, bilder/LIZENZ_fluent_emoji.txt)
+HAND_BILD = os.path.join(HIER, 'bilder', 'hand_fluent_3d_mittelhell.png')   # Nutzerwahl 05.11.: Form 1, mittelhell   # Fluent Emoji (MIT, bilder/LIZENZ_fluent_emoji.txt)
 _hand = {}
 
 
