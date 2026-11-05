@@ -1088,7 +1088,7 @@ def s_abspann(b, sc, t):
         zeigehand(b, mix(zx - 260, zx, f) + 3 * druck, mix(zy + 300, zy, f) + 4 * druck, 1.0 - 0.04 * druck)
 
 
-ABO_STIL = ('gruen', 'weiss')                              # Abo-Knopf vorher/nachher (Wahl offen, Nutzer 05.11.)
+ABO_STIL = ('weiss', 'gruen')                              # Abo-Knopf vorher weiß, nachher kräftig grün (Nutzerwahl 05.11.)
 HAND_BILD = os.path.join(HIER, 'bilder', 'hand_fluent_3d_mittelhell.png')   # Nutzerwahl 05.11.: Form 1, mittelhell   # Fluent Emoji (MIT, bilder/LIZENZ_fluent_emoji.txt)
 _hand = {}
 
