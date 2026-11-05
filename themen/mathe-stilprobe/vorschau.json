@@ -1,12 +1,12 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Neu oben: das Video mit dem Zehner-Trick im Einstieg. Bitte Anfang (bis 0:10) und Ende (ab 2:38) anschauen und „passt“ oder „ändern“ tippen.",
+ "aufgabe": "Nichts offen: Das oberste Video (Zehner-Trick, vier Sekunden) ist abgenommen.",
  "videos": [
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel18/regel_720p.mp4",
    "titel": "Neu: Zehner-Trick im Einstieg, Ziel vier Sekunden (2:58)",
    "stand": "05.11., 09:56",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 5.0,
    "notiz": "Einstieg: „Im Kopf, in vier Sekunden? Mit dem Zehner-Trick schaffst du das …“; die Uhr zählt 4 – 3 – 2 – 1, dann erscheinen „= 288“ und darunter das Band „Der Zehner-Trick“. Denkpause bei 13 · 14 vier Sekunden, Schluss „Länger als vier Sekunden? Ganz normal.“ Zum Prüfen reichen der Anfang (0:00–0:10) und das Ende ab 2:38."
   },
