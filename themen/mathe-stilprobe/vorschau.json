@@ -1,6 +1,6 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben 1 Eintrag: „passt“ oder „ändern“ bei der Karte „Einer rüber“.",
+ "aufgabe": "Nichts offen: Video, Vorschaubild-Stil, Titel und Karte „Einer rüber“ (bleibt so) sind entschieden.",
  "videos": [
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/vb/bogen_papier.mp4",
@@ -31,7 +31,7 @@
    "titel": "Aufgefallen: Karte „Der Trick“ sagt noch „Einer rüber“",
    "notiz": "In Kapitel 1–3 stehen über den Rechnungen noch die Kurzformen „Einer rüber“ und „Einer · Einer dazu“, im Merkzettel heißt es inzwischen „Eine Einerziffer zur anderen Zahl addieren“. Gesprochen wird dort der ganze Satz, gelesen nur die Kurzform. „passt“ = so lassen, „ändern“ = Überschriften an den Merkzettel angleichen (neu rendern, kein neuer Ton).",
    "stand": "05.11., 10:20",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 1
   },
   {
