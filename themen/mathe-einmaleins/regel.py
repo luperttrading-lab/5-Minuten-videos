@@ -78,7 +78,7 @@ SZENEN = [
         'zwanzig. Zusammen zweihundertzehn, nicht zweihundertzwanzig.')),
     dict(id='merke', kicker='Merke', pause=DENKPAUSE, text=(   # Nutzerwunsch 04.11.: die langen Sätze, nicht die Kurzformen
         'Merk dir die drei Schritte: Eine Einerziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. '
-        'Beide Einerziffern multiplizieren und dazuzählen. Und jetzt du: dreizehn mal vierzehn.')),
+        'Die Einerziffern malnehmen und dazuzählen. Und jetzt du: dreizehn mal vierzehn.')),
     dict(id='schluss', kicker='Merke', anhang=True, text=(   # gehört zum Kapitel „Merke“, läuft nach der Lösung
         'Hat es bei dir länger als drei Sekunden gedauert? Ganz normal. Mit ein bisschen Übung schaffst du das auch '
         'so schnell. ' + SPRUCH)),
@@ -754,7 +754,7 @@ def s_vorsicht(b, sc, t):
 MERKSAETZE = [  # Nutzerwahl 05.11. (Hörprobe): „Einerziffer“ – klingt nicht nach einer Person, Betonung stimmt
     ('1', CB, ['Eine Einerziffer zur anderen', 'Zahl addieren – egal, welche'], 'Eine Einerziffer'),
     ('2', TEAL, ['Eine Null anhängen'], 'Eine Null'),
-    ('3', CD, ['Beide Einerziffern', 'multiplizieren und dazuzählen'], 'Beide Einerziffern')]
+    ('3', CD, ['Die Einerziffern malnehmen', 'und dazuzählen'], 'Die Einerziffern')]   # ohne „Beide“: Betonung, Messung 05.11.
 
 
 def merkkarte(b, sc, t, x0=80, y0=130, w=590, nochmal=None):
@@ -790,7 +790,32 @@ def s_merke(b, sc, t):
     # Nutzerwunsch 05.11.: zum Merksatz die Rechnung sehen – jede Lösungszeile trägt die Nummer ihres Merksatzes, und der
     # Merksatz leuchtet auf, solange seine Zeile erscheint (die Übung 13 · 14 ist die Rechnung, keine Wiederholung von 16 · 18)
     merkkarte(b, sc, t, nochmal=[(zeiten[i], zeiten[i + 1]) for i in range(3)])
-    a = ein(t, tdu)
+    # Nutzerwunsch 05.11.: neben dem Merksatz gleich die Rechnung – am Beispiel aus dem Video, Zeile auf Höhe ihres Satzes
+    ab = 1 - ein(t, tdu, 0.35)                             # das Beispiel macht Platz für die Übung
+    if ab > 0:
+        karte(b, 700, 130, 490, 450, ab)
+        b.text('BEISPIEL  16 · 18', 730, 168, 22, GRAU, INTER_X, anker='l', alpha=ab)
+        mitten_y, y = [], 200
+        for _, _, z, _ in MERKSAETZE:
+            hoehe = 30 + 44 * len(z)
+            mitten_y.append(y + 15 + 22 + 22 * (len(z) - 1))
+            y += hoehe
+        bsp = [[('16', INK), (' + ', INK), ('8', CB), (' = 24', INK)], [('24 · 10 = ', INK), ('240', TEAL)],
+               [('+ ', INK), ('6', CA), (' · ', INK), ('8', CB), (' = ', INK), ('48', CD)]]
+        for i, teile in enumerate(bsp):
+            tl = C(sc, MERKSAETZE[i][3]) + 0.2
+            ai = ein(t, tl) * ab
+            if ai > 0:
+                yy = mitten_y[i] + 16 * (1 - ein(t, tl))
+                zeile(b, teile, 960, yy, 38, INTER_X, alpha=ai)
+                xk = 960 - sum(breite(s_, INTER_X, 38) for s_, _ in teile) / 2 - 30
+                b.kreis(xk, yy, 17, MERKSAETZE[i][1], alpha=ai)
+                b.text(MERKSAETZE[i][0], xk, yy, 19, '#ffffff', INTER_X, alpha=ai)
+        t288 = C(sc, 'dazuzählen') + 0.3
+        a288 = ein(t, t288) * ab
+        if a288 > 0:
+            zeile(b, [('= ', INK), ('288', GRUEN)], 960, 530 + 16 * (1 - ein(t, t288)), 56, INTER_X, alpha=a288)
+    a = ein(t, tdu + 0.3)
     karte(b, 700, 130, 490, 450, a)
     if a <= 0:
         return
