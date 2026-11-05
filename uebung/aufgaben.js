@@ -12,20 +12,30 @@ const mischen = liste => { for (let i = liste.length - 1; i > 0; i--) { const j 
 const UEBUNGEN = [
   {
     id: 'einmaleins-1119',
-    titel: '11 bis 19 mal 11 bis 19',
-    video: 'Einer rüber · mal 10 · Einer · Einer dazu',
+    titel: 'Zehner-Trick',
+    untertitel: 'Zahlen von 11 bis 19 malnehmen',
     auto: true,                                    // alle Ergebnisse dreistellig (121 … 361): nach 3 Ziffern prüfen
     antworten: [100, 399],                         // Grammatik der Spracherkennung: jede Zahl 100 … 399 (auch falsche)
     stufen: [
-      { id: 'alle', name: 'Alle Zahlen', info: 'z. B. 16 · 18', ziel: 4 },   // Ziel in s (Video: „in vier Sekunden“)
-      { id: 'zehn', name: 'Einer ergeben 10', info: 'z. B. 12 · 18 = 200 + 16', ziel: 3 },
+      { id: 'alle', name: 'Alle Zahlen', info: '16 · 18', ziel: 4 },   // Ziel in s (Video: „in vier Sekunden“)
+      { id: 'zehn', name: 'Einer ergeben 10', info: '12 · 18', ziel: 3 },
+      // Nutzerwunsch 05.11.: Quadrate und Elferreihe – beides Sonderfälle derselben Regel (gleiche Zahl, Einer 1)
+      { id: 'quadrat', name: 'Quadrate', info: '16 · 16', ziel: 4 },
+      { id: 'elf', name: 'Mal 11', info: '17 · 11', ziel: 2 },
     ],
     erzeuge(stufe, anzahl) {
       const paare = [];                            // ohne Reihenfolge: [12, 18] steht für 12 · 18 und 18 · 12
       for (let x = 11; x <= 19; x++) for (let y = x; y <= 19; y++)
-        if (stufe !== 'zehn' || (x - 10) + (y - 10) === 10) paare.push([x, y]);
+        if ({ alle: true, zehn: (x - 10) + (y - 10) === 10, quadrat: x === y, elf: x === 11 }[stufe]) paare.push([x, y]);
       let ziehe;
-      if (stufe === 'zehn') {
+      if (stufe === 'quadrat' || stufe === 'elf') {
+        // Nur 9 Aufgaben (11² … 19² bzw. 11 · 11 … 19 · 11): alle einmal, dazu eine Wiederholung (Abstand siehe passt)
+        ziehe = () => {
+          const l = [];
+          while (l.length < anzahl) l.push(...mischen(paare.slice()).slice(0, anzahl - l.length));
+          return l.map(([x, y]) => (zufallInt(2) ? [x, y] : [y, x]));
+        };
+      } else if (stufe === 'zehn') {
         // Nutzerwunsch 04.11.: so wenig Doppelte wie möglich. Mit beiden Reihenfolgen gibt es hier 9 Aufgaben
         // (11·19, 19·11 … 16·14, dazu 15·15 nur einmal) – bei 10 Aufgaben ist genau EINE Wiederholung nötig, nie 15 · 15.
         const varianten = paare.flatMap(([x, y]) => (x === y ? [[x, y]] : [[x, y], [y, x]]));
@@ -55,9 +65,10 @@ const UEBUNGEN = [
     weg({ x, y }) {                                // Lösungsweg mit den drei Schritten aus dem Video
       const a = x - 10, b = y - 10, s = x + b;
       return [
-        { nr: 1, titel: 'Einer rüber', text: `${x} + <b class="c2">${b}</b> = ${s}` },
-        { nr: 2, titel: 'mal 10', text: `${s} · 10 = <b class="c10">${s * 10}</b>` },
-        { nr: 3, titel: 'Einer · Einer dazu', text: `+ <b class="c1">${a}</b> · <b class="c2">${b}</b> = <b class="c3">${a * b}</b>` },
+        // Wortlaut wie im Merkzettel des Videos (Nutzer 05.11.: „Einer rüber“ versteht man nicht)
+        { nr: 1, titel: 'Einerziffer zur anderen Zahl', text: `${x} + <b class="c2">${b}</b> = ${s}` },
+        { nr: 2, titel: 'Null anhängen', text: `<b class="c10">${s * 10}</b>` },
+        { nr: 3, titel: 'Einerziffern malnehmen, dazu', text: `+ <b class="c1">${a}</b> · <b class="c2">${b}</b> = <b class="c3">${a * b}</b>` },
         { nr: '=', titel: '', text: `${s * 10} + ${a * b} = <b class="cok">${x * y}</b>` },
       ];
     },

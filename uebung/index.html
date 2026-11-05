@@ -46,8 +46,12 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 #start .inhalt { flex: 1; display: flex; flex-direction: column; gap: 14px; padding-top: 10px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .uebung h2 { margin: 0 0 4px; font-size: 24px; font-weight: 800; }
 .uebung .video { margin: 0 0 14px; color: var(--grau); font-size: 15px; }
-.beispiel { font-size: 34px; font-weight: 800; margin: 4px 0 14px; }
-.beispiel .c1 { color: var(--c1); } .beispiel .c2 { color: var(--c2); }
+.stufen button { padding: 10px 12px; }
+.stufen button small { font-size: 15px; font-weight: 700; }
+/* Tippen/Sprechen: schmaler Umschalter statt zweier großer Karten (Nutzer 05.11.: Startseite übersichtlicher) */
+.umschalter { display: grid; grid-template-columns: 1fr 1fr; background: #f3efe7; border-radius: 12px; padding: 3px; margin: 4px 0 10px; }
+.umschalter button { padding: 9px 6px; border-radius: 10px; font-weight: 700; font-size: 15px; color: var(--grau); background: none; }
+.umschalter button[aria-pressed="true"] { background: var(--karte); color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.12); }
 .wahl { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
 .wahl button { padding: 12px 10px; border-radius: 14px; background: #f3efe7; font-weight: 700; font-size: 16px; text-align: left; line-height: 1.2; }
 .wahl button small { display: block; font-weight: 500; color: var(--grau); font-size: 13px; margin-top: 2px; }
@@ -166,13 +170,10 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
     <div class="karte uebung">
       <h2 id="u-titel"></h2>
       <p class="video" id="u-video"></p>
-      <div class="beispiel">1<span class="c1">6</span> · 1<span class="c2">8</span> = 288</div>
-      <div class="wahl-titel">Aufgaben</div>
-      <div class="wahl" id="stufen"></div>
-      <div class="wahl-titel">Antworten</div>
-      <div class="wahl" id="eingabe">
-        <button data-e="tippen" aria-pressed="true">⌨︎ Tippen<small>Ziffern antippen</small></button>
-        <button data-e="sprechen" aria-pressed="false">🎤 Sprechen<small>Zahl laut sagen</small></button>
+      <div class="wahl stufen" id="stufen"></div>
+      <div class="umschalter" id="eingabe">
+        <button data-e="tippen" aria-pressed="true">⌨︎ Tippen</button>
+        <button data-e="sprechen" aria-pressed="false">🎤 Sprechen</button>
       </div>
       <p class="sprachstatus" id="sprachstatus" hidden></p>
       <button class="los" id="los">Start · 10 Aufgaben</button>
@@ -226,7 +227,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 
 <script src="aufgaben.js"></script>
 <script>
-const APP_VERSION = '2.0';          // bei JEDER Änderung hochzählen
+const APP_VERSION = '2.1';          // bei JEDER Änderung hochzählen
 const $ = s => document.querySelector(s);
 const ANZAHL = 10;
 // Ziel in Sekunden je Aufgabe, je Stufe (Nutzerentscheidung 05.11.: „Alle Zahlen“ 4 s wie im Video, Sonderfall 3 s)
@@ -274,11 +275,11 @@ const klang = {
 function baueStart() {
   const u = uebung();
   $('#u-titel').textContent = u.titel;
-  $('#u-video').textContent = 'Aus dem Video: ' + u.video;
+  $('#u-video').textContent = u.untertitel;
   $('#stufen').innerHTML = '';
   for (const s of u.stufen) {
     const b = document.createElement('button');
-    b.dataset.s = s.id; b.innerHTML = `${s.name}<small>${s.info}</small>`;
+    b.dataset.s = s.id; b.innerHTML = `${s.name}<small>${s.info.replace(/(\d)(\d)\b/g, '$1<span class="c1">$2</span>').replace(/<span class="c1">(\d)<\/span>(?![\s\S]*c1)/, '<span class="c2">$1</span>')}</small>`;
     b.setAttribute('aria-pressed', String(stand.stufe === s.id));
     b.addEventListener('click', () => { stand.stufe = s.id; speichereAlles(); baueStart(); });
     $('#stufen').append(b);
@@ -297,7 +298,7 @@ function baueStart() {
       : r.some(x => x.richtig >= 8 && x.eingabe === stand.eingabe) ? `Bester Schnitt ${wie}: ab jetzt neu gemessen (bis zum ersten Wort)`
       : `Noch keine Runde ${wie} mit 8 oder mehr richtig`;
     $('#runden').innerHTML = r.slice(-5).reverse().map(x =>
-      `<li>${new Date(x.zeit).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' })} · <b>${x.richtig}/${x.anzahl}</b> richtig · Ø <b>${sek(x.schnitt)}</b>${x.stufe === 'zehn' ? ' · Einer = 10' : ''}${x.eingabe === 'sprechen' ? (x.mess === 3 ? ' · 🎤' : ' · 🎤 alte Messung') : ''}</li>`).join('');
+      `<li>${new Date(x.zeit).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' })} · <b>${x.richtig}/${x.anzahl}</b> richtig · Ø <b>${sek(x.schnitt)}</b>${{ zehn: ' · Einer = 10', quadrat: ' · Quadrate', elf: ' · mal 11' }[x.stufe] || ''}${x.eingabe === 'sprechen' ? (x.mess === 3 ? ' · 🎤' : ' · 🎤 alte Messung') : ''}</li>`).join('');
   }
 }
 for (const b of document.querySelectorAll('#eingabe button'))

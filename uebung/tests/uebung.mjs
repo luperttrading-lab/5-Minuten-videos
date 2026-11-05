@@ -93,7 +93,7 @@ ok(/Ø \d+,\d s je Aufgabe/.test(await page.textContent('#e-zeit')), `Durchschni
 ok(e.length === 10 && e.every(x => x.dauer > 0 && x.dauer < 5000), 'Jede Aufgabe hat eine Zeit');
 ok((await page.textContent('#e-ziel')).trim() === (schnitt <= 4 ? 'Unter vier Sekunden – Ziel geschafft!' : 'Ziel: unter vier Sekunden je Aufgabe.'),
   `Ziel „Alle Zahlen“ vier Sekunden: „${(await page.textContent('#e-ziel')).trim()}“`);
-ok(JSON.stringify(await page.evaluate(() => UEBUNGEN[0].stufen.map(s => s.ziel))) === '[4,3]', 'Ziele je Stufe: Alle Zahlen 4 s, Einer ergeben 10 3 s');
+ok(JSON.stringify(await page.evaluate(() => UEBUNGEN[0].stufen.map(s => s.ziel))) === '[4,3,4,2]', 'Ziele je Stufe: Alle Zahlen 4 s, Einer ergeben 10 3 s, Quadrate 4 s, Mal 11 2 s');
 { // Spruch nach Lage: 9 von 10 richtig → Mut-Spruch, nicht Lob (Nutzer 05.11.)
   const sp = (await page.textContent('#e-spruch b')).trim();
   ok(await page.evaluate(t => SPRUECHE.includes(t) && !LOB_SPRUECHE.includes(t), sp), `Mit Fehler: Spruch zum Mutmachen („${sp}“)`);
