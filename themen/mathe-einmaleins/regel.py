@@ -42,7 +42,7 @@ NACHLAUF = 2.5                                             # Stille nach dem let
 # 0,35 s machten es abgehackt, und wo er Sätze zusammenzieht, lag die „Stille“ im Verschluss von k/d/b → Absetzer.
 ATEMPAUSEN = False
 UHR = 4                                                    # Sekunden der Uhr (Nutzerentscheidung 05.11.: 4 statt 3)
-ABSPANN = 12.0                                             # Endbildschirm (YouTube: letzte 5–20 s), Nutzer 05.11.
+ABSPANN = 8.0                                              # Endbildschirm nach dem letzten Satz (YouTube: letzte 5–20 s)
 DENKPAUSE = 7.5                                            # nach „Und jetzt du“: Uhr (4 s), dann die Lösung
 SPRUCH, BRUECKE = spruch('mathe-einmaleins', 'schluss'), spruch('mathe-einmaleins', 'bruecke')
 
@@ -81,9 +81,12 @@ SZENEN = [
     dict(id='merke', kicker='Merke', pause=DENKPAUSE, text=(   # Nutzerwunsch 04.11.: die langen Sätze, nicht die Kurzformen
         'Merk dir die drei Schritte: Eine Einerziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. '
         'Die Einerziffern malnehmen und dazuzählen. Und jetzt du: dreizehn mal vierzehn.')),
-    dict(id='schluss', kicker='Merke', anhang=True, pause=1.0 + 0.6 + ABSPANN, text=(   # gehört zum Kapitel „Merke“, läuft nach der Lösung
+    dict(id='schluss', kicker='Merke', anhang=True, pause=1.0, text=(   # gehört zum Kapitel „Merke“, läuft nach der Lösung
         'Hat es bei dir länger als vier Sekunden gedauert? Ganz normal. Mit ein bisschen Übung schaffst du das auch '
         'so schnell. ' + SPRUCH)),
+    # Endbildschirm (Nutzer 05.11.): für jede Folge gleich, ohne bestimmtes Video anzukündigen
+    dict(id='abspann', kicker='Kopfrechnen', anhang=True, pause=ABSPANN, text=(
+        'Noch ein Trick? Hier geht\'s weiter. Und damit du keinen verpasst: Abonnier den Kanal.')),
 ]
 
 
@@ -979,7 +982,8 @@ def klangspur(n_samples):
 
 
 ZEICHNER = {'hook': s_hook, 'regel': s_regel, 'warum': s_warum, 'andersrum': s_andersrum, 'sonderfall': s_sonderfall,
-            'vorsicht': s_vorsicht, 'merke': s_merke, 'schluss': s_schluss}
+            'vorsicht': s_vorsicht, 'merke': s_merke, 'schluss': s_schluss,
+            'abspann': lambda b, sc, t: s_abspann(b, sc, t)}   # s_abspann steht weiter unten
 
 
 # ---------------------------------------------------------------- Rahmen: Kapitelname und Fortschritt
@@ -1025,20 +1029,21 @@ def szene_bei(t):
     return len(SZENEN) - 1
 
 
-def abspann(b, t):
+def s_abspann(b, sc, t):
     """Endbildschirm: Platz für zwei Video-Empfehlungen und „Abonnieren“, die YouTube Studio darüberlegt
-    (Nutzerwunsch 05.11.). Ohne Ton; welche Videos empfohlen werden, lässt sich nach dem Hochladen jederzeit ändern."""
+    (Nutzerwunsch 05.11.). Welche Videos empfohlen werden, lässt sich nach dem Hochladen jederzeit ändern."""
+    t_kacheln, t_abo = C(sc, 'Hier'), C(sc, 'Abonnier')
     b.text('KOPFRECHNEN', 60, 46, 22, GRAU, INTER_X, anker='l', alpha=ein(t, 0.0))
-    a = ein(t, 0.1)
+    a = ein(t, 0.0)
     b.text('Noch ein Trick?', 640, 118 + 10 * (1 - a), 52, INK, INTER_X, alpha=a)
     for k, (x, wort) in enumerate(((110, 'Nächster Trick'), (710, 'Auch spannend'))):
-        q = ein(t, 0.3 + 0.15 * k)
+        q = ein(t, t_kacheln + 0.15 * k)
         y = 190 + 14 * (1 - q)
         karte(b, x, y, 460, 259, alpha=q)
         b.d.polygon([((x + 230 - 18) * K, (y + 129 - 22) * K), ((x + 230 - 18) * K, (y + 129 + 22) * K),
                      ((x + 230 + 24) * K, (y + 129) * K)], fill=farbe(HELL, 255 * q))
         b.text(wort, x + 230, y + 259 + 34, 26, GRAU, INTER_X, alpha=q)
-    q = ein(t, 0.6)
+    q = ein(t, t_abo)
     b.kreis(640, 585, 52 * (0.8 + 0.2 * q), TEAL, alpha=q)
     b.text('Kanal abonnieren', 640, 668, 24, GRAU, INTER_X, alpha=q)
 
@@ -1047,16 +1052,9 @@ def zeichne(i, tl, t):
     sc = SZENEN[i]
     b = Bild(grund())
     ZEICHNER[sc['id']](b, sc, tl)
-    rahmen(b, i, tl, t)
-    img = b.img
-    if sc['id'] == 'schluss':                              # nach dem letzten Satz: Überblendung in den Endbildschirm
-        ta = sc['dauer'] + 1.0
-        f = glatt(p(tl, ta, 0.6))
-        if f > 0:
-            e = Bild(grund())
-            abspann(e, tl - ta)
-            img = Image.blend(img, e.img, f)
-    return img.resize(OUT, Image.LANCZOS)
+    if sc['id'] != 'abspann':                              # Endbildschirm ohne Kapitelkopf und Fortschritt
+        rahmen(b, i, tl, t)
+    return b.img.resize(OUT, Image.LANCZOS)
 
 
 def bild(t):
