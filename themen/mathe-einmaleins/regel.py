@@ -86,7 +86,7 @@ SZENEN = [
         'so schnell. ' + SPRUCH)),
     # Endbildschirm (Nutzer 05.11.): für jede Folge gleich, ohne bestimmtes Video anzukündigen
     dict(id='abspann', kicker='Kopfrechnen', anhang=True, pause=ABSPANN, text=(
-        'Noch ein Trick? Hier geht\'s weiter. Und damit du keinen verpasst: Abonnier den Kanal.')),
+        'Noch ein Trick? Hier geht\'s weiter. Und damit du keinen Trick verpasst: Abonnier den Kanal.')),
 ]
 
 
@@ -1051,10 +1051,10 @@ def s_abspann(b, sc, t):
         b.text(wort, x + 230, y + 259 + 34, 26, GRAU, INTER_X, alpha=q)
     # Abo-Zeile (Nutzer 05.11.): links ein gezeichneter Knopf „Abonnieren“, den beim Wort „Abonnier“ eine Hand von links
     # drückt (mit Klick; ein Finger passt zu Handy und Fernseher besser als ein Mauszeiger), danach „Abonniert“.
-    # Rechts der Kreis, auf den YouTube Studio das echte, anklickbare Abo-Element legt.
+    # Rechts daneben bleibt Platz frei: Dorthin legt YouTube Studio das echte, anklickbare Abo-Element (Kanalbild).
+    # Kein Kreis als Platzhalter (Nutzer 05.11.: „Was soll der grüne Punkt?“, in der Datei ohne YouTube unverständlich).
     q = ein(t, C(sc, 'Und damit'))
-    x0, w, h, cy, cx, r = 459, 250, 66, 590, 775, 46
-    b.kreis(cx, cy, r * (0.8 + 0.2 * q), TEAL, alpha=q)
+    x0, w, h, cy = 515, 250, 66, 590
     tk = t_abo + 0.2                                       # Klick (wie in KLAENGE)
     druck = math.sin(math.pi * p(t, tk - 0.05, 0.18))
     dr = 1 - 0.07 * druck                                  # Knopf gibt beim Drücken nach

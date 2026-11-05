@@ -194,13 +194,14 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Eigener YouTube-Kanal für die Mathe-Videos** (Nutzerentscheidung 05.11.), getrennt von den Gesundheits-Faktenchecks.
   Später evtl. „Statistik leicht gemacht“; ob eigener Kanal oder zusammen mit Kopfrechnen, ist offen.
 - **Endbildschirm** (Nutzerwahl 05.11., Szene `abspann` in `regel.py`): nach dem Motivationssatz gesprochen „Noch ein
-  Trick? Hier geht's weiter. Und damit du keinen verpasst: Abonnier den Kanal.“ (für jede Folge gleich, kein bestimmtes
-  Video ankündigen), dann `ABSPANN` = 8 s still. Bild: „Noch ein Trick?“, zwei Flächen für Video-Empfehlungen, Kreis
-  „Kanal abonnieren“; YouTube Studio legt die Elemente darauf (nur letzte 5–20 s, nicht bei „für Kinder gemacht“).
+  Trick? Hier geht's weiter. Und damit du keinen Trick verpasst: Abonnier den Kanal.“ (für jede Folge gleich, kein bestimmtes
+  Video ankündigen), dann `ABSPANN` = 8 s still. Bild: „Noch ein Trick?“, zwei Flächen für Video-Empfehlungen, Knopf
+  „Abonnieren“ in der Mitte; YouTube Studio legt die Elemente darauf, das Abo-Element (Kanalbild) rechts neben den Knopf
+  auf freie Fläche (kein grüner Platzhalter-Kreis mehr, Nutzer 05.11.) (nur letzte 5–20 s, nicht bei „für Kinder gemacht“).
   Muss vor dem Hochladen im Video sein. Abo-Zeile (Probe 05.11.): links ein gezeichneter Knopf „Abonnieren“, auf den beim
   Wort „Abonnier“ eine Emoji-Hand „👆“ (`zeigehand`, Bild `HAND_BILD` in `bilder/`, Microsoft Fluent Emoji, MIT-Lizenz in
   `bilder/LIZENZ_fluent_emoji.txt`; selbst gezeichnete Hand verworfen: „nicht schön“) schräg von links unten tippt (Klang `klick`, Spitze ≈ 0,16 wie die übrigen
-  Geräusche), danach „Abonniert“ mit Häkchen; rechts der Kreis für das echte YouTube-Abo-Element. Finger statt
+  Geräusche), danach „Abonniert“ mit Häkchen. Welche Hand (Form, Farbe), wählt der Nutzer noch aus Bildbögen im Chat. Finger statt
   Mauszeiger (Nutzer 05.11.): YouTube läuft vor allem auf Handy und Fernseher, kaum am PC.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
