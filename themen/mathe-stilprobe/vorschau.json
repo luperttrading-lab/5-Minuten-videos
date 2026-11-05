@@ -1,12 +1,12 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben 1 Eintrag: der neue Endbildschirm, „passt“ oder „ändern“.",
+ "aufgabe": "Nichts offen. Das fertige Video steht auf der Seite „Kopfrechnen · fertige Videos“.",
  "videos": [
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abspann/abspann.mp4",
    "titel": "Neu: Endbildschirm mit zwei Empfehlungen (letzte 30 s des Videos)",
    "stand": "05.11., 12:15",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 20,
    "notiz": "Nach dem letzten Satz blendet das Video in einen ruhigen Endbildschirm über (gut 12 s, ohne Ton): „Noch ein Trick?“, zwei Flächen für Video-Empfehlungen und ein Kreis für „Kanal abonnieren“. Beim Hochladen legt YouTube Studio die echten Vorschaubilder genau auf diese Flächen; welche Videos dort stehen, lässt sich jederzeit ändern. Das Video wird dadurch 3:10 statt 2:57 lang. „passt“ = in die Vorlage für alle Folgen übernehmen."
   },
