@@ -45,7 +45,7 @@ if __name__ == '__main__':
     sys.argv = ['regel.py', voll, '--nur-ton']
     G.main()                                               # erzeugt ..._voll.wav (aufbereitet, entknackst, mit Geräuschen)
     m = next(s for s in G.SZENEN if s['id'] == 'merke')
-    t0, t1 = m['start'] - 0.3, m['start'] + m['dauer'] + 0.8
+    t0, t1 = m['start'] - 0.3, m['start'] + m['dauer'] + G.DENKPAUSE   # mit Denkpause und Lösung
     a, b = int(t0 * 30), int(t1 * 30)
     g = [a + (b - a) * i // 4 for i in range(5)]
     with Pool(4) as pool:

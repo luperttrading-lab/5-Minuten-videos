@@ -1,22 +1,22 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben: zwei Hörproben für den Merke-Satz (je ca. 15 s, mit Ton). Bei der besseren „passt“ tippen, bei beiden „ändern“ mit Notiz. Darunter die jetzige Fassung zum Vergleich.",
+ "aufgabe": "Oben: zwei Hörproben für den Merke-Teil, jetzt mit Lösung und Nummern (je ca. 20 s). Bei der besseren Fassung „passt“ tippen.",
  "videos": [
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hoerprobe/merke_ziffer.mp4",
    "titel": "Hörprobe Merke: „Eine Einerziffer zur anderen Zahl addieren“",
-   "stand": "04.11., 22:57",
+   "stand": "05.11., 06:05",
    "pruefen": true,
    "poster_bei": 9,
-   "notiz": "Statt „Einer“ heißt es „Einerziffer“: Das klingt nicht nach einer Person, und die Stimme betont es wie ein Hauptwort. Gesprochen: „Eine Einerziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. Beide Einerziffern multiplizieren und dazuzählen.“ Der Rest des Videos sagt weiter „Einer“. „passt“ = diese Fassung ins Video."
+   "notiz": "Statt „Einer“ heißt es „Einerziffer“: Das klingt nicht nach einer Person, und die Stimme betont es wie ein Hauptwort. Gesprochen: „Eine Einerziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. Beide Einerziffern multiplizieren und dazuzählen.“ Der Rest des Videos sagt weiter „Einer“. „passt“ = diese Fassung ins Video. Neu (deine Frage 05.11.): Nach der Denkpause trägt jede Lösungszeile von 13 · 14 die Nummer ihres Merksatzes, und der Merksatz leuchtet auf, solange seine Zeile erscheint – so sieht man zu jedem Satz die Rechnung, ohne 16 · 18 zu wiederholen. Die Probe läuft jetzt bis zur Lösung (20 s)."
   },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hoerprobe/merke_den.mp4",
    "titel": "Hörprobe Merke: „Den Einer zur anderen Zahl dazuzählen“",
-   "stand": "04.11., 22:57",
+   "stand": "05.11., 06:05",
    "pruefen": true,
    "poster_bei": 9,
-   "notiz": "Bleibt bei „Einer“, aber mit „den“ und „die beiden“ davor – so wie im Kapitel „Der Trick“ („Nimm den Einer …“, „Multipliziere die beiden Einer“), wo die Betonung gestimmt hat. Gesprochen: „Den Einer zur anderen Zahl dazuzählen, egal, welchen. Eine Null anhängen. Die beiden Einer malnehmen und dazuzählen.“ „passt“ = diese Fassung ins Video."
+   "notiz": "Bleibt bei „Einer“, aber mit „den“ und „die beiden“ davor – so wie im Kapitel „Der Trick“ („Nimm den Einer …“, „Multipliziere die beiden Einer“), wo die Betonung gestimmt hat. Gesprochen: „Den Einer zur anderen Zahl dazuzählen, egal, welchen. Eine Null anhängen. Die beiden Einer malnehmen und dazuzählen.“ „passt“ = diese Fassung ins Video. Neu (deine Frage 05.11.): Nach der Denkpause trägt jede Lösungszeile von 13 · 14 die Nummer ihres Merksatzes, und der Merksatz leuchtet auf, solange seine Zeile erscheint – so sieht man zu jedem Satz die Rechnung, ohne 16 · 18 zu wiederholen. Die Probe läuft jetzt bis zur Lösung (20 s)."
   },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hoerprobe/merke_aktuell.mp4",

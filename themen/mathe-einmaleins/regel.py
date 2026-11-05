@@ -756,8 +756,9 @@ MERKSAETZE = [('1', CB, ['Einen Einer zur anderen Zahl', 'addieren – egal, wel
               ('3', CD, ['Beide Einer multiplizieren', 'und dazuzählen'], 'Beide Einer')]
 
 
-def merkkarte(b, sc, t, x0=80, y0=130, w=590):
-    """Merkzettel: genau die Sätze, die gesprochen werden, groß und fett; jeder erscheint, wenn er gesagt wird."""
+def merkkarte(b, sc, t, x0=80, y0=130, w=590, nochmal=None):
+    """Merkzettel: genau die Sätze, die gesprochen werden, groß und fett; jeder erscheint, wenn er gesagt wird.
+    nochmal: je Satz (von, bis) – leuchtet erneut auf, wenn in der Übung die passende Rechnung erscheint."""
     tdu = C(sc, 'Und jetzt du')
     zeiten = [C(sc, wort) for *_, wort in MERKSAETZE] + [tdu]
     h = 70 + sum(30 + 44 * len(z) for _, _, z, _ in MERKSAETZE) + 10
@@ -768,6 +769,9 @@ def merkkarte(b, sc, t, x0=80, y0=130, w=590):
         hoehe = 30 + 44 * len(zeilen)
         a = ein(t, zeiten[k])
         akt = ein(t, zeiten[k], 0.3) * (1 - ein(t, zeiten[k + 1], 0.3))
+        if nochmal:
+            von, bis = nochmal[k]
+            akt = max(akt, ein(t, von, 0.25) * (1 - ein(t, bis, 0.25)))
         band(b, x0 + 14, y + 2, x0 + w - 14, y + hoehe - 6, col, 0.13 * akt)
         if a > 0:
             dy = 12 * (1 - a)
@@ -780,7 +784,11 @@ def merkkarte(b, sc, t, x0=80, y0=130, w=590):
 
 def s_merke(b, sc, t):
     tdu = C(sc, 'Und jetzt du')
-    merkkarte(b, sc, t)
+    te = sc['dauer'] + 0.2                                 # Denkpause mit Uhr, dann die Lösung
+    zeiten = [te + 3.2, te + 3.8, te + 4.4, te + 5.1]
+    # Nutzerwunsch 05.11.: zum Merksatz die Rechnung sehen – jede Lösungszeile trägt die Nummer ihres Merksatzes, und der
+    # Merksatz leuchtet auf, solange seine Zeile erscheint (die Übung 13 · 14 ist die Rechnung, keine Wiederholung von 16 · 18)
+    merkkarte(b, sc, t, nochmal=[(zeiten[i], zeiten[i + 1]) for i in range(3)])
     a = ein(t, tdu)
     karte(b, 700, 130, 490, 450, a)
     if a <= 0:
@@ -788,16 +796,22 @@ def s_merke(b, sc, t):
     b.text('UND JETZT DU', 730, 168, 22, GRAU, INTER_X, anker='l', alpha=a)
     zeile(b, [('1', INK), ('3', CA), (' · ', INK), ('1', INK), ('4', CB), (' = ?', GRAU)], 945, 245, 64, INTER_X,
           alpha=a)
-    te = sc['dauer'] + 0.2                                 # Denkpause mit Uhr, dann die Lösung
     au = ein(t, te, 0.3) * (1 - ein(t, te + 3.0, 0.3))
     uhr(b, 945, 400, 62, (t - te) / 3.0, alpha=au * a)
-    loes = [([('13', INK), (' + ', INK), ('4', CB), (' = 17', INK)], te + 3.2),
-            ([('17 · 10 = ', INK), ('170', TEAL)], te + 3.8),
-            ([('+ ', INK), ('3', CA), (' · ', INK), ('4', CB), (' = ', INK), ('12', CD)], te + 4.4)]
+    loes = [([('13', INK), (' + ', INK), ('4', CB), (' = 17', INK)], zeiten[0]),
+            ([('17 · 10 = ', INK), ('170', TEAL)], zeiten[1]),
+            ([('+ ', INK), ('3', CA), (' · ', INK), ('4', CB), (' = ', INK), ('12', CD)], zeiten[2])]
     for i, (teile, tl) in enumerate(loes):
-        einblenden(b, teile, 945, 335 + i * 62, 38, t, tl)
-    einblenden(b, [('= ', INK), ('182', GRUEN)], 945, 530, 56, t, te + 5.1)
-    funken(b, t, te + 5.25, mitten([('= ', INK), ('182', GRUEN)], 945, 56)[1], 530, r0=60, r1=170, fy=0.6)
+        y = 335 + i * 62
+        einblenden(b, teile, 960, y, 38, t, tl)
+        ai = ein(t, tl)
+        if ai > 0:                                         # Nummer des Merksatzes vor der Zeile
+            nr, col = MERKSAETZE[i][0], MERKSAETZE[i][1]
+            xk = 960 - sum(breite(s_, INTER_X, 38) for s_, _ in teile) / 2 - 30
+            b.kreis(xk, y + 16 * (1 - ai), 17, col, alpha=ai)
+            b.text(nr, xk, y + 16 * (1 - ai), 19, '#ffffff', INTER_X, alpha=ai)
+    einblenden(b, [('= ', INK), ('182', GRUEN)], 960, 530, 56, t, te + 5.1)
+    funken(b, t, te + 5.25, mitten([('= ', INK), ('182', GRUEN)], 960, 56)[1], 530, r0=60, r1=170, fy=0.6)
 
 
 def s_schluss(b, sc, t):
