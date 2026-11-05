@@ -29,7 +29,7 @@ for name in ('ziffer', 'bindestrich', 'gross'):
     text = H.FASSUNGEN[name][0]
     mp3, al = G.R.tts_eleven(text, G.CFG, G.CACHE)
     st, en = al['character_start_times_seconds'], al['character_end_times_seconds']
-    wav = fos.environ.get('BETONUNG_ORDNER', '/tmp') + '/{name}.wav'
+    wav = os.environ.get('BETONUNG_ORDNER', '/tmp') + f'/{name}.wav'
     wav_aus(mp3, wav)
     snd = parselmouth.Sound(wav)
     pitch = snd.to_pitch(time_step=0.005, pitch_floor=70, pitch_ceiling=300)
