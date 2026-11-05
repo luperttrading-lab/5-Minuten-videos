@@ -1,28 +1,28 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben 7 Einträge: je ein „passt“ bei einem der 3 Vorschaubilder und einem der 3 Titel, dazu „passt“ oder „ändern“ bei der Karte „Einer rüber“.",
+ "aufgabe": "Oben 7 Einträge: „passt“ bei einem der 3 Stile für das Vorschaubild, „passt“ bei einem der 3 Titel, dazu „passt“ oder „ändern“ bei der Karte „Einer rüber“.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/vorschaubild_frage.mp4",
-   "titel": "Vorschaubild: Frage „16 · 18 = ?“",
-   "notiz": "Die Aufgabe ohne Lösung, darunter „Im Kopf in (4) Sekunden?“. Macht neugierig, wer klickt, will die Lösung. „passt“ = dieses nehmen.",
-   "stand": "05.11., 10:20",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/vb/bogen_papier.mp4",
+   "titel": "Vorschaubild für die ganze Reihe: Papier mit Teal-Leiste unten",
+   "notiz": "Wie das Video (warmes Papier). Wiedererkennung: die grüne Leiste unten mit Name und „Kopfrechnen“. Auf der hellen YouTube-Seite fällt Papier weniger auf. „passt“ = diesen Stil nehmen.",
+   "stand": "05.11., 10:50",
    "pruefen": true,
    "poster_bei": 1
   },
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/vorschaubild_flaeche.mp4",
-   "titel": "Vorschaubild: Fläche aus dem Video",
-   "notiz": "Links die Fläche 240 + 48 aus „Warum klappt das?“, rechts Aufgabe, Lösung und Name. Zeigt, dass es eine Erklärung gibt, nicht nur einen Trick. Die kleinen Zahlen in der Fläche sind auf dem Handy kaum lesbar. „passt“ = dieses nehmen.",
-   "stand": "05.11., 10:20",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/vb/bogen_rahmen.mp4",
+   "titel": "Vorschaubild für die ganze Reihe: Teal-Rahmen mit Reiter",
+   "notiz": "Papier im grünen Rahmen, oben links der Reiter „Kopfrechnen“, Name als dunkles Band. Der Rahmen macht jede Folge auf einen Blick erkennbar. „passt“ = diesen Stil nehmen.",
+   "stand": "05.11., 10:50",
    "pruefen": true,
    "poster_bei": 1
   },
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/vorschaubild_loesung.mp4",
-   "titel": "Vorschaubild: Lösung „= 288“ mit Uhr und Name",
-   "notiz": "Aufgabe mit Lösung, darunter „im Kopf in (4) Sekunden“ und der Name. Verrät die Lösung, macht dafür das Versprechen klar. „passt“ = dieses nehmen.",
-   "stand": "05.11., 10:20",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/vb/bogen_dunkel.mp4",
+   "titel": "Vorschaubild für die ganze Reihe: dunkler Grund",
+   "notiz": "Dunkel mit hellen Ziffern, Name als grünes Band. Sticht auf der hellen YouTube-Seite am stärksten heraus, sieht aber anders aus als das helle Video. „passt“ = diesen Stil nehmen.",
+   "stand": "05.11., 10:50",
    "pruefen": true,
    "poster_bei": 1
   },
