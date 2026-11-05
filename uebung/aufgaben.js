@@ -17,8 +17,8 @@ const UEBUNGEN = [
     auto: true,                                    // alle Ergebnisse dreistellig (121 … 361): nach 3 Ziffern prüfen
     antworten: [100, 399],                         // Grammatik der Spracherkennung: jede Zahl 100 … 399 (auch falsche)
     stufen: [
-      { id: 'alle', name: 'Alle Zahlen', info: 'z. B. 16 · 18' },
-      { id: 'zehn', name: 'Einer ergeben 10', info: 'z. B. 12 · 18 = 200 + 16' },
+      { id: 'alle', name: 'Alle Zahlen', info: 'z. B. 16 · 18', ziel: 4 },   // Ziel in s (Video: „in vier Sekunden“)
+      { id: 'zehn', name: 'Einer ergeben 10', info: 'z. B. 12 · 18 = 200 + 16', ziel: 3 },
     ],
     erzeuge(stufe, anzahl) {
       const paare = [];                            // ohne Reihenfolge: [12, 18] steht für 12 · 18 und 18 · 12

@@ -91,6 +91,9 @@ const e = await page.evaluate(() => window.uebung.runde.ergebnisse);
 const schnitt = e.reduce((s, x) => s + x.dauer, 0) / e.length / 1000;
 ok(/Ø \d+,\d s je Aufgabe/.test(await page.textContent('#e-zeit')), `Durchschnittszeit angezeigt (${(await page.textContent('#e-zeit')).trim()}, gemessen ${schnitt.toFixed(2)} s)`);
 ok(e.length === 10 && e.every(x => x.dauer > 0 && x.dauer < 5000), 'Jede Aufgabe hat eine Zeit');
+ok((await page.textContent('#e-ziel')).trim() === (schnitt <= 4 ? 'Unter vier Sekunden – Ziel geschafft!' : 'Ziel: unter vier Sekunden je Aufgabe.'),
+  `Ziel „Alle Zahlen“ vier Sekunden: „${(await page.textContent('#e-ziel')).trim()}“`);
+ok(JSON.stringify(await page.evaluate(() => UEBUNGEN[0].stufen.map(s => s.ziel))) === '[4,3]', 'Ziele je Stufe: Alle Zahlen 4 s, Einer ergeben 10 3 s');
 ok(e[0].dauer < 600, `Die Wartezeit vor „Los“ zählt nicht: erste Aufgabe ${Math.round(e[0].dauer)} ms`);
 ok((await page.$$('#liste li')).length === 10, 'Liste mit allen 10 Aufgaben');
 const weg = await page.textContent('#liste li.nein .weg');

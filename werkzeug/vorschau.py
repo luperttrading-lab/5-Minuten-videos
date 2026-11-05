@@ -22,13 +22,15 @@ for i, v in enumerate(cfg['videos']):
     groesse = os.path.getsize(quelle)
     if groesse > 16 * 1024 * 1024:
         sys.exit(f'{v["datei"]} ist {groesse / 1e6:.1f} MB, Grenze 16 MB')
-    ziel = f'videos/v{i + 1}_{os.path.basename(v["datei"])}'
+    vid = 'v_' + hashlib.sha1((v['datei'] + '|' + v['titel'] + '|' + v.get('stand', '')).encode()).hexdigest()[:10]
+    # Fester Name je Eintrag (nicht nach Platz): Ein neuer Eintrag oben verschiebt sonst alle Namen, und die ganze
+    # Seite müsste neu hochgeladen werden (bei vielen Videos mehr als 64 MB je Aufruf).
+    ziel = f'videos/{vid}.mp4'
     shutil.copy(quelle, os.path.join(aus, ziel))
     poster = ziel[:-4] + '.jpg'                          # Standbild bei 4 s, sonst zeigt der Player das helle Einblenden
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', str(v.get('poster_bei', 4)), '-i', quelle, '-frames:v', '1',
                     '-vf', 'scale=960:-2', '-q:v', '4', os.path.join(aus, poster)], check=True)
     marke = '<span class="marke pruefen">zu prüfen</span>' if v.get('pruefen') else '<span class="marke info">zur Info</span>'
-    vid = 'v_' + hashlib.sha1((v['datei'] + '|' + v['titel'] + '|' + v.get('stand', '')).encode()).hexdigest()[:10]
     karten.append(f'''<article class="video" id="v{i + 1}" data-id="{vid}" data-titel="{esc(v["titel"])}">
       <div class="kopfzeile"><h2>{esc(v["titel"])}</h2>{marke}</div>
       <p class="stand">Stand {esc(v.get("stand", ""))} · {groesse / 1e6:.1f} MB</p>

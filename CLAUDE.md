@@ -151,7 +151,7 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 ## Mathe-Videos (`themen/mathe-*`, eigenes Format ohne Ampel)
 - Vorlage: `themen/mathe-einmaleins/regel.py` (Bilder ganz per Code, Formeln nie per KI-Bild; Einblendungen hängen an
   gesprochenen Wörtern). Vorschau-Seite aller Mathe-Proben: `themen/mathe-stilprobe/vorschau.json`.
-- **Am Schluss immer ein Motivationssatz** (Nutzerwunsch 04.11.), z. B. nach einer Übung: „Länger als drei Sekunden? Ganz
+- **Am Schluss immer ein Motivationssatz** (Nutzerwunsch 04.11.), z. B. nach einer Übung: „Länger als vier Sekunden? Ganz
   normal. Mit ein bisschen Übung schaffst du das auch.“ plus ein **wechselnder Spruch** („Das ist kein Hexenwerk.“, „Das
   ist keine Raketenwissenschaft.“ …) aus `werkzeug/motivation.py` (`spruch(thema, 'schluss')`; `'bruecke'` für Übergänge).
   Ein Thema behält seinen Spruch, neue Themen bekommen den seltensten. Sprüche gern ergänzen.
@@ -161,6 +161,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Immer beide Links** (Nutzerwunsch 04.11.): Jede Antwort zu Mathe-Videos oder Übungs-App endet (vor der Kostenzeile)
   mit beiden Links: [Mathe-Videos · Vorschau](https://claude.ai/artifact/PVisw26MxXcVy1NJngcMFu) und
   [Kopfrechnen üben](https://luperttrading-lab.github.io/5-Minuten-videos/uebung/).
+- **Ziel vier Sekunden** (Nutzerentscheidung 05.11.): Video und App-Stufe „Alle Zahlen“ sagen „in vier Sekunden“ (Uhr
+  `UHR = 4` in `regel.py`), der Sonderfall „Einer ergeben 10“ bleibt bei drei (`ziel` je Stufe in `uebung/aufgaben.js`).
+  Grund: Drei Sekunden mit Rechnen frustrieren; die meistgesehenen Videos nennen 3–5 s, tecmath für genau diesen Trick 4 s.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
   Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).

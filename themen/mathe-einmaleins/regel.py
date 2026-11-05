@@ -41,7 +41,8 @@ NACHLAUF = 2.5                                             # Stille nach dem let
 # Künstliche Atempausen AUS (Messung 04.11.): Christian pausiert an Satzenden schon selbst 200–500 ms; zusätzliche
 # 0,35 s machten es abgehackt, und wo er Sätze zusammenzieht, lag die „Stille“ im Verschluss von k/d/b → Absetzer.
 ATEMPAUSEN = False
-DENKPAUSE = 6.0                                            # nach „Und jetzt du“: Uhr (3 s), dann die Lösung
+UHR = 4                                                    # Sekunden der Uhr (Nutzerentscheidung 05.11.: 4 statt 3)
+DENKPAUSE = 7.5                                            # nach „Und jetzt du“: Uhr (4 s), dann die Lösung
 SPRUCH, BRUECKE = spruch('mathe-einmaleins', 'schluss'), spruch('mathe-einmaleins', 'bruecke')
 
 INK, GRAU, BG, HELL = '#2b2d42', '#6f7380', '#f6f1e7', '#e6dfd2'
@@ -50,7 +51,7 @@ TEAL, GRUEN = '#0f766e', '#2a9d4a'
 
 SZENEN = [
     dict(id='hook', kicker='Kopfrechnen', text=(
-        'Sechzehn mal achtzehn. Im Kopf, in drei Sekunden? Mit diesem Trick schaffst du das für alle Zahlen von elf '
+        'Sechzehn mal achtzehn. Im Kopf, in vier Sekunden? Mit diesem Trick schaffst du das für alle Zahlen von elf '
         'bis neunzehn.')),
     dict(id='regel', kicker='Der Trick', text=(
         'Schritt eins: Nimm den Einer der zweiten Zahl, also die Acht, und zähl ihn zur ersten Zahl dazu. Sechzehn '
@@ -80,7 +81,7 @@ SZENEN = [
         'Merk dir die drei Schritte: Eine Einerziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. '
         'Die Einerziffern malnehmen und dazuzählen. Und jetzt du: dreizehn mal vierzehn.')),
     dict(id='schluss', kicker='Merke', anhang=True, text=(   # gehört zum Kapitel „Merke“, läuft nach der Lösung
-        'Hat es bei dir länger als drei Sekunden gedauert? Ganz normal. Mit ein bisschen Übung schaffst du das auch '
+        'Hat es bei dir länger als vier Sekunden gedauert? Ganz normal. Mit ein bisschen Übung schaffst du das auch '
         'so schnell. ' + SPRUCH)),
 ]
 
@@ -226,15 +227,15 @@ def mitten(teile, x, g, pfad=INTER_X):
     return aus
 
 
-def uhr(b, cx, cy, r, f, alpha=1.0):
-    """Drei-Sekunden-Uhr: Ring läuft ab, innen 3 – 2 – 1."""
+def uhr(b, cx, cy, r, f, alpha=1.0, sek=UHR):
+    """Sekunden-Uhr: Ring läuft ab, innen 4 – 3 – 2 – 1."""
     if alpha <= 0:
         return
     box = [(cx - r) * K, (cy - r) * K, (cx + r) * K, (cy + r) * K]
     b.d.ellipse(box, outline=farbe(HELL, 255 * alpha), width=int(9 * K))
     if f < 1:
         b.d.arc(box, start=-90 + 360 * klemm(f), end=270, fill=farbe(TEAL, 255 * alpha), width=int(9 * K))
-    b.text(str(max(1, 3 - int(klemm(f) * 3))), cx, cy, r * 0.95, INK, INTER_X, alpha=alpha)
+    b.text(str(max(1, sek - int(klemm(f) * sek))), cx, cy, r * 0.95, INK, INTER_X, alpha=alpha)
 
 
 def teil(b, w, h, u, col, mx, my, winkel=0.0, skala=1.0, zentrum=(0, 0), gitter=0.3, rand=1.0, alpha=1.0):
@@ -381,18 +382,18 @@ ERG288 = [('16 · 18 = ', INK), ('288', GRUEN)]
 # ---------------------------------------------------------------- Szenen
 def s_hook(b, sc, t):
     q = zurueck(p(t, 0.0, 0.7))
-    tu = C(sc, 'drei Sekunden')
-    loes = zurueck(p(t, tu + 3.0, 0.6))                    # nach der Uhr: die Lösung
+    tu = C(sc, 'vier Sekunden')
+    loes = zurueck(p(t, tu + UHR, 0.6))                    # nach der Uhr: die Lösung
     g = 140 * (0.6 + 0.4 * q)
-    tick = max(math.sin(math.pi * p(t, tu + k, 0.3)) for k in range(3))   # „?“ pocht mit den drei Ticks
+    tick = max(math.sin(math.pi * p(t, tu + k, 0.3)) for k in range(UHR))   # „?“ pocht mit den Ticks
     zeile(b, [('16', INK), (' · ', INK), ('18', INK), (' = ?', GRAU)], 640, 270, g, INTER_X,
           alpha=klemm(q * 2) * (1 - klemm(loes * 2)), effekte={3: dict(skala=1 + 0.1 * tick)})
     if loes > 0:
         pos = zeile(b, [('16', INK), (' · ', INK), ('18', INK), (' = ', GRAU), ('288', GRUEN)], 640, 270, g, INTER_X,
                     alpha=klemm(loes * 2), effekte={4: dict(skala=0.6 + 0.4 * loes)})
-        funken(b, t, tu + 3.05, pos[4], 270, r0=70, r1=190)
+        funken(b, t, tu + UHR + 0.05, pos[4], 270, r0=70, r1=190)
     a = ein(t, tu, 0.3)
-    uhr(b, 640, 455, 52, (t - tu) / 3.0, alpha=a * (1 - ein(t, tu + 2.85, 0.3)))
+    uhr(b, 640, 455, 52, (t - tu) / UHR, alpha=a * (1 - ein(t, tu + UHR - 0.15, 0.3)))
     t0 = C(sc, 'elf bis')
     for i, n in enumerate(range(11, 20)):
         q = zurueck(p(t, t0 + i * 0.08, 0.4))
@@ -786,7 +787,7 @@ def merkkarte(b, sc, t, x0=80, y0=130, w=590, nochmal=None):
 def s_merke(b, sc, t):
     tdu = C(sc, 'Und jetzt du')
     te = sc['dauer'] + 0.2                                 # Denkpause mit Uhr, dann die Lösung
-    zeiten = [te + 3.2, te + 3.8, te + 4.4, te + 5.1]
+    zeiten = [te + UHR + 0.2, te + UHR + 0.8, te + UHR + 1.4, te + UHR + 2.1]
     # Nutzerwunsch 05.11.: zum Merksatz die Rechnung sehen – jede Lösungszeile trägt die Nummer ihres Merksatzes, und der
     # Merksatz leuchtet auf, solange seine Zeile erscheint (die Übung 13 · 14 ist die Rechnung, keine Wiederholung von 16 · 18)
     merkkarte(b, sc, t, nochmal=[(zeiten[i], zeiten[i + 1]) for i in range(3)])
@@ -822,8 +823,8 @@ def s_merke(b, sc, t):
     b.text('UND JETZT DU', 730, 168, 22, GRAU, INTER_X, anker='l', alpha=a)
     zeile(b, [('1', INK), ('3', CA), (' · ', INK), ('1', INK), ('4', CB), (' = ?', GRAU)], 945, 245, 64, INTER_X,
           alpha=a)
-    au = ein(t, te, 0.3) * (1 - ein(t, te + 3.0, 0.3))
-    uhr(b, 945, 400, 62, (t - te) / 3.0, alpha=au * a)
+    au = ein(t, te, 0.3) * (1 - ein(t, te + UHR, 0.3))
+    uhr(b, 945, 400, 62, (t - te) / UHR, alpha=au * a)
     loes = [([('13', INK), (' + ', INK), ('4', CB), (' = 17', INK)], zeiten[0]),
             ([('17 · 10 = ', INK), ('170', TEAL)], zeiten[1]),
             ([('+ ', INK), ('3', CA), (' · ', INK), ('4', CB), (' = ', INK), ('12', CD)], zeiten[2])]
@@ -836,8 +837,8 @@ def s_merke(b, sc, t):
             xk = 960 - sum(breite(s_, INTER_X, 38) for s_, _ in teile) / 2 - 30
             b.kreis(xk, y + 16 * (1 - ai), 17, col, alpha=ai)
             b.text(nr, xk, y + 16 * (1 - ai), 19, '#ffffff', INTER_X, alpha=ai)
-    einblenden(b, [('= ', INK), ('182', GRUEN)], 960, 530, 56, t, te + 5.1)
-    funken(b, t, te + 5.25, mitten([('= ', INK), ('182', GRUEN)], 960, 56)[1], 530, r0=60, r1=170, fy=0.6)
+    einblenden(b, [('= ', INK), ('182', GRUEN)], 960, 530, 56, t, zeiten[3])
+    funken(b, t, zeiten[3] + 0.15, mitten([('= ', INK), ('182', GRUEN)], 960, 56)[1], 530, r0=60, r1=170, fy=0.6)
 
 
 def s_schluss(b, sc, t):
@@ -848,7 +849,7 @@ def s_schluss(b, sc, t):
     if a > 0:
         band(b, 190, 604 + 10 * (1 - a), 1090, 684 + 10 * (1 - a), TEAL, 0.94 * a, r=20)
         w = ein(t, C(sc, 'Mit ein bisschen'), 0.5)        # erst aus-, dann einblenden: nie zwei Texte übereinander
-        b.text('Länger als drei Sekunden? Ganz normal.', 640, 644, 30, '#ffffff', INTER_X, alpha=a * (1 - klemm(w * 2)))
+        b.text('Länger als vier Sekunden? Ganz normal.', 640, 644, 30, '#ffffff', INTER_X, alpha=a * (1 - klemm(w * 2)))
         b.text('Mit ein bisschen Übung schaffst du das auch.', 640, 628, 25, '#ffffff', INTER, alpha=a * klemm(w * 2 - 1))
         a2 = ein(t, C(sc, SPRUCH))
         b.text(SPRUCH, 640, 660 + 10 * (1 - a), 32, '#ffffff', INTER_X, alpha=a * a2, skala=0.85 + 0.15 * zurueck(a2))
@@ -857,13 +858,12 @@ def s_schluss(b, sc, t):
 KLAENGE = {  # Stichwort (oder '#ende' = Ende des Sprechtexts), Klang, Versatz in s – passend zu den Einblendungen
     # Nutzer 04.11.: kein „Plopp“ (fallender Ton, klang wie „Boing“). Glöckchen nur an den vier grünen Ergebnissen,
     # dort zusammen mit den Funken: ein Zeichen für „fertig gerechnet“.
-    'hook': [('drei Sekunden', 'tick', 0), ('drei Sekunden', 'tick', 1), ('drei Sekunden', 'tick', 2),
-             ('drei Sekunden', 'ding', 3.0)],
+    'hook': [('vier Sekunden', 'tick', k) for k in range(UHR)] + [('vier Sekunden', 'ding', float(UHR))],
     'regel': [('zur ersten Zahl', 'wusch', 0), ('sechs mal acht', 'wusch', 0.05), ('macht zwei', 'ding', 0)],
     'warum': [('drehen', 'wusch', 0)],
     'andersrum': [('legst du', 'wusch', 0)],
     'vorsicht': [('und nicht zweihundert', 'tief', 0), ('Zusammen', 'ding', 0)],
-    'merke': [('#ende', 'tick', 0.2), ('#ende', 'tick', 1.2), ('#ende', 'tick', 2.2), ('#ende', 'ding', 5.3)],
+    'merke': [('#ende', 'tick', 0.2 + k) for k in range(UHR)] + [('#ende', 'ding', 0.2 + UHR + 2.1)],
 }
 
 

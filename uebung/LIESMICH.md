@@ -6,7 +6,8 @@ Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das �
 
 - **Runde:** Start (Übersicht) → Übungsseite „Bereit?“ (Sprache lädt, Mikrofon geht an; beim Sprechen ist „Los“ erst frei,
   wenn Ton ankommt, sonst „Ohne Sprechen los“) → **„Los“: ab hier zählt die Zeit** (Nutzerwunsch 04.11.) → 10 Aufgaben → Ende mit „x von 10 richtig“, **Ø Sekunden je Aufgabe**, schnellste Zeit, Liste aller
-  Aufgaben mit Zeit, wechselndem Motivationsspruch und Ziel „unter drei Sekunden“ (wie im Video).
+  Aufgaben mit Zeit, wechselndem Motivationsspruch und Ziel je Stufe (`ziel` in `aufgaben.js`): „Alle Zahlen“ unter vier Sekunden wie im Video, „Einer ergeben 10“ unter drei
+  (Nutzerentscheidung 05.11., v1.9).
 - **Antworten:** tippen (Tastenfeld; bei dreistelligen Ergebnissen wird nach der 3. Ziffer geprüft) oder **sprechen**.
   Beides geht in derselben Runde, 🎤 schaltet um.
 - **Fehler:** falsche Zahl durchgestrichen, richtige daneben – genauso lange (0,8 s) wie bei richtig, kein Halt in der Runde

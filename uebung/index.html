@@ -226,10 +226,12 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 
 <script src="aufgaben.js"></script>
 <script>
-const APP_VERSION = '1.8';          // bei JEDER Änderung hochzählen
+const APP_VERSION = '1.9';          // bei JEDER Änderung hochzählen
 const $ = s => document.querySelector(s);
 const ANZAHL = 10;
-const ZIEL = 3.0;                    // Sekunden je Aufgabe, wie im Video („in drei Sekunden“)
+// Ziel in Sekunden je Aufgabe, je Stufe (Nutzerentscheidung 05.11.: „Alle Zahlen“ 4 s wie im Video, Sonderfall 3 s)
+const ZAHLWORT = { 2: 'zwei', 3: 'drei', 4: 'vier', 5: 'fünf', 6: 'sechs' };
+const ziel = () => { const u = uebung(); return (u.stufen.find(s => s.id === stand.stufe) || u.stufen[0]).ziel || 4; };
 const SPEICHER = 'kopfrechnen.stand', RUNDEN = 'kopfrechnen.runden';
 const lies = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (_) { return d; } };
 const schreib = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (_) {} };
@@ -433,9 +435,9 @@ function zeigeEnde(neu) {
   $('#e-richtig').textContent = `${richtig} von ${e.length} richtig`;
   // Nur die Hauptzahl (Nutzerwunsch 04.11.: Erklärtext und Kontrollzeilen sind zu viel); die Kontrollwerte stehen im Verlauf
   $('#e-zeit').innerHTML = `Ø <b>${sek(schnitt)}</b> je Aufgabe · schnellste ${sek(schnellste)}`;
+  const zs = ziel(), zwort = ZAHLWORT[zs] || zs, schnell = schnitt <= zs * 1000, fehlerfrei = richtig === e.length;
   $('#e-ziel').textContent = rekord ? '🏆 Neuer bester Schnitt!' :
-    schnitt <= ZIEL * 1000 ? 'Unter drei Sekunden – so schnell wie im Video!' : 'Ziel: unter drei Sekunden je Aufgabe.';
-  const schnell = schnitt <= ZIEL * 1000, fehlerfrei = richtig === e.length;
+    schnell ? `Unter ${zwort} Sekunden – Ziel geschafft!` : `Ziel: unter ${zwort} Sekunden je Aufgabe.`;
   const passend = schnell ? SPRUECHE.filter(x => !/schneller/.test(x)) : SPRUECHE;
   runde.spruch ||= passend[zufallInt(passend.length)];
   const spruch = runde.spruch;
