@@ -164,6 +164,10 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Ziel vier Sekunden** (Nutzerentscheidung 05.11.): Video und App-Stufe „Alle Zahlen“ sagen „in vier Sekunden“ (Uhr
   `UHR = 4` in `regel.py`), der Sonderfall „Einer ergeben 10“ bleibt bei drei (`ziel` je Stufe in `uebung/aufgaben.js`).
   Grund: Drei Sekunden mit Rechnen frustrieren; die meistgesehenen Videos nennen 3–5 s, tecmath für genau diesen Trick 4 s.
+- **Name des Tricks** (Nutzerwahl 05.11., Serie geplant: `themen/mathe-tricks/`, 127 Folgen): kurzer Name („Der
+  Zehner-Trick“), im Einstieg gesprochen („Mit dem Zehner-Trick schaffst du das …“) und als Band unter der Aufgabe
+  eingeblendet, sobald die Lösung steht. Kein eigenes Startbild vor dem Einstieg (kostet die ersten Sekunden); oben links
+  bleibt „Kopfrechnen“ als Name der Reihe, wie die App.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
   Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).

@@ -51,7 +51,7 @@ TEAL, GRUEN = '#0f766e', '#2a9d4a'
 
 SZENEN = [
     dict(id='hook', kicker='Kopfrechnen', pause=PAUSE + 0.5, text=(   # +0,5 s: „= 288“ bleibt nach der 4-s-Uhr stehen (Nutzer 05.11.)
-        'Sechzehn mal achtzehn. Im Kopf, in vier Sekunden? Mit diesem Trick schaffst du das für alle Zahlen von elf '
+        'Sechzehn mal achtzehn. Im Kopf, in vier Sekunden? Mit dem Zehner-Trick schaffst du das für alle Zahlen von elf '
         'bis neunzehn.')),
     dict(id='regel', kicker='Der Trick', text=(
         'Schritt eins: Nimm den Einer der zweiten Zahl, also die Acht, und zähl ihn zur ersten Zahl dazu. Sechzehn '
@@ -394,6 +394,14 @@ def s_hook(b, sc, t):
         funken(b, t, tu + UHR + 0.05, pos[4], 270, r0=70, r1=190)
     a = ein(t, tu, 0.3)
     uhr(b, 640, 455, 52, (t - tu) / UHR, alpha=a * (1 - ein(t, tu + UHR - 0.15, 0.3)))
+    # Name des Tricks (Nutzerwahl 05.11.): gesprochen „Mit dem Zehner-Trick …“, gezeigt, sobald „= 288“ steht
+    # (vorher sitzt an dieser Stelle die Uhr)
+    tn = max(C(sc, 'Zehner-Trick'), tu + UHR + 0.25)
+    qn = zurueck(p(t, tn, 0.45))
+    if qn > 0:
+        an = klemm(qn * 2)
+        band(b, 640 - 230 * qn, 435 - 43 * qn, 640 + 230 * qn, 435 + 43 * qn, TEAL, 0.95 * an, r=16)
+        b.text('Der Zehner-Trick', 640, 435, 44, '#ffffff', INTER_X, skala=max(qn, 0.01), alpha=an)
     t0 = C(sc, 'elf bis')
     for i, n in enumerate(range(11, 20)):
         q = zurueck(p(t, t0 + i * 0.08, 0.4))
