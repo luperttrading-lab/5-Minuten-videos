@@ -174,6 +174,10 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Zehner-Trick“), im Einstieg gesprochen („Mit dem Zehner-Trick schaffst du das …“) und als Band unter der Aufgabe
   eingeblendet, sobald die Lösung steht. Kein eigenes Startbild vor dem Einstieg (kostet die ersten Sekunden); oben links
   bleibt „Kopfrechnen“ als Name der Reihe, wie die App.
+- **YouTube-Vorschaubild der Reihe** (Nutzerwahl 05.11.: ein Design für alle Folgen, Wiedererkennung): Stil „Papier mit
+  Teal-Leiste unten“ aus `themen/mathe-einmaleins/vorschaubild.py` (`papier`): Aufgabe groß mit „= ?“, Einer orange und
+  violett wie im Video, unten die grüne Leiste mit Name des Tricks links und „KOPFRECHNEN“ rechts. Je Folge nur Aufgabe
+  und Name in `FOLGEN` ändern, keine Uhr (nicht jeder Trick hat ein Zeitversprechen). Fertig: `vorschaubild_zehner.png`.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
   Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).
