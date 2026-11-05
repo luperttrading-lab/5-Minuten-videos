@@ -145,8 +145,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   2. **„Deine Aufgabe: …“** – jede offene Entscheidung oder Abnahme als kurzer Arbeitsauftrag, auch wenn sie oben schon
      erwähnt wurde: Link, Ort auf der Seite, Zahl der Stellen („oben im Kasten, 10 Stellen, dann grüner Knopf“). Nie
      nur „bitte abnehmen“ (Suchzeit). Nichts offen: kein Aufgabenblock.
-  3. Nur die Links, die für diese Antwort gebraucht werden, jeden **genau einmal** (steht er schon im Arbeitsauftrag,
-     nicht noch einmal darunter).
+  3. Die festen Links des Projekts als beschriftete Liste, jeden **genau einmal** (Mathe: drei, siehe dort); der
+     Arbeitsauftrag verweist darauf („Auswahl-Seite, Link unten“) statt den Link zu wiederholen.
   4. Kostenzeile.
   **Jeder offene Punkt mit eigenem Link** (Nutzerwunsch 02.11.), auch Entscheidungen, die im Chat beantwortet werden:
   Vergleichsbilder dafür als Eintrag auf die Vorschau-Seite (Standbild als kurzes Video, „passt“ = übernehmen), damit
@@ -165,9 +165,14 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Zu jedem Mathe-Video eine Übung** in der App `uebung/` (https://luperttrading-lab.github.io/5-Minuten-videos/uebung/,
   Nutzerwunsch 04.11.: 10 Aufgaben, tippen oder sprechen, richtig gezählt, Ø-Zeit). Neue Übung in `uebung/aufgaben.js`,
   `APP_VERSION` hochzählen, `node uebung/tests/uebung.mjs` muss „Alles grün“ melden. Details `uebung/LIESMICH.md`.
-- **Links** (Nutzerwunsch 05.11., ersetzt „immer beide Links“): nur der gebrauchte, je einmal (siehe „Aufbau jeder
-  Antwort“): [Mathe-Videos · Vorschau](https://claude.ai/artifact/PVisw26MxXcVy1NJngcMFu) bei Videos,
-  [Kopfrechnen üben](https://luperttrading-lab.github.io/5-Minuten-videos/uebung/) nur, wenn sich an der App etwas geändert hat.
+- **Links am Ende jeder Antwort** (Nutzerwunsch 05.11. abends, ersetzt „nur der gebrauchte Link“), beschriftet, damit
+  das fertige Video nicht zwischen den Proben gesucht werden muss:
+  - **Fertige Videos:** [Kopfrechnen · fertige Videos](https://claude.ai/artifact/KtWyuT3JFmgu3yVphKcAH4) – nur die
+    abgenommenen Fassungen mit YouTube-Titel (Kopieren-Knopf) und Vorschaubild. Nach jeder Abnahme `fertig.json` in
+    `themen/mathe-stilprobe/` nachziehen, `python3 ../../werkzeug/fertig.py fertig.json <ordner>`, mit `publish_files`
+    auf Slug `98f5e798-15cf-46ab-8792-8c95d9d0393f` (nur geänderte Dateien, alte entfernen).
+  - **Auswahl und Proben:** [Mathe-Videos · Vorschau](https://claude.ai/artifact/PVisw26MxXcVy1NJngcMFu)
+  - **App:** [Kopfrechnen üben](https://luperttrading-lab.github.io/5-Minuten-videos/uebung/)
 - **Ziel vier Sekunden** (Nutzerentscheidung 05.11.): Video und App-Stufe „Alle Zahlen“ sagen „in vier Sekunden“ (Uhr
   `UHR = 4` in `regel.py`), der Sonderfall „Einer ergeben 10“ bleibt bei drei (`ziel` je Stufe in `uebung/aufgaben.js`).
   Grund: Drei Sekunden mit Rechnen frustrieren; die meistgesehenen Videos nennen 3–5 s, tecmath für genau diesen Trick 4 s.
