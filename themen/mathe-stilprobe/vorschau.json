@@ -1,7 +1,63 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Nichts offen: Das oberste Video (Zehner-Trick, vier Sekunden) ist abgenommen.",
+ "aufgabe": "Oben 7 Einträge: je ein „passt“ bei einem der 3 Vorschaubilder und einem der 3 Titel, dazu „passt“ oder „ändern“ bei der Karte „Einer rüber“.",
  "videos": [
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/vorschaubild_frage.mp4",
+   "titel": "Vorschaubild: Frage „16 · 18 = ?“",
+   "notiz": "Die Aufgabe ohne Lösung, darunter „Im Kopf in (4) Sekunden?“. Macht neugierig, wer klickt, will die Lösung. „passt“ = dieses nehmen.",
+   "stand": "05.11., 10:20",
+   "pruefen": true,
+   "poster_bei": 1
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/vorschaubild_flaeche.mp4",
+   "titel": "Vorschaubild: Fläche aus dem Video",
+   "notiz": "Links die Fläche 240 + 48 aus „Warum klappt das?“, rechts Aufgabe, Lösung und Name. Zeigt, dass es eine Erklärung gibt, nicht nur einen Trick. Die kleinen Zahlen in der Fläche sind auf dem Handy kaum lesbar. „passt“ = dieses nehmen.",
+   "stand": "05.11., 10:20",
+   "pruefen": true,
+   "poster_bei": 1
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/vorschaubild_loesung.mp4",
+   "titel": "Vorschaubild: Lösung „= 288“ mit Uhr und Name",
+   "notiz": "Aufgabe mit Lösung, darunter „im Kopf in (4) Sekunden“ und der Name. Verrät die Lösung, macht dafür das Versprechen klar. „passt“ = dieses nehmen.",
+   "stand": "05.11., 10:20",
+   "pruefen": true,
+   "poster_bei": 1
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/titel_1.mp4",
+   "titel": "Titel: „16 · 18 im Kopf in 4 Sekunden? Der Zehner-Trick“",
+   "notiz": "Wie der Einstieg im Video (47 Zeichen). „passt“ = diesen nehmen.",
+   "stand": "05.11., 10:20",
+   "pruefen": true,
+   "poster_bei": 1
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/titel_2.mp4",
+   "titel": "Titel: „Zahlen von 11 bis 19 im Kopf malnehmen – der Zehner-Trick“",
+   "notiz": "Sagt, wofür der Trick gilt; passt zu Suchen wie „11 bis 19 multiplizieren“ (Vermutung, nicht gemessen). 57 Zeichen. „passt“ = diesen nehmen.",
+   "stand": "05.11., 10:20",
+   "pruefen": true,
+   "poster_bei": 1
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/titel_3.mp4",
+   "titel": "Titel: „Kopfrechnen: 16 mal 18 in 4 Sekunden (Zehner-Trick)“",
+   "notiz": "Mit dem Namen der Reihe vorn, „mal“ statt Punkt (so tippt man es ins Suchfeld). 51 Zeichen. „passt“ = diesen nehmen.",
+   "stand": "05.11., 10:20",
+   "pruefen": true,
+   "poster_bei": 1
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/karte_einer_rueber.mp4",
+   "titel": "Aufgefallen: Karte „Der Trick“ sagt noch „Einer rüber“",
+   "notiz": "In Kapitel 1–3 stehen über den Rechnungen noch die Kurzformen „Einer rüber“ und „Einer · Einer dazu“, im Merkzettel heißt es inzwischen „Eine Einerziffer zur anderen Zahl addieren“. Gesprochen wird dort der ganze Satz, gelesen nur die Kurzform. „passt“ = so lassen, „ändern“ = Überschriften an den Merkzettel angleichen (neu rendern, kein neuer Ton).",
+   "stand": "05.11., 10:20",
+   "pruefen": true,
+   "poster_bei": 1
+  },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel18/regel_720p.mp4",
    "titel": "Neu: Zehner-Trick im Einstieg, Ziel vier Sekunden (2:58)",
