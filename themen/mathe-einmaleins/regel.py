@@ -86,7 +86,7 @@ SZENEN = [
         'so schnell. ' + SPRUCH)),
     # Endbildschirm (Nutzer 05.11.): für jede Folge gleich, ohne bestimmtes Video anzukündigen
     dict(id='abspann', kicker='Kopfrechnen', anhang=True, pause=ABSPANN, text=(
-        'Noch ein Trick? Hier geht\'s weiter. Und damit du keinen Trick verpasst: Abonnier den Kanal.')),
+        'Noch ein Trick? Hier geht\'s weiter. Und damit du nichts verpasst: Abonnier den Kanal.')),   # Nutzerwahl 05.11.: „Trick“ nur einmal
 ]
 
 

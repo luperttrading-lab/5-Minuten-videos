@@ -194,7 +194,7 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Eigener YouTube-Kanal für die Mathe-Videos** (Nutzerentscheidung 05.11.), getrennt von den Gesundheits-Faktenchecks.
   Später evtl. „Statistik leicht gemacht“; ob eigener Kanal oder zusammen mit Kopfrechnen, ist offen.
 - **Endbildschirm** (Nutzerwahl 05.11., Szene `abspann` in `regel.py`): nach dem Motivationssatz gesprochen „Noch ein
-  Trick? Hier geht's weiter. Und damit du keinen Trick verpasst: Abonnier den Kanal.“ (für jede Folge gleich, kein bestimmtes
+  Trick? Hier geht's weiter. Und damit du nichts verpasst: Abonnier den Kanal.“ („Trick“ nur einmal, Nutzer 05.11.) (für jede Folge gleich, kein bestimmtes
   Video ankündigen), dann `ABSPANN` = 8 s still. Bild: „Noch ein Trick?“, zwei Flächen für Video-Empfehlungen, Knopf
   „Abonnieren“ in der Mitte; YouTube Studio legt die Elemente darauf, das Abo-Element (Kanalbild) rechts neben den Knopf
   auf freie Fläche (kein grüner Platzhalter-Kreis mehr, Nutzer 05.11.) (nur letzte 5–20 s, nicht bei „für Kinder gemacht“).
