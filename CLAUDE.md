@@ -191,6 +191,11 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   „malnehmen“ oder eine konkrete Aufgabe wie „16 mal 18“. Aufbau (Nutzerwahl 05.11.): Name des Tricks vorn, dann
   ein Suchwort („großes Einmaleins“ statt „Kopfrechnen“, das steht schon im Vorschaubild), dann das Beispiel mit dem
   Versprechen, z. B. „Zehner-Trick: großes Einmaleins im Kopf – 16 · 18 in 4 Sekunden“. Titel je Folge in `youtube.md`.
+- **Eigener YouTube-Kanal für die Mathe-Videos** (Nutzerentscheidung 05.11.), getrennt von den Gesundheits-Faktenchecks.
+  Später evtl. „Statistik leicht gemacht“; ob eigener Kanal oder zusammen mit Kopfrechnen, ist offen.
+- **Endbildschirm** (Probe 05.11., `ABSPANN` und `abspann()` in `regel.py`): nach dem letzten Satz gut 12 s ohne Ton mit
+  „Noch ein Trick?“, zwei Flächen für Video-Empfehlungen und Kreis „Kanal abonnieren“, die YouTube Studio belegt
+  (Endbildschirm nur in den letzten 5–20 s, nicht bei „für Kinder gemacht“). Muss vor dem Hochladen im Video sein.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
   Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).
