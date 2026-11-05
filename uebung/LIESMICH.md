@@ -23,6 +23,11 @@ Nutzerwunsch 04.11.2026: „eine kleine App wie die Würfel-App, damit man das �
   einmal plus genau eine Wiederholung, nie 15 · 15, frühestens 4 Aufgaben später; nie dasselbe Paar direkt hintereinander,
   auch nicht verdreht (12 · 18 → 18 · 12). Nutzerwunsch 04.11., geprüft über 2000 Runden in `tests/uebung.mjs`.
 
+**Sprüche nach Lage (v2.0, Nutzer 05.11.):** alles richtig und schnell → Lob (`LOB_SPRUECHE`), alles richtig, aber über
+dem Ziel → Genauigkeit loben (`GENAU_SPRUECHE`), mit Fehlern → Mut machen (`SPRUECHE`); je Runde neu gewählt. „Ziel
+geschafft“ nur mit mindestens 8 von 10 richtigen. Gesprochenes, das schon vor der Aufgabe begann, zählt nicht für sie
+(sonst Zeiten von 0,0 s).
+
 **Versionen:** nach 0.6 folgt 1.7 (Nutzerwunsch 04.11.). Die Update-Prüfung vergleicht nur auf Gleichheit, der Sprung ist unkritisch.
 
 ## Sprechen

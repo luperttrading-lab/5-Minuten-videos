@@ -94,6 +94,10 @@ ok(e.length === 10 && e.every(x => x.dauer > 0 && x.dauer < 5000), 'Jede Aufgabe
 ok((await page.textContent('#e-ziel')).trim() === (schnitt <= 4 ? 'Unter vier Sekunden – Ziel geschafft!' : 'Ziel: unter vier Sekunden je Aufgabe.'),
   `Ziel „Alle Zahlen“ vier Sekunden: „${(await page.textContent('#e-ziel')).trim()}“`);
 ok(JSON.stringify(await page.evaluate(() => UEBUNGEN[0].stufen.map(s => s.ziel))) === '[4,3]', 'Ziele je Stufe: Alle Zahlen 4 s, Einer ergeben 10 3 s');
+{ // Spruch nach Lage: 9 von 10 richtig → Mut-Spruch, nicht Lob (Nutzer 05.11.)
+  const sp = (await page.textContent('#e-spruch b')).trim();
+  ok(await page.evaluate(t => SPRUECHE.includes(t) && !LOB_SPRUECHE.includes(t), sp), `Mit Fehler: Spruch zum Mutmachen („${sp}“)`);
+}
 ok(e[0].dauer < 600, `Die Wartezeit vor „Los“ zählt nicht: erste Aufgabe ${Math.round(e[0].dauer)} ms`);
 ok((await page.$$('#liste li')).length === 10, 'Liste mit allen 10 Aufgaben');
 const weg = await page.textContent('#liste li.nein .weg');
@@ -166,6 +170,20 @@ ok(v.mehrAlsEinDoppel === 0 && v.abstand >= 4, `Höchstens eine Wiederholung je 
 ok(v.gedreht / v.aufgaben > 0.4 && v.gedreht / v.aufgaben < 0.6, `Beide Reihenfolgen: ${Math.round(100 * v.gedreht / v.aufgaben)} % mit der größeren Zahl vorne`);
 ok(v.alleDoppel === 0 && v.alleNachbar === 0, '„Alle Zahlen“: nie ein Paar doppelt, auch nicht verdreht');
 ok(z.r.flat().every(f => { const [x, y] = f.split(' · ').map(Number); return x >= 11 && x <= 19 && y >= 11 && y <= 19; }), 'Alle Faktoren zwischen 11 und 19');
+
+console.log('Runde ohne Fehler: Lob-Spruch');
+{
+  await page.goto(basis + '?folge=16x18,12x18,13x17');
+  await page.click('#los'); await page.waitForTimeout(300); await page.click('#bereit-los');
+  for (const z of [288, 216, 221]) {
+    for (const c of String(z)) { await page.dispatchEvent(`#tasten button[aria-label="${c}"]`, 'pointerdown'); await page.waitForTimeout(60); }
+    await page.waitForTimeout(950);
+  }
+  await page.waitForSelector('#ende:not([hidden])', { timeout: 5000 });
+  const sp = (await page.textContent('#e-spruch b')).trim();
+  ok(await page.evaluate(t => LOB_SPRUECHE.includes(t), sp) && (await page.textContent('#e-spruch')).startsWith('Schnell und fehlerfrei'),
+    `Alles richtig und schnell: Lob statt „keine Raketenwissenschaft“ („${sp}“)`);
+}
 
 ok(konsole.length === 0, 'Keine Fehler in der Konsole' + (konsole.length ? ': ' + konsole.join(' | ') : ''));
 await browser.close(); server.close();

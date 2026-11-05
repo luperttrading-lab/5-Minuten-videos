@@ -70,6 +70,16 @@ const SPRUECHE = [
   'Nach ein paar Runden geht das wie von selbst.', 'Dein Kopf ist schneller, als du denkst.', 'Dranbleiben lohnt sich.',
   'Mit jeder Aufgabe wird es leichter.', 'Dafür musst du kein Mathe-Genie sein.', 'Ein paar Minuten am Tag reichen schon.',
 ];
+// Alles richtig und schnell (Nutzer 05.11.: „keine Raketenwissenschaft“ passt dann nicht, es braucht Lob)
+const LOB_SPRUECHE = [
+  'Da kann der Taschenrechner einpacken.', 'So sieht Kopfrechnen aus.', 'Respekt – das sitzt.', 'Das war Profi-Niveau.',
+  'Genau so geht’s.', 'Dein Kopf ist in Bestform.',
+];
+// Alles richtig, aber noch über dem Ziel: Genauigkeit loben, Tempo in Aussicht stellen
+const GENAU_SPRUECHE = [
+  'Sauber gerechnet – das Tempo kommt von allein.', 'Erst richtig, dann schnell – genau die richtige Reihenfolge.',
+  'Fehlerfrei ist die halbe Miete.', 'Wer richtig rechnet, wird von selbst schneller.',
+];
 
 // Gesprochene Zahl (Vosk liefert Wörter) → Zahl 0 … 999. Die Wörter werden zusammengezogen, weil das Modell
 // „zweihundertachtundachtzig“ als „zweihundert achtundachtzig“ oder „zweihundert acht und achtzig“ liefern kann.
