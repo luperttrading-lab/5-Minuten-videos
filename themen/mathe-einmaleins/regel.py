@@ -50,7 +50,7 @@ CA, CB, CBLAU, CD = '#ff9f1c', '#8338ec', '#3a86ff', '#e63946'   # Einer der 1. 
 TEAL, GRUEN = '#0f766e', '#2a9d4a'
 
 SZENEN = [
-    dict(id='hook', kicker='Kopfrechnen', text=(
+    dict(id='hook', kicker='Kopfrechnen', pause=PAUSE + 0.5, text=(   # +0,5 s: „= 288“ bleibt nach der 4-s-Uhr stehen (Nutzer 05.11.)
         'Sechzehn mal achtzehn. Im Kopf, in vier Sekunden? Mit diesem Trick schaffst du das für alle Zahlen von elf '
         'bis neunzehn.')),
     dict(id='regel', kicker='Der Trick', text=(
