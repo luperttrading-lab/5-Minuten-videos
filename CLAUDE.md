@@ -197,8 +197,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Trick? Hier geht's weiter. Und damit du keinen verpasst: Abonnier den Kanal.“ (für jede Folge gleich, kein bestimmtes
   Video ankündigen), dann `ABSPANN` = 8 s still. Bild: „Noch ein Trick?“, zwei Flächen für Video-Empfehlungen, Kreis
   „Kanal abonnieren“; YouTube Studio legt die Elemente darauf (nur letzte 5–20 s, nicht bei „für Kinder gemacht“).
-  Muss vor dem Hochladen im Video sein. Idee für später (Nutzer 05.11., noch nicht einbauen): Abo-Knopf zum Schluss
-  animiert „drücken“.
+  Muss vor dem Hochladen im Video sein. Abo-Zeile (Probe 05.11.): links der Kreis für das echte YouTube-Abo-Element,
+  rechts ein gezeichneter Knopf „Abonnieren“, den ein Mauszeiger beim Wort „Abonnier“ drückt (Klang `klick`, Spitze
+  ≈ 0,16 wie die übrigen Geräusche), danach „Abonniert“ mit Häkchen.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
   Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).

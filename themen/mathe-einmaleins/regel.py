@@ -876,6 +876,7 @@ KLAENGE = {  # Stichwort (oder '#ende' = Ende des Sprechtexts), Klang, Versatz i
     'andersrum': [('legst du', 'wusch', 0)],
     'vorsicht': [('und nicht zweihundert', 'tief', 0), ('Zusammen', 'ding', 0)],
     'merke': [('#ende', 'tick', 0.2 + k) for k in range(UHR)] + [('#ende', 'ding', 0.2 + UHR + 2.1)],
+    'abspann': [('Abonnier', 'klick', 0.2)],              # Nutzer 05.11.: der Abo-Knopf wird hörbar gedrückt
 }
 
 
@@ -905,6 +906,11 @@ def klang(art):
             z += k * (v - z)
             aus[i] = z
         y = aus * np.sin(np.pi * t / 0.5) ** 2 * 0.09
+    elif art == 'klick':                                   # Mausklick (Abo-Knopf): Drücken und leiseres Loslassen
+        t = zeit(0.14)
+        n = np.diff(np.random.default_rng(3).standard_normal(len(t)), prepend=0.0)   # Rauschen, Höhen betont
+        y = sum(a * n * np.where(t >= t0, np.exp(-(t - t0) * 900), 0.0) for t0, a in ((0.0, 0.035), (0.075, 0.018)))
+        y = y + 0.02 * np.sin(2 * np.pi * 180 * t) * np.exp(-t * 60)                 # kleiner Körper
     else:                                                  # 'tief': gedämpfter Doppelton für „Achtung“
         t = zeit(0.45)
         y = (np.sin(2 * np.pi * 196 * t) + np.sin(2 * np.pi * 207 * t)) * np.exp(-t * 6) * np.minimum(1, t * 200) * 0.05
@@ -1043,9 +1049,30 @@ def s_abspann(b, sc, t):
         b.d.polygon([((x + 230 - 18) * K, (y + 129 - 22) * K), ((x + 230 - 18) * K, (y + 129 + 22) * K),
                      ((x + 230 + 24) * K, (y + 129) * K)], fill=farbe(HELL, 255 * q))
         b.text(wort, x + 230, y + 259 + 34, 26, GRAU, INTER_X, alpha=q)
-    q = ein(t, t_abo)
-    b.kreis(640, 585, 52 * (0.8 + 0.2 * q), TEAL, alpha=q)
-    b.text('Kanal abonnieren', 640, 668, 24, GRAU, INTER_X, alpha=q)
+    # Abo-Zeile (Nutzer 05.11.): links der Kreis, auf den YouTube Studio das echte Abo-Element legt, rechts ein Knopf,
+    # den ein Mauszeiger beim Wort „Abonnier“ drückt (mit Klick); danach steht „Abonniert“ darauf.
+    q = ein(t, C(sc, 'Und damit'))
+    cx, cy, r, x0, w, h = 505, 590, 46, 571, 250, 66
+    b.kreis(cx, cy, r * (0.8 + 0.2 * q), TEAL, alpha=q)
+    tk = t_abo + 0.2                                       # Klick (wie in KLAENGE)
+    dr = 1 - 0.07 * math.sin(math.pi * p(t, tk - 0.05, 0.18))   # Knopf gibt beim Drücken nach
+    mx = x0 + w / 2
+    hw, hh = w / 2 * dr * (0.85 + 0.15 * q), h / 2 * dr * (0.85 + 0.15 * q)
+    an = t >= tk + 0.05
+    band(b, mx - hw, cy - hh, mx + hw, cy + hh, HELL if an else TEAL, q, r=hh)
+    if an:
+        b.text('Abonniert', mx + 20, cy, 28, INK, INTER_X, alpha=q)
+        b.linie([(mx - 96, cy + 1), (mx - 86, cy + 11), (mx - 68, cy - 10)], TEAL, 6, alpha=q)
+    else:
+        b.text('Abonnieren', mx, cy, 28, '#ffffff', INTER_X, alpha=q, skala=dr)
+    fz = glatt(p(t, t_abo - 0.6, 0.7))                     # Mauszeiger fliegt von rechts unten zum Knopf
+    az = ein(t, t_abo - 0.6, 0.2) * (1 - ein(t, tk + 1.4, 0.4))
+    if az > 0:
+        zx, zy = mix(1010, mx + 40, fz), mix(760, cy + 6, fz)
+        zs = 1.3 * (1 - 0.12 * math.sin(math.pi * p(t, tk - 0.05, 0.18)))
+        pf = [(0, 0), (0, 34), (9, 26), (15, 40), (21, 37), (15, 24), (26, 24)]
+        pts = [((zx + px * zs) * K, (zy + py * zs) * K) for px, py in pf]
+        b.d.polygon(pts, fill=farbe('#ffffff', 255 * az), outline=farbe(INK, 255 * az), width=int(2.2 * K))
 
 
 def zeichne(i, tl, t):
