@@ -183,7 +183,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   YouTube-Suchvorschläge abfragen (`https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&hl=de&gl=de&q=…`;
   zeigt, was gesucht wird, nicht wie oft). Stand 05.11.: „großes Einmaleins“ (Tricks, im Kopf rechnen), „im Kopf
   multiplizieren“, „Kopfrechnen Trick multiplizieren“, „Zahlen von 11 bis 19 im Kopf multiplizieren“; niemand sucht
-  „malnehmen“ oder eine konkrete Aufgabe wie „16 mal 18“. Suchwort vorn, Versprechen danach, Name des Tricks zuletzt.
+  „malnehmen“ oder eine konkrete Aufgabe wie „16 mal 18“. Aufbau (Nutzerwahl 05.11.): Name des Tricks vorn, dann
+  ein Suchwort („großes Einmaleins“ statt „Kopfrechnen“, das steht schon im Vorschaubild), dann das Beispiel mit dem
+  Versprechen, z. B. „Zehner-Trick: großes Einmaleins im Kopf – 16 · 18 in 4 Sekunden“. Titel je Folge in `youtube.md`.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
   Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).
