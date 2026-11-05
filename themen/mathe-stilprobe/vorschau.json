@@ -1,13 +1,13 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben 7 Einträge: „passt“ bei einem der 3 Stile für das Vorschaubild, „passt“ bei einem der 3 Titel, dazu „passt“ oder „ändern“ bei der Karte „Einer rüber“.",
+ "aufgabe": "Oben 1 Eintrag: „passt“ oder „ändern“ bei der Karte „Einer rüber“.",
  "videos": [
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/vb/bogen_papier.mp4",
-   "titel": "Vorschaubild für die ganze Reihe: Papier mit Teal-Leiste unten",
+   "titel": "Vorschaubild für die ganze Reihe: Papier mit Teal-Leiste unten (gewählt)",
    "notiz": "Wie das Video (warmes Papier). Wiedererkennung: die grüne Leiste unten mit Name und „Kopfrechnen“. Auf der hellen YouTube-Seite fällt Papier weniger auf. „passt“ = diesen Stil nehmen.",
    "stand": "05.11., 10:50",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 1
   },
   {
@@ -15,7 +15,7 @@
    "titel": "Vorschaubild für die ganze Reihe: Teal-Rahmen mit Reiter",
    "notiz": "Papier im grünen Rahmen, oben links der Reiter „Kopfrechnen“, Name als dunkles Band. Der Rahmen macht jede Folge auf einen Blick erkennbar. „passt“ = diesen Stil nehmen.",
    "stand": "05.11., 10:50",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 1
   },
   {
@@ -23,31 +23,7 @@
    "titel": "Vorschaubild für die ganze Reihe: dunkler Grund",
    "notiz": "Dunkel mit hellen Ziffern, Name als grünes Band. Sticht auf der hellen YouTube-Seite am stärksten heraus, sieht aber anders aus als das helle Video. „passt“ = diesen Stil nehmen.",
    "stand": "05.11., 10:50",
-   "pruefen": true,
-   "poster_bei": 1
-  },
-  {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/titel_1.mp4",
-   "titel": "Titel: „16 · 18 im Kopf in 4 Sekunden? Der Zehner-Trick“",
-   "notiz": "Wie der Einstieg im Video (47 Zeichen). „passt“ = diesen nehmen.",
-   "stand": "05.11., 10:20",
-   "pruefen": true,
-   "poster_bei": 1
-  },
-  {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/titel_2.mp4",
-   "titel": "Titel: „Zahlen von 11 bis 19 im Kopf malnehmen – der Zehner-Trick“",
-   "notiz": "Sagt, wofür der Trick gilt; passt zu Suchen wie „11 bis 19 multiplizieren“ (Vermutung, nicht gemessen). 57 Zeichen. „passt“ = diesen nehmen.",
-   "stand": "05.11., 10:20",
-   "pruefen": true,
-   "poster_bei": 1
-  },
-  {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/thumb/titel_3.mp4",
-   "titel": "Titel: „Kopfrechnen: 16 mal 18 in 4 Sekunden (Zehner-Trick)“",
-   "notiz": "Mit dem Namen der Reihe vorn, „mal“ statt Punkt (so tippt man es ins Suchfeld). 51 Zeichen. „passt“ = diesen nehmen.",
-   "stand": "05.11., 10:20",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 1
   },
   {

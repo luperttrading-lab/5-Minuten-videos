@@ -151,6 +151,7 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   **Jeder offene Punkt mit eigenem Link** (Nutzerwunsch 02.11.), auch Entscheidungen, die im Chat beantwortet werden:
   Vergleichsbilder dafür als Eintrag auf die Vorschau-Seite (Standbild als kurzes Video, „passt“ = übernehmen), damit
   alles Offene an einem Ort mit Link liegt. Nie ein Kürzel („Variante D“) ohne Bild und Link wiederholen.
+  Reine Textentscheidungen (z. B. Titel) direkt im Chat als nummerierte Liste, ohne Bildtafel (Nutzerwunsch 05.11.).
 - Am Ende jeder Antwort genau eine Kostenzeile: `python3 tools/kosten.py` ausführen, Ausgabe wörtlich als letzte Zeile.
 - Jede Internetadresse als klickbarer Markdown-Link.
 
@@ -178,6 +179,11 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Teal-Leiste unten“ aus `themen/mathe-einmaleins/vorschaubild.py` (`papier`): Aufgabe groß mit „= ?“, Einer orange und
   violett wie im Video, unten die grüne Leiste mit Name des Tricks links und „KOPFRECHNEN“ rechts. Je Folge nur Aufgabe
   und Name in `FOLGEN` ändern, keine Uhr (nicht jeder Trick hat ein Zeitversprechen). Fertig: `vorschaubild_zehner.png`.
+- **YouTube-Titel nach Suchbegriffen** (Nutzerwunsch 05.11.: „was am meisten gesucht wird“): vorher die
+  YouTube-Suchvorschläge abfragen (`https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&hl=de&gl=de&q=…`;
+  zeigt, was gesucht wird, nicht wie oft). Stand 05.11.: „großes Einmaleins“ (Tricks, im Kopf rechnen), „im Kopf
+  multiplizieren“, „Kopfrechnen Trick multiplizieren“, „Zahlen von 11 bis 19 im Kopf multiplizieren“; niemand sucht
+  „malnehmen“ oder eine konkrete Aufgabe wie „16 mal 18“. Suchwort vorn, Versprechen danach, Name des Tricks zuletzt.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
   Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).
