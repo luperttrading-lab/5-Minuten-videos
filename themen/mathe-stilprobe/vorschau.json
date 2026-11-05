@@ -1,30 +1,30 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben 3 Einträge: drei Hände für den Abo-Knopf. Bei der schönsten „passt“ tippen.",
+ "aufgabe": "Oben 3 Einträge: Farben des Abo-Knopfs vorher/nachher. Bei der besten „passt“ tippen.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hand_dl/clip_hand_fluent_3d.mp4",
-   "titel": "Abo-Knopf, Hand 1: Emoji-Hand mit Schatten (weich, 3D)",
-   "notiz": "Fertige Emoji-Hand (Microsoft Fluent, frei nutzbar), tippt schräg von unten auf „Abonnieren“, leiser Klick. „passt“ = diese Hand nehmen.",
-   "stand": "05.11., 12:52",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abo4/abo_1_gruen-zu-weiss.mp4",
+   "titel": "Abo-Knopf 1: vorher grün, nachher weiß mit grünem Rand",
+   "notiz": "Antippen mit mittelheller Hand, Tipp-Welle, leiser Klick. Nach dem Tippen weiß mit grünem Rand und grüner Schrift „✓ Abonniert“. „passt“ = diese Farben nehmen.",
+   "stand": "05.11., 13:27",
    "pruefen": true,
-   "poster_bei": 2.8
+   "poster_bei": 4.6
   },
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hand_dl/clip_hand_fluent_flach.mp4",
-   "titel": "Abo-Knopf, Hand 2: Emoji-Hand flach",
-   "notiz": "Dieselbe Hand ohne Schatten, flach wie der Rest des Videos. „passt“ = diese Hand nehmen.",
-   "stand": "05.11., 12:52",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abo4/abo_2_gruen-zu-grau.mp4",
+   "titel": "Abo-Knopf 2: vorher grün, nachher grau (wie bei YouTube)",
+   "notiz": "Wie YouTube selbst: Nach dem Abonnieren wird der Knopf zurückhaltend grau. Der Effekt ist am schwächsten. „passt“ = diese Farben nehmen.",
+   "stand": "05.11., 13:27",
    "pruefen": true,
-   "poster_bei": 2.8
+   "poster_bei": 4.6
   },
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hand_dl/clip_hand_noto.mp4",
-   "titel": "Abo-Knopf, Hand 3: Emoji-Hand wie auf Android",
-   "notiz": "Das Emoji „👆“ in der Form, die Android-Handys zeigen; etwas weicher gezeichnet, weil es nur klein vorliegt. „passt“ = diese Hand nehmen.",
-   "stand": "05.11., 12:52",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abo4/abo_3_weiss-zu-gruen.mp4",
+   "titel": "Abo-Knopf 3: vorher weiß, nachher kräftig grün",
+   "notiz": "Umgekehrt: vorher heller Knopf, nach dem Tippen wird er kräftig grün mit weißem „✓ Abonniert“ – die Farbe wird stärker, der Effekt am deutlichsten. „passt“ = diese Farben nehmen.",
+   "stand": "05.11., 13:27",
    "pruefen": true,
-   "poster_bei": 2.8
+   "poster_bei": 4.6
   },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abspann/abspann.mp4",

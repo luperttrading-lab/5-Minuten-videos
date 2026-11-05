@@ -205,6 +205,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   deutlich, statt wie bei YouTube grau zu werden). Hand: Form „Handrücken, nach oben“, mittelhell, plastisch
   (Nutzerwahl 05.11., `bilder/hand_fluent_3d_mittelhell.png`). Finger statt
   Mauszeiger (Nutzer 05.11.): YouTube läuft vor allem auf Handy und Fernseher, kaum am PC.
+- **Erst rendern, wenn der Nutzer freigibt** (Nutzer 05.11.): Änderungen an einer Stelle als kurzen Clip nur dieser
+  Stelle zeigen (Vorlage: `clip.py` im Scratchpad – Bilder per `G.bild(t)` in 4 Prozessen, Ton aus der WAV von
+  `--nur-ton`), das ganze Video erst nach ausdrücklicher Freigabe neu rendern.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
   unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
   Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).
