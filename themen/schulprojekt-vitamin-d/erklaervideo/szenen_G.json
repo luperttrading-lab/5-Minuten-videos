@@ -66,8 +66,8 @@
     "Vitamin D ist eigentlich kein klassisches Vitamin, sondern die Vorstufe eines Hormons.",
     "Den größten Teil bildet dein Körper selbst: in der Haut, mit dem UV-Licht der Sonne.",
     "Leber und Niere machen daraus die aktive Form, und Andockstellen dafür gibt es in fast allen Geweben.",
-    "Am bekanntesten ist seine Aufgabe für Knochen und Muskeln: Es hilft dem Darm, Kalzium aufzunehmen.",
-    "Aus dem Essen kommt nur wenig, am meisten steckt in fettem Fisch wie Hering.",
+    "Am bekanntesten ist seine Aufgabe für Knochen und Muskeln: Vitamin D hilft dem Darm, Kalzium aus der Nahrung aufzunehmen.",
+    "Vitamin D selbst steckt dagegen nur in wenigen Lebensmitteln, am meisten in fettem Fisch wie Hering.",
     "Tipp für dich: Fetter Fisch ein- bis zweimal pro Woche hilft etwas, die wichtigste Quelle bleibt aber die Sonne."
    ],
    "bullets": [
@@ -84,7 +84,7 @@
      "at": 3
     },
     {
-     "t": "Wenig im Essen, viel im Hering",
+     "t": "Vitamin D im Essen: vor allem Hering",
      "at": 4
     }
    ],
@@ -119,7 +119,10 @@
     "Gesicht und Arme allein sind wenig Haut.",
     "In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle die Untergrenze, aber nur jeder Vierte höhere Werte.",
     "Mittags im Hochsommer, in Badehose oder Bikini, bildet die Haut nach einer bekannten Schätzung in wenigen Minuten mehrere tausend Einheiten, lange bevor sie rot wird.",
-    "Von Oktober bis März steht die Sonne in Deutschland zu tief, dann bildet die Haut kaum Vitamin D.",
+    {
+     "t": "Von Oktober bis März steht die Sonne in Deutschland auch mittags tiefer als 45 Grad, dein Schatten ist länger als du. Dann bildet die Haut kein Vitamin D.",
+     "say": "Von Oktober bis März steht die Sonne in Deutschland auch mittags tiefer als fünfundvierzig Grad, dein Schatten ist länger als du. Dann bildet die Haut kein Vitamin D."
+    },
     "Im Alter, mit dunkler Haut und mit Sonnencreme bildet sie weniger.",
     {
      "t": "Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus, mit möglichst viel freier Haut. Je nach Hauttyp reichen 5 bis 25 Minuten, aber nie bis zum Sonnenbrand.",
@@ -136,13 +139,14 @@
      "at": 3
     },
     {
-     "t": "Oktober bis März: zu wenig Sonne",
+     "t": "Oktober bis März: keine Bildung",
      "at": 4
     }
    ],
    "quellen": [
     "rhodes2010",
     "holick2007",
+    "webb1988",
     "bfr2025"
    ],
    "shots": [
@@ -178,7 +182,10 @@
     },
     "Wir rechnen in Nanogramm pro Milliliter.",
     "Manche Labore schreiben Nanomol pro Liter, das ist das Zweieinhalbfache: Zwanzig Nanogramm sind fünfzig Nanomol.",
-    "Schau deshalb immer auf die Einheit, sonst hältst du einen guten Wert womöglich für einen Mangel.",
+    {
+     "t": "Schau deshalb immer auf die Einheit, sonst hältst du einen Mangel fälschlich für einen guten Wert: 25 Nanomol sehen gut aus, sind aber nur 10 Nanogramm.",
+     "say": "Schau deshalb immer auf die Einheit, sonst hältst du einen Mangel fälschlich für einen guten Wert: Fünfundzwanzig Nanomol sehen gut aus, sind aber nur zehn Nanogramm."
+    },
     "Unter zwölf gilt als Mangel.",
     "Ab zwanzig reicht es laut großen Fachgremien.",
     "Eine Fachgesellschaft für Hormonmedizin nannte lange dreißig als Ziel, das Optimum ist bis heute umstritten.",
@@ -581,6 +588,11 @@
    "kurz": "Pittas et al. 2023",
    "voll": "Pittas AG et al. Vitamin D and Risk for Type 2 Diabetes in People With Prediabetes: Meta-analysis of Individual Participant Data From 3 Randomized Clinical Trials. Ann Intern Med 2023;176(3):355–363.",
    "url": "https://doi.org/10.7326/M22-3018"
+  },
+  "webb1988": {
+   "kurz": "Webb et al. 1988",
+   "voll": "Webb AR, Kline L, Holick MF. Influence of Season and Latitude on the Cutaneous Synthesis of Vitamin D3: Exposure to Winter Sunlight in Boston and Edmonton Will Not Promote Vitamin D3 Synthesis in Human Skin. J Clin Endocrinol Metab 1988;67(2):373–378.",
+   "url": "https://doi.org/10.1210/jcem-67-2-373"
   },
   "hahn2022": {
    "kurz": "Hahn et al. 2022",

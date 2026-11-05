@@ -1,0 +1,312 @@
+1
+00:00:01,000 --> 00:00:03,949
+Vitamin D: Dein Körper macht es selbst,
+
+2
+00:00:03,799 --> 00:00:07,394
+aus Sonnenlicht. Doch im Winter fehlt es vielen.
+
+3
+00:00:07,244 --> 00:00:13,088
+Du erfährst, was es eigentlich ist, wie du die Sonne richtig nutzt, wie du deinen Wert liest,
+
+4
+00:00:12,938 --> 00:00:17,374
+wie viel du brauchst, was Studien zeigen und wer besonders profitiert.
+
+5
+00:00:17,974 --> 00:00:21,612
+Vitamin D ist eigentlich kein klassisches Vitamin,
+
+6
+00:00:21,462 --> 00:00:24,053
+sondern die Vorstufe eines Hormons.
+
+7
+00:00:23,903 --> 00:00:29,463
+Den größten Teil bildet dein Körper selbst: in der Haut, mit dem UV-Licht der Sonne.
+
+8
+00:00:29,313 --> 00:00:32,512
+Leber und Niere machen daraus die aktive Form,
+
+9
+00:00:32,362 --> 00:00:36,091
+und Andockstellen dafür gibt es in fast allen Geweben.
+
+10
+00:00:35,941 --> 00:00:41,478
+Am bekanntesten ist seine Aufgabe für Knochen und Muskeln: Vitamin D hilft dem Darm,
+
+11
+00:00:41,328 --> 00:00:43,787
+Kalzium aus der Nahrung aufzunehmen.
+
+12
+00:00:43,637 --> 00:00:47,636
+Vitamin D selbst steckt dagegen nur in wenigen Lebensmitteln,
+
+13
+00:00:47,486 --> 00:00:50,034
+am meisten in fettem Fisch wie Hering.
+
+14
+00:00:49,884 --> 00:00:54,015
+Tipp für dich: Fetter Fisch ein- bis zweimal pro Woche hilft etwas,
+
+15
+00:00:53,865 --> 00:00:56,629
+die wichtigste Quelle bleibt aber die Sonne.
+
+16
+00:00:57,229 --> 00:01:02,027
+Im Sommer ist die Sonne die beste Quelle, und es kommt auf die Fläche an.
+
+17
+00:01:01,877 --> 00:01:04,998
+Gesicht und Arme allein sind wenig Haut.
+
+18
+00:01:04,848 --> 00:01:10,178
+In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle die Untergrenze,
+
+19
+00:01:10,028 --> 00:01:12,389
+aber nur jeder Vierte höhere Werte.
+
+20
+00:01:12,239 --> 00:01:15,438
+Mittags im Hochsommer, in Badehose oder Bikini,
+
+21
+00:01:15,288 --> 00:01:23,094
+bildet die Haut nach einer bekannten Schätzung in wenigen Minuten mehrere tausend Einheiten, lange bevor sie rot wird.
+
+22
+00:01:22,944 --> 00:01:28,762
+Von Oktober bis März steht die Sonne in Deutschland auch mittags tiefer als 45 Grad,
+
+23
+00:01:28,612 --> 00:01:33,417
+dein Schatten ist länger als du. Dann bildet die Haut kein Vitamin D.
+
+24
+00:01:33,267 --> 00:01:37,494
+Im Alter, mit dunkler Haut und mit Sonnencreme bildet sie weniger.
+
+25
+00:01:37,344 --> 00:01:41,755
+Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus,
+
+26
+00:01:41,605 --> 00:01:48,949
+mit möglichst viel freier Haut. Je nach Hauttyp reichen 5 bis 25 Minuten, aber nie bis zum Sonnenbrand.
+
+27
+00:01:49,549 --> 00:01:54,956
+Gemessen wird die Speicherform im Blut, das 25-OH-Vitamin D.
+
+28
+00:01:54,806 --> 00:01:57,775
+Wir rechnen in Nanogramm pro Milliliter.
+
+29
+00:01:57,625 --> 00:02:00,716
+Manche Labore schreiben Nanomol pro Liter,
+
+30
+00:02:00,566 --> 00:02:05,547
+das ist das Zweieinhalbfache: Zwanzig Nanogramm sind fünfzig Nanomol.
+
+31
+00:02:05,397 --> 00:02:07,963
+Schau deshalb immer auf die Einheit,
+
+32
+00:02:07,813 --> 00:02:15,680
+sonst hältst du einen Mangel fälschlich für einen guten Wert: 25 Nanomol sehen gut aus, sind aber nur 10 Nanogramm.
+
+33
+00:02:15,530 --> 00:02:17,737
+Unter zwölf gilt als Mangel.
+
+34
+00:02:17,587 --> 00:02:21,014
+Ab zwanzig reicht es laut großen Fachgremien.
+
+35
+00:02:20,864 --> 00:02:25,549
+Eine Fachgesellschaft für Hormonmedizin nannte lange dreißig als Ziel,
+
+36
+00:02:25,399 --> 00:02:27,947
+das Optimum ist bis heute umstritten.
+
+37
+00:02:27,797 --> 00:02:32,072
+In Deutschland liegt im Jahresmittel etwa jeder Siebte unter zwölf,
+
+38
+00:02:31,922 --> 00:02:34,042
+im Winter sind es deutlich mehr.
+
+39
+00:02:33,892 --> 00:02:36,515
+Tipp für dich: Lässt du deinen Wert messen,
+
+40
+00:02:36,365 --> 00:02:40,425
+frag nach der Einheit und nach der Grenze, die dein Labor verwendet.
+
+41
+00:02:41,025 --> 00:02:47,804
+Ohne Sonne braucht ein Erwachsener laut Fachgesellschaft für Ernährung etwa 800 Einheiten am Tag.
+
+42
+00:02:47,654 --> 00:02:54,356
+Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000 Einheiten täglich.
+
+43
+00:02:54,206 --> 00:02:59,174
+Wer mehr wiegt, braucht mehr: bei Übergewicht etwa anderthalbmal so viel,
+
+44
+00:02:59,024 --> 00:03:03,728
+bei starkem Übergewicht zwei- bis dreimal so viel für denselben Wert.
+
+45
+00:03:03,578 --> 00:03:08,188
+Für die amerikanische Empfehlung fanden Statistiker sogar einen Rechenfehler,
+
+46
+00:03:08,038 --> 00:03:12,185
+danach läge der Bedarf deutlich höher. Das ist allerdings umstritten.
+
+47
+00:03:12,035 --> 00:03:16,017
+Am besten nimmst du es täglich statt als riesige Einzeldosis,
+
+48
+00:03:15,867 --> 00:03:20,413
+und zu einer Mahlzeit mit etwas Fett, dann wird es besser aufgenommen.
+
+49
+00:03:20,263 --> 00:03:25,385
+Tipp für dich: 800 Einheiten decken den Grundbedarf. Mehr als 4.000 nur,
+
+50
+00:03:25,235 --> 00:03:29,113
+wenn Arzt oder Ärztin es mit Laborkontrolle festlegen.
+
+51
+00:03:29,713 --> 00:03:34,501
+Was bringt die Einnahme? Am meisten bei Menschen mit niedrigem Wert.
+
+52
+00:03:34,351 --> 00:03:41,434
+Bei täglicher Einnahme starben in einer Auswertung großer Studien etwa ein Achtel weniger Menschen an Krebs.
+
+53
+00:03:41,284 --> 00:03:46,536
+Bei einer Diabetes-Vorstufe erkrankten weniger Menschen an Typ-2-Diabetes,
+
+54
+00:03:46,386 --> 00:03:48,673
+etwa jeder siebte Fall weniger.
+
+55
+00:03:48,523 --> 00:03:57,130
+In der großen amerikanischen Studie traten Autoimmunerkrankungen wie Rheuma oder Schuppenflechte um etwa ein Fünftel seltener auf.
+
+56
+00:03:56,980 --> 00:04:00,322
+Gegen Atemwegsinfekte gibt es einen kleinen Schutz,
+
+57
+00:04:00,172 --> 00:04:02,387
+vor allem bei täglicher Einnahme.
+
+58
+00:04:02,237 --> 00:04:07,339
+Und die Telomere, die Schutzkappen der Chromosomen, verkürzten sich langsamer.
+
+59
+00:04:07,189 --> 00:04:13,538
+Bei gut versorgten Gesunden fanden große Studien dagegen wenig. Die Chance liegt vor allem darin,
+
+60
+00:04:13,388 --> 00:04:15,263
+einen Mangel auszugleichen.
+
+61
+00:04:15,113 --> 00:04:18,155
+Tipp für dich: Vitamin D lohnt sich besonders,
+
+62
+00:04:18,005 --> 00:04:21,739
+wenn dein Wert niedrig ist, und das ist im Winter häufig.
+
+63
+00:04:22,339 --> 00:04:24,623
+Wer profitiert besonders?
+
+64
+00:04:24,473 --> 00:04:30,185
+Säuglinge: Sie bekommen Vitamin D gegen Rachitis, bis zu ihrem zweiten Frühsommer.
+
+65
+00:04:30,035 --> 00:04:37,347
+Ältere Menschen bilden in der Haut weniger. Im Pflegeheim senkte Vitamin D zusammen mit Kalzium die Hüftbrüche.
+
+66
+00:04:37,197 --> 00:04:39,208
+Auch Menschen mit dunkler Haut,
+
+67
+00:04:39,058 --> 00:04:44,432
+mit starkem Übergewicht oder die fast nur drinnen arbeiten, haben öfter niedrige Werte.
+
+68
+00:04:44,282 --> 00:04:48,166
+Schwangere mit wenig Sonne sollten es in der Praxis ansprechen.
+
+69
+00:04:48,016 --> 00:04:51,247
+Tipp für dich: Gehörst du zu einer dieser Gruppen,
+
+70
+00:04:51,097 --> 00:04:53,774
+sprich Arzt oder Ärztin auf Vitamin D an.
+
+71
+00:04:54,374 --> 00:04:59,778
+Vitamin D ist ein Sonnenhormon, das dein Körper selbst macht, wenn du ihn lässt.
+
+72
+00:04:59,628 --> 00:05:05,416
+Im Sommer heißt das: mittags kurz raus, viel freie Haut, nie bis zum Sonnenbrand.
+
+73
+00:05:05,266 --> 00:05:09,454
+Im Winter hilft eine tägliche Dosis von etwa 800 Einheiten.
+
+74
+00:05:09,304 --> 00:05:12,654
+Mehr als 4.000 nur mit ärztlicher Begleitung.
+
+75
+00:05:12,504 --> 00:05:15,778
+Und wenn du deinen Wert misst, achte auf die Einheit.
+
+76
+00:05:15,628 --> 00:05:17,759
+Die Quellen stehen in der Beschreibung.
+
+77
+00:05:17,609 --> 00:05:22,983
+Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
+
+78
+00:05:22,833 --> 00:05:25,455
+aber nicht ersetzen. Bis zum nächsten Video!
+

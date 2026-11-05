@@ -19,3 +19,9 @@ Format: Erklärvideo ohne Faktencheck-Ampel (Schulprojekt), Gliederung nach dem 
 
 ## Nachtrag 03.11., 19:20: J und L vollständig
 - Nach dem Auffüllen der Credits: 46 Bilder (J v6/v7, L alle Szenenbilder), 644,9 Credits. Alle acht Stile jetzt mit eigenen Szenenbildern.
+
+## Nachtrag 05.11. (Nutzerwunsch, Vitamin-D-Sitzung)
+- v1: Kalzium-Satz eindeutig („Vitamin D hilft dem Darm, Kalzium aus der Nahrung aufzunehmen. Vitamin D selbst steckt dagegen nur in wenigen Lebensmitteln …“).
+- v2: Winter „kein Vitamin D“ statt „kaum“, mit 45 Grad und Schattenregel; Quelle Webb, Kline, Holick 1988 (Edmonton 52° N: Oktober bis März keine Bildung, doi 10.1210/jcem-67-2-373, per Crossref geprüft).
+- v3: Einheiten-Warnung umgedreht: „sonst hältst du einen Mangel fälschlich für einen guten Wert: 25 Nanomol sehen gut aus, sind aber nur 10 Nanogramm.“
+- Neuer Ton für v1–v3 (952 Zeichen berechnet), 5:28, 779 Wörter. G und I neu gerendert, 720p/24 fps mit AAC 160 kbit/s an den Nutzer. Die anderen sechs Stile sind noch auf dem alten Text, neu rendern kostet keinen Ton.
