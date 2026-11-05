@@ -1,12 +1,28 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Neu oben: das fertige Video mit dem Einerziffer-Merkzettel. Bitte ab 2:24 anschauen und „passt“ oder „ändern“ tippen.",
+ "aufgabe": "Oben: zwei Hörproben nur für die Aussprache von „Einerziffer“ (je 20 s). Bei der besseren „passt“, sonst bei beiden „ändern“.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel14/regel_720p.mp4",
-   "titel": "Neu: Merkzettel mit „Einerziffer“ und nummerierter Lösung (2:56)",
-   "stand": "05.11., 06:13",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hoerprobe/merke_bindestrich.mp4",
+   "titel": "Hörprobe Aussprache: „Einer-Ziffer“ mit Bindestrich",
+   "stand": "05.11., 06:20",
    "pruefen": true,
+   "poster_bei": 19,
+   "notiz": "Gleicher Text und gleicher Merkzettel, nur bekommt die Stimme „Einer-Ziffer“ und „Einer-Ziffern“ mit Bindestrich. Das soll die Betonung auf „Einer“ legen. Achte auf Punkt 3 („Beide Einerziffern multiplizieren …“, etwa bei 0:09). „passt“ = diese Aussprache ins Video."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hoerprobe/merke_gross.mp4",
+   "titel": "Hörprobe Aussprache: „EINERziffer“ mit Großschreibung",
+   "stand": "05.11., 06:20",
+   "pruefen": true,
+   "poster_bei": 19,
+   "notiz": "Gleicher Text und gleicher Merkzettel, nur bekommt die Stimme „EINERziffer“ und „EINERziffern“ – großgeschriebene Silben betont ElevenLabs stärker. Achte auf Punkt 3 (etwa bei 0:09). „passt“ = diese Aussprache ins Video."
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/regel14/regel_720p.mp4",
+   "titel": "Video mit „Einerziffer“ – Betonung bei Punkt 3 noch falsch (deine Notiz)",
+   "stand": "05.11., 06:13",
+   "pruefen": false,
    "poster_bei": 164,
    "notiz": "Deine Wahl aus der Hörprobe ist drin: „Eine Einerziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. Beide Einerziffern multiplizieren und dazuzählen.“ Nach der Denkpause trägt jede Lösungszeile von 13 · 14 die Nummer ihres Merksatzes, und der Satz leuchtet dabei auf. Sonst alles wie zuletzt. Merke-Teil ab 2:24."
   },

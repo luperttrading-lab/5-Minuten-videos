@@ -15,6 +15,18 @@ FASSUNGEN = {
                 ('2', G.TEAL, ['Eine Null anhängen'], 'Eine Null'),
                 ('3', G.CD, ['Beide Einerziffern', 'multiplizieren und dazuzählen'], 'Beide Einerziffern')]),
     'aktuell': (next(x for x in G.SZENEN if x['id'] == 'merke')['text'], list(G.MERKSAETZE)),
+    # Nutzer 05.11.: „Einerziffern“ in Punkt 3 falsch betont. Nur der Sprechtext bekommt eine Aussprachehilfe, der Merkzettel
+    # bleibt „Einerziffer“: Bindestrich (Betonung aufs erste Glied) oder Großschreibung (ElevenLabs betont GROSS Geschriebenes)
+    'bindestrich': ('Merk dir die drei Schritte: Eine Einer-Ziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. '
+                    'Beide Einer-Ziffern multiplizieren und dazuzählen. Und jetzt du: dreizehn mal vierzehn.',
+                    [('1', G.CB, ['Eine Einerziffer zur anderen', 'Zahl addieren – egal, welche'], 'Eine Einer-Ziffer'),
+                     ('2', G.TEAL, ['Eine Null anhängen'], 'Eine Null'),
+                     ('3', G.CD, ['Beide Einerziffern', 'multiplizieren und dazuzählen'], 'Beide Einer-Ziffern')]),
+    'gross': ('Merk dir die drei Schritte: Eine EINERziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. '
+              'Beide EINERziffern multiplizieren und dazuzählen. Und jetzt du: dreizehn mal vierzehn.',
+              [('1', G.CB, ['Eine Einerziffer zur anderen', 'Zahl addieren – egal, welche'], 'Eine EINERziffer'),
+               ('2', G.TEAL, ['Eine Null anhängen'], 'Eine Null'),
+               ('3', G.CD, ['Beide Einerziffern', 'multiplizieren und dazuzählen'], 'Beide EINERziffern')]),
     'den': ('Merk dir die drei Schritte: Den Einer zur anderen Zahl dazuzählen, egal, welchen. Eine Null anhängen. '
             'Die beiden Einer malnehmen und dazuzählen. Und jetzt du: dreizehn mal vierzehn.',
             [('1', G.CB, ['Den Einer zur anderen Zahl', 'dazuzählen – egal, welchen'], 'Den Einer'),
