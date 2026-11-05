@@ -1,14 +1,14 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben 1 Eintrag: der animierte Abo-Knopf, „passt“ oder „ändern“.",
+ "aufgabe": "Oben 1 Eintrag: der Abo-Knopf mit Finger, „passt“ oder „ändern“.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abo/abo_clip.mp4",
-   "titel": "Neu: Abo-Knopf wird gedrückt, mit Klick (Ende des Videos)",
-   "stand": "05.11., 12:42",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abo/hand_clip.mp4",
+   "titel": "Neu: Abo-Knopf wird mit dem Finger gedrückt (Ende des Videos)",
+   "stand": "05.11., 12:45",
    "pruefen": true,
-   "poster_bei": 8.5,
-   "notiz": "Bei „Abonnier den Kanal“ fliegt ein Mauszeiger zum Knopf und drückt ihn mit einem leisen Mausklick; danach steht „Abonniert“ mit Häkchen darauf. Links daneben der grüne Kreis: Dort legt YouTube Studio das echte Abo-Element hin – nur das ist für Zuschauer anklickbar, unser Knopf ist gezeichnet. Ab 0:07 im Clip. „passt“ = so ins Video."
+   "poster_bei": 7.3,
+   "notiz": "Bei „Abonnier den Kanal“ kommt eine Hand schräg von links unten, tippt mit dem Zeigefinger auf „Abonnieren“ (leiser Klick), der Knopf gibt nach und zeigt dann „Abonniert“ mit Häkchen; die Hand zieht sich zurück. Rechts der grüne Kreis für das echte YouTube-Abo-Element. Ab 0:06 im Clip. „passt“ = so ins Video."
   },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abspann/abspann.mp4",

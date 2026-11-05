@@ -1049,13 +1049,15 @@ def s_abspann(b, sc, t):
         b.d.polygon([((x + 230 - 18) * K, (y + 129 - 22) * K), ((x + 230 - 18) * K, (y + 129 + 22) * K),
                      ((x + 230 + 24) * K, (y + 129) * K)], fill=farbe(HELL, 255 * q))
         b.text(wort, x + 230, y + 259 + 34, 26, GRAU, INTER_X, alpha=q)
-    # Abo-Zeile (Nutzer 05.11.): links der Kreis, auf den YouTube Studio das echte Abo-Element legt, rechts ein Knopf,
-    # den ein Mauszeiger beim Wort „Abonnier“ drückt (mit Klick); danach steht „Abonniert“ darauf.
+    # Abo-Zeile (Nutzer 05.11.): links ein gezeichneter Knopf „Abonnieren“, den beim Wort „Abonnier“ eine Hand von links
+    # drückt (mit Klick; ein Finger passt zu Handy und Fernseher besser als ein Mauszeiger), danach „Abonniert“.
+    # Rechts der Kreis, auf den YouTube Studio das echte, anklickbare Abo-Element legt.
     q = ein(t, C(sc, 'Und damit'))
-    cx, cy, r, x0, w, h = 505, 590, 46, 571, 250, 66
+    x0, w, h, cy, cx, r = 459, 250, 66, 590, 775, 46
     b.kreis(cx, cy, r * (0.8 + 0.2 * q), TEAL, alpha=q)
     tk = t_abo + 0.2                                       # Klick (wie in KLAENGE)
-    dr = 1 - 0.07 * math.sin(math.pi * p(t, tk - 0.05, 0.18))   # Knopf gibt beim Drücken nach
+    druck = math.sin(math.pi * p(t, tk - 0.05, 0.18))
+    dr = 1 - 0.07 * druck                                  # Knopf gibt beim Drücken nach
     mx = x0 + w / 2
     hw, hh = w / 2 * dr * (0.85 + 0.15 * q), h / 2 * dr * (0.85 + 0.15 * q)
     an = t >= tk + 0.05
@@ -1065,14 +1067,39 @@ def s_abspann(b, sc, t):
         b.linie([(mx - 96, cy + 1), (mx - 86, cy + 11), (mx - 68, cy - 10)], TEAL, 6, alpha=q)
     else:
         b.text('Abonnieren', mx, cy, 28, '#ffffff', INTER_X, alpha=q, skala=dr)
-    fz = glatt(p(t, t_abo - 0.6, 0.7))                     # Mauszeiger fliegt von rechts unten zum Knopf
-    az = ein(t, t_abo - 0.6, 0.2) * (1 - ein(t, tk + 1.4, 0.4))
-    if az > 0:
-        zx, zy = mix(1010, mx + 40, fz), mix(760, cy + 6, fz)
-        zs = 1.3 * (1 - 0.12 * math.sin(math.pi * p(t, tk - 0.05, 0.18)))
-        pf = [(0, 0), (0, 34), (9, 26), (15, 40), (21, 37), (15, 24), (26, 24)]
-        pts = [((zx + px * zs) * K, (zy + py * zs) * K) for px, py in pf]
-        b.d.polygon(pts, fill=farbe('#ffffff', 255 * az), outline=farbe(INK, 255 * az), width=int(2.2 * K))
+    rein = glatt(p(t, t_abo - 0.6, 0.7))                   # Hand kommt von links unten, tippt, zieht sich zurück
+    raus = glatt(p(t, tk + 0.9, 0.5))
+    f = rein * (1 - raus)
+    if f > 0:
+        zx, zy = x0 + 140, cy + 10                         # Fingerspitze auf dem Knopf
+        zeigehand(b, mix(zx - 330, zx, f) + 4 * druck, mix(zy + 230, zy, f) - 2 * druck, 1.1 * (1 - 0.04 * druck))
+
+
+def zeigehand(b, x, y, s=1.0, winkel=32, alpha=1.0):
+    """Flache Zeigehand, Fingerspitze bei (x, y), schräg nach rechts oben (winkel in Grad); Ärmel in Teal.
+    Gezeichnet auf eigener Ebene und gedreht, damit sie wie ein Tippen aufs Handy wirkt (Nutzer 05.11.)."""
+    u = s * K                                              # Pixel je Einheit
+    ox, oy, bw, bh = 250, 40, 262, 120                     # Fingerspitze in der Ebene, Größe der Ebene (Einheiten)
+    ebene = Image.new('RGBA', (int(bw * u), int(bh * u)), (0, 0, 0, 0))
+    d = ImageDraw.Draw(ebene)
+    haut, rand = farbe('#fff4e6', 255), farbe(INK, 255)
+    def form(x0, y0, x1, y1, rr, fill=haut):
+        d.rounded_rectangle([(ox + x0) * u, (oy + y0) * u, (ox + x1) * u, (oy + y1) * u], radius=rr * u, fill=fill,
+                            outline=rand, width=max(1, int(2.5 * K)))
+    form(-240, -24, -152, 74, 6, fill=farbe(TEAL, 255))    # Ärmel
+    form(-162, -16, -66, 64, 24)                           # Handfläche
+    for x0, y0, x1, y1 in ((-94, 10, -54, 32), (-98, 29, -58, 50), (-102, 47, -64, 67)):
+        form(x0, y0, x1, y1, 11)                           # eingeklappte Finger
+    form(-132, -32, -78, -8, 12)                           # Daumen
+    form(-92, -14, 0, 14, 14)                              # Zeigefinger
+    gedreht = ebene.rotate(winkel, resample=Image.BICUBIC, expand=True)
+    w = math.radians(winkel)
+    dx, dy = ox * u - ebene.width / 2, oy * u - ebene.height / 2
+    sx = math.cos(w) * dx + math.sin(w) * dy + gedreht.width / 2      # Fingerspitze nach dem Drehen
+    sy = -math.sin(w) * dx + math.cos(w) * dy + gedreht.height / 2
+    if alpha < 1:
+        gedreht.putalpha(gedreht.getchannel('A').point(lambda v: int(v * alpha)))
+    b.img.paste(gedreht, (int(x * K - sx), int(y * K - sy)), gedreht)
 
 
 def zeichne(i, tl, t):
