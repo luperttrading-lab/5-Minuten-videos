@@ -1,7 +1,15 @@
 {
  "titel": "Vitamin D · Erklärvideo in acht Stilen",
- "aufgabe": "Oben J mit Gesichtern (nach deiner Notiz), darunter G und I und die übrigen Stile, alle mit neuem Text. Beim Favoriten „passt“, sonst „ändern“ mit Notiz.",
+ "aufgabe": "Oben die neuen Bilder für Pipette und Tachometer prüfen („passt“ = übernehmen). Darunter alle acht Stile mit neuem Text.",
  "videos": [
+  {
+   "datei": "bildfehler_0511.mp4",
+   "titel": "Bildfehler: Pipette und Tachometer (vorher / neu, Standbild)",
+   "stand": "05.11., 23:45",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Alle acht Stile geprüft. Eindeutig falsch waren: Tropfen unten aus der geschlossenen Flasche bei D (Dosis-Kapitel) und I (Kachel im Einstieg), zweideutig bei H; Tachometer nicht rund bei D und G. Oben vorher, unten neu (38 Credits). Die übrigen Pipetten tropfen aus Pipette oder Tropfeinsatz, das ist richtig. „passt“ = übernehmen; gerendert wird zusammen mit den Textänderungen nach deiner Wahl."
+  },
   {
    "datei": "vorschau_neu_J.mp4",
    "titel": "J  Skizze im Schulheft – jetzt alle Figuren mit Gesicht",
