@@ -21,7 +21,7 @@ const UEBUNGEN = [
       { id: 'zehn', name: 'Einer ergeben 10', info: '12 · 18', ziel: 3 },
       // Nutzerwunsch 05.11.: Quadrate und Elferreihe – beides Sonderfälle derselben Regel (gleiche Zahl, Einer 1)
       { id: 'quadrat', name: 'Quadrate', info: '16 · 16', ziel: 4 },
-      { id: 'elf', name: 'Mal 11', info: '17 · 11', ziel: 2 },
+      { id: 'elf', name: 'Mal 11', info: '17 · 11', ziel: 3 },   // Nutzer 05.11.: 3 s statt 2 s
     ],
     erzeuge(stufe, anzahl) {
       const paare = [];                            // ohne Reihenfolge: [12, 18] steht für 12 · 18 und 18 · 12
