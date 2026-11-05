@@ -1,14 +1,30 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben 1 Eintrag: der Abo-Knopf mit Finger, „passt“ oder „ändern“.",
+ "aufgabe": "Oben 3 Einträge: drei Hände für den Abo-Knopf. Bei der schönsten „passt“ tippen.",
  "videos": [
   {
-   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abo/hand_clip.mp4",
-   "titel": "Neu: Abo-Knopf wird mit dem Finger gedrückt (Ende des Videos)",
-   "stand": "05.11., 12:45",
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hand_dl/clip_hand_fluent_3d.mp4",
+   "titel": "Abo-Knopf, Hand 1: Emoji-Hand mit Schatten (weich, 3D)",
+   "notiz": "Fertige Emoji-Hand (Microsoft Fluent, frei nutzbar), tippt schräg von unten auf „Abonnieren“, leiser Klick. „passt“ = diese Hand nehmen.",
+   "stand": "05.11., 12:52",
    "pruefen": true,
-   "poster_bei": 7.3,
-   "notiz": "Bei „Abonnier den Kanal“ kommt eine Hand schräg von links unten, tippt mit dem Zeigefinger auf „Abonnieren“ (leiser Klick), der Knopf gibt nach und zeigt dann „Abonniert“ mit Häkchen; die Hand zieht sich zurück. Rechts der grüne Kreis für das echte YouTube-Abo-Element. Ab 0:06 im Clip. „passt“ = so ins Video."
+   "poster_bei": 2.8
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hand_dl/clip_hand_fluent_flach.mp4",
+   "titel": "Abo-Knopf, Hand 2: Emoji-Hand flach",
+   "notiz": "Dieselbe Hand ohne Schatten, flach wie der Rest des Videos. „passt“ = diese Hand nehmen.",
+   "stand": "05.11., 12:52",
+   "pruefen": true,
+   "poster_bei": 2.8
+  },
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hand_dl/clip_hand_noto.mp4",
+   "titel": "Abo-Knopf, Hand 3: Emoji-Hand wie auf Android",
+   "notiz": "Das Emoji „👆“ in der Form, die Android-Handys zeigen; etwas weicher gezeichnet, weil es nur klein vorliegt. „passt“ = diese Hand nehmen.",
+   "stand": "05.11., 12:52",
+   "pruefen": true,
+   "poster_bei": 2.8
   },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abspann/abspann.mp4",

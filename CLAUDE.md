@@ -198,7 +198,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   Video ankündigen), dann `ABSPANN` = 8 s still. Bild: „Noch ein Trick?“, zwei Flächen für Video-Empfehlungen, Kreis
   „Kanal abonnieren“; YouTube Studio legt die Elemente darauf (nur letzte 5–20 s, nicht bei „für Kinder gemacht“).
   Muss vor dem Hochladen im Video sein. Abo-Zeile (Probe 05.11.): links ein gezeichneter Knopf „Abonnieren“, auf den beim
-  Wort „Abonnier“ eine Hand (`zeigehand`) schräg von links unten tippt (Klang `klick`, Spitze ≈ 0,16 wie die übrigen
+  Wort „Abonnier“ eine Emoji-Hand „👆“ (`zeigehand`, Bild `HAND_BILD` in `bilder/`, Microsoft Fluent Emoji, MIT-Lizenz in
+  `bilder/LIZENZ_fluent_emoji.txt`; selbst gezeichnete Hand verworfen: „nicht schön“) schräg von links unten tippt (Klang `klick`, Spitze ≈ 0,16 wie die übrigen
   Geräusche), danach „Abonniert“ mit Häkchen; rechts der Kreis für das echte YouTube-Abo-Element. Finger statt
   Mauszeiger (Nutzer 05.11.): YouTube läuft vor allem auf Handy und Fernseher, kaum am PC.
 - **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –

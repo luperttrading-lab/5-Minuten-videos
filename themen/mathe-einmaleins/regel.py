@@ -1071,33 +1071,36 @@ def s_abspann(b, sc, t):
     raus = glatt(p(t, tk + 0.9, 0.5))
     f = rein * (1 - raus)
     if f > 0:
-        zx, zy = x0 + 140, cy + 10                         # Fingerspitze auf dem Knopf
-        zeigehand(b, mix(zx - 330, zx, f) + 4 * druck, mix(zy + 230, zy, f) - 2 * druck, 1.1 * (1 - 0.04 * druck))
+        zx, zy = x0 + 150, cy + 4                          # Fingerspitze auf dem Knopf
+        zeigehand(b, mix(zx - 260, zx, f) + 3 * druck, mix(zy + 300, zy, f) + 4 * druck, 1.0 - 0.04 * druck)
 
 
-def zeigehand(b, x, y, s=1.0, winkel=32, alpha=1.0):
-    """Flache Zeigehand, Fingerspitze bei (x, y), schräg nach rechts oben (winkel in Grad); Ärmel in Teal.
-    Gezeichnet auf eigener Ebene und gedreht, damit sie wie ein Tippen aufs Handy wirkt (Nutzer 05.11.)."""
-    u = s * K                                              # Pixel je Einheit
-    ox, oy, bw, bh = 250, 40, 262, 120                     # Fingerspitze in der Ebene, Größe der Ebene (Einheiten)
-    ebene = Image.new('RGBA', (int(bw * u), int(bh * u)), (0, 0, 0, 0))
-    d = ImageDraw.Draw(ebene)
-    haut, rand = farbe('#fff4e6', 255), farbe(INK, 255)
-    def form(x0, y0, x1, y1, rr, fill=haut):
-        d.rounded_rectangle([(ox + x0) * u, (oy + y0) * u, (ox + x1) * u, (oy + y1) * u], radius=rr * u, fill=fill,
-                            outline=rand, width=max(1, int(2.5 * K)))
-    form(-240, -24, -152, 74, 6, fill=farbe(TEAL, 255))    # Ärmel
-    form(-162, -16, -66, 64, 24)                           # Handfläche
-    for x0, y0, x1, y1 in ((-94, 10, -54, 32), (-98, 29, -58, 50), (-102, 47, -64, 67)):
-        form(x0, y0, x1, y1, 11)                           # eingeklappte Finger
-    form(-132, -32, -78, -8, 12)                           # Daumen
-    form(-92, -14, 0, 14, 14)                              # Zeigefinger
-    gedreht = ebene.rotate(winkel, resample=Image.BICUBIC, expand=True)
-    w = math.radians(winkel)
-    dx, dy = ox * u - ebene.width / 2, oy * u - ebene.height / 2
-    sx = math.cos(w) * dx + math.sin(w) * dy + gedreht.width / 2      # Fingerspitze nach dem Drehen
-    sy = -math.sin(w) * dx + math.cos(w) * dy + gedreht.height / 2
+HAND_BILD = os.path.join(HIER, 'bilder', 'hand_fluent_3d.png')   # Fluent Emoji (MIT, bilder/LIZENZ_fluent_emoji.txt)
+_hand = {}
+
+
+def zeigehand(b, x, y, s=1.0, winkel=-28, alpha=1.0):
+    """Tippende Hand (Emoji „👆“ als Bild), Fingerspitze bei (x, y), um winkel Grad gedreht (negativ = im
+    Uhrzeigersinn, Finger zeigt nach rechts oben). Nutzer 05.11.: Finger statt Mauszeiger, keine selbst gezeichnete Hand."""
+    hoehe = int(190 * s * K)
+    key = (HAND_BILD, hoehe, winkel)
+    if key not in _hand:
+        im = Image.open(HAND_BILD).convert('RGBA')
+        im = im.crop(im.getbbox())
+        im = im.resize((int(im.width * hoehe / im.height), hoehe), Image.LANCZOS)
+        a = np.array(im)[:, :, 3]
+        zeile0 = int(np.argmax(a.max(axis=1) > 128))       # oberste deckende Zeile = Fingerspitze
+        xs = np.nonzero(a[zeile0:zeile0 + max(2, hoehe // 40)].max(axis=0) > 128)[0]
+        tx, ty = xs.mean(), zeile0
+        gedreht = im.rotate(winkel, resample=Image.BICUBIC, expand=True)
+        w = math.radians(winkel)
+        dx, dy = tx - im.width / 2, ty - im.height / 2
+        sx = math.cos(w) * dx + math.sin(w) * dy + gedreht.width / 2
+        sy = -math.sin(w) * dx + math.cos(w) * dy + gedreht.height / 2
+        _hand[key] = (gedreht, sx, sy)
+    gedreht, sx, sy = _hand[key]
     if alpha < 1:
+        gedreht = gedreht.copy()
         gedreht.putalpha(gedreht.getchannel('A').point(lambda v: int(v * alpha)))
     b.img.paste(gedreht, (int(x * K - sx), int(y * K - sy)), gedreht)
 
