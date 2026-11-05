@@ -48,6 +48,8 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .uebung .video { margin: 0 0 14px; color: var(--grau); font-size: 15px; }
 .stufen button { padding: 10px 12px; }
 .stufen button small { font-size: 15px; font-weight: 700; }
+.zielmarke { float: right; font-size: 12px; font-weight: 700; color: var(--grau); background: #e9e3d7; border-radius: 8px; padding: 2px 6px; margin-left: 4px; }
+.wahl button[aria-pressed="true"] .zielmarke { background: rgba(255,255,255,.16); color: #e3e6ee; }
 /* Tippen/Sprechen: schmaler Umschalter statt zweier großer Karten (Nutzer 05.11.: Startseite übersichtlicher) */
 .umschalter { display: grid; grid-template-columns: 1fr 1fr; background: #f3efe7; border-radius: 12px; padding: 3px; margin: 4px 0 10px; }
 .umschalter button { padding: 9px 6px; border-radius: 10px; font-weight: 700; font-size: 15px; color: var(--grau); background: none; }
@@ -84,6 +86,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .antwort.nein { background: var(--falsch); color: #fff; box-shadow: none; }
 .rueck { height: 26px; font-size: 18px; font-weight: 700; color: var(--grau); }
 .rueck.ok { color: var(--ok); } .rueck.nein { color: var(--falsch); }
+.rueck .zeit.unter { color: var(--ok); } .rueck .zeit.ueber { color: var(--grau); }
 .gehoert { height: 20px; font-size: 15px; color: var(--grau); }
 .tasten { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 6px; }
 .tasten button { height: min(15vw, 66px); border-radius: 16px; background: var(--karte); font-size: 30px; font-weight: 750;
@@ -227,7 +230,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 
 <script src="aufgaben.js"></script>
 <script>
-const APP_VERSION = '2.1';          // bei JEDER Änderung hochzählen
+const APP_VERSION = '2.2';          // bei JEDER Änderung hochzählen
 const $ = s => document.querySelector(s);
 const ANZAHL = 10;
 // Ziel in Sekunden je Aufgabe, je Stufe (Nutzerentscheidung 05.11.: „Alle Zahlen“ 4 s wie im Video, Sonderfall 3 s)
@@ -279,7 +282,7 @@ function baueStart() {
   $('#stufen').innerHTML = '';
   for (const s of u.stufen) {
     const b = document.createElement('button');
-    b.dataset.s = s.id; b.innerHTML = `${s.name}<small>${s.info.replace(/(\d)(\d)\b/g, '$1<span class="c1">$2</span>').replace(/<span class="c1">(\d)<\/span>(?![\s\S]*c1)/, '<span class="c2">$1</span>')}</small>`;
+    b.dataset.s = s.id; b.innerHTML = `${s.name}<small><span class="zielmarke">Ziel ${s.ziel} s</span>${s.info.replace(/(\d)(\d)\b/g, '$1<span class="c1">$2</span>').replace(/<span class="c1">(\d)<\/span>(?![\s\S]*c1)/, '<span class="c2">$1</span>')}</small>`;
     b.setAttribute('aria-pressed', String(stand.stufe === s.id));
     b.addEventListener('click', () => { stand.stufe = s.id; speichereAlles(); baueStart(); });
     $('#stufen').append(b);
@@ -400,7 +403,9 @@ function pruefe(wert, wie, sp) {
   const p = $('#punkte').children[runde.i];
   p.classList.remove('jetzt'); p.classList.add(ok ? 'ok' : 'nein');
   $('#rueck').className = 'rueck ' + (ok ? 'ok' : 'nein');
-  $('#rueck').textContent = ok ? `✓ richtig · ${sek(dauer)}` : `✗ richtig ist ${a.loesung}`;
+  // Zeit grün, wenn unter dem Ziel der Stufe, sonst grau (Nutzer 05.11.: das Ziel soll man schon in der Runde merken)
+  $('#rueck').innerHTML = ok ? `✓ richtig · <span class="zeit ${dauer <= ziel() * 1000 ? 'unter' : 'ueber'}">${sek(dauer)}</span>`
+    : `✗ richtig ist ${a.loesung}`;
   runde.i++;
   (ok ? klang.richtig : klang.falsch)();
   runde.weiterTimer = setTimeout(naechste, 800);

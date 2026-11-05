@@ -28,6 +28,9 @@ dem Ziel → Genauigkeit loben (`GENAU_SPRUECHE`), mit Fehlern → Mut machen (`
 geschafft“ nur mit mindestens 8 von 10 richtigen. Gesprochenes, das schon vor der Aufgabe begann, zählt nicht für sie
 (sonst Zeiten von 0,0 s).
 
+**Ziel sichtbar (v2.2, Nutzer 05.11.):** jede Stufen-Kachel zeigt „Ziel … s“; nach jeder richtigen Antwort ist die Zeit grün,
+wenn sie unter dem Ziel der Stufe liegt, sonst grau. Ziele: Alle Zahlen 4 s, Einer ergeben 10 3 s, Quadrate 4 s, Mal 11 2 s.
+
 **Versionen:** nach 0.6 folgt 1.7 (Nutzerwunsch 04.11.). Die Update-Prüfung vergleicht nur auf Gleichheit, der Sprung ist unkritisch.
 
 ## Sprechen

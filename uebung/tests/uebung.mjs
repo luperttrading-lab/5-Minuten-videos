@@ -71,7 +71,8 @@ for (let i = 0; i < loes.length; i++) {
   if (i === 0) await foto('2_aufgabe');
   for (const z of ziffern) { await page.dispatchEvent(`#tasten button[aria-label="${z}"]`, 'pointerdown'); await page.waitForTimeout(120); }
   const t = Date.now();
-  if (i === 0) { await page.waitForTimeout(100); await foto('3_richtig'); }
+  if (i === 0) { await page.waitForTimeout(100); await foto('3_richtig');
+    ok(await page.$eval('#rueck .zeit', el => el.classList.contains('unter')), 'Schnelle Antwort: Zeit grün (unter dem Ziel)'); }
   if (falsch) {
     await page.waitForTimeout(150);
     const a = await page.innerHTML('#antwort');
@@ -93,6 +94,7 @@ ok(/Ø \d+,\d s je Aufgabe/.test(await page.textContent('#e-zeit')), `Durchschni
 ok(e.length === 10 && e.every(x => x.dauer > 0 && x.dauer < 5000), 'Jede Aufgabe hat eine Zeit');
 ok((await page.textContent('#e-ziel')).trim() === (schnitt <= 4 ? 'Unter vier Sekunden – Ziel geschafft!' : 'Ziel: unter vier Sekunden je Aufgabe.'),
   `Ziel „Alle Zahlen“ vier Sekunden: „${(await page.textContent('#e-ziel')).trim()}“`);
+ok((await page.$$eval('#stufen .zielmarke', l => l.map(e => e.textContent))).join('|') === 'Ziel 4 s|Ziel 3 s|Ziel 4 s|Ziel 2 s', 'Ziel auf jeder Stufen-Kachel');
 ok(JSON.stringify(await page.evaluate(() => UEBUNGEN[0].stufen.map(s => s.ziel))) === '[4,3,4,2]', 'Ziele je Stufe: Alle Zahlen 4 s, Einer ergeben 10 3 s, Quadrate 4 s, Mal 11 2 s');
 { // Spruch nach Lage: 9 von 10 richtig → Mut-Spruch, nicht Lob (Nutzer 05.11.)
   const sp = (await page.textContent('#e-spruch b')).trim();
