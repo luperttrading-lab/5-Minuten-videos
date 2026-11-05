@@ -68,7 +68,7 @@
     "Leber und Niere machen daraus die aktive Form, und Andockstellen dafür gibt es in fast allen Geweben.",
     "Am bekanntesten ist seine Aufgabe für Knochen und Muskeln: Vitamin D hilft dem Darm, Kalzium aus der Nahrung aufzunehmen.",
     "Vitamin D selbst steckt dagegen nur in wenigen Lebensmitteln, am meisten in fettem Fisch wie Hering.",
-    "Tipp für dich: Fetter Fisch ein- bis zweimal pro Woche hilft etwas, die wichtigste Quelle bleibt aber die Sonne."
+    "Tipp für dich: Hering oder Lachs ein- bis zweimal pro Woche hilft etwas. Große Raubfische wie Hai oder Schwertfisch meidest du besser, sie enthalten viel mehr Quecksilber. Die wichtigste Quelle bleibt die Sonne."
    ],
    "bullets": [
     {
@@ -90,7 +90,8 @@
    ],
    "quellen": [
     "holick2007",
-    "bfr2025"
+    "bfr2025",
+    "bfr2023fisch"
    ],
    "shots": [
     {
@@ -117,7 +118,10 @@
    "sentences": [
     "Im Sommer ist die Sonne die beste Quelle, und es kommt auf die Fläche an.",
     "Gesicht und Arme allein sind wenig Haut.",
-    "In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle die Untergrenze, aber nur jeder Vierte höhere Werte.",
+    {
+     "t": "In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle 20 Nanogramm pro Milliliter, aber nur jeder Vierte 32.",
+     "say": "In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle zwanzig Nanogramm pro Milliliter, aber nur jeder Vierte zweiunddreißig."
+    },
     "Mittags im Hochsommer, in Badehose oder Bikini, bildet die Haut nach einer bekannten Schätzung in wenigen Minuten mehrere tausend Einheiten, lange bevor sie rot wird.",
     {
      "t": "Von Oktober bis März steht die Sonne in Deutschland auch mittags tiefer als 45 Grad, dein Schatten ist länger als du. Dann bildet die Haut kein Vitamin D.",
@@ -597,6 +601,11 @@
    "kurz": "Webb et al. 1988",
    "voll": "Webb AR, Kline L, Holick MF. Influence of Season and Latitude on the Cutaneous Synthesis of Vitamin D3: Exposure to Winter Sunlight in Boston and Edmonton Will Not Promote Vitamin D3 Synthesis in Human Skin. J Clin Endocrinol Metab 1988;67(2):373–378.",
    "url": "https://doi.org/10.1210/jcem-67-2-373"
+  },
+  "bfr2023fisch": {
+   "kurz": "BfR 2023",
+   "voll": "BfR-Stellungnahme 047/2023: Fischverzehr in Schwangerschaft und Stillzeit – einige Fischarten weisen hohe Methylquecksilber-Gehalte auf (Quecksilber im Mittel: Hai 0,71, Schwertfisch 0,66, Heringsfische 0,036, lachsähnliche Seefische 0,029 mg/kg).",
+   "url": "https://doi.org/10.17590/20231011-130808-0"
   },
   "hahn2022": {
    "kurz": "Hahn et al. 2022",

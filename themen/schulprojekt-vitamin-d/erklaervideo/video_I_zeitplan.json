@@ -19,129 +19,129 @@
  {
   "id": "v1",
   "v0": 17.37424036281179,
-  "v1": 56.62931972789116,
+  "v1": 64.87755102040816,
   "st": [
    [
     17.97424036281179,
-    5.929047619047619,
+    6.095238095238095,
     "Vitamin D ist eigentlich kein klassisches Vitamin, sondern die Vorstufe eines Hormons."
    ],
    [
-    23.90328798185941,
-    5.409523809523808,
+    24.069478458049886,
+    5.561904761904762,
     "Den größten Teil bildet dein Körper selbst: in der Haut, mit dem UV-Licht der Sonne."
    ],
    [
-    29.31281179138322,
-    6.62857142857143,
+    29.63138321995465,
+    6.857142857142859,
     "Leber und Niere machen daraus die aktive Form, und Andockstellen dafür gibt es in fast allen Geweben."
    ],
    [
-    35.941383219954645,
-    7.695238095238096,
+    36.488526077097504,
+    8.076190476190476,
     "Am bekanntesten ist seine Aufgabe für Knochen und Muskeln: Vitamin D hilft dem Darm, Kalzium aus der Nahrung aufzunehmen."
    ],
    [
-    43.63662131519274,
-    6.247619047619047,
+    44.56471655328798,
+    6.704761904761906,
     "Vitamin D selbst steckt dagegen nur in wenigen Lebensmitteln, am meisten in fettem Fisch wie Hering."
    ],
    [
-    49.884240362811795,
-    6.595079365079368,
-    "Tipp für dich: Fetter Fisch ein- bis zweimal pro Woche hilft etwas, die wichtigste Quelle bleibt aber die Sonne."
+    51.26947845804989,
+    13.458072562358275,
+    "Tipp für dich: Hering oder Lachs ein- bis zweimal pro Woche hilft etwas. Große Raubfische wie Hai oder Schwertfisch meidest du besser, sie enthalten viel mehr Quecksilber. Die wichtigste Quelle bleibt die Sonne."
    ]
   ]
  },
  {
   "id": "v2",
-  "v0": 56.62931972789116,
-  "v1": 108.94922902494332,
+  "v0": 64.87755102040816,
+  "v1": 118.27124716553287,
   "st": [
    [
-    57.22931972789116,
-    4.647619047619047,
+    65.47755102040816,
+    4.571428571428571,
     "Im Sommer ist die Sonne die beste Quelle, und es kommt auf die Fläche an."
    ],
    [
-    61.876938775510204,
-    2.9714285714285715,
+    70.04897959183673,
+    2.8952380952380947,
     "Gesicht und Arme allein sind wenig Haut."
    ],
    [
-    64.84836734693877,
-    7.390476190476191,
-    "In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle die Untergrenze, aber nur jeder Vierte höhere Werte."
+    72.94421768707483,
+    8.952380952380953,
+    "In einem Versuch mit T-Shirt und kurzer Hose erreichten fast alle 20 Nanogramm pro Milliliter, aber nur jeder Vierte 32."
    ],
    [
-    72.23884353741497,
-    10.704761904761902,
+    81.89659863945577,
+    10.552380952380954,
     "Mittags im Hochsommer, in Badehose oder Bikini, bildet die Haut nach einer bekannten Schätzung in wenigen Minuten mehrere tausend Einheiten, lange bevor sie rot wird."
    ],
    [
-    82.94360544217687,
-    10.323809523809526,
+    92.44897959183673,
+    10.05714285714286,
     "Von Oktober bis März steht die Sonne in Deutschland auch mittags tiefer als 45 Grad, dein Schatten ist länger als du. Dann bildet die Haut kein Vitamin D."
    ],
    [
-    93.2674149659864,
-    4.076190476190469,
+    102.5061224489796,
+    4.266666666666659,
     "Im Alter, mit dunkler Haut und mit Sonnencreme bildet sie weniger."
    ],
    [
-    97.34360544217687,
-    11.45562358276645,
+    106.77278911564625,
+    11.348458049886624,
     "Tipp für dich: Geh von Frühling bis Herbst mittags kurz raus, mit möglichst viel freier Haut. Je nach Hauttyp reichen 5 bis 25 Minuten, aber nie bis zum Sonnenbrand."
    ]
   ]
  },
  {
   "id": "v3",
-  "v0": 108.94922902494332,
-  "v1": 160.42539682539683,
+  "v0": 118.27124716553287,
+  "v1": 169.74741496598637,
   "st": [
    [
-    109.54922902494332,
+    118.87124716553286,
     5.257142857142856,
     "Gemessen wird die Speicherform im Blut, das 25-OH-Vitamin D."
    ],
    [
-    114.80637188208617,
+    124.12839002267572,
     2.8190476190476197,
     "Wir rechnen in Nanogramm pro Milliliter."
    ],
    [
-    117.62541950113379,
+    126.94743764172334,
     7.771428571428572,
     "Manche Labore schreiben Nanomol pro Liter, das ist das Zweieinhalbfache: Zwanzig Nanogramm sind fünfzig Nanomol."
    ],
    [
-    125.39684807256236,
+    134.7188662131519,
     10.133333333333333,
     "Schau deshalb immer auf die Einheit, sonst hältst du einen Mangel fälschlich für einen guten Wert: 25 Nanomol sehen gut aus, sind aber nur 10 Nanogramm."
    ],
    [
-    135.5301814058957,
+    144.85219954648525,
     2.057142857142857,
     "Unter zwölf gilt als Mangel."
    ],
    [
-    137.58732426303857,
+    146.9093424036281,
     3.2761904761904788,
     "Ab zwanzig reicht es laut großen Fachgremien."
    ],
    [
-    140.86351473922903,
+    150.1855328798186,
     6.933333333333323,
     "Eine Fachgesellschaft für Hormonmedizin nannte lange dreißig als Ziel, das Optimum ist bis heute umstritten."
    ],
    [
-    147.79684807256234,
+    157.1188662131519,
     6.095238095238102,
     "In Deutschland liegt im Jahresmittel etwa jeder Siebte unter zwölf, im Winter sind es deutlich mehr."
    ],
    [
-    153.89208616780047,
+    163.21410430839,
     6.383310657596375,
     "Tipp für dich: Lässt du deinen Wert messen, frag nach der Einheit und nach der Grenze, die dein Labor verwendet."
    ]
@@ -149,36 +149,36 @@
  },
  {
   "id": "v4",
-  "v0": 160.42539682539683,
-  "v1": 209.11319727891157,
+  "v0": 169.74741496598637,
+  "v1": 218.4352154195011,
   "st": [
    [
-    161.02539682539683,
+    170.34741496598636,
     6.628571428571428,
     "Ohne Sonne braucht ein Erwachsener laut Fachgesellschaft für Ernährung etwa 800 Einheiten am Tag."
    ],
    [
-    167.65396825396826,
+    176.9759863945578,
     6.552380952380952,
     "Als sichere Obergrenze für Erwachsene nennt die europäische Lebensmittelbehörde 4.000 Einheiten täglich."
    ],
    [
-    174.20634920634922,
+    183.52836734693875,
     9.37142857142857,
     "Wer mehr wiegt, braucht mehr: bei Übergewicht etwa anderthalbmal so viel, bei starkem Übergewicht zwei- bis dreimal so viel für denselben Wert."
    ],
    [
-    183.57777777777778,
+    192.89979591836732,
     8.457142857142859,
     "Für die amerikanische Empfehlung fanden Statistiker sogar einen Rechenfehler, danach läge der Bedarf deutlich höher. Das ist allerdings umstritten."
    ],
    [
-    192.03492063492064,
+    201.35693877551017,
     8.228571428571431,
     "Am besten nimmst du es täglich statt als riesige Einzeldosis, und zu einer Mahlzeit mit etwas Fett, dann wird es besser aufgenommen."
    ],
    [
-    200.26349206349207,
+    209.5855102040816,
     8.699705215419499,
     "Tipp für dich: 800 Einheiten decken den Grundbedarf. Mehr als 4.000 nur, wenn Arzt oder Ärztin es mit Laborkontrolle festlegen."
    ]
@@ -186,46 +186,46 @@
  },
  {
   "id": "v5",
-  "v0": 209.11319727891157,
-  "v1": 261.7394557823129,
+  "v0": 218.4352154195011,
+  "v1": 271.06147392290245,
   "st": [
    [
-    209.71319727891157,
+    219.0352154195011,
     4.637913832199546,
     "Was bringt die Einnahme? Am meisten bei Menschen mit niedrigem Wert."
    ],
    [
-    214.35111111111112,
+    223.67312925170066,
     6.933333333333334,
     "Bei täglicher Einnahme starben in einer Auswertung großer Studien etwa ein Achtel weniger Menschen an Krebs."
    ],
    [
-    221.28444444444443,
+    230.60646258503397,
     7.238095238095239,
     "Bei einer Diabetes-Vorstufe erkrankten weniger Menschen an Typ-2-Diabetes, etwa jeder siebte Fall weniger."
    ],
    [
-    228.52253968253967,
+    237.8445578231292,
     8.457142857142856,
     "In der großen amerikanischen Studie traten Autoimmunerkrankungen wie Rheuma oder Schuppenflechte um etwa ein Fünftel seltener auf."
    ],
    [
-    236.97968253968253,
+    246.30170068027206,
     5.257142857142856,
     "Gegen Atemwegsinfekte gibt es einen kleinen Schutz, vor allem bei täglicher Einnahme."
    ],
    [
-    242.2368253968254,
+    251.55884353741493,
     4.952380952380949,
     "Und die Telomere, die Schutzkappen der Chromosomen, verkürzten sich langsamer."
    ],
    [
-    247.18920634920636,
+    256.5112244897959,
     7.923809523809524,
     "Bei gut versorgten Gesunden fanden große Studien dagegen wenig. Die Chance liegt vor allem darin, einen Mangel auszugleichen."
    ],
    [
-    255.11301587301585,
+    264.4350340136054,
     6.476439909297056,
     "Tipp für dich: Vitamin D lohnt sich besonders, wenn dein Wert niedrig ist, und das ist im Winter häufig."
    ]
@@ -233,36 +233,36 @@
  },
  {
   "id": "v6",
-  "v0": 261.7394557823129,
-  "v1": 293.7738321995465,
+  "v0": 271.06147392290245,
+  "v1": 303.09585034013605,
   "st": [
    [
-    262.33945578231294,
+    271.6614739229025,
     2.1333333333333333,
     "Wer profitiert besonders?"
    ],
    [
-    264.47278911564626,
+    273.7948072562358,
     5.561904761904762,
     "Säuglinge: Sie bekommen Vitamin D gegen Rachitis, bis zu ihrem zweiten Frühsommer."
    ],
    [
-    270.03469387755104,
+    279.35671201814057,
     7.161904761904761,
     "Ältere Menschen bilden in der Haut weniger. Im Pflegeheim senkte Vitamin D zusammen mit Kalzium die Hüftbrüche."
    ],
    [
-    277.1965986394558,
+    286.5186167800453,
     7.085714285714284,
     "Auch Menschen mit dunkler Haut, mit starkem Übergewicht oder die fast nur drinnen arbeiten, haben öfter niedrige Werte."
    ],
    [
-    284.28231292517006,
+    293.6043310657596,
     3.733333333333338,
     "Schwangere mit wenig Sonne sollten es in der Praxis ansprechen."
    ],
    [
-    288.0156462585034,
+    297.33766439909294,
     5.608185941043082,
     "Tipp für dich: Gehörst du zu einer dieser Gruppen, sprich Arzt oder Ärztin auf Vitamin D an."
    ]
@@ -270,41 +270,41 @@
  },
  {
   "id": "v7",
-  "v0": 293.7738321995465,
-  "v1": 328.0548752834468,
+  "v0": 303.09585034013605,
+  "v1": 337.3768934240363,
   "st": [
    [
-    294.37383219954654,
+    303.6958503401361,
     5.254467120181405,
     "Vitamin D ist ein Sonnenhormon, das dein Körper selbst macht, wenn du ihn lässt."
    ],
    [
-    299.62829931972794,
+    308.9503174603175,
     5.638095238095237,
     "Im Sommer heißt das: mittags kurz raus, viel freie Haut, nie bis zum Sonnenbrand."
    ],
    [
-    305.26639455782316,
+    314.5884126984127,
     4.038095238095238,
     "Im Winter hilft eine tägliche Dosis von etwa 800 Einheiten."
    ],
    [
-    309.3044897959184,
+    318.62650793650795,
     3.200000000000003,
     "Mehr als 4.000 nur mit ärztlicher Begleitung."
    ],
    [
-    312.5044897959184,
+    321.82650793650794,
     3.1238095238095234,
     "Und wenn du deinen Wert misst, achte auf die Einheit."
    ],
    [
-    315.62829931972794,
+    324.9503174603175,
     1.980952380952381,
     "Die Quellen stehen in der Beschreibung."
    ],
    [
-    317.6092517006803,
+    326.93126984126985,
     7.695623582766441,
     "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
    ]
