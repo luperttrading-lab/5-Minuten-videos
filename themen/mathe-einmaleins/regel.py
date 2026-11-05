@@ -77,8 +77,8 @@ SZENEN = [
         'neunzehn breit, also hundertneunzig und nicht zweihundert. Dazu kommt die Ecke, fünf mal vier gleich '
         'zwanzig. Zusammen zweihundertzehn, nicht zweihundertzwanzig.')),
     dict(id='merke', kicker='Merke', pause=DENKPAUSE, text=(   # Nutzerwunsch 04.11.: die langen Sätze, nicht die Kurzformen
-        'Merk dir die drei Schritte: Einen Einer zur anderen Zahl addieren, egal, welchen. Eine Null anhängen. Beide Einer '
-        'multiplizieren und dazuzählen. Und jetzt du: dreizehn mal vierzehn.')),
+        'Merk dir die drei Schritte: Eine Einerziffer zur anderen Zahl addieren, egal, welche. Eine Null anhängen. '
+        'Beide Einerziffern multiplizieren und dazuzählen. Und jetzt du: dreizehn mal vierzehn.')),
     dict(id='schluss', kicker='Merke', anhang=True, text=(   # gehört zum Kapitel „Merke“, läuft nach der Lösung
         'Hat es bei dir länger als drei Sekunden gedauert? Ganz normal. Mit ein bisschen Übung schaffst du das auch '
         'so schnell. ' + SPRUCH)),
@@ -751,9 +751,10 @@ def s_vorsicht(b, sc, t):
             b.linie([(x1 - w - 4, y + 8), (mix(x1 - w - 4, x1 + 4, ps), y + 8 - 16 * ps)], CD, 5, alpha=a)
 
 
-MERKSAETZE = [('1', CB, ['Einen Einer zur anderen Zahl', 'addieren – egal, welchen'], 'Einen Einer'),   # Nutzerwahl 04.11.
-              ('2', TEAL, ['Eine Null anhängen'], 'Eine Null'),
-              ('3', CD, ['Beide Einer multiplizieren', 'und dazuzählen'], 'Beide Einer')]
+MERKSAETZE = [  # Nutzerwahl 05.11. (Hörprobe): „Einerziffer“ – klingt nicht nach einer Person, Betonung stimmt
+    ('1', CB, ['Eine Einerziffer zur anderen', 'Zahl addieren – egal, welche'], 'Eine Einerziffer'),
+    ('2', TEAL, ['Eine Null anhängen'], 'Eine Null'),
+    ('3', CD, ['Beide Einerziffern', 'multiplizieren und dazuzählen'], 'Beide Einerziffern')]
 
 
 def merkkarte(b, sc, t, x0=80, y0=130, w=590, nochmal=None):
