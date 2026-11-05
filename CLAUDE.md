@@ -177,7 +177,8 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   `UHR = 4` in `regel.py`), der Sonderfall „Einer ergeben 10“ bleibt bei drei (`ziel` je Stufe in `uebung/aufgaben.js`).
   Grund: Drei Sekunden mit Rechnen frustrieren; die meistgesehenen Videos nennen 3–5 s, tecmath für genau diesen Trick 4 s.
 - **Name des Tricks** (Nutzerwahl 05.11., Serie geplant: `themen/mathe-tricks/`, 127 Folgen): kurzer Name („Der
-  Zehner-Trick“), im Einstieg gesprochen („Mit dem Zehner-Trick schaffst du das …“) und als Band unter der Aufgabe
+  Zehner-Trick“), im Einstieg gesprochen („Mit dem Zehner-Trick klappt das immer, wenn beide Zahlen zwischen zehn und
+  zwanzig liegen.“, Nutzerwahl 05.11.: sagt, was „das“ ist, und warum 10 und 20 nicht dazugehören) und als Band unter der Aufgabe
   eingeblendet, sobald die Lösung steht. Kein eigenes Startbild vor dem Einstieg (kostet die ersten Sekunden); oben links
   bleibt „Kopfrechnen“ als Name der Reihe, wie die App.
 - **YouTube-Vorschaubild der Reihe** (Nutzerwahl 05.11.: ein Design für alle Folgen, Wiedererkennung): Stil „Papier mit

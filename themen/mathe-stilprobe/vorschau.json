@@ -1,7 +1,15 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Nichts offen auf dieser Seite. Schlusssatz abgenommen; das ganze Video wird erst nach „rendern“ neu gebaut.",
+ "aufgabe": "Oben 1 Eintrag: der neue Einstieg, „passt“ oder „ändern“.",
  "videos": [
+  {
+   "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hook2/einstieg_clip.mp4",
+   "titel": "Neu: Einstieg „… klappt das immer, wenn beide Zahlen zwischen zehn und zwanzig liegen.“ (erste 12,5 s)",
+   "stand": "05.11., 23:34",
+   "pruefen": true,
+   "poster_bei": 9.6,
+   "notiz": "Einstieg jetzt 10,3 s (vorher 9,4 s). Die Zahlenreihe 11 … 19 erscheint bei „zwischen zehn und zwanzig“. „passt“ = so ins Video; gerendert wird erst nach deinem „rendern“."
+  },
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/abo5/schluss_clip.mp4",
    "titel": "Neu: Schluss „Und damit du nichts verpasst: Abonnier den Kanal.“ (letzte 21 s)",
