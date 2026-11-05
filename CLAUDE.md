@@ -139,14 +139,20 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   als Artifact mit `{"db": {}, "comments": {}}` veröffentlichen und immer dieselbe URL aktualisieren; neueste Fassung
   oben, „zu prüfen“ / „zur Info“, je Video höchstens 16 MB (ganzes Video 720p/12 fps). Dateien (480p, 1080p) nur,
   wenn der Nutzer sie ausdrücklich will, z. B. 1080p für den Upload. Einstieg testen: `render.py … --bis 17`.
-- Braucht es eine Entscheidung oder Abnahme des Nutzers: erste Zeile **„Deine Aufgabe: …“** mit Link, Ort auf der
-  Seite und Zahl der Stellen („oben im Kasten, 10 Stellen, dann grüner Knopf“). Nie nur „bitte abnehmen“ (Suchzeit).
+- **Aufbau jeder Antwort** (Nutzerwunsch 05.11., gilt für alle Sitzungen; ersetzt „Deine Aufgabe“ als erste Zeile und
+  „Link wiederholen“): oben kurz, was gemacht wurde. **Am Ende**, in dieser Reihenfolge:
+  1. Bilder und Dateien erst jetzt schicken (`SendUserFile`), nicht mitten im Text.
+  2. **„Deine Aufgabe: …“** – jede offene Entscheidung oder Abnahme als kurzer Arbeitsauftrag, auch wenn sie oben schon
+     erwähnt wurde: Link, Ort auf der Seite, Zahl der Stellen („oben im Kasten, 10 Stellen, dann grüner Knopf“). Nie
+     nur „bitte abnehmen“ (Suchzeit). Nichts offen: kein Aufgabenblock.
+  3. Nur die Links, die für diese Antwort gebraucht werden, jeden **genau einmal** (steht er schon im Arbeitsauftrag,
+     nicht noch einmal darunter).
+  4. Kostenzeile.
   **Jeder offene Punkt mit eigenem Link** (Nutzerwunsch 02.11.), auch Entscheidungen, die im Chat beantwortet werden:
   Vergleichsbilder dafür als Eintrag auf die Vorschau-Seite (Standbild als kurzes Video, „passt“ = übernehmen), damit
   alles Offene an einem Ort mit Link liegt. Nie ein Kürzel („Variante D“) ohne Bild und Link wiederholen.
 - Am Ende jeder Antwort genau eine Kostenzeile: `python3 tools/kosten.py` ausführen, Ausgabe wörtlich als letzte Zeile.
-- Jede Internetadresse als klickbarer Markdown-Link. Wurde ein Artifact oder eine Datei veröffentlicht: den Link als letzte
-  Zeile vor der Kostenzeile wiederholen (`**Link:** [Name](URL)`).
+- Jede Internetadresse als klickbarer Markdown-Link.
 
 ## Mathe-Videos (`themen/mathe-*`, eigenes Format ohne Ampel)
 - Vorlage: `themen/mathe-einmaleins/regel.py` (Bilder ganz per Code, Formeln nie per KI-Bild; Einblendungen hängen an
@@ -158,9 +164,9 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - **Zu jedem Mathe-Video eine Übung** in der App `uebung/` (https://luperttrading-lab.github.io/5-Minuten-videos/uebung/,
   Nutzerwunsch 04.11.: 10 Aufgaben, tippen oder sprechen, richtig gezählt, Ø-Zeit). Neue Übung in `uebung/aufgaben.js`,
   `APP_VERSION` hochzählen, `node uebung/tests/uebung.mjs` muss „Alles grün“ melden. Details `uebung/LIESMICH.md`.
-- **Immer beide Links** (Nutzerwunsch 04.11.): Jede Antwort zu Mathe-Videos oder Übungs-App endet (vor der Kostenzeile)
-  mit beiden Links: [Mathe-Videos · Vorschau](https://claude.ai/artifact/PVisw26MxXcVy1NJngcMFu) und
-  [Kopfrechnen üben](https://luperttrading-lab.github.io/5-Minuten-videos/uebung/).
+- **Links** (Nutzerwunsch 05.11., ersetzt „immer beide Links“): nur der gebrauchte, je einmal (siehe „Aufbau jeder
+  Antwort“): [Mathe-Videos · Vorschau](https://claude.ai/artifact/PVisw26MxXcVy1NJngcMFu) bei Videos,
+  [Kopfrechnen üben](https://luperttrading-lab.github.io/5-Minuten-videos/uebung/) nur, wenn sich an der App etwas geändert hat.
 - **Ziel vier Sekunden** (Nutzerentscheidung 05.11.): Video und App-Stufe „Alle Zahlen“ sagen „in vier Sekunden“ (Uhr
   `UHR = 4` in `regel.py`), der Sonderfall „Einer ergeben 10“ bleibt bei drei (`ziel` je Stufe in `uebung/aufgaben.js`).
   Grund: Drei Sekunden mit Rechnen frustrieren; die meistgesehenen Videos nennen 3–5 s, tecmath für genau diesen Trick 4 s.
