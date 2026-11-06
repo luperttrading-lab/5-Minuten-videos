@@ -52,9 +52,10 @@ TEAL, GRUEN = '#0f766e', '#2a9d4a'
 
 SZENEN = [
     dict(id='hook', kicker='Kopfrechnen', pause=PAUSE + 0.5, text=(   # +0,5 s: „= 288“ bleibt nach der 4-s-Uhr stehen (Nutzer 05.11.)
-        # Nutzerwahl 05.11.: „beide Zahlen zwischen zehn und zwanzig“ statt „für alle Zahlen von elf bis neunzehn“
-        'Sechzehn mal achtzehn. Im Kopf, in vier Sekunden? Mit dem Zehner-Trick klappt das immer, wenn beide Zahlen '
-        'zwischen zehn und zwanzig liegen.')),
+        # Nutzerwahl 06.11.: „für zwei Zahlen von elf bis neunzehn“ – sagt, was „das“ ist; „zwischen zehn und zwanzig“
+        # verworfen (viele lesen es als 10 bis 20, für 20 klappt der Trick nicht)
+        'Sechzehn mal achtzehn. Im Kopf, in vier Sekunden? Mit dem Zehner-Trick klappt das immer für zwei Zahlen von '
+        'elf bis neunzehn.')),
     dict(id='regel', kicker='Der Trick', text=(
         'Schritt eins: Nimm den Einer der zweiten Zahl, also die Acht, und zähl ihn zur ersten Zahl dazu. Sechzehn '
         'plus acht gibt vierundzwanzig. Schritt zwei: Nimm das mal zehn, also häng eine Null an. Aus vierundzwanzig wird '
@@ -407,7 +408,7 @@ def s_hook(b, sc, t):
         an = klemm(qn * 2)
         band(b, 640 - 230 * qn, 435 - 43 * qn, 640 + 230 * qn, 435 + 43 * qn, TEAL, 0.95 * an, r=16)
         b.text('Der Zehner-Trick', 640, 435, 44, '#ffffff', INTER_X, skala=max(qn, 0.01), alpha=an)
-    t0 = C(sc, 'zwischen zehn')                            # Zahlenreihe 11 … 19 erscheint bei „zwischen zehn und zwanzig“
+    t0 = C(sc, 'elf bis')                                  # Zahlenreihe 11 … 19 erscheint bei „elf bis neunzehn“
     for i, n in enumerate(range(11, 20)):
         q = zurueck(p(t, t0 + i * 0.08, 0.4))
         if q > 0:
