@@ -145,7 +145,7 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
   2. **„Deine Aufgabe: …“** – jede offene Entscheidung oder Abnahme als kurzer Arbeitsauftrag, auch wenn sie oben schon
      erwähnt wurde: Link, Ort auf der Seite, Zahl der Stellen („oben im Kasten, 10 Stellen, dann grüner Knopf“). Nie
      nur „bitte abnehmen“ (Suchzeit). Nichts offen: kein Aufgabenblock.
-  3. Die festen Links des Projekts als beschriftete Liste, jeden **genau einmal** (Mathe: drei, siehe dort); der
+  3. Die festen Links des Projekts als beschriftete Liste, jeden **genau einmal**; der
      Arbeitsauftrag verweist darauf („Auswahl-Seite, Link unten“) statt den Link zu wiederholen.
   4. Kostenzeile.
   **Jeder offene Punkt mit eigenem Link** (Nutzerwunsch 02.11.), auch Entscheidungen, die im Chat beantwortet werden:
@@ -155,71 +155,12 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 - Am Ende jeder Antwort genau eine Kostenzeile: `python3 tools/kosten.py` ausführen, Ausgabe wörtlich als letzte Zeile.
 - Jede Internetadresse als klickbarer Markdown-Link.
 
-## Mathe-Videos (`themen/mathe-*`, eigenes Format ohne Ampel)
-- Vorlage: `themen/mathe-einmaleins/regel.py` (Bilder ganz per Code, Formeln nie per KI-Bild; Einblendungen hängen an
-  gesprochenen Wörtern). Vorschau-Seite aller Mathe-Proben: `themen/mathe-stilprobe/vorschau.json`.
-- **Am Schluss immer ein Motivationssatz** (Nutzerwunsch 04.11.), z. B. nach einer Übung: „Länger als vier Sekunden? Ganz
-  normal. Mit ein bisschen Übung schaffst du das auch.“ plus ein **wechselnder Spruch** („Das ist kein Hexenwerk.“, „Das
-  ist keine Raketenwissenschaft.“ …) aus `werkzeug/motivation.py` (`spruch(thema, 'schluss')`; `'bruecke'` für Übergänge).
-  Ein Thema behält seinen Spruch, neue Themen bekommen den seltensten. Sprüche gern ergänzen.
-- **Zu jedem Mathe-Video eine Übung** in der App `uebung/` (https://luperttrading-lab.github.io/5-Minuten-videos/uebung/,
-  Nutzerwunsch 04.11.: 10 Aufgaben, tippen oder sprechen, richtig gezählt, Ø-Zeit). Neue Übung in `uebung/aufgaben.js`,
-  `APP_VERSION` hochzählen, `node uebung/tests/uebung.mjs` muss „Alles grün“ melden. Details `uebung/LIESMICH.md`.
-- **Links am Ende jeder Antwort** (Nutzerwunsch 05.11. abends, ersetzt „nur der gebrauchte Link“), beschriftet, damit
-  das fertige Video nicht zwischen den Proben gesucht werden muss:
-  - **Fertige Videos:** [Kopfrechnen · fertige Videos](https://claude.ai/artifact/KtWyuT3JFmgu3yVphKcAH4) – nur die
-    abgenommenen Fassungen mit YouTube-Titel (Kopieren-Knopf) und Vorschaubild. Nach jeder Abnahme `fertig.json` in
-    `themen/mathe-stilprobe/` nachziehen, `python3 ../../werkzeug/fertig.py fertig.json <ordner>`, mit `publish_files`
-    auf Slug `98f5e798-15cf-46ab-8792-8c95d9d0393f` (nur geänderte Dateien, alte entfernen).
-  - **Auswahl und Proben:** [Mathe-Videos · Vorschau](https://claude.ai/artifact/PVisw26MxXcVy1NJngcMFu)
-  - **App:** [Kopfrechnen üben](https://luperttrading-lab.github.io/5-Minuten-videos/uebung/)
-- **Ziel vier Sekunden** (Nutzerentscheidung 05.11.): Video und App-Stufe „Alle Zahlen“ sagen „in vier Sekunden“ (Uhr
-  `UHR = 4` in `regel.py`), der Sonderfall „Einer ergeben 10“ bleibt bei drei (`ziel` je Stufe in `uebung/aufgaben.js`).
-  Grund: Drei Sekunden mit Rechnen frustrieren; die meistgesehenen Videos nennen 3–5 s, tecmath für genau diesen Trick 4 s.
-- **Name des Tricks** (Nutzerwahl 05.11., Serie geplant: `themen/mathe-tricks/`, 127 Folgen): kurzer Name („Der
-  Zehner-Trick“), im Einstieg gesprochen („Mit dem Zehner-Trick klappt das immer für zwei Zahlen von elf bis neunzehn.“,
-  Nutzerwahl 06.11.: sagt, was „das“ ist; „zwischen zehn und zwanzig“ verworfen, viele lesen es als 10 bis 20) und als Band unter der Aufgabe
-  eingeblendet, sobald die Lösung steht. Kein eigenes Startbild vor dem Einstieg (kostet die ersten Sekunden); oben links
-  bleibt „Kopfrechnen“ als Name der Reihe, wie die App.
-- **YouTube-Vorschaubild der Reihe** (Nutzerwahl 05.11.: ein Design für alle Folgen, Wiedererkennung): Stil „Papier mit
-  Teal-Leiste unten“ aus `themen/mathe-einmaleins/vorschaubild.py` (`papier`): Aufgabe groß mit „= ?“, Einer orange und
-  violett wie im Video, unten die grüne Leiste mit Name des Tricks links und „KOPFRECHNEN“ rechts. Je Folge nur Aufgabe
-  und Name in `FOLGEN` ändern, keine Uhr (nicht jeder Trick hat ein Zeitversprechen). Fertig: `vorschaubild_zehner.png`.
-- **YouTube-Titel nach Suchbegriffen** (Nutzerwunsch 05.11.: „was am meisten gesucht wird“): vorher die
-  YouTube-Suchvorschläge abfragen (`https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&hl=de&gl=de&q=…`;
-  zeigt, was gesucht wird, nicht wie oft). Stand 05.11.: „großes Einmaleins“ (Tricks, im Kopf rechnen), „im Kopf
-  multiplizieren“, „Kopfrechnen Trick multiplizieren“, „Zahlen von 11 bis 19 im Kopf multiplizieren“; niemand sucht
-  „malnehmen“ oder eine konkrete Aufgabe wie „16 mal 18“. Aufbau (Nutzerwahl 05.11.): Name des Tricks vorn, dann
-  ein Suchwort („großes Einmaleins“ statt „Kopfrechnen“, das steht schon im Vorschaubild), dann das Beispiel mit dem
-  Versprechen, z. B. „Zehner-Trick: großes Einmaleins im Kopf – 16 · 18 in 4 Sekunden“. Titel je Folge in `youtube.md`.
-- **Eigener YouTube-Kanal für die Mathe-Videos** (Nutzerentscheidung 05.11.), getrennt von den Gesundheits-Faktenchecks.
-  Später evtl. „Statistik leicht gemacht“; ob eigener Kanal oder zusammen mit Kopfrechnen, ist offen.
-- **Endbildschirm** (Nutzerwahl 05.11., Szene `abspann` in `regel.py`): nach dem Motivationssatz gesprochen „Noch ein
-  Trick? Hier geht's weiter. Und damit du nichts verpasst: Abonnier den Kanal.“ („Trick“ nur einmal, Nutzer 05.11.) (für jede Folge gleich, kein bestimmtes
-  Video ankündigen), dann `ABSPANN` = 8 s still. Bild: „Noch ein Trick?“, zwei Flächen für Video-Empfehlungen, Knopf
-  „Abonnieren“ in der Mitte; YouTube Studio legt die Elemente darauf, das Abo-Element (Kanalbild) rechts neben den Knopf
-  auf freie Fläche (kein grüner Platzhalter-Kreis mehr, Nutzer 05.11.) (nur letzte 5–20 s, nicht bei „für Kinder gemacht“).
-  Muss vor dem Hochladen im Video sein. Abo-Zeile (Probe 05.11.): links ein gezeichneter Knopf „Abonnieren“, auf den beim
-  Wort „Abonnier“ eine Emoji-Hand „👆“ (`zeigehand`, Bild `HAND_BILD` in `bilder/`, Microsoft Fluent Emoji, MIT-Lizenz in
-  `bilder/LIZENZ_fluent_emoji.txt`; selbst gezeichnete Hand verworfen: „nicht schön“) schräg von links unten tippt (Klang `klick`, Spitze ≈ 0,16 wie die übrigen
-  Geräusche) und eine Tipp-Welle auslöst. Farben (Nutzerwahl 05.11., `ABO_STIL = ('weiss', 'gruen')`): vorher weiß mit
-  grünem Rand und grüner Schrift „Abonnieren“, nach dem Tippen kräftig grün mit weißem „✓ Abonniert“ (der Effekt wird
-  stärker, nicht grau wie bei YouTube); die Tipp-Welle ist dann weiß. Hand: Form „Handrücken, nach oben“, mittelhell, plastisch
-  (Nutzerwahl 05.11., `bilder/hand_fluent_3d_mittelhell.png`). Finger statt
-  Mauszeiger (Nutzer 05.11.): YouTube läuft vor allem auf Handy und Fernseher, kaum am PC.
-- **Erst rendern, wenn der Nutzer freigibt** (Nutzer 05.11.): Änderungen an einer Stelle als kurzen Clip nur dieser
-  Stelle zeigen (Vorlage: `clip.py` im Scratchpad – Bilder per `G.bild(t)` in 4 Prozessen, Ton aus der WAV von
-  `--nur-ton`), das ganze Video erst nach ausdrücklicher Freigabe neu rendern.
-- **Geprüft und verworfen** (Nutzerentscheidung 04.11.): Abweichungs-Kreuz (tecmath/vedisch, Probe `kreuz_probe.py`) –
-  unser Flächenmodell mit „Andersherum“ erklärt es besser. Recherche der meistgesehenen Videos zum Trick: kein anderer
-  Rechenweg, nur andere Darstellungen (Fläche ohne Drehen, von rechts rechnen, Finger bis 15, Basis 20).
-- **Merksätze so sprechen, wie sie dastehen** (Nutzerwunsch 04.11.): keine Kurzformen („Einer rüber“), die man nur
-  lesend versteht; der Merkzettel zeigt genau die gesprochenen Sätze.
-- **Geräusche sparsam** (Nutzer 04.11.): kein „Plopp“ (klang wie „Boing“); Glöckchen nur zusammen mit den Funken an den
-  grünen Endergebnissen. Klicks der Sprachausgabe in Pausen dämpft `entknacksen` in `regel.py` (≈ 30 → 5), dazu
-  Tiefpass 12 kHz. Vorschau-Ton direkt aus der WAV kodieren (`-map 1:a`, AAC 160k), nicht AAC aus AAC.
-- **Keine künstlichen Pausen in den Ton schneiden** (Messung 04.11.): Christian pausiert an Satzenden selbst 200–500 ms,
-  die Zeitmarken sind nur auf ≈ 40 ms genau, Schnitte landeten im Wort („Sprechabsetzer“).
+## Mathe-Videos
+Seit 06.11. im eigenen Repo `luperttrading-lab/mathe-videos` (Nutzerentscheidung: eigener Kanal, über 100 Folgen,
+viele Übungen; dieses Repo hatte schon ≈ 1 GB). Dort liegen Folgen, Folgenplan, Übungs-App
+([Kopfrechnen üben](https://luperttrading-lab.github.io/mathe-videos/uebung/)) und ihre eigene CLAUDE.md. Der alte
+Pfad `uebung/` leitet nur noch weiter. `render.py`, `vorschau.py` und die Schriften sind dorthin kopiert und
+entwickeln sich getrennt.
 
 ## Themenideen
 - Fahrplan aus dem Strategiepapier (vom Nutzer am 02.11. gutgeheißen, erst angehen, wenn die fünf vorhandenen Videos
