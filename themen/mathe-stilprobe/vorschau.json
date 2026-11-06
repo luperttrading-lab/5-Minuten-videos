@@ -1,12 +1,12 @@
 {
  "titel": "Mathe-Videos",
- "aufgabe": "Oben 1 Eintrag: der neue Einstieg, „passt“ oder „ändern“.",
+ "aufgabe": "Nichts offen auf dieser Seite. Einstieg und Schlusssatz abgenommen; das ganze Video wird erst nach „rendern“ neu gebaut.",
  "videos": [
   {
    "datei": "/tmp/claude-0/-home-user-5-Minuten-videos/73e1be1b-a92e-56f2-a1b6-f0279a8a0f8a/scratchpad/hook3/einstieg_clip.mp4",
    "titel": "Neu: Einstieg „… klappt das immer für zwei Zahlen von elf bis neunzehn.“ (erste 12 s)",
    "stand": "06.11., 07:04",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 8.5,
    "notiz": "Dein Satz (zweite Fassung). Einstieg 9,9 s. Die Zahlenreihe 11 … 19 erscheint bei „elf bis neunzehn“. „passt“ = so ins Video; gerendert wird erst nach deinem „rendern“."
   },
