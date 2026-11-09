@@ -62,7 +62,7 @@ SZENEN = [
  {'id': 'p2', 'kicker': '1957', 'headline': 'Der Stoff wird gefunden',
   'sentences': ['Die Spur nahmen Chemiker eines amerikanischen Pharmakonzerns auf.',
                 'Sie suchten den Stoff im Eigelb, in Sojalecithin und in Erdnussmehl, und fanden ihn überall.',
-                S('1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA.', '1957 stellten sie ihn vor: Palmitoylethanolamid, kurz Pe E A.'),  # Aussprache-Wahl 9 (Nutzer 10.11.)
+                S('1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA.', '1957 stellten sie ihn vor: Palmitoylethanolamid, kurz Pe E A.'),  # Aussprache-Wahl 9 (Nutzer 10.11., 0:42, endgültig)
                 'Der Name klingt kompliziert, das Molekül ist einfach: eine Fettsäure, wie sie auch in Palmöl steckt, verbunden mit einem kleinen Baustein.',
                 'Das Besondere: Dein Körper bildet PEA selbst, in vielen Geweben.',
                 'Und bei Meerschweinchen wirkte der reine Stoff gegen die Gelenkentzündung, genau wie das Eigelb.'],
