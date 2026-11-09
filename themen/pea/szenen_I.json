@@ -251,7 +251,10 @@
     "Ihr Team untersuchte Mastzellen. Das sind Wächterzellen im Gewebe, die bei Reizung Entzündungsstoffe ausschütten.",
     "Die Idee: Wo Gewebe verletzt wird, bildet der Körper selbst Stoffe wie PEA, die diese Wächter beruhigen.",
     "Eine körpereigene Entzündungsbremse, direkt vor Ort.",
-    "Eine Weile dachte man sogar, PEA docke an dieselben Rezeptoren an wie Wirkstoffe aus Hanf.",
+    {
+     "t": "Eine Weile dachte man sogar, PEA docke an dieselben Rezeptoren an wie Wirkstoffe aus Hanf.",
+     "say": "Eine Weile dachte man sogar, Pe E A docke an dieselben Rezeptoren an wie Wirkstoffe aus Hanf."
+    },
     "Das ließ sich nicht bestätigen. Aber die Idee der Entzündungsbremse gab der Forschung neuen Schwung."
    ],
    "bullets": [
