@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PEA: Vom Eigelb zur Schmerzforschung</title>
+<style>
+  :root { color-scheme: light dark; --ink:#222632; --muted:#6f6a66; --bg:#faf3ea; --card:#fffaf3; --accent:#324e7a; --line:#e6dccf; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#ece7e0; --muted:#a8a29b; --bg:#1c1b1a; --card:#262422; --accent:#8fb0e3; --line:#3a3633; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width:780px; margin:0 auto; padding:22px 16px 56px; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size:1.7rem; line-height:1.2; margin:.1em 0 .35em; }
+  .lead { color:var(--muted); margin:0 0 18px; }
+  video { width:100%; border-radius:12px; display:block; background:#000; }
+  .kap { display:flex; flex-wrap:wrap; gap:6px; margin:12px 0 26px; }
+  .kap button { font:inherit; font-size:.85rem; padding:6px 10px; border-radius:999px; border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; }
+  h2 { font-size:1.15rem; margin:28px 0 10px; }
+  .short video { max-width:340px; margin:0 auto; }
+  details { background:var(--card); border-radius:12px; padding:12px 14px; border:1px solid var(--line); }
+  summary { cursor:pointer; font-weight:600; }
+  ol { margin:10px 0 0; padding-left:30px; } li { margin:4px 0; font-size:.92rem; }
+  a { color:var(--accent); }
+  .fuss { color:var(--muted); font-size:.85rem; margin-top:26px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>PEA: Vom Eigelb zur Schmerzforschung</h1>
+  <p class="lead">Ein Erklärvideo über Palmitoylethanolamid: wie es entdeckt wurde, wie es wirken könnte und was Studien heute zeigen.</p>
+  <video id="v" controls playsinline preload="metadata" src="video.mp4"></video>
+  <div class="kap">
+    <button data-t="0.0">0:00 · Einleitung</button>
+    <button data-t="26.9">0:26 · Das Eigelb-Rätsel</button>
+    <button data-t="68.8">1:08 · Der Stoff wird gefunden</button>
+    <button data-t="107.7">1:47 · Eine Grippetablette</button>
+    <button data-t="153.5">2:33 · Die Nobelpreisträgerin</button>
+    <button data-t="195.6">3:15 · Wie PEA wirken könnte</button>
+    <button data-t="238.1">3:58 · Was Studien heute zeigen</button>
+    <button data-t="294.2">4:54 · Fazit</button>
+  </div>
+  <h2>Quellen</h2>
+  <details><summary>Alle 19 Quellen (Nummern wie im Video)</summary>
+    <ol>
+      <li><a href="https://doi.org/10.1016/s0140-6736(60)90750-9">Coburn AF. The concept of egg yolk as a dietary inhibitor to rheumatic susceptibility. Lancet 1960;275(7129):867–870.</a></li>
+      <li><a href="https://doi.org/10.1084/jem.100.5.425">Coburn AF, Graham CE, Haninger J. The effect of egg yolk in diets on anaphylactic arthritis (passive Arthus phenomenon) in the guinea pig. J Exp Med 1954;100(5):425–435.</a></li>
+      <li><a href="https://doi.org/10.1155/2013/151028">Keppel Hesselink JM, de Boer T, Witkamp RF. Palmitoylethanolamide: a natural body-own anti-inflammatory agent, effective and safe against influenza and common cold. Int J Inflam 2013:151028.</a></li>
+      <li><a href="https://doi.org/10.1021/ja01577a066">Kuehl FA Jr, Jacob TA, Ganley OH, Ormond RE, Meisinger MAP. The identification of N-(2-hydroxyethyl)-palmitamide as a naturally occurring anti-inflammatory agent. J Am Chem Soc 1957;79(20):5577–5578.</a></li>
+      <li><a href="https://doi.org/10.1007/BF00560353">Mašek K, Perlík F, Klíma J, Kahlich R. Prophylactic efficacy of N-2-hydroxyethyl palmitamide (Impulsin) in acute respiratory tract infections. Eur J Clin Pharmacol 1974;7(6):415–419.</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/392005/">Kahlich R, Klíma J, Cihla F et al. Studies on prophylactic efficacy of N-2-hydroxyethyl palmitamide (Impulsin) in acute respiratory infections. Serologically controlled field trials. J Hyg Epidemiol Microbiol Immunol 1979;23(1):11–24.</a></li>
+      <li><a href="https://doi.org/10.1016/j.bbih.2024.100927">Bortoletto R et al. Palmitoylethanolamide supplementation for human health: a state-of-the-art systematic review of RCTs in patient populations. Brain Behav Immun Health 2025;43:100927.</a></li>
+      <li><a href="https://www.nobelprize.org/prizes/medicine/1986/summary/">The Nobel Prize in Physiology or Medicine 1986: Stanley Cohen, Rita Levi-Montalcini.</a></li>
+      <li><a href="https://doi.org/10.1007/BF01972748">Aloe L, Leon A, Levi-Montalcini R. A proposed autacoid mechanism controlling mastocyte behaviour. Agents Actions 1993;39:C145–C147.</a></li>
+      <li><a href="https://doi.org/10.1073/pnas.92.8.3376">Facci L, Dal Toso R, Romanello S, Buriani A, Skaper SD, Leon A. Mast cells express a peripheral cannabinoid receptor with differential sensitivity to anandamide and palmitoylethanolamide. PNAS 1995;92(8):3376–3380.</a></li>
+      <li><a href="https://doi.org/10.2174/0929867023370707">Lambert DM, Vandevoorde S, Jonsson KO, Fowler CJ. The palmitoylethanolamide family: a new class of anti-inflammatory agents? Curr Med Chem 2002;9(6):663–674.</a></li>
+      <li><a href="https://doi.org/10.1124/mol.104.006353">Lo Verme J, Fu J, Astarita G et al. The nuclear receptor PPAR-α mediates the anti-inflammatory actions of palmitoylethanolamide. Mol Pharmacol 2005;67(1):15–19.</a></li>
+      <li><a href="https://doi.org/10.1126/science.1470919">Devane WA, Hanuš L, Breuer A et al. Isolation and structure of a brain constituent that binds to the cannabinoid receptor. Science 1992;258:1946–1949.</a></li>
+      <li><a href="https://doi.org/10.1038/sj.bjp.0704199">Jonsson KO, Vandevoorde S, Lambert DM, Tiger G, Fowler CJ. Effects of homologues and analogues of palmitoylethanolamide upon the inactivation of the endocannabinoid anandamide. Br J Pharmacol 2001;133:1263–1275.</a></li>
+      <li><a href="https://doi.org/10.1038/bjp.2008.324">Ho WSV, Barrett DA, Randall MD. &#x27;Entourage&#x27; effects of N-palmitoylethanolamide and N-oleoylethanolamide on vasorelaxation to anandamide occur through TRPV1 receptors. Br J Pharmacol 2008;155:837–846.</a></li>
+      <li><a href="https://doi.org/10.3390/nu15061350">Lang-Illievich K, Klivinyi C, Lasser C, Brenna CTA, Szilagyi IS, Bornemann-Cimenti H. Palmitoylethanolamide in the treatment of chronic pain: a systematic review and meta-analysis of double-blind randomized controlled trials. Nutrients 2023;15(6):1350.</a></li>
+      <li><a href="https://doi.org/10.1111/bcp.13020">Gabrielsson L, Mattsson S, Fowler CJ. Palmitoylethanolamide for the treatment of pain: pharmacokinetics, safety and efficacy. Br J Clin Pharmacol 2016;82(4):932–942.</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/28727699/">Artukoglu BB, Beyer C, Zuloff-Shani A, Brener E, Bloch MH. Efficacy of palmitoylethanolamide for pain: a meta-analysis. Pain Physician 2017;20(5):353–362.</a></li>
+      <li><a href="https://doi.org/10.1097/j.pain.0000000000000623">Andresen SR, Bing J, Hansen RM et al. Ultramicronized palmitoylethanolamide in spinal cord injury neuropathic pain: a randomized, double-blind, placebo-controlled trial. Pain 2016;157(9):2097–2103.</a></li>
+    </ol>
+  </details>
+  <p class="fuss">Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.</p>
+</main>
+<script>
+  const v = document.getElementById('v');
+  document.querySelectorAll('.kap button').forEach(b => b.addEventListener('click', () => {
+    v.currentTime = parseFloat(b.dataset.t); v.play().catch(() => {});
+  }));
+</script>
+</body>
+</html>

@@ -96,6 +96,26 @@
    "shots": [
     {
      "bild": "bilder/G/p1a.jpg"
+    },
+    {
+     "bild": "bilder/G/p1b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/p1c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/p1d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/p1e.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/p1f.jpg",
+     "at": 6
     }
    ]
   },
@@ -136,6 +156,26 @@
    "shots": [
     {
      "bild": "bilder/G/p2a.jpg"
+    },
+    {
+     "bild": "bilder/G/p2b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/p2c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/p2d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/p2e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/p2f.jpg",
+     "at": 5
     }
    ]
   },
@@ -179,6 +219,26 @@
    "shots": [
     {
      "bild": "bilder/G/p3a.jpg"
+    },
+    {
+     "bild": "bilder/G/p3b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/p3c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/p3d.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/p3e.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/p3f.jpg",
+     "at": 6
     }
    ]
   },
@@ -217,6 +277,26 @@
    "shots": [
     {
      "bild": "bilder/G/p4a.jpg"
+    },
+    {
+     "bild": "bilder/G/p4b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/p4c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/p4d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/p4e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/p4f.jpg",
+     "at": 5
     }
    ]
   },
@@ -259,6 +339,26 @@
    "shots": [
     {
      "bild": "bilder/G/p5a.jpg"
+    },
+    {
+     "bild": "bilder/G/p5b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/p5c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/p5d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/p5e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/p5f.jpg",
+     "at": 5
     }
    ]
   },
@@ -304,6 +404,34 @@
    "shots": [
     {
      "bild": "bilder/G/p6a.jpg"
+    },
+    {
+     "bild": "bilder/G/p6b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/p6c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/p6d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/p6e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/p6f.jpg",
+     "at": 6
+    },
+    {
+     "bild": "bilder/G/p6g.jpg",
+     "at": 7
+    },
+    {
+     "bild": "bilder/G/p6h.jpg",
+     "at": 8
     }
    ]
   },
@@ -345,6 +473,22 @@
    "shots": [
     {
      "bild": "bilder/G/p7a.jpg"
+    },
+    {
+     "bild": "bilder/G/p7b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/p7c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/p7d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/p7e.jpg",
+     "at": 5
     }
    ]
   }

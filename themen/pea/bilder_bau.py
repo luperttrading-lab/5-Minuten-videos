@@ -30,7 +30,7 @@ SZENE = {
  'p2b': ("on a lab bench: a glass dish with egg yolk, a bowl of soybeans and a bowl of peanuts, each connected by glass tubes to one central flask", KT),
  'p2c': ("a 1950s chemist proudly holding up a glass flask in which fine white crystals sparkle", RH),
  'p2d': ("a simple friendly ball-and-stick molecule model: a long zigzag chain of balls linked to a small round building block, a palm fruit beside it", KT),
- 'p2e': ("a friendly adult standing relaxed, a soft translucent overlay shows small golden glows in many places of the body", RH),
+ 'p2e': ("a friendly adult in a plain modern t-shirt and jeans standing relaxed in a bright neutral room, a soft translucent overlay shows small golden glows in many places of the body (head, chest, belly, knees)", RH),
  'p2f': ("a happy healthy guinea pig hopping in a bright lab enclosure, a 1950s scientist in a white coat smiles at it", R),
  # p3 Eine Grippetablette (1970er)
  'p3a': ("a 1970s Central European town square in winter with an old tram, snow on the roofs, people in warm coats", RH),

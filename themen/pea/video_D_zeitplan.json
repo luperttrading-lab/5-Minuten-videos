@@ -1,0 +1,308 @@
+[
+ {
+  "id": "p0",
+  "v0": 0.0,
+  "v1": 26.913083900226756,
+  "st": [
+   [
+    1.0,
+    6.933333333333334,
+    "PEA: ein Stoff, den dein Körper selbst herstellt, und der zuerst im Eigelb entdeckt wurde."
+   ],
+   [
+    7.933333333333334,
+    5.18095238095238,
+    "Seine Geschichte ist eine echte Entdeckungsreise, über fast achtzig Jahre."
+   ],
+   [
+    13.114285714285714,
+    13.648798185941043,
+    "Du erfährst, wie ein Arzt auf das Eigelb kam, wie Chemiker den Stoff fanden, warum es eine Grippetablette gab, was eine Nobelpreisträgerin vermutete, wie PEA wirken könnte und was Studien heute zeigen."
+   ]
+  ]
+ },
+ {
+  "id": "p1",
+  "v0": 26.913083900226756,
+  "v1": 68.82004535147392,
+  "st": [
+   [
+    27.513083900226757,
+    6.095238095238095,
+    "Unsere Geschichte beginnt in den Vierzigerjahren in New York, bei Kindern mit rheumatischem Fieber."
+   ],
+   [
+    33.60832199546485,
+    6.552380952380952,
+    "Diese Entzündung folgte auf eine Halsentzündung durch Streptokokken und schädigte damals oft das Herz."
+   ],
+   [
+    40.160702947845806,
+    7.314285714285715,
+    "Der Arzt Alvin Coburn vermutete, dass etwas in der Ernährung die Kinder schützt, und kam auf das Eigelb."
+   ],
+   [
+    47.47498866213152,
+    5.028571428571425,
+    "Ohne Eigelb erkrankte in seinen Beobachtungen etwa jedes dritte Kind erneut."
+   ],
+   [
+    52.50356009070295,
+    3.8857142857142897,
+    "Mit Eigelbpulver war es nur eines von fünfundzwanzig."
+   ],
+   [
+    56.389274376417234,
+    4.342857142857145,
+    "Auch bei Meerschweinchen dämpfte Eigelb im Futter eine Gelenkentzündung."
+   ],
+   [
+    60.732131519274375,
+    7.937913832199541,
+    "Streng ausgelost waren diese Versuche noch nicht. Aber sie stellten eine spannende Frage: Welcher Stoff im Eigelb wirkt da?"
+   ]
+  ]
+ },
+ {
+  "id": "p2",
+  "v0": 68.82004535147392,
+  "v1": 107.73326530612243,
+  "st": [
+   [
+    69.42004535147392,
+    4.266666666666667,
+    "Die Spur nahmen Chemiker eines amerikanischen Pharmakonzerns auf."
+   ],
+   [
+    73.68671201814058,
+    7.009523809523809,
+    "Sie suchten den Stoff im Eigelb, in Sojalecithin und in Erdnussmehl, und fanden ihn überall."
+   ],
+   [
+    80.6962358276644,
+    7.61904761904762,
+    "1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA."
+   ],
+   [
+    88.31528344671202,
+    8.76190476190476,
+    "Der Name klingt kompliziert, das Molekül ist einfach: eine Fettsäure, wie sie auch in Palmöl steckt, verbunden mit einem kleinen Baustein."
+   ],
+   [
+    97.07718820861678,
+    5.0285714285714285,
+    "Das Besondere: Dein Körper bildet PEA selbst, in vielen Geweben."
+   ],
+   [
+    102.1057596371882,
+    5.477505668934242,
+    "Und bei Meerschweinchen wirkte der reine Stoff gegen die Gelenkentzündung, genau wie das Eigelb."
+   ]
+  ]
+ },
+ {
+  "id": "p3",
+  "v0": 107.73326530612243,
+  "v1": 153.49825396825395,
+  "st": [
+   [
+    108.33326530612243,
+    7.5278911564625846,
+    "In der Tschechoslowakei wurde aus PEA um 1970 eine Tablette, gegen Grippe und Erkältung."
+   ],
+   [
+    115.86115646258501,
+    5.866666666666668,
+    "Getestet wurde sie sorgfältig, doppelblind, an Fabrikarbeitern und an jungen Soldaten."
+   ],
+   [
+    121.72782312925168,
+    6.476190476190473,
+    "Mit PEA bekamen deutlich weniger einen Atemwegsinfekt, in einem Winter nur etwa halb so viele."
+   ],
+   [
+    128.20401360544216,
+    4.571428571428573,
+    "Eine neuere kleine Studie konnte diesen Schutz allerdings nicht klar bestätigen."
+   ],
+   [
+    132.77544217687074,
+    5.257142857142856,
+    "Trotzdem verschwand die Tablette damals vom Markt. Warum, ist nicht genau überliefert."
+   ],
+   [
+    138.03258503401358,
+    7.238095238095237,
+    "Vermutlich lag es auch daran, dass niemand wusste, wie PEA wirkt. Die Forschung schlief für viele Jahre ein."
+   ],
+   [
+    145.27068027210882,
+    8.07757369614513,
+    "Tipp für dich: Gegen Grippe sind Impfung und Schonung die bewährten Mittel. Ob PEA dazu passt, besprich mit Arzt oder Ärztin."
+   ]
+  ]
+ },
+ {
+  "id": "p4",
+  "v0": 153.49825396825395,
+  "v1": 195.57419501133785,
+  "st": [
+   [
+    154.09825396825394,
+    10.647641723356008,
+    "Anfang der Neunziger weckte eine berühmte Forscherin PEA wieder auf: Rita Levi-Montalcini, Nobelpreis für die Entdeckung des Nervenwachstumsfaktors."
+   ],
+   [
+    164.74589569160995,
+    7.238095238095239,
+    "Ihr Team untersuchte Mastzellen. Das sind Wächterzellen im Gewebe, die bei Reizung Entzündungsstoffe ausschütten."
+   ],
+   [
+    171.9839909297052,
+    7.390476190476189,
+    "Die Idee: Wo Gewebe verletzt wird, bildet der Körper selbst Stoffe wie PEA, die diese Wächter beruhigen."
+   ],
+   [
+    179.37446712018138,
+    3.885714285714286,
+    "Eine körpereigene Entzündungsbremse, direkt vor Ort."
+   ],
+   [
+    183.26018140589565,
+    6.400000000000006,
+    "Eine Weile dachte man sogar, PEA docke an dieselben Rezeptoren an wie Wirkstoffe aus Hanf."
+   ],
+   [
+    189.66018140589568,
+    5.764013605442173,
+    "Das ließ sich nicht bestätigen. Aber die Idee der Entzündungsbremse gab der Forschung neuen Schwung."
+   ]
+  ]
+ },
+ {
+  "id": "p5",
+  "v0": 195.57419501133785,
+  "v1": 238.05589569160995,
+  "st": [
+   [
+    196.17419501133784,
+    9.6,
+    "2005 fand eine Gruppe in Kalifornien einen Schalter: PEA aktiviert einen Rezeptor im Zellkern, der Entzündung drosselt."
+   ],
+   [
+    205.77419501133784,
+    4.038095238095238,
+    "Mäuse ohne diesen Schalter sprachen auf PEA nicht mehr an."
+   ],
+   [
+    209.8122902494331,
+    6.095238095238093,
+    "Außerdem ist PEA ein Verwandter von Anandamid, einem körpereigenen Botenstoff."
+   ],
+   [
+    215.90752834467116,
+    3.8857142857142897,
+    "Sein Name kommt vom Sanskrit-Wort für Glückseligkeit."
+   ],
+   [
+    219.79324263038546,
+    11.352380952380948,
+    "Beide werden von denselben Enzymen abgebaut, und PEA kann den Abbau von Anandamid bremsen. Man nennt das den Entourage-Effekt, den Effekt des Gefolges."
+   ],
+   [
+    231.1456235827664,
+    6.760272108843537,
+    "Das alles stammt aus Zell- und Tierversuchen. Wie genau PEA im Menschen wirkt, erforschen Wissenschaftler noch."
+   ]
+  ]
+ },
+ {
+  "id": "p6",
+  "v0": 238.05589569160995,
+  "v1": 294.1923809523809,
+  "st": [
+   [
+    238.65589569160994,
+    6.933333333333334,
+    "Heute gibt es PEA als Kapseln, oft sehr fein gemahlen, damit der Körper mehr davon aufnehmen kann."
+   ],
+   [
+    245.58922902494328,
+    5.104761904761904,
+    "In Deutschland wird es meist als Nahrungsergänzung verkauft, nicht als Arzneimittel."
+   ],
+   [
+    250.6939909297052,
+    5.104761904761904,
+    "Untersucht wird es vor allem bei chronischen Schmerzen, zum Beispiel bei Nervenschmerzen."
+   ],
+   [
+    255.79875283446708,
+    9.219047619047618,
+    "Eine unabhängige Auswertung von elf doppelblinden Studien fand weniger Schmerz, im Mittel gut eineinhalb Punkte auf einer Skala bis zehn."
+   ],
+   [
+    265.0178004535147,
+    5.409523809523808,
+    "Die Studien waren allerdings klein, und viele nutzten Präparate desselben Herstellers."
+   ],
+   [
+    270.4273242630385,
+    2.9714285714285715,
+    "Nicht jede fand einen Unterschied zu Placebo."
+   ],
+   [
+    273.3987528344671,
+    5.5619047619047635,
+    "Gut verträglich war PEA in den Studien, schwere Nebenwirkungen traten nicht auf."
+   ],
+   [
+    278.96065759637185,
+    5.48571428571428,
+    "Offen ist, wie es bei langer Einnahme aussieht, und für Schwangere fehlen Daten."
+   ],
+   [
+    284.4463718820861,
+    9.59600907029479,
+    "Tipp für dich: Wenn du PEA gegen Schmerzen ausprobieren möchtest, sprich vorher mit Arzt oder Ärztin, und setz verordnete Mittel nicht eigenmächtig ab."
+   ]
+  ]
+ },
+ {
+  "id": "p7",
+  "v0": 294.1923809523809,
+  "v1": 328.3704535147392,
+  "st": [
+   [
+    294.79238095238094,
+    7.771428571428571,
+    "PEA hat eine erstaunliche Reise hinter sich: vom Eigelb über eine Grippetablette bis in die Schmerzforschung."
+   ],
+   [
+    302.5638095238095,
+    4.038095238095239,
+    "Dein Körper bildet es selbst, als eine Art Entzündungsbremse."
+   ],
+   [
+    306.60190476190473,
+    2.9714285714285698,
+    "Bei Schmerzen sind die ersten Studien ermutigend."
+   ],
+   [
+    309.5733333333333,
+    6.095238095238097,
+    "Jetzt braucht es große, unabhängige Studien. Vielleicht schreiben sie das nächste Kapitel dieser Geschichte."
+   ],
+   [
+    315.6685714285714,
+    1.980952380952381,
+    "Die Quellen stehen in der Beschreibung."
+   ],
+   [
+    317.64952380952377,
+    7.970929705215418,
+    "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
+   ]
+  ]
+ }
+]

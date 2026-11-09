@@ -1,0 +1,308 @@
+1
+00:00:01,000 --> 00:00:04,967
+PEA: ein Stoff, den dein Körper selbst herstellt,
+
+2
+00:00:04,817 --> 00:00:08,083
+und der zuerst im Eigelb entdeckt wurde.
+
+3
+00:00:07,933 --> 00:00:13,264
+Seine Geschichte ist eine echte Entdeckungsreise, über fast achtzig Jahre.
+
+4
+00:00:13,114 --> 00:00:20,771
+Du erfährst, wie ein Arzt auf das Eigelb kam, wie Chemiker den Stoff fanden, warum es eine Grippetablette gab,
+
+5
+00:00:20,621 --> 00:00:26,913
+was eine Nobelpreisträgerin vermutete, wie PEA wirken könnte und was Studien heute zeigen.
+
+6
+00:00:27,513 --> 00:00:31,457
+Unsere Geschichte beginnt in den Vierzigerjahren in New York,
+
+7
+00:00:31,307 --> 00:00:33,758
+bei Kindern mit rheumatischem Fieber.
+
+8
+00:00:33,608 --> 00:00:40,311
+Diese Entzündung folgte auf eine Halsentzündung durch Streptokokken und schädigte damals oft das Herz.
+
+9
+00:00:40,161 --> 00:00:42,583
+Der Arzt Alvin Coburn vermutete,
+
+10
+00:00:42,433 --> 00:00:47,625
+dass etwas in der Ernährung die Kinder schützt, und kam auf das Eigelb.
+
+11
+00:00:47,475 --> 00:00:52,654
+Ohne Eigelb erkrankte in seinen Beobachtungen etwa jedes dritte Kind erneut.
+
+12
+00:00:52,504 --> 00:00:56,539
+Mit Eigelbpulver war es nur eines von fünfundzwanzig.
+
+13
+00:00:56,389 --> 00:01:00,882
+Auch bei Meerschweinchen dämpfte Eigelb im Futter eine Gelenkentzündung.
+
+14
+00:01:00,732 --> 00:01:08,820
+Streng ausgelost waren diese Versuche noch nicht. Aber sie stellten eine spannende Frage: Welcher Stoff im Eigelb wirkt da?
+
+15
+00:01:09,420 --> 00:01:13,837
+Die Spur nahmen Chemiker eines amerikanischen Pharmakonzerns auf.
+
+16
+00:01:13,687 --> 00:01:16,302
+Sie suchten den Stoff im Eigelb,
+
+17
+00:01:16,152 --> 00:01:20,846
+in Sojalecithin und in Erdnussmehl, und fanden ihn überall.
+
+18
+00:01:20,696 --> 00:01:28,465
+1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA.
+
+19
+00:01:28,315 --> 00:01:32,878
+Der Name klingt kompliziert, das Molekül ist einfach: eine Fettsäure,
+
+20
+00:01:32,728 --> 00:01:37,227
+wie sie auch in Palmöl steckt, verbunden mit einem kleinen Baustein.
+
+21
+00:01:37,077 --> 00:01:42,256
+Das Besondere: Dein Körper bildet PEA selbst, in vielen Geweben.
+
+22
+00:01:42,106 --> 00:01:46,522
+Und bei Meerschweinchen wirkte der reine Stoff gegen die Gelenkentzündung,
+
+23
+00:01:46,372 --> 00:01:47,733
+genau wie das Eigelb.
+
+24
+00:01:48,333 --> 00:01:53,675
+In der Tschechoslowakei wurde aus PEA um 1970 eine Tablette,
+
+25
+00:01:53,525 --> 00:01:56,011
+gegen Grippe und Erkältung.
+
+26
+00:01:55,861 --> 00:01:58,979
+Getestet wurde sie sorgfältig, doppelblind,
+
+27
+00:01:58,829 --> 00:02:01,878
+an Fabrikarbeitern und an jungen Soldaten.
+
+28
+00:02:01,728 --> 00:02:05,638
+Mit PEA bekamen deutlich weniger einen Atemwegsinfekt,
+
+29
+00:02:05,488 --> 00:02:08,354
+in einem Winter nur etwa halb so viele.
+
+30
+00:02:08,204 --> 00:02:12,925
+Eine neuere kleine Studie konnte diesen Schutz allerdings nicht klar bestätigen.
+
+31
+00:02:12,775 --> 00:02:16,451
+Trotzdem verschwand die Tablette damals vom Markt. Warum,
+
+32
+00:02:16,301 --> 00:02:18,183
+ist nicht genau überliefert.
+
+33
+00:02:18,033 --> 00:02:21,565
+Vermutlich lag es auch daran, dass niemand wusste,
+
+34
+00:02:21,415 --> 00:02:25,421
+wie PEA wirkt. Die Forschung schlief für viele Jahre ein.
+
+35
+00:02:25,271 --> 00:02:31,544
+Tipp für dich: Gegen Grippe sind Impfung und Schonung die bewährten Mittel. Ob PEA dazu passt,
+
+36
+00:02:31,394 --> 00:02:33,498
+besprich mit Arzt oder Ärztin.
+
+37
+00:02:34,098 --> 00:02:40,767
+Anfang der Neunziger weckte eine berühmte Forscherin PEA wieder auf: Rita Levi-Montalcini,
+
+38
+00:02:40,617 --> 00:02:44,896
+Nobelpreis für die Entdeckung des Nervenwachstumsfaktors.
+
+39
+00:02:44,746 --> 00:02:49,161
+Ihr Team untersuchte Mastzellen. Das sind Wächterzellen im Gewebe,
+
+40
+00:02:49,011 --> 00:02:52,134
+die bei Reizung Entzündungsstoffe ausschütten.
+
+41
+00:02:51,984 --> 00:02:54,574
+Die Idee: Wo Gewebe verletzt wird,
+
+42
+00:02:54,424 --> 00:02:59,524
+bildet der Körper selbst Stoffe wie PEA, die diese Wächter beruhigen.
+
+43
+00:02:59,374 --> 00:03:03,410
+Eine körpereigene Entzündungsbremse, direkt vor Ort.
+
+44
+00:03:03,260 --> 00:03:05,424
+Eine Weile dachte man sogar,
+
+45
+00:03:05,274 --> 00:03:09,810
+PEA docke an dieselben Rezeptoren an wie Wirkstoffe aus Hanf.
+
+46
+00:03:09,660 --> 00:03:15,574
+Das ließ sich nicht bestätigen. Aber die Idee der Entzündungsbremse gab der Forschung neuen Schwung.
+
+47
+00:03:16,174 --> 00:03:23,972
+2005 fand eine Gruppe in Kalifornien einen Schalter: PEA aktiviert einen Rezeptor im Zellkern,
+
+48
+00:03:23,822 --> 00:03:25,924
+der Entzündung drosselt.
+
+49
+00:03:25,774 --> 00:03:29,962
+Mäuse ohne diesen Schalter sprachen auf PEA nicht mehr an.
+
+50
+00:03:29,812 --> 00:03:36,058
+Außerdem ist PEA ein Verwandter von Anandamid, einem körpereigenen Botenstoff.
+
+51
+00:03:35,908 --> 00:03:39,943
+Sein Name kommt vom Sanskrit-Wort für Glückseligkeit.
+
+52
+00:03:39,793 --> 00:03:43,273
+Beide werden von denselben Enzymen abgebaut,
+
+53
+00:03:43,123 --> 00:03:51,296
+und PEA kann den Abbau von Anandamid bremsen. Man nennt das den Entourage-Effekt, den Effekt des Gefolges.
+
+54
+00:03:51,146 --> 00:03:56,089
+Das alles stammt aus Zell- und Tierversuchen. Wie genau PEA im Menschen wirkt,
+
+55
+00:03:55,939 --> 00:03:58,056
+erforschen Wissenschaftler noch.
+
+56
+00:03:58,656 --> 00:04:02,666
+Heute gibt es PEA als Kapseln, oft sehr fein gemahlen,
+
+57
+00:04:02,516 --> 00:04:05,739
+damit der Körper mehr davon aufnehmen kann.
+
+58
+00:04:05,589 --> 00:04:10,844
+In Deutschland wird es meist als Nahrungsergänzung verkauft, nicht als Arzneimittel.
+
+59
+00:04:10,694 --> 00:04:14,034
+Untersucht wird es vor allem bei chronischen Schmerzen,
+
+60
+00:04:13,884 --> 00:04:15,949
+zum Beispiel bei Nervenschmerzen.
+
+61
+00:04:15,799 --> 00:04:21,304
+Eine unabhängige Auswertung von elf doppelblinden Studien fand weniger Schmerz,
+
+62
+00:04:21,154 --> 00:04:25,168
+im Mittel gut eineinhalb Punkte auf einer Skala bis zehn.
+
+63
+00:04:25,018 --> 00:04:27,395
+Die Studien waren allerdings klein,
+
+64
+00:04:27,245 --> 00:04:30,577
+und viele nutzten Präparate desselben Herstellers.
+
+65
+00:04:30,427 --> 00:04:33,549
+Nicht jede fand einen Unterschied zu Placebo.
+
+66
+00:04:33,399 --> 00:04:39,111
+Gut verträglich war PEA in den Studien, schwere Nebenwirkungen traten nicht auf.
+
+67
+00:04:38,961 --> 00:04:44,596
+Offen ist, wie es bei langer Einnahme aussieht, und für Schwangere fehlen Daten.
+
+68
+00:04:44,446 --> 00:04:48,755
+Tipp für dich: Wenn du PEA gegen Schmerzen ausprobieren möchtest,
+
+69
+00:04:48,605 --> 00:04:54,192
+sprich vorher mit Arzt oder Ärztin, und setz verordnete Mittel nicht eigenmächtig ab.
+
+70
+00:04:54,792 --> 00:05:02,714
+PEA hat eine erstaunliche Reise hinter sich: vom Eigelb über eine Grippetablette bis in die Schmerzforschung.
+
+71
+00:05:02,564 --> 00:05:06,752
+Dein Körper bildet es selbst, als eine Art Entzündungsbremse.
+
+72
+00:05:06,602 --> 00:05:09,723
+Bei Schmerzen sind die ersten Studien ermutigend.
+
+73
+00:05:09,573 --> 00:05:11,034
+Jetzt braucht es große,
+
+74
+00:05:10,884 --> 00:05:15,819
+unabhängige Studien. Vielleicht schreiben sie das nächste Kapitel dieser Geschichte.
+
+75
+00:05:15,669 --> 00:05:17,800
+Die Quellen stehen in der Beschreibung.
+
+76
+00:05:17,650 --> 00:05:23,210
+Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
+
+77
+00:05:23,060 --> 00:05:25,770
+aber nicht ersetzen. Bis zum nächsten Video!
+
