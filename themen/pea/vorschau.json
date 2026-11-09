@@ -1,0 +1,14 @@
+{
+ "titel": "PEA · Erklärvideo in drei Stilen",
+ "aufgabe": "Drei Stile, gleicher Ton (5:28). Je Video „passt“ oder „ändern“ mit Notiz. Ganz unten zur Info: die Aussprache-Proben.",
+ "videos": [
+  {"datei": "vorschau_I.mp4", "titel": "I  3D-Trickfilm", "stand": "09.11., 22:15", "pruefen": true, "poster_bei": 50,
+   "notiz": "Schulprojekt-Ton (09.11.): Entdeckungsgeschichte vom Eigelb (1940er) über die Grippetablette (1970er) und die Nobelpreisträgerin bis zur Schmerzforschung heute. 5:28, 696 Wörter, 47 Bilder."},
+  {"datei": "vorschau_G.mp4", "titel": "G  Aquarell und Tusche", "stand": "09.11., 22:15", "pruefen": true, "poster_bei": 50,
+   "notiz": "Gleicher Text und Ton wie I, nur die Bilder wechseln."},
+  {"datei": "vorschau_D.mp4", "titel": "D  Knetfiguren", "stand": "09.11., 22:15", "pruefen": true, "poster_bei": 50,
+   "notiz": "Gleicher Text und Ton wie I. Ganze Figuren, glatte Haut, keine Hautnahaufnahmen."},
+  {"datei": "aussprache_proben.mp4", "titel": "Aussprache-Proben PEA", "stand": "09.11., 22:20", "pruefen": false, "poster_bei": 1,
+   "notiz": "Im Video steht Probe 2: „Pe-E-A“ als Buchstaben und „Palmito-yl-ethanol-amid“ in vier Teilen, wie in deiner Bildschirmaufnahme. Andere Wahl? Einfach in der Hörprobe beim Satz mit 1957 „nochmal“ tippen und die Nummer dazuschreiben."}
+ ]
+}
