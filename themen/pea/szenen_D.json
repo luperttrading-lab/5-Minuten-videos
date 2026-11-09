@@ -4,7 +4,7 @@
  "model": "eleven_v4",
  "tempo": 1.05,
  "aussprache": {
-  "Palmitoylethanolamid": "Palmito-yl-ethanol-amid",
+  "Palmitoylethanolamid": "Palmitoül-ethanolamid",
   "PEA": "Pe-E-A"
  },
  "titel": "PEA: Vom Eigelb zur Schmerzforschung",
@@ -126,7 +126,10 @@
    "sentences": [
     "Die Spur nahmen Chemiker eines amerikanischen Pharmakonzerns auf.",
     "Sie suchten den Stoff im Eigelb, in Sojalecithin und in Erdnussmehl, und fanden ihn überall.",
-    "1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA.",
+    {
+     "t": "1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA.",
+     "say": "1957 stellten sie ihn vor: Palmitoylethanolamid, kurz Pe E A."
+    },
     "Der Name klingt kompliziert, das Molekül ist einfach: eine Fettsäure, wie sie auch in Palmöl steckt, verbunden mit einem kleinen Baustein.",
     "Das Besondere: Dein Körper bildet PEA selbst, in vielen Geweben.",
     "Und bei Meerschweinchen wirkte der reine Stoff gegen die Gelenkentzündung, genau wie das Eigelb."

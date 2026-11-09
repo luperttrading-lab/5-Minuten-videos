@@ -62,7 +62,7 @@ SZENEN = [
  {'id': 'p2', 'kicker': '1957', 'headline': 'Der Stoff wird gefunden',
   'sentences': ['Die Spur nahmen Chemiker eines amerikanischen Pharmakonzerns auf.',
                 'Sie suchten den Stoff im Eigelb, in Sojalecithin und in Erdnussmehl, und fanden ihn überall.',
-                '1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA.',
+                S('1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA.', '1957 stellten sie ihn vor: Palmitoylethanolamid, kurz Pe E A.'),  # Aussprache-Wahl 9 (Nutzer 10.11.)
                 'Der Name klingt kompliziert, das Molekül ist einfach: eine Fettsäure, wie sie auch in Palmöl steckt, verbunden mit einem kleinen Baustein.',
                 'Das Besondere: Dein Körper bildet PEA selbst, in vielen Geweben.',
                 'Und bei Meerschweinchen wirkte der reine Stoff gegen die Gelenkentzündung, genau wie das Eigelb.'],
@@ -143,7 +143,7 @@ def bauen(stil):
             s['shots'] = [dict({'bild': f'bilder/{stil}/{b}.jpg'}, **({'at': at} if at is not None else {})) for b, at in liste]
         szenen.append(s)
     return {'tts': 'elevenlabs', 'voice_id': 'NBqeXKdZHweef6y0B67V', 'model': 'eleven_v4', 'tempo': 1.05,
-            'aussprache': {'Palmitoylethanolamid': 'Palmito-yl-ethanol-amid', 'PEA': 'Pe-E-A'},
+            'aussprache': {'Palmitoylethanolamid': 'Palmitoül-ethanolamid', 'PEA': 'Pe-E-A'},
             'titel': 'PEA: Vom Eigelb zur Schmerzforschung', 'stil': stil,
             'untertitel': 'Ein Erklärvideo über Palmitoylethanolamid: wie es entdeckt wurde, wie es wirken könnte und was Studien heute zeigen.',
             'fuss': 'Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.',
