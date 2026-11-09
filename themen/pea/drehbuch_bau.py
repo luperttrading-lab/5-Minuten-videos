@@ -60,7 +60,7 @@ SZENEN = [
   'quellen': ['coburn1960', 'coburn1954', 'keppel2013'],
   'bilder': [('p1a', None), ('p1b', 1), ('p1c', 2), ('p1d', 3), ('p1e', 5), ('p1f', 6)]},
  {'id': 'p2', 'kicker': '1957', 'headline': 'Der Stoff wird gefunden',
-  'sentences': ['Die Spur nahmen Chemiker eines amerikanischen Pharmakonzerns auf.',
+  'sentences': [S('Die Spur nahmen Chemiker eines amerikanischen Pharmakonzerns auf.', 'Die Spur, nahmen Chemiker eines amerikanischen Pharmakonzerns auf.'),  # kleine Pause nach „Spur“ (Nutzer 10.11.)
                 'Sie suchten den Stoff im Eigelb, in Sojalecithin und in Erdnussmehl, und fanden ihn überall.',
                 S('1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA.', '1957 stellten sie ihn vor: Palmitoylethanolamid, kurz Pe E A.'),  # Aussprache-Wahl 9 (Nutzer 10.11., 0:42, endgültig)
                 'Der Name klingt kompliziert, das Molekül ist einfach: eine Fettsäure, wie sie auch in Palmöl steckt, verbunden mit einem kleinen Baustein.',

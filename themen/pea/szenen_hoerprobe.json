@@ -127,7 +127,10 @@
    "kicker": "1957",
    "headline": "Der Stoff wird gefunden",
    "sentences": [
-    "Die Spur nahmen Chemiker eines amerikanischen Pharmakonzerns auf.",
+    {
+     "t": "Die Spur nahmen Chemiker eines amerikanischen Pharmakonzerns auf.",
+     "say": "Die Spur, nahmen Chemiker eines amerikanischen Pharmakonzerns auf."
+    },
     "Sie suchten den Stoff im Eigelb, in Sojalecithin und in Erdnussmehl, und fanden ihn überall.",
     {
      "t": "1957 stellten sie ihn vor: Palmitoylethanolamid, kurz PEA.",
