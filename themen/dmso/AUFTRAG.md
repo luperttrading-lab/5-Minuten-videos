@@ -40,3 +40,9 @@ Das Schulprojekt-Format soll neugierig und positiv erzählen. Bei DMSO gibt es a
 6. Vorschau-Seite: 720p, 12 fps, ≤ 16 MB, AAC 128k aus der WAV, „passt“/„ändern“, Hörprobe mit Abnahmekasten, YouTube-Beschreibung mit nummerierten Quellen und Vorschaubild.
 7. Abgabe nach Antwortaufbau der `CLAUDE.md`, Push-Nachricht, ElevenLabs-Zeichen und Bild-Credits nennen.
 8. Nur in `themen/dmso/` arbeiten. Vor jedem Push `git pull --rebase origin main`.
+
+## Nachtrag 10.11.2026 (Ergänzung des Nutzers, aus der Hauptsitzung übermittelt)
+Sinngemäß: „Gerne auch eine positive Darstellung, gegen was es alles wirken soll, aber ohne Heilversprechen. Man soll sich informieren können, gegen was es alles helfen könnte, dazu die Entwicklung und was bei der Selbstanwendung kritisch zu sehen ist.“
+1. **Szene(n) „Wofür DMSO eingesetzt und untersucht wird“:** breite, positive Übersicht; jede Anwendung mit Einordnung in Worten statt Ampel („zugelassen“, „in Leitlinien empfohlen“, „in Studien untersucht“, „Erfahrungsberichte, kaum Studien“, „behauptet, nicht belegt“). Kandidaten: Blasenspülung bei interstitieller Zystitis; Paravasat von Chemotherapie (Anthrazykline, Leitlinien); Lösungsmittel für Idoxuridin bei Herpes zoster; CRPS; Gelenk- und Muskelschmerzen, Sportverletzungen, Sehnenentzündung; Arthrose; Kälteschutz für Zellen; Tiermedizin (Pferde); Amyloidose, Sklerodermie, Hirnödem. Krebs u. Ä.: kurz und neutral „keine Belege beim Menschen“.
+2. **Szene „Selbstanwendung: was kritisch ist“:** Mitnahme anderer Stoffe durch die Haut, Reinheit von Industrie-/Baumarkt-DMSO, Hautreizung und Geruch, Wechselwirkungen, keine Einnahme, Chlordioxid nur als Warnung; Tipp „Sprich mit Arzt oder Ärztin, bevor du …“; keine Dosierungen oder Konzentrationen.
+3. **Länge:** Geschichte bleibt, wird bei Platzmangel gekürzt statt Anwendungen. Ziel etwa 6 Minuten, höchstens etwa 7.
