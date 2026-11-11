@@ -49,7 +49,7 @@ def B(t, at):
 SZENEN = [
  {'id': 'd0', 'layout': 'kacheln', 'kapitel': 'Einleitung', 'kicker': 'Erklärvideo', 'headline': 'DMSO: Vom Lösungsmittel zum Kälteschutz',
   'sentences': [S('DMSO: ein Stoff aus der Papierfabrik, der Zellen beim Einfrieren schützt und einmal als Wundermittel gefeiert wurde.',
-                  'De-Em-Es-O: ein Stoff aus der Papierfabrik, der Zellen beim Einfrieren schützt und einmal als Wundermittel gefeiert wurde.'),  # klang wie „Der MSO“ (Nutzer 11.11.)
+                  'D. M. S. O.: ein Stoff aus der Papierfabrik, der Zellen beim Einfrieren schützt und einmal als Wundermittel gefeiert wurde.'),  # klang wie „Der MSO“ (Nutzer 11.11.)
                 'Was davon bis heute geblieben ist, ist eine spannende Geschichte.',
                 'Du erfährst, wie ein Chemiker den Stoff fand, warum er Zellen vor Kälte schützt, wie es zum großen Hype kam, wofür er zugelassen ist, was Studien zeigen und was bei der Selbstanwendung kritisch ist.'],
   'hervorheben_at': 2,
@@ -132,7 +132,7 @@ SZENEN = [
   'bilder': [('d6a', None), ('d6b', 1), ('d6c', 2), ('d6d', 3), ('d6e', 4), ('d6f', 5), ('d6g', 6), ('d6h', 7)]},
  {'id': 'd7', 'kapitel': 'Fazit', 'kicker': 'Fazit', 'headline': 'Das Wichtigste',
   'sentences': [S('DMSO hat eine erstaunliche Reise hinter sich: vom Lösungsmittel aus der Papierfabrik bis zum Kälteschutz für Stammzellen.',
-                  'De-Em-Es-O hat eine erstaunliche Reise hinter sich: vom Lösungsmittel aus der Papierfabrik bis zum Kälteschutz für Stammzellen.'),  # wie oben
+                  'D. M. S. O. hat eine erstaunliche Reise hinter sich: vom Lösungsmittel aus der Papierfabrik bis zum Kälteschutz für Stammzellen.'),  # wie oben
                 'Zugelassen ist es nur für wenige Anwendungen, etwa für eine chronische Blasenentzündung.',
                 'Für vieles andere sind die Studien klein, widersprüchlich oder fehlen ganz.',
                 'Die Quellen stehen in der Beschreibung.',
@@ -166,8 +166,8 @@ def bauen(stil):
             'scenes': szenen, 'quellen': Q}
 
 
-# Aussprache bis zur Wahl des Nutzers: Fassung 2 (aussprache_wahl/)
-AUSSPRACHE = {'Dimethylsulfoxid': 'Di-methyl-sulf-oxid', 'DMSO': 'De Em Es O'}
+# Aussprache: Wahl des Nutzers 11.11., Fassung 4 (aussprache_wahl/)
+AUSSPRACHE = {'Dimethylsulfoxid': 'Dimethyl-sulfoxid', 'DMSO-': 'D. M. S. O. ', 'DMSO': 'D. M. S. O.'}
 
 if __name__ == '__main__':
     for stil in STILE:
