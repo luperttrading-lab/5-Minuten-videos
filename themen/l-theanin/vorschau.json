@@ -1,14 +1,14 @@
 {
  "titel": "L-Theanin · Erklärvideo (Aquarell)",
- "aufgabe": "Erste Fassung ansehen: „✓ passt“ oder „ändern“ mit Notiz. Das Vorschaubild und die YouTube-Beschreibung stehen darunter.",
+ "aufgabe": "Fertig: Endfassung vom Nutzer am 11.11. freigegeben. Vorschaubild und Beschreibung unten.",
  "videos": [
   {
    "datei": "vorschau_G.mp4",
    "titel": "G  Aquarell und Tusche · erste Fassung",
    "stand": "11.11., 19:40",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 50,
-   "notiz": "6:44, 903 Wörter, 62 Bilder. Aussprache vorläufig: „L-Theanin“ wie geschrieben, japanische Wörter eingedeutscht (Udschi, Jadschiro). Dosistabelle und Zeitpunkte aus deiner Infografik bewusst nicht im Video."
+   "notiz": "Endfassung. 6:44, 903 Wörter, 62 Bilder. Aussprache nach deiner Wahl (Fassungen 1 und 6)."
   }
  ]
 }

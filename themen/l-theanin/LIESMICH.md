@@ -17,6 +17,8 @@ Auftrag: `AUFTRAG.md`. Vorbild `themen/dmso/`.
 - Hörprobe: `szenen_hoerprobe.json` (Aussprache eingesetzt), `abnahme.json` (12 Stellen mit Fachwörtern und Namen).
 - Ton geprüft: `betonung.py` 0 Auffälligkeiten; Spracherkennung (faster-whisper small, lokal) ohne Textfehler, hört
   „Theanin“ im Fließtext als „Tianin“ (deshalb die Auswahl-Seite).
+- **Endfassung vom Nutzer am 11.11. freigegeben** („Video fertig machen“); `abnahme.json` auf erledigt, Vorschau auf „zur Info“,
+  480p erzeugt (nicht eingecheckt).
 - Länge 6:44, 903 Wörter. Kosten: ElevenLabs 2.637 Zeichen berechnet + 225 für Proben; Bilder 1.138,5 Credits
   (1.046,0 + 92,5 für die vier Ersatzbilder) + Thumbnail 5,7.
 - Aussprache-Wahl: https://claude.ai/artifact/WDfh22zFteGxPZ4ZkpvUDA · Hörprobe: https://claude.ai/artifact/4ENxj1UdQcgmf3CyzaJttz ·
