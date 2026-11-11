@@ -3,7 +3,12 @@
  "voice_id": "NBqeXKdZHweef6y0B67V",
  "model": "eleven_v4",
  "tempo": 1.05,
- "aussprache": {},
+ "aussprache": {
+  "Uji": "Udschi",
+  "Yajiro": "Jadschiro",
+  "Gyokuro": "Gjokuro",
+  "Matcha": "Mattscha"
+ },
  "titel": "L-Theanin: Was der Stoff aus dem Tee kann",
  "stil": "G",
  "untertitel": "Ein Erklärvideo über L-Theanin: wie es im grünen Tee entdeckt wurde, wie es wirken soll, was Studien zeigen, was Behörden sagen und was bei der Selbstanwendung kritisch ist.",
@@ -98,6 +103,34 @@
    "shots": [
     {
      "bild": "bilder/G/t1a.jpg"
+    },
+    {
+     "bild": "bilder/G/t1b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/t1c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/t1d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/t1e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/t1f.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/t1g.jpg",
+     "at": 6
+    },
+    {
+     "bild": "bilder/G/t1h.jpg",
+     "at": 7
     }
    ]
   },
@@ -140,6 +173,26 @@
    "shots": [
     {
      "bild": "bilder/G/t2a.jpg"
+    },
+    {
+     "bild": "bilder/G/t2b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/t2d.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/t2e.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/t2f.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/t2g.jpg",
+     "at": 5
     }
    ]
   },
@@ -185,6 +238,30 @@
    "shots": [
     {
      "bild": "bilder/G/t3a.jpg"
+    },
+    {
+     "bild": "bilder/G/t3b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/t3c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/t3e.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/t3f.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/t3g.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/t3h.jpg",
+     "at": 6
     }
    ]
   },
@@ -232,6 +309,30 @@
    "shots": [
     {
      "bild": "bilder/G/t4a.jpg"
+    },
+    {
+     "bild": "bilder/G/t4b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/t4c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/t4d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/t4e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/t4f.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/t4g.jpg",
+     "at": 6
     }
    ]
   },
@@ -285,6 +386,38 @@
    "shots": [
     {
      "bild": "bilder/G/t5a.jpg"
+    },
+    {
+     "bild": "bilder/G/t5b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/t5c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/t5d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/t5e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/t5f.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/t5g.jpg",
+     "at": 6
+    },
+    {
+     "bild": "bilder/G/t5h.jpg",
+     "at": 7
+    },
+    {
+     "bild": "bilder/G/t5i.jpg",
+     "at": 8
     }
    ]
   },
@@ -334,6 +467,30 @@
    "shots": [
     {
      "bild": "bilder/G/t6a.jpg"
+    },
+    {
+     "bild": "bilder/G/t6b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/t6c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/t6d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/t6e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/t6f.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/t6g.jpg",
+     "at": 6
     }
    ]
   },
@@ -383,6 +540,34 @@
    "shots": [
     {
      "bild": "bilder/G/t7a.jpg"
+    },
+    {
+     "bild": "bilder/G/t7b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/t7c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/t7d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/t7e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/t7f.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/t7g.jpg",
+     "at": 6
+    },
+    {
+     "bild": "bilder/G/t7h.jpg",
+     "at": 7
     }
    ]
   },
@@ -419,6 +604,18 @@
    "shots": [
     {
      "bild": "bilder/G/t8a.jpg"
+    },
+    {
+     "bild": "bilder/G/t8b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/t8c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/t8d.jpg",
+     "at": 4
     }
    ]
   }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L-Theanin · Aussprache wählen</title>
+<style>
+  :root { --grund:#f4f1ec; --karte:#fff; --tinte:#1f2430; --grau:#646b75; --linie:#ddd6cc; --akzent:#324e7a; --akzent-text:#fff; --gut:#2f7d50; }
+  @media (prefers-color-scheme: dark) { :root { --grund:#15181d; --karte:#1e232a; --tinte:#e8eaee; --grau:#9aa3ad; --linie:#2f3640; --akzent:#8fb0e3; --akzent-text:#10151c; --gut:#6fcf97; color-scheme: dark; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--grund); color:var(--tinte); font:17px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width:640px; margin:0 auto; padding:24px 16px 48px; display:grid; gap:14px; }
+  h1 { margin:0; font:700 28px/1.2 Georgia,serif; }
+  .hinweis { margin:0; color:var(--grau); }
+  .karte { background:var(--karte); border:1px solid var(--linie); border-radius:14px; padding:14px; display:grid; gap:10px; }
+  .karte.gewaehlt { border:2px solid var(--gut); }
+  .kopf { display:flex; align-items:baseline; gap:10px; }
+  .nr { font:700 26px/1 Georgia,serif; color:var(--akzent); min-width:1.2em; }
+  .wort { font-weight:600; }
+  .klein { color:var(--grau); font-size:15px; }
+  audio { width:100%; }
+  button { font:inherit; font-weight:600; padding:12px 16px; border-radius:10px; border:1px solid var(--akzent); background:var(--akzent); color:var(--akzent-text); cursor:pointer; min-height:48px; }
+  button.zweit { background:transparent; color:var(--akzent); }
+  textarea { font:inherit; width:100%; padding:10px; border-radius:10px; border:1px solid var(--linie); background:var(--karte); color:var(--tinte); }
+  .melde { min-height:1.5em; color:var(--gut); font-weight:600; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Aussprache „L-Theanin“ und japanische Wörter</h1>
+  <p class="hinweis">Zwei Entscheidungen: 1–4 für „L-Theanin“, 5–6 für die japanischen Wörter. Abspielen, dann bei deiner Wahl „Diese nehmen“ tippen (einmal je Gruppe). Die Wahl geht direkt an Claude. Bis dahin spricht das Video Fassung 1 und 6.</p>
+  <div id="liste"></div>
+  <section class="karte">
+    <div class="wort">Keine passt?</div>
+    <textarea id="frei" rows="2" placeholder="Wie soll es klingen? (z. B. Silben und Betonung)"></textarea>
+    <button type="button" class="zweit" id="frei-senden">An Claude</button>
+  </section>
+  <p class="melde" id="melde" role="status" aria-live="polite"></p>
+</main>
+<script>
+var F = [
+  ["1", "L-Theanin", "so wie geschrieben (vorläufig im Video)", "f1"],
+  ["2", "El-Te-anihn", "„Te-a“ zusammengezogen", "f2"],
+  ["3", "El Teh-a-nihn", "drei Silben, langes „ih“ am Ende", "f3"],
+  ["4", "L. Theanien", "Betonung auf „-ien“", "f4"],
+  ["5", "Uji, Yajiro Sakato, Gyokuro, Matcha", "japanische Wörter wie geschrieben", "j1"],
+  ["6", "Udschi, Jadschiro Sakato, Gjokuro, Mattscha", "japanische Wörter eingedeutscht (vorläufig im Video)", "j2"]
+];
+var liste = document.getElementById("liste"), melde = document.getElementById("melde");
+F.forEach(function (f) {
+  var k = document.createElement("section"); k.className = "karte"; k.id = "f" + f[0];
+  k.innerHTML = '<div class="kopf"><span class="nr">' + f[0] + '</span><span><span class="wort">' + f[1] + '</span><br><span class="klein">' + f[2] + '</span></span></div>' +
+    '<audio controls preload="metadata" src="audio/' + f[3] + '.mp3"></audio>' +
+    '<button type="button" data-nr="' + f[0] + '">Diese nehmen</button>';
+  liste.appendChild(k);
+  liste.appendChild(document.createElement("div")).style.height = "12px";
+});
+var db = null, kom = null;
+if (window.claude) {
+  claude.use("db").then(function (d) { db = d; if (!d) return;
+    d.collection("aussprache_wahl").onSnapshot(function (snap) { (snap.docs || []).forEach(function (x) { var v = x.data ? x.data() : x; if (v && v.nr) markiere(v.nr); }); }, function () {});
+  }).catch(function () {});
+  claude.use("comments").then(function (c) { if (c && c.canSendToClaude) kom = c; }).catch(function () {});
+}
+function markiere(nr) {
+  var g = Number(nr) <= 4; document.querySelectorAll(".karte[id]").forEach(function (k) { var n = Number(k.id.slice(1)); if ((n <= 4) === g) k.classList.toggle("gewaehlt", k.id === "f" + nr); });
+}
+function sende(text, el) {
+  if (!kom) { melde.textContent = "Gespeichert. Senden an Claude geht hier gerade nicht, schreib die Nummer bitte im Chat."; return; }
+  kom.anchorFor(el).then(function (a) { return kom.sendToClaude({ anchor: a, text: text }); })
+    .then(function () { melde.textContent = "Gesendet. Claude spricht den Satz jetzt neu."; })
+    .catch(function () { melde.textContent = "Senden fehlgeschlagen, schreib die Nummer bitte im Chat."; });
+}
+liste.addEventListener("click", function (e) {
+  var b = e.target.closest("button[data-nr]"); if (!b) return;
+  var nr = b.getAttribute("data-nr"), f = F.filter(function (x) { return x[0] === nr; })[0];
+  markiere(nr);
+  if (db) db.collection("aussprache_wahl").doc(Number(nr) <= 4 ? "theanin" : "japanisch").set({ nr: nr, wort: f[1], zeit: new Date().toISOString() }).catch(function () {});
+  sende("Aussprache-Wahl L-Theanin: Fassung " + nr + " („" + f[1] + "“)", b.closest(".karte"));
+});
+document.getElementById("frei-senden").addEventListener("click", function () {
+  var t = document.getElementById("frei").value.trim(); if (!t) { melde.textContent = "Bitte erst etwas eintragen."; return; }
+  if (db) db.collection("aussprache_wahl").doc("frei").set({ notiz: t, zeit: new Date().toISOString() }).catch(function () {});
+  sende("Aussprache L-Theanin, keine passt: " + t, this.closest(".karte"));
+});
+</script>
+</body>
+</html>

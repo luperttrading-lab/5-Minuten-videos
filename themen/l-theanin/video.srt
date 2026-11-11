@@ -1,0 +1,352 @@
+1
+00:00:01,000 --> 00:00:07,070
+L-Theanin: ein Stoff aus grünem Tee, der entspannen soll, ohne müde zu machen.
+
+2
+00:00:06,920 --> 00:00:11,031
+Was davon belegt ist und was nur Werbung, schauen wir uns an.
+
+3
+00:00:10,881 --> 00:00:17,016
+Du erfährst, wie ein japanischer Forscher den Stoff fand, wie er aus dem Blatt in die Kapsel kam,
+
+4
+00:00:16,866 --> 00:00:24,172
+was er im Gehirn tun soll, was Studien zeigen, was Behörden dazu sagen und was bei der Selbstanwendung kritisch ist.
+
+5
+00:00:24,772 --> 00:00:30,027
+Unsere Geschichte beginnt in Japan, in der Teestadt Uji bei Kyoto.
+
+6
+00:00:29,877 --> 00:00:34,979
+Dort untersuchte der Forscher Yajiro Sakato, was in grünem Tee steckt.
+
+7
+00:00:34,829 --> 00:00:40,312
+1949 fand er einen neuen Stoff und nannte ihn Theanin.
+
+8
+00:00:40,162 --> 00:00:44,503
+Besonders viel davon steckte im edlen Schattentee Gyokuro.
+
+9
+00:00:44,353 --> 00:00:46,704
+Theanin ist eine Aminosäure,
+
+10
+00:00:46,554 --> 00:00:51,970
+aber kein Baustein von Eiweißen. Es ähnelt dem Botenstoff Glutamat.
+
+11
+00:00:51,820 --> 00:00:56,846
+Die Teepflanze bildet es vor allem in den Wurzeln und schickt es in die jungen Blätter.
+
+12
+00:00:56,696 --> 00:01:01,732
+Außerhalb des Tees ist es selten: Spuren gibt es etwa in einem Pilz,
+
+13
+00:01:01,582 --> 00:01:03,170
+dem Maronenröhrling.
+
+14
+00:01:03,020 --> 00:01:07,529
+Im Tee verstärkt es den herzhaften Geschmack, den man Umami nennt.
+
+15
+00:01:08,129 --> 00:01:11,263
+Werden Teesträucher vor der Ernte beschattet,
+
+16
+00:01:11,113 --> 00:01:15,441
+wie bei Gyokuro und Matcha, enthalten die Blätter mehr Theanin.
+
+17
+00:01:15,291 --> 00:01:19,817
+In einer Tasse Tee stecken grob zehn bis fünfundzwanzig Milligramm,
+
+18
+00:01:19,667 --> 00:01:21,841
+je nachdem, wie lange er zieht.
+
+19
+00:01:21,691 --> 00:01:29,689
+In Japan ist Theanin seit Jahrzehnten als Zusatz für Lebensmittel erlaubt. Heute wird es weltweit als Kapsel verkauft.
+
+20
+00:01:29,539 --> 00:01:36,851
+Studien nutzen meist zweihundert Milligramm auf einmal. Das ist so viel wie in zehn bis zwanzig Tassen Tee.
+
+21
+00:01:36,701 --> 00:01:41,727
+Überraschend: Das Theanin in Kapseln stammt oft gar nicht aus Teeblättern.
+
+22
+00:01:41,577 --> 00:01:46,461
+Der bekannteste Rohstoff entsteht in der Fabrik, mit einem Enzym aus Bakterien.
+
+23
+00:01:47,061 --> 00:01:53,163
+Nach dem Schlucken geht Theanin schnell ins Blut. Nach knapp einer Stunde ist der Höchstwert erreicht,
+
+24
+00:01:53,013 --> 00:01:56,430
+eine Stunde später ist schon die Hälfte wieder abgebaut.
+
+25
+00:01:56,280 --> 00:02:01,535
+Bei Ratten gelangt es ins Gehirn. Beim Menschen wurde das noch nie direkt gemessen.
+
+26
+00:02:01,385 --> 00:02:05,962
+Im Labor besetzt Theanin Andockstellen für den Botenstoff Glutamat,
+
+27
+00:02:05,812 --> 00:02:09,001
+allerdings viel schwächer als Glutamat selbst.
+
+28
+00:02:08,851 --> 00:02:12,273
+Am bekanntesten sind die Alpha-Wellen: Hirnströme,
+
+29
+00:02:12,123 --> 00:02:15,021
+die typisch sind für entspanntes Wachsein.
+
+30
+00:02:14,871 --> 00:02:19,845
+In kleinen Studien zeigten sich nach Theanin in Ruhe mehr Alpha-Wellen,
+
+31
+00:02:19,695 --> 00:02:22,563
+bei Konzentrationsaufgaben aber weniger.
+
+32
+00:02:22,413 --> 00:02:26,036
+Die Studien hatten nur acht bis fünfunddreißig Teilnehmer,
+
+33
+00:02:25,886 --> 00:02:29,268
+und fast alle kamen von Herstellern oder Teekonzernen.
+
+34
+00:02:29,118 --> 00:02:33,994
+Und mehr Alpha-Wellen sind nur ein Messwert. Ob man sich dadurch besser fühlt,
+
+35
+00:02:33,844 --> 00:02:35,024
+zeigen sie nicht.
+
+36
+00:02:35,624 --> 00:02:41,336
+Beworben wird L-Theanin vor allem für Entspannung, Schlaf und Konzentration.
+
+37
+00:02:41,186 --> 00:02:47,964
+Zum Stress hat eine große Auswertung von 2026 einunddreißig Studien zusammengefasst.
+
+38
+00:02:47,814 --> 00:02:56,955
+Ergebnis: Eine einzelne Dosis dämpft akuten Stress ein wenig. Der Effekt ist klein und stützt sich vor allem auf Studien mit Schwächen.
+
+39
+00:02:56,805 --> 00:03:02,229
+Über mehrere Wochen ist das Bild gemischt. Eine kleine Studie fand eine Besserung,
+
+40
+00:03:02,079 --> 00:03:09,755
+eine andere keinen Unterschied zum Scheinpräparat, auch nicht beim Stresshormon Cortisol. Beide bezahlten Hersteller.
+
+41
+00:03:09,605 --> 00:03:16,002
+Zum Schlaf gibt es neunzehn Studien. Im Schnitt empfanden die Teilnehmer ihren Schlaf als etwas besser.
+
+42
+00:03:15,852 --> 00:03:20,878
+Messungen waren aber uneinheitlich, und oft wurden Mischpräparate getestet.
+
+43
+00:03:20,728 --> 00:03:24,347
+Und bei einer Angststörung? In der einzigen guten Studie,
+
+44
+00:03:24,197 --> 00:03:29,155
+mit sechsundvierzig Menschen, half Theanin nicht besser als ein Scheinpräparat.
+
+45
+00:03:29,755 --> 00:03:33,530
+Am besten untersucht ist Theanin zusammen mit Koffein,
+
+46
+00:03:33,380 --> 00:03:35,543
+so wie beide im Tee vorkommen.
+
+47
+00:03:35,393 --> 00:03:41,562
+In vielen kleinen Studien waren die Teilnehmer in den ersten zwei Stunden etwas wacher und aufmerksamer.
+
+48
+00:03:41,412 --> 00:03:43,905
+Viele davon bezahlte ein Teekonzern,
+
+49
+00:03:43,755 --> 00:03:47,353
+und vermutlich leistet das Koffein den größeren Teil.
+
+50
+00:03:47,203 --> 00:03:51,431
+Theanin allein machte die Reaktion in manchen Tests etwas schneller,
+
+51
+00:03:51,281 --> 00:03:52,991
+in anderen aber langsamer.
+
+52
+00:03:52,841 --> 00:04:00,811
+Oft heißt es, Theanin nehme dem Koffein die Nebenwirkungen. In einer Studie dämpfte es aber nur den Anstieg des Blutdrucks,
+
+53
+00:04:00,661 --> 00:04:02,210
+nicht die Zittrigkeit.
+
+54
+00:04:02,060 --> 00:04:07,086
+Bei ADHS gibt es nur winzige Studien, eine davon mit fünf Kindern.
+
+55
+00:04:06,936 --> 00:04:13,000
+Bei Depression und Schizophrenie gab es in einzelnen kleinen Studien ermutigende Ergebnisse,
+
+56
+00:04:12,850 --> 00:04:15,315
+aber nur zusätzlich zu Medikamenten.
+
+57
+00:04:15,165 --> 00:04:17,958
+Für Blutdruck, Immunsystem, Abnehmen,
+
+58
+00:04:17,808 --> 00:04:22,172
+Demenz oder Krebs fehlen überzeugende Belege beim Menschen.
+
+59
+00:04:22,022 --> 00:04:26,655
+Und ob schon eine normale Tasse Tee solche Wirkungen hat, ist nicht belegt.
+
+60
+00:04:27,255 --> 00:04:31,672
+Derselbe Stoff, und je nach Land eine andere Antwort.
+
+61
+00:04:31,522 --> 00:04:37,402
+In der EU prüfte die Lebensmittelbehörde 2011 Werbeaussagen zu Konzentration,
+
+62
+00:04:37,252 --> 00:04:41,272
+Stress und Schlaf. Sie hielt keine davon für belegt.
+
+63
+00:04:41,122 --> 00:04:43,862
+Deshalb darf hier niemand damit werben.
+
+64
+00:04:43,712 --> 00:04:50,988
+In Deutschland lehnte das Bundesinstitut für Risikobewertung 2003 Theanin als Zusatz in Getränken ab,
+
+65
+00:04:50,838 --> 00:04:53,386
+weil Daten zur Sicherheit fehlten.
+
+66
+00:04:53,236 --> 00:05:02,435
+In den USA gilt Theanin als sicher für Lebensmittel. Eingestuft hat das aber der Hersteller selbst. Die Behörde hatte dazu nur keine Fragen,
+
+67
+00:05:02,285 --> 00:05:04,891
+und die Wirkung hat sie nicht geprüft.
+
+68
+00:05:04,741 --> 00:05:10,453
+Kanada erlaubt dagegen die Aussage, Theanin fördere vorübergehend die Entspannung.
+
+69
+00:05:10,303 --> 00:05:13,687
+Keine dieser Einstufungen beweist, dass Theanin wirkt.
+
+70
+00:05:14,287 --> 00:05:19,390
+L-Theanin gibt es frei zu kaufen. Vorher solltest du einiges wissen.
+
+71
+00:05:19,240 --> 00:05:24,190
+Zuerst das Gute: In Studien wurden keine schweren Nebenwirkungen berichtet.
+
+72
+00:05:24,040 --> 00:05:30,970
+Aber die längsten Studien liefen nur wenige Monate. Eine Einnahme über Jahre hat niemand untersucht.
+
+73
+00:05:30,820 --> 00:05:36,401
+Zweitens: Im Tierversuch verstärkte Theanin ein Schlafmittel. Fachleute raten deshalb,
+
+74
+00:05:36,251 --> 00:05:40,190
+es nicht mit Schlaf- oder Beruhigungsmitteln zu kombinieren.
+
+75
+00:05:40,040 --> 00:05:44,438
+Drittens: Für Schwangerschaft und Stillzeit gibt es keine Daten,
+
+76
+00:05:44,288 --> 00:05:46,894
+für Kinder nur wenige kleine Studien.
+
+77
+00:05:46,744 --> 00:05:47,490
+Viertens,
+
+78
+00:05:47,340 --> 00:05:57,942
+die Qualität: In einer älteren Analyse enthielten fünf von sechs Präparaten auch eine spiegelbildliche Form des Moleküls. Neuere unabhängige Prüfungen fehlen.
+
+79
+00:05:57,792 --> 00:06:03,428
+Und Theanin ersetzt keine Behandlung, wenn Angst oder Schlafprobleme dich belasten.
+
+80
+00:06:03,278 --> 00:06:07,561
+Tipp für dich: Sprich mit Arzt oder Ärztin, bevor du L-Theanin nimmst,
+
+81
+00:06:07,411 --> 00:06:11,459
+besonders wenn du Medikamente nimmst, schwanger bist oder stillst.
+
+82
+00:06:12,059 --> 00:06:17,923
+L-Theanin hat eine schöne Geschichte: vom Schattentee aus Uji bis in die Kapsel.
+
+83
+00:06:17,773 --> 00:06:23,179
+Am besten belegt sind kleine, kurzfristige Effekte: etwas weniger Stress und,
+
+84
+00:06:23,029 --> 00:06:26,456
+zusammen mit Koffein, etwas mehr Aufmerksamkeit.
+
+85
+00:06:26,306 --> 00:06:31,485
+Vieles andere ist kaum untersucht, und viele Studien haben Hersteller bezahlt.
+
+86
+00:06:31,335 --> 00:06:33,466
+Die Quellen stehen in der Beschreibung.
+
+87
+00:06:33,316 --> 00:06:38,957
+Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
+
+88
+00:06:38,807 --> 00:06:41,555
+aber nicht ersetzen. Bis zum nächsten Video!
+

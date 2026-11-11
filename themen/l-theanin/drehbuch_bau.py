@@ -181,7 +181,7 @@ def bauen(stil):
 
 
 # Aussprache: vorläufig, bis der Nutzer auf der Auswahl-Seite gewählt hat (aussprache_wahl/)
-AUSSPRACHE = {}
+AUSSPRACHE = {'Uji': 'Udschi', 'Yajiro': 'Jadschiro', 'Gyokuro': 'Gjokuro', 'Matcha': 'Mattscha'}
 
 if __name__ == '__main__':
     for stil in STILE:

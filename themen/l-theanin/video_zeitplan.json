@@ -1,0 +1,365 @@
+[
+ {
+  "id": "t0",
+  "v0": 0.0,
+  "v1": 24.171972789115646,
+  "st": [
+   [
+    1.0,
+    5.9195918367346945,
+    "L-Theanin: ein Stoff aus grünem Tee, der entspannen soll, ohne müde zu machen."
+   ],
+   [
+    6.9195918367346945,
+    3.961904761904762,
+    "Was davon belegt ist und was nur Werbung, schauen wir uns an."
+   ],
+   [
+    10.881496598639457,
+    13.14047619047619,
+    "Du erfährst, wie ein japanischer Forscher den Stoff fand, wie er aus dem Blatt in die Kapsel kam, was er im Gehirn tun soll, was Studien zeigen, was Behörden dazu sagen und was bei der Selbstanwendung kritisch ist."
+   ]
+  ]
+ },
+ {
+  "id": "t1",
+  "v0": 24.171972789115646,
+  "v1": 67.52927437641723,
+  "st": [
+   [
+    24.771972789115647,
+    5.104761904761905,
+    "Unsere Geschichte beginnt in Japan, in der Teestadt Uji bei Kyoto."
+   ],
+   [
+    29.87673469387755,
+    4.952380952380952,
+    "Dort untersuchte der Forscher Yajiro Sakato, was in grünem Tee steckt."
+   ],
+   [
+    34.8291156462585,
+    5.333333333333332,
+    "1949 fand er einen neuen Stoff und nannte ihn Theanin."
+   ],
+   [
+    40.16244897959184,
+    4.19047619047619,
+    "Besonders viel davon steckte im edlen Schattentee Gyokuro."
+   ],
+   [
+    44.352925170068026,
+    7.466666666666665,
+    "Theanin ist eine Aminosäure, aber kein Baustein von Eiweißen. Es ähnelt dem Botenstoff Glutamat."
+   ],
+   [
+    51.81959183673469,
+    4.87619047619048,
+    "Die Teepflanze bildet es vor allem in den Wurzeln und schickt es in die jungen Blätter."
+   ],
+   [
+    56.695782312925175,
+    6.3238095238095156,
+    "Außerhalb des Tees ist es selten: Spuren gibt es etwa in einem Pilz, dem Maronenröhrling."
+   ],
+   [
+    63.01959183673469,
+    4.359682539682545,
+    "Im Tee verstärkt es den herzhaften Geschmack, den man Umami nennt."
+   ]
+  ]
+ },
+ {
+  "id": "t2",
+  "v0": 67.52927437641723,
+  "v1": 106.46102040816325,
+  "st": [
+   [
+    68.12927437641723,
+    7.161904761904761,
+    "Werden Teesträucher vor der Ernte beschattet, wie bei Gyokuro und Matcha, enthalten die Blätter mehr Theanin."
+   ],
+   [
+    75.291179138322,
+    6.4,
+    "In einer Tasse Tee stecken grob zehn bis fünfundzwanzig Milligramm, je nachdem, wie lange er zieht."
+   ],
+   [
+    81.69117913832198,
+    7.847619047619046,
+    "In Japan ist Theanin seit Jahrzehnten als Zusatz für Lebensmittel erlaubt. Heute wird es weltweit als Kapsel verkauft."
+   ],
+   [
+    89.53879818594103,
+    7.161904761904761,
+    "Studien nutzen meist zweihundert Milligramm auf einmal. Das ist so viel wie in zehn bis zwanzig Tassen Tee."
+   ],
+   [
+    96.7007029478458,
+    4.876190476190473,
+    "Überraschend: Das Theanin in Kapseln stammt oft gar nicht aus Teeblättern."
+   ],
+   [
+    101.57689342403627,
+    4.734126984126988,
+    "Der bekannteste Rohstoff entsteht in der Fabrik, mit einem Enzym aus Bakterien."
+   ]
+  ]
+ },
+ {
+  "id": "t3",
+  "v0": 106.46102040816325,
+  "v1": 155.02367346938775,
+  "st": [
+   [
+    107.06102040816324,
+    9.219047619047618,
+    "Nach dem Schlucken geht Theanin schnell ins Blut. Nach knapp einer Stunde ist der Höchstwert erreicht, eine Stunde später ist schon die Hälfte wieder abgebaut."
+   ],
+   [
+    116.28006802721086,
+    5.104761904761904,
+    "Bei Ratten gelangt es ins Gehirn. Beim Menschen wurde das noch nie direkt gemessen."
+   ],
+   [
+    121.38482993197277,
+    7.466666666666665,
+    "Im Labor besetzt Theanin Andockstellen für den Botenstoff Glutamat, allerdings viel schwächer als Glutamat selbst."
+   ],
+   [
+    128.85149659863944,
+    6.019047619047619,
+    "Am bekanntesten sind die Alpha-Wellen: Hirnströme, die typisch sind für entspanntes Wachsein."
+   ],
+   [
+    134.87054421768704,
+    7.542857142857141,
+    "In kleinen Studien zeigten sich nach Theanin in Ruhe mehr Alpha-Wellen, bei Konzentrationsaufgaben aber weniger."
+   ],
+   [
+    142.41340136054419,
+    6.704761904761902,
+    "Die Studien hatten nur acht bis fünfunddreißig Teilnehmer, und fast alle kamen von Herstellern oder Teekonzernen."
+   ],
+   [
+    149.1181632653061,
+    5.755510204081638,
+    "Und mehr Alpha-Wellen sind nur ein Messwert. Ob man sich dadurch besser fühlt, zeigen sie nicht."
+   ]
+  ]
+ },
+ {
+  "id": "t4",
+  "v0": 155.02367346938775,
+  "v1": 209.15519274376416,
+  "st": [
+   [
+    155.62367346938774,
+    5.561904761904762,
+    "Beworben wird L-Theanin vor allem für Entspannung, Schlaf und Konzentration."
+   ],
+   [
+    161.1855782312925,
+    6.628571428571428,
+    "Zum Stress hat eine große Auswertung von 2026 einunddreißig Studien zusammengefasst."
+   ],
+   [
+    167.81414965986392,
+    8.99047619047619,
+    "Ergebnis: Eine einzelne Dosis dämpft akuten Stress ein wenig. Der Effekt ist klein und stützt sich vor allem auf Studien mit Schwächen."
+   ],
+   [
+    176.80462585034013,
+    12.8,
+    "Über mehrere Wochen ist das Bild gemischt. Eine kleine Studie fand eine Besserung, eine andere keinen Unterschied zum Scheinpräparat, auch nicht beim Stresshormon Cortisol. Beide bezahlten Hersteller."
+   ],
+   [
+    189.6046258503401,
+    6.247619047619047,
+    "Zum Schlaf gibt es neunzehn Studien. Im Schnitt empfanden die Teilnehmer ihren Schlaf als etwas besser."
+   ],
+   [
+    195.85224489795917,
+    4.876190476190473,
+    "Messungen waren aber uneinheitlich, und oft wurden Mischpräparate getestet."
+   ],
+   [
+    200.72843537414963,
+    8.276757369614515,
+    "Und bei einer Angststörung? In der einzigen guten Studie, mit sechsundvierzig Menschen, half Theanin nicht besser als ein Scheinpräparat."
+   ]
+  ]
+ },
+ {
+  "id": "t5",
+  "v0": 209.15519274376416,
+  "v1": 266.6553514739229,
+  "st": [
+   [
+    209.75519274376416,
+    5.638095238095238,
+    "Am besten untersucht ist Theanin zusammen mit Koffein, so wie beide im Tee vorkommen."
+   ],
+   [
+    215.3932879818594,
+    6.019047619047619,
+    "In vielen kleinen Studien waren die Teilnehmer in den ersten zwei Stunden etwas wacher und aufmerksamer."
+   ],
+   [
+    221.412335600907,
+    5.7904761904761894,
+    "Viele davon bezahlte ein Teekonzern, und vermutlich leistet das Koffein den größeren Teil."
+   ],
+   [
+    227.2028117913832,
+    5.638095238095236,
+    "Theanin allein machte die Reaktion in manchen Tests etwas schneller, in anderen aber langsamer."
+   ],
+   [
+    232.84090702947844,
+    9.219047619047622,
+    "Oft heißt es, Theanin nehme dem Koffein die Nebenwirkungen. In einer Studie dämpfte es aber nur den Anstieg des Blutdrucks, nicht die Zittrigkeit."
+   ],
+   [
+    242.05995464852606,
+    4.876190476190473,
+    "Bei ADHS gibt es nur winzige Studien, eine davon mit fünf Kindern."
+   ],
+   [
+    246.93614512471652,
+    8.228571428571428,
+    "Bei Depression und Schizophrenie gab es in einzelnen kleinen Studien ermutigende Ergebnisse, aber nur zusätzlich zu Medikamenten."
+   ],
+   [
+    255.16471655328797,
+    6.857142857142861,
+    "Für Blutdruck, Immunsystem, Abnehmen, Demenz oder Krebs fehlen überzeugende Belege beim Menschen."
+   ],
+   [
+    262.0218594104308,
+    4.483492063492065,
+    "Und ob schon eine normale Tasse Tee solche Wirkungen hat, ist nicht belegt."
+   ]
+  ]
+ },
+ {
+  "id": "t6",
+  "v0": 266.6553514739229,
+  "v1": 313.6871655328798,
+  "st": [
+   [
+    267.25535147392293,
+    4.266666666666667,
+    "Derselbe Stoff, und je nach Land eine andere Antwort."
+   ],
+   [
+    271.5220181405896,
+    9.600000000000001,
+    "In der EU prüfte die Lebensmittelbehörde 2011 Werbeaussagen zu Konzentration, Stress und Schlaf. Sie hielt keine davon für belegt."
+   ],
+   [
+    281.1220181405896,
+    2.590476190476192,
+    "Deshalb darf hier niemand damit werben."
+   ],
+   [
+    283.7124943310658,
+    9.523809523809522,
+    "In Deutschland lehnte das Bundesinstitut für Risikobewertung 2003 Theanin als Zusatz in Getränken ab, weil Daten zur Sicherheit fehlten."
+   ],
+   [
+    293.2363038548753,
+    11.5047619047619,
+    "In den USA gilt Theanin als sicher für Lebensmittel. Eingestuft hat das aber der Hersteller selbst. Die Behörde hatte dazu nur keine Fragen, und die Wirkung hat sie nicht geprüft."
+   ],
+   [
+    304.7410657596372,
+    5.561904761904771,
+    "Kanada erlaubt dagegen die Aussage, Theanin fördere vorübergehend die Entspannung."
+   ],
+   [
+    310.30297052154197,
+    3.2341950113378672,
+    "Keine dieser Einstufungen beweist, dass Theanin wirkt."
+   ]
+  ]
+ },
+ {
+  "id": "t7",
+  "v0": 313.6871655328798,
+  "v1": 371.45852607709753,
+  "st": [
+   [
+    314.28716553287984,
+    4.9523809523809526,
+    "L-Theanin gibt es frei zu kaufen. Vorher solltest du einiges wissen."
+   ],
+   [
+    319.2395464852608,
+    4.799999999999999,
+    "Zuerst das Gute: In Studien wurden keine schweren Nebenwirkungen berichtet."
+   ],
+   [
+    324.0395464852608,
+    6.78095238095238,
+    "Aber die längsten Studien liefen nur wenige Monate. Eine Einnahme über Jahre hat niemand untersucht."
+   ],
+   [
+    330.82049886621314,
+    9.219047619047618,
+    "Zweitens: Im Tierversuch verstärkte Theanin ein Schlafmittel. Fachleute raten deshalb, es nicht mit Schlaf- oder Beruhigungsmitteln zu kombinieren."
+   ],
+   [
+    340.0395464852608,
+    6.704761904761906,
+    "Drittens: Für Schwangerschaft und Stillzeit gibt es keine Daten, für Kinder nur wenige kleine Studien."
+   ],
+   [
+    346.7443083900227,
+    11.047619047619044,
+    "Viertens, die Qualität: In einer älteren Analyse enthielten fünf von sechs Präparaten auch eine spiegelbildliche Form des Moleküls. Neuere unabhängige Prüfungen fehlen."
+   ],
+   [
+    357.79192743764173,
+    5.4857142857142875,
+    "Und Theanin ersetzt keine Behandlung, wenn Angst oder Schlafprobleme dich belasten."
+   ],
+   [
+    363.27764172335606,
+    8.030884353741499,
+    "Tipp für dich: Sprich mit Arzt oder Ärztin, bevor du L-Theanin nimmst, besonders wenn du Medikamente nimmst, schwanger bist oder stillst."
+   ]
+  ]
+ },
+ {
+  "id": "t8",
+  "v0": 371.45852607709753,
+  "v1": 404.1546258503402,
+  "st": [
+   [
+    372.05852607709755,
+    5.714285714285714,
+    "L-Theanin hat eine schöne Geschichte: vom Schattentee aus Uji bis in die Kapsel."
+   ],
+   [
+    377.7728117913833,
+    8.533333333333335,
+    "Am besten belegt sind kleine, kurzfristige Effekte: etwas weniger Stress und, zusammen mit Koffein, etwas mehr Aufmerksamkeit."
+   ],
+   [
+    386.3061451247166,
+    5.028571428571427,
+    "Vieles andere ist kaum untersucht, und viele Studien haben Hersteller bezahlt."
+   ],
+   [
+    391.33471655328805,
+    1.980952380952381,
+    "Die Quellen stehen in der Beschreibung."
+   ],
+   [
+    393.3156689342404,
+    8.088956916099775,
+    "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
+   ]
+  ]
+ }
+]
