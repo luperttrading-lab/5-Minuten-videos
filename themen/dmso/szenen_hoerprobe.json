@@ -18,7 +18,7 @@
    "sentences": [
     {
      "t": "DMSO: ein Stoff aus der Papierfabrik, der Zellen beim Einfrieren schützt und einmal als Wundermittel gefeiert wurde.",
-     "say": "De Em Es O: ein Stoff aus der Papierfabrik, der Zellen beim Einfrieren schützt und einmal als Wundermittel gefeiert wurde."
+     "say": "De-Em-Es-O: ein Stoff aus der Papierfabrik, der Zellen beim Einfrieren schützt und einmal als Wundermittel gefeiert wurde."
     },
     "Was davon bis heute geblieben ist, ist eine spannende Geschichte.",
     "Du erfährst, wie ein Chemiker den Stoff fand, warum er Zellen vor Kälte schützt, wie es zum großen Hype kam, wofür er zugelassen ist, was Studien zeigen und was bei der Selbstanwendung kritisch ist."
@@ -566,7 +566,7 @@
    "sentences": [
     {
      "t": "DMSO hat eine erstaunliche Reise hinter sich: vom Lösungsmittel aus der Papierfabrik bis zum Kälteschutz für Stammzellen.",
-     "say": "De Em Es O hat eine erstaunliche Reise hinter sich: vom Lösungsmittel aus der Papierfabrik bis zum Kälteschutz für Stammzellen."
+     "say": "De-Em-Es-O hat eine erstaunliche Reise hinter sich: vom Lösungsmittel aus der Papierfabrik bis zum Kälteschutz für Stammzellen."
     },
     "Zugelassen ist es nur für wenige Anwendungen, etwa für eine chronische Blasenentzündung.",
     "Für vieles andere sind die Studien klein, widersprüchlich oder fehlen ganz.",
