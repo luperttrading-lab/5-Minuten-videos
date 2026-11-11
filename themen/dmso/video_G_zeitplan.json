@@ -2,320 +2,320 @@
  {
   "id": "d0",
   "v0": 0.0,
-  "v1": 26.241383219954646,
+  "v1": 25.61956916099773,
   "st": [
    [
     1.0,
-    8.60952380952381,
+    8.533333333333333,
     "DMSO: ein Stoff aus der Papierfabrik, der Zellen beim Einfrieren schützt und einmal als Wundermittel gefeiert wurde."
    ],
    [
-    9.60952380952381,
-    3.8857142857142843,
+    9.533333333333333,
+    3.9619047619047603,
     "Was davon bis heute geblieben ist, ist eine spannende Geschichte."
    ],
    [
     13.495238095238093,
-    12.596145124716553,
+    11.974331065759639,
     "Du erfährst, wie ein Chemiker den Stoff fand, warum er Zellen vor Kälte schützt, wie es zum großen Hype kam, wofür er zugelassen ist, was Studien zeigen und was bei der Selbstanwendung kritisch ist."
    ]
   ]
  },
  {
   "id": "d1",
-  "v0": 26.241383219954646,
-  "v1": 75.65435374149659,
+  "v0": 25.61956916099773,
+  "v1": 75.29775510204081,
   "st": [
    [
-    26.841383219954647,
-    6.780952380952381,
+    26.219569160997732,
+    7.0095238095238095,
     "Unsere Geschichte beginnt in den Achtzehnhundertsechzigerjahren, bei dem russischen Chemiker Alexander Saizew."
    ],
    [
-    33.62233560090703,
-    7.276190476190476,
+    33.22909297052154,
+    7.352380952380951,
     "Er ließ Salpetersäure auf eine übel riechende Schwefelverbindung wirken und erhielt eine klare Flüssigkeit."
    ],
    [
-    40.8985260770975,
-    8.876190476190473,
+    40.58147392290249,
+    8.8,
     "1867 beschrieb er sie in einer deutschen Chemie-Zeitschrift: Dimethylsulfoxid, kurz DMSO."
    ],
    [
-    49.77471655328797,
-    7.238095238095241,
+    49.381473922902494,
+    7.238095238095237,
     "Das Molekül ist winzig: ein Schwefelatom, ein Sauerstoffatom und zwei kleine Kohlenstoffgruppen."
    ],
    [
-    57.012811791383214,
-    6.171428571428564,
+    56.61956916099773,
+    6.247619047619047,
     "Heute fällt DMSO bei der Papierherstellung an, wenn Holz zu Zellstoff verarbeitet wird."
    ],
    [
-    63.18424036281178,
-    7.61904761904762,
+    62.86718820861678,
+    7.695238095238096,
     "Es löst sehr viele Stoffe, mischt sich mit Wasser und wird schon knapp unter zwanzig Grad fest, also im Kühlschrank."
    ],
    [
-    70.8032879818594,
-    4.701065759637196,
+    70.56242630385488,
+    4.585328798185941,
     "Fast hundert Jahre lang war es vor allem ein Lösungsmittel für Labor und Industrie."
    ]
   ]
  },
  {
   "id": "d2",
-  "v0": 75.65435374149659,
-  "v1": 126.94113378684806,
+  "v0": 75.29775510204081,
+  "v1": 125.76283446712017,
   "st": [
    [
-    76.25435374149659,
-    6.780952380952381,
+    75.8977551020408,
+    6.628571428571428,
     "1959 machten zwei britische Forscher eine Entdeckung, die bis heute wichtig ist."
    ],
    [
-    83.03530612244897,
-    5.485714285714287,
+    82.52632653061224,
+    5.561904761904762,
     "Wenn man lebende Zellen einfriert, werden sie durch Eiskristalle und Salz geschädigt."
    ],
    [
-    88.52102040816325,
-    7.619047619047615,
+    88.088231292517,
+    7.542857142857141,
     "Mit DMSO überstanden rote Blutkörperchen und Samenzellen von Bullen das Einfrieren viel besser."
    ],
    [
-    96.14006802721087,
-    10.819047619047623,
+    95.63108843537414,
+    10.666666666666668,
     "Heute werden Blutstammzellen für Transplantationen meist mit DMSO eingefroren, und auch beim Einfrieren von Eizellen und Embryonen kommt es oft zum Einsatz."
    ],
    [
-    106.9591156462585,
-    8.609523809523811,
+    106.29775510204081,
+    8.38095238095238,
     "Ganz harmlos ist das nicht: Nach der Übertragung riechen Patienten oft nach Knoblauch, und manche bekommen Kreislaufprobleme."
    ],
    [
-    115.5686394557823,
-    6.552380952380943,
+    114.67870748299319,
+    6.247619047619047,
     "Forscher prüfen deshalb, ob weniger DMSO genügt, und erste Studien sind ermutigend."
    ],
    [
-    122.12102040816325,
-    4.67011337868481,
+    120.92632653061223,
+    4.686507936507937,
     "Dieser Kälteschutz ist bis heute eine der wichtigsten Anwendungen in der Medizin."
    ]
   ]
  },
  {
   "id": "d3",
-  "v0": 126.94113378684806,
-  "v1": 175.62748299319725,
+  "v0": 125.76283446712017,
+  "v1": 175.5999319727891,
   "st": [
    [
-    127.54113378684805,
-    9.447619047619048,
+    126.36283446712017,
+    9.142857142857142,
     "Anfang der Sechzigerjahre forschte der Chirurg Stanley Jacob in Oregon zusammen mit Robert Herschler, einem Chemiker eines Papierkonzerns."
    ],
    [
-    136.9887528344671,
+    135.5056916099773,
     6.4761904761904745,
     "Sie bemerkten: DMSO dringt sehr schnell durch die Haut und nimmt dabei andere Stoffe mit."
    ],
    [
-    143.46494331065756,
-    6.476190476190476,
+    141.9818820861678,
+    6.704761904761906,
     "Bald wurde es als Wundermittel gefeiert, gegen Verstauchungen, Prellungen, Arthritis und vieles mehr."
    ],
    [
-    149.94113378684804,
-    4.800000000000001,
+    148.6866439909297,
+    4.9523809523809526,
     "Bis 1965 sollen es rund hunderttausend Menschen benutzt haben."
    ],
    [
-    154.74113378684805,
-    4.647619047619045,
+    153.63902494331063,
+    5.333333333333332,
     "Dann entdeckten Forscher bei Hunden und anderen Tieren veränderte Augenlinsen."
    ],
    [
-    159.38875283446708,
-    9.142857142857142,
+    158.97235827664397,
+    9.447619047619042,
     "Ende des Jahres wurden die Studien in den USA gestoppt, und in Westdeutschland verschwand DMSO nach weniger als drei Monaten wieder vom Markt."
    ],
    [
-    168.53160997732425,
-    6.945873015873019,
+    168.41997732426302,
+    7.029954648526086,
     "Beim Menschen wurden solche Linsenschäden später nicht nachgewiesen. Doch der Ruf als Wundermittel hält sich bis heute."
    ]
   ]
  },
  {
   "id": "d4",
-  "v0": 175.62748299319725,
-  "v1": 250.28619047619043,
+  "v0": 175.5999319727891,
+  "v1": 249.099410430839,
   "st": [
    [
-    176.22748299319724,
-    6.095238095238095,
+    176.1999319727891,
+    6.019047619047619,
     "Was ist von der großen Hoffnung geblieben? Einiges, nur anders als gedacht."
    ],
    [
-    182.32272108843534,
-    12.571428571428573,
+    182.21897959183673,
+    12.342857142857142,
     "In den USA ist DMSO seit 1978 für eine einzige Krankheit beim Menschen zugelassen: eine chronische Blasenentzündung, die interstitielle Zystitis."
    ],
    [
-    194.8941496598639,
-    10.285714285714281,
+    194.56183673469386,
+    10.285714285714285,
     "Dabei füllt Arzt oder Ärztin die Lösung direkt in die Blase. In einer kleinen Studie ging es damit deutlich mehr Menschen besser als mit Kochsalzlösung."
    ],
    [
-    205.17986394557818,
-    11.657142857142858,
+    204.84755102040816,
+    11.12380952380952,
     "In Kliniken hilft DMSO außerdem, wenn bestimmte Chemotherapie aus Versehen neben die Vene läuft. Leitlinien empfehlen das, obwohl die Studien klein sind."
    ],
    [
-    216.83700680272105,
+    215.97136054421767,
     10.514285714285712,
     "In Österreich und der Schweiz gibt es ein zugelassenes Gel mit DMSO und zwei weiteren Wirkstoffen, gegen Prellungen, Verstauchungen und Sehnenentzündungen."
    ],
    [
-    227.35129251700675,
-    10.285714285714292,
+    226.48564625850338,
+    10.057142857142864,
     "In Deutschland ist derzeit wohl kein Fertigarzneimittel mit DMSO im Handel. Es gibt nur Rezepturen aus der Apotheke, auf ärztliche Verordnung."
    ],
    [
-    237.63700680272106,
-    5.790476190476191,
+    236.54278911564626,
+    5.790476190476184,
     "Früher trug DMSO in einem Mittel gegen Gürtelrose einen Wirkstoff durch die Haut."
    ],
    [
-    243.42748299319726,
-    6.708707482993191,
+    242.33326530612243,
+    6.616145124716567,
     "Und in der Tiermedizin ist es in den USA für Pferde und Hunde zugelassen, gegen Schwellungen nach Verletzungen."
    ]
   ]
  },
  {
   "id": "d5",
-  "v0": 250.28619047619043,
-  "v1": 318.34598639455777,
+  "v0": 249.099410430839,
+  "v1": 317.317641723356,
   "st": [
    [
-    250.88619047619042,
-    6.618321995464852,
+    249.69941043083898,
+    7.0095238095238095,
     "Gegen was soll DMSO noch helfen? Die Liste ist lang. Hier ist, was Studien dazu sagen."
    ],
    [
-    257.5045124716553,
-    9.980952380952383,
+    256.7089342403628,
+    9.752380952380953,
     "Beim Komplexen Regionalen Schmerzsyndrom, auch Morbus Sudeck genannt, half eine DMSO-Creme in einer kleinen Studie besser als Placebo."
    ],
    [
-    267.48546485260766,
+    266.46131519274377,
     11.276190476190475,
     "In einer größeren Studie war sie aber nicht besser als ein anderes Mittel. Die deutsche Leitlinie gibt keine klare Empfehlung, in den Niederlanden gehört die Creme zur Standardbehandlung."
    ],
    [
-    278.76165532879816,
-    4.800000000000001,
+    277.7375056689342,
+    4.799999999999997,
     "Bei Kniearthrose fanden Übersichtsarbeiten keinen spürbaren Nutzen."
    ],
    [
-    283.5616553287981,
-    9.904761904761905,
+    282.5375056689342,
+    9.752380952380953,
     "Dabei haben solche Studien ein besonderes Problem: Der Knoblauchgeruch verrät, wer DMSO bekommt. Echte Blindstudien sind deshalb schwer."
    ],
    [
-    293.46641723356004,
-    9.371428571428574,
+    292.2898866213152,
+    9.599999999999994,
     "Bei Sklerodermie half es in einer sorgfältigen Studie nicht, und bei Amyloidose oder Hirnschwellung gibt es nur kleine, alte Untersuchungen."
    ],
    [
-    302.8378458049886,
-    7.085714285714282,
+    301.88988662131516,
+    7.009523809523813,
     "Für Muskel- und Sportschmerzen gibt es vor allem Erfahrungsberichte, aber kaum Studien mit reinem DMSO."
    ],
    [
-    309.9235600907029,
-    8.272426303854871,
+    308.899410430839,
+    8.268231292517008,
     "Und gegen Krebs? Beim Menschen gibt es dafür keine Belege. Im Labor macht DMSO manche Chemotherapie sogar unwirksam."
    ]
   ]
  },
  {
   "id": "d6",
-  "v0": 318.34598639455777,
-  "v1": 377.5691609977324,
+  "v0": 317.317641723356,
+  "v1": 374.4508390022676,
   "st": [
    [
-    318.9459863945578,
-    6.780952380952381,
+    317.91764172335604,
+    6.476190476190475,
     "DMSO lässt sich leicht im Internet kaufen. Wenn du darüber nachdenkst, solltest du einiges wissen."
    ],
    [
-    325.7269387755102,
-    7.809523809523809,
+    324.3938321995465,
+    7.6190476190476195,
     "Erstens: DMSO nimmt andere Stoffe mit durch die Haut, auch Schmutz, Cremes oder Reste von Chemikalien."
    ],
    [
-    333.536462585034,
-    8.571428571428571,
+    332.0128798185941,
+    8.228571428571428,
     "Zweitens: DMSO aus dem Chemiehandel ist als Lösungsmittel gedacht, nicht als Arzneimittel, und kann verunreinigt sein."
    ],
    [
-    342.10789115646253,
-    6.5142857142857125,
+    340.24145124716557,
+    6.247619047619047,
     "Drittens: Oft brennt und juckt die Haut, sie wird rot, und der Atem riecht nach Knoblauch."
    ],
    [
-    348.62217687074826,
-    7.504761904761903,
+    346.4890702947846,
+    7.314285714285717,
     "Viertens: Wechselwirkungen. Zusammen mit dem Schmerzmittel Sulindac kann DMSO zum Beispiel Nerven schädigen."
    ],
    [
-    356.12693877551015,
-    6.476190476190482,
+    353.80335600907034,
+    6.095238095238095,
     "Zum Trinken oder Einnehmen ist DMSO nicht zugelassen, und dafür fehlen Daten zur Sicherheit."
    ],
    [
-    362.60312925170064,
-    7.847619047619041,
+    359.8985941043084,
+    7.542857142857137,
     "Und Finger weg von Mischungen mit Chlordioxid, auch MMS genannt. Schon das allein gilt als giftig und ätzend."
    ],
    [
-    370.4507482993197,
-    6.968412698412706,
+    367.44145124716556,
+    6.859387755102048,
     "Tipp für dich: Sprich mit Arzt oder Ärztin, bevor du DMSO ausprobierst, besonders wenn du Medikamente nimmst."
    ]
   ]
  },
  {
   "id": "d7",
-  "v0": 377.5691609977324,
-  "v1": 410.40455782312927,
+  "v0": 374.4508390022676,
+  "v1": 406.06272108843547,
   "st": [
    [
-    378.16916099773243,
-    8.68532879818594,
+    375.05083900226765,
+    8.22857142857143,
     "DMSO hat eine erstaunliche Reise hinter sich: vom Lösungsmittel aus der Papierfabrik bis zum Kälteschutz für Stammzellen."
    ],
    [
-    386.85448979591837,
-    5.485714285714286,
+    383.2794104308391,
+    5.257142857142856,
     "Zugelassen ist es nur für wenige Anwendungen, etwa für eine chronische Blasenentzündung."
    ],
    [
-    392.34020408163263,
-    4.952380952380949,
+    388.5365532879819,
+    4.723809523809523,
     "Für vieles andere sind die Studien klein, widersprüchlich oder fehlen ganz."
    ],
    [
-    397.2925850340136,
-    2.0571428571428605,
+    393.2603628117915,
+    1.980952380952381,
     "Die Quellen stehen in der Beschreibung."
    ],
    [
-    399.3497278911565,
-    8.30482993197279,
+    395.24131519274385,
+    8.071405895691612,
     "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
    ]
   ]

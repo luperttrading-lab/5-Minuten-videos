@@ -9,6 +9,6 @@ Auftrag: `AUFTRAG.md` (mit Nachtrag: Anwendungen mit Einordnung in Worten, Szene
   Alle Bilder angesehen; Zusatzregel: niemand trinkt, reibt sich ein oder spritzt, keine Flaschen mit Dosierangaben.
 - Rendern: `python3 ../../werkzeug/render.py szenen_G.json bilder/G/k1.jpg video_G.mp4` (Ton aus `tts_cache`, ≈ 5 min).
 - Hörprobe: `szenen_hoerprobe.json` (Aussprache eingesetzt), `abnahme.json` (8 Stellen mit Fachwörtern).
-- Länge 6:51, 847 Wörter. Kosten: ElevenLabs 2.596 + 368 + 2.608 Zeichen berechnet (+ 262 für Proben), Bilder 1.195,8 Credits + Thumbnail 6,0.
+- Länge 6:47 (Endfassung 11.11., Ton abgenommen), 847 Wörter. Kosten: ElevenLabs 2.596 + 368 + 2.608 Zeichen berechnet (+ 262 für Proben), Bilder 1.195,8 Credits + Thumbnail 6,0.
 - Aussprache-Wahl: https://claude.ai/artifact/YGnFti5qA63jjkSUZukhTL · Hörprobe: https://claude.ai/artifact/HqUuG1ZiJH8frTwNpvBvMy ·
   Vorschau: https://claude.ai/artifact/Qf5YPvSLQKYwzmbXMfi5vP
