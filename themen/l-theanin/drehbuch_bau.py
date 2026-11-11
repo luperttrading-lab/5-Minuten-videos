@@ -180,7 +180,7 @@ def bauen(stil):
             'scenes': szenen, 'quellen': Q}
 
 
-# Aussprache: vorläufig, bis der Nutzer auf der Auswahl-Seite gewählt hat (aussprache_wahl/)
+# Aussprache: Wahl des Nutzers 11.11., Fassung 1 („L-Theanin“ wie geschrieben) und 6 (japanische Wörter eingedeutscht)
 AUSSPRACHE = {'Uji': 'Udschi', 'Yajiro': 'Jadschiro', 'Gyokuro': 'Gjokuro', 'Matcha': 'Mattscha'}
 
 if __name__ == '__main__':
