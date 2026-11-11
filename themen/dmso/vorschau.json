@@ -1,12 +1,12 @@
 {
  "titel": "DMSO · Erklärvideo (Aquarell)",
- "aufgabe": "Endfassung mit abgenommenem Ton (Aussprache 4, „D. M. S. O.“). Bitte ansehen und „passt“ oder „ändern“ tippen.",
+ "aufgabe": "Fertig: Endfassung abgenommen am 11.11. („passt“). Vorschaubild und Beschreibung unten.",
  "videos": [
   {
    "datei": "vorschau_G.mp4",
    "titel": "G  Aquarell und Tusche · Endfassung",
    "stand": "11.11., 11:25",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 50,
    "notiz": "Ton am 11.11. abgenommen (11 Stellen ok): Aussprache „Dimethyl-sulfoxid, kurz D. M. S. O.“, „Der MSO“ am Anfang behoben. 6:47, 847 Wörter."
   }
