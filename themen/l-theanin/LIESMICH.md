@@ -19,6 +19,8 @@ Auftrag: `AUFTRAG.md`. Vorbild `themen/dmso/`.
   „Theanin“ im Fließtext als „Tianin“ (deshalb die Auswahl-Seite).
 - **Endfassung vom Nutzer am 11.11. freigegeben** („Video fertig machen“); `abnahme.json` auf erledigt, Vorschau auf „zur Info“,
   480p erzeugt (nicht eingecheckt).
+- 12.11.: Einstieg mit dem Motiv des Vorschaubilds (`hook_bild` = `thumbnail/bild_G.jpg`, Text per `hook_zeilen`) vor den
+  Kacheln, Probe vom Nutzer mit „passt“ bewertet, ganzes Video neu gerendert. 1080p für den Download auf 48 MB kodiert.
 - Länge 6:44, 903 Wörter. Kosten: ElevenLabs 2.637 Zeichen berechnet + 225 für Proben; Bilder 1.138,5 Credits
   (1.046,0 + 92,5 für die vier Ersatzbilder) + Thumbnail 5,7.
 - Aussprache-Wahl: https://claude.ai/artifact/WDfh22zFteGxPZ4ZkpvUDA · Hörprobe: https://claude.ai/artifact/4ENxj1UdQcgmf3CyzaJttz ·

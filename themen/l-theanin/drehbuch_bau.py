@@ -57,6 +57,10 @@ SZENEN = [
                 'Was davon belegt ist und was nur Werbung, schauen wir uns an.',
                 'Du erfährst, wie ein japanischer Forscher den Stoff fand, wie er aus dem Blatt in die Kapsel kam, was er im Gehirn tun soll, was Studien zeigen, was Behörden dazu sagen und was bei der Selbstanwendung kritisch ist.'],
   'hervorheben_at': 2,
+  # Einstieg mit dem Motiv des Vorschaubilds vor den Kacheln (Nutzer 12.11.: Probe „passt“)
+  'hook_bild': 'thumbnail/bild_G.jpg', 'kacheln_ab': 2, 'hook_titel': 'L-Theanin',
+  'hook_zeilen': [{'t': 'Ein Stoff aus grünem Tee', 'wort': 'Stoff'}, {'t': 'Entspannt, ohne müde zu machen?', 'wort': 'entspannen'},
+                  {'t': 'Was davon ist belegt?', 'wort': 'Was davon', 'art': 'urteil'}],
   'kacheln': [('Entdeckt im Tee', 'k1', 'Forscher'), ('Vom Blatt zur Kapsel', 'k2', 'Kapsel'),
               ('Wie es wirken soll', 'k3', 'Gehirn'), ('Was Studien zeigen', 'k4', 'Studien'),
               ('Was Behörden sagen', 'k5', 'Behörden'), ('Selbstanwendung: Vorsicht', 'k6', 'Selbstanwendung')]},
