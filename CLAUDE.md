@@ -44,6 +44,10 @@ Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 8. **Ausliefern:** 1080p (Master, nicht einchecken), 720p für die Teilen-Seite (Artifact), 480p zum Verschicken:
    `ffmpeg -i video.mp4 -vf "crop=1920:1072:0:0,fps=15,scale=854:480:flags=lanczos" -c:v libx264 -preset slow -crf 30
    -tune stillimage -profile:v main -pix_fmt yuv420p -c:a aac -b:a 64k -ac 1 -movflags +faststart video_480p.mp4`
+   **1080p zum Laden aufs Handy höchstens 50 MB** (gemessen 12.11.: 144 MB zeigte in der Claude-App keinen Download-Knopf,
+   48 MB und 31 MB schon). Zwei Durchgänge, 25 fps: `ffmpeg -i video.mp4 -c:v libx264 -preset slow -b:v 770k -pass 1
+   -tune stillimage -pix_fmt yuv420p -an -f null /dev/null`, dann dasselbe mit `-i video.wav -map 0:v -map 1:a -pass 2
+   -c:a aac -b:a 160k -movflags +faststart` (770k ≈ 48 MB bei 6:45; bei längeren Videos Bitrate anpassen).
    Videos über die Vorschau-Seite zeigen (siehe „Antworten an den Nutzer“), nicht als Datei. MP4s nie committen: Sie lassen sich aus Drehbuch, Grafik und Ton-Cache jederzeit neu rendern.
 
 ## Aufbau `szenen.json`
