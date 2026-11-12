@@ -1,7 +1,15 @@
 {
  "titel": "L-Theanin · Erklärvideo (Aquarell)",
- "aufgabe": "Fertig: Endfassung vom Nutzer am 11.11. freigegeben. Vorschaubild und Beschreibung unten.",
+ "aufgabe": "Neu: Einstieg mit dem Vorschaubild-Motiv als Probe (18 s). „✓ passt“ = ich rendere das ganze Video damit neu.",
  "videos": [
+  {
+   "datei": "hook_probe.mp4",
+   "titel": "Probe: Vorschaubild-Motiv als Startbild",
+   "stand": "12.11., 06:55",
+   "pruefen": true,
+   "poster_bei": 8,
+   "notiz": "Die ersten 11 Sekunden zeigen das Motiv des Vorschaubilds groß, der Text erscheint passend zum gesprochenen Wort, dann kommen die sechs Kacheln. Ton unverändert."
+  },
   {
    "datei": "vorschau_G.mp4",
    "titel": "G  Aquarell und Tusche · erste Fassung",
