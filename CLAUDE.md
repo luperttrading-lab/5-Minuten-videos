@@ -4,6 +4,27 @@ Info-Videos für YouTube (Ziel ≈ 6 Minuten, ≈ 720 Wörter; Teile unter 5 Min
 die viele Menschen interessieren. Format: Faktencheck populärer Aussagen, oft aus NotebookLM-/Gemini-Infografiken.
 Fertige Beispiele: `themen/stress/`, `themen/magnesium/`.
 
+## Standardformat seit 12.11.2026: Erklärvideo (Nutzerentscheidung)
+Das frühere „Schulprojekt-Format“ ist jetzt das **normale Format der Gesundheitsvideos** und heißt nur noch
+**Erklärvideo** (Wort „Schulprojekt“ nicht mehr verwenden; der Ordner `themen/schulprojekt-vitamin-d/` behält seinen
+Namen nur wegen der Pfade). Grund des Nutzers: Der reine Ampel-Faktencheck fällt so kritisch aus, dass am Ende „gar
+nichts mehr geht“; das Erklärvideo macht neugierig und ordnet trotzdem ehrlich ein.
+Vorbilder: `themen/l-theanin/` (neuestes, mit Startbild), `themen/dmso/`, `themen/pea/`.
+- **Aufbau:** Startbild mit dem Motiv des Vorschaubilds (`hook_bild`, `hook_titel`, `hook_zeilen`), dann sechs Kacheln;
+  Kicker „Erklärvideo“; Geschichte und Entdeckung, wie es wirken soll, **breite Übersicht, wofür es eingesetzt, untersucht
+  und berichtet wird**, Rechtsstatus, Selbstanwendung, Fazit. Etwa 6 bis 7 Minuten.
+- **Keine Ampel.** Jede Anwendung bekommt eine Einordnung in Worten: „zugelassen“, „gut untersucht“, „in kleinen Studien
+  untersucht“, „Erfahrungsberichte, kaum Studien“, „behauptet, nicht belegt“.
+- **Beobachtungen und Erfahrungsberichte dürfen ausdrücklich ins Video** (interessant für die Zuschauer), aber immer als
+  solche benannt („viele berichten …“, „beobachtet wurde …“), nie als Beleg, und im selben Atemzug mit dem Stand der
+  Studien. Was gesichert ist und was nicht, bleibt in jeder Szene erkennbar.
+- **Unverändert streng:** Recherche und Faktencheck wie unten (Primärquellen, DOIs, Herstellerfinanzierung, Tierdaten
+  getrennt), keine Heilversprechen, Dosierungen nur als Beschreibung von Studien, Szene „Selbstanwendung: was kritisch
+  ist“ mit Tipp „Sprich mit Arzt oder Ärztin, bevor du …“, Abschlusssatz, Tempo 1,05.
+- **Bilder:** Stil G, Aquarell und Tusche, unverändert (Stiltest 12.11. in `themen/l-theanin/stiltest/`: bleibt so).
+  Szenenbilder 5:4, Kacheln 16:9, Regeln in `themen/l-theanin/bilder_bau.py`.
+- Die Ampel-Regeln weiter unten gelten nur noch für die älteren Faktencheck-Videos (Stress, Magnesium, Guanfacin …).
+
 ## Ablauf je Thema (`themen/<thema>/`)
 1. **Vorlage sichten:** Grafiken nach `vorlage/`, alle Behauptungen aus Grafiken und Begleittext auflisten.
 2. **Faktencheck vor dem Drehbuch:** jede Behauptung gegen Primärquellen, Meta-Analysen, Leitlinien und Behörden
