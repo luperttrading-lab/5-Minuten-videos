@@ -18,7 +18,7 @@ SERIF_B = '/usr/share/fonts/truetype/crosextra/Caladea-Bold.ttf'
 haupt, akzent = (44, 52, 68), (176, 92, 52)
 im = Image.open(ziel).convert('RGB').resize((1280, 720), Image.LANCZOS)
 schatten = Image.new('RGBA', im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(schatten)
-texte = [((60, 80), 'Magnesium', 140, akzent), ((66, 330), 'Brauchst du', 84, haupt), ((66, 430), 'es überhaupt?', 84, haupt)]
+texte = [((60, 80), 'Magnesium', 140, akzent), ((66, 330), 'Was du wirklich', 84, haupt), ((66, 430), 'wissen musst', 84, haupt)]
 for (x, y), t, g, _ in texte:
     d.text((x + 4, y + 5), t, font=ImageFont.truetype(SERIF_B, g), fill=(255, 255, 255, 170))
 im = Image.alpha_composite(im.convert('RGBA'), schatten.filter(ImageFilter.GaussianBlur(6)))

@@ -1,4 +1,4 @@
-# Folge 1 „Magnesium: Brauchst du es überhaupt? Der Überblick“ (14.11.2026)
+# Folge 1 „Magnesium: Was du wirklich wissen musst“ (14.11.2026)
 
 Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
 - `recherche_A.md` (Nachprüfung, 2024–2026), `recherche_B.md` (Körper, Risikogruppen, Wechselwirkungen, Lebensmittel,
@@ -13,4 +13,4 @@ Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
 - Gerendert 14.11.: `render.py szenen.json bilder/G/k1.jpg video.mp4`; Startbild-Zeile auf „Tageszeit: nie verglichen.“
   gekürzt (längere Fassungen liefen ins Glas). Vorschau 720p/12 fps 13,1 MB, 1080p fürs Handy 48,3 MB (880k, zwei Durchgänge).
 - Vorschau-Seite: https://claude.ai/artifact/RT23abh5FpQbhjia7SUSib (mit Vorschaubild und Beschreibung).
-- Offen: Entscheidung 4c (Kommentarfrage, ein Satz in m8, ≈ 400 Zeichen Ton), Abnahme des Videos.
+- 14.11. abends: Titel „Was du wirklich wissen musst“ (Nutzerwahl), Vorschaubild und Beschreibung angepasst; keine Kommentarfrage. Offen: Abnahme des Videos.

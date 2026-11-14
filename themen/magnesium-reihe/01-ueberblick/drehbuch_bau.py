@@ -1,4 +1,4 @@
-"""Drehbuch Folge 1 „Magnesium: Brauchst du es überhaupt?“ (Magnesium-Reihe), Erklärvideo ohne Ampel, Stil G (Aquarell und Tusche).
+"""Drehbuch Folge 1 „Magnesium: Was du wirklich wissen musst“ (Magnesium-Reihe), Erklärvideo ohne Ampel, Stil G (Aquarell und Tusche).
 Fakten und Quellen: faktencheck.md, recherche_A.md, recherche_B.md (14.11.2026). Gliederung: ../konzept.md.
 Dosierungen nur als Beschreibung von Behörden und Studien, keine Marken. Aufruf: python3 drehbuch_bau.py"""
 import json, os
@@ -155,7 +155,7 @@ SZENEN = [
  {'id': 'm8', 'layout': 'kacheln', 'kapitel': 'Die Reihe', 'kicker': 'Erklärvideo', 'headline': 'Alles über Magnesium: die Reihe',
   'sentences': ['In den nächsten Folgen geht es um jede Frage einzeln: morgens oder abends, welche Formen, Mangel erkennen, die Obergrenze, Schlaf und Stress. Danach Krämpfe, Blutdruck, Migräne, Frauen und Lebensmittel.',
                 'Als Nächstes: Warum hält sich der Rat, Magnesium abends zu nehmen, so hartnäckig?',
-                # Kommentarfrage (Entscheidung 4c) offen, Nutzer 14.11.: „weiß nicht genau, wie du es umsetzen willst“
+                # Keine Kommentarfrage (Nutzerentscheidung 4c, 14.11.)
                 ABSCHLUSS],
   'hervorheben_at': 0,
   'kacheln': [('Morgens oder abends?', 'r2', 'abends'), ('Welche Form?', 'r3', 'Formen'),
@@ -181,7 +181,7 @@ def bauen(stil):
         szenen.append(s)
     return {'tts': 'elevenlabs', 'voice_id': 'NBqeXKdZHweef6y0B67V', 'model': 'eleven_v4', 'tempo': 1.05,
             'aussprache': AUSSPRACHE,
-            'titel': 'Magnesium: Brauchst du es überhaupt? Der Überblick', 'stil': stil,
+            'titel': 'Magnesium: Was du wirklich wissen musst', 'stil': stil,
             'untertitel': 'Folge 1 der Magnesium-Reihe: wozu der Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Formen es gibt, wofür es belegt ist und worauf du bei der Einnahme achten solltest.',
             'fuss': 'Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.',
             'scenes': szenen, 'quellen': Q}

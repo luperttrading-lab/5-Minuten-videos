@@ -1,4 +1,4 @@
-<title>Magnesium-Reihe · Folge 1: Brauchst du es überhaupt? · Vorschau</title>
+<title>Magnesium-Reihe · Folge 1: Was du wirklich wissen musst · Vorschau</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
   /* Eine Spalte, je Fassung eine Karte mit Player; die neueste oben. */
@@ -36,20 +36,20 @@
   button:focus-visible, textarea:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; }
 </style>
 <main>
-  <h1>Magnesium-Reihe · Folge 1: Brauchst du es überhaupt? · Vorschau</h1>
+  <h1>Magnesium-Reihe · Folge 1: Was du wirklich wissen musst · Vorschau</h1>
   <p class="aufgabe"><b>Deine Aufgabe:</b> Endfassung Folge 1 (6:05), Hörprobe von dir abgenommen am 14.11. Bitte ganz ansehen: „passt“ oder „ändern“ mit Notiz. Vorschaubild und YouTube-Beschreibung unten. Ton kommt beim Antippen von ▶; nichts wird heruntergeladen.</p>
   <article class="video" id="v1" data-id="v_5064b97446" data-titel="Folge 1 · Endfassung">
       <div class="kopfzeile"><h2>Folge 1 · Endfassung</h2><span class="marke pruefen">zu prüfen</span></div>
       <p class="stand">Stand 14.11., 22:46 · 13.1 MB</p>
       <video controls playsinline preload="metadata" poster="videos/v_5064b97446.jpg" src="videos/v_5064b97446.mp4"></video>
-      <p class="notiz">Erklärvideo, Stil G. Startbild mit den drei Einstiegsfragen, sechs Kacheln, am Ende Fazit „Kurz gesagt“ (greift die Einstiegsfragen auf), Karte der Reihe und Brückensatz zu Folge 2. Ohne Kommentarfrage (4c offen, lässt sich mit einem Satz nachrüsten).</p>
+      <p class="notiz">Erklärvideo, Stil G. Startbild mit den drei Einstiegsfragen, sechs Kacheln, am Ende Fazit „Kurz gesagt“ (greift die Einstiegsfragen auf), Karte der Reihe und Brückensatz zu Folge 2. Ohne Kommentarfrage (deine Wahl). Titel und Vorschaubild jetzt „Was du wirklich wissen musst“ (deine Wahl 14.11.).</p>
       <div class="urteil"><button type="button" data-u="passt">✓ passt</button><button type="button" data-u="aendern">ändern</button></div><textarea rows="2" placeholder="Was soll anders werden?" aria-label="Notiz zu Folge 1 · Endfassung"></textarea><div class="zeile"><button type="button" class="senden">An Claude</button><span class="melde" role="status" aria-live="polite"></span></div>
     </article>
 </main><section style="margin:24px auto;max-width:900px;padding:0 16px">
 <h2 style="font:700 22px Georgia,serif">YouTube: Vorschaubild und Beschreibung</h2>
 <img src="thumbnail_G.jpg" alt="Vorschaubild Magnesium" style="width:100%;border-radius:10px">
 <p><button type="button" id="kopier" style="font:inherit;font-weight:600;padding:12px 16px;border-radius:10px;min-height:48px">Beschreibung kopieren</button> <span id="kopiert"></span></p>
-<textarea id="beschr" rows="18" readonly style="width:100%;font:15px/1.4 system-ui,sans-serif;padding:10px;border-radius:10px">Magnesium: Brauchst du es überhaupt? Der Überblick
+<textarea id="beschr" rows="18" readonly style="width:100%;font:15px/1.4 system-ui,sans-serif;padding:10px;border-radius:10px">Magnesium: Was du wirklich wissen musst
 Folge 1 der Magnesium-Reihe: wozu der Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Formen es gibt, wofür es belegt ist und worauf du bei der Einnahme achten solltest.
 
 Kapitel
@@ -102,7 +102,7 @@ Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt 
 </section>
 <script>
 (function () {
-  var TITEL = "Magnesium-Reihe · Folge 1: Brauchst du es überhaupt?", db = null, kom = null, anClaude = false, urteil = {};
+  var TITEL = "Magnesium-Reihe · Folge 1: Was du wirklich wissen musst", db = null, kom = null, anClaude = false, urteil = {};
   document.querySelectorAll("video").forEach(function (v) { v.addEventListener("play", function () {
     document.querySelectorAll("video").forEach(function (w) { if (w !== v) w.pause(); }); v.muted = false; }); });
   document.querySelectorAll(".video").forEach(function (k) {
@@ -130,4 +130,5 @@ Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt 
   }
 })();
 </script>
+
 <script>document.getElementById("kopier").addEventListener("click",function(){navigator.clipboard.writeText(document.getElementById("beschr").value).then(function(){document.getElementById("kopiert").textContent="Kopiert.";},function(){document.getElementById("kopiert").textContent="Kopieren ging nicht, bitte im Feld markieren.";});});</script>

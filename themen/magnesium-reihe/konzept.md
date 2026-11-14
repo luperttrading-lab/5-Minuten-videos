@@ -14,7 +14,7 @@ Formen bekommen eine Vergleichsfolge (3) und in jeder Anwendungsfolge einen Absc
 ## Reihenplan
 | Nr. | Folge | Ordner |
 |---|---|---|
-| 1 | Magnesium in 5 Minuten (Überblick, Landkarte der Reihe) | `01-ueberblick/` |
+| 1 | Magnesium: Was du wirklich wissen musst (Überblick, Landkarte der Reihe) | `01-ueberblick/` |
 | 2 | Morgens oder abends? | |
 | 3 | Welches Magnesium? Formen im Vergleich | |
 | 4 | Magnesiummangel erkennen (Zeichen, Bluttest) | |
@@ -53,4 +53,5 @@ Formen bekommen eine Vergleichsfolge (3) und in jeder Anwendungsfolge einen Absc
 
 ## Offene Nutzerentscheidungen (gestellt 14.11.)
 Entschieden 14.11.: 1 Variante C ja · 2 alte Videos „Magnesium“ und „Magnesium 2“ werden durch die Reihe ersetzt · 3 Erklärvideo ja ·
-4a Fazit greift Einstiegsfragen auf: ja · 4b Brückensatz zur nächsten Folge: ja · 4c Kommentarfrage: offen (Umsetzung erklärt).
+4a Fazit greift Einstiegsfragen auf: ja · 4b Brückensatz zur nächsten Folge: ja · 4c Kommentarfrage: keine.
+Titel Folge 1 (14.11.): „Magnesium: Was du wirklich wissen musst“ (ohne „5 Minuten“, Video 6:05).
