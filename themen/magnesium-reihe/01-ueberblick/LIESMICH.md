@@ -9,4 +9,8 @@ Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
 - Bilder: `bilder_bau.py`, 43 Szenen 5:4 + 12 Kacheln (k1–k6 Einstieg, r2–r7 Karte der Reihe) + Vorschaubild,
   787 + 6 Credits; 2 Prompts („transparent human body“) vom Filter abgelehnt und umformuliert. Alle angesehen.
 - Hörprobe: https://claude.ai/artifact/JD623ifE4cG9jvVS9qSSVg (11 Stellen im Abnahme-Kasten).
-- Offen: Entscheidung 4c (Kommentarfrage), Abnahme der Hörprobe, dann Rendern.
+- Hörprobe vom Nutzer am 14.11. abgenommen (11/11 „passt“), `abnahme.json` auf erledigt.
+- Gerendert 14.11.: `render.py szenen.json bilder/G/k1.jpg video.mp4`; Startbild-Zeile auf „Tageszeit: nie verglichen.“
+  gekürzt (längere Fassungen liefen ins Glas). Vorschau 720p/12 fps 13,1 MB, 1080p fürs Handy 48,3 MB (880k, zwei Durchgänge).
+- Vorschau-Seite: https://claude.ai/artifact/RT23abh5FpQbhjia7SUSib (mit Vorschaubild und Beschreibung).
+- Offen: Entscheidung 4c (Kommentarfrage, ein Satz in m8, ≈ 400 Zeichen Ton), Abnahme des Videos.

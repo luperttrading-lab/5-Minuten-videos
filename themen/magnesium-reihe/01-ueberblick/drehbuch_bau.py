@@ -61,7 +61,7 @@ SZENEN = [
   'hook_bild': 'thumbnail/bild_G.jpg', 'kacheln_ab': 2, 'hook_titel': 'Magnesium',
   'hook_zeilen': [{'t': 'Morgens oder abends?', 'wort': 'morgens'}, {'t': 'Citrat oder Bisglycinat?', 'wort': 'Zitrat'},  # wort = Sprechtext (Aussprache)
                   {'t': 'Brauchst du es überhaupt?', 'wort': 'überhaupt'},
-                  {'t': 'Die Tageszeit hat keine Studie verglichen.', 'wort': 'keine einzige', 'art': 'urteil'}],
+                  {'t': 'Tageszeit: nie verglichen.', 'wort': 'keine einzige', 'art': 'urteil'}],
   'kacheln': [('Wozu der Körper es braucht', 'k1', 'Körper'), ('Wie viel und woher', 'k2', 'woher'),
               ('Mangel: selten oder häufig?', 'k3', 'Mangel'), ('Präparate und Formen', 'k4', 'Präparate'),
               ('Wofür belegt, wofür nicht', 'k5', 'belegt'), ('Sicher einnehmen', 'k6', 'Einnahme')]},
