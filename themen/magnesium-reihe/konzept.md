@@ -5,7 +5,7 @@ allgemeiner Überblick. Evtl. eine Reihe von Einzelvideos über die Arten oder d
 interessanter ist und mehr Zuschauer interessiert. Mit den Videos sollte man alles zu Magnesium wissen.“
 Reihenkonzept aus der Hauptsitzung „Fünf-Minuten-Infovideo“ (PDF liegt beim Nutzer).
 
-## Ordnung: Variante C (Empfehlung, Nutzerentscheidung offen)
+## Ordnung: Variante C (Nutzerentscheidung 14.11.: „Variante c hört sich gut“)
 Nach Grundfragen und Anwendungen ordnen, nicht nach Arten. Messung 14.11. (YouTube-Suche, deutschsprachige Kanäle):
 größte Videos zu Einnahmezeitpunkt (bis 1,83 Mio. Aufrufe), Mangel/Symptome (1,05 Mio.), Überdosierung (0,72 Mio.),
 „welches Magnesium“ (0,58 Mio.), Blutdruck (0,44 Mio.); einzelne Formen deutsch kaum über 0,06 Mio.
@@ -52,6 +52,6 @@ Formen bekommen eine Vergleichsfolge (3) und in jeder Anwendungsfolge einen Absc
   Spätere Folgen bauen darauf auf und prüfen nur ihr Thema vertieft nach.
 
 ## Offene Nutzerentscheidungen (gestellt 14.11.)
-1. Variante C? 2. Alte Videos „Magnesium“/„Magnesium 2“ ersetzen oder stehen lassen, schon auf YouTube?
+1. ~~Variante C?~~ entschieden: ja. 2. Alte Videos „Magnesium“/„Magnesium 2“ ersetzen oder stehen lassen, schon auf YouTube?
 3. Erklärformat statt Ampel? 4. Testelemente: Fazit greift Einstiegsfragen wörtlich auf · Brückensatz zur nächsten Folge ·
 Kommentarfrage („Wofür nimmst du Magnesium?“) vor „Bis zum nächsten Video!“.
