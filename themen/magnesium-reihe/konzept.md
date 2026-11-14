@@ -52,6 +52,5 @@ Formen bekommen eine Vergleichsfolge (3) und in jeder Anwendungsfolge einen Absc
   Spätere Folgen bauen darauf auf und prüfen nur ihr Thema vertieft nach.
 
 ## Offene Nutzerentscheidungen (gestellt 14.11.)
-1. ~~Variante C?~~ entschieden: ja. 2. Alte Videos „Magnesium“/„Magnesium 2“ ersetzen oder stehen lassen, schon auf YouTube?
-3. Erklärformat statt Ampel? 4. Testelemente: Fazit greift Einstiegsfragen wörtlich auf · Brückensatz zur nächsten Folge ·
-Kommentarfrage („Wofür nimmst du Magnesium?“) vor „Bis zum nächsten Video!“.
+Entschieden 14.11.: 1 Variante C ja · 2 alte Videos „Magnesium“ und „Magnesium 2“ werden durch die Reihe ersetzt · 3 Erklärvideo ja ·
+4a Fazit greift Einstiegsfragen auf: ja · 4b Brückensatz zur nächsten Folge: ja · 4c Kommentarfrage: offen (Umsetzung erklärt).

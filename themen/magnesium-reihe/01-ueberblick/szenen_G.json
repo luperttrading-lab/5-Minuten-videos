@@ -36,7 +36,7 @@
     },
     {
      "t": "Citrat oder Bisglycinat?",
-     "wort": "Citrat"
+     "wort": "Zitrat"
     },
     {
      "t": "Brauchst du es überhaupt?",
@@ -126,6 +126,30 @@
    "shots": [
     {
      "bild": "bilder/G/m1a.jpg"
+    },
+    {
+     "bild": "bilder/G/m1b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m1c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m1d.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m1e.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/m1f.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/m1g.jpg",
+     "at": 4
     }
    ]
   },
@@ -177,6 +201,30 @@
    "shots": [
     {
      "bild": "bilder/G/m2a.jpg"
+    },
+    {
+     "bild": "bilder/G/m2b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m2c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m2d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/m2e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/m2f.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/m2g.jpg",
+     "at": 6
     }
    ]
   },
@@ -223,6 +271,30 @@
    "shots": [
     {
      "bild": "bilder/G/m3a.jpg"
+    },
+    {
+     "bild": "bilder/G/m3b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m3c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m3d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/m3e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/m3f.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/m3g.jpg",
+     "at": 6
     }
    ]
   },
@@ -267,6 +339,30 @@
    "shots": [
     {
      "bild": "bilder/G/m4a.jpg"
+    },
+    {
+     "bild": "bilder/G/m4b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m4c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m4d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/m4e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/m4f.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/m4g.jpg",
+     "at": 6
     }
    ]
   },
@@ -317,6 +413,26 @@
    "shots": [
     {
      "bild": "bilder/G/m5a.jpg"
+    },
+    {
+     "bild": "bilder/G/m5b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m5c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m5d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/m5e.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/m5f.jpg",
+     "at": 5
     }
    ]
   },
@@ -363,6 +479,22 @@
    "shots": [
     {
      "bild": "bilder/G/m6a.jpg"
+    },
+    {
+     "bild": "bilder/G/m6b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m6c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m6d.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/m6e.jpg",
+     "at": 4
     }
    ]
   },
@@ -403,6 +535,18 @@
    "shots": [
     {
      "bild": "bilder/G/m7a.jpg"
+    },
+    {
+     "bild": "bilder/G/m7b.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m7c.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m7d.jpg",
+     "at": 3
     }
    ]
   },
@@ -415,7 +559,6 @@
    "sentences": [
     "In den nächsten Folgen geht es um jede Frage einzeln: morgens oder abends, welche Formen, Mangel erkennen, die Obergrenze, Schlaf und Stress. Danach Krämpfe, Blutdruck, Migräne, Frauen und Lebensmittel.",
     "Als Nächstes: Warum hält sich der Rat, Magnesium abends zu nehmen, so hartnäckig?",
-    "Schreib uns in die Kommentare: Wofür nimmst du Magnesium?",
     "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
    ],
    "hervorheben_at": 0,

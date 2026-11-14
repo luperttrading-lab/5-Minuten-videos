@@ -59,7 +59,7 @@ SZENEN = [
                 'Du erfährst, wozu dein Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Präparate es gibt, wofür es belegt ist und worauf du bei der Einnahme achtest.'],
   'hervorheben_at': 2,
   'hook_bild': 'thumbnail/bild_G.jpg', 'kacheln_ab': 2, 'hook_titel': 'Magnesium',
-  'hook_zeilen': [{'t': 'Morgens oder abends?', 'wort': 'morgens'}, {'t': 'Citrat oder Bisglycinat?', 'wort': 'Citrat'},
+  'hook_zeilen': [{'t': 'Morgens oder abends?', 'wort': 'morgens'}, {'t': 'Citrat oder Bisglycinat?', 'wort': 'Zitrat'},  # wort = Sprechtext (Aussprache)
                   {'t': 'Brauchst du es überhaupt?', 'wort': 'überhaupt'},
                   {'t': 'Die Tageszeit hat keine Studie verglichen.', 'wort': 'keine einzige', 'art': 'urteil'}],
   'kacheln': [('Wozu der Körper es braucht', 'k1', 'Körper'), ('Wie viel und woher', 'k2', 'woher'),
@@ -155,7 +155,7 @@ SZENEN = [
  {'id': 'm8', 'layout': 'kacheln', 'kapitel': 'Die Reihe', 'kicker': 'Erklärvideo', 'headline': 'Alles über Magnesium: die Reihe',
   'sentences': ['In den nächsten Folgen geht es um jede Frage einzeln: morgens oder abends, welche Formen, Mangel erkennen, die Obergrenze, Schlaf und Stress. Danach Krämpfe, Blutdruck, Migräne, Frauen und Lebensmittel.',
                 'Als Nächstes: Warum hält sich der Rat, Magnesium abends zu nehmen, so hartnäckig?',
-                'Schreib uns in die Kommentare: Wofür nimmst du Magnesium?',
+                # Kommentarfrage (Entscheidung 4c) offen, Nutzer 14.11.: „weiß nicht genau, wie du es umsetzen willst“
                 ABSCHLUSS],
   'hervorheben_at': 0,
   'kacheln': [('Morgens oder abends?', 'r2', 'abends'), ('Welche Form?', 'r3', 'Formen'),
