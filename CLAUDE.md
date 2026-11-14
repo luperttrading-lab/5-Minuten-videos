@@ -158,6 +158,12 @@ Vorbilder: `themen/l-theanin/` (neuestes, mit Startbild), `themen/dmso/`, `theme
   Nutzers (geklonte Stimme „Lupert“) einchecken.
 
 ## Antworten an den Nutzer
+- **Veröffentlichen kostet ein Tippen** (gemessen 14.11.): `publish_files` und `declare_capabilities` des Artifact-Dienstes
+  fragen den Nutzer jedes Mal („Einmal erlauben“), auch im Modus Auto und trotz Freigabe in `.claude/settings.json` (Regel
+  des Servers, von uns nicht abschaltbar). Deshalb: je Runde höchstens **eine** Veröffentlichung mit allen Änderungen;
+  bestehende Seiten wiederverwenden, `declare_capabilities` nur beim allerersten Anlegen einer Seite; „erledigt“ in der
+  Hörprobe nur nachziehen, wenn ohnehin veröffentlicht wird; vor dem Veröffentlichen im Chat ankündigen, dass gleich eine
+  Rückfrage kommt.
 - Kurz halten und Bilder zeigen statt viel Text (Kontaktbogen, Stichbilder, Vorher/nachher).
 - **Videos nie als Datei in den Chat** (Nutzerwunsch 02.11.: landen auf dem Handy, belegen Speicher, spielen dort
   stumm). Stattdessen je Thema eine feste Vorschau-Seite: `python3 ../../werkzeug/vorschau.py vorschau.json vorschau`,
