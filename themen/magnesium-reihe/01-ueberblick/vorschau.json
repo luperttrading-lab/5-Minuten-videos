@@ -1,12 +1,20 @@
 {
  "titel": "Magnesium-Reihe · Folge 1: Was du wirklich wissen musst",
- "aufgabe": "Neue Fassung oben: Das erste Bild ist jetzt wie das Vorschaubild, ohne Zierstrich (deine Wahl 15.11.). Bitte ansehen: „passt“ oder „ändern“.",
+ "aufgabe": "Neue Fassung oben: Folge 1 umgebaut (15.11.), Hörprobe von dir abgenommen. Bitte ansehen: „passt“ oder „ändern“.",
  "videos": [
+  {
+   "datei": "vorschau_G3.mp4",
+   "titel": "Folge 1 · Umbau",
+   "stand": "15.11., 14:40",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Neue Reihenfolge nach Nachfrage: Brauchst du es? → Wem es hilft → Wende Wadenkrämpfe → Welche Form? mit Bittersalz-Geschichte → Sicher einnehmen → Essen → Fazit → Karte als offene Fragen. 6:13."
+  },
   {
    "datei": "vorschau_G2.mp4",
    "titel": "Folge 1 · Startbild wie Vorschaubild",
    "stand": "15.11., 09:29",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 1,
    "notiz": "Erstes Bild = Vorschaubild („Magnesium“ terrakotta, „Was du wirklich wissen musst“), beim ersten gesprochenen Wort weicht der Untertitel den Fragen. Kein Zierstrich im Startbild, in den Szenen bleibt er. Rest unverändert."
   },

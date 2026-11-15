@@ -125,7 +125,7 @@ SZENEN = [
                 'Gut lösliche Formen wie Citrat werden etwas besser aufgenommen als Oxid. In einer kleinen Herstellerstudie waren es nach einer Tablette aber nur etwa vierzehn Milligramm mehr im Urin.',
                 'Bisglycinat schnitt in den wenigen Vergleichen nicht besser ab als einfache Formen. Für Taurat, Malat oder Mischungen gibt es keine Vergleichsstudien am Menschen.',
                 'Tipp: Ein teurer Name ist kein Beleg. Schau lieber, wie viele Milligramm Magnesium eine Portion enthält.'],
-  'bullets': [B('Bittersalz: seit 1618 bekannt', 1), B('Grenze: Durchfall', 3), B('Citrat etwas besser als Oxid', 4),
+  'bullets': [B('Bittersalz: Epsom, überliefert 1618', 1), B('Grenze: Durchfall', 3), B('Citrat etwas besser als Oxid', 4),
               B('Spezialformen: kaum verglichen', 5)],
   'quellen': ['fuller1662', 'black1756', 'davy1808', 'gi_bittersalz', 'kappeler2017', 'pardo2021', 'schuette1994', 'pajuelo2024'],
   'bilder': [('m4x', None), ('m4y', 1), ('m4z', 2), ('m4f', 3), ('m4b', 4), ('m4e', 5), ('m4g', 6)]},
@@ -194,8 +194,8 @@ def bauen(stil):
     return {'tts': 'elevenlabs', 'voice_id': 'NBqeXKdZHweef6y0B67V', 'model': 'eleven_v4', 'tempo': 1.05,
             'aussprache': AUSSPRACHE,
             'titel': 'Magnesium: Was du wirklich wissen musst', 'stil': stil,
-            'untertitel': 'Folge 1 der Magnesium-Reihe: wozu der Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Formen es gibt, wofür es belegt ist und worauf du bei der Einnahme achten solltest.',
-            'fuss': 'Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.',
+            'untertitel': 'Folge 1 der Magnesium-Reihe: ob du Magnesium überhaupt brauchst, wem es hilft und wem nicht, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.',
+            'fuss': 'Unabhängig: keine Sponsoren, keine Affiliate-Links, keine eigenen Produkte. Recherche-Stand: November 2026. Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.',
             'scenes': szenen, 'quellen': Q}
 
 

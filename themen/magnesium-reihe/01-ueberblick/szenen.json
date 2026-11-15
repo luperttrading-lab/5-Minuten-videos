@@ -11,8 +11,8 @@
  },
  "titel": "Magnesium: Was du wirklich wissen musst",
  "stil": "G",
- "untertitel": "Folge 1 der Magnesium-Reihe: wozu der Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Formen es gibt, wofür es belegt ist und worauf du bei der Einnahme achten solltest.",
- "fuss": "Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.",
+ "untertitel": "Folge 1 der Magnesium-Reihe: ob du Magnesium überhaupt brauchst, wem es hilft und wem nicht, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.",
+ "fuss": "Unabhängig: keine Sponsoren, keine Affiliate-Links, keine eigenen Produkte. Recherche-Stand: November 2026. Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.",
  "scenes": [
   {
    "id": "m0",
@@ -207,7 +207,11 @@
    ],
    "shots": [
     {
-     "bild": "bilder/G/m3g.jpg"
+     "bild": "bilder/G/m2x.jpg"
+    },
+    {
+     "bild": "bilder/G/m3g.jpg",
+     "at": 1
     },
     {
      "bild": "bilder/G/m1e.jpg",
@@ -277,6 +281,10 @@
      "at": 1
     },
     {
+     "bild": "bilder/G/m3y.jpg",
+     "at": 2
+    },
+    {
      "bild": "bilder/G/m5e.jpg",
      "at": 3
     },
@@ -308,7 +316,7 @@
    ],
    "bullets": [
     {
-     "t": "Bittersalz: seit 1618 bekannt",
+     "t": "Bittersalz: Epsom, überliefert 1618",
      "at": 1
     },
     {
@@ -336,7 +344,19 @@
    ],
    "shots": [
     {
-     "bild": "bilder/G/m4f.jpg"
+     "bild": "bilder/G/m4x.jpg"
+    },
+    {
+     "bild": "bilder/G/m4y.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m4z.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m4f.jpg",
+     "at": 3
     },
     {
      "bild": "bilder/G/m4b.jpg",

@@ -21,3 +21,4 @@ Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
   Altes Drehbuch im Git-Verlauf. Ton 6:13, 826 Wörter, ElevenLabs ≈ 2.440 Zeichen berechnet; 7 neue Bilder 200,5 Credits.
   A/B-Test von Titeln und Vorschaubildern: später (Nutzer 15.11.). Keine lange Fassung (Nutzer: keine Werbeunterbrechungen).
   Beschreibung künftig: „Keine Sponsoren, keine Affiliate-Links, keine eigenen Produkte.“
+- 15.11. nachmittags: Hörprobe des Umbaus abgenommen (9/9), gerendert (6:13), Stichpunkt „Bittersalz: Epsom, überliefert 1618“, Beschreibung mit „Unabhängig: keine Sponsoren …“ und neuem Untertitel. Vorschau-Seite oben „Folge 1 · Umbau“, 1080p 49,2 MB.

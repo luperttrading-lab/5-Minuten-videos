@@ -204,7 +204,11 @@
    ],
    "shots": [
     {
-     "bild": "bilder/G/m3g.jpg"
+     "bild": "bilder/G/m2x.jpg"
+    },
+    {
+     "bild": "bilder/G/m3g.jpg",
+     "at": 1
     },
     {
      "bild": "bilder/G/m1e.jpg",
@@ -274,6 +278,10 @@
      "at": 1
     },
     {
+     "bild": "bilder/G/m3y.jpg",
+     "at": 2
+    },
+    {
      "bild": "bilder/G/m5e.jpg",
      "at": 3
     },
@@ -311,7 +319,7 @@
    ],
    "bullets": [
     {
-     "t": "Bittersalz: seit 1618 bekannt",
+     "t": "Bittersalz: Epsom, überliefert 1618",
      "at": 1
     },
     {
@@ -339,7 +347,19 @@
    ],
    "shots": [
     {
-     "bild": "bilder/G/m4f.jpg"
+     "bild": "bilder/G/m4x.jpg"
+    },
+    {
+     "bild": "bilder/G/m4y.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m4z.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m4f.jpg",
+     "at": 3
     },
     {
      "bild": "bilder/G/m4b.jpg",
