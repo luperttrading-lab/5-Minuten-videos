@@ -27,3 +27,4 @@ Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
   Neu in `render.py`: `kapitel_nr` je Szene → Lücken im Fortschrittsbalken; `kacheln_ab` = Satzzahl → Startbild bis
   Szenenende, keine Kacheln; Vorschaubild-Stil zoomt nur 6 %. Kicker jetzt „Kapitel n · …“. ElevenLabs 308 Zeichen.
 - 15.11. abends: Nutzer wählt Startvariante A (Übersicht gesprochen). Bluttest-Satz präzisiert („niedriger Wert zeigt Mangel an, normaler schließt nicht aus, kein besserer Test“), Tipp ohne „Wert prüfen lassen“. Ton 6:25, 467 Zeichen. Hörprobe mit 2 Stellen.
+- 15.11. abends, Notizen des Nutzers: Start verrät die Tageszeit-Antwort nicht mehr (Verweis aufs fünfte Kapitel, rote Zeile „Eine davon: nie untersucht.“); Bluttest: „Für Gesunde bringt der Bluttest deshalb wenig …“. Ton 6:30, 670 Zeichen.

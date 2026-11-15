@@ -23,7 +23,7 @@
    "sentences": [
     "Magnesium: Was du wirklich wissen musst.",
     "Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?",
-    "Überraschend: Welche Tageszeit besser ist, hat bis heute keine einzige Studie verglichen.",
+    "Überraschend: Eine dieser Fragen hat bis heute keine einzige Studie untersucht. Welche, erfährst du im fünften Kapitel.",
     "Wem hilft Magnesium wirklich, und wem nicht? Wir klären, ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt."
    ],
    "hervorheben_at": 3,
@@ -49,7 +49,7 @@
      "wort": "überhaupt"
     },
     {
-     "t": "Tageszeit: nie verglichen.",
+     "t": "Eine davon: nie untersucht.",
      "wort": "keine einzige",
      "art": "urteil"
     }
@@ -101,8 +101,8 @@
     },
     "Einen echten Mangel bekommen vor allem Menschen mit bestimmten Medikamenten oder Krankheiten: Magenschutz-Tabletten über Jahre, manche Entwässerungstabletten, Alkoholkrankheit, schlecht eingestellter Diabetes oder anhaltender Durchfall.",
     "Und der Bluttest? In deinem Körper stecken etwa vierundzwanzig Gramm Magnesium, so schwer wie drei Zwei-Euro-Münzen. Im Blut ist davon weniger als ein Prozent.",
-    "Ein niedriger Wert zeigt einen echten Mangel an. Ein normaler Wert schließt knappe Vorräte aber nicht aus. Einen besseren Test gibt es bisher nicht.",
-    "Tipp: Gehörst du zu einer dieser Gruppen, sprich mit Arzt oder Ärztin darüber, nicht nur über den Blutwert."
+    "Für Gesunde bringt der Bluttest deshalb wenig: Ein normaler Wert schließt knappe Vorräte nicht aus, und einen besseren Test gibt es nicht. Nur ein niedriger Wert zeigt einen echten Mangel an, und der ist bei Gesunden selten.",
+    "Tipp: Gehörst du zu einer dieser Gruppen, sprich mit Arzt oder Ärztin darüber."
    ],
    "bullets": [
     {
@@ -122,7 +122,7 @@
      "at": 4
     },
     {
-     "t": "Bluttest: findet Mangel, schließt ihn nicht aus",
+     "t": "Bluttest: für Gesunde wenig hilfreich",
      "at": 5
     }
    ],
