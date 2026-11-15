@@ -1,42 +1,7 @@
 {
- "seit": "Umbau vom 15.11.: alle Szenen neu (neue Reihenfolge, kein Inhaltsverzeichnis, Wende bei den Wadenkrämpfen, Bittersalz-Geschichte). Bitte jede Szene einmal ganz anhören.",
+ "seit": "Durchgang vom 15.11. nachmittags (Umbau abgenommen). Neu: Startvariante A und der Bluttest-Satz.",
  "stellen": [
-  {
-   "szene": "m0",
-   "was": "Einstieg: Titel, drei Fragen, Befund, neue Leitfrage „Wem hilft Magnesium wirklich?“"
-  },
-  {
-   "szene": "m1",
-   "was": "Brauchst du es überhaupt? (Mangel, Bedarf, Risikogruppen, Bluttest mit den 24 Gramm)"
-  },
-  {
-   "szene": "m2",
-   "was": "Wem es hilft (nachgewiesener Mangel, Blutdruck, Migräne, Eklampsie)"
-  },
-  {
-   "szene": "m3",
-   "was": "Wende: Wadenkrämpfe, Schlaf, „Muskelfunktion“ auf der Packung"
-  },
-  {
-   "szene": "m4",
-   "was": "Welche Form? mit Bittersalz-Geschichte („Henry Wicker“, „Epsom“, „sechzehnhundertachtzehn“)"
-  },
-  {
-   "szene": "m5",
-   "was": "Sicher einnehmen"
-  },
-  {
-   "szene": "m6",
-   "was": "Aus dem Essen"
-  },
-  {
-   "szene": "m7",
-   "was": "Fazit: erst wem es hilft, dann die Grenzen"
-  },
-  {
-   "szene": "m8",
-   "was": "Karte der Reihe als offene Fragen"
-  }
- ],
- "erledigt": "✓ Alles abgenommen, nichts offen (15.11., Umbau). Endfassung gerendert, siehe Vorschau-Seite."
+  {"szene": "m0", "was": "Start A: Übersicht gesprochen, Kacheln leuchten beim Wort (deine Wahl)"},
+  {"suche": "Ein niedriger Wert zeigt", "was": "Bluttest neu: „Ein niedriger Wert zeigt einen echten Mangel an. Ein normaler … schließt nicht aus.“ und neuer Tipp"}
+ ]
 }

@@ -26,3 +26,4 @@ Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
   `szenen_startA/B/C.json`, je 48 s (`render.py … --bis 48`), Seite https://claude.ai/artifact/D764YLpaH2aMtENdawPWWH.
   Neu in `render.py`: `kapitel_nr` je Szene → Lücken im Fortschrittsbalken; `kacheln_ab` = Satzzahl → Startbild bis
   Szenenende, keine Kacheln; Vorschaubild-Stil zoomt nur 6 %. Kicker jetzt „Kapitel n · …“. ElevenLabs 308 Zeichen.
+- 15.11. abends: Nutzer wählt Startvariante A (Übersicht gesprochen). Bluttest-Satz präzisiert („niedriger Wert zeigt Mangel an, normaler schließt nicht aus, kein besserer Test“), Tipp ohne „Wert prüfen lassen“. Ton 6:25, 467 Zeichen. Hörprobe mit 2 Stellen.

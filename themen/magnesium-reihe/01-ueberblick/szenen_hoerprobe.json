@@ -5,8 +5,8 @@
  "tempo": 1.05,
  "titel": "Magnesium: Was du wirklich wissen musst",
  "stil": "G",
- "untertitel": "Folge 1 der Magnesium-Reihe: wozu der Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Formen es gibt, wofür es belegt ist und worauf du bei der Einnahme achten solltest.",
- "fuss": "Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.",
+ "untertitel": "Folge 1 der Magnesium-Reihe: ob du Magnesium überhaupt brauchst, wem es hilft und wem nicht, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.",
+ "fuss": "Unabhängig: keine Sponsoren, keine Affiliate-Links, keine eigenen Produkte. Recherche-Stand: November 2026. Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.",
  "scenes": [
   {
    "id": "m0",
@@ -21,7 +21,7 @@
      "say": "Morgens oder abends? Zitrat oder Bisglyzinat? Und brauchst du es überhaupt?"
     },
     "Überraschend: Welche Tageszeit besser ist, hat bis heute keine einzige Studie verglichen.",
-    "Die wichtigere Frage ist eine andere: Wem hilft Magnesium wirklich, und wem nicht?"
+    "Wem hilft Magnesium wirklich, und wem nicht? Wir klären, ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt."
    ],
    "hervorheben_at": 3,
    "hook_bild": "thumbnail/bild_G.jpg",
@@ -55,38 +55,39 @@
     {
      "t": "Brauchst du es überhaupt?",
      "bild": "bilder/G/k3.jpg",
-     "wort": null
+     "wort": "Wir klären"
     },
     {
      "t": "Wem es hilft",
      "bild": "bilder/G/k7.jpg",
-     "wort": null
+     "wort": "wem es hilft"
     },
     {
      "t": "Wo es nicht hilft",
      "bild": "bilder/G/k8.jpg",
-     "wort": null
+     "wort": "wo es nicht"
     },
     {
      "t": "Welche Form?",
      "bild": "bilder/G/k4.jpg",
-     "wort": null
+     "wort": "welche Form"
     },
     {
      "t": "Sicher einnehmen",
      "bild": "bilder/G/k6.jpg",
-     "wort": null
+     "wort": "sicher"
     },
     {
      "t": "Aus dem Essen",
      "bild": "bilder/G/k2.jpg",
-     "wort": null
+     "wort": "Essen"
     }
    ]
   },
   {
    "id": "m1",
-   "kicker": "Mangel",
+   "kapitel_nr": 1,
+   "kicker": "Kapitel 1 · Mangel",
    "headline": "Brauchst du es überhaupt?",
    "sentences": [
     "Oft heißt es, die meisten Menschen hätten zu wenig Magnesium. Eine Quelle dafür gibt es nicht.",
@@ -97,8 +98,8 @@
     },
     "Einen echten Mangel bekommen vor allem Menschen mit bestimmten Medikamenten oder Krankheiten: Magenschutz-Tabletten über Jahre, manche Entwässerungstabletten, Alkoholkrankheit, schlecht eingestellter Diabetes oder anhaltender Durchfall.",
     "Und der Bluttest? In deinem Körper stecken etwa vierundzwanzig Gramm Magnesium, so schwer wie drei Zwei-Euro-Münzen. Im Blut ist davon weniger als ein Prozent.",
-    "Ein normaler Wert schließt knappe Vorräte deshalb nicht sicher aus. Für einen echten Mangel ist er trotzdem der übliche Test.",
-    "Tipp: Gehörst du zu einer dieser Gruppen, lass deinen Wert von Arzt oder Ärztin prüfen."
+    "Ein niedriger Wert zeigt einen echten Mangel an. Ein normaler Wert schließt knappe Vorräte aber nicht aus. Einen besseren Test gibt es bisher nicht.",
+    "Tipp: Gehörst du zu einer dieser Gruppen, sprich mit Arzt oder Ärztin darüber, nicht nur über den Blutwert."
    ],
    "bullets": [
     {
@@ -118,8 +119,8 @@
      "at": 4
     },
     {
-     "t": "Tipp: Wert prüfen lassen",
-     "at": 6
+     "t": "Bluttest: findet Mangel, schließt ihn nicht aus",
+     "at": 5
     }
    ],
    "quellen": [
@@ -165,7 +166,8 @@
   },
   {
    "id": "m2",
-   "kicker": "Studienlage",
+   "kapitel_nr": 2,
+   "kicker": "Kapitel 2 · Studienlage",
    "headline": "Wem es hilft",
    "sentences": [
     "Wem hilft Magnesium also wirklich?",
@@ -234,7 +236,8 @@
   },
   {
    "id": "m3",
-   "kicker": "Die Wende",
+   "kapitel_nr": 3,
+   "kicker": "Kapitel 3 · Die Wende",
    "headline": "Wo es nicht hilft",
    "sentences": [
     "Und wofür nehmen es die meisten? Gegen Wadenkrämpfe. Viele berichten, dass es ihnen hilft.",
@@ -297,7 +300,8 @@
   },
   {
    "id": "m4",
-   "kicker": "Im Regal",
+   "kapitel_nr": 4,
+   "kicker": "Kapitel 4 · Im Regal",
    "headline": "Welche Form?",
    "sentences": [
     "Die älteste Magnesium-Arznei ist ein Abführmittel.",
@@ -377,7 +381,8 @@
   },
   {
    "id": "m5",
-   "kicker": "Vorsicht",
+   "kapitel_nr": 5,
+   "kicker": "Kapitel 5 · Vorsicht",
    "headline": "Sicher einnehmen",
    "sentences": [
     {
@@ -439,7 +444,8 @@
   },
   {
    "id": "m6",
-   "kicker": "Zufuhr",
+   "kapitel_nr": 6,
+   "kicker": "Kapitel 6 · Zufuhr",
    "headline": "Aus dem Essen",
    "sentences": [
     "Viel Magnesium steckt in Kernen, Nüssen, Haferflocken, Vollkorn und Hülsenfrüchten. Eine Handvoll Sonnenblumenkerne bringt etwa hundert Milligramm.",
@@ -495,6 +501,7 @@
   },
   {
    "id": "m7",
+   "kapitel_nr": "fazit",
    "kapitel": "Fazit",
    "kicker": "Fazit",
    "headline": "Kurz gesagt",

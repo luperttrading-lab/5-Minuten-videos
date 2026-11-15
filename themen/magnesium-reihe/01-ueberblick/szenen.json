@@ -24,7 +24,7 @@
     "Magnesium: Was du wirklich wissen musst.",
     "Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?",
     "Überraschend: Welche Tageszeit besser ist, hat bis heute keine einzige Studie verglichen.",
-    "Die wichtigere Frage ist eine andere: Wem hilft Magnesium wirklich, und wem nicht?"
+    "Wem hilft Magnesium wirklich, und wem nicht? Wir klären, ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt."
    ],
    "hervorheben_at": 3,
    "hook_bild": "thumbnail/bild_G.jpg",
@@ -58,32 +58,32 @@
     {
      "t": "Brauchst du es überhaupt?",
      "bild": "bilder/G/k3.jpg",
-     "wort": null
+     "wort": "Wir klären"
     },
     {
      "t": "Wem es hilft",
      "bild": "bilder/G/k7.jpg",
-     "wort": null
+     "wort": "wem es hilft"
     },
     {
      "t": "Wo es nicht hilft",
      "bild": "bilder/G/k8.jpg",
-     "wort": null
+     "wort": "wo es nicht"
     },
     {
      "t": "Welche Form?",
      "bild": "bilder/G/k4.jpg",
-     "wort": null
+     "wort": "welche Form"
     },
     {
      "t": "Sicher einnehmen",
      "bild": "bilder/G/k6.jpg",
-     "wort": null
+     "wort": "sicher"
     },
     {
      "t": "Aus dem Essen",
      "bild": "bilder/G/k2.jpg",
-     "wort": null
+     "wort": "Essen"
     }
    ]
   },
@@ -101,8 +101,8 @@
     },
     "Einen echten Mangel bekommen vor allem Menschen mit bestimmten Medikamenten oder Krankheiten: Magenschutz-Tabletten über Jahre, manche Entwässerungstabletten, Alkoholkrankheit, schlecht eingestellter Diabetes oder anhaltender Durchfall.",
     "Und der Bluttest? In deinem Körper stecken etwa vierundzwanzig Gramm Magnesium, so schwer wie drei Zwei-Euro-Münzen. Im Blut ist davon weniger als ein Prozent.",
-    "Ein normaler Wert schließt knappe Vorräte deshalb nicht sicher aus. Für einen echten Mangel ist er trotzdem der übliche Test.",
-    "Tipp: Gehörst du zu einer dieser Gruppen, lass deinen Wert von Arzt oder Ärztin prüfen."
+    "Ein niedriger Wert zeigt einen echten Mangel an. Ein normaler Wert schließt knappe Vorräte aber nicht aus. Einen besseren Test gibt es bisher nicht.",
+    "Tipp: Gehörst du zu einer dieser Gruppen, sprich mit Arzt oder Ärztin darüber, nicht nur über den Blutwert."
    ],
    "bullets": [
     {
@@ -122,8 +122,8 @@
      "at": 4
     },
     {
-     "t": "Tipp: Wert prüfen lassen",
-     "at": 6
+     "t": "Bluttest: findet Mangel, schließt ihn nicht aus",
+     "at": 5
     }
    ],
    "quellen": [

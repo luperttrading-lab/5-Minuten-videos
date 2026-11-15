@@ -65,17 +65,17 @@ SZENEN = [
   'sentences': ['Magnesium: Was du wirklich wissen musst.',  # Nutzer 15.11.: Titel des Vorschaubilds gesprochen
                 'Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?',
                 'Überraschend: Welche Tageszeit besser ist, hat bis heute keine einzige Studie verglichen.',
-                'Die wichtigere Frage ist eine andere: Wem hilft Magnesium wirklich, und wem nicht?'],
+                'Wem hilft Magnesium wirklich, und wem nicht? Wir klären, ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.'],  # Nutzer 15.11.: Startvariante A
   'hervorheben_at': 3,
   'hook_bild': 'thumbnail/bild_G.jpg', 'kacheln_ab': 3, 'hook_titel': 'Magnesium',
   'hook_stil': 'vorschaubild', 'hook_untertitel': ['Was du wirklich', 'wissen musst'],  # Nutzer 15.11.: erstes Bild = Vorschaubild, ohne Zierstrich
   'hook_zeilen': [{'t': 'Morgens oder abends?', 'wort': 'Morgens'}, {'t': 'Citrat oder Bisglycinat?', 'wort': 'Zitrat'},  # wort = Sprechtext (Aussprache)
                   {'t': 'Brauchst du es überhaupt?', 'wort': 'überhaupt'},
                   {'t': 'Tageszeit: nie verglichen.', 'wort': 'keine einzige', 'art': 'urteil'}],
-  # Kacheln nur zeigen, kein gesprochenes Inhaltsverzeichnis (Umbau 15.11.): ohne Wort leuchten sie im Satz 3 nacheinander
-  'kacheln': [('Brauchst du es überhaupt?', 'k3', None), ('Wem es hilft', 'k7', None),
-              ('Wo es nicht hilft', 'k8', None), ('Welche Form?', 'k4', None),
-              ('Sicher einnehmen', 'k6', None), ('Aus dem Essen', 'k2', None)]},
+  # Startvariante A (Nutzer 15.11.): Übersicht gesprochen, jede Kachel leuchtet beim Wort
+  'kacheln': [('Brauchst du es überhaupt?', 'k3', 'Wir klären'), ('Wem es hilft', 'k7', 'wem es hilft'),
+              ('Wo es nicht hilft', 'k8', 'wo es nicht'), ('Welche Form?', 'k4', 'welche Form'),
+              ('Sicher einnehmen', 'k6', 'sicher'), ('Aus dem Essen', 'k2', 'Essen')]},
 
  {'id': 'm1', 'kapitel_nr': 1, 'kicker': 'Kapitel 1 · Mangel', 'headline': 'Brauchst du es überhaupt?',
   'sentences': ['Oft heißt es, die meisten Menschen hätten zu wenig Magnesium. Eine Quelle dafür gibt es nicht.',
@@ -84,10 +84,10 @@ SZENEN = [
                   'Die Deutsche Gesellschaft für Ernährung schätzt den Bedarf auf etwa dreihundert Milligramm für Frauen und dreihundertfünfzig für Männer.'),
                 'Einen echten Mangel bekommen vor allem Menschen mit bestimmten Medikamenten oder Krankheiten: Magenschutz-Tabletten über Jahre, manche Entwässerungstabletten, Alkoholkrankheit, schlecht eingestellter Diabetes oder anhaltender Durchfall.',
                 'Und der Bluttest? In deinem Körper stecken etwa vierundzwanzig Gramm Magnesium, so schwer wie drei Zwei-Euro-Münzen. Im Blut ist davon weniger als ein Prozent.',
-                'Ein normaler Wert schließt knappe Vorräte deshalb nicht sicher aus. Für einen echten Mangel ist er trotzdem der übliche Test.',
-                'Tipp: Gehörst du zu einer dieser Gruppen, lass deinen Wert von Arzt oder Ärztin prüfen.'],
+                'Ein niedriger Wert zeigt einen echten Mangel an. Ein normaler Wert schließt knappe Vorräte aber nicht aus. Einen besseren Test gibt es bisher nicht.',
+                'Tipp: Gehörst du zu einer dieser Gruppen, sprich mit Arzt oder Ärztin darüber, nicht nur über den Blutwert.'],
   'bullets': [B('„Die meisten haben Mangel“: keine Quelle', 0), B('Bedarf: Frauen 300, Männer 350 mg', 2),
-              B('Risiko: Medikamente, Krankheiten', 3), B('Im Blut: unter 1 Prozent', 4), B('Tipp: Wert prüfen lassen', 6)],
+              B('Risiko: Medikamente, Krankheiten', 3), B('Im Blut: unter 1 Prozent', 4), B('Bluttest: findet Mangel, schließt ihn nicht aus', 5)],
   'quellen': ['mri2008', 'dge_faq', 'dge_web', 'ahmed2019', 'liamis2021', 'srinutta2019', 'jahnen2012', 'rosanoff2022', 'debaaij2022'],
   'bilder': [('m3a', None), ('m3c', 1), ('m2b', 2), ('m3e', 3), ('m1a', 4), ('m3f', 5), ('m3g', 6)]},
 
