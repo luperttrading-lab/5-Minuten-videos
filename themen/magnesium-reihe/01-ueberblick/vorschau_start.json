@@ -1,0 +1,12 @@
+{
+ "titel": "Magnesium Folge 1 · Drei Varianten für den Start",
+ "aufgabe": "Je die ersten 48 Sekunden, mit Ton. Alle drei haben jetzt Kapitelnummern („Kapitel 1 · Mangel“) und einen Fortschrittsbalken mit Lücken an den Kapitelgrenzen. Bitte bei deiner Wahl „passt“ tippen, bei den anderen „ändern“ mit Notiz, wenn dir etwas auffällt.",
+ "videos": [
+  {"datei": "startv_A.mp4", "titel": "A · Übersicht gesprochen (wie früher)", "stand": "15.11., 17:00", "pruefen": true, "poster_bei": 20,
+   "notiz": "Nach dem Befund: „Wem hilft Magnesium wirklich, und wem nicht? Wir klären, ob du es überhaupt brauchst, wem es hilft, …“ Jede Kachel leuchtet auf, wenn sie genannt wird. Kapitel 1 ab 0:28."},
+  {"datei": "startv_B.mp4", "titel": "B · Ohne Übersicht", "stand": "15.11., 17:00", "pruefen": true, "poster_bei": 18,
+   "notiz": "Keine Kacheln am Anfang. Die Leitfrage läuft noch über dem Startbild, dann direkt Kapitel 1 (ab 0:22). Orientierung geben Kapitelnummern und der eingeteilte Balken; die Übersicht kommt nur am Ende als Karte der Reihe. Kürzester Start."},
+  {"datei": "startv_C.mp4", "titel": "C · Übersicht kurz und ruhig", "stand": "15.11., 17:00", "pruefen": true, "poster_bei": 22,
+   "notiz": "Nach der Leitfrage: „Die Antwort in sechs Schritten.“ Die sechs Kacheln stehen kurz still da, ohne Aufleuchten, dann Kapitel 1 (ab 0:24)."}
+ ]
+}

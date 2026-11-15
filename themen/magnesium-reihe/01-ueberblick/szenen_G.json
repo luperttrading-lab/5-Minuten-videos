@@ -89,7 +89,8 @@
   },
   {
    "id": "m1",
-   "kicker": "Mangel",
+   "kapitel_nr": 1,
+   "kicker": "Kapitel 1 · Mangel",
    "headline": "Brauchst du es überhaupt?",
    "sentences": [
     "Oft heißt es, die meisten Menschen hätten zu wenig Magnesium. Eine Quelle dafür gibt es nicht.",
@@ -168,7 +169,8 @@
   },
   {
    "id": "m2",
-   "kicker": "Studienlage",
+   "kapitel_nr": 2,
+   "kicker": "Kapitel 2 · Studienlage",
    "headline": "Wem es hilft",
    "sentences": [
     "Wem hilft Magnesium also wirklich?",
@@ -237,7 +239,8 @@
   },
   {
    "id": "m3",
-   "kicker": "Die Wende",
+   "kapitel_nr": 3,
+   "kicker": "Kapitel 3 · Die Wende",
    "headline": "Wo es nicht hilft",
    "sentences": [
     "Und wofür nehmen es die meisten? Gegen Wadenkrämpfe. Viele berichten, dass es ihnen hilft.",
@@ -300,7 +303,8 @@
   },
   {
    "id": "m4",
-   "kicker": "Im Regal",
+   "kapitel_nr": 4,
+   "kicker": "Kapitel 4 · Im Regal",
    "headline": "Welche Form?",
    "sentences": [
     "Die älteste Magnesium-Arznei ist ein Abführmittel.",
@@ -374,7 +378,8 @@
   },
   {
    "id": "m5",
-   "kicker": "Vorsicht",
+   "kapitel_nr": 5,
+   "kicker": "Kapitel 5 · Vorsicht",
    "headline": "Sicher einnehmen",
    "sentences": [
     {
@@ -436,7 +441,8 @@
   },
   {
    "id": "m6",
-   "kicker": "Zufuhr",
+   "kapitel_nr": 6,
+   "kicker": "Kapitel 6 · Zufuhr",
    "headline": "Aus dem Essen",
    "sentences": [
     "Viel Magnesium steckt in Kernen, Nüssen, Haferflocken, Vollkorn und Hülsenfrüchten. Eine Handvoll Sonnenblumenkerne bringt etwa hundert Milligramm.",
@@ -492,6 +498,7 @@
   },
   {
    "id": "m7",
+   "kapitel_nr": "fazit",
    "kapitel": "Fazit",
    "kicker": "Fazit",
    "headline": "Kurz gesagt",

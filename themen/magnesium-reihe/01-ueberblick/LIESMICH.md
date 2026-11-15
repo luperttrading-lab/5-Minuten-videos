@@ -22,3 +22,7 @@ Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
   A/B-Test von Titeln und Vorschaubildern: später (Nutzer 15.11.). Keine lange Fassung (Nutzer: keine Werbeunterbrechungen).
   Beschreibung künftig: „Keine Sponsoren, keine Affiliate-Links, keine eigenen Produkte.“
 - 15.11. nachmittags: Hörprobe des Umbaus abgenommen (9/9), gerendert (6:13), Stichpunkt „Bittersalz: Epsom, überliefert 1618“, Beschreibung mit „Unabhängig: keine Sponsoren …“ und neuem Untertitel. Vorschau-Seite oben „Folge 1 · Umbau“, 1080p 49,2 MB.
+- 15.11. abends: Startvarianten A (Übersicht gesprochen), B (ohne Übersicht), C (Übersicht kurz, ruhig) als
+  `szenen_startA/B/C.json`, je 48 s (`render.py … --bis 48`), Seite https://claude.ai/artifact/D764YLpaH2aMtENdawPWWH.
+  Neu in `render.py`: `kapitel_nr` je Szene → Lücken im Fortschrittsbalken; `kacheln_ab` = Satzzahl → Startbild bis
+  Szenenende, keine Kacheln; Vorschaubild-Stil zoomt nur 6 %. Kicker jetzt „Kapitel n · …“. ElevenLabs 308 Zeichen.

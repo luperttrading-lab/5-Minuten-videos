@@ -587,10 +587,13 @@ class Scene:
         return img
 
 
-def progress(arr, t, total):
+def progress(arr, t, total, grenzen=()):
     x = int(W * min(t / total, 1))
     arr[H - 6:, :] = TRACK
     arr[H - 6:, :x] = ACCENT
+    for g in grenzen:                                  # Kapitelgrenzen als Lücken (Szenen mit `kapitel_nr`, 15.11.)
+        gx = int(W * min(g / total, 1))
+        arr[H - 6:, max(gx - 3, 0):gx + 3] = PAPER
 
 
 class AgendaScene:
@@ -610,7 +613,8 @@ class AgendaScene:
         self.lg = st[lg][0] if lg is not None else None
         # Hook (CLAUDE.md, 02.11.): bis Satz `kacheln_ab` ein Vollbild (`hook_bild`), dann Überblendung zu den Kacheln
         ka = sc.get('kacheln_ab')
-        self.k0 = st[ka][0] - 0.2 if ka is not None and sc.get('hook_bild') else None
+        # kacheln_ab = Zahl der Sätze: Hook bis zum Szenenende, Kacheln erscheinen gar nicht (Variante 15.11.)
+        self.k0 = ((st[ka][0] - 0.2) if ka < len(st) else sc['v1'] + 1) if ka is not None and sc.get('hook_bild') else None
         if self.k0 is not None:
             himg, _ = quelle({'bild': sc['hook_bild']}, src, W / H)
             self.hook = (himg, (0, 0, himg.size[0], himg.size[1]))   # ganzes Bild, kein Freistellen
@@ -718,7 +722,7 @@ class AgendaScene:
 
     def hook_bild_frame(self, t):
         himg, (x0, y0, x1, y1) = self.hook
-        z = 0.12 * ease((t - self.sc['v0']) / max(self.k0 - self.sc['v0'], 0.1))   # deutlich hinein (Bewegung im Hook)
+        z = (0.06 if getattr(self, 'vb', None) else 0.12) * ease((t - self.sc['v0']) / max(self.k0 - self.sc['v0'], 0.1))   # deutlich hinein (Bewegung im Hook)
         dx, dy = (x1 - x0) * z / 2, (y1 - y0) * z / 2
         bw, bh = x1 - x0 - 2 * dx, y1 - y0 - 2 * dy
         s_ = max(W / bw, H / bh)                                # Vollbild, Ränder beschnitten
@@ -795,6 +799,7 @@ def render(cfg, src, total, out_mp4, wav, srt, bis=None):
            *([] if cfg.get('aufbereitung', True) else ['-af', 'loudnorm=I=-16:TP=-1.5:LRA=11']), '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-ac', '2',
            '-movflags', '+faststart', '-t', f'{dauer:.2f}', out_mp4]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    grenzen = [sc.sc['v0'] for sc in scenes if sc.sc.get('kapitel_nr')]
     k = 0
     t_start = time.time()
     for f in range(n):
@@ -809,7 +814,7 @@ def render(cfg, src, total, out_mp4, wav, srt, bis=None):
         if f < FPS // 2:                               # Einblenden aus Papierfarbe
             img = Image.blend(Image.new('RGB', (W, H), PAPER), img, f / (FPS // 2))
         arr = np.array(img)
-        progress(arr, t, total)
+        progress(arr, t, total, grenzen)
         p.stdin.write(arr.tobytes())
         if f % (FPS * 30) == 0:
             print(f'  {t:6.1f} s / {total:.1f} s  ({time.time() - t_start:.0f} s Rechenzeit)', flush=True)

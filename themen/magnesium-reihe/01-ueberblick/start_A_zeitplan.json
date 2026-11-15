@@ -1,0 +1,310 @@
+[
+ {
+  "id": "m0",
+  "v0": 0.0,
+  "v1": 28.366666666666664,
+  "st": [
+   [
+    1.0,
+    3.1999999999999997,
+    "Magnesium: Was du wirklich wissen musst."
+   ],
+   [
+    4.199999999999999,
+    5.904761904761905,
+    "Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?"
+   ],
+   [
+    10.104761904761904,
+    5.828571428571427,
+    "Überraschend: Welche Tageszeit besser ist, hat bis heute keine einzige Studie verglichen."
+   ],
+   [
+    15.933333333333332,
+    12.283333333333333,
+    "Wem hilft Magnesium wirklich, und wem nicht? Wir klären, ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt."
+   ]
+  ]
+ },
+ {
+  "id": "m1",
+  "v0": 28.366666666666664,
+  "v1": 90.89349206349206,
+  "st": [
+   [
+    28.966666666666665,
+    5.9425623582766445,
+    "Oft heißt es, die meisten Menschen hätten zu wenig Magnesium. Eine Quelle dafür gibt es nicht."
+   ],
+   [
+    34.90922902494331,
+    11.733333333333329,
+    "In der letzten großen Verzehrsstudie lag gut jeder Vierte unter der damaligen Empfehlung. Das ist aber kein Mangel: Gezählt wurde nur, was auf dem Teller lag, und die Daten sind fast zwanzig Jahre alt."
+   ],
+   [
+    46.642562358276635,
+    7.238095238095241,
+    "Die Deutsche Gesellschaft für Ernährung schätzt den Bedarf auf etwa 300 Milligramm für Frauen und 350 für Männer."
+   ],
+   [
+    53.880657596371876,
+    14.247619047619047,
+    "Einen echten Mangel bekommen vor allem Menschen mit bestimmten Medikamenten oder Krankheiten: Magenschutz-Tabletten über Jahre, manche Entwässerungstabletten, Alkoholkrankheit, schlecht eingestellter Diabetes oder anhaltender Durchfall."
+   ],
+   [
+    68.12827664399093,
+    10.285714285714292,
+    "Und der Bluttest? In deinem Körper stecken etwa vierundzwanzig Gramm Magnesium, so schwer wie drei Zwei-Euro-Münzen. Im Blut ist davon weniger als ein Prozent."
+   ],
+   [
+    78.41399092970522,
+    7.31428571428571,
+    "Ein normaler Wert schließt knappe Vorräte deshalb nicht sicher aus. Für einen echten Mangel ist er trotzdem der übliche Test."
+   ],
+   [
+    85.72827664399092,
+    5.015215419501132,
+    "Tipp: Gehörst du zu einer dieser Gruppen, lass deinen Wert von Arzt oder Ärztin prüfen."
+   ]
+  ]
+ },
+ {
+  "id": "m2",
+  "v0": 90.89349206349206,
+  "v1": 138.4863492063492,
+  "st": [
+   [
+    91.49349206349206,
+    2.7428571428571424,
+    "Wem hilft Magnesium also wirklich?"
+   ],
+   [
+    94.2363492063492,
+    7.923809523809524,
+    "Zuerst Menschen mit nachgewiesenem Mangel. Dafür gibt es zugelassene Arzneimittel, etwa wenn der Mangel die Muskeln stört."
+   ],
+   [
+    102.16015873015873,
+    8.152380952380954,
+    "Denn Magnesium ist an Hunderten Reaktionen im Körper beteiligt. Im Muskel hilft es beim Entspannen, als Gegenspieler von Calcium."
+   ],
+   [
+    110.31253968253968,
+    7.161904761904761,
+    "Bei Bluthochdruck ist es gut untersucht: Der Druck sinkt leicht. Bei normalem Blutdruck zeigte sich kein klarer Effekt."
+   ],
+   [
+    117.47444444444443,
+    5.333333333333336,
+    "Bei Migräne nennt die Leitlinie Magnesium zur Vorbeugung, mit geringer Beweislage."
+   ],
+   [
+    122.80777777777777,
+    7.771428571428565,
+    "Und in der Klinik ist es ein zugelassenes Mittel: als Infusion gegen Krampfanfälle bei der Schwangerschaftskomplikation Eklampsie."
+   ],
+   [
+    130.57920634920634,
+    7.75714285714286,
+    "Tipp: Bei Bluthochdruck oder Migräne ersetzt Magnesium keine Behandlung. Sprich mit Arzt oder Ärztin, ob es für dich passt."
+   ]
+  ]
+ },
+ {
+  "id": "m3",
+  "v0": 138.4863492063492,
+  "v1": 183.33113378684806,
+  "st": [
+   [
+    139.08634920634918,
+    5.942857142857143,
+    "Und wofür nehmen es die meisten? Gegen Wadenkrämpfe. Viele berichten, dass es ihnen hilft."
+   ],
+   [
+    145.02920634920633,
+    8.076190476190476,
+    "Doch genau das ist gut untersucht. Bei den nächtlichen Krämpfen älterer Menschen wirkt Magnesium nicht besser als ein Scheinpräparat."
+   ],
+   [
+    153.1053968253968,
+    2.8952380952380956,
+    "In der Schwangerschaft sind die Studien widersprüchlich."
+   ],
+   [
+    156.0006349206349,
+    10.81904761904762,
+    "Auch für Schlaf, Stress und Angst gibt es nur kleine Studien mit kleinen Effekten, oft von Herstellern bezahlt. Viele berichten, dass sie besser schlafen, belegt ist das kaum."
+   ],
+   [
+    166.8196825396825,
+    10.74285714285714,
+    "Auf Packungen steht oft: trägt zur normalen Muskelfunktion bei. Das heißt nur: Ohne Magnesium arbeiten Muskeln nicht richtig. Es heißt nicht: Mehr hilft mehr."
+   ],
+   [
+    177.56253968253966,
+    5.618594104308393,
+    "Tipp: Kommen Krämpfe oft wieder, lass die Ursache abklären, statt nur Tabletten zu nehmen."
+   ]
+  ]
+ },
+ {
+  "id": "m4",
+  "v0": 183.33113378684806,
+  "v1": 242.6729705215419,
+  "st": [
+   [
+    183.93113378684805,
+    3.4924489795918365,
+    "Die älteste Magnesium-Arznei ist ein Abführmittel."
+   ],
+   [
+    187.4235827664399,
+    11.96190476190476,
+    "Der Überlieferung nach fand ein Mann namens Henry Wicker 1618 im englischen Epsom eine Wasserstelle, aus der das durstige Vieh nicht trinken wollte. Das Wasser schmeckte bitter."
+   ],
+   [
+    199.38548752834464,
+    8.761904761904763,
+    "Daraus wurde Bittersalz. Aus ihm gewannen Forscher später auch das Metall selbst, und bis heute ist es als Abführmittel zugelassen."
+   ],
+   [
+    208.1473922902494,
+    5.714285714285715,
+    "Damit kennst du die Grenze jeder Form: In höherer Dosis macht Magnesium Durchfall."
+   ],
+   [
+    213.86167800453512,
+    11.657142857142862,
+    "Gut lösliche Formen wie Citrat werden etwas besser aufgenommen als Oxid. In einer kleinen Herstellerstudie waren es nach einer Tablette aber nur etwa vierzehn Milligramm mehr im Urin."
+   ],
+   [
+    225.518820861678,
+    10.209523809523802,
+    "Bisglycinat schnitt in den wenigen Vergleichen nicht besser ab als einfache Formen. Für Taurat, Malat oder Mischungen gibt es keine Vergleichsstudien am Menschen."
+   ],
+   [
+    235.7283446712018,
+    6.7946258503401396,
+    "Tipp: Ein teurer Name ist kein Beleg. Schau lieber, wie viele Milligramm Magnesium eine Portion enthält."
+   ]
+  ]
+ },
+ {
+  "id": "m5",
+  "v0": 242.6729705215419,
+  "v1": 290.4598639455782,
+  "st": [
+   [
+    243.2729705215419,
+    10.666666666666666,
+    "Das Bundesinstitut für Risikobewertung rät: aus Präparaten höchstens 250 Milligramm am Tag zusätzlich, verteilt auf mindestens zwei Portionen."
+   ],
+   [
+    253.93963718820856,
+    6.2476190476190485,
+    "Gefährlich viel im Blut wird es fast nur bei kranken Nieren, dann nur nach ärztlicher Rücksprache."
+   ],
+   [
+    260.18725623582765,
+    12.876190476190477,
+    "Magnesium stört die Aufnahme mancher Medikamente, etwa bestimmter Antibiotika, Osteoporose-Tabletten oder HIV-Mittel. Wie viele Stunden Abstand nötig sind, steht im Beipackzettel des anderen Mittels."
+   ],
+   [
+    273.0634467120181,
+    8.990476190476187,
+    "Und morgens oder abends? Das hat keine Studie verglichen. Belegt ist nur: Kleinere Portionen werden anteilig besser aufgenommen."
+   ],
+   [
+    282.05392290249426,
+    8.2559410430839,
+    "Tipp: Sprich mit Arzt oder Ärztin, bevor du Magnesium dauerhaft nimmst, besonders wenn du Medikamente nimmst oder deine Nieren schwach sind."
+   ]
+  ]
+ },
+ {
+  "id": "m6",
+  "v0": 290.4598639455782,
+  "v1": 323.2961904761905,
+  "st": [
+   [
+    291.05986394557823,
+    10.133333333333333,
+    "Viel Magnesium steckt in Kernen, Nüssen, Haferflocken, Vollkorn und Hülsenfrüchten. Eine Handvoll Sonnenblumenkerne bringt etwa hundert Milligramm."
+   ],
+   [
+    301.19319727891155,
+    3.6571428571428566,
+    "In Deutschland kommt das meiste aber aus Getränken und Brot."
+   ],
+   [
+    304.8503401360544,
+    6.476190476190476,
+    "Mineralwasser darf „magnesiumhaltig“ heißen, wenn ein Liter mehr als fünfzig Milligramm enthält."
+   ],
+   [
+    311.3265306122449,
+    4.9523809523809526,
+    "Und beim Weißmehl bleibt von sechs Teilen Magnesium nur eines übrig."
+   ],
+   [
+    316.27891156462584,
+    6.867278911564629,
+    "Tipp: Vollkorn statt Weißbrot und weißem Reis bringt am Tag etwa so viel wie eine kleine Magnesiumtablette."
+   ]
+  ]
+ },
+ {
+  "id": "m7",
+  "v0": 323.2961904761905,
+  "v1": 348.1844217687075,
+  "st": [
+   [
+    323.8961904761905,
+    9.447619047619048,
+    "Also: Brauchst du Magnesium? Es hilft vor allem bei echtem Mangel, und es senkt hohen Blutdruck leicht. Für alle anderen reicht meist das Essen."
+   ],
+   [
+    333.34380952380957,
+    5.257142857142856,
+    "Citrat oder Bisglycinat? Die Unterschiede zwischen den Formen sind klein."
+   ],
+   [
+    338.6009523809524,
+    5.104761904761906,
+    "Morgens oder abends? Das ist offen. Größere Mengen teilst du besser auf."
+   ],
+   [
+    343.7057142857143,
+    4.328707482993195,
+    "Und achte auf die Obergrenze, deine Nieren und deine Medikamente."
+   ]
+  ]
+ },
+ {
+  "id": "m8",
+  "v0": 348.1844217687075,
+  "v1": 380.25394557823137,
+  "st": [
+   [
+    348.78442176870755,
+    5.79047619047619,
+    "Als Nächstes: Warum hält sich der Rat, Magnesium abends zu nehmen, so hartnäckig?"
+   ],
+   [
+    354.5748979591837,
+    9.676190476190474,
+    "Danach: Welche Form passt wozu? Woran erkennst du einen Mangel? Ab wann ist es zu viel? Und was zeigen die Studien zu Schlaf und Stress?"
+   ],
+   [
+    364.2510884353742,
+    5.104761904761908,
+    "Es folgen Krämpfe, Blutdruck, Migräne, Frauen und Lebensmittel."
+   ],
+   [
+    369.3558503401361,
+    8.148095238095237,
+    "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
+   ]
+  ]
+ }
+]

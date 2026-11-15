@@ -77,7 +77,7 @@ SZENEN = [
               ('Wo es nicht hilft', 'k8', None), ('Welche Form?', 'k4', None),
               ('Sicher einnehmen', 'k6', None), ('Aus dem Essen', 'k2', None)]},
 
- {'id': 'm1', 'kicker': 'Mangel', 'headline': 'Brauchst du es überhaupt?',
+ {'id': 'm1', 'kapitel_nr': 1, 'kicker': 'Kapitel 1 · Mangel', 'headline': 'Brauchst du es überhaupt?',
   'sentences': ['Oft heißt es, die meisten Menschen hätten zu wenig Magnesium. Eine Quelle dafür gibt es nicht.',
                 'In der letzten großen Verzehrsstudie lag gut jeder Vierte unter der damaligen Empfehlung. Das ist aber kein Mangel: Gezählt wurde nur, was auf dem Teller lag, und die Daten sind fast zwanzig Jahre alt.',
                 S('Die Deutsche Gesellschaft für Ernährung schätzt den Bedarf auf etwa 300 Milligramm für Frauen und 350 für Männer.',
@@ -91,7 +91,7 @@ SZENEN = [
   'quellen': ['mri2008', 'dge_faq', 'dge_web', 'ahmed2019', 'liamis2021', 'srinutta2019', 'jahnen2012', 'rosanoff2022', 'debaaij2022'],
   'bilder': [('m3a', None), ('m3c', 1), ('m2b', 2), ('m3e', 3), ('m1a', 4), ('m3f', 5), ('m3g', 6)]},
 
- {'id': 'm2', 'kicker': 'Studienlage', 'headline': 'Wem es hilft',
+ {'id': 'm2', 'kapitel_nr': 2, 'kicker': 'Kapitel 2 · Studienlage', 'headline': 'Wem es hilft',
   'sentences': ['Wem hilft Magnesium also wirklich?',
                 'Zuerst Menschen mit nachgewiesenem Mangel. Dafür gibt es zugelassene Arzneimittel, etwa wenn der Mangel die Muskeln stört.',
                 'Denn Magnesium ist an Hunderten Reaktionen im Körper beteiligt. Im Muskel hilft es beim Entspannen, als Gegenspieler von Calcium.',
@@ -104,7 +104,7 @@ SZENEN = [
   'quellen': ['gi_verla', 'debaaij2015', 'jahnen2012', 'argeros2025', 'dgn2025', 'magpie2002'],
   'bilder': [('m2x', None), ('m3g', 1), ('m1e', 2), ('m5c', 3), ('m5d', 4), ('m5b', 5), ('m6e', 6)]},
 
- {'id': 'm3', 'kicker': 'Die Wende', 'headline': 'Wo es nicht hilft',
+ {'id': 'm3', 'kapitel_nr': 3, 'kicker': 'Kapitel 3 · Die Wende', 'headline': 'Wo es nicht hilft',
   'sentences': ['Und wofür nehmen es die meisten? Gegen Wadenkrämpfe. Viele berichten, dass es ihnen hilft.',
                 'Doch genau das ist gut untersucht. Bei den nächtlichen Krämpfen älterer Menschen wirkt Magnesium nicht besser als ein Scheinpräparat.',
                 'In der Schwangerschaft sind die Studien widersprüchlich.',
@@ -116,7 +116,7 @@ SZENEN = [
   'quellen': ['garrison2020', 'mah2021', 'schuster2025', 'boyle2017', 'efsa_claims2009'],
   'bilder': [('m5f', None), ('m4c', 1), ('m3y', 2), ('m5e', 3), ('m5a', 4), ('m3g', 5)]},
 
- {'id': 'm4', 'kicker': 'Im Regal', 'headline': 'Welche Form?',
+ {'id': 'm4', 'kapitel_nr': 4, 'kicker': 'Kapitel 4 · Im Regal', 'headline': 'Welche Form?',
   'sentences': ['Die älteste Magnesium-Arznei ist ein Abführmittel.',
                 S('Der Überlieferung nach fand ein Mann namens Henry Wicker 1618 im englischen Epsom eine Wasserstelle, aus der das durstige Vieh nicht trinken wollte. Das Wasser schmeckte bitter.',
                   'Der Überlieferung nach fand ein Mann namens Henry Wicker sechzehnhundertachtzehn im englischen Epsom eine Wasserstelle, aus der das durstige Vieh nicht trinken wollte. Das Wasser schmeckte bitter.'),
@@ -130,7 +130,7 @@ SZENEN = [
   'quellen': ['fuller1662', 'black1756', 'davy1808', 'gi_bittersalz', 'kappeler2017', 'pardo2021', 'schuette1994', 'pajuelo2024'],
   'bilder': [('m4x', None), ('m4y', 1), ('m4z', 2), ('m4f', 3), ('m4b', 4), ('m4e', 5), ('m4g', 6)]},
 
- {'id': 'm5', 'kicker': 'Vorsicht', 'headline': 'Sicher einnehmen',
+ {'id': 'm5', 'kapitel_nr': 5, 'kicker': 'Kapitel 5 · Vorsicht', 'headline': 'Sicher einnehmen',
   'sentences': [S('Das Bundesinstitut für Risikobewertung rät: aus Präparaten höchstens 250 Milligramm am Tag zusätzlich, verteilt auf mindestens zwei Portionen.',
                   'Das Bundesinstitut für Risikobewertung rät: aus Präparaten höchstens zweihundertfünfzig Milligramm am Tag zusätzlich, verteilt auf mindestens zwei Portionen.'),
                 'Gefährlich viel im Blut wird es fast nur bei kranken Nieren, dann nur nach ärztlicher Rücksprache.',
@@ -142,7 +142,7 @@ SZENEN = [
   'quellen': ['bfr2021', 'scf2001', 'fi_jenapharm', 'liamis2021', 'fine1991', 'pubmed_suche'],
   'bilder': [('m6a', None), ('m6b', 1), ('m6c', 2), ('m6d', 3), ('m6e', 4)]},
 
- {'id': 'm6', 'kicker': 'Zufuhr', 'headline': 'Aus dem Essen',
+ {'id': 'm6', 'kapitel_nr': 6, 'kicker': 'Kapitel 6 · Zufuhr', 'headline': 'Aus dem Essen',
   'sentences': ['Viel Magnesium steckt in Kernen, Nüssen, Haferflocken, Vollkorn und Hülsenfrüchten. Eine Handvoll Sonnenblumenkerne bringt etwa hundert Milligramm.',
                 'In Deutschland kommt das meiste aber aus Getränken und Brot.',
                 'Mineralwasser darf „magnesiumhaltig“ heißen, wenn ein Liter mehr als fünfzig Milligramm enthält.',
@@ -153,7 +153,7 @@ SZENEN = [
   'quellen': ['bls2025', 'mri2008', 'mintafelwv'],
   'bilder': [('m2c', None), ('m2d', 1), ('m2e', 2), ('m2f', 3), ('m2g', 4)]},
 
- {'id': 'm7', 'kapitel': 'Fazit', 'kicker': 'Fazit', 'headline': 'Kurz gesagt',
+ {'id': 'm7', 'kapitel_nr': 'fazit', 'kapitel': 'Fazit', 'kicker': 'Fazit', 'headline': 'Kurz gesagt',
   'sentences': ['Also: Brauchst du Magnesium? Es hilft vor allem bei echtem Mangel, und es senkt hohen Blutdruck leicht. Für alle anderen reicht meist das Essen.',
                 'Citrat oder Bisglycinat? Die Unterschiede zwischen den Formen sind klein.',
                 'Morgens oder abends? Das ist offen. Größere Mengen teilst du besser auf.',
