@@ -1,12 +1,20 @@
 {
  "titel": "Magnesium-Reihe · Folge 1: Was du wirklich wissen musst",
- "aufgabe": "Endfassung Folge 1 (6:05), Hörprobe von dir abgenommen am 14.11. Bitte ganz ansehen: „passt“ oder „ändern“ mit Notiz. Vorschaubild und YouTube-Beschreibung unten.",
+ "aufgabe": "Neue Fassung oben: Das erste Bild ist jetzt wie das Vorschaubild, ohne Zierstrich (deine Wahl 15.11.). Bitte ansehen: „passt“ oder „ändern“.",
  "videos": [
+  {
+   "datei": "vorschau_G2.mp4",
+   "titel": "Folge 1 · Startbild wie Vorschaubild",
+   "stand": "15.11., 09:29",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Erstes Bild = Vorschaubild („Magnesium“ terrakotta, „Was du wirklich wissen musst“), beim ersten gesprochenen Wort weicht der Untertitel den Fragen. Kein Zierstrich im Startbild, in den Szenen bleibt er. Rest unverändert."
+  },
   {
    "datei": "vorschau_G.mp4",
    "titel": "Folge 1 · Endfassung",
    "stand": "14.11., 22:46",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 8,
    "notiz": "Erklärvideo, Stil G. Startbild mit den drei Einstiegsfragen, sechs Kacheln, am Ende Fazit „Kurz gesagt“ (greift die Einstiegsfragen auf), Karte der Reihe und Brückensatz zu Folge 2. Ohne Kommentarfrage (deine Wahl). Titel und Vorschaubild jetzt „Was du wirklich wissen musst“ (deine Wahl 14.11.)."
   }

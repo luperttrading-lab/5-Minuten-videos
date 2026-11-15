@@ -29,6 +29,11 @@
    "hook_bild": "thumbnail/bild_G.jpg",
    "kacheln_ab": 2,
    "hook_titel": "Magnesium",
+   "hook_stil": "vorschaubild",
+   "hook_untertitel": [
+    "Was du wirklich",
+    "wissen musst"
+   ],
    "hook_zeilen": [
     {
      "t": "Morgens oder abends?",

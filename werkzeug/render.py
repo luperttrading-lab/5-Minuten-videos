@@ -627,6 +627,20 @@ class AgendaScene:
                 a_ = 215 if x < 760 else int(215 * max(0.0, 1 - (x - 760) / 390))
                 sd.rectangle([x, 0, x + 3, H], fill=a_)
             self.schleier = schleier
+            # Stil „vorschaubild“ (Nutzerwunsch 15.11.): erstes Bild wie das YouTube-Vorschaubild (Titel terrakotta,
+            # Untertitel, weicher heller Schatten, kein Zierstrich, kein Schleier); der Untertitel weicht der ersten Zeile.
+            self.vb = None
+            if sc.get('hook_stil') == 'vorschaubild':
+                def lage(texte):
+                    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); sh = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+                    ds, dl = ImageDraw.Draw(sh), ImageDraw.Draw(lay)
+                    for (x, y), t_, g, f_ in texte:
+                        ds.text((x + 6, y + 8), t_, font=font(SERIF_B, g), fill=(255, 255, 255, 170))
+                        dl.text((x, y), t_, font=font(SERIF_B, g), fill=f_ + (255,))
+                    return Image.alpha_composite(sh.filter(ImageFilter.GaussianBlur(9)), lay)
+                ut = sc.get('hook_untertitel', [])
+                self.vb = (lage([((90, 120), self.hook_titel or '', 210, (176, 92, 52))]),
+                           lage([((99, 495 + 150 * i), z, 126, (44, 52, 68)) for i, z in enumerate(ut)]))
         self.x0 = (W - 3 * self.TW - 2 * self.GAP) // 2
         self.base = Image.new('RGB', (W, H), PAPER)
         d = ImageDraw.Draw(self.base)
@@ -667,18 +681,28 @@ class AgendaScene:
         img = self.hook_bild_frame(t)
         if not (self.hook_titel or self.hook_zeilen):
             return img
-        img.paste(Image.new('RGB', (W, H), PAPER), (0, 0), self.schleier)
-        d = ImageDraw.Draw(img, 'RGBA')
         v0 = self.sc['v0']
         aus = lambda u: 1 - (1 - min(max(u, 0.0), 1.0)) ** 3        # ease-out: schnell an, weich ins Ziel
-        if self.hook_titel:
+        if self.vb:
+            titel, unter = self.vb
+            erst = self.hook_zeilen[0]['ab'] if self.hook_zeilen else 1e9
+            weg = min(max((t - erst + 0.2) / 0.4, 0.0), 1.0)      # Untertitel blendet vor der ersten Zeile aus
+            img = Image.alpha_composite(img.convert('RGBA'), titel)
+            if weg < 1:
+                u_ = unter.copy(); u_.putalpha(unter.getchannel('A').point(lambda v: int(v * (1 - weg))))
+                img = Image.alpha_composite(img, u_)
+            img = img.convert('RGB')
+        else:
+            img.paste(Image.new('RGB', (W, H), PAPER), (0, 0), self.schleier)
+        d = ImageDraw.Draw(img, 'RGBA')
+        if self.hook_titel and not self.vb:
             u = (t - v0 - 0.05) / 0.8
             a, e = min(max(u * 1.4, 0.0), 1.0), aus(u)
             d.text((110, 160 + int(70 * (1 - e))), self.hook_titel, font=font(SERIF_B, 150), fill=INK + (int(255 * a),), anchor='ls')
             d.rectangle([112, 200, 112 + int(150 * e), 208], fill=ACCENT + (int(255 * a),))   # Strich wächst mit
         urteil_ab = next((z['ab'] for z in self.hook_zeilen if z['rot']), None)
         zurueck = 0.0 if urteil_ab is None else min(max((t - urteil_ab) / 0.5, 0.0), 1.0)
-        y = 370
+        y = 430 if self.vb else 370
         for z in self.hook_zeilen:
             u = (t - z['ab']) / 0.7
             if u > 0:

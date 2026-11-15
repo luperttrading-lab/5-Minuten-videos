@@ -14,3 +14,4 @@ Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
   gekürzt (längere Fassungen liefen ins Glas). Vorschau 720p/12 fps 13,1 MB, 1080p fürs Handy 48,3 MB (880k, zwei Durchgänge).
 - Vorschau-Seite: https://claude.ai/artifact/RT23abh5FpQbhjia7SUSib (mit Vorschaubild und Beschreibung).
 - 14.11. abends: Titel „Was du wirklich wissen musst“ (Nutzerwahl), Vorschaubild und Beschreibung angepasst; keine Kommentarfrage. Offen: Abnahme des Videos.
+- 15.11.: Startbild wie das Vorschaubild (`hook_stil: vorschaubild`, `hook_untertitel`, neu in `werkzeug/render.py`: Titel terrakotta 210 px, Untertitel weicht der ersten Zeile, kein Zierstrich, kein Schleier), Nutzerwunsch. Neu gerendert, Vorschau-Seite oben „Startbild wie Vorschaubild“. `startbild_neu.jpg` = Standbilder 0,6 / 3 / 9 / 13,5 s.
