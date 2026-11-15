@@ -3,7 +3,7 @@
  "voice_id": "NBqeXKdZHweef6y0B67V",
  "model": "eleven_v4",
  "tempo": 1.05,
- "titel": "Magnesium: Brauchst du es überhaupt? Der Überblick",
+ "titel": "Magnesium: Was du wirklich wissen musst",
  "stil": "G",
  "untertitel": "Folge 1 der Magnesium-Reihe: wozu der Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Formen es gibt, wofür es belegt ist und worauf du bei der Einnahme achten solltest.",
  "fuss": "Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.",
@@ -15,21 +15,27 @@
    "kicker": "Erklärvideo",
    "headline": "Magnesium: der Überblick",
    "sentences": [
+    "Magnesium: Was du wirklich wissen musst.",
     {
-     "t": "Magnesium: morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?",
-     "say": "Magnesium: morgens oder abends? Zitrat oder Bisglyzinat? Und brauchst du es überhaupt?"
+     "t": "Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?",
+     "say": "Morgens oder abends? Zitrat oder Bisglyzinat? Und brauchst du es überhaupt?"
     },
     "Überraschend: Welche Tageszeit besser ist, hat bis heute keine einzige Studie verglichen.",
     "Du erfährst, wozu dein Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Präparate es gibt, wofür es belegt ist und worauf du bei der Einnahme achtest."
    ],
-   "hervorheben_at": 2,
+   "hervorheben_at": 3,
    "hook_bild": "thumbnail/bild_G.jpg",
-   "kacheln_ab": 2,
+   "kacheln_ab": 3,
    "hook_titel": "Magnesium",
+   "hook_stil": "vorschaubild",
+   "hook_untertitel": [
+    "Was du wirklich",
+    "wissen musst"
+   ],
    "hook_zeilen": [
     {
      "t": "Morgens oder abends?",
-     "wort": "morgens"
+     "wort": "Morgens"
     },
     {
      "t": "Citrat oder Bisglycinat?",

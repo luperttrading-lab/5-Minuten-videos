@@ -21,13 +21,14 @@
    "kicker": "Erklärvideo",
    "headline": "Magnesium: der Überblick",
    "sentences": [
-    "Magnesium: morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?",
+    "Magnesium: Was du wirklich wissen musst.",
+    "Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?",
     "Überraschend: Welche Tageszeit besser ist, hat bis heute keine einzige Studie verglichen.",
     "Du erfährst, wozu dein Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Präparate es gibt, wofür es belegt ist und worauf du bei der Einnahme achtest."
    ],
-   "hervorheben_at": 2,
+   "hervorheben_at": 3,
    "hook_bild": "thumbnail/bild_G.jpg",
-   "kacheln_ab": 2,
+   "kacheln_ab": 3,
    "hook_titel": "Magnesium",
    "hook_stil": "vorschaubild",
    "hook_untertitel": [
@@ -37,7 +38,7 @@
    "hook_zeilen": [
     {
      "t": "Morgens oder abends?",
-     "wort": "morgens"
+     "wort": "Morgens"
     },
     {
      "t": "Citrat oder Bisglycinat?",

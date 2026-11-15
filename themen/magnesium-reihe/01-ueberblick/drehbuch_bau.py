@@ -54,13 +54,14 @@ ABSCHLUSS = 'Gut, dass du dich informierst. Das Video kann das Gespräch mit Arz
 
 SZENEN = [
  {'id': 'm0', 'layout': 'kacheln', 'kapitel': 'Einleitung', 'kicker': 'Erklärvideo', 'headline': 'Magnesium: der Überblick',
-  'sentences': ['Magnesium: morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?',
+  'sentences': ['Magnesium: Was du wirklich wissen musst.',  # Nutzer 15.11.: Titel des Vorschaubilds gesprochen
+                'Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?',
                 'Überraschend: Welche Tageszeit besser ist, hat bis heute keine einzige Studie verglichen.',
                 'Du erfährst, wozu dein Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Präparate es gibt, wofür es belegt ist und worauf du bei der Einnahme achtest.'],
-  'hervorheben_at': 2,
-  'hook_bild': 'thumbnail/bild_G.jpg', 'kacheln_ab': 2, 'hook_titel': 'Magnesium',
+  'hervorheben_at': 3,
+  'hook_bild': 'thumbnail/bild_G.jpg', 'kacheln_ab': 3, 'hook_titel': 'Magnesium',
   'hook_stil': 'vorschaubild', 'hook_untertitel': ['Was du wirklich', 'wissen musst'],  # Nutzer 15.11.: erstes Bild = Vorschaubild, ohne Zierstrich
-  'hook_zeilen': [{'t': 'Morgens oder abends?', 'wort': 'morgens'}, {'t': 'Citrat oder Bisglycinat?', 'wort': 'Zitrat'},  # wort = Sprechtext (Aussprache)
+  'hook_zeilen': [{'t': 'Morgens oder abends?', 'wort': 'Morgens'}, {'t': 'Citrat oder Bisglycinat?', 'wort': 'Zitrat'},  # wort = Sprechtext (Aussprache)
                   {'t': 'Brauchst du es überhaupt?', 'wort': 'überhaupt'},
                   {'t': 'Tageszeit: nie verglichen.', 'wort': 'keine einzige', 'art': 'urteil'}],
   'kacheln': [('Wozu der Körper es braucht', 'k1', 'Körper'), ('Wie viel und woher', 'k2', 'woher'),
