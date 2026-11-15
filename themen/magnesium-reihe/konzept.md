@@ -55,3 +55,12 @@ Formen bekommen eine Vergleichsfolge (3) und in jeder Anwendungsfolge einen Absc
 Entschieden 14.11.: 1 Variante C ja · 2 alte Videos „Magnesium“ und „Magnesium 2“ werden durch die Reihe ersetzt · 3 Erklärvideo ja ·
 4a Fazit greift Einstiegsfragen auf: ja · 4b Brückensatz zur nächsten Folge: ja · 4c Kommentarfrage: keine.
 Titel Folge 1 (14.11.): „Magnesium: Was du wirklich wissen musst“ (ohne „5 Minuten“, Video 6:05).
+
+## Regeln ab Folge 2 (15.11., aus dem Konzept-Check der Hauptsitzung, vom Nutzer übernommen)
+- Kein Inhaltsverzeichnis im Einstieg; die meistgesuchte Frage zuerst; das Belegte vor den Grenzen; je Folge eine kurze
+  Geschichte oder ein Fall und eine Wende in der Mitte.
+- Jede Folge mit anderem Einstiegsmuster und Ablauf (YouTube-Regel gegen Massenware); gleich bleiben Stil, Kacheln,
+  Schlusskasten, Abschlusssatz.
+- Folge 2 trägt nicht mit „nie verglichen“ allein: warum sich der Rat hält und was stattdessen zählt.
+- Länge etwa 6 Minuten, keine langen Fassungen (Nutzer 15.11.: Zuschauer nicht mit Werbung unterbrechen).
+- A/B-Test Titel/Vorschaubild: später; dann kein gesprochener Titel im Einstieg.

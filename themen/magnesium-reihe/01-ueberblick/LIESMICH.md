@@ -15,3 +15,9 @@ Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
 - Vorschau-Seite: https://claude.ai/artifact/RT23abh5FpQbhjia7SUSib (mit Vorschaubild und Beschreibung).
 - 14.11. abends: Titel „Was du wirklich wissen musst“ (Nutzerwahl), Vorschaubild und Beschreibung angepasst; keine Kommentarfrage. Offen: Abnahme des Videos.
 - 15.11.: Startbild wie das Vorschaubild (`hook_stil: vorschaubild`, `hook_untertitel`, neu in `werkzeug/render.py`: Titel terrakotta 210 px, Untertitel weicht der ersten Zeile, kein Zierstrich, kein Schleier), Nutzerwunsch. Neu gerendert, Vorschau-Seite oben „Startbild wie Vorschaubild“. `startbild_neu.jpg` = Standbilder 0,6 / 3 / 9 / 13,5 s.
+- 15.11. Umbau Folge 1 (Nutzer: „Folge 1 umbauen“, Vorschläge der Hauptsitzung): Einstieg ohne Inhaltsverzeichnis,
+  neue Reihenfolge Brauchst du es? → Wem es hilft → Wo es nicht hilft (Wende Wadenkrämpfe) → Welche Form? (mit
+  Bittersalz-Geschichte, `recherche_C.md`) → Sicher einnehmen → Aus dem Essen → Fazit → Karte als offene Fragen.
+  Altes Drehbuch im Git-Verlauf. Ton 6:13, 826 Wörter, ElevenLabs ≈ 2.440 Zeichen berechnet; 7 neue Bilder 200,5 Credits.
+  A/B-Test von Titeln und Vorschaubildern: später (Nutzer 15.11.). Keine lange Fassung (Nutzer: keine Werbeunterbrechungen).
+  Beschreibung künftig: „Keine Sponsoren, keine Affiliate-Links, keine eigenen Produkte.“

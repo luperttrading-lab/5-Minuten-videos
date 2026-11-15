@@ -67,8 +67,16 @@ SZENE = {
  'm7b': ("two plain white pills without markings on a scale that is almost perfectly level", KT),
  'm7c': ("a happy family sharing a colorful healthy meal with whole grain bread, nuts, vegetables and water, warm kitchen", R),
  'm7d': ("a person walking along a forest path holding a simple paper map, three friendly signposts without writing, sunlight", R),
+ # Umbau 15.11.
+ 'm2x': ("a crowd of people in a park seen from slightly above; a few of them softly highlighted in warm ochre light, among them an older man with a blood pressure cuff and a woman holding her temple, a friendly doctor walking towards them", R),
+ 'm3y': ("a pregnant woman sitting on the edge of her bed at night, holding her calf with a slightly pained face, her partner sitting beside her with a hand on her shoulder", R),
+ 'm4x': ("an old 17th century apothecary shop with wooden shelves and plain ceramic jars without any writing, on the counter a large bowl of glittering white crystals", KT),
+ 'm4y': ("17th century English countryside in a dry summer: a man in simple 1600s clothes beside a small pool of water in a hoof print hollow, thirsty cows turning away from the water, rolling hills", R),
+ 'm4z': ("an 18th century chemist's laboratory with glass retorts, a small furnace and dishes of white powder, a scientist in a powdered wig carefully pouring a liquid", R),
 }
 KACHEL = {
+ 'k7': ("a friendly doctor talking to a small group of three different people in a bright consulting room: an older man, a middle-aged woman and a young woman, warm hopeful mood", R),
+ 'k8': ("an older man sitting on the edge of his bed at night holding his calf, a plain pill bottle without label on the nightstand, a grey question mark shape above", R),
  'k1': ("a school book anatomy chart with a pale blue skeleton drawing and a terracotta arm muscle drawing side by side, a few small silver sparkles around them", KT),
  'k2': ("a still life of sunflower seeds, almonds, oats, whole grain bread, lentils and a glass of sparkling water", KT),
  'k3': ("a doctor holding a blood sample tube up to the light, a calm patient sitting beside her", R),

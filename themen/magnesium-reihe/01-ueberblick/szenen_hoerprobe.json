@@ -21,7 +21,7 @@
      "say": "Morgens oder abends? Zitrat oder Bisglyzinat? Und brauchst du es überhaupt?"
     },
     "Überraschend: Welche Tageszeit besser ist, hat bis heute keine einzige Studie verglichen.",
-    "Du erfährst, wozu dein Körper Magnesium braucht, wie viel und woher, wie häufig ein Mangel ist, welche Präparate es gibt, wofür es belegt ist und worauf du bei der Einnahme achtest."
+    "Die wichtigere Frage ist eine andere: Wem hilft Magnesium wirklich, und wem nicht?"
    ],
    "hervorheben_at": 3,
    "hook_bild": "thumbnail/bild_G.jpg",
@@ -53,198 +53,51 @@
    ],
    "kacheln": [
     {
-     "t": "Wozu der Körper es braucht",
-     "bild": "bilder/G/k1.jpg",
-     "wort": "Körper"
-    },
-    {
-     "t": "Wie viel und woher",
-     "bild": "bilder/G/k2.jpg",
-     "wort": "woher"
-    },
-    {
-     "t": "Mangel: selten oder häufig?",
+     "t": "Brauchst du es überhaupt?",
      "bild": "bilder/G/k3.jpg",
-     "wort": "Mangel"
+     "wort": null
     },
     {
-     "t": "Präparate und Formen",
+     "t": "Wem es hilft",
+     "bild": "bilder/G/k7.jpg",
+     "wort": null
+    },
+    {
+     "t": "Wo es nicht hilft",
+     "bild": "bilder/G/k8.jpg",
+     "wort": null
+    },
+    {
+     "t": "Welche Form?",
      "bild": "bilder/G/k4.jpg",
-     "wort": "Präparate"
-    },
-    {
-     "t": "Wofür belegt, wofür nicht",
-     "bild": "bilder/G/k5.jpg",
-     "wort": "belegt"
+     "wort": null
     },
     {
      "t": "Sicher einnehmen",
      "bild": "bilder/G/k6.jpg",
-     "wort": "Einnahme"
+     "wort": null
+    },
+    {
+     "t": "Aus dem Essen",
+     "bild": "bilder/G/k2.jpg",
+     "wort": null
     }
    ]
   },
   {
    "id": "m1",
-   "kicker": "Im Körper",
-   "headline": "Wozu der Körper es braucht",
-   "sentences": [
-    "In deinem Körper stecken etwa vierundzwanzig Gramm Magnesium, so schwer wie drei Zwei-Euro-Münzen.",
-    "Gut die Hälfte sitzt in den Knochen, ein Viertel in den Muskeln. Im Blut ist weniger als ein Prozent.",
-    {
-     "t": "Es ist an Hunderten Reaktionen im Stoffwechsel beteiligt. Der Energieträger der Zellen, ATP, arbeitet meist im Paar mit Magnesium.",
-     "say": "Es ist an Hunderten Reaktionen im Stoffwechsel beteiligt. Der Energieträger der Zellen, A T P, arbeitet meist im Paar mit Magnesium."
-    },
-    "Im Muskel hilft es beim Entspannen, als Gegenspieler von Calcium. An Nervenzellen sitzt es wie ein Stöpsel in einem Kanal.",
-    {
-     "t": "Den Haushalt regeln die Nieren: Sie filtern jeden Tag rund 2,4 Gramm und holen fast alles zurück.",
-     "say": "Den Haushalt regeln die Nieren: Sie filtern jeden Tag rund zweieinhalb Gramm und holen fast alles zurück."
-    }
-   ],
-   "bullets": [
-    {
-     "t": "Etwa 24 Gramm im Körper",
-     "at": 0
-    },
-    {
-     "t": "Im Blut: unter 1 Prozent",
-     "at": 1
-    },
-    {
-     "t": "Hunderte Reaktionen, Energie",
-     "at": 2
-    },
-    {
-     "t": "Muskeln und Nerven",
-     "at": 3
-    },
-    {
-     "t": "Die Nieren regeln",
-     "at": 4
-    }
-   ],
-   "quellen": [
-    "jahnen2012",
-    "debaaij2015",
-    "fiorentini2021",
-    "mayer1984"
-   ],
-   "shots": [
-    {
-     "bild": "bilder/G/m1a.jpg"
-    },
-    {
-     "bild": "bilder/G/m1b.jpg",
-     "at": 1
-    },
-    {
-     "bild": "bilder/G/m1c.jpg",
-     "at": 2
-    },
-    {
-     "bild": "bilder/G/m1d.jpg",
-     "at": 2
-    },
-    {
-     "bild": "bilder/G/m1e.jpg",
-     "at": 3
-    },
-    {
-     "bild": "bilder/G/m1f.jpg",
-     "at": 3
-    },
-    {
-     "bild": "bilder/G/m1g.jpg",
-     "at": 4
-    }
-   ]
-  },
-  {
-   "id": "m2",
-   "kicker": "Zufuhr",
-   "headline": "Wie viel und woher",
-   "sentences": [
-    {
-     "t": "Wie viel brauchst du? Die Deutsche Gesellschaft für Ernährung schätzt: Frauen etwa 300, Männer etwa 350 Milligramm am Tag.",
-     "say": "Wie viel brauchst du? Die Deutsche Gesellschaft für Ernährung schätzt: Frauen etwa dreihundert, Männer etwa dreihundertfünfzig Milligramm am Tag."
-    },
-    "Das sind Schätzwerte, denn einen genauen Bedarf kennt niemand.",
-    "Viel Magnesium steckt in Kernen, Nüssen, Haferflocken, Vollkorn und Hülsenfrüchten. Eine Handvoll Sonnenblumenkerne bringt etwa hundert Milligramm.",
-    "In Deutschland kommt das meiste aber aus Getränken und Brot.",
-    "Mineralwasser darf „magnesiumhaltig“ heißen, wenn ein Liter mehr als fünfzig Milligramm enthält.",
-    "Und beim Weißmehl bleibt von sechs Teilen Magnesium nur eines übrig.",
-    "Tipp: Vollkorn statt Weißbrot und weißem Reis bringt am Tag etwa so viel wie eine kleine Magnesiumtablette."
-   ],
-   "bullets": [
-    {
-     "t": "Frauen 300, Männer 350 mg",
-     "at": 0
-    },
-    {
-     "t": "Kerne, Nüsse, Vollkorn",
-     "at": 2
-    },
-    {
-     "t": "Wasser: über 50 mg pro Liter",
-     "at": 4
-    },
-    {
-     "t": "Weißmehl: ein Sechstel",
-     "at": 5
-    },
-    {
-     "t": "Tipp: Vollkorn statt Weiß",
-     "at": 6
-    }
-   ],
-   "quellen": [
-    "dge_web",
-    "efsa2015",
-    "bls2025",
-    "mri2008",
-    "mintafelwv"
-   ],
-   "shots": [
-    {
-     "bild": "bilder/G/m2a.jpg"
-    },
-    {
-     "bild": "bilder/G/m2b.jpg",
-     "at": 1
-    },
-    {
-     "bild": "bilder/G/m2c.jpg",
-     "at": 2
-    },
-    {
-     "bild": "bilder/G/m2d.jpg",
-     "at": 3
-    },
-    {
-     "bild": "bilder/G/m2e.jpg",
-     "at": 4
-    },
-    {
-     "bild": "bilder/G/m2f.jpg",
-     "at": 5
-    },
-    {
-     "bild": "bilder/G/m2g.jpg",
-     "at": 6
-    }
-   ]
-  },
-  {
-   "id": "m3",
    "kicker": "Mangel",
-   "headline": "Selten oder häufig?",
+   "headline": "Brauchst du es überhaupt?",
    "sentences": [
-    "Oft heißt es, die meisten Menschen hätten einen Magnesiummangel. Eine Quelle dafür gibt es nicht.",
-    "In der letzten großen Verzehrsstudie lag gut jeder Vierte unter der damaligen Empfehlung, bei Mädchen im Teenageralter mehr als die Hälfte.",
-    "Das ist aber kein Mangel: Gezählt wurde nur, was auf dem Teller lag, und die Daten sind fast zwanzig Jahre alt.",
-    "Einen echten Mangel bekommen vor allem Menschen mit bestimmten Medikamenten oder Krankheiten.",
-    "Etwa Magenschutz-Tabletten über Jahre, manche Entwässerungstabletten, Alkoholkrankheit, schlecht eingestellter Diabetes oder anhaltender Durchfall.",
-    "Und der Bluttest? Weil kaum Magnesium im Blut ist, schließt ein normaler Wert knappe Vorräte nicht sicher aus. Für einen echten Mangel ist er trotzdem der übliche Test.",
+    "Oft heißt es, die meisten Menschen hätten zu wenig Magnesium. Eine Quelle dafür gibt es nicht.",
+    "In der letzten großen Verzehrsstudie lag gut jeder Vierte unter der damaligen Empfehlung. Das ist aber kein Mangel: Gezählt wurde nur, was auf dem Teller lag, und die Daten sind fast zwanzig Jahre alt.",
+    {
+     "t": "Die Deutsche Gesellschaft für Ernährung schätzt den Bedarf auf etwa 300 Milligramm für Frauen und 350 für Männer.",
+     "say": "Die Deutsche Gesellschaft für Ernährung schätzt den Bedarf auf etwa dreihundert Milligramm für Frauen und dreihundertfünfzig für Männer."
+    },
+    "Einen echten Mangel bekommen vor allem Menschen mit bestimmten Medikamenten oder Krankheiten: Magenschutz-Tabletten über Jahre, manche Entwässerungstabletten, Alkoholkrankheit, schlecht eingestellter Diabetes oder anhaltender Durchfall.",
+    "Und der Bluttest? In deinem Körper stecken etwa vierundzwanzig Gramm Magnesium, so schwer wie drei Zwei-Euro-Münzen. Im Blut ist davon weniger als ein Prozent.",
+    "Ein normaler Wert schließt knappe Vorräte deshalb nicht sicher aus. Für einen echten Mangel ist er trotzdem der übliche Test.",
     "Tipp: Gehörst du zu einer dieser Gruppen, lass deinen Wert von Arzt oder Ärztin prüfen."
    ],
    "bullets": [
@@ -253,24 +106,30 @@
      "at": 0
     },
     {
-     "t": "Jeder Vierte unter der Empfehlung",
-     "at": 1
+     "t": "Bedarf: Frauen 300, Männer 350 mg",
+     "at": 2
     },
     {
      "t": "Risiko: Medikamente, Krankheiten",
+     "at": 3
+    },
+    {
+     "t": "Im Blut: unter 1 Prozent",
      "at": 4
     },
     {
-     "t": "Bluttest: begrenzt aussagekräftig",
-     "at": 5
+     "t": "Tipp: Wert prüfen lassen",
+     "at": 6
     }
    ],
    "quellen": [
     "mri2008",
     "dge_faq",
+    "dge_web",
     "ahmed2019",
     "liamis2021",
     "srinutta2019",
+    "jahnen2012",
     "rosanoff2022",
     "debaaij2022"
    ],
@@ -279,19 +138,19 @@
      "bild": "bilder/G/m3a.jpg"
     },
     {
-     "bild": "bilder/G/m3b.jpg",
+     "bild": "bilder/G/m3c.jpg",
      "at": 1
     },
     {
-     "bild": "bilder/G/m3c.jpg",
+     "bild": "bilder/G/m2b.jpg",
      "at": 2
     },
     {
-     "bild": "bilder/G/m3d.jpg",
+     "bild": "bilder/G/m3e.jpg",
      "at": 3
     },
     {
-     "bild": "bilder/G/m3e.jpg",
+     "bild": "bilder/G/m1a.jpg",
      "at": 4
     },
     {
@@ -305,74 +164,189 @@
    ]
   },
   {
-   "id": "m4",
-   "kicker": "Im Regal",
-   "headline": "Präparate und Formen",
+   "id": "m2",
+   "kicker": "Studienlage",
+   "headline": "Wem es hilft",
    "sentences": [
-    {
-     "t": "Im Regal stehen Citrat, Bisglycinat, Oxid und teure Spezialformen.",
-     "say": "Im Regal stehen Zitrat, Bisglyzinat, Oxid und teure Spezialformen."
-    },
-    {
-     "t": "Gut lösliche Formen wie Citrat werden etwas besser aufgenommen als Oxid.",
-     "say": "Gut lösliche Formen wie Zitrat werden etwas besser aufgenommen als Oxid."
-    },
-    "Der Unterschied ist klein: In einer kleinen Herstellerstudie waren es nach einer Tablette nur etwa vierzehn Milligramm mehr im Urin.",
-    {
-     "t": "Bisglycinat schnitt in den wenigen Vergleichen nicht besser ab als einfache Formen.",
-     "say": "Bisglyzinat schnitt in den wenigen Vergleichen nicht besser ab als einfache Formen."
-    },
-    "Für Taurat, Malat oder Mischungen aus vielen Formen gibt es keine Vergleichsstudien am Menschen.",
-    "Die eigentliche Grenze ist der Darm: Jede Form kann in höherer Dosis Durchfall machen.",
-    "Tipp: Ein teurer Name ist kein Beleg. Schau lieber, wie viele Milligramm Magnesium eine Portion enthält."
+    "Wem hilft Magnesium also wirklich?",
+    "Zuerst Menschen mit nachgewiesenem Mangel. Dafür gibt es zugelassene Arzneimittel, etwa wenn der Mangel die Muskeln stört.",
+    "Denn Magnesium ist an Hunderten Reaktionen im Körper beteiligt. Im Muskel hilft es beim Entspannen, als Gegenspieler von Calcium.",
+    "Bei Bluthochdruck ist es gut untersucht: Der Druck sinkt leicht. Bei normalem Blutdruck zeigte sich kein klarer Effekt.",
+    "Bei Migräne nennt die Leitlinie Magnesium zur Vorbeugung, mit geringer Beweislage.",
+    "Und in der Klinik ist es ein zugelassenes Mittel: als Infusion gegen Krampfanfälle bei der Schwangerschaftskomplikation Eklampsie.",
+    "Tipp: Bei Bluthochdruck oder Migräne ersetzt Magnesium keine Behandlung. Sprich mit Arzt oder Ärztin, ob es für dich passt."
    ],
    "bullets": [
     {
-     "t": "Citrat etwas besser als Oxid",
+     "t": "Nachgewiesener Mangel: zugelassen",
      "at": 1
     },
     {
-     "t": "Unterschied klein",
-     "at": 2
+     "t": "Bluthochdruck: gut untersucht, leicht",
+     "at": 3
     },
     {
-     "t": "Spezialformen: kaum verglichen",
+     "t": "Migräne: geringe Beweislage",
      "at": 4
     },
     {
-     "t": "Grenze: Durchfall",
+     "t": "Eklampsie: Infusion, zugelassen",
      "at": 5
     }
    ],
    "quellen": [
-    "kappeler2017",
-    "pardo2021",
-    "schuette1994",
-    "pajuelo2024",
-    "garrison2020"
+    "gi_verla",
+    "debaaij2015",
+    "jahnen2012",
+    "argeros2025",
+    "dgn2025",
+    "magpie2002"
    ],
    "shots": [
     {
-     "bild": "bilder/G/m4a.jpg"
+     "bild": "bilder/G/m3g.jpg"
     },
     {
-     "bild": "bilder/G/m4b.jpg",
-     "at": 1
-    },
-    {
-     "bild": "bilder/G/m4c.jpg",
+     "bild": "bilder/G/m1e.jpg",
      "at": 2
     },
     {
-     "bild": "bilder/G/m4d.jpg",
+     "bild": "bilder/G/m5c.jpg",
      "at": 3
     },
     {
-     "bild": "bilder/G/m4e.jpg",
+     "bild": "bilder/G/m5d.jpg",
      "at": 4
     },
     {
-     "bild": "bilder/G/m4f.jpg",
+     "bild": "bilder/G/m5b.jpg",
+     "at": 5
+    },
+    {
+     "bild": "bilder/G/m6e.jpg",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "id": "m3",
+   "kicker": "Die Wende",
+   "headline": "Wo es nicht hilft",
+   "sentences": [
+    "Und wofür nehmen es die meisten? Gegen Wadenkrämpfe. Viele berichten, dass es ihnen hilft.",
+    "Doch genau das ist gut untersucht. Bei den nächtlichen Krämpfen älterer Menschen wirkt Magnesium nicht besser als ein Scheinpräparat.",
+    "In der Schwangerschaft sind die Studien widersprüchlich.",
+    "Auch für Schlaf, Stress und Angst gibt es nur kleine Studien mit kleinen Effekten, oft von Herstellern bezahlt. Viele berichten, dass sie besser schlafen, belegt ist das kaum.",
+    "Auf Packungen steht oft: trägt zur normalen Muskelfunktion bei. Das heißt nur: Ohne Magnesium arbeiten Muskeln nicht richtig. Es heißt nicht: Mehr hilft mehr.",
+    "Tipp: Kommen Krämpfe oft wieder, lass die Ursache abklären, statt nur Tabletten zu nehmen."
+   ],
+   "bullets": [
+    {
+     "t": "Krämpfe im Alter: wirkt nicht",
+     "at": 1
+    },
+    {
+     "t": "Schwangerschaft: widersprüchlich",
+     "at": 2
+    },
+    {
+     "t": "Schlaf, Stress: kaum belegt",
+     "at": 3
+    },
+    {
+     "t": "„Muskelfunktion“: kein Mehr-hilft-mehr",
+     "at": 4
+    }
+   ],
+   "quellen": [
+    "garrison2020",
+    "mah2021",
+    "schuster2025",
+    "boyle2017",
+    "efsa_claims2009"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/G/m5f.jpg"
+    },
+    {
+     "bild": "bilder/G/m4c.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m5e.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/m5a.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/m3g.jpg",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "id": "m4",
+   "kicker": "Im Regal",
+   "headline": "Welche Form?",
+   "sentences": [
+    "Die älteste Magnesium-Arznei ist ein Abführmittel.",
+    {
+     "t": "Der Überlieferung nach fand ein Mann namens Henry Wicker 1618 im englischen Epsom eine Wasserstelle, aus der das durstige Vieh nicht trinken wollte. Das Wasser schmeckte bitter.",
+     "say": "Der Überlieferung nach fand ein Mann namens Henry Wicker sechzehnhundertachtzehn im englischen Epsom eine Wasserstelle, aus der das durstige Vieh nicht trinken wollte. Das Wasser schmeckte bitter."
+    },
+    "Daraus wurde Bittersalz. Aus ihm gewannen Forscher später auch das Metall selbst, und bis heute ist es als Abführmittel zugelassen.",
+    "Damit kennst du die Grenze jeder Form: In höherer Dosis macht Magnesium Durchfall.",
+    {
+     "t": "Gut lösliche Formen wie Citrat werden etwas besser aufgenommen als Oxid. In einer kleinen Herstellerstudie waren es nach einer Tablette aber nur etwa vierzehn Milligramm mehr im Urin.",
+     "say": "Gut lösliche Formen wie Zitrat werden etwas besser aufgenommen als Oxid. In einer kleinen Herstellerstudie waren es nach einer Tablette aber nur etwa vierzehn Milligramm mehr im Urin."
+    },
+    {
+     "t": "Bisglycinat schnitt in den wenigen Vergleichen nicht besser ab als einfache Formen. Für Taurat, Malat oder Mischungen gibt es keine Vergleichsstudien am Menschen.",
+     "say": "Bisglyzinat schnitt in den wenigen Vergleichen nicht besser ab als einfache Formen. Für Taurat, Malat oder Mischungen gibt es keine Vergleichsstudien am Menschen."
+    },
+    "Tipp: Ein teurer Name ist kein Beleg. Schau lieber, wie viele Milligramm Magnesium eine Portion enthält."
+   ],
+   "bullets": [
+    {
+     "t": "Bittersalz: seit 1618 bekannt",
+     "at": 1
+    },
+    {
+     "t": "Grenze: Durchfall",
+     "at": 3
+    },
+    {
+     "t": "Citrat etwas besser als Oxid",
+     "at": 4
+    },
+    {
+     "t": "Spezialformen: kaum verglichen",
+     "at": 5
+    }
+   ],
+   "quellen": [
+    "fuller1662",
+    "black1756",
+    "davy1808",
+    "gi_bittersalz",
+    "kappeler2017",
+    "pardo2021",
+    "schuette1994",
+    "pajuelo2024"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/G/m4f.jpg"
+    },
+    {
+     "bild": "bilder/G/m4b.jpg",
+     "at": 4
+    },
+    {
+     "bild": "bilder/G/m4e.jpg",
      "at": 5
     },
     {
@@ -383,84 +357,14 @@
   },
   {
    "id": "m5",
-   "kicker": "Studienlage",
-   "headline": "Wofür belegt, wofür nicht",
-   "sentences": [
-    "Auf Packungen steht oft: trägt zur normalen Muskelfunktion bei. Das heißt nur: Ohne Magnesium arbeiten Muskeln nicht richtig. Es heißt nicht: Mehr hilft mehr.",
-    "Zugelassen ist Magnesium in der Klinik: als Infusion gegen Krampfanfälle bei der Schwangerschaftskomplikation Eklampsie.",
-    "Blutdruck: gut untersucht. Er sinkt leicht, vor allem bei Menschen mit Bluthochdruck.",
-    "Migräne: in kleinen Studien untersucht. Die Leitlinie nennt Magnesium zur Vorbeugung, mit geringer Beweislage.",
-    "Schlaf, Stress und Angst: kleine Studien, kleine Effekte, oft von Herstellern bezahlt. Viele berichten, dass sie besser schlafen, belegt ist das kaum.",
-    "Und die nächtlichen Wadenkrämpfe älterer Menschen? Gut untersucht, und hier wirkt Magnesium nicht besser als ein Scheinpräparat."
-   ],
-   "bullets": [
-    {
-     "t": "Klinik, Eklampsie: zugelassen",
-     "at": 1
-    },
-    {
-     "t": "Blutdruck: gut untersucht, leicht",
-     "at": 2
-    },
-    {
-     "t": "Migräne: kleine Studien",
-     "at": 3
-    },
-    {
-     "t": "Schlaf, Stress: kaum belegt",
-     "at": 4
-    },
-    {
-     "t": "Krämpfe im Alter: wirkt nicht",
-     "at": 5
-    }
-   ],
-   "quellen": [
-    "efsa_claims2009",
-    "magpie2002",
-    "argeros2025",
-    "dgn2025",
-    "mah2021",
-    "schuster2025",
-    "boyle2017",
-    "garrison2020"
-   ],
-   "shots": [
-    {
-     "bild": "bilder/G/m5a.jpg"
-    },
-    {
-     "bild": "bilder/G/m5b.jpg",
-     "at": 1
-    },
-    {
-     "bild": "bilder/G/m5c.jpg",
-     "at": 2
-    },
-    {
-     "bild": "bilder/G/m5d.jpg",
-     "at": 3
-    },
-    {
-     "bild": "bilder/G/m5e.jpg",
-     "at": 4
-    },
-    {
-     "bild": "bilder/G/m5f.jpg",
-     "at": 5
-    }
-   ]
-  },
-  {
-   "id": "m6",
    "kicker": "Vorsicht",
-   "headline": "Selbstanwendung: was kritisch ist",
+   "headline": "Sicher einnehmen",
    "sentences": [
     {
      "t": "Das Bundesinstitut für Risikobewertung rät: aus Präparaten höchstens 250 Milligramm am Tag zusätzlich, verteilt auf mindestens zwei Portionen.",
      "say": "Das Bundesinstitut für Risikobewertung rät: aus Präparaten höchstens zweihundertfünfzig Milligramm am Tag zusätzlich, verteilt auf mindestens zwei Portionen."
     },
-    "Darüber droht Durchfall. Gefährlich viel im Blut wird es fast nur bei kranken Nieren, dann nur nach ärztlicher Rücksprache.",
+    "Gefährlich viel im Blut wird es fast nur bei kranken Nieren, dann nur nach ärztlicher Rücksprache.",
     "Magnesium stört die Aufnahme mancher Medikamente, etwa bestimmter Antibiotika, Osteoporose-Tabletten oder HIV-Mittel. Wie viele Stunden Abstand nötig sind, steht im Beipackzettel des anderen Mittels.",
     "Und morgens oder abends? Das hat keine Studie verglichen. Belegt ist nur: Kleinere Portionen werden anteilig besser aufgenommen.",
     "Tipp: Sprich mit Arzt oder Ärztin, bevor du Magnesium dauerhaft nimmst, besonders wenn du Medikamente nimmst oder deine Nieren schwach sind."
@@ -514,31 +418,87 @@
    ]
   },
   {
+   "id": "m6",
+   "kicker": "Zufuhr",
+   "headline": "Aus dem Essen",
+   "sentences": [
+    "Viel Magnesium steckt in Kernen, Nüssen, Haferflocken, Vollkorn und Hülsenfrüchten. Eine Handvoll Sonnenblumenkerne bringt etwa hundert Milligramm.",
+    "In Deutschland kommt das meiste aber aus Getränken und Brot.",
+    "Mineralwasser darf „magnesiumhaltig“ heißen, wenn ein Liter mehr als fünfzig Milligramm enthält.",
+    "Und beim Weißmehl bleibt von sechs Teilen Magnesium nur eines übrig.",
+    "Tipp: Vollkorn statt Weißbrot und weißem Reis bringt am Tag etwa so viel wie eine kleine Magnesiumtablette."
+   ],
+   "bullets": [
+    {
+     "t": "Kerne, Nüsse, Vollkorn",
+     "at": 0
+    },
+    {
+     "t": "Wasser: über 50 mg pro Liter",
+     "at": 2
+    },
+    {
+     "t": "Weißmehl: ein Sechstel",
+     "at": 3
+    },
+    {
+     "t": "Tipp: Vollkorn statt Weiß",
+     "at": 4
+    }
+   ],
+   "quellen": [
+    "bls2025",
+    "mri2008",
+    "mintafelwv"
+   ],
+   "shots": [
+    {
+     "bild": "bilder/G/m2c.jpg"
+    },
+    {
+     "bild": "bilder/G/m2d.jpg",
+     "at": 1
+    },
+    {
+     "bild": "bilder/G/m2e.jpg",
+     "at": 2
+    },
+    {
+     "bild": "bilder/G/m2f.jpg",
+     "at": 3
+    },
+    {
+     "bild": "bilder/G/m2g.jpg",
+     "at": 4
+    }
+   ]
+  },
+  {
    "id": "m7",
    "kapitel": "Fazit",
    "kicker": "Fazit",
    "headline": "Kurz gesagt",
    "sentences": [
-    "Also: Morgens oder abends? Das ist offen. Größere Mengen teilst du besser auf.",
+    "Also: Brauchst du Magnesium? Es hilft vor allem bei echtem Mangel, und es senkt hohen Blutdruck leicht. Für alle anderen reicht meist das Essen.",
     {
      "t": "Citrat oder Bisglycinat? Die Unterschiede zwischen den Formen sind klein.",
      "say": "Zitrat oder Bisglyzinat? Die Unterschiede zwischen den Formen sind klein."
     },
-    "Und brauchst du es überhaupt? Wer gesund ist und ausgewogen isst, meist nicht. Wer zu einer Risikogruppe gehört, lässt es prüfen.",
-    "Belegt: ein leichter Effekt auf den Blutdruck. Unklar: Schlaf, Stress und Migräne. Achte auf Obergrenze, Nieren und Medikamente."
+    "Morgens oder abends? Das ist offen. Größere Mengen teilst du besser auf.",
+    "Und achte auf die Obergrenze, deine Nieren und deine Medikamente."
    ],
    "bullets": [
     {
-     "t": "Belegt: Blutdruck leicht, Klinik",
-     "at": 3
-    },
-    {
-     "t": "Unklar: Schlaf, Stress, Migräne",
-     "at": 3
+     "t": "Hilft: echter Mangel, Blutdruck leicht",
+     "at": 0
     },
     {
      "t": "Form: Unterschiede klein",
      "at": 1
+    },
+    {
+     "t": "Tageszeit offen, aufteilen",
+     "at": 2
     },
     {
      "t": "Achten: 250 mg, Nieren, Medikamente",
@@ -546,20 +506,21 @@
     }
    ],
    "quellen": [
+    "gi_verla",
     "argeros2025",
     "kappeler2017",
     "bfr2021"
    ],
    "shots": [
     {
-     "bild": "bilder/G/m7a.jpg"
+     "bild": "bilder/G/m7c.jpg"
     },
     {
      "bild": "bilder/G/m7b.jpg",
      "at": 1
     },
     {
-     "bild": "bilder/G/m7c.jpg",
+     "bild": "bilder/G/m7a.jpg",
      "at": 2
     },
     {
@@ -575,39 +536,40 @@
    "kicker": "Erklärvideo",
    "headline": "Alles über Magnesium: die Reihe",
    "sentences": [
-    "In den nächsten Folgen geht es um jede Frage einzeln: morgens oder abends, welche Formen, Mangel erkennen, die Obergrenze, Schlaf und Stress. Danach Krämpfe, Blutdruck, Migräne, Frauen und Lebensmittel.",
     "Als Nächstes: Warum hält sich der Rat, Magnesium abends zu nehmen, so hartnäckig?",
+    "Danach: Welche Form passt wozu? Woran erkennst du einen Mangel? Ab wann ist es zu viel? Und was zeigen die Studien zu Schlaf und Stress?",
+    "Es folgen Krämpfe, Blutdruck, Migräne, Frauen und Lebensmittel.",
     "Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen, aber nicht ersetzen. Bis zum nächsten Video!"
    ],
    "hervorheben_at": 0,
    "kacheln": [
     {
-     "t": "Morgens oder abends?",
+     "t": "Warum abends?",
      "bild": "bilder/G/r2.jpg",
      "wort": "abends"
     },
     {
-     "t": "Welche Form?",
+     "t": "Welche Form wozu?",
      "bild": "bilder/G/r3.jpg",
-     "wort": "Formen"
+     "wort": "Form"
     },
     {
-     "t": "Mangel erkennen",
+     "t": "Mangel erkennen?",
      "bild": "bilder/G/r4.jpg",
      "wort": "Mangel"
     },
     {
-     "t": "Wie viel ist zu viel?",
+     "t": "Wann zu viel?",
      "bild": "bilder/G/r5.jpg",
-     "wort": "Obergrenze"
+     "wort": "zu viel"
     },
     {
-     "t": "Schlaf",
+     "t": "Hilft es beim Schlaf?",
      "bild": "bilder/G/r6.jpg",
      "wort": "Schlaf"
     },
     {
-     "t": "Stress und Angst",
+     "t": "Hilft es bei Stress?",
      "bild": "bilder/G/r7.jpg",
      "wort": "Stress"
     }
@@ -774,6 +736,36 @@
    "kurz": "eigene Suche 2026",
    "voll": "Eigene PubMed-Suche 14.11.2026: Magnesium und Einnahmezeitpunkt (morning/evening/bedtime/time of day), 2015–2026, 13 Treffer, keine Vergleichsstudie.",
    "url": "https://pubmed.ncbi.nlm.nih.gov/"
+  },
+  "fuller1662": {
+   "kurz": "Fuller 1662",
+   "voll": "Fuller T. The History of the Worthies of England, Surrey: „Medicinal Waters. Ebsham.“ London 1662.",
+   "url": "https://distantreader.org/stacks/earlyprint/txt/A40672.txt"
+  },
+  "black1756": {
+   "kurz": "Black 1756",
+   "voll": "Black J. Experiments upon Magnesia Alba, Quick-lime, and other Alcaline Substances. Essays and Observations, Physical and Literary 1756;2:157–225.",
+   "url": "https://www.gutenberg.org/ebooks/24591"
+  },
+  "davy1808": {
+   "kurz": "Davy 1808",
+   "voll": "Davy H. Electro-chemical researches, on the decomposition of the earths. Phil Trans R Soc Lond 1808;98:333–370.",
+   "url": "https://doi.org/10.1098/rstl.1808.0023"
+  },
+  "gi_bittersalz": {
+   "kurz": "Gebrauchsinformation Bittersalz 2025",
+   "voll": "Gebrauchsinformation Bittersalz, Zul.-Nr. 1199.99.99, überarbeitet 01/2025.",
+   "url": "https://cdn.shop-apotheke.com/PDF/D01/569/860/D01569860-bp.pdf"
+  },
+  "dgvs2022": {
+   "kurz": "DGVS 2022",
+   "voll": "Andresen V et al. Aktualisierte S2k-Leitlinie chronische Obstipation (DGVS/DGNM). Z Gastroenterol 2022;60:1528–1572.",
+   "url": "https://doi.org/10.1055/a-1880-1928"
+  },
+  "gi_verla": {
+   "kurz": "Gebrauchsinformation Magnesium Verla 2022",
+   "voll": "Gebrauchsinformation Magnesium Verla N Dragées, Anwendungsgebiet nachgewiesener Magnesiummangel, überarbeitet 07/2022.",
+   "url": "https://patienteninfo-service.de/gi/7130/pdf"
   }
  }
 }
