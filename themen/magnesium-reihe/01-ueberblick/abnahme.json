@@ -1,7 +1,14 @@
 {
  "seit": "Deine 2 Notizen vom 15.11. abends umgesetzt.",
  "stellen": [
-  {"suche": "Überraschend: Eine dieser Fragen", "was": "Start: verrät die Antwort nicht mehr, sondern verweist aufs fünfte Kapitel (rote Zeile „Eine davon: nie untersucht.“)"},
-  {"suche": "Für Gesunde bringt der Bluttest", "was": "Bluttest neu: „Für Gesunde bringt der Bluttest deshalb wenig …“ – passt jetzt zu dem, was du von Ärzten hörst"}
- ]
+  {
+   "suche": "Überraschend: Eine dieser Fragen",
+   "was": "Start: verrät die Antwort nicht mehr, sondern verweist aufs fünfte Kapitel (rote Zeile „Eine davon: nie untersucht.“)"
+  },
+  {
+   "suche": "Für Gesunde bringt der Bluttest",
+   "was": "Bluttest neu: „Für Gesunde bringt der Bluttest deshalb wenig …“ – passt jetzt zu dem, was du von Ärzten hörst"
+  }
+ ],
+ "erledigt": "✓ Alles abgenommen, nichts offen (15.11. abends). Endfassung gerendert, siehe Vorschau-Seite."
 }
