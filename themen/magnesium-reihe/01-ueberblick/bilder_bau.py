@@ -71,7 +71,7 @@ SZENE = {
  'm2x': ("a crowd of people in a park seen from slightly above; a few of them softly highlighted in warm ochre light, among them an older man with a blood pressure cuff and a woman holding her temple, a friendly doctor walking towards them", R),
  'm3y': ("a pregnant woman sitting on the edge of her bed at night, holding her calf with a slightly pained face, her partner sitting beside her with a hand on her shoulder", R),
  'm4x': ("an old 17th century apothecary shop with wooden shelves and plain ceramic jars without any writing, on the counter a large bowl of glittering white crystals", KT),
- 'm4y': ("17th century English countryside in a dry summer: a man in simple 1600s clothes beside a small pool of water in a hoof print hollow, thirsty cows turning away from the water, rolling hills", R),
+ 'm4y': ("Surrey, southern England, 1618, a dry summer: a common with yellowed but still grassy meadow, hedgerows and old oak trees, gentle green-brown rolling downs under an English sky with clouds; a man in simple 1600s English clothes and hat beside a small muddy pool of water in a hoof print hollow; healthy well-fed brown and white cows sniff the water and turn away from it", R),
  'm4z': ("an 18th century chemist's laboratory with glass retorts, a small furnace and dishes of white powder, a scientist in a powdered wig carefully pouring a liquid", R),
 }
 KACHEL = {
