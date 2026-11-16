@@ -26,7 +26,7 @@ Formen bekommen eine Vergleichsfolge (3) und in jeder Anwendungsfolge einen Absc
 | 10 | Migräne | |
 | 11 | Frauen (Periode, Schwangerschaft, Wechseljahre) | |
 | 12 | Lebensmittel und Mineralwasser | |
-| Extra | Magnesium und Vitamin D · Magnesium-L-Threonat | |
+| Extra | Magnesium und Vitamin D (L-Threonat: Abschnitt „Magnesium fürs Gehirn?“ in Folge 3, Entscheidung 16.11.) | |
 
 ## Gliederung Folge 1 (≈ 5 min, ≈ 680 Wörter bei Tempo 1,05)
 - 0:00 Einstieg, Thema zuerst: „Magnesium: morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?“ → Kacheln
@@ -64,3 +64,11 @@ Titel Folge 1 (14.11.): „Magnesium: Was du wirklich wissen musst“ (ohne „5
 - Folge 2 trägt nicht mit „nie verglichen“ allein: warum sich der Rat hält und was stattdessen zählt.
 - Länge etwa 6 Minuten, keine langen Fassungen (Nutzer 15.11.: Zuschauer nicht mit Werbung unterbrechen).
 - A/B-Test Titel/Vorschaubild: später; dann kein gesprochener Titel im Einstieg.
+
+## Folge 3 „Welches Magnesium?“ (Nutzer 16.11.)
+- Bleibt auf jeden Fall. Gut recherchiert, nicht alles ablehnen: Tendenzen zeigen (Aufnahme-Studien, Verträglichkeit,
+  Gehalt an reinem Magnesium je Form, Preis), Erfahrungsberichte nennen, ohne zu übertreiben, immer mit Studienstand.
+- L-Threonat kein eigenes Extra (zu wenig: Ratten, zwei Herstellerstudien am Menschen, eine verfehlte ihr Hauptziel),
+  sondern ein Abschnitt mit Suchwort statt Fachname: „Magnesium fürs Gehirn?“. Eigene Folge nur, falls neue
+  unabhängige Humanstudien erscheinen.
+- Neu zu prüfen: Anteil reines Magnesium je Form, Formen-Vergleiche 2024–2026, Herstellerfinanzierung.

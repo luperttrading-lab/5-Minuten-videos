@@ -65,7 +65,7 @@ SZENEN = [
   'sentences': ['Magnesium: Was du wirklich wissen musst.',  # Nutzer 15.11.: Titel des Vorschaubilds gesprochen
                 'Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?',
                 'Überraschend: Eine dieser Fragen hat bis heute keine einzige Studie untersucht. Welche, erfährst du im fünften Kapitel.',  # Nutzer 15.11.: Antwort nicht im Start vorwegnehmen
-                'In sechs Schritten klären wir: ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.'],  # Startvariante A; Nutzer 16.11.: „wem es hilft“ nicht doppelt
+                'In sechs Schritten klären wir: ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form die richtige ist, wie du es sicher einnimmst und was im Essen steckt.'],  # Startvariante A; Nutzer 16.11.: „wem es hilft“ nicht doppelt
   'hervorheben_at': 3,
   'hook_bild': 'thumbnail/bild_G.jpg', 'kacheln_ab': 3, 'hook_titel': 'Magnesium',
   'hook_stil': 'vorschaubild', 'hook_untertitel': ['Was du wirklich', 'wissen musst'],  # Nutzer 15.11.: erstes Bild = Vorschaubild, ohne Zierstrich
@@ -124,11 +124,12 @@ SZENEN = [
                 'Damit kennst du die Grenze jeder Form: In höherer Dosis macht Magnesium Durchfall.',
                 'Gut lösliche Formen wie Citrat werden etwas besser aufgenommen als Oxid. In einer kleinen Herstellerstudie waren es nach einer Tablette aber nur etwa vierzehn Milligramm mehr im Urin.',
                 'Bisglycinat schnitt in den wenigen Vergleichen nicht besser ab als einfache Formen. Für Taurat, Malat oder Mischungen gibt es keine Vergleichsstudien am Menschen.',
+                'Oft heißt es, jede Form sei für etwas anderes gut, etwa Bisglycinat für den Schlaf. Viele berichten das, direkt verglichen hat es bisher keine Studie. Mehr dazu in Folge drei.',  # Zusatzsatz 16.11.
                 'Tipp: Ein teurer Name ist kein Beleg. Schau lieber, wie viele Milligramm Magnesium eine Portion enthält.'],
   'bullets': [B('Bittersalz: Epsom, überliefert 1618', 1), B('Grenze: Durchfall', 3), B('Citrat etwas besser als Oxid', 4),
               B('Spezialformen: kaum verglichen', 5)],
   'quellen': ['fuller1662', 'black1756', 'davy1808', 'gi_bittersalz', 'kappeler2017', 'pardo2021', 'schuette1994', 'pajuelo2024'],
-  'bilder': [('m4x', None), ('m4y', 1), ('m4z', 2), ('m4f', 3), ('m4b', 4), ('m4e', 5), ('m4g', 6)]},
+  'bilder': [('m4x', None), ('m4y', 1), ('m4z', 2), ('m4f', 3), ('m4b', 4), ('m4e', 5), ('m4d', 6), ('m4g', 7)]},
 
  {'id': 'm5', 'kapitel_nr': 5, 'kicker': 'Kapitel 5 · Vorsicht', 'headline': 'Sicher einnehmen',
   'sentences': [S('Das Bundesinstitut für Risikobewertung rät: aus Präparaten höchstens 250 Milligramm am Tag zusätzlich, verteilt auf mindestens zwei Portionen.',
@@ -194,7 +195,7 @@ def bauen(stil):
     return {'tts': 'elevenlabs', 'voice_id': 'NBqeXKdZHweef6y0B67V', 'model': 'eleven_v4', 'tempo': 1.05,
             'aussprache': AUSSPRACHE,
             'titel': 'Magnesium: Was du wirklich wissen musst', 'stil': stil,
-            'untertitel': 'Folge 1 der Magnesium-Reihe: ob du Magnesium überhaupt brauchst, wem es hilft und wem nicht, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.',
+            'untertitel': 'Folge 1 der Magnesium-Reihe: ob du Magnesium überhaupt brauchst, wem es hilft und wem nicht, welche Form die richtige ist, wie du es sicher einnimmst und was im Essen steckt.',
             'fuss': 'Unabhängig: keine Sponsoren, keine Affiliate-Links, keine eigenen Produkte. Recherche-Stand: November 2026. Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.',
             'scenes': szenen, 'quellen': Q}
 

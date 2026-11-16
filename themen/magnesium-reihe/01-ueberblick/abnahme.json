@@ -1,10 +1,7 @@
 {
- "seit": "Deine Hinweise vom 16.11.: Übersicht neu, Bild bei 1:40 getauscht.",
+ "seit": "Deine Wahl vom 16.11.: Übersicht Fassung 3 und Zusatzsatz in Kapitel 4.",
  "stellen": [
-  {
-   "suche": "In sechs Schritten klären wir",
-   "was": "Übersicht neu: „In sechs Schritten klären wir: ob du es überhaupt brauchst, wem es hilft …“ (vorher stand „Wem hilft …“ doppelt)"
-  }
- ],
- "erledigt": "✓ Alles abgenommen, nichts offen (16.11.). Endfassung gerendert, siehe Vorschau-Seite."
+  {"suche": "In sechs Schritten klären wir", "was": "Übersicht Fassung 3: „… welche Form die richtige ist …“"},
+  {"suche": "Oft heißt es, jede Form", "was": "Zusatzsatz Kapitel 4, mit Erfahrungsberichten und Verweis auf Folge drei"}
+ ]
 }

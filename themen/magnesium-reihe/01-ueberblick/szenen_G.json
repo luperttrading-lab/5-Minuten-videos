@@ -11,7 +11,7 @@
  },
  "titel": "Magnesium: Was du wirklich wissen musst",
  "stil": "G",
- "untertitel": "Folge 1 der Magnesium-Reihe: ob du Magnesium überhaupt brauchst, wem es hilft und wem nicht, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.",
+ "untertitel": "Folge 1 der Magnesium-Reihe: ob du Magnesium überhaupt brauchst, wem es hilft und wem nicht, welche Form die richtige ist, wie du es sicher einnimmst und was im Essen steckt.",
  "fuss": "Unabhängig: keine Sponsoren, keine Affiliate-Links, keine eigenen Produkte. Recherche-Stand: November 2026. Sprecherstimme synthetisch (ElevenLabs). Bilder KI-generiert. Das Video ersetzt nicht das Gespräch mit Arzt oder Ärztin.",
  "scenes": [
   {
@@ -24,7 +24,7 @@
     "Magnesium: Was du wirklich wissen musst.",
     "Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?",
     "Überraschend: Eine dieser Fragen hat bis heute keine einzige Studie untersucht. Welche, erfährst du im fünften Kapitel.",
-    "In sechs Schritten klären wir: ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt."
+    "In sechs Schritten klären wir: ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form die richtige ist, wie du es sicher einnimmst und was im Essen steckt."
    ],
    "hervorheben_at": 3,
    "hook_bild": "thumbnail/bild_G.jpg",
@@ -316,6 +316,7 @@
     "Damit kennst du die Grenze jeder Form: In höherer Dosis macht Magnesium Durchfall.",
     "Gut lösliche Formen wie Citrat werden etwas besser aufgenommen als Oxid. In einer kleinen Herstellerstudie waren es nach einer Tablette aber nur etwa vierzehn Milligramm mehr im Urin.",
     "Bisglycinat schnitt in den wenigen Vergleichen nicht besser ab als einfache Formen. Für Taurat, Malat oder Mischungen gibt es keine Vergleichsstudien am Menschen.",
+    "Oft heißt es, jede Form sei für etwas anderes gut, etwa Bisglycinat für den Schlaf. Viele berichten das, direkt verglichen hat es bisher keine Studie. Mehr dazu in Folge drei.",
     "Tipp: Ein teurer Name ist kein Beleg. Schau lieber, wie viele Milligramm Magnesium eine Portion enthält."
    ],
    "bullets": [
@@ -371,8 +372,12 @@
      "at": 5
     },
     {
-     "bild": "bilder/G/m4g.jpg",
+     "bild": "bilder/G/m4d.jpg",
      "at": 6
+    },
+    {
+     "bild": "bilder/G/m4g.jpg",
+     "at": 7
     }
    ]
   },

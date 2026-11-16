@@ -1,296 +1,304 @@
 1
-00:00:01,000 --> 00:00:04,502
+00:00:01,000 --> 00:00:04,426
 Magnesium: Was du wirklich wissen musst.
 
 2
-00:00:04,352 --> 00:00:10,445
+00:00:04,276 --> 00:00:10,217
 Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?
 
 3
-00:00:10,295 --> 00:00:16,231
+00:00:10,067 --> 00:00:16,171
 Überraschend: Eine dieser Fragen hat bis heute keine einzige Studie untersucht. Welche,
 
 4
-00:00:16,081 --> 00:00:18,293
+00:00:16,021 --> 00:00:18,293
 erfährst du im fünften Kapitel.
 
 5
-00:00:18,143 --> 00:00:23,158
-In sechs Schritten klären wir: ob du es überhaupt brauchst, wem es hilft,
+00:00:18,143 --> 00:00:24,221
+In sechs Schritten klären wir: ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft,
 
 6
-00:00:23,008 --> 00:00:29,089
-wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.
+00:00:24,071 --> 00:00:29,440
+welche Form die richtige ist, wie du es sicher einnimmst und was im Essen steckt.
 
 7
-00:00:29,689 --> 00:00:30,686
+00:00:30,040 --> 00:00:31,037
 Oft heißt es,
 
 8
-00:00:30,536 --> 00:00:35,897
+00:00:30,887 --> 00:00:36,247
 die meisten Menschen hätten zu wenig Magnesium. Eine Quelle dafür gibt es nicht.
 
 9
-00:00:35,747 --> 00:00:44,243
+00:00:36,097 --> 00:00:44,593
 In der letzten großen Verzehrsstudie lag gut jeder Vierte unter der damaligen Empfehlung. Das ist aber kein Mangel: Gezählt wurde nur,
 
 10
-00:00:44,093 --> 00:00:48,354
+00:00:44,443 --> 00:00:48,704
 was auf dem Teller lag, und die Daten sind fast zwanzig Jahre alt.
 
 11
-00:00:48,204 --> 00:00:55,668
+00:00:48,554 --> 00:00:56,018
 Die Deutsche Gesellschaft für Ernährung schätzt den Bedarf auf etwa 300 Milligramm für Frauen und 350 für Männer.
 
 12
-00:00:55,518 --> 00:01:03,450
+00:00:55,868 --> 00:01:03,801
 Einen echten Mangel bekommen vor allem Menschen mit bestimmten Medikamenten oder Krankheiten: Magenschutz-Tabletten über Jahre,
 
 13
-00:01:03,300 --> 00:01:10,068
+00:01:03,651 --> 00:01:10,418
 manche Entwässerungstabletten, Alkoholkrankheit, schlecht eingestellter Diabetes oder anhaltender Durchfall.
 
 14
-00:01:09,918 --> 00:01:15,439
+00:01:10,268 --> 00:01:15,790
 Und der Bluttest? In deinem Körper stecken etwa vierundzwanzig Gramm Magnesium,
 
 15
-00:01:15,289 --> 00:01:20,811
+00:01:15,640 --> 00:01:21,161
 so schwer wie drei Zwei-Euro-Münzen. Im Blut ist davon weniger als ein Prozent.
 
 16
-00:01:20,661 --> 00:01:27,068
+00:01:21,011 --> 00:01:27,419
 Für Gesunde bringt der Bluttest deshalb wenig: Ein normaler Wert schließt knappe Vorräte nicht aus,
 
 17
-00:01:26,918 --> 00:01:34,906
+00:01:27,269 --> 00:01:35,257
 und einen besseren Test gibt es nicht. Nur ein niedriger Wert zeigt einen echten Mangel an, und der ist bei Gesunden selten.
 
 18
-00:01:34,756 --> 00:01:39,695
+00:01:35,107 --> 00:01:40,046
 Tipp: Gehörst du zu einer dieser Gruppen, sprich mit Arzt oder Ärztin darüber.
 
 19
-00:01:40,295 --> 00:01:43,188
+00:01:40,646 --> 00:01:43,539
 Wem hilft Magnesium also wirklich?
 
 20
-00:01:43,038 --> 00:01:48,558
+00:01:43,389 --> 00:01:48,908
 Zuerst Menschen mit nachgewiesenem Mangel. Dafür gibt es zugelassene Arzneimittel,
 
 21
-00:01:48,408 --> 00:01:51,112
+00:01:48,758 --> 00:01:51,462
 etwa wenn der Mangel die Muskeln stört.
 
 22
-00:01:50,962 --> 00:01:57,417
+00:01:51,312 --> 00:01:57,768
 Denn Magnesium ist an Hunderten Reaktionen im Körper beteiligt. Im Muskel hilft es beim Entspannen,
 
 23
-00:01:57,267 --> 00:01:59,264
+00:01:57,618 --> 00:01:59,615
 als Gegenspieler von Calcium.
 
 24
-00:01:59,114 --> 00:02:06,426
+00:01:59,465 --> 00:02:06,777
 Bei Bluthochdruck ist es gut untersucht: Der Druck sinkt leicht. Bei normalem Blutdruck zeigte sich kein klarer Effekt.
 
 25
-00:02:06,276 --> 00:02:11,760
+00:02:06,627 --> 00:02:12,110
 Bei Migräne nennt die Leitlinie Magnesium zur Vorbeugung, mit geringer Beweislage.
 
 26
-00:02:11,610 --> 00:02:19,531
+00:02:11,960 --> 00:02:19,881
 Und in der Klinik ist es ein zugelassenes Mittel: als Infusion gegen Krampfanfälle bei der Schwangerschaftskomplikation Eklampsie.
 
 27
-00:02:19,381 --> 00:02:25,953
+00:02:19,731 --> 00:02:26,303
 Tipp: Bei Bluthochdruck oder Migräne ersetzt Magnesium keine Behandlung. Sprich mit Arzt oder Ärztin,
 
 28
-00:02:25,803 --> 00:02:27,288
+00:02:26,153 --> 00:02:27,639
 ob es für dich passt.
 
 29
-00:02:27,888 --> 00:02:32,646
+00:02:28,239 --> 00:02:32,996
 Und wofür nehmen es die meisten? Gegen Wadenkrämpfe. Viele berichten,
 
 30
-00:02:32,496 --> 00:02:33,981
+00:02:32,846 --> 00:02:34,331
 dass es ihnen hilft.
 
 31
-00:02:33,831 --> 00:02:42,057
+00:02:34,181 --> 00:02:42,408
 Doch genau das ist gut untersucht. Bei den nächtlichen Krämpfen älterer Menschen wirkt Magnesium nicht besser als ein Scheinpräparat.
 
 32
-00:02:41,907 --> 00:02:44,952
+00:02:42,258 --> 00:02:45,303
 In der Schwangerschaft sind die Studien widersprüchlich.
 
 33
-00:02:44,802 --> 00:02:50,051
+00:02:45,153 --> 00:02:50,402
 Auch für Schlaf, Stress und Angst gibt es nur kleine Studien mit kleinen Effekten,
 
 34
-00:02:49,901 --> 00:02:55,772
+00:02:50,252 --> 00:02:56,122
 oft von Herstellern bezahlt. Viele berichten, dass sie besser schlafen, belegt ist das kaum.
 
 35
-00:02:55,622 --> 00:03:06,514
+00:02:55,972 --> 00:03:06,865
 Auf Packungen steht oft: trägt zur normalen Muskelfunktion bei. Das heißt nur: Ohne Magnesium arbeiten Muskeln nicht richtig. Es heißt nicht: Mehr hilft mehr.
 
 36
-00:03:06,364 --> 00:03:10,239
+00:03:06,715 --> 00:03:10,589
 Tipp: Kommen Krämpfe oft wieder, lass die Ursache abklären,
 
 37
-00:03:10,089 --> 00:03:12,133
+00:03:10,439 --> 00:03:12,483
 statt nur Tabletten zu nehmen.
 
 38
-00:03:12,733 --> 00:03:16,375
+00:03:13,083 --> 00:03:16,891
 Die älteste Magnesium-Arznei ist ein Abführmittel.
 
 39
-00:03:16,225 --> 00:03:23,172
+00:03:16,741 --> 00:03:23,644
 Der Überlieferung nach fand ein Mann namens Henry Wicker 1618 im englischen Epsom eine Wasserstelle,
 
 40
-00:03:23,022 --> 00:03:28,337
+00:03:23,494 --> 00:03:28,776
 aus der das durstige Vieh nicht trinken wollte. Das Wasser schmeckte bitter.
 
 41
-00:03:28,187 --> 00:03:33,797
+00:03:28,626 --> 00:03:34,331
 Daraus wurde Bittersalz. Aus ihm gewannen Forscher später auch das Metall selbst,
 
 42
-00:03:33,647 --> 00:03:37,099
+00:03:34,181 --> 00:03:37,691
 und bis heute ist es als Abführmittel zugelassen.
 
 43
-00:03:36,949 --> 00:03:42,814
+00:03:37,541 --> 00:03:43,481
 Damit kennst du die Grenze jeder Form: In höherer Dosis macht Magnesium Durchfall.
 
 44
-00:03:42,664 --> 00:03:54,471
+00:03:43,331 --> 00:03:55,062
 Gut lösliche Formen wie Citrat werden etwas besser aufgenommen als Oxid. In einer kleinen Herstellerstudie waren es nach einer Tablette aber nur etwa vierzehn Milligramm mehr im Urin.
 
 45
-00:03:54,321 --> 00:04:00,495
+00:03:54,912 --> 00:04:01,086
 Bisglycinat schnitt in den wenigen Vergleichen nicht besser ab als einfache Formen. Für Taurat,
 
 46
-00:04:00,345 --> 00:04:04,680
+00:04:00,936 --> 00:04:05,271
 Malat oder Mischungen gibt es keine Vergleichsstudien am Menschen.
 
 47
-00:04:04,530 --> 00:04:08,045
-Tipp: Ein teurer Name ist kein Beleg. Schau lieber,
+00:04:05,121 --> 00:04:12,467
+Oft heißt es, jede Form sei für etwas anderes gut, etwa Bisglycinat für den Schlaf. Viele berichten das,
 
 48
-00:04:07,895 --> 00:04:11,475
-wie viele Milligramm Magnesium eine Portion enthält.
+00:04:12,317 --> 00:04:17,310
+direkt verglichen hat es bisher keine Studie. Mehr dazu in Folge drei.
 
 49
-00:04:12,075 --> 00:04:19,941
-Das Bundesinstitut für Risikobewertung rät: aus Präparaten höchstens 250 Milligramm am Tag zusätzlich,
+00:04:17,160 --> 00:04:20,705
+Tipp: Ein teurer Name ist kein Beleg. Schau lieber,
 
 50
-00:04:19,791 --> 00:04:22,891
-verteilt auf mindestens zwei Portionen.
+00:04:20,555 --> 00:04:24,166
+wie viele Milligramm Magnesium eine Portion enthält.
 
 51
-00:04:22,741 --> 00:04:26,756
-Gefährlich viel im Blut wird es fast nur bei kranken Nieren,
+00:04:24,766 --> 00:04:32,633
+Das Bundesinstitut für Risikobewertung rät: aus Präparaten höchstens 250 Milligramm am Tag zusätzlich,
 
 52
-00:04:26,606 --> 00:04:29,139
-dann nur nach ärztlicher Rücksprache.
+00:04:32,483 --> 00:04:35,583
+verteilt auf mindestens zwei Portionen.
 
 53
-00:04:28,989 --> 00:04:34,212
-Magnesium stört die Aufnahme mancher Medikamente, etwa bestimmter Antibiotika,
+00:04:35,433 --> 00:04:39,447
+Gefährlich viel im Blut wird es fast nur bei kranken Nieren,
 
 54
-00:04:34,062 --> 00:04:42,015
-Osteoporose-Tabletten oder HIV-Mittel. Wie viele Stunden Abstand nötig sind, steht im Beipackzettel des anderen Mittels.
+00:04:39,297 --> 00:04:41,831
+dann nur nach ärztlicher Rücksprache.
 
 55
-00:04:41,865 --> 00:04:51,006
-Und morgens oder abends? Das hat keine Studie verglichen. Belegt ist nur: Kleinere Portionen werden anteilig besser aufgenommen.
+00:04:41,681 --> 00:04:46,903
+Magnesium stört die Aufnahme mancher Medikamente, etwa bestimmter Antibiotika,
 
 56
-00:04:50,856 --> 00:04:55,223
-Tipp: Sprich mit Arzt oder Ärztin, bevor du Magnesium dauerhaft nimmst,
+00:04:46,753 --> 00:04:54,707
+Osteoporose-Tabletten oder HIV-Mittel. Wie viele Stunden Abstand nötig sind, steht im Beipackzettel des anderen Mittels.
 
 57
-00:04:55,073 --> 00:04:59,262
-besonders wenn du Medikamente nimmst oder deine Nieren schwach sind.
+00:04:54,557 --> 00:05:03,697
+Und morgens oder abends? Das hat keine Studie verglichen. Belegt ist nur: Kleinere Portionen werden anteilig besser aufgenommen.
 
 58
-00:04:59,862 --> 00:05:03,760
-Viel Magnesium steckt in Kernen, Nüssen, Haferflocken,
+00:05:03,547 --> 00:05:07,914
+Tipp: Sprich mit Arzt oder Ärztin, bevor du Magnesium dauerhaft nimmst,
 
 59
-00:05:03,610 --> 00:05:10,145
-Vollkorn und Hülsenfrüchten. Eine Handvoll Sonnenblumenkerne bringt etwa hundert Milligramm.
+00:05:07,764 --> 00:05:11,953
+besonders wenn du Medikamente nimmst oder deine Nieren schwach sind.
 
 60
-00:05:09,995 --> 00:05:13,802
-In Deutschland kommt das meiste aber aus Getränken und Brot.
+00:05:12,553 --> 00:05:16,451
+Viel Magnesium steckt in Kernen, Nüssen, Haferflocken,
 
 61
-00:05:13,652 --> 00:05:16,802
-Mineralwasser darf „magnesiumhaltig“ heißen,
+00:05:16,301 --> 00:05:22,836
+Vollkorn und Hülsenfrüchten. Eine Handvoll Sonnenblumenkerne bringt etwa hundert Milligramm.
 
 62
-00:05:16,652 --> 00:05:20,278
-wenn ein Liter mehr als fünfzig Milligramm enthält.
+00:05:22,686 --> 00:05:26,494
+In Deutschland kommt das meiste aber aus Getränken und Brot.
 
 63
-00:05:20,128 --> 00:05:25,231
-Und beim Weißmehl bleibt von sechs Teilen Magnesium nur eines übrig.
+00:05:26,344 --> 00:05:29,493
+Mineralwasser darf „magnesiumhaltig“ heißen,
 
 64
-00:05:25,081 --> 00:05:32,098
-Tipp: Vollkorn statt Weißbrot und weißem Reis bringt am Tag etwa so viel wie eine kleine Magnesiumtablette.
+00:05:29,343 --> 00:05:32,970
+wenn ein Liter mehr als fünfzig Milligramm enthält.
 
 65
-00:05:32,698 --> 00:05:37,208
-Also: Brauchst du Magnesium? Es hilft vor allem bei echtem Mangel,
+00:05:32,820 --> 00:05:37,922
+Und beim Weißmehl bleibt von sechs Teilen Magnesium nur eines übrig.
 
 66
-00:05:37,058 --> 00:05:42,296
-und es senkt hohen Blutdruck leicht. Für alle anderen reicht meist das Essen.
+00:05:37,772 --> 00:05:44,789
+Tipp: Vollkorn statt Weißbrot und weißem Reis bringt am Tag etwa so viel wie eine kleine Magnesiumtablette.
 
 67
-00:05:42,146 --> 00:05:47,553
-Citrat oder Bisglycinat? Die Unterschiede zwischen den Formen sind klein.
+00:05:45,389 --> 00:05:49,900
+Also: Brauchst du Magnesium? Es hilft vor allem bei echtem Mangel,
 
 68
-00:05:47,403 --> 00:05:52,658
-Morgens oder abends? Das ist offen. Größere Mengen teilst du besser auf.
+00:05:49,750 --> 00:05:54,987
+und es senkt hohen Blutdruck leicht. Für alle anderen reicht meist das Essen.
 
 69
-00:05:52,508 --> 00:05:56,986
-Und achte auf die Obergrenze, deine Nieren und deine Medikamente.
+00:05:54,837 --> 00:06:00,244
+Citrat oder Bisglycinat? Die Unterschiede zwischen den Formen sind klein.
 
 70
-00:05:57,586 --> 00:06:03,527
-Als Nächstes: Warum hält sich der Rat, Magnesium abends zu nehmen, so hartnäckig?
+00:06:00,094 --> 00:06:05,349
+Morgens oder abends? Das ist offen. Größere Mengen teilst du besser auf.
 
 71
-00:06:03,377 --> 00:06:13,203
-Danach: Welche Form passt wozu? Woran erkennst du einen Mangel? Ab wann ist es zu viel? Und was zeigen die Studien zu Schlaf und Stress?
+00:06:05,199 --> 00:06:09,678
+Und achte auf die Obergrenze, deine Nieren und deine Medikamente.
 
 72
-00:06:13,053 --> 00:06:18,308
-Es folgen Krämpfe, Blutdruck, Migräne, Frauen und Lebensmittel.
+00:06:10,278 --> 00:06:16,218
+Als Nächstes: Warum hält sich der Rat, Magnesium abends zu nehmen, so hartnäckig?
 
 73
-00:06:18,158 --> 00:06:23,839
-Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
+00:06:16,068 --> 00:06:25,894
+Danach: Welche Form passt wozu? Woran erkennst du einen Mangel? Ab wann ist es zu viel? Und was zeigen die Studien zu Schlaf und Stress?
 
 74
-00:06:23,689 --> 00:06:26,456
+00:06:25,744 --> 00:06:30,999
+Es folgen Krämpfe, Blutdruck, Migräne, Frauen und Lebensmittel.
+
+75
+00:06:30,849 --> 00:06:36,530
+Gut, dass du dich informierst. Das Video kann das Gespräch mit Arzt oder Ärztin unterstützen,
+
+76
+00:06:36,380 --> 00:06:39,147
 aber nicht ersetzen. Bis zum nächsten Video!
 
