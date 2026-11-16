@@ -1,12 +1,44 @@
 {
  "titel": "Magnesium-Reihe · Folge 1: Was du wirklich wissen musst",
- "aufgabe": "Neue Fassung oben (16.11.): Übersicht ohne doppeltes „wem es hilft“, kein doppeltes Bild bei 1:40. Bitte ansehen: „passt“ oder „ändern“.",
+ "aufgabe": "Zum Anhören (16.11.): drei Fassungen des Übersichtssatzes und ein Zusatzsatz für Kapitel 4. Bei der Übersicht EINE Fassung mit „passt“ wählen; beim Zusatzsatz „passt“ = rein, „ändern“ = weglassen. Darunter die Endfassung vom 16.11.",
  "videos": [
+  {
+   "datei": "vprobe_u1.mp4",
+   "titel": "Übersicht · Fassung 1: „welche Form was bringt“ (Empfehlung)",
+   "stand": "16.11., 17:00",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Offene Frage; Kapitel 4 antwortet: weniger, als die Werbung sagt."
+  },
+  {
+   "datei": "vprobe_u2.mp4",
+   "titel": "Übersicht · Fassung 2: „ob die Form überhaupt eine Rolle spielt“",
+   "stand": "16.11., 17:00",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Am ehrlichsten, etwas länger."
+  },
+  {
+   "datei": "vprobe_u3.mp4",
+   "titel": "Übersicht · Fassung 3: „welche Form die richtige ist“",
+   "stand": "16.11., 17:00",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Kurz, klingt nach Kaufberatung."
+  },
+  {
+   "datei": "vprobe_z.mp4",
+   "titel": "Kapitel 4 · Zusatzsatz „jede Form für etwas anderes“",
+   "stand": "16.11., 17:00",
+   "pruefen": true,
+   "poster_bei": 1,
+   "notiz": "Geprüft: Keine Studie vergleicht Formen direkt in ihrer Wirkung (z. B. auf den Schlaf); es gibt nur Vergleiche gegen Scheinpräparat. Käme nach dem Satz zu Bisglycinat."
+  },
   {
    "datei": "vorschau_G5.mp4",
    "titel": "Folge 1 · Endfassung 16.11.",
    "stand": "16.11., 16:40",
-   "pruefen": true,
+   "pruefen": false,
    "poster_bei": 1,
    "notiz": "Übersicht: „In sechs Schritten klären wir: …“. Bei 1:44 Wartezimmer statt des Bildes, das direkt davor schon stand. Sonst wie die Fassung vom 15.11. 6:29."
   },
