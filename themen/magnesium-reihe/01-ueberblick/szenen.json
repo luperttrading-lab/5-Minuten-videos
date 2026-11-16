@@ -24,7 +24,7 @@
     "Magnesium: Was du wirklich wissen musst.",
     "Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?",
     "Überraschend: Eine dieser Fragen hat bis heute keine einzige Studie untersucht. Welche, erfährst du im fünften Kapitel.",
-    "Wem hilft Magnesium wirklich, und wem nicht? Wir klären, ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt."
+    "In sechs Schritten klären wir: ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt."
    ],
    "hervorheben_at": 3,
    "hook_bild": "thumbnail/bild_G.jpg",
@@ -58,7 +58,7 @@
     {
      "t": "Brauchst du es überhaupt?",
      "bild": "bilder/G/k3.jpg",
-     "wort": "Wir klären"
+     "wort": "ob du es"
     },
     {
      "t": "Wem es hilft",
@@ -212,7 +212,7 @@
      "bild": "bilder/G/m2x.jpg"
     },
     {
-     "bild": "bilder/G/m3g.jpg",
+     "bild": "bilder/G/m3d.jpg",
      "at": 1
     },
     {

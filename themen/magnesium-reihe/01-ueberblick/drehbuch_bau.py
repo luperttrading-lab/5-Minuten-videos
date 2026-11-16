@@ -65,7 +65,7 @@ SZENEN = [
   'sentences': ['Magnesium: Was du wirklich wissen musst.',  # Nutzer 15.11.: Titel des Vorschaubilds gesprochen
                 'Morgens oder abends? Citrat oder Bisglycinat? Und brauchst du es überhaupt?',
                 'Überraschend: Eine dieser Fragen hat bis heute keine einzige Studie untersucht. Welche, erfährst du im fünften Kapitel.',  # Nutzer 15.11.: Antwort nicht im Start vorwegnehmen
-                'Wem hilft Magnesium wirklich, und wem nicht? Wir klären, ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.'],  # Nutzer 15.11.: Startvariante A
+                'In sechs Schritten klären wir: ob du es überhaupt brauchst, wem es hilft, wo es nicht hilft, welche Form taugt, wie du es sicher einnimmst und was im Essen steckt.'],  # Startvariante A; Nutzer 16.11.: „wem es hilft“ nicht doppelt
   'hervorheben_at': 3,
   'hook_bild': 'thumbnail/bild_G.jpg', 'kacheln_ab': 3, 'hook_titel': 'Magnesium',
   'hook_stil': 'vorschaubild', 'hook_untertitel': ['Was du wirklich', 'wissen musst'],  # Nutzer 15.11.: erstes Bild = Vorschaubild, ohne Zierstrich
@@ -73,7 +73,7 @@ SZENEN = [
                   {'t': 'Brauchst du es überhaupt?', 'wort': 'überhaupt'},
                   {'t': 'Eine davon: nie untersucht.', 'wort': 'keine einzige', 'art': 'urteil'}],
   # Startvariante A (Nutzer 15.11.): Übersicht gesprochen, jede Kachel leuchtet beim Wort
-  'kacheln': [('Brauchst du es überhaupt?', 'k3', 'Wir klären'), ('Wem es hilft', 'k7', 'wem es hilft'),
+  'kacheln': [('Brauchst du es überhaupt?', 'k3', 'ob du es'), ('Wem es hilft', 'k7', 'wem es hilft'),
               ('Wo es nicht hilft', 'k8', 'wo es nicht'), ('Welche Form?', 'k4', 'welche Form'),
               ('Sicher einnehmen', 'k6', 'sicher'), ('Aus dem Essen', 'k2', 'Essen')]},
 
@@ -102,7 +102,7 @@ SZENEN = [
   'bullets': [B('Nachgewiesener Mangel: zugelassen', 1), B('Bluthochdruck: gut untersucht, leicht', 3),
               B('Migräne: geringe Beweislage', 4), B('Eklampsie: Infusion, zugelassen', 5)],
   'quellen': ['gi_verla', 'debaaij2015', 'jahnen2012', 'argeros2025', 'dgn2025', 'magpie2002'],
-  'bilder': [('m2x', None), ('m3g', 1), ('m1e', 2), ('m5c', 3), ('m5d', 4), ('m5b', 5), ('m6e', 6)]},
+  'bilder': [('m2x', None), ('m3d', 1), ('m1e', 2), ('m5c', 3), ('m5d', 4), ('m5b', 5), ('m6e', 6)]},
 
  {'id': 'm3', 'kapitel_nr': 3, 'kicker': 'Kapitel 3 · Die Wende', 'headline': 'Wo es nicht hilft',
   'sentences': ['Und wofür nehmen es die meisten? Gegen Wadenkrämpfe. Viele berichten, dass es ihnen hilft.',
