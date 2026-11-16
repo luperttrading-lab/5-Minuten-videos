@@ -32,3 +32,4 @@ Auftrag: `AUFTRAG.md`, Reihe: `../konzept.md`. Vorbild `themen/l-theanin/`.
 - 16.11.: Übersicht „In sechs Schritten klären wir: …“ (Nutzer: „wem es hilft“ doppelt), Bild m3g → m3d bei 1:44 (Nutzer: zweimal dasselbe Bild hintereinander). Ton 6:29, 172 Zeichen. Hörprobe 1 Stelle.
 - 16.11.: abgenommen, gerendert (6:29), Vorschau-Seite oben „Endfassung 16.11.“.
 - 16.11.: Übersicht Fassung 3 („welche Form die richtige ist“, Nutzerwahl), Zusatzsatz Kapitel 4 („Oft heißt es, jede Form sei für etwas anderes gut …“; geprüft: keine Vergleichsstudie zur Wirkung), Bild m4y neu (England). Ton 6:41, 645 Zeichen + Proben 282. L-Threonat → Abschnitt in Folge 3 (konzept.md).
+- 16.11. abends: abgenommen, gerendert (6:41), Vorschau-Seite oben „Endfassung 16.11. abends“, 1080p 48,9 MB (790k). Proben von der Seite genommen.

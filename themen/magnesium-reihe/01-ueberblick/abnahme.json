@@ -1,7 +1,14 @@
 {
  "seit": "Deine Wahl vom 16.11.: Übersicht Fassung 3 und Zusatzsatz in Kapitel 4.",
  "stellen": [
-  {"suche": "In sechs Schritten klären wir", "was": "Übersicht Fassung 3: „… welche Form die richtige ist …“"},
-  {"suche": "Oft heißt es, jede Form", "was": "Zusatzsatz Kapitel 4, mit Erfahrungsberichten und Verweis auf Folge drei"}
- ]
+  {
+   "suche": "In sechs Schritten klären wir",
+   "was": "Übersicht Fassung 3: „… welche Form die richtige ist …“"
+  },
+  {
+   "suche": "Oft heißt es, jede Form",
+   "was": "Zusatzsatz Kapitel 4, mit Erfahrungsberichten und Verweis auf Folge drei"
+  }
+ ],
+ "erledigt": "✓ Alles abgenommen, nichts offen (16.11. abends). Endfassung gerendert, siehe Vorschau-Seite."
 }
